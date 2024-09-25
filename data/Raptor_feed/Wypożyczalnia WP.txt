@@ -1,0 +1,68 @@
+# Wypożyczalnia
+## Informacje ogólne
+Dokument Wypożyczalnia   jest dokumentem magazynowym odpowiedzialnym za przesunięcia towaru pomiędzy magazynami ze wskazaniem osoby odpowiedzialnej za ten Towar. Dokument WP najlepiej odzwierciedla działanie Narzędziowni. Narzędziownia posiada na stanie narzędzia, oprzyrządowanie, matryce, urządzenia pomiarowe, itp., które wydaje pracownikom na czas użytkowania podczas pracy. Dokument ten przesuwa dane narzędzie na magazyn wydziałowy z zaznaczeniem kto pobrał narzędzie. W ten sposób mamy możliwość kontrolowania gdzie i kto ma dane narzędzie. Po zamknięciu dokumentu WP-  pojawi się dokument WP+ przychodowy na magazynie docelowym
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |WP
+|Wpływ na stan magazynowy |Po zamknięciu dokumentu
+|Rodzaj dokumentu | Magazynowy - przyjęcie
+|Czy wchodzi do płatności| Nie
+|Czy możliwe korekty| Nie
+|Nazwa dla dat|Data1:DataPrzyjeciaWydania ;Data2:DataWystawienia
+|Nazwa dla klienta |Klient1:Nabywca Klient2:Odbiorca
+|Czy dokument przenosimy do rej. Vat | Nie
+|Czy wchodzi do Analiz Sprzedaży| Nie
+|Czy wchodzi do Analiz Zakupu| Tak
+|Czy dokument może mieć ceny zerowe | Tak
+|Pozwolenie na zerowe ilości na pozycji |Nie
+|Liczenie brutto | Nie
+|Wielowalutowy, |Nie
+|Czy dokument może być eksportowy |Nie
+|Czy dokument może posiadać pozycje zerowe |Nie
+|Czy dokument skojarzony z dokumentem handlowym |Nie
+|Ma możliwość użycia cen indywidualnych | Tak 
+|Czy może posiada ceny ujemne | Nie
+
+
+
+## Opis dokumnetu
+Główne pola znajdujące sie na dialogu dokumentu PW to:
+
+|Nazwa Pola | Definicja |
+|
+|	Numer | numer dokumentu generowany zgodnie z konfiguracją
+|Magazyn |	Magazyn źródłowy z którego wydany będzie towar
+|	Magazyn docelowy | Magazyn na który towar zostanie przyjęty
+|	Data  
+|	Kontrahent | klient nie obowiazkowy
+|	Odpowiedzialny | pracownik firmy
+|	Wartość | Wycena dokumentu w cenach magazynowych
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I6/5a9fc41f3a9d9d829e0cabfbf97996cf-26616-0.png) 
+
+W zakładka Opis i uwagi wprowadzane są dane na oraz uwagi które mogą być drukowane na wydruku dokumentu Wypożyczalni.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L3/2e1d64c760e028901ab970fb22f11ddd-17680-0.png) 
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E4/3e23c8bfb5458603b5c66b4573b38640-31313-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla WO zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Grupa Cen – grupa cen sprzedaży przypisana do Odbiorcy
+-	Cena0 : - Cena sprzedaży przed obniżkami cen sprzedaży
+-	Ilość – ilość sprzedawanych  kartotek towarowych w podstawowej jednostce 
+-	Raba – wyliczony, wprowadzony lub przeniesiony z zamówienia obcego. Wyliczony może być na podstawie danych z kartoteki Klienta, Nabywcy
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na Fakturze, oraz ilość zarezerwowana na innych dokumentach. 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji dokumentu.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y2/e48a7755706d91f3632ea154f9e8da24-18471-0.png)
+ 
+Wystawiając dokument Wypożyczalnia  mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. 

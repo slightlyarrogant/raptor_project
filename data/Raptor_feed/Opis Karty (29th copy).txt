@@ -1,0 +1,85 @@
+# 	Zlecenia transportowe własne
+
+## Opis
+
+Zlecenia transportowe własne w systemie VENDO.ERP są integralną częścią modułu spedycji. Te zlecenia obejmują planowanie, monitorowanie i realizację transportu towarów od punktu początkowego do docelowego. Transport ten realizowany jest własnymi środkami transportu. Dzięki temu w systemu następuje konieczność ich ewidencji.
+
+![tmpd8b8e0c2-c185-463d-8f68-e0b36a6827d6](https://www.cfi.pl/vendohelp/content/imgs/R3/f6f22262f99474928fb51671560ae2cd-89997-0.png)
+
+## Numeracja
+
+Każde zlecenie transportowe własne posiada indywidualny numer budowany według zasady:
+
+`NUMER_KOLEJNY / SERIA / ROK / ZT`
+
+Gdzie:
+-	Numer kolejny – nadawany w ramach Serii
+-	Seria - to słownikowy składnik numeracji dokumentów systemowych. Na podstawie serii możliwe jest określenie uprawnień (dostępu do danych zleceń, danej serii)
+-	Rok – rok, w którym wystawiano zlecenie
+-	ZT – skrót zlecenia transportowego własnego
+
+Przykłady numeracji zleceń transportowych własnych:
+-	13/S/24/ZT
+-	14/S/24/ ZT
+-	13/A/24/ ZT
+## Zakładki
+### Ogólne
+![tmpd8b8e0c2-c185-463d-8f68-e0b36a6827d6](https://www.cfi.pl/vendohelp/content/imgs/R3/f6f22262f99474928fb51671560ae2cd-89997-0.png)
+
+| Nazwa pola              | Opis                                                                                                       | Typ                     |
+|-------------------------|------------------------------------------------------------------------------------------------------------|-------------------------|
+| Stan                    | Stały słownik. Stan zlecenia transportowego: Realizowane / Potwierdzone / Anulowane / Zamknięte             | Pole typu radiobutton   |
+| Numer                   | Numer zlecenia transportowego                                                                              | Tekst                   |
+| Nr obcy                 | Numer zewnętrzny w systemie zleceniobiorcy                                                                  | Tekst                   |
+| Data od                 | Data rozpoczęcia zlecenia transportowego                                                                   | Tekst                   |
+| Data do                 | Data zakończenia zlecenia transportowego                                                                   | Słownik                 |
+| Zlecający               | Referencja do kartoteki klienta                                                                             | Słownik                 |
+| Zleceniobiorca          | Referencja do kartoteki klienta                                                                             | Słownik                 |
+| Spedycja                | Referencja do słownika Spedytora                                                                            | Słownik                 |
+| Wym. taboru             | Referencja do słownika wymiarów taboru                                                                      | Słownik                 |
+| Stan licznik pocz.      | Stan początkowy licznika kilometrów                                                                         | Liczba                  |
+| Stan licznika koniec    | Stan końcowy licznika kilometrów                                                                            | Liczba                  |
+| Kilometry               | Liczba kilometrów                                                                                           | Liczba                  |
+| Rodzaj                  | Słownik rodzaju zlecenia transportowego                                                                     | Słownik                 |
+| Samochód                | Referencja do zasobów firmy                                                                                 | Słownik                 |
+| Przyczepa / Naczepa     | Referencja do zasobów firmy                                                                                 | Słownik                 |
+| Kierowca                | Referencja do kartoteki pracownika                                                                          | Słownik                 |
+| Tel. kierowcy           | Telefon kierowcy                                                                                           | Tekst                   |
+| Konwojent               | Referencja do kartoteki pracownika                                                                          | Słownik                 |
+| Tel konwojenta          | Telefon konwojenta                                                                                          | Tekst                   |
+| Miejsce załadunku       | Pierwsze miejsce załadunku                                                                                  | Słownik                 |
+| Miejsce rozładunku      | Ostatnie miejsce rozładunku                                                                                 | Słownik                 |
+| Wartości dowolne        | Możliwość dostępu i edycji wartości dowolnych dla zlecenia transportowego. Zgodnie z opisem podpunktu Wartości dowolne | Lista                   |
+| Uwagi                   | Pole na dodatkowe uwagi                                                                                     | Słownik                 |
+
+### 	Załadunki i dostawy
+
+Lista miejsc związanych z załadunkiem oraz dostawą, dane te będą widoczne na liście ułożone chronologicznie wg kolejności ich dodawania z możliwością ręcznej modyfikacji trasy. 
+
+![tmp463c6887-85ab-4542-89ca-e55c1f4c8d4f](https://www.cfi.pl/vendohelp/content/imgs/T7/3c7542e943b8d358a0bfe54cb7b6dfa8-57125-0.png)
+
+### Dokumenty
+
+Lista powiązanych dokumentów systemowych ze zlecenie transportowym
+
+![tmp6818add5-6f0d-4379-b3b1-856d3dfccf62](https://www.cfi.pl/vendohelp/content/imgs/D3/622e2966b3e88528b574a163a97ba5c5-58146-0.png)
+
+
+### Palety / Paczki
+
+List umożliwiająca  definiowanie ładunku wraz z podaniem jego rodzaju, wagi oraz wymiarami.
+
+![tmp8333cf08-0a7a-45cf-b340-f7b3811f7842](https://www.cfi.pl/vendohelp/content/imgs/S2/838dc894de726f5e731e2bd65b1b5174-55269-0.png)
+
+### 	Planer rozłożenia ładunku
+
+
+Graficzna możliwość rozłożenia i wizualizacji ładunku na środku transportu
+
+![tmpe106e2cc-e72d-4af2-a4cf-5162bb705313](https://www.cfi.pl/vendohelp/content/imgs/H1/3cce3eeee80a4a60f54ad2b873a1c89f-80683-0.png)
+
+### Pliki
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmpe8570d9d-5291-479b-b634-c01805e5f43f](https://www.cfi.pl/vendohelp/content/imgs/I4/51acd1bfe9bee807ba90ebab8f8687e7-49683-0.png)

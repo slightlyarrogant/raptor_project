@@ -1,0 +1,9 @@
+# Spedytor Pekaes Plugin
+
+# Informacje ogóle
+Implementacja rozwiązania w systemie Vendo ma na celu stworzenie uniwersalnego plugina dającego możliwość łączenia się jak również wymianę danych pomiędzy  spedytorem Peakes a VENDO. Zasadza działania wygląda analogicznie jak w przypadku pozostałych spedytorów 
+
+# Zlecenie odbioru
+W przypadku wybrania na karcie listu przewozowego (zakładka Adresy) typu adresu: "Wybrany klient",
+jako dane nadawcy i adres odbioru zostaną wysłane dane z sekcji "Nadawca". 
+W innym przypadku dane te nie są wysyłane i dane nadawcy są automatycznie uzupełniane po stronie serwisu Pekaes.

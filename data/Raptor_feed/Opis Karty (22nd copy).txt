@@ -1,0 +1,74 @@
+# Reklamacje własne
+
+
+## 	Opis
+Możliwość ewidencji wysyłanej reklamacji oraz procedowanie jej w systemie. Reklamacja i zwrot (do dostawcy) bazuje na systemie zleceń własnych o specjalnym rodzaju. Zlecenie to pełni rolę spinacza, posiada swój własny numer, rozumiany jako numer reklamacji oraz informacje o pozycjach, które są w ramach niego reklamowane. 
+Pozycje reklamowane znajdują się w osobnej zakładce Pozycje. Każda pozycja powinna mieć wprowadzone odpowiednie parametry takie (dokument, towar, ilość, cena). Jedna pozycja zlecenia reklamacyjnego dotyczy jednej pozycji dokumentu magazynowego. Śledzenie konkretnych egzemplarzy (poszczególnych numerów seryjnych na potrzeby reklamacji) wymagana odpowiedniego tworzenia pozycji na dokumentach magazynowych tak aby oznaczały one konkretne partie produktu. 
+
+![tmp44e447b2-303a-4cb2-a38c-68db7adc63da](https://www.cfi.pl/vendohelp/content/imgs/L9/e8e5683eda0cc838c3adfac4e5a03085-66889-0.png)
+
+## Zakładki
+### Nagłówek
+
+![tmp3d2d1cc1-cb59-4944-96c0-0ab09f06ea72](https://www.cfi.pl/vendohelp/content/imgs/L9/e8e5683eda0cc838c3adfac4e5a03085-66889-0.png)
+
+| Nazwa pola         | Opis                                            | Typ               |
+|--------------------|-------------------------------------------------|-------------------|
+| Numer              | Numer reklamacji                                | Tekst             |
+| Numer obcy         | Numer dostawcy                                  | Tekst             |
+| Nasz numer         | Dodatkowy numer wewnętrzny                      | Tekst             |
+| Data wpisu         | Data założenia                                  | Data i czas       |
+| Data rozpoczęcia   | Zakładany termin rozpoczęcia                    | Data i czas       |
+| Termin zakończenia | Zakładany termin zakończenia                    | Data              |
+| Klient             | Referencja do kartoteki klienta                 | Słownik           |
+| Osoba klienta      | Referencja do człowieka klienta                 | Słownik           |
+| Wpisujący          | Referencja do kartoteki pracownika              | Słownik           |
+| Odpowiedzialny     | Referencja do kartoteki pracownika              | Słownik           |
+| Dział              | Referencja do działu pracownika odpowiedzialnego| Słownik           |
+| Dotyczy            | Tytuł reklamacji                                | Tekst             |
+| Opis               | Pole dla dodatkowego opisu                      | Tekst             |
+| Opis końcowy       | Pole dla dodatkowego opisu powykonawczego       | Tekst             |
+| Rodzaj reklamacji  | Słownik rodzaju reklamacji                      | Słownik           |
+| Pozycje zlecenia   | Lista reklamowanych pozycji                     | Lista             |
+| Zdarzenia          | Lista dokumentów zdarzeniowych powiązanych z reklamacją | Lista      |
+
+
+
+### 	Lista dokumentów
+
+Lista dokumentów – dokumenty zarejestrowane w VENDO.ERP powiązane nagłówkowo z reklamacją, np. koszt
+
+![tmp94804d2e-c86c-4e13-b191-e7821817838c](https://www.cfi.pl/vendohelp/content/imgs/Z1/0f438092eb3b20c4e24b8db5c91d5dd8-56811-0.png)
+
+### 	Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmp0f1a2974-f6d3-4070-8ad4-6b8c0718e62f](https://www.cfi.pl/vendohelp/content/imgs/E2/1cbd6ce3c304f1ba6116bec6e6de7fe6-31544-0.png)
+
+### Zdarzenia
+
+Zdarzenia – lista zdarzeń (zarejestrowanych w CRM) związanych z reklamacją
+
+![tmp178d1a44-d5c3-4efe-95f4-b5090d82e108](https://www.cfi.pl/vendohelp/content/imgs/T7/a2831fec47261d0ef25cd2063109ea69-59820-0.png)
+
+### Prace
+
+Prace – zarejestrowany czas pracy przez pracowników na dane zlecenie lub czas zarejestrowany pod zdarzenia podpięte pod zlecenie
+
+
+
+![tmp79e15ae0-917f-4253-9980-14c34f0dee89](https://www.cfi.pl/vendohelp/content/imgs/J7/3d6b9662385204996b04ea963b0d761a-63154-0.png)
+
+
+### Pliki
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp8e4a24c0-73d4-457d-a0d9-b3c77c3715ac](https://www.cfi.pl/vendohelp/content/imgs/G4/ae8187702b7142453b4292a9e519a13a-34822-0.png)
+
+### 	Wspólne pliki
+
+Pliki podpięte bezpośrednio pod reklamacje oraz pliki podpięte pod zdarzenia, które również są podpięte pod reklamacje
+
+![tmpecc304eb-e884-4b2d-923f-63a63e599227](https://www.cfi.pl/vendohelp/content/imgs/H5/51d006dab6a5438bd250183f4a907e0b-35657-0.png)

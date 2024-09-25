@@ -1,0 +1,83 @@
+JPK - dokumentacja techniczna
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/plugins/jpk
+scraped_at: 2024-09-05T12:18:43.014100
+last_updated: 2024-09-05T12:18:43.014149
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/JPK - dokumentacja techniczna
+meta_tags: ['jest', 'deklaracji', 'dokumentu', 'należy', 'vat7_18', 'jpkbramka', 'można', 'katalogu', 'plik', 'view']
+
+Content
+1. Pliki XSD
+Pliki opublikowane przez ministerstwo finansów zarówna do JPK jak i VAT mają rozszerzenie „xsd”. Jest do standard służący do definiowania struktury dokumentu. Pierwszą rzeczą którą należy zrobić przy dodaniu nowego dokumentu jest wygenerowanie klas na podstawie schematu „xsd”. Wykorzystujemy do tego gotowe narzędzie „xsd2code++” – posiadamy płatną licencję na rok. Istnieje też darmowe rozwiązanie od Microsoft’u. W katalogu „C:\Program Files (x86)\Microsoft SDKs\Windows\v8.1A\bin\NETFX 4.5.1 Tools” jest aplikacja xsd.exe. Należy otworzyć ją w konsoli. Wadą tego rozwiązania jest to, że musimy podać odwołania do wszystkich plików które występują w strukturze, przykład:
+xsd  C:\vat7_18\ElementarneTypyDanych_v4-0E.xsd  
+C:\vat7_18\KodyKrajow_v4-1E.xsd   
+C:\vat7_18\KodyUrzedowSkarbowych_v4-0E.xsd  
+C:\vat7_18\VAT-ZZ(5)_v2-1E.xsd  
+C:\vat7_18\VAT-ZT(5)_v2-0E.xsd  
+C:\vat7_18\VAT-ZD(1)_v2-0E.xsd  
+C:\vat7_18\ORD-ZU(3)_v1-0E.xsd  
+C:\vat7_18\StrukturyDanych_v4-0E.xsd  
+C:\vat7_18\schemat.xsd /c /out:C:\vat7_18
+
+Wynikiem powyższej operacji jest plik o nazwie „schemat.cs” utworzony w lokalizacji „C:\vat7_18”.
+Rekomendowane jest korzystanie z narzędzia „xsd2code++”, gdyż oferuje większe możliwości(np. serializacja do xml’a i deserializacja do obiektu) i jest prostsze w użyciu.
+Nazwy wygenerowanych klas powtarzają się w różnych schematach plików JPK i VAT. Aby zachować porządek należy umieszczać struktury w odpowiednich namespace’ach np.:
+namespace JPKBramka.Jpk.JPK_1;  
+namespace JPKBramka.Jpk.JPK_FA_1;
+namespace JPKBramka.VAT.XSD.VAT_7K_11;
+namespace JPKBramka.VAT.XSD.VAT_7_18;
+
+2. Raport JPK
+Katalog „ListReport” w strukturze projektu odpowiada za listoraport osadzony w pluginie, oraz o klasy odpowiedzialne za osadzenie zakładek w menu (JPKListWindowDefinition) i w ribbonie(JpkVatCommand) - górne menu.
+Podczas tworzenia nowych deklaracji należy dopisać w klasie JpkVatCommand w metodzie Execute kolejne elementy menu. Do każdego rodzaju deklaracji JPK i VAT nadawaną są uprawnienia. Jak nimi zarządzać opisane jest w punkcie - Uprawnienia.
+3. Wybór dat i wersji dokumentu
+Podczas tworzenie dokumentu JPK oraz VAT należy podać zakres dokumentów i wersję dokumentu. Istnieją także rodzaje deklaracje, które potrzebują dodatkowe parametry wejściowe np.: JPK Magazyn – (Magazyn na podstawie którego zostanie sporządzony dokument), czy JPK Księgi rachunkowe (np. obroty i salda z buforem, zapisy z buforem).
+Klasa DateRangeVM przetwarza wszystkie informację wejściowe. Dla nowego rodzaju dokumentu JPK (np. JPK KPiR) – należy stworzyć enum z wersją, ewentualnie właściwości z dodatkowymi polami. Należy pamiętać aby prawidłowo obsłużyć widoczność poszczególnych właściwości, aby były widoczne na odpowiednich rodzajach deklaracji.
+4. Dodawanie dokumentu JPK
+W katalogu „JPK”, tworzymy nowy folder z wersją. Nazwa katalogu odpowiada strukturze JPK i wersji (np. JPK_FA_1, JPK_KR). Kolejnym krokiem jest wygenerowanie schematu deklaracji (punkt 1). Do wygenerowanej klasy należy dodać implementacje interfejsu ISchematJPK:
+public partial class JPK : ISchematJPK
+
+Dzięki temu mamy część wspólną dla wszystkich schematów deklaracji JPK.
+Dialogi JPK są wyświetlane w postaci podsumowania dokumentu. Można w ten sposób łatwo porównać dokument np. z rejestrem VAT i sprawdzić czy dane są prawidłowe. Klasa JpkVatVM<TJpkVatVM> to szablonowa klasa dialogu dla wszystkich dokumentów JPK. Umieszczone są w niej dane wspólne np. numer referencyjny dokumentu, wersja dokumentu, zapis dokumentu to pliku, zapis do bazy danych itp.
+TJpkVatVM to view model struktury JPK (np. JPK_FA, JPK_VAT). Jeżeli mamy kolejną wersję deklaracji(np. JPK_FA_4), można skorzystać z istniejących view modeli, ewentualnie lekko modyfikując zachowując kompatybilność wstecz.
+Aby utworzyć dokument należy stworzyć instancję klasy ze schematu wygenerowanego w punkcje 1 i uzupełnić właściwości danymi. W klasie SummaryJpk{Struktura deklaracji} w funkcji CalculateSum sumujemy odpowiednie pola i pokazujemy na dialogu.
+Wszystkie operacje związane z szyfrowaniem, kompresja i wysyłką dokumentów znajdują się w klasach JpkProvider i SendJpk.
+5. Dodawanie deklaracji VAT
+W katalogu VAT tworzymy folder z odpowiednim numerem i wersją deklaracji VAT. Każda wersja posiada osobny view model, który wyglądem zbliżony jest do interaktywnych formularzy pdf. Każdy view model dziedziczy po VatVMBase. Najważniejszą funkcją w tej klasie jest:
+GenerateXmlDeklaracja(string referencja = null)
+
+Odpowiada ona za wygenerowanie dokumentu deklaracji w postaci „xml”. Odbywa się to poprzez uzupełnienie właściwości klasy wygenerowanej na podstawie schematu dokumentu „xsd”.
+Oprócz view modelu w każdej rodzaju deklaracji VAT znajduje się jeden plik z jedną klasą. Odpowiada ona za ustawienie modelu na podstawie pliku xml. Wszystkie te klasy dziedziczą po VatBase. Jest to klasa, w której znajduje się obsługa API do podpisu i wysyłki deklaracji VAT. Deklaracje VAT można podpisać poprzez podpis kwalifikowany (obsługa w klasie JpkProvider, funkcja -> Podpisz_XAdES), a także za pomocą danych autoryzujących (kwota z PIT z poprzedniego roku). W tym miejscu warto zwrócić uwagę na funkcję
+ private OsobaFizyczna GetDaneDoPodipisu(string content, eEDeklaracjaTyp typ, int wersja)
+
+Podczas tworzenia nowej wersji deklaracji należy uzupełnić ją odpowiednim wpisem.
+6. Formularze interaktywne VAT
+Deklaracje VAT posiadają formularze interaktywne w formacie „pdf”. Można jest pobrać ze strony ministerstwa:
+https://www.podatki.gov.pl/vat/e-deklaracje-vat/formularze-vat/
+Wymagają one jednak edycji, gdyż pole „Nr dokumentu” jest nie do edycji i nie da się go ustawić. Aby edytować formularz należy:
+
+Pobrać odpowiednią wersję ze strony ministerstwa
+Użyć programu umieszczonego w pluginie JPK w katalogu Tools->XFACreator.exe
+Wczytaj do programu formularz pdf -> zostanie utworzony plik w formacie „xml”.
+Do edycji wyżej utworzonego pliku będzie potrzebne narzędzie Adobe LiveCycle Designer. Jedyne co trzeba zrobić to zaznaczyć pole „Nr dokumentu” i w prawym oknie w zmiennej „Data Binding” wpisać „$.RefID”.
+
+
+
+Zapisujemy projekt jako plik „pdf” i umieszczamy go w strukturze projektu w katalogu Resources\Vat_Form i ustawiamy mu właściwość „Build Action” na „Embedded Resource”.
+W view modelu w funkcji public void GeneratePDF() ustawiamy ścieżkę do Resource’a.
+Ostatnim krokiem jest modyfikacja wygenerowanego schematu. W klasie TNaglowek dodajemy właściwość RefID.
+
+7. Uprawnienia
+Do każdego rodzaju dokumentu JPK i deklaracji VAT zdefiniowano uprawnienia. W Vendo można je nadawać w Uprawnienia->eDeklaracje. W pluginie w pliku PermissionsDescriptor.cs definiujemy nowy typ deklaracji. Z uprawnień korzystam podczas tworzenia nowej deklaracji (JpkVatCommand) i podglądzie/edycji (LinkJpkVatController) za pomocą funkcji public static bool GetJpkPermission(ePermissionJPK perm)
+8. Certyfikat do JPK
+Certyfikat do szyfrowania klucza publicznego znajduje się w: JPKBramka\Resources\certificate.cer - ważny do dnia 28.07.2022. Po jego wygaśnięciu ministerstwo udostępnia nowy certyfikat na stronie internetowej. Należy go podmienić i ustawić właściwość „Build Action” na „Embedded Resource”.
+9. Biblioteki zależne
+Plugin JPKBramka korzysta z bibliotek których nie ma w Vendo np. BouncyCastle.Crypto.dll do podpisu kwalifikowanego. Aby plugin działał poprawnie należy je dokompilować. Odpowiada za to sekcja „Post-build event command line” w zakładce „Build Events” we właściwościach projektu:
+"$(ProjectDir)..\..\..\#Tools\libz.exe" inject-dll --assembly JPKBramka.dll --include BouncyCastle.Crypto.dll --move --include System.IO.Compression.dll --move --include Microsoft.WindowsAzure.Storage.dll --move
+
+Narzędzie scali biblioteki zależne i utworzy jeden plik „dll”. Zaletą tego rozwiązania jest to że do Vendo podgrywamy jeden plik a nie cztery. Wada jest taka, że nie można attach’ować do projektu. Na potrzebu debugowania można jednak tę linijkę wykomentować dodająć znak „--":
+--"$(ProjectDir)..\..\..\#Tools\libz.exe" inject-dll --assembly JPKBramka.dll --include BouncyCastle.Crypto.dll --move --include System.IO.Compression.dll --move --include Microsoft.WindowsAzure.Storage.dll --move
+
+Images

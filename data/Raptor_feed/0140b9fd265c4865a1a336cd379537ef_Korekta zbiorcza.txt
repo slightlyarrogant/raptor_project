@@ -1,0 +1,62 @@
+Korekta zbiorcza
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/korekta-zbiorcza
+scraped_at: 2024-09-05T12:14:32.128908
+last_updated: 2024-09-05T12:14:32.128951
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Korekta zbiorcza
+meta_tags: ['korekty', 'zbiorczej', 'dokumentów', 'opis', 'należy', 'półautomatycznie', 'których', 'jest', 'ręcznej', 'dokumenty']
+
+Content
+Cel:
+Instrukcja dotycząca Generowania korekty zbiorczej w programie przeznaczona jest dla szkoleń wewnętrznych pracowników CFI. Generowanie Korekty zbiorczej wykonywane jest jedynie dla kartotek usługowych ponieważ nie ingerują one w stany magazynowe
+Rodzaje korekt zbiorczych
+System Vendo pozwala na wprowadzenie korekty zbiorczej ręcznie lub półautomatycznie.
+Ręcznie
+Przed przystąpienie do tworzenia karety zbiorczej ręcznej należy pamiętać o utworzeniu rekordu w kartotece towarowej o rodzaju usługa. To właśnie ta kartoteka będą używana podczas tworzone korekty. W celu wprowadzenia korekty ręcznej należy postępować wg następującego schematu z Poziomu menu głównego wybieramy [Dokumenty] > [Dokumenty sprzedażowe] > [FV-Faktury VAT]
+Wywołanie polecanie dla ręcznej korekty faktury zbiorczej odbywa sie po użyciu butona [Funkcje] lub kliknięciu prawym klawiszem myszy na poziomie listy dokumentów [Dodaj korekte zbiorczą] > [Ręcznie]
+
+Po wywołaniu dialogu dokumentu należy podać informacje dotyczące klienta oraz danych korygowanego towar, uzupełniając wartości na pozycji w dokumencie.
+
+Aby uzupełnić informacje dotyczące numerów korygowanych faktur użytkownik w zakładce opis i uwagi na karcie dokumentu powinien dokonać wpisu z informacją których dokumentów dotyczyła korekta
+Półautomatycznie:
+W celu wystawienia korekty zbiorczej półautomatycznej należy z poziomu listy dokumentów wybrać rekordy do których odnosić sie bęzie korekta. Należy pamiętać iz mają to być dokumenty wystawione dla konkretnego klienta. Aby zawęzić listę wyszukanych dokumentów można użyć filtrów (pole kontrahent) gdzie określamy właściwego kontrahenta.
+Wywołanie polecenia dla korekty półautomatycznej odbywa sie analogicznie jak w przypadku korekty ręcznej tj. Lista dokumentów sprzedażowych, buton [Funkcje] bądź prawy klawisz myszy [Dodaj korektę zbiorcza] > [Półautomatycznie]
+Po zaznaczeniu korygowanych dokumentów system odwoła się do pozycji danego towaru wskazanego w oknie dialogowym. Na korekcie zbiorczej generowanej półautomatycznie można wskazać jedynie kartotekę usługową, dlatego na liście wyszarzone jest pole Towarów. Na cele przygotowania takiej korekty należy stworzyć kartę usługową, która będzie wykorzysta do stworzenia dokumentu FVZ (korekta generowana półautomatycznie).
+Przykład dokumentu FVZ
+
+do wygenerowania FVZ wykorzystano kartę usługi:
+
+"makro" które pozwala uzyskać informacje z których dokumentów została wygenerowana Korekta zbiorcza, wygenerowana półautomatycznie.
+Opis korekty zbiorczej:
+wprowadzając makro
+{NUMER} z dnia {DATA_UTW|FORMATDATE:%Y-%d-%m}
+
+w polu "Opis korekty"
+[]
+System pobierze do pola Opis/Uwagi na dokumencie korekty zbiorczej wykaz FV z których została przygotowana FVZ
+
+Kolumnę Opis można wyciągnąć na listę dokumentów FV
+Przykład:
+
+po wskazaniu upustu ( jak w przykładzie jest to 10 %) system wyliczy rabat na dokumencie FVZ.
+Ustawienia Konfiguracyjne do dokumentów korekt zbiorczych znajdują się w: [Parametry pracy] > [Ustawienia] > [Dokumenty] > [Korekta zbiorcza]
+
+Opis korekty zbiorczej: wprowadzając makro
+{NUMER} z dnia {DATA_UTW|FORMATDATE:%Y-%d-%m}
+
+w polu "Opis korekty"
+[]
+System pobierze do pola Opis na dokumencie korekty zbiorczej wykaz FV z których została przygotowana FVZ
+
+Images
+
+
+
+
+
+
+
+
+

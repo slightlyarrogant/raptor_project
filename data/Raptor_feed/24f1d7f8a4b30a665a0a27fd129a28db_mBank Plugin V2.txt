@@ -1,0 +1,69 @@
+mBank Plugin V2
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/h2h-mbank-v2
+scraped_at: 2024-09-05T12:20:13.317109
+last_updated: 2024-09-05T12:20:13.317158
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/mBank Plugin V2
+meta_tags: ['sesji', 'bazy', 'mbank', 'długotrwałej', 'użytkownika', 'należy', 'jest', 'przez', 'musi', 'sesję']
+
+Content
+MBankPluginV2
+Plugin do komunikacji z usługą mBank CompanyNet
+Instalacja
+Do prawidłowego działania MBankPluginV2 wymaga poprawnie zainstalowanego modułu AutomaticSettelments. Instrukcja instalacji i konfiguracji modułu opisana została w oddzielnym dokumencie.
+
+Wgrać plik MBankPluginV2.zip jako plugin.
+Wgrać licencję na plugin.
+Uruchomić instalację modułu na bazie : Pluginy -> MBankPluginV2.zip -> Instalacja na bazie. W trakcie instalacji baza przejdzie w tryb serwisowy.
+
+Konfiguracja
+Ogólne
+Do prawidłowego nawiązania komunikacji z WebService banku należy uzupełnić na karcie centrali wartość dowolną „[mBank] mBankDIK”. Wartość dowolna jest tworzona automatycznie przy instalacji pluginu. Numer DIK jest podawany klientowi przez bank.
+Tworzenie sesji długotrwałej
+Sesja długotrwała jest mechanizmem pozwalającym na autoryzację komunikacji z usługą WebService bez każdorazowego logowania się przez użytkownika. W celu zestawienia sesji długotrwałej niezbędne jest posiadanie przez użytkownika podpisu kwalifikowanego. Podpis ten musi być wcześniej zarejestrowany w banku. Jeden użytkownik Vendo może mieć jedną sesję długotrwałą w danym kontekście (Baza/Centrala) W celu zmiany kontekstu należy ustawić pole „Zapisuj poświadczenia per firma” w zakładce Parametry pracy -> HomeBanking -> Banki -> mBank -> mBank Autoryzacja
+
+Uprawnienia. W systemie Vendo.ERP prawo do tworzenia sesji długotrwałej przez użytkownika jest definiowane przez uprawnienie: Uprawnienia -> mBank -> Prawo do tworzenia sesji długotrwałej.
+Tworzenie sesji. Po nadaniu uprawnienia, na głównej belce programu, pojawi się przycisk „Utwórz sesję długotrwałą mBank”
+
+
+Po jego naciśnięciu pojawi się dialog tworzenia sesji. W celu utworzenia sesji długotrwałej należy:
+
+Na liście wybrać numery DIK objęte sesją.
+Wpisać id użytkownika w mBank.
+Wybrać certyfikat dla podpisu kwalifikowanego zarejestrowanego w mBank.
+Wybrać datę ważności sesji. Po naciśnięciu przycisku „Utwórz sesję” może pojawić się okno z prośba o pin do podpisu kwalifikowanego. Po poprawnym wpisaniu numeru pin zostanie wysłane żądanie do banku w celu utworzenia sesji długotrwałej.
+Domyślny użytkownik autoryzujący Aby umożliwić komunikację z bankiem użytkownikom Vendo.ERP nie posiadającym własnej sesji długotrwałej należy ustawić domyślnego użytkownika autoryzującego. W takim wypadku wszystkie operacje wykonywane przez w.w. użytkowników będą autoryzowane za pomocą sesji użytkownika domyślnego. W tym celu należy wejść w Parametry pracy -> HomeBanking -> Banki -> mBank -> mBank Autoryzacja -> Autoryzacja -> Domyślny użytkownik autoryzujący.
+
+
+Udostępnianie sesji długotrwałej
+Plugin integracyjny z mBank umożliwia udostępnianie istniejącej sesji długotrwałej do innych baz Vendo.ERP. Warunki niezbędne do przeprowadzenia procesu udostępniania:
+
+
+Na bazie źródłowej:
+
+
+Użytkownik na bazie źródłowej musi posiadać sesję długotrwałą.
+
+
+Musi istnieć skonfigurowane połączenie do bazy docelowej.
+
+
+Na bazie docelowej:
+
+
+Musi być poprawnie zainstalowany plugin MBankV2Plugin.
+
+Użytkownik któremu udostępniamy sesję musi posiadać uprawnienie do tworzenia sesji długotrwałej.
+
+Uwaga! a) Sesje można udostępniać tylko z bazy na której została utworzona! b) Udostępniania sesja musi uwzględniać numery DIK firm z bazy docelowej. Z oczywistych względów numer ten nie zostanie podpowiedziany w trakcie tworzenia sesji długotrwałej i należy go wprowadzić ręcznie 
+Konfiguracja polaczenia do bazy zewnętrznej.
+Dodanie konfiguracji połączenia do bazy zewnętrznej jest możliwe z poziomu ustawień Veno.ERP: Ustawienia -> Parametry pracy -> Ogólne -> Bazy danych -> Zewnętrzne bazy danych.-> Pokaż dialog -> Dodaj -> Postgres. W oknie dialogowym nalezu uzupełnić kod oraz nazwę. Pole dane połączenia powinny zawierać connection string dla bazy docelowej. Przykłądowo: host=ip bazy;port=port bazy ;username=login użytkownika;password=hasło db;Database=nazwa bazy
+Udostępnienie sesji.
+Udostepnienie sesji odbywa się z poziomu ona tworzenia sesji długotrwałej opisanego we wcześniejszych akapitach. Na oknie dialogowym należy kliknąć przycisk Udostępnij, następnie wybrać profil bazy docelowej do której chcemy udostępnić sesję. W kolejnym kroku wybieramy użytkownika z bazy docelowej któremu udostępniamy dane oraz centralę.
+
+Po uzupełnieniu wszystkich danych klikamy udostępnij.
+Images
+
+

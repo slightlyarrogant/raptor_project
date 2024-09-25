@@ -1,0 +1,34 @@
+# BNP Paribas Plugin V2
+
+## Informacje ogóle
+Plugin umożliwia wysyłke przelewów oraz pobierania wyciągów bankowych poprzez integrację z BNP Paribas Web Service
+
+## Konfiguracja połączenia
+
+W pierwszym kroku Klient musi podpisac umowę z BNP Paribas, na udostępnienie BNP Paribas Web Service.
+Następnie należy uzyskac certyfikat komunikacyjny  BNP Paribas.
+Certyfikat należy zainstalować dla użytkowników lokalnych na każdym stanowisku,
+z którego będzie nawiązywana komunikacja z serwisem bankowym. 
+
+W celu wskazania certyfikatu komunikacyjnego należy przejść do *Vendo -> Parametry pracy -> HomeBanking -> Banki -> BNP Paribas -> BNP Autoryzacja -> Autoryzacja*
+i wskazać certyfikat komunikacyjny.
+
+Dane certyfikatu mogą być zapisane w kontekście bazy lub firmy. 
+
+![bnp1](https://www.cfi.pl/vendohelp/content/imgs/M6/3bbbdf3a951950dcfc407443a803f4b4-30661-0.png)
+
+## Pobieranie wyciągów
+
+Pobieranie wyciągów odbywa się poprzez zadanie bot-a IngGetStatment.
+
+>[PluginTask]<br>
+>name=BnpParibasGetStatment<br>
+>cronTxt= 0 * * * *
+
+Ustawienia automatycznych rozliczeń wpłat i wypłat jest analogiczne jak przy pozostałych integracjach bankowych.
+
+## Wysyłka przelewów
+
+Wysyłka przelewów odbywa się z poziomu Poczekalni przelewów Vendo.ERP.
+
+> Poczekalnia przelewów -> Eksport zbiorczy do H2H

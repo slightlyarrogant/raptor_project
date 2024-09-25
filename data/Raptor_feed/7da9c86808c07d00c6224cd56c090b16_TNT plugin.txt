@@ -1,0 +1,76 @@
+TNT plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/tnt-plugin
+scraped_at: 2024-09-05T12:22:29.561277
+last_updated: 2024-09-05T12:22:29.561317
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/TNT plugin
+meta_tags: ['jest', 'dane', 'spedytora', 'należy', 'informacje', 'vendo', 'poziomu', 'listu', 'wartości', 'przewozowego']
+
+Content
+TNT Plugin
+Informacje ogóle
+Implementacja rozwiązania w systemie Vendo ma na celu stworzenie uniwersalnego plugina dającego możliwość łączenia się jak również wymianę danych pomiędzy spedytorem TNT a VENDO. Zasadza działania wygląda analogicznie jak w przypadku pozostałych spedytorów
+Konfiguracja
+Konfiguracje rozpocząć należy od wgrania stosownego plugina odpowiedzialnego za komunikacje pomiędzy spedytorem TNT a systemem Vendo. Dodanie plugina odbywa sie w standardowy sposób
+Kolejnym krokiem jest dokonanie ustawień niezbędnych do połącznia z API. Konfiguracja taka wykonywana jest z poziomu Ustawień głównych > Parametry pracy > Logistyka > Spedytorzy > Ustawienia globalne > TNT Plugin
+Parametry do uzupełnienia:
+
+Identyfikator wysyłającego - informacje uzupełniane przez użytkownika, dane pozyskane od opiekuna TNT
+Login - informacje uzupełniane przez użytkownika, dane pozyskane od opiekuna TNT
+Hasło - informacje uzupełniane przez użytkownika, dane pozyskane od opiekuna TNT
+AppID, ApVersion – na chwile obecną dane uzupełnione domyślnie ich wartości to: dla App = IN; AppVersion = 2.2
+
+
+Po dokonaniu stosownych ustawień z poziomu parametrów pracy, należy przejść do konfiguracji jest słowników systemowych. Konfiguracja przeprowadzana jest wg następującego schematu: Ustawienia Główne > Słowniki > Logistyka > Spedycje > TNT Plugin – opis standardowych ustawień dotyczących spedytorów znajduje się w odrębnej dokumentacji. Konfiguracja wygląda analogicznie jak w przypadku pozostałych spedytorów. Zmiany które zostały zaimplementowane w związku z uruchomieniem plugina znajdują się w zakładce [Dane dodatkowe] gdzie istnieje możliwość zdefiniowania ustawień takich jak:
+
+Czas odbioru – Informacja w jakim przedziale czasowym możliwa jest wizyta kuriera. Domyślnie godziny ustawione są w przedziale 9-12.
+Zdefiniuj – oznaczenie chcek boxa pozwala na dodanie dodatkowych godzin w których możliwa będzie wizyta spedytora
+
+Ostatnim etapem konfiguracji niezbędnym do prawidłowego funkcjonowania plugina, są Wartości dowolne dla spedycji. Definiowane są one również z poziomu słowników systemowych, dokujemy tego wchodzą w Ustawienia Główne > Słowniki systemowe > Logistyka > Wartości dowolne dla spedycji. Należy zdefiniować dwie wartości dowolne o zmiennych odpowiednio dla TNT Kod Dostępu = KodDostepu oraz Kod Grupy TNT = KodGrupy. Jeśli wartości te nie zostaną zdefiniowane w systemie Vendo nie znajda się informacje dotyczące wydruków
+Zasada działania
+Uruchomienie oraz konfiguracja plugina pozwala na nadawanie przesyłek za pośrednictwem spedytora TNT. Nadanie przesyłek odbywa się z poziomu Menu głównego > logistyka > Listy przewozowe Po otwarciu zakładki listy przewozowe należy za pomocą filtrów wybrać odpowiednie ustawienia:
+
+Okres od do - Ramy czasowe wyświetlanych pozycji .
+Spedycja - Parametr określający Spedytora, rozwijając listę w polu Spedycja możliwy jest wybór odpowiedniego spedytora. W opisywanym przypadku będzie to TNT Plugin Dodawanie nowego listu przewozowego dokonywane jest analogicznie jak w przypadku pozostałych dokumentów w systemie VENDO:
+Z poziomu listy dokumentów przewozowych nacisnąć klawisz [INSERT] bądź dodaj ikona zielonego plusa zlokalizowana w lewym górnym rogu okna programu.
+Zostanie wywołane okno startowe gdzie istnieje możliwość modyfikacji lub zatwierdzenia sugerowanego numer dokumentu.
+W kolejnym etapie otworzy się okno listu przewozowego gotowe do wypełnienia.
+
+Dane które należy uzupełnić w zakładce Nagłówek, opisane zostały w odrębnej dokumentacji
+Dane dla spedytora
+Informacje odpowiedzialne za poprawną komunikacje ze spedytorem znajdują sie w zakładce Dane dla spedytora informacje tam zawarte pozwalają na poprawne wystawienia listu przewozowego. Najważniejsze to:
+
+Dane adresowe: Nabywca/Odbiorca – dane te mogła być pobierane bezpośrednio z systemu Vendo jak również w przypadku gdy takich nie ma wypełniane ręcznie. Bardzo istotne aby podane były informacje takie jak Osoba kontaktowa, telefon oraz adres email
+Rodzaj usługi – określenie rodzaju usługi oferowanej przez spedytora. Są to pola słownikowe systemu Vendo. Rodzaje usług zostały zdefiniowane na podstawie danych dostępnych u spedytora i to osoba obsługująca nadanie przesyłek powinna mieć wiedzę z jakiego rodzaju usług chce korzystać.
+
+Po uzupełnieniu najważniejszych informacji dotyczących nadawanych przesyłek, należy przystąpić do dodania pozycji listu przewozowego oraz określenie parametrów paczki. Jeśli wszystkie dane są kompletne, za pomocą klawisza [Eksportuj] spowoduje to wysłąnie zapytanie do spedytora dotyczące przesyłki. W odpowiedzi zwrócony zostanie numer listu przewozowego który widoczny będzie w omawianym dialogu.
+Z poziomu listu przewozowego istnieje możliwość wydruku niezbędnych dokumentów związanych z wysyłana przesyłką. Wydruki generowane są w formacie html. Format taki dystrybuowany jest przez TNT dlatego też w analogiczny sposób jest on wyświetlany w Vendo. Po wygenerowaniu wydruku wyświetlany on jest za pośrednictwem przeglądarki internetowe, aby wy drukować dokument należy skorzystać z funkcji wydruku dostępnego z poziomu przeglądarki.
+Z poziomu zakładki „Dane dla spedytora” istnieje możliwość wydruku:
+
+Etykieta – wydruk według szablonu spedytora który należy umieścić na wysyłanej przesyłce
+List przewozowy – wydruk dokumentu niezbędnego do nadanie przesyłki
+Zbiorcza lista przewozowa – zostanie wyświetlane lista wszystkich nadanych przesyłek w obrębie jednego dnia. Buforem dla wydruku zbiorczej listy jest jeden dzień.
+
+
+Wartości dowolne i pliki
+W zakładce tej znajdują się informacje dotyczące Kodu grupy oraz Kodu dostępu. Informacje te zwracane są w momencie uzyskania odpowiedzi od spedytora w momencie wysłanie prze użytkownika zapytania. Pola Kod dostępu oraz ko grupy są polami które musza znaleźć się w bazie danych i wartości te należy dodać na etapie konfiguracji ustawień plugina
+
+
+KodDostępu – wartość ta odpowiedzialna jest za uzyskanie danych do wydruku listu.  
+
+
+KodGrupy - zwraca informacje odnośnie parametru po którym będą agregowane listy przewozowe dokładniej co będzie agregowało paczki do jednego listu przewozowego. Określa grupy paczek które przekazywane sa do bufora.  
+
+
+ReferencjaKlienta_TNT - dodatkowy identyfikator potrzebny np: do ułatwienia fakturowania przesyłek.  
+
+
+Data wysyłki - parametryzowalna w ustawieniach spedytora.
+
+
+
+Images
+
+

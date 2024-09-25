@@ -1,0 +1,53 @@
+# System DMS - jak działa ten program do zarządzania dokumentami
+
+# System DMS – rozwiązanie do efektywnego zarządzania dokumentami
+
+## Co to jest DMS?
+
+DMS – System zarządzania dokumentami (ang. Document Management System) – oprogramowanie dla firm, pozwalające na przetwarzanie dokumentów w ramach organizacji. Przetwarzanie obejmuje zarówno dokumenty wewnętrzne, dotyczące współpracy różnych obszarów funkcjonalnych organizacji, jak również dokumenty napływające od podmiotów zewnętrznych (np. faktury, zamówienia od odbiorców).
+
+
+
+## Dla kogo jest DMS?
+
+Tak naprawdę DMS jest  przydatny w organizacjach, w których procesy są powtarzalne i nad danym dokumentem (formularzem) pracuje wiele osób. Każda z nich pracuje nad dokumentem na swoim poziomie kompetencji, a następnie przekazuje go kolejnym pracownikom.
+
+## Działanie systemu
+
+Po pierwsze trzeba zdefiniować rodzaje procedowanych dokument wraz formularzami zawierającymi odpowiednie pola. Na przykład mogą być to faktury od dostawców, reklamacje, wnioski urlopowe, umowy z odbiorcami. Po drugie definiujemy ścieżkę obiegu dokumentu. Najwygodniej jest, jeśli definiowanie takiej ścieżki odbywa się przy pomocy graficznego narzędzia typu BPMN (Business Process Model and Notation). Daje to możliwość określenia  kroków, zdarzeń i logiki realizacji procesu biznesowego.
+
+Po trzecie obieg powinien być zaprojektowany jest tak, aby umożliwić sprawny przepływ i właściwą komunikację pomiędzy różnymi uczestnikami procesu. W ramach systemu DMS, każdy dokument posiada sygnaturę. Informacje w sygnaturze mogą być definiowane w ustawieniach systemu. Dzięki systemowi DMS organizacja ma dostęp szybki dostęp do informacji o procedowanych dokumentach. U kogo aktualnie się znajdują, czy są jakieś opóźnienia, jak długo trwa proces.
+
+## Jakie są funkcje DMS?
+
+### Tworzenie i przechowywanie dokumentów
+
+Dokumenty mogą być tworzone bezpośrednio w systemie DMS lub importowane z innych źródeł, takich jak skanery, e-maile czy inne aplikacje. Dokumenty są przechowywane w centralnej bazie danych. System DMS zapewnia odpowiednie formatowanie i metadane, które pomagają w organizacji i późniejszym wyszukiwaniu dokumentów.
+
+### Indeksowanie i metadane
+
+Każdy dokument jest indeksowany na podstawie treści i metadanych (takich jak tytuł, autor, data utworzenia, typ dokumentu). Indeksowanie umożliwia szybkie i dokładne wyszukiwanie dokumentów. Metadane są to informacje dodatkowe, które opisują dokument. Mogą obejmować kategorie, tagi, słowa kluczowe, daty, autorów itp.
+
+### Wyszukiwanie i szybki dostęp do dokumentów
+
+Użytkownicy mogą szybko znaleźć potrzebne dokumenty za pomocą zaawansowanych funkcji wyszukiwania. Wyszukiwanie może być oparte na pełnotekstowym indeksowaniu, metadanych, filtrach i innych kryteriach. Dostęp do dokumentów jest kontrolowany przez system uprawnień i autoryzacji. Użytkownicy mają dostęp tylko do tych dokumentów, do których mają uprawnienia.
+
+### Przepływ pracy (Workflow)
+
+System DMS może automatyzować procesy związane z obiegiem dokumentów, takie jak zatwierdzanie, recenzowanie, udzielanie zgód czy archiwizacja. Procesy te mogą być zdefiniowane za pomocą reguł i schematów. Użytkownicy są powiadamiani o zadaniach i terminach związanych z dokumentami, co usprawnia współpracę i zapewnia terminowe realizowanie zadań.
+
+### Bezpieczeństwo i kontrola dostępu
+
+System DMS pozwala na zarządzanie uprawnieniami użytkowników do tworzenia, edytowania, usuwania i przeglądania dokumentów. Uprawnienia mogą być przypisywane na poziomie użytkownika, grupy lub roli. System DMS rejestruje wszystkie operacje na dokumentach, co umożliwia audytowanie i śledzenie, kto i kiedy dokonał zmian w dokumentach.
+
+## Korzyści
+
+- Poprawa terminowość obiegu dokumentu, w wyniku założonych norm czasowych na każdy etap,
+- Szybszy dostęp do informacji, ponieważ wystarczy jedno lub kilka kliknięć,
+- Usprawniony obieg informacji pomiędzy działami. Krótko mówiąc, sprawy idą „jak po sznurku”,
+- Brak spraw zaginionych i zapomnianych, ponieważ każda ważna sprawa jest w rejestrze i system przypomina o realizacji.
+
+## DMS jako część systemu ERP/CRM
+
+W przedsiębiorstwach DMS jest częścią większych systemów służących do zarządzania firmą takich jak CRM czy ERP. Wynika to z tego, że działa pomiędzy różnymi działami procedując dokumenty mające wpływ na operacje gospodarcze. Przykładowo:  Obieg dokumentu kosztowego łączy różne działy, ponieważ zaczyna się od akceptacji merytorycznej przez zamawiającego, przez dekretację w księgowości i zwolnienie do płatności. Obieg zapotrzebowania materiałowego kończy się wystawieniem zamówienia do dostawcy. Reklamacja jest procedowana i może wiązać się z pojawieniem się dokumentów magazynowych i korekt faktur. Dlatego ważne jest aby móc przejść od formalnych dokumentów systemu ERP do procesu i w drugą stronę.
+

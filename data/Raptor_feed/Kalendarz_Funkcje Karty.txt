@@ -1,0 +1,14 @@
+## Funkcje dostępne z poziomu kalendarza pracy to:
+- *Nowe zdarzenie* - powala na dodanie nowego zdarzenie. Wybór tej funkcji spowoduje wyświetlenie okna z poziomu którego użytkownik wybiera jaki rodzaj zdarzenia ma zostać dodany
+- *Nowe zdarzenie całodniowe* - użycie tej funkcji spowoduje utworzenie zdarzenia, które zaplanowane zostanie na cały dzień
+- *Nowe zdarzenie zgodnie z procedura* - funkcja ta odpowiedzialna jest za uruchomienie ciągu zdarzeń zdefiniowanych w trakcie tworzenia procedury
+- *Blokowe planowanie zdarzeń*
+    - *na klienta*/*na pracownika* - pozwala na blokową zmiane zdarzeń z określeniem parametrów takich jak:  data rozpoczęcia, odstęp pomiedzy zdarzeniami, czas trwania oraz dni  
+    
+
+- *idź do dzisiaj* - przeniesienie użytkownika kalendarza do dziś
+- *idź do daty* - powala na przeniesienie użytkownika kalendarza do wybranego dnia
+
+- *Zmień widok na* - możliwość wyboru w jaki sposób będą prezentowane zdarzenia z poziomu kalendarza
+
+![tmpf517b965-f68e-43d8-b7f6-b0baaa632973](https://www.cfi.pl/vendohelp/content/imgs/C4/03a7eb5ad009be7b979da55ea7584d73-4095-0.png)

@@ -1,0 +1,73 @@
+# Harmonogramowanie produkcji
+## Informacje ogólne
+Operacyjne planowanie produkcji realizowane jest w oparciu o funkcjonalność harmonogramowania produkcji dostępną w systemie VENDO.ERP.
+Przed przystąpieniem do planowania operacyjnego wymagane jest wygenerowanie przewodników produkcyjnych zwanych KKW (Karta Kontrolna Wyrobu). 
+
+## Opis
+
+Przewodnik produkcyjny umożliwia podział pozycji wyrobu zlecenia na partie produkcyjne oraz zawiera informacje:
+-	Listę planowanych rozchodów materiałowych
+-	Listę operacji oraz kooperacji
+
+Jako lista zasobów planistycznych należy rozumieć sparametryzowane gniazda produkcyjne, czyli zasoby z określoną pojemnością produkcyjną w danej jednostce czasu (tzw. kubełki planistyczne). Pojemność poszczególnych zasobów należy określić ręcznie poprzez parametryzację harmonogramu oraz pojemności gniazd produkcyjnych. 
+
+Dostępność zasobów reprezentowana jest przez jasne pola, obszary szare oznaczają brak dostępności stanowiska w danym czasie. O dostępności stanowiska decydują:
+-	Kalendarz stanowiska
+-	Zarejestrowane i wprowadzone przestoje, wynikające np. z awarii, przeglądów i innych zdarzeń  
+
+Lista zadań do zaplanowania może reprezentować:
+-	Strukturę zlecenia
+-	Listę operacji
+Zaplanowane instrukcje (operacje lub ich część umieszczona w planie) będą reprezentowane poprzez prostokąty zajmujące normatywny odcinek czasu na wskazanym zasobie.
+
+![tmp98839d62-e875-4227-99f5-dc97d1295ab2](https://www.cfi.pl/vendohelp/content/imgs/U0/c7e328522e87e1415009fec04d739e39-87942-0.png)
+
+### Elementy uczestniczące w harmonogramowaniu:
+
+-	Dostępność stanowisk - W systemie udostępniony jest kalendarz dostępności każdej maszyny. Kalendarz ten jest podzielony na 3 grupy wprowadzenia dostępności/braku dostępności:
+-	Poziom stanowiska – możliwość wyłączenia konkretnego stanowiska pracy
+-	Poziom wydziału – możliwość wyłączenia całego wydziału czyli wszystkie stanowiska, które do tego wydziału należą, nie pracują w podanym czasie, możliwość podzielenia firmy na wydziały do łatwiejszego sterowania dostępnością
+-	Poziom firmy – cała firma w podanym czasie nie pracuje (np. dni wolne, święta itp.)
+-	Kalendarzem stanowisk można operować jako konfiguracją dostępności pracy 
+w VENDO.ERP
+
+![tmpf931ebad-578f-4afc-9cef-72c604ecc13c](https://www.cfi.pl/vendohelp/content/imgs/C8/8fcc392d6189cc0db8e7788e6f22abef-33624-0.png)
+
+![tmp968ca5d1-b7ea-40ab-a4b8-00f9190a2633](https://www.cfi.pl/vendohelp/content/imgs/E6/7d57ff26361fa473045185ef5343626d-39705-0.png)
+
+-	Dostępność pracownika - Każdy pracownik posiada swój kalendarz pracy (kiedy będzie on dostępny).
+-	Matryca umiejętności pracowników - Jest to matryca Pracownik-Operacja technologiczna (słownik operacji), w której określmy czy dany pracownik umie wykonywać dany typ operacji czy nie. System w harmonogramie produkcji może przy zastosowaniu matrycy oraz kalendarzy pracowniczych, tworzyć rezerwację danego pracownika 
+
+
+![tmp9904ebeb-9cc2-4c30-9384-11846c407688](https://www.cfi.pl/vendohelp/content/imgs/B7/4ff25028a71f58f97377a5c3fa72b972-29845-0.png)
+
+-	Matryca przezbrojeń - zgodnie z dedykowanym rozdziałem
+-	Dostępność materiałów
+
+### Metody planowania 
+
+W systemie Vendo dostępne są różne sposoby planowania:
+#### 	Planowanie automatyczne 
+Planowanie automatyczne realizowane jest według sparametryzowanych zasad zaimplementowanego algorytmu. Uruchomienie planowania automatycznego może nastąpić wskutek:
+-	Zaznaczenia zbioru operacji, pojedynczej operacji lub struktury zlecenia 
+-	Uruchomienia funkcji dla wszystkich pozycji w planie
+Automat planistyczny będzie rozkładał zaznaczone obiekty według:
+-	Kolejki priorytetów zaznaczonych zleceń produkcyjnych
+-	Domyślnych stanowisk produkcyjnych lub dostępnych stanowisk w ramach grupy i normatywów czasowych
+-	Według kolejności struktury wyrobu
+-	Według dostępnych materiałów lub potwierdzonych terminów dostawy
+-	Według dostępnych narzędzi lub potwierdzonych terminów dostawy
+
+#### 	Planowanie manualne
+Operator na podstawie listy operacji do zaplanowania będzie mógł manualnie, metodą „przeciągnij i upuść” (drag&drop), umieścić operację w planie. 
+Zaplanowane instrukcje są dostępne do przesuwania i umieszczania w wybranym punkcie czasowym lub na innym dopuszczonym stanowisku. 
+
+Ręczna manipulacja umożliwia przesuwanie instrukcji pomimo niespełnienia warunków dostępności i wymagalności:
+-	Terminu realizacji
+-	Dostępnych materiałów
+-	Dostępnych narzędzi
+Informacje o niezgodnościach prezentowane są w postaci czerwonej ramki otaczającej instrukcję. 
+
+
+
+

@@ -1,0 +1,166 @@
+
+# Inny Zakup IZ
+Dokument Inny Zakup jest potwierdzeniem zakupu nie wpływającego na stan magazynu oraz rozrachunku z klientem  Nie wpływa on na stan magazynowy. Nie ma on wpływu na stan zobowiązań i należności. 
+Dokument Inny Zakup charakteryzuje się następującymi cechami:
+-	Numer 
+-	Magazyn
+-	Data sprzedaży
+-	Wystawienia .
+-	Dostawca
+-	Nabywca
+-	Forma płatności
+-	Płatności
+-	Wartość netto
+-	Vat (metoda liczenia VAT od netto/od brutto)
+-	Do zapłaty
+-	Zapłacono
+-	Pozostało do zapłaty
+-	Zaliczki
+	Całkowite zadłużenie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H3/dae3b702b64adfdd580cdcad5d76fcbe-34112-0.png)
+ 
+W zakładce Dane kontrahenta najdują się dane teleadresowe oraz NIP
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H3/dae3b702b64adfdd580cdcad5d76fcbe-34112-0.png)
+
+ 
+W zakładce Inne parametry znajdują się dane dotyczące:
+-	Waluta / Kurs
+-	Numer zamówienia
+-	Numer Dostawy
+-	Numer Obcy
+-	Forma Dostawy
+-	Spedycja
+-	Kontakt
+-	E-mail
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y0/8cc172a87934c5a21c4af1dfc41d0e94-25012-0.png)
+ 
+W zakładce Opis I Uwagi znajduje się pole Uwagi którego zawartość może wydrukować się
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/W4/8aaeae56cf29430924e4399568c872cf-19709-0.png)
+
+ 
+W zakładce Wartości dowolne znajdują się dane dotyczące utworzonych Wartości Dowolnych
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G0/dfff856c6fc0105747db6111f0653674-23056-0.png)
+ 
+Pozycje dokumentu charakteryzują się :
+-	Nazwą towaru
+-	Grupa cen – cena zakupu
+-	Cena 0
+-	Ilość
+-	Rabat
+-	Cena netto jednostki
+-	St. VAT
+-	Cena brutto j.m.
+-	Stan
+-	Magazyn
+-	Rezerwacje
+-	Jednostki alternatywne – ilość Opk i Podst – pokazuje ilość w zdefiniowanej jednostce z ustawionym przelicznikiem
+-	Wartości dowolne
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L1/0e3c327af47cb6cc71dc25c5cdf3acb2-19186-0.png)
+ 
+Wystawiając Dokument Inny Zakup mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. Zmiany te są dostępne z poziomu Funkcji i tak:
+-	Koszty wysyłki
+-	Dodawanie pozycji – wybieramy pozycje z listy kartotekę towarową
+-	Usuń pozycje
+
+Sprawdzenie NIPu umożliwia zweryfikowanie aktywnosci jako podatnika VAT oraz EURONIP.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F3/c11c24b2b204016f4ccaccdf2e6371bf-1977-0.png)
+ 
+W funkcjach możliwe jest wydrukowanie dokumentu poprzez Drukowanie lub podczas zamknięcia dokumentu. Z funkcji możliwe jest wydrukowanie dokumentu, wydrukowanie dokumentu z dokumentami powiązanymi, potwierdzenie dokumentu oraz wydrukowanie etykiet pozycji dokumentu.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B5/4e50b4ea4c0982f65548578e762f4824-2893-0.png)
+ 
+W korespondencji – mail mamy możliwość wysłania maila do kontrahenta lub wysanie SMSa do kontrahenta
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/S4/618970fdb713e1416892781140aade23-1617-0.png)
+
+
+Płatności umożliwiają sprawdzenie rozliczenia z klientem lub dokumentu oraz zweryfikowanie zadłużenia klienta. Dodatkowo możliwe jest sprawdzenie oraz dodanie zdarzenia windykacyjnego
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D5/cd228a717b49ac008cd7c6e3b1c8314f-7393-0.png)
+ 
+Przydatnymi funkcjonalnościami  dokumentu w statusie Bufora są Funkcje Specjalne. Umożliwiają zmienić niektóre parametry dokumentu. Takimi parametrami są:
+-	Zmiana numeru – umożliwia zmianę numeru i serii dokumentu
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O6/1c1810c1dda41b8aa936240888b151bc-18537-0.png)
+ 
+-	Zmiana metody liczenia VAT
+-	Zmiana stawki VAT na zaznaczonych pozycjach
+-	Zmiana Waluty dokumentu
+-	Zmiana Wartości dowolnych pozycji
+-	Wykonaj skrypt – umożliwia uruchomienie wcześniej zdefiniowanego skryptu wykonującego pewne wyliczenia np. ustawienie lub obliczenie wartości na podstawie innych danych.
+-	Rejestr zmian – można sprawdzić jakie były zmian na dokumencie
+Kolejnym zestawem funkcjonalności są Funkcje. Umożliwiają one :
+-	Zmianę źródła pochodzenia dokumentu – źródłem pochodzenia dokumentu jest informacja jak powstał dokument. Może być importowanych ze sklepu internetowego lub utworzony wewnątrz systemu, bądź pochodzić z zewnętrznego systemu. Poniższy zrzut ekranu pokazuje możliwe źródła pochodzenia.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y8/cc12b4bb2deaaf576a5aeb5cb36986b9-49664-0.png)
+ 
+-	Kopiowanie pozycji z innego dokumentu
+-	Kopiowanie wybranych pozycji
+-	Utwórz kopię dokumentu
+-	Pliki do dokumentu
+-	Otwarcie szuflady
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C6/26e414f3b2694185acbe70e8191b98e8-5842-0.png)
+ 
+Jeżeli dokument będzie zamknięty pojawią się nowe funkcjalności w Funkcjach -> Funckje Specjalne :
+-	Otwarcie dokumentu - funkcja nie powinna być używana bez powodu. Użycie jej może zabużyć wyniki raportów, aktualny stan magazynow.
+-	Zmiana numeru dokumentu
+-	Zmiana stawki VAT na zaznaczonych pozycjach
+-	Zmiana kontrahenta
+-	Zmiana dat
+-	Zmiana wartości dowolnych pozycji
+-	Rejest zmian – przegląd historii zmian wprowadzonych przez użytkowników na dokumencie 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G2/00c3a1b26029b82ca084f46e10030b25-5630-0.png)
+ 
+Każdy dokument mona eksportować do postaci pliku w odpowiednim formacie. Służą do niego funkcjonalności w Funkcje -> Import/Eksport 
+-	Eksport do schowka systemowego
+
+Każdy dokument tak jak IZ można przypisać/ podłączyć do różnego rodzaju zlecenia Funkcje -> Zlecenia. Do zleceń można zaliczyć takie jak Zlecenia serwisowe, produkcyjne, projekty, umowy najmu, procesy sprzedaży itp. Chcą przypisać zlecenie wybieram już istniejące zlecenia filtrując po dacie i rodzaju zlecenia. Możliwe jest także bezpośrednie utworzenie zlecenia z tego poziomu, gdzie przenoszą się dane dotyczą klienta.  
+ 
+Dokumenty można powiązać z zleceniami przewozowymi. W Funkcje -> Logistyka można :
+ 
+-	Dopiąć/przepiąć do zbioru listów przewozowych lub zleceń transportowych
+-	Dopięcie / przepięcie listu przewozowego
+-	Wystawienie logistyki do dokumentu
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/eebca8737e5bc735ef827ad8690e9c60-95438-0.png)
+
+
+Każdy dokument możemy przypiąć do Zdarzenia lub utworzyć nowe zdarzenie. Można to zrobić w Funkcje -> CRM
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z3/76bbf6322f8e26b423a003f10166894c-14183-0.png)
+
+Pomocnymi  funkcjonalnościami – Funkcje -> Widoki  są:
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U6/2d923d6594f38b88ed31f7cefdec7564-3653-0.png)
+ 
+-	Pozycje wg opakowań – pokazuje pozycje dokumentu w przeliczeniu na opakowania zdefiniowane na kartotekach towarowych  
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/f069ae848ecac10d7b3d9d4fe590fb67-64998-0.png) 
+
+-	Porównanie cen dokumentu z wybrana grupą
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L3/5776f21a3e915fba92c72e05d1432148-10429-0.png)
+ 
+Miejsca magazynowe wg pozycji z dokumentu
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A6/aeda04e150dce1ab32e8b8f206f09f1e-12828-0.png)
+ 
+W dolnej części okna z dokumentem jest przycisk Dok.Skojarz. Po wciśnięciu tego przycisku pokazuje się nowe okno ze skojarzonymi dokumentami. W przypadku ZM mogą to być Zamówienia Własne, Zlecenia, Możliwe jest filtrowanie po typie dokumentu. Poniżej widać możliwości filtrowania. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C8/b6efba825b5ba1969d614a86ac06b594-15210-0.png)
+ 
+Na każdym typie dokumentu możliwa jest obsługa dokumentu poprzez klawiaturę. Widoczne są przy niektórych funkcjach skróty klawiszowe np. Insert – dodanie pozycji, F8 - Rozliczenie dokumentu, CTRL+L – wystawienie listu przewozowego. Możliwe jest także skonfigurowanie kolejności tabulacji na dokumencie, umożliwia to ustawienie kolejności przeskakiwania kursora pomiędzy polami.
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H7/c509efaf54e0a36f90a9e685b06b8667-95045-0.png)  
+
+Należy pamiętać że, niektóre funkcjonalności mogą się pojawić lub znikać w zależności w jakim stanie jest dokument : W buforze, Zamknięty, zaksięgowany. 

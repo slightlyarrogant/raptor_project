@@ -1,0 +1,20 @@
+## Zapisy i wzorce księgowe
+
+Zapisy księgowe w formie dekretów powstają w sposób automatyczny lub ręczny. Ręczne księgowania są możliwe w ramach poszczególnych dzienników księgowych i co do zasady tworzone są w dzienniku przeznaczonym dla poleceń księgowania. Automatyczne powstają za pomocą używania wzorców księgowych, czyli automatów skonfigurowanych w taki sposób, aby wartości poszczególnych operacji gospodarczych księgować na odpowiednie konta Księgi Handlowej w ramach danego dekretu księgowego. Użytkownik wskazuje odpowiednie *dokumenty* z modułu `Dokumenty Vendo` lub *operacje bankowe / kasowe* z modułu `Płatności` (w ramach tzw. *Raportu Finansowego*) i wybiera opcję księgowania za pomocą odpowiedniego wzorca. To użytkownik decyduje jakim wzorcem, do jakiego okresu (miesiąca) oraz w jakim dzienniku dane dokumenty zostaną zaksięgowane. 
+
+W ramach kont księgowych, które możemy używać do księgowania zautomatyzowanymi wzorcami księgowymi, możemy wykorzystać te, które są rozpisane w planie kont, jak również tzw. makra. W tym przypadku makra możemy zdefiniować jako odnośniki do pól w różnych miejscach programu, np. kartotek towarowych, kontrahentów lub wartości dowolnych, gdzie umieszone zostały numery kont księgowych lub ich analityki. Makra dostępne są również w innych elementach budowy wzorca, jak np. opis, czy wartość. Pozwalają na automatyczne wypełnienie tych pól z danych pochodzących, np. z dokumentu, płatności, itp. Nieodzownym elementem budowy wzorca księgowego są filtry. Pozwalają one wyselekcjonować tylko te informacje, które mają być księgowane daną pozycją wzorca księgowego na odpowiednie konta. Proste filtry pozwalają na określenie do księgowania konkretnej kartoteki towarowej lub wybranej stawki VAT. Filtry zaawansowane (w przypadku księgowania dokumentów) umożliwiają selekcję szeregu informacji związanych z serią, rodzajem, ex/importowością (krajowy/wewnątrzunijny/poza UE), formą i terminem płatności, walutą, magazynem dokumentu; kartoteki towarowej, jej rodzaju, grupy lub odliczenia VAT; kontrahentem, jego krajem, grupą lub funkcją; ośrodkiem powstawania kosztu (OPK/MPK), itp. Dzięki zastosowania filtrów jesteśmy w stanie tworzyć bardziej inteligentne i dostosowane do potrzeb księgowych automaty dekretacyjne. W przypadku bardziej zaawansowanych struktur księgowych, do tworzenia wzorców używamy specjalnie zaprogramowanych pluginów pozwalających pobierać dane z innych dokumentów skojarzonych z księgowanym dokumentem.
+Ilość i zakres księgowania wzorców księgowych zależne są od konkretnych uwarunkowań i charakteru operacji gospodarczych. Przykładowymi podstawowymi wzorcami księgowymi są: 
+-	SPRZEDAŻ (dla celów księgowania faktur VAT sprzedaży),
+-	SPRZEDAŻ ZALICZKOWA (księgowanie transakcji sprzedaży zaliczkowej),
+-	SPRZEDAŻ WEWNĘTRZNA (przeksięgowanie VATu naliczonego i należnego z tytułu transakcji zakupu wewnątrzunijnego lub odwrotnego obciążenia),
+-	PZ - księgowanie przyjęcia towarów na magazyn,
+-	FZ - księgowanie faktur zakupu,
+-	KOSZTY - księgowanie dokumentów kosztowych i zakupów pozostałych – nie na magazyn,
+-	RW/PW - wzorce do księgowania dokumentów magazynowo-produkcyjnych,
+-	MM+ - księgowanie przesunięć międzymagazynowych,
+-	KASA/BANK - księgowanie operacji kasowo-bankowych,
+-	RÓŻNICE KURSOWE - księgowanie różnic kursowych w płatnościach.
+
+Może się okazać konieczne utworzenie wzorców księgowych na jeszcze inne rodzaje użytych dokumentów, bądź też zwielokrotnienie powyżej wymienionych, np. w celu wyodrębnienia księgowania określonego typu transakcji (np. KOSZTY dla ŚRODKÓW TRWAŁYCH – wzorzec służący do księgowania zakupu ŚT) lub też z powodu braku jednoznacznego kryterium wyodrębnienia.
+
+

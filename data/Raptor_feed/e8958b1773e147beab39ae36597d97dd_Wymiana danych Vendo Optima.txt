@@ -1,0 +1,56 @@
+Wymiana danych Vendo Optima
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/optima-plugin
+scraped_at: 2024-09-05T12:21:39.258214
+last_updated: 2024-09-05T12:21:39.258263
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Wymiana danych Vendo Optima
+meta_tags: ['optima', 'należy', 'vendo', 'dokumentów', 'plugina', 'eksportu', 'systemu', 'poziomu', 'płatności', 'dokumenty']
+
+Content
+Integracja wymiany danych Vendo - Optima rejestry
+Wstęp
+Ideą powstania plugina optima plugin jest możliwość eksportu dokumentów Sprzedażowych oraz Zakupowew celu wymiany danych – Rejestrów z VENDO do systemu Optima.
+Konfiguracja zakładki Plugina – Eksport do OPTIMA
+Przed przystąpieniem do parcy konieczna jest odpowiednia parametryzacja systemu. Stosownych zmian dokonać można z poziomu ustawień głównych programu W Ustawieniach Systemu VENDO wybieramy zakładkę Ustawienia > Pluginy > ` Wybór właściwego plugina. W kolejnym kroku należy przejść do ustawień plugina dokonać tego należy klikając w ikonę narzędzie w prawym górnym rogu okna programu
+Z poziomu okna ustawień wejść w zakładkę: Współpraca z Optima Plugin > Narzędzia > aby otworzyć parametryzację
+
+W oknie należy ustawić Identyfikator bazy:
+
+BAZA_ZRD_ID Identyfikator bazy, z której pochodzą zapisy. Węzeł wymagany.
+BAZA_DOC_ID Identyfikator bazy, do której kierowane są zapisy, musi być identyczny jak identyfikator bazy księgowej określony w konfiguracji Comarch ERP Optima. Węzeł wymagany.
+
+Należy zdefiniować również nazwy Rejestrów, które zdefiniowane są w Optima
+Kolejna zakładka odpowiada za Formy płatności: Na etapie konfiguracji formy płatności należy podać je nazwę w Optima i przypisać nazwę zdefiniowaną w VENDO, tak aby zgadzał się ciąg znaków:
+
+Definiowane Formy płatności w VENDO odbywa sie z poziomu słowników systemowych. Aby tego dokonać z poziomu Ustawień głównych przejść > Słowniki > Płatności > Formy płatności: Gotówka
+
+Konfiguracja programu OPTIMA
+Skonfigurowanie w VENDO zakładki plugina "współpraca z Optima" o nazwy Rejestrów, które są powprowadzane w Konfiguracji Optima:
+Należy w programie Optima uruchomić pracę rozproszoną :
+Nazwy słownikowe z Optima (jak niżej)
+
+tym sposobem w programie Optima, będzie uruchomiona możliwość pracy rozproszonej
+
+W Vendo należy uzupełnić w konfiguracji Rejestry 1:1 takie jakie są wprowadzone do Optima.
+Instrukcja użycia Eksportu danych w programie VENDO
+Eksportu dokumentów z systemu Vendo dokonać należy z poziomu listy dokumentów. W tym celu należy odnaleźć moduł Dokumenty > dokumenty sprzedażowe > Faktury Vat FV
+Eksportując dokumenty, dokumenty muszą być zamknięte. Będąc na liście dokumentów zaznaczamy te które zostaną wyeksportowane. Należy przy tym pamiętać iż, eksportu dokonujemy po określeniu stosownego miesiąca (wskazanie danego miesiąca). Następnie wybieramy Funkcję > Księgowość > Eksport rejestru sprzedaży do Optima:
+
+Po użyciu Funkcji system zapisze plik z dokumentami we wskazanej lokalizacji:
+
+po dokonaniu eksportu w kolumnie Księgowość na liście dokumentów, pojawi się znacznik literki "K" oznacza to że, dokument jest został Wyeksportowany do pliku.
+Jeżeli zajdzie potrzeba, iż użytkownik będzie potrzebował wygenerować plik ponownie, należy pamiętać aby usunąć znacznik "K" z dokumentów: Usuwanie znacznika na liście dokumentów odbywa sie poprzez:
+Zaznaczanie dokumenty na liście następnie Funkcje> Księgowość > [Anuluj oznaczenie eksportu do księgowości] System zapyta użytkownika "Czy na pewno anulować oznaczenie wyeksportowania do zewnętrznego programu KH?
+
+W kolumnie Księgowość zniknie znacznik K
+Funkcja działa analogicznie po stronie dokumentów zakupowych. Dodatkowo proszę pamiętać, iż w przypadku aktualizacji systemu do wyższej wersji, należy podegrać aktualny plugin, kompatybilny z wersją programu.
+Images
+
+
+
+
+
+
+

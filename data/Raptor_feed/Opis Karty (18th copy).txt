@@ -1,0 +1,61 @@
+#	Sprzedaż
+##	Informacje ogólne
+
+Moduł rejestrów VAT zawiera ewidencje dokumentów potrzebnych dla obliczenia sum podatku należnego i naliczonego w danym okresie. Rejestry VAT dzielimy na dwie podstawowe kategorie: sprzedaż (dla faktur sprzedaży FV, ZA) i zakup (dla dokumentów faktur zakupu, kosztowych itp.). W tym miejscu omówiony zostanie rejestr sprzedaży. 
+
+Ilość rejestrów VAT jest dowolna i jest konfigurowana osobno na każdy rok księgowy. W zalecanej konfiguracji tworzymy tylko jeden rejestr VAT dla rejestracji podatku należnego (sprzedaż). W przypadku konieczności utworzenia dodatkowych rejestrów, mamy oczywiście taką możliwość w słownikach systemowych programu, lecz nie jest to zalecane (ze względu na automatyzację tworzenia deklaracji VAT i JPK_VAT).
+
+System VENDO.ERP posiada duże możliwości filtrowania. Pozwala to zobaczyć wszystkie dokumenty na jednej liście, a jednocześnie podzielić je kategorie według zawartych w nich danych.
+
+Dla każdego z rejestrów możliwe jest na przykład filtrowanie dokumentów w zakresie przedstawionym na poniższym rysunku, czyli wg typów transakcji.
+
+![tmp52fcc55f-bd46-4104-a4c1-d6c221f15e80](https://www.cfi.pl/vendohelp/content/imgs/H5/3fed77f7472d87a2f2280aa47b968644-141437-0.png)
+
+*Filtrowanie po rodzaju operacji VAT dla sprzedaży*
+
+Wszystkie dokumenty przenoszone do rejestrów mają określony typ transakcji, który w rejestrach VAT dla sprzedaży obejmuje: sprzedaż krajową, wewnątrzunijną DT, export towarów, export usług w UE i poza UE, transakcje trójstronne, WNT, import towarów, import usług w UE i poza UE, taxfree, a także dodatkowe kategorie związane z art. 14.5 ustawy, art. 111.6 ustawy, czy wewnątrzwspólnotowym nabyciem środków transportu lub paliw silnikowych (historycznie dostępne są też opcje związane z krajowym odwrotnym obciążeniem zgodnie z art. 17 ust 1 pkt. 5 ustawy, odwrotnym obciążeniem zgodnie z art. 17 ust 1 pkt. 7 ustawy, odwrotnym obciążeniem zgodnie z art. 17 ust 1 pkt. 8 ustawy). Typy transakcji odwzorowywane są z ustawień dokumentów wprowadzonych do systemu. Na etapie wprowadzania użytkownik wskazuje jaki jest to typ dokumentu (np. dla faktury VAT sprzedaży określamy, czy jest krajowa, wewnątrzunijna WDT, exportowa towarów, exportowa usług w UE / poza UE itp.) Dzięki takiemu rozwiązaniu w rejestrach VAT otrzymujemy strukturę, z której potem będziemy w stanie z automatu wygenerować podsumowanie dla deklaracji VAT bądź JPK.
+
+Jak wspomniano, dokumenty przenoszone są do rejestru VAT automatycznie za pomocą stosownej funkcji Księgowość > Przenieś wszystkie / Przenieś zaznaczone dokumenty do rejestru VAT dostępnej z listy w module Dokumenty bądź bezpośrednio z formularza danego dokumentu. W momencie przenoszenia użytkownik określa trzy parametry:
+
+ 
+![tmp23a1dabd-c7aa-4b46-aca1-43324405707f](https://www.cfi.pl/vendohelp/content/imgs/V1/a7731252bc91633dfb7f8c8455defd05-15446-0.png)
+
+*Parametry przenoszenia dokumentów do rejestru VAT*
+
+1.	wybiera rejestr VAT, do którego ma trafić dokument;
+2.	wybiera miesiąc deklaracji VAT, w której ma znaleźć się dokument. Program daje możliwość zastosowania miesiąca ustalonego (na sztywno zdefiniowanego przez użytkownika, wówczas wszystkie zaznaczone dokumenty trafią do tego miesiąca danego rejestru VAT), według daty operacji (dokumenty trafią do miesiąca wskazanego w dacie operacji konkretnego dokumentu), według daty płatności (dokumenty trafią do miesiąca wskazanego w dacie płatności konkretnego dokumentu). Najczęściej w przypadku dokumentów sprzedaży stosuje się miesiąc ustalony. 
+
+3. 	wybiera kontrahenta: 
+- ustawienie „Domyślny” (system domyślnie przypisuje kontrahenta K1), 
+- „K1” (pierwszy kontrahent na dokumencie, w przypadku dokumentów sprzedaży jest to nabywca),
+- „K2” (drugi kontrahent na dokumencie, w przypadku dokumentów sprzedaży jest to odbiorca).
+
+W ramach rejestrów VAT mamy możliwość skorzystania z szeregu filtrów pozwalających na wyszukanie tych dokumentów, które nas interesują, np. tylko korekt lub tylko dokumentów. W związku z powyższym, niepotrzebne jest tworzenie odrębnych rejestrów np. dla korekt dokumentów, gdyż możemy je w bardzo prosty sposób wyszukać, a ponadto korekty zawsze wystawiane są w odrębnym ciągu numeracyjnych od pozostałych faktur. W ramach dostępnych filtrów do dyspozycji są także m.in.: filtry wg rodzajów dokumentów, wg rodzajów transakcji VAT, rodzajów nabywcy. 
+
+Zapisy w rejestrach VAT możemy dodawać również ręcznie. Nie korzystamy wówczas z przenoszenia konkretnego dokumentu, nie musimy go nawet wprowadzać. Wystarczy wejść w moduł Rejestry VAT, wybrać typ „sprzedaż” i konkretny rejestr oraz przycisnąć przycisk Dodaj lub klawisz [Insert]. W ten sposób omijamy skojarzenie dokumentu z rejestrem VAT, co jednak nie jest pożądane (i zalecane). Jest to jednak przydatne w pierwszym miesiącu pracy na programie, kiedy musimy uzupełnić rejestr VAT o dokumenty nieodliczone w poprzednim systemie. Ponadto wpisem ręcznym w rejestrze uzupełniamy informacje dla typów transakcji, które nie dotyczą dokumentów (faktur) np. Kwota podatku należnego objętego od towarów i usług objętych spisem z natury. Należy pamiętać, że taki „wpis z ręki” nie ma żadnego odzwierciedlenia w Księdze Handlowej, dlatego też, jeżeli to konieczne, należy odpowiednie księgowania nanieść Poleceniem Księgowania w stosownym dzienniku księgowym. 
+
+Należy w tym miejscu zwrócić uwagę na fakt, iż przed wydrukowaniem Rejestrów VAT powinny zostać one zrenumerowane, aby wpisy zostały ułożone chronologicznie wg dat.
+
+Na szczególną uwagę w rejestrach sprzedaży zasługują transakcje dotyczące zakupu wewnątrzwspólnotowego oraz importu. Podczas wprowadzania pozycji tego typu dokumentów system posiada informacje na kartotekach towarów, jakie stawki VAT przyporządkowane są danemu towarowi lub usłudze. 
+
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M4/4baf0823eeaffdc0593a6483761edda5-48280-0.png)
+
+*Dialog dodawania nowej pozycji towarowej na dokumencie FZ WNT*
+
+Użytkownik widzi ją w nawiasie obok stawki VAT wymuszonej przez typ transakcji pierwotnego dokumentu (jak widać na powyższym rysunku zastosowana stawka VAT to 0% natomiast stawka VAT dla celów rozliczenia VATu należnego i naliczonego to 23%). Po zamknięciu dokumentu, jest on gotowy do przeniesienia do rejestru VAT. Dokonujemy tego identycznie jak w przypadku dokumentów krajowych, jak opisano wcześniej. Różnica w oknie dialogowym dotyczy rejestrów VAT do jakich przenieść dokument. System automatycznie generuje dwa wpisy w rejestrach VAT – jeden w rejestrze sprzedaży (VAT należny), drugi w rejestrze zakupu (VAT naliczony). 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O0/a8410183c42a626a8735416b26b6dee0-33813-0.png)
+
+*Dialog przenoszenia dokumentu FZ WNT do rejestrów VAT należnego i naliczonego*
+
+Po dokonaniu przeniesienia dokumentu do rejestrów VAT zostaną utworzone wpisy jednocześnie w rejestrze sprzedaży (jako wewnątrzwspólnotowe nabycie towarów WNT) oraz w rejestrze zakupu (jako zakup pozostały). Nie ma potrzeby wykonywania żadnych dodatkowych czynności (tworzenia dodatkowych dokumentów itp.).
+
+Co do zasady dokumenty są przenoszone do obydwu rejestrów VAT jednocześnie (sprzedaży i zakupu) w miesiącu wystawienia dokumentu zakupowego (lub wg. wskazanego miesiąca odliczenia VAT). W przypadku, kiedy miesiąc dla VATu naliczonego jest inny niż miesiąc dla VATu należnego (daną fakturę musimy wykazać w deklaracji VAT jako VAT należny, ale nie mamy prawa do odliczenia VATu w tym samym miesiącu), wówczas możemy zmienić (edytować) miesiąc odliczenia w VAT danej faktury. Możemy to zrobić już po przeniesieniu dokumentu do rejestrów VAT. Wchodzimy w rejestr sprzedaży i odnajdujemy naszą fakturę (np. po numerze). Następnie wchodzimy w kartę rejestru VAT i za pomocą przycisku Funkcje w prawym dolnym rogu karty, wybieramy opcję Edytuj dokument. Możemy też wejść w dany dokument zakupu i stąd w kartę rejestru VAT i zapis skojarzony. Jeżeli wyświetlała się karta z rejestru VAT zakupu należy wybrać przycisk Funkcje i wybrać opcję Pokaż zapis skojarzony.
+
+
+![tmp49b78adf-c19c-484e-bdd7-953078b3feeb](https://www.cfi.pl/vendohelp/content/imgs/D3/325dc2a6091f08d0bfc48b4f371469ff-105689-0.png)
+ 
+*Edycja miesiąca deklaracji VAT dla VATu należnego*
+
+Dalej, w polu „Miesiąc deklaracji” zmieniamy miesiąc wykazania danego dokumentu w deklaracji VAT.  

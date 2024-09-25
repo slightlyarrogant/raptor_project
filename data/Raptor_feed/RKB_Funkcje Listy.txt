@@ -1,0 +1,18 @@
+# Raporty kasowo/bankowe
+
+W ramach dostępu do zakładki raporty kasowo/bankowe użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmpe50a24f2-7aa9-4f01-972b-084b054726b8](https://www.cfi.pl/vendohelp/content/imgs/B5/14740941651a19234d51cc7513d4be50-4475-0.png)
+
+- okres
+- rejestr - możliwość wyświetlenia bilansu dnia dla poszczególnych rejestrów np. kasa
+- forma
+
+
+![tmp63dd3896-f7c7-472d-b84a-ba6cf49d94c3](https://www.cfi.pl/vendohelp/content/imgs/V7/2c8eda04318bb17b5aaff1bd348352da-13903-0.png)
+
+- waluta – możliwość wyświetlenia bilansu dnia dla transakcji w poszczególnych walutach
+
+Poza możliwością filtrowania rozliczeń użytkownik ma możliwość dodania nowego raportu. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpfaab9acf-db3a-44b1-9392-8f561d295269](https://www.cfi.pl/vendohelp/content/imgs/W4/a567e23cdefc11447b90b72f80bc3939-11630-0.png)

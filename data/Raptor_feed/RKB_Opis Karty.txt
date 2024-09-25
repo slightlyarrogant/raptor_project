@@ -1,0 +1,11 @@
+# Raporty kasowe
+
+W przypadku dokumentów kasowych postępujmy podobnie jak w przypadku operacji bankowych. Standardowo wprowadzamy je w module Płatności w sekcji Raport finansowy wybierając do kontekstu odpowiedni rejestr kasowy. Operacje KP / KW (kasa przyjmie / kasa wyda) wystawiane są na konkretnego odbiorcę. W sytuacji zaliczki, Użytkownik będzie ją tworzył na konkretnego Pracownika. Kartoteki pracowników będą definiowane przez Użytkownika jako kartoteki klientów wewnętrznych. Dla księgowań będą wyróżniać się przypisaną grupą warunkującą księgowania na konto 234 zamiast 201/202 skojarzonych z kontrahentami.
+
+![tmp63e6dfbb-4050-4e0f-acfd-b047f161888d](https://www.cfi.pl/vendohelp/content/imgs/U0/c3de0deec35018b838bcb36c5e5b9d22-21476-0.png)
+
+*Operacja kasowa*
+
+W standardzie VENDO.ERP oprócz wypłat i zwrotów zaliczek, podstawową funkcją tworzonych operacji kasowych jest rejestracja płatności gotówkowych za faktury. System umożliwia automatyczne tworzenie operacji KP/KW podczas zamykania dokumentów, jeżeli wybrana jest forma płatności Gotówka oraz zerowy termin płatności. W takiej sytuacji nie ma potrzeby tworzenia ręcznej wpłaty lub wypłaty i jej rozliczania. 
+
+Należy pamiętać, że operacje kasowe, w przeciwieństwie do operacji bankowych, po utworzeniu są od razu zamykane (nie trafiają do bufora). Wynika to z zasad bezpieczeństwa przy ewidencji kas i zabezpiecza przed usuwaniem operacji kasowych bez śladu, możemy je jedynie anulować a ślad po tej czynności zostaje w systemie (zawsze możemy sprawdzić kto i kiedy anulował operację). Z zakładki Raport Finansowy z menu Płatności, Użytkownik programu będzie mógł również wydrukować kasowe dowody wpłat i wypłat. 

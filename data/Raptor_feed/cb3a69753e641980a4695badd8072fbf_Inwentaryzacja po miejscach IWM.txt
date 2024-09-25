@@ -1,0 +1,188 @@
+Inwentaryzacja po miejscach IWM
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/inwentaryzacja-iwm
+scraped_at: 2024-09-05T12:13:27.120866
+last_updated: 2024-09-05T12:13:27.120991
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Inwentaryzacja po miejscach IWM
+meta_tags: ['inwentaryzacji', 'należy', 'jest', 'miejsca', 'poziomu', 'rezerwacji', 'magazynowych', 'magazynowego', 'system', 'miejsce']
+
+Content
+Inwentaryzacja po miejscach magazynowych IWM
+Informacje ogólne
+Zadaniem inwentaryzacji jest wychwytywanie różnić między stanem faktycznym magazynu a stanem, który wynika z przyjmowanych i wydawanych dokumentów magazynowych. W ramach inwentaryzacji INW podmiotem jest konkretne miejsce magazynowe nie jak w przypadku inwentaryzacji zwykłej towar. Należy pamiętać, iż w momencie usuwania pozycji z dokumentu inwentaryzacyjnego równoznaczne jest z usunięciem całego miejsca magazynowego, aby możliwe było jego zinwentaryzowanie, należy go ponownie dodać. W przypadku gdy magazyny nie są prowadzone po miejscach, natomiast w ramach działania magazynu występują partie, konieczne jest określenie pustego miejsca magazynowego. System daje możliwość ustawienia takiego miejsca. Tak więc jeśli mamy magazyn z lokalizacjami, należy wybrać konkretne miejsce magazynowe natomiast jeśli nie, określić puste miejsca magazynowe.
+Po zamknięciu dokumentu inwentaryzacyjnego program w zależności od wyniku inwentaryzacji tworzy dokument PW i/lub RW, Aby dokonać weryfikacji przeprowadzonej inwentaryzacji należy skorzystać z dedykowanych do tego celu raportów, ich opis znajduje się w dalszej części dokumentacji
+Parametryzacja oraz lokalizacja.
+Chcąc przystąpić do procesu inwentaryzacji należy z poziomu menu głównego programu odnaleźć moduł Magazyn > Inwentaryzacja
+Parametryzacja dodawania pozycji
+Przed przystąpieniem do przeprowadzenia inwentaryzacji, należy ustawić parametry związane sposobem dodawania pozycji na dokument za pośrednictwem czytnika/kolektora. Parametryzacji takiej dokonać można: Ustawienia główne > parametry pracy > Karta towarowa lub usługi > sekcja Domyśle wartości dla ustawienia propozycji ilości na karcie towaru. Ustawienia te są ustawieniami globalnymi. Na ich podstawie Użytkownik określa miedzy innymi w jaki sposób dodawać pozycje oraz czy ma pytać o potwierdzenie przed dodaniem pozycji
+Uruchomienie inwentaryzacji po partiami
+System Vendo daje możliwość przeprowadzenia inwentaryzacji po partiach uprzednio należy, jednak dokonać stosownych ustawień. Aby proces taki był możliwy należy z poziomu ustawień głównych > Parametry pracy > Towar > Zarządzanie partiami oznaczyć Parametr „Inwentaryzacja po partiach”
+Parametryzacja scenariuszów Inwentaryzacja , kontrola stanów magazynowych
+Parametryzacji scenariuszów dokonać można z poziomu Ustawień głównych systemu > Parametry pracy > Magazyn > Kolektor danych > scenariusze: Pokaz dialog > inwentaryzacja/kontrola stanów magazynowych Ustawienia te pozwalają na uruchomienie scenariuszy które w późniejszym czasie będą widoczne podczas pracy na kolektorze
+Zasady BHP podczas przeprowadzania Inwentaryzacji
+-   W czasie inwentaryzacji nie można wykonywać żadnych ruchów magazynowych 
+-   Wszystkie dokumenty magazynowe związane z wydaniem oraz przyjęciem towaru muszą być zamknięte
+-   Sprawdzenie czy są rezerwacje jeśli tak ich usunięcie
+-   Weryfikacja czy każde miejsce zostało zinwentaryzowane 
+-   Weryfikacja czy puste miejsca zostały zinwentaryzowane
+-   Sprawdzenie duplikatów sklikań
+-   Weryfikacja rozliczenia Inwentaryzacji
+-   Weryfikacja czy wszystkie faktury sprzedażowe FV mają pokrycie w postaci dokumentów WZ
+-   Nadanie/Przywrócenie rezerwacji
+
+Rezerwacje
+Proces usuwania nadawania Rezerwacji.
+Podczas przeprowadzania procesu inwentaryzacji należy dokonać weryfikacji czy w systemie nie widnieją dokumenty powodujące rezerwacje. Należy pamiętać iż, podczas przeprowadzania inwentaryzacji, wszystkie rezerwacje powinny być usunięte gdyż, może to powodować przekłamania podczas rozliczania dokumentów inwetaryzacyjnych. W systemie Vendo zostało zaimplementowane rozwiązanie pozywające na blokowe usunięcie wszystkich rezerwacji, a po przeprowadzaniu inwentaryzacji ich przywrócenie. Weryfikacja wszystkich rezerwacji które znajdują się w systemie dostępna jest z poziomu modułu Magazyn > Rezerwacje. Z poziomu raportu Użytkownik ma wgląd we wszystkie rezerwacje powstałe w wyniku działalności firmy
+
+Rys 1. Raport rezerwacje
+Uprawnienia
+Usuwania rezerwacji powinny dokonywać specjalnie wydzielone do tego osoby, dlatego też przed przystąpienie do ich usuwania należy tym osobą nadać stosowne uprawnienia. Ustawienia takie definiowane są z poziomu Uprawnień pracowniczych, dokonać tego należy: z menu głównego odnaleźć a następnie przejść do modułu Pracownicy > Pracownicy > lista kartoteki pracowniczej. W kolejnym kroku wybór odpowiedniego pracownika > zakładka Pozostałe dane > Uprawniania. Aby możliwe było uśnięcie rezerwacji, dla wybranych użytkowników należy oznaczyć uprawnienie: „Blokowe usuwanie i nadawanie rezerwacji”.
+
+Rysunek 2. Uprawnienia dla usuwania/nadawania rezerwacji
+Zasada działania
+Po nadaniu stosownych uprawnień możliwe jest wykonania blokowej operacji usuwania rezerwacji. Funkcjonalność ta dostępna jest z poziomu modułu Towary. Dokonać tego należy wg następującego schematu: Menu główne > Towary > lista kartoteki towarowej > wybór magazynu na którym usuwane będą rezerwacje > prawy przycisk myszy > Rezerwacje. Zaimplementowane rozwiązanie pozwala zarówno na trwałe usuniecie rezerwacji jak również usunięcie ich z zapisem w bazie danych a po zakończeniu procesu inwentaryzacji ich przywrócenie. Należy pamiętać, iż wywołanie funkcji pozwala na zdjęcie rezerwacji z dokumentów ZO oraz AW. Rezerwacje wynikłe w skutek wystawienia faktury sprzedażowej FV dla których nie są wystawione dokumenty magazynowe należy usunąć ręcznie.
+Po uruchomieniu funkcji „Rezerwacje”, użytkownik posiada możliwości wyboru następujących opcji:
+
+Nadanie rezerwacji wszystkim ZO i AW – pozwala na nadanie rezerwacji dla wszystkich dokumentów Typu ZO i AW. Odbudowa rezerwacji odbywa się zgodnie z datą realizacji
+Przywróć zapisane rezerwacje – pozwala na przywrócenie rezerwacji zapisanych uprzednio w bazie danych
+Usuń rezerwacje – trwałe usunięcie rezerwacji z dokumentów ZO i ZW
+Usuń rezerwacje zapisując je do BD – usunięcie rezerwacji z zapisem ich w bazie danych
+
+
+Rysunek 3. Wywołania funkcji usunięcia/nadania rezerwacji
+Każda operacja usunięcia/nadania rezerwacji w systemie Vendo jest odpowiednio logowana a wyniki wywołania poszczególnych funkcji zapisywane w bazie danych. Sprawdzenia który pracownik dokonał operacji usunięcia bądź przywrócenia rezerwacji dostępna jest z poziomu menu analizy > Parownicy > Logi
+
+Rysunek 4. Logi powstałe w wyniku usunięcia/nadania rezerwacji
+Proces przeprowadzenia Inwentaryzacji IWM z poziomu dużego Vendo
+Przed przystąpieniem do inwentaryzacji IWM należy, pamiętać aby nie było żadnych dokumentów w buforze, krytycznymi dokumentami są dokumenty magazynowe które nie zostały zatwierdzone. W ramach takiej inwentaryzacji podmiotem jest miejsce magazynowe tak więc usuwając pozycje z dokumentu inwentaryzacyjnego usuwane jest całe miejsce. Proces inwentaryzacji możliwy jest do przeprowadzenia z poziomu:
+
+Głównego Vendo
+Za pośrednictwem trybu czytnikowego
+Za pośrednictwem kolektorów.
+Inwentaryzacja uproszczona na podstawie stanów magazynowych
+
+Etapy inwentaryzacji IWN
+
+Rozpoczęcie pracy wywołanie arkusza, weryfikacja czy wszystkie dokumenty są zamknięte
+Fizyczne odwiedzenie miejsc magazynowych w celu sklikania dostępnego towaru
+Weryfikacja poprawności inwentaryzacji za pośrednictwem Raportów dostępnych w Vendo
+Rozliczenie Inwentaryzacji
+
+Tworzenie nowego dokumentu inwentaryzacyjnego IWM
+W czasie przeprowadzenia inwentaryzacji możliwa jest praca na kilku dokumentach inwentaryzacyjnych (jeden dokument przypada na jeden kolektor - zalecane) natomiast bardzo istotne jest aby praca w ramach jednego dokumentu odbywała się na jednym miejscu magazynowym i wykonywana była przez jedna osobę. Podczas inwentaryzacji po miejscach nie ma konieczności tworzenia szablonów. Proces odbywa się poprzez użycie kolektorów, czytników oraz laptopów współpracujących z systemie VENDO. Bardzo ważne aby na dokumencie inwentaryzacyjnym jedno miejsce odpowiadało jednej pozycji w arkuszu. Podczas zamykaniu inwentaryzacji należy zweryfikować czy nie ma zdublowanych miejsc magazynowych, weryfikacji takiej można dokonać korzystając używając odpowiednich narzędzi dostępnych w Vendo . Proces dodania dokumentu odbywa się w analogicznie jak w przypadku inwentaryzacji zwykłej dokonujemy tego w następujący sposób: W menu głównym należy odnaleźć moduł Magazyn > Inwentaryzacja, następnie naciskając skrót klawiszowy [SHIFT+INSERT] lub Funkcje > Dodanie nowej inwentaryzacji WM. Wyświetlone zostanie okno danych wstępnych gdzie należy określić inwentaryzowany magazyn a jeśli zajdzie taka konieczność zmienić wygenerowany numer dokumentu i serię.
+
+Rysunek 5. Okno wstępne dokumentu inwentaryzacji
+Podczas przeprowadzania inwentaryzacyjnego po miejscach magazynowych system dokonuje sprawdzenia wszystkich dokumentów magazynowych pozostających w buforze. W czasie wykonywania inwentaryzacji INW, krytycznymi są dokumenty pozostające w buforze nie mogą być także wykonywane żadne ruchy w ramach inwentaryzowanych miejsc magazynowych. Po dokonaniu sprawdzenia dokumentów pozostających w buforze system wyświetli taką informacje. Poniższy komunikat pojawi się jedynie w sytuacji, gdy system sprawdzając dokumenty zapisane w bazie danych napotka dokument w buforze. Jeśli wyświetlany będzie poniższy komunikat należy zamknąć otwarte dokumenty. W przypadku gdy takowych nie ma komunikat nie będzie wyświetlany.
+
+Rysunek 6. ostrzeżenie o otwartych dokumentach
+Po zatwierdzeniu otwiera zostanie karta dokumentu inwentaryzacyjnego (PrtScn poniżej). Należy Pamiętać, iż podstawowym parametrem na arkuszu inwentaryzacyjnym jest data utworzenia
+
+Rysunek 7. Karta inwentaryzacji
+Schemat przeprowadzenia inwentaryzacji
+Proces inwentaryzacji odbywa się poprzez zeskanowanie miejsca magazynowego dostępnego na magazynie oraz towarów dostępnych na danym miejscu a następnie jeśli dane są poprawne jej zamknięcie.
+
+Pierwszym krokiem podczas przeprowadzania inwentaryzacji jest dodanie miejsc magazynowych. Dokonać tego należy wciskając „Insert” bądź kliknięcie „Dodaj” z poziomu arkusza inwetaryzacyjnego (prawy dolny róg okna dialogowego). Spowoduje to otwarcie listy z możliwością wyboru miejsca magazynowego. Po odszukaniu wybranego miejsca wybór należy zatwierdzić. W przypadku gdy użytkownik nie pracuje w trybie miejsc magazynowych, natomiast praca odbywa się po partiach należy dodać do dokumentu domyślne miejsce magazynowe tzw. Miejsca magazynowe puste. Dokonujemy tego z poziomu listy wyboru miejsca magazynowego, klikając F4 bądź używając button „Puste MM(F4)”. Po wyborze stosownego rekordu zniknie on z listy i będzie widoczny z poziomu arkusza inwentaryzacyjnego.
+
+
+Rysunek 8. Wybór miejsca magazynowego
+
+Po określeniu właściwego miejsca magazynowego, z poziomu arkusza inwentaryzacyjnego otworzyć wybraną pozycje. System wyświetli listę towarów które znajdują się w danym miejscu magazynowym. Informacja ta jest dostępna jedynie z poziomu programu, podczas pracy z kolektorem jest ona niewidoczna tylko z poziomu głównego Vendo, na kolektorze już nie
+
+
+Rysunek 9. Lista towarów inwentaryzowanego miejsca magazynowego
+
+Celem dokonania inwentaryzacji jest określenie ilości dostępnego towaru. Dokonujemy tego poprzez wybór właściwej pozycji i zatwierdzając ją wciskając ENTER, następnie potwierdzić bądź zmodyfikować sugerowaną ilość. W przypadku gdy na inwentaryzowanym miejscu brakuje pozycji która faktycznie znajduje się na magazynie istnieje możliwość jej dodania. Dokonać tego można poprzez wybór towaru z dostępnych partii. Dokonujemy tego klikając INSERT a następnie wybór towaru z dostępnych partii
+
+
+Rysunek 10. Arkusz inwentaryzacyjny. Dodanie pozycji
+
+W przypadku gdy wyświetlane pozycje nie będą potwierdzone, system dokona rozchodu bądź przeniesie je na miejsca wskazane. Jeśli mamy do czynienia z inwentaryzacją częściową należy dokonać przeniesienia towaru na inne miejsce ponieważ fizycznie może on znajdować się na magazynie, natomiast jeśli jest to inwentaryzacja całościowa konieczne jest dokonanie dokumentów rozchodowych.
+W systemie istnieje możliwość hurtowego potwierdzenia inwentaryzowanego miejsca, w tym celu wykorzystujemy pomocniczą funkcje dostępną po kliknięciu prawym przyciskiem myszy i wyborze opcji „Potwierdź niesklikane partie”. System automatycznie uzna iż na inwentaryzowanym miejscu stany są zgodne, natomiast jeśli chcemy zmienić jakieś wartości na pozycjach należy wejść w taką pozycje i określić jej faktyczna ilość
+
+
+Rysunek 11. Potwierdzenie nieklikanych partii
+Powyżej opisany schemat postępowania możliwy jest o do zrealizowania zarówno z poziomu pełnego Vendo jak również przy użyciu kolektora sklikując poszczególne etykiety danego towaru. Tak przygotowany dokument inwentaryzacyjny należy zamknąć
+Inwentaryzacja na podstawie scenariusza kontroli magazynu
+W System Vendo istnieje możliwość przeprowadzenia inwentaryzacji na podstawie scenariusza kontroli magazynu. Przed przystąpieniem do przeprowadzenia kontroli stanów magazynowych należy aktywować stosowny scenariusz. Uruchomienie scenariusza kontroli odbywa się z poziomu Ustawień głównych programu > Parametry pracy > Magazyn > Kolektor danych > Scenariusze: Pokaz dialog > Kontrola stanów magazynowych. Po oznaczeniu opcji „Scenariusz włączony” będzie on widoczny z poziomu obsługi kolektorowej Kontrola stanów magazynowy pozwala na przeprowadzenie szybkiej weryfikacji towarów znajdujących się na danym miejscu magazynowym. Jest to uproszczone działanie mające na celu sprawdzenie co na danym miejscu się znajduje, nie jest ono w żaden sposób kontrolowane przez system za pośrednictwem raportów weryfikacyjnych tak jak w przypadku inwentaryzacji IWM. Obsługa kontroli magazynu odbywa się za pośrednictwem kolektora. Z poziomu kolektora użytkownik dokonuje wyboru magazyn na którym odbywa się kontrola a następnie kolejno przechodzi przez cały proces. Podczas procesu kontroli magazynu wykonywane są kolejno następujące czynności:
+
+Utworzenie dokumentu kontroli
+Dodanie miejsca magazynowego
+Sklikanie indeksów miejsca magazynowego, następnie w ramach danego miejsca indeksów towarowych. Praca na scenariuszu kontrola magazynu odbywa się poprzesz uruchomienie aplikacji na urządzeniu kolektorowym a następnie wybór odpowiedniego scenariusza.
+
+
+Rysunek 12. Tryb kolektorowy. Kontrola stanów magazynowych
+Po wyborze scenariusza kontrola stanów magazynowych, użytkownik ma wgląd w uprzednio wstawione dokumenty, jak również po kliknięciu ikonę trzech kropek możliwość dodania nowego dokumentu
+
+Rysunek 13. Tryb kolektorowy. Dodanie nowego dokumentu
+W kolejnych etapach należy kolejno zeskanować miejsce magazynowe a następnie etykietę partii bądź indeksu towarowego. W przypadku gdy skanowana etykieta jest nieczytelna Użytkownik ma możliwość wprowadzenia danych związanych z miejscem a następnie towarem ręcznie. Ręcznego zapisu dokonać można poprzez kliknięcie w ikonę klawiatury znajdującej się w górnej części wyświetlanego okna Przeprowadzenie procesu kontroli magazynów pozwala na wygenerowania szablonów inwentaryzacji IWN. Przeprowadzenie inwentaryzacji z tak sporządzonego szablonu wykonać można poprzez użycie funkcji > Wystaw inwentaryzacje. W kolejnych krokach należy postępować zgonie z opisanym wyżej schematem
+
+Rysunek 14. Dodanie Inwentaryzacji IWM na podstawie kontroli stanów magazynowych
+Inwentaryzacja na podstawie scenariusza - Inwentaryzacja kolektorowa- Opis działania scenariusza
+Scenariusz służy do przeprowadzenia inwentaryzacji magazynu. Inwentaryzację można przeprowadzić w dwóch trybach:
+
+inwentaryzacja pełna – zostają zinwentaryzowane wszystkie miejsca magazynowe i spisany jest cały stan magazynu
+inwentaryzacja częściowa – robimy inwentaryzację tylko konkretnych, wybranych miejsc magazynowych Sposób obsługi obu typów inwentaryzacji z poziomu aplikacji kolektorowej nie różni się dla operatora niczym – postępowanie jest dokładnie takie samo. Różnice występują dopiero w pełnym interfejsie Vendo – dla obu rodzajów inwentaryzacji inny jest sposób jej zakończenia i rozliczenia ewentualnych niedoborów czy nadwyżek. Po wejście w pozycje menu Inwentaryzacja (C4) system pokazuje listę aktualnie otwartych inwentaryzacji. Z wyświetlonej listy możemy wybrać dokument inwentaryzacji na którym chcemy pracować. Jeżeli nie mamy żadnej inwentaryzacji otwartej mamy możliwość utworzenie nowej funkcją Dodaj IWM (C5)
+
+
+Rysunek 15. Okno kolektora - nowy dokument inwentaryzacji
+Po dodaniu nagłówka inwentaryzacji system przechodzi do skanowania miejsca magazynowego które będzie inwentaryzowane.
+
+Rysunek 16. Okno kolektora - dodanie nowego dokumentu
+Po wskazaniu miejsca magazynowego podlegającego inwentaryzacji przechodzimy do skanowania towarów – możliwe jest skanowanie kodu towaru, kodu partii lub kodu jednostki logistycznej.
+
+Rysunek 17. Okno kolektora dodanie pozycji dokumentu
+Po zeskanowaniu informacji system wyświetla dane związane w odczytaym kodem (kod miejsca magazynowego, kod towaru, ilość, ewentualne dane związane ze szczegółami skanowanego towaru takie jak numer seryjny, data ważnoścu czy wartości dowolne towaru)
+
+Rysunek 18. Okno kolektora - potwierdzenie sklikanej ilości
+Zeskanowanie kodu innego niż aktualne miejsca magazynowego powoduje że system przestawia kontekst prowadzenia inwentaryzacji na wskazane miejsce, czyli każdy kolejny zeskanowany towar lub jego partii zostaną z tym miejscem powiązane. Po kliknięciu w opcje „…” w prawym górnym rogu ekranu zostają wyświetlone dodatkowe funkcje.
+
+Rysunek 19.Okno kolektora - funkcje dodatkowe
+
+Miejsca inwentaryzacji (C6) – funkcja wyświetla listę miejsc magazynowych jakie już zostały dodane do bieżącego dokumentu inwentaryzacyjnego
+Zaznacz jako zinwentaryzowane (C7) – umożliwia odznaczenie bieżącego miejsca magazynowego jako zinwentaryzowanego
+Wyczyść miejsce (C8) – usuwa wszystkie zeskanowane pozycje wybranego miejsca magazynowego – możliwe jest wtedy ponowne zinwentaryzowanie tego miejsca Dodatkowo w dolnej części ekranu widać funkcje Poprzednie (C4) oraz Następne (C3) które umożliwiają poruszanie się pomiędzy miejscami magazynowymi dodanymi do bieżącej inwentaryzacji. Zamknięcie i rozliczenie inwentaryzacji po jej zakończeniu możliwe jest z poziomu pełnego interfejsu programu Vendo. W zależności od rodzaju inwentaryzacji tworzone są w wyniku jej zamknięcia następujące dokumenty magazynowe :
+dla ujawnionych nadwyżek towarów magazynowych wygeneruj dokument przyjęcia PW
+dla niedoborów towarów na magazynie dla inwentaryzacji pełnej wygeneruj dokument rozchodu magazynowego RW
+dla inwentaryzacji częściowej wygeneruj dokument przesunięcia magazynowego WM na wskazane miejsce magazynowe do wyjaśnienia.
+
+Raportowanie
+W celu weryfikacji poprawnością dokumentów inwentaryzacyjnych w systemie Vendo istnieje szereg raportów które pozwalają na sprawdzenie zinwentaryzowanej ilości towaru. Raporty te są wgrywane na życzenie klienta w zależności jaki rodzaj raportu jest potrzebny. Po wgraniu stosownego raportu do systemu Vendo, dodanie go odbywa się z poziomu zakładek programu klikając Program > Zakładki raportowe następnie [Dodaj] Z listy dostępnych raportów wybieramy właściwy oznaczając go check boxem. Należy również określić jego podstawowe dane takie jak Nazwa, Menu oraz moduł w którym będzie on dostępny. Kolejnym bardzo ważna czynnością jest przydzielenie uprawnień osoba które będą miały możliwość dostępu do stworzonego raportu
+
+Rysunek 20. Zakładki raportowe - edycja zakładki
+Gdy wszystkie najważniejsze parametry sa już uzupełnione nalzy zapisać uzupełnione dane. Od tego momentu raport będzie dosteny w zakładce która była przez nas ustalona
+
+Rysunek 21. Generowanie dodanego raportu
+Aby dodać raporty inwentaryzacyjne do paczki firmowej należy je uprzednio opublikować dokonujemy tego następująco:
+
+Z nagłówka systemu wybrać zakładkę Program > ikona Zakładki raportowe
+Po wyświetleniu okna kliknąć zarządzanie paczkami
+Wybieramy paczkę firmową a następie buton Funkcje > Wczytaj paczkę z pliku
+Określamy lokalizacje zapisanej paczki i wgrywam ja do systemu.
+
+IWM – Lista sklikana MM Lista wszystkich operacji wykonywanych w ramach inwentaryzacji z możliwością sortowania po dowolnych parametrach. Raport pozwala na weryfikacje jakie działania zostały podjęte w ramach przeprowadzanej inwentaryzacja. Pozwala na weryfikacje wszystkich ruchów które odbywały się w ramach inwentaryzowanego magazynu. Bardzo ważne aby pamiętać iż dokumenty inwentaryzacyjne wystawiane są na konkretny dzień i konkretny magazyny.
+IMW – Podwójne partie MM– raport pokazujący czy w systemie występują partie które zostały sklikane kilkakrotnie. Raport pokazuje potencjalne zagrożenia. Prezentowane są ruchy wykonane na danych partiach.
+INW - Nie sklikane miejsca – pokazuje miejsca które nie zostały zinwentaryzowane a fizycznie towar znajduje się na magazynie. Jest to lista miejsc które nie figurują na arkuszu inwentaryzacyjnym. W przypadku gdy, po weryfikacji pozycje znajdujące się w raporcie nie zostaną dodane do arkusza a towar fizycznie nie znajduje się na magazynie, system stwierdzi iż, żadne ruchy w tym zakresie nie zostały wykonane w związku z tym powstanie nadwyżka.
+IMW - Podwójne miejsca – raport ten pozwala na weryfikacje czy dane miejsce nie zostało zdublowane w czasie przeprowadzania procesu Inwentaryzacji. Podczas przeprowadzania inwentaryzacji należy doprowadzić do sytuacji w której w raporcie nie znajdują się żadne pozycje. W przypadku gdy na raporcie pojawią się jakieś pozycje należy dokonać weryfikacji arkuszy i usunąć lokalizacje ze stanu.
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

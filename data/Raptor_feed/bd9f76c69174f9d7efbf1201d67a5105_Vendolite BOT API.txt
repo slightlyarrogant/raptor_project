@@ -1,0 +1,227 @@
+Vendolite BOT API
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/vendolite
+scraped_at: 2024-09-05T12:16:53.616886
+last_updated: 2024-09-05T12:16:53.616983
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Vendolite BOT API
+meta_tags: ['vendo', 'lite', 'token', 'poziomu', 'jego', 'jest', 'pracy', 'użytkownik', 'adres', 'dostęp']
+
+Content
+BOT - konfiguracja
+w celu utworzenia nowego profilu należy z poziomu Vendo Startera kliknąć w zielony plus co pozwoli na jego utworzenia (profil - bot'a)
+
+Tworzymy profil podając nazwę profili, adres serwera, gdzie znajduje się BD, użytkownika BD i hasło, wybieramy Tryb bot, zaznaczamy Auto Logowanie i podajemy użytkownika, który na karcie pracownika w zakładce Sieć ma zaznaczoną opcję w sekcji API Internetowe - Dostęp do usługi Internetowego API, podajemy ścieżkę do pliku konfiguracyjnego (w załączeniu przesyłam plik, który należy umieścić np w katalogu C:\cfi\bot_france.cfg) w linii HOST należny pozostawić + (lub podać adres IP komputera na którym ten bot został uruchomiony)
+
+Aby program Vendo Starter sprawdzał np co 5 minut czy bot jest uruchomiony należy przejść do zakładki [Narzędzia] następie pozycja [Bot checker]
+
+Zaznaczamy opcję [Uruchamiaj wraz ze startem programu] ustawiamy czas np. 5 min następnie zapisujemy
+
+Włączamy opcję Bot checker klikając na zielony buton [Play]
+
+Uruchomiono okno trybu automatycznego BOT
+
+
+Ponownie sprawdzamy czy uruchomiona usługa BOT pozwala łączyć się do API wpisując do przeglądarki internetowej adres IP:port np. http://192.168.60.101:5567
+CheckOnlyProcess=0 -- > czy BotChecker w Vendo Starter ma NIE sprawdzać czy API jest responsywne, a jedynie czy proces żyje (0-NIE, 1-TAK, czyli sprawdzenie czy proces żyje) LoggerEnabled=1 -- > czy logi mają się zapisywać, czy nie (0-NIE, 1-TAK) LoggerDirectory=C:\cfi\log_api -- > ścieżka zapisu logów
+
+API
+w Celu konfiguracji usługi internetowego API malezy:
+
+Z poziomu Ustawień głównych wybrać Usługi lokalne > Usługa internetowego API - Ustawienia
+Zaznaczamy - Uruchom przy starcie programu
+Host: podajemy IP komputera na którym został/zostanie uruchomiony bot np. 192.168.60.101
+Port: podajemy np. 5567
+Zaznaczamy - Podajemy ścieżkę do zapisywania logów API
+Profile 
+Dodajemy nowy profil użytkownika API
+
+
+
+Podajemy login i hasło
+Zatwierdzamy [OK]
+Klikamy [Uruchom] (jeśli był uruchomiony to zatrzymujemy i uruchamiamy ponownie)
+
+
+
+Zamykamy "duże Vendo" Przed zamknięciem możemy sprawdzić czy uruchomiona usługa API działa wpisując do przeglądarki internetowej adres IP:port np. 192.168.60.101:5567
+
+
+Vendo Lite 2018 – konfiguracja aplikacji
+Ze sklepu Play Google pobieramy aplikację Vendo Lite 2018 https://play.google.com/store/apps/details?id=com.cfi.vendolite2018&hl=pl
+W kolejnym kroku przydzielamy uprawnienia dla pracownika, któremu chcemy nadać dostęp do Vendo Lite. aby tego dokonać należy w menu głównym odnaleźć moduł Pracownicy zakładka Pracownicy > wybór właściwego rekordu(pracownika) > zakładka Sieć. Z tego poziomu administrator określa tryb pracy jaką będzie wykonywał użytkownika na VendoLite
+
+w sekcji VendoLite wybieramy tryb pracy w systemie Vendo lite:
+
+Pełny – dostęp do modułu Handlowiec i Magazynier
+Handlowiec – dostęp bez możliwości obsługi trybu kolektora
+rola umożliwiająca,
+obsługę sprzedaży,
+przegląd kartoteki towarowej
+klientów,
+zobaczyć zdarzeń w CRM
+
+
+Magazynier – dostęp do scenariuszy umożliwiających pracę na magazynie
+wydanie
+wydanie multi picking
+przyjęcie
+przyjęcie AP
+inwentaryzacja
+przygotowanie wydania
+przesunięcie WM
+praca
+dokumenty MP
+raporty
+informacje
+wybór magazynu
+
+
+
+Ustalenie zakresu scenariuszy i ich parametryzacja jest oddzielnym częścią i wymaga omówienia jej z klientem odnośnie zakresu działania.
+Konfiguracja uprawnień do pracy on/off line, dokonujemy tego z poziomu głównych ustawien systemowych: Ustawienia > Główne > Parametry pracy > Vendo Lite sekcja Ogólne
+
+W oknie dialogowym mamy dwie możliwości (wprowadzić token dostępu lub skonfigurować ręcznie połączenie)
+
+Aby pobrać token dostępu należy wejść w ikonę Vendo > Konto > Dostęp do Vendo Lite
+
+W oknie dialogowym uzupełniamy następujące dane i klikamy [Generuj tokeny]: Publiczny adres API: 192.168.1.200:5567 Profil API: Vlite Hasło profilu API: ** Czas ważności: np. 15 minut (ważność token'a)  (przykładowe dane)
+
+Generowanie tokenów:
+
+podanie publicznego adresu API,o ile nie dostał on zdefiniowany w parametrach pracy Ogólne > Pozostałe > API > Publiczny adres API,
+wybór profilu API,
+podanie hasła do wybranego profilu API,
+określenie czasu ważności tokenów - po jego upływie nie będzie możliwości zalogowania niewykorzystanymi tokenami,
+wybór pracowników, którzy otrzymają dostęp (zaznaczenie checkboxów),
+kliknięcie przycisku [Generuj tokeny].
+W przypadku wygenerowania tokenu:
+kolumnie status pojawi się ikona zielonego fistaszka,
+w kolumnie Token pojawi się siedmio znakowy kod, który należy wprowadzić w aplikacji Vendo Lite.
+
+
+W przypadku niewygenerowania tokenu w kolumnie status pojawi się ikona czerwego X. Oznacza ona, że wystąpił błąd, który może być związany z:
+brakiem dostepu do internetu
+niezidentyfikowanym problemem - zalecany kontakt z działem wsparcia firmy CFI Systemy Informatyczne.
+
+
+
+Wygenerowany token można przesłać pracownikowi poprzez trzy kanały:
+SMS:
+
+wymagane: Wprowadzone w Parametrach Pracy (Wymiana danych/Bramka SMS) ustawienia do bramki SMS oraz wskazany w karcie pracownika jego numer telefonu (pojawi się on w kolumnie Numer telefonu)
+wybranie przycisku Wyślij SMS spowoduje przesłanie wiadomości SMS zawierających token i datę czas jego ważności, do wybranych pracowników, dla których tokeny zostały wygenerowane.
+
+E-mail:
+
+wymagane: Wskazany na karcie pracownika jego adres e-mail (pojawi się on w kolumnie E-mail).
+wybranie przycisku Wyślij maile spowoduje przesłanie wiadomości e-mail zawierających token i datę czas jego ważności, do wybranych pracowników, dla których tokeny zostały wygenerowane.
+
+Chat:
+
+wybranie przycisku Wyślij chatem spowoduje przesłanie wiadomości poprzez Vendo Phone zawierających token i datę czas jego ważności, do wybranych pracowników, dla których tokeny zostały wygenerowane.
+
+Po wprowadzeniu token’u program poprosi nas o wprowadzenie hasła użytkownika, którym logujemy się do Vendo
+
+Po wprowadzeniu hasła mamy utworzony nowy profil, a po kliknięci na nazwę zostaniemy zalogowani do Vendo Lite
+
+W oknie dialogowym mamy dwie możliwości (wprowadzić token dostępu lub skonfigurować ręcznie połączenie)
+
+Po wybraniu Wprowadź dane ręcznie przechodzimy do wprowadzenia danych: Nazwa: Vendo.lite Url: 192.168.60.101 Port: 5567 Login API: Vlite Hasło API: VLitE19092017 Login: admin Hasło: baza
+ 
+Praca z Vendo Lite Po zainstalowaniu aplikacji pobranej z Sklepu google Play a następnie jej uruchomieniu użytkownik powinien skonfigurować profil dostępu z poziomu Vendo lite
+
+Wybieramy ikonę z czerwonym plusem umożliwi to wprowadzenie parametrów konfiguracyjnych pozwalających na prace na urządzeniu, Identyfikacja odbywa sie poprzez wykorzystanie uprzednio wygenerowanego tokena
+
+Po wprowadzeniu tokena, aplikacja sama zidentyfikuje pracownika i wyświetli okno do wprowadzenia hasła dostępu do systemu.
+
+Po wprowadzeniu hasła w oknie startowym pojawi się dodatkowy profil który wybieramy
+
+po zalogowaniu sie mamy dostęp do ról określonych na pracowniku.
+Tryb pracy - handlowiec
+Wybór menu użytkowego (Ikona trzech kresek zlokalizowana w prawym górnym rogu okna programu) pozwala na wybór kontekstu w którym chcemy pracować. Poniżej zaprezentowano widok handlowca
+
+Sprzedaż Wybór z menu głównego zakładki sprzedaż pozwoli użytkownikowi na prace na dokumentach sprzedażowych takich jak FV, OF, ZO, AW. po wyborze odpowiedniej zakładki użytkownik mam możliwość dodania noweg dokumentu. Użytkownik dokonuje tego poprzez kliknięcie w czerwony plus znajdujący sie w lewym dolnym rogu okna aplikacji
+
+Kolejnym krokiem podczas dopisania nowego dokumentu jest określenie danych podstawowych. Użytkownik określa nabywce korzystając ze słownika kontrahentów, odbiorce w przypadku gdy jest inny niż nabywca, termin oraz formę płatności. Ikony znajdujące sie w górnej belce dokumentu:
+
+Ikona skanera pozwala na uruchomienie aparatu bądź skanera w celu sczytania kodu kreskowego
+Ikona dyskietki - pozwala na zapisanie dokumentu bez wychodzenia z niego
+Ikona fistaszka -zapisanie i wyjście z dokumentu
+Ikona trzech kropek - dodatkowe menu z funkcjami
+Dodaj nowe zdjęcie
+dodaj plik
+Dodaj zdjęcie z galerii
+Ustaw status
+Usuń
+
+
+
+Akcja usuń bez względu na jakiej jesteśmy zakładce usuwa dokument, by móc usunąć pozycję należy przejść na zakładkę pozycji, odszukać tę która chcemy usunąć, kliknąć na nią by otworzył się okno pozycji i dopiero teraz wybrać ikonę po prawej stronie a w niej akcję usuń. Akcje dodaj nowe zdjęcie, plik lub zdjęcie z galerii umożliwia umieszczenie w dokumencie załącznika. Będąc w zakładce dane lub pozycje i wybranie ikony z czerwonym plusem, umożliwia dodanie pozycji do dokumentu
+
+po wyświetleniu okna użytkownik ma za zadanie określenia towaru, ilości oraz ceny sprzedaży.
+W aplikacji Vendo lite użytkownik nie ma możliwości zamknięcia dokumentów sprzedażowych, dokumenty te w pełnym Vendo pozostają w buforze
+Dla wszystkich typów dokumentów sprzedażowych, formatka wprowadzanych danych jest taka sama dla nagłówka i pozycji.
+Towary
+Wybór zakładki towary pozwala na przeglądania kartoteki towarowej. Z poziomu urządzenia mobilnego nie ma możliwości dodania nowych rekordów ani też ich modyfikacji. Informacje te wyświetlane są jedynie informacyjnie. Wyświetlona lista prezentuje kod, nazwa towaru oraz stan magazynowy w jednostce podstawowej
+
+Ikony dostępne w oknie aplikacji
+
+ - Ikona skanera pozwala na uruchomienie aparatu bądź skanera w celu sczytania kodu kreskowego
+ -Ikona trzech kresek tworzących trójkąt pozwala na założenie filtra w celu ograniczenia dziedziny do przeglądania po grupie I lub grupie II, oba pola oparte są o słownik.
+ - Pole umożliwiające założenie szybkiego filtru na tabeli.
+
+Kliknięciem palcem w ekran na danym rekordzie spowoduje wyświetlenie okna ze szczegółami 
+W zakładkach ceny i stany wyświetlane są dodatkowe informacje dla towaru.
+Klienci
+Słownik kontrahentów edytowany jest po stronie pełnego systemu. Od strony Vendo Lite dostępne są tylko informacje.
+
+Po wyborze kontrahenta
+
+Po wyborze kontrahenta użytkownik ma możliwość dostępu do pełnych informacji odnośnie kartoteki. Z poziomu kartoteki kontrahenta istnieje możliwość weryfikacji danych podstawowych, wglądu w zdefiniowanych ludzi klienta edycja/weryfikacja cenników dodania nowych dokumentów lub zdarzenia. Dokonujemy tego wybierając ikonę trzech kropek znajdująca sie w prawym górnym rogu okna programu , w pozostałych zakładkach znajdziemy dodatkowe informacje związane z klientem. Dodatkowo dostępne są ikony umożliwiające uruchomienie dodatkowych funkcji urządzenia o ile są one dostępne w urządzeniu. Jeśli dla danego klienta podano telefon to z poziomu tego okna można wywołać funkcję dzwonienia lub wysłania SMS. Jeśli podany jest adres mailowy to uruchamia się menu z wyborem aplikacji z której będziemy chcieli wysłać mail. Przy adresie kontrahenta znajdują się ikony umożliwiające określenie lokalizacji w google maps.
+Zdarzenia Uruchomienie tej opcji spowoduje uruchomienie modułu CRM. Wyświetlona zostanie lista zdarzeń przydzielonych do danego użytkownika(zalogowanego do Vendo lite)
+Z poziomu listy zdarzeń użytkownik ma możliwość dodania nowego zdarzenia z określeniem jego rodzaju jak również uruchomienia zdefiniowanej wcześniej procedury. Dodanie nowego zdarzenia odbywa sie poprzez użycie czerwonego plusa znajdującego sie w prawym dolnym rogu okna aplikacji a następnie określenie jego rodzaju. Procedura uruchamiana jest w analogiczny sposób tj. poprzeż użycie ikony z niebieskim plusem a następnie wybór procedury.
+Chcąc dodać nowe zdarzenie użytkownik winien określić dane wejściowe uzupełniając w oknie edycyjnym takie informacje jak Temat zdarzenia opis, dodatkowo klikając w ikonę trzech kropek znajdujących sie w prawym górnym rogu dodatkowe funkcje: Akcja dodaj dokument umożliwia wprowadzenie do systemu nowego dokumentu sprzedaży (faktura VAT, Zamówienie, Oferta, Brudnopis) Akcja nowe zdjęcie, wykonanie zdjęcia na urządzeniu i podpięciu go zdarzenia. Dodaj plik, dodanie pliku dostępnego na urządzeniu wykorzystując aplikację urządzenia do wskazywania pliku. Dodanie zdjęcia z galerii.
+Tryb pracy magazyniera W trybie pracy magazyniera, dostępne są scenariusze obsługi poszczególnych ścieżek:
+
+wydania,
+przyjęcia,
+przesunięcia,
+inwentaryzacji itd.
+
+Scenariusze te można skonfigurować po wcześniejszych ustaleniach z klientem w zakresie ich działania.
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

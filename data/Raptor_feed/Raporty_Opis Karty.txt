@@ -1,0 +1,76 @@
+# Raporty
+
+W ramach modułu księgowego systemu VENDO.ERP do dyspozycji Użytkownika znajdują się dwa rodzaje raportów: standardowe, wbudowane w system oraz rekonfigurowane, indywidulanie parametryzowane raporty wchodzące w skład osobnej sekcji w *Księdze Handlowej*.
+W kwestii raportów wbudowanych do najważniejszych zaliczamy:
+- **Zestawienie obrotów i sald (analitycznie, syntetycznie, dla wybranego zakresu kont).**
+
+Podstawowe w pracy modułu księgowego zestawienie, zawierające informacje o obrotach na poszczególnych kontach księgowych w ujęciu „wartości bilansu otwarcia”, „obrotów za okres”, „obrotów narastająco”, „sald” oraz „per salda” na poszczególnych stronach WN i MA. Raport pozwala filtrować dowolne okresy miesięczne lub narastające po sobie w ramach danego roku obrachunkowego. Możemy więc zaprezentować raport za okres jednego miesiąca, np. 02-2023, jak również za okres od 01-2023 do 05-2023, itp. Raport pozwala na wyświetlanie zapisów z bufora i zatwierdzonych (łącznie) lub tylko zatwierdzonych (zamkniętych). Prezentowane dane mogą być wyświetlane w ramach syntetyki kont lub dowolnego poziomu szczegółowości analityki.  Dodatkowo mamy możliwość filtrowania „kont bez obrotów”, „kont bez zerowych sald”, „analityk kontrahentów”, czy „kont pozabilansowych”.  Raport dostępny jest z poziomu zakładki w module **Księgi Handlowej**.
+
+![tmp0933b88c-d551-4a95-904a-d0861ea7a47e](https://www.cfi.pl/vendohelp/content/imgs/P9/6d2e5644a53e731ae25d4ac356c3f02d-124549-0.png)
+
+>Raport „Obroty i Salda”.
+
+- **Zestawienie zapisów kont.**
+
+Bardzo użyteczny raport pozwalający wyświetlić zapisy w ramach wskazanych analityk kont. W ustawieniach raportu mamy możliwość wyboru zakresu kont z dokładnością do syntetyki lub konkretnej analityki konta. Ponadto z dostępnych filtrów możemy wybrać, czy raport ma być wykonany z dokładnością do kont syntetycznych, czy analitycznych, czy uwzględniać w zapisach BO lub BZ oraz czy pokazywać zapisy z kont pozabilansowych. Raport wykonujemy dla określonego przedziału czasu dla roku obrachunkowego, w którym aktualnie pracujemy (minimalnym okresem jest jeden miesiąc).
+
+![tmpfe9aa0fe-c875-4d05-8950-7be5fc92cd37](https://www.cfi.pl/vendohelp/content/imgs/O0/615687287b6c25d2daf887cfb3a6946f-62989-0.png)
+
+>Raport „Zestawienie zapisów kont” w KH.
+
+Podsumowując, raport umożliwia wyfiltrowanie zapisów, w ramach dowolnego zakresu kont syntetycznych (lub analitycznych), np. od konta 750 do konta 751 i prezentacje zapisów na poszczególnych analitykach tych kont (jeżeli tak ustawiono). 
+Raport dostępny jest w zakładce **„Zapisy Księgowe”** modułu *Księga Handlowa*, po wybraniu przycisku `„Funkcje”` (w górnym lewym rogu okna) i opcji `„Raporty”` lub z poziomu menu **Analizy VENDO** w sekcji *Księga Handlowa*.
+
+
+
+- **Podsumowanie obrotów w ramach dzienników.**
+
+Raport pozwala sprawdzić obroty w ramach poszczególnych dzienników Księgi dla określonego (wybranego) okresu (miesiąca). Raport, podobnie jak *„Zestawienie zapisów kont”* dostępny jest w zakładce **„Zapisy Księgowe”** modułu *Księga Handlowa*, po wybraniu przycisku `„Funkcje”` i opcji `„Raporty”` lub z poziomu menu **Analizy VENDO** w sekcji *Księga Handlowa*.
+
+![tmpacaf2b20-2a91-4656-894a-3b039d00de84](https://www.cfi.pl/vendohelp/content/imgs/Q0/51194342733f3b90eb7f2eabfd66da31-26275-0.png)
+
+>Raport „Podsumowanie obrotów dzienników” w KH.
+
+- **Kontrola kręgu kosztów.**
+
+Raport umożliwia sprawdzenie, czy na zapisach księgowych zawierających konta zespołu *„4”*, zawarte są odpowiadające im równoległe księgowania kont zespołu *„5”* i konta *490*. Służą do tego kolumny `„Konta 4xx”`, `„Konto 490”` i `„Konta 5xx i 6xx”`, wyświetlające odpowiednie wartości z zapisów. Jeżeli kwoty różnią się w poszczególnych kolumnach dla danego zapisu, oznacza to niezgodność i konieczność weryfikacji księgowania, jak na poniższym rysunku.
+
+![tmpc92a14b0-99a5-45e2-af42-5ffe04db0639](https://www.cfi.pl/vendohelp/content/imgs/S4/5f8b97d96231d4777a1db253e8f44a87-25501-0.png)
+
+>Raport „Podsumowanie obrotów dzienników” w KH.
+
+Raport wykonujemy dla określonego przedziału czasowego (minimalnym okresem jest jeden miesiąc). Ze sprawdzenia można wykluczyć konta zespołu *„6”*, zaznaczając opcję `„Bez kont zespołu 6”` w dolnym lewym rogu okna raportu. Należy jednak pamiętać, że raport sprawdza konta w obrębie całego zapisu, zatem jeżeli oprócz kont zespołu „6” w ramach zapisu znajdują się konta zespołu „4” lub „5”, to i tak raport będzie go brał pod uwagę.   
+
+- **Kontrola magazynu z Księgą.**
+
+Raport pozwala w prosty sposób uzgodnić wartość magazynu z saldem konta księgowego tego magazynu w Księdze. Porównuje on wartość przychodu / rozchodu pochodzącą z dokumentu z wartością WN / MA konta księgowego magazynu. Raport ma zastosowanie w sytuacjach, kiedy do jednego magazynu jest przypisane tylko jedno konto księgowe (1 do 1). W ustawieniach raportu wskazujemy okres, dla którego dokonujemy sprawdzenia, wybieramy magazyn oraz podajemy jego odpowiednik konta księgowego z planu kont. Ponadto, jeżeli opcja *„Tylko dokumenty magazynowe”* jest odznaczona, wówczas możemy wyfiltrować konkretny rodzaj dokumentów, dla których dokonujemy weryfikacji z listy `„Rodzaj dokumentu”`. Dodatkowo możemy wyświetlać dokumenty zgodne i/lub niezgodne (używając stosownych filtrów w dolnej części okna).
+
+![tmp0c7bc80e-c54c-4d01-9764-b45a67a3df98](https://www.cfi.pl/vendohelp/content/imgs/K0/52370b099faf4cad54d936bbdffc5e44-45056-0.png)
+
+>Raport „Kontrola magazynu z księgą”.
+
+Na powyższej ilustracji można zauważyć dokument zgodny (wiersz oznaczony kolorem zielonym), tzn. że wartość przychodu na dokumencie jest tożsama z wartością zaksięgowaną na koncie księgowym magazynu, na którym wystawiono ten dokument. Na czerwono zaś zakreślono dokument niezgodny (wartość dokumentu w podanym okresie 201907 jest równa 0, zaś na koncie księgowym magazynu zaksięgowano 1 500,00zł, co sprawia, że saldo w KH będzie się różnić od stanu magazynu w tym okresie o podaną kwotę różnicy). Raport, tak jak pozostałe opisane raporty, dostępny jest w zakładce **„Zapisy Księgowe”** modułu *Księga Handlowa*, po wybraniu przycisku `„Funkcje”` i opcji `„Raporty”` lub z poziomu menu **Analizy VENDO** w sekcji *Księga Handlowa*.
+
+Jak już wspomniano, oprócz powyżej wymienionych, najważniejszych raportów wbudowanych, mamy możliwość skorzystania z raportów edytowalnych, których zastosowanie opisano w kolejnym podrozdziale niniejszego opracowania.
+
+- **Zastosowanie edytowalnych raportów księgowych, gotowe szablony.**
+
+	Standardowo w systemie na potrzeby Księgi Handlowej i e-Sprawozdań Finansowych posiadamy następujące sprawozdania:
+    - Bilans (wymaga parametryzacji),
+    - Rachunek zysków i strat porównawczy (wymaga parametryzacji),
+    - Rachunek zysków i strat kalkulacyjny (wymaga parametryzacji),
+    - Rachunek przepływów pieniężnych met. pośrednią (wymaga parametryzacji),
+    - Rachunek przepływów pieniężnych met. bezpośrednią (wymaga parametryzacji),
+    - Zestawienie zmian w kapitale własnym (wymaga parametryzacji).
+
+
+Wyżej wymieniona lista jest listą standardową i obrazuje podstawowe dostępne raporty i zestawienia zgodne z załącznikiem nr 1 Ustawy o Rachunkowości. W systemie VENDO posiadamy również stosowne raporty zgodne z załącznikiem nr 4 i 5 Ustawy. 
+
+![tmp5d16238f-c6db-4b06-8b1f-1fff503bb914](https://www.cfi.pl/vendohelp/content/imgs/I0/2fc154bc951ed34e5a165329b6d1b280-69247-0.png)
+
+>Lista dostępnych sprawozdań w module „Raporty” KH.
+
+Wymienione raporty są wstępnie skonfigurowane pod kątem układu i budowy poszczególnych pozycji, jak również skojarzone z raportami w module **e-Sprawozdań**. Wymagają jednak parametryzacji merytorycznej, czyli skojarzenia (podpięcia) poszczególnych kont księgowych w ramach poszczególnych pozycji. Po dokonaniu parametryzacji kont i weryfikacji wyświetlanych wartości, raporty stanowią bieżącą i kompletną informację finansową podmiotu (pod warunkiem dokonania wszystkich niezbędnych księgowań w raportowanym okresie). Każdy z wymienionych raportów można drukować, zapisywać w plikach pdf, a także eksportować do formatu xls, itp. Ponadto można je dowolnie kopiować i powielać.
+
+Istnieje możliwość konfiguracji przez Klienta innych dodatkowych zestawień i raportów pod warunkiem dostępności danych w systemie (tj. z KH (obroty i salda kont) bądź analiz sprzedaży, zakupu, kosztów lub obrotów magazynowych). 
+

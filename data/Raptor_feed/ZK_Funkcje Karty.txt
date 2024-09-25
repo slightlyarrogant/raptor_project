@@ -1,0 +1,27 @@
+# Zapisy księgowe
+
+W ramach funkcjonalności karty zapisy księgowe użytkownik ma możliwość korzystania z następujących funkcji:
+- księgowość - RMK
+- dodaj pozycję
+- dodaj pozycję z szablonu
+- usuń pozycję
+- zaksięguj
+- szczegóły kont
+- funkcje specjalne
+    - przenieś do bilansu otwarcia
+    - zmiana miesiąca księgowania
+    - zmiana dziennika
+- funkcje
+
+![tmp32672bde-cfe4-4be1-bf1c-45e93b7aec60](https://www.cfi.pl/vendohelp/content/imgs/L7/e62245a72a5a90e8b7f7e5a92a7f83f5-5162-0.png)
+
+- drukuj polecenia księgowania
+- wyjdź
+- zapisz i wyjdź
+- usuń cały zapis
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp306d82e7-0f6b-4b5f-a1d7-d9b0c8bf76ef](https://www.cfi.pl/vendohelp/content/imgs/W4/4e32b2813454fefc3d262aed06409276-105920-0.png)
+
+![tmp1b35dedf-9467-417a-a5a9-2778fafe2c67](https://www.cfi.pl/vendohelp/content/imgs/G4/08b04deb09e971b13f38d6180e23612f-37946-0.png)

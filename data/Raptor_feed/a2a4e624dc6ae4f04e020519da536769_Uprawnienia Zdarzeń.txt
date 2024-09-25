@@ -1,0 +1,38 @@
+Uprawnienia Zdarzeń
+Metadata
+
+url: http://192.168.33.19/master/docs/public/uprawnienia-per-rekord
+scraped_at: 2024-09-05T12:30:52.886042
+last_updated: 2024-09-05T12:30:52.886082
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Uprawnienia Zdarzeń
+meta_tags: ['uprawnienia', 'zdarzenia', 'jest', 'danego', 'uprawnień', 'które', 'edycji', 'rekordu', 'ctrl', 'sposób']
+
+Content
+Cel:
+Ideą tego rozwiązania jest znaczne przyspieszenie zapytań związanych z uprawnieniami do rekordów. Uprawnienia, kto ma dostęp do podglądu, kto edycji znajdują się z specjalnym polu wektorowym danego rekordu. Są one obliczane w momencie zapisu tego rekordu. Uprawnienia mogą być związane z grupą użytkowników lub użytkownikiem. Informacje o tym, kto widzi lub edytuje dany rekord możemy uzyskać z karty zdarzenia naciskając przycisk CTRL+F2
+Lokalizacja
+Menu główne > CRM > Zdarzenia > Karta zdarzeniowa > Ctrl+Shift+F2 Lub Menu główne>CRM> Kalendarz > Nowe zdarzenie (zielony plus w lewym górnym rogu okna programu) > wybór zdarzenia > Ctrl+Shift+F2
+Opis:
+W systemie Vendo zmodyfikowano sposób nadawania uprawnieni kontekstowych. Obecnie modyfikacja został wprowadzona w przypadku definiowania uprawnień dla każdego rodzaju zdarzenia. Uprawnienia odnoszące się do danego zdarzenia zostały podzielone na możliwość zmiany:
+
+Dostępu
+Edycji
+
+Dostęp do uprawnień dla zdarzeń wywoływany jest skrótem klawiszowym Ctrl+Shift+F2 (uprawnienia per darzenie). Zakładki dostępu i edycji mają strukturę drzewiastą tak więc po rozwinięciu poszczególnych zakładek administrator ma możliwość zagłębić się w szczegółowe uprawnienia dotyczące danego typu zdarzenia. Bardzo istotne jest aby pamiętać iż uprawnienia te są dynamiczne tak więc w przypadku różnych typów zdarzeń na poszczególnych etapach mogą się od siebie różnic Są one spójne z uprawnieniami znajdującymi się w kartotece pracowniczej tak więc modyfikując jakiekolwiek z nich z poziomu karty zdarzeniowej ten sam efekt będzie widoczny z poziomu uprawnień zlokalizowanych na kartotece pracowniczej.
+
+Wywołanie okna dialogowego daje informacje o wszystkich osobach które mają możliwość podglądu bądź edycji danego typu zadaszenia. Takie rozwiązanie pozwoliło wyeliminować problem iż osoba która nie miał możliwości wglądu w zdarzenie mogła to zrobić. Zdefiniowane w ten sposób uprawnienia pozwalają dokładnie określić które osoby mają dostęp do poszczególnych funkcji danego zdarzenia Uprawnienia nadawane są na działy bądź tez personalnie dla danej osoby
+Sposób zapisu rekordów pod baza
+Uprawnia zapisywane są w postaci rekordu powiązanego bezpośrednio z rekordem określającym dany typ zdarzenia. Innymi słowy uprawnienia do zdarzeń skonstruowane są w postaci tabeli gdzie każdemu rekordowi danego typu zdarzenia odpowiada rekord z przypisanymi do niego uprawnieniami. Taki zapis pozwala na wyeliminowanie problemu żmudnego poszukiwania problemów związanych z danym uprawnianiem. Przy każdorazowej zmianie danych na rekordzie zdarzenia np. zmianie właściciela osoba tak dopisywana jest w tabeli uprawnień.
+W przypadku gdy konieczna jest weryfikacja uprawnień pod bazą danych należy podać zarówno warunki do wyszukania rekordu zdarzenia jak i uprawnień do nich przypisanych Lokalizacja tablicy uprawnień pod baza danych:
+Sposób działanie uprawnień
+Obecnie uprawnienia kontekstowe skonstruowane są w taki sposób iż za każdym razem gdy wykonywana jest zmiana na zdarzeniu np. zmiana klienta rekord automatycznie przeliczany jest pod bazą danych, przeliczane są równiez wszystkie rekordy związane z tym zdarzeniem (przy zmianie najbardziej skomplikowanego uprawniania czas potrzeby na przeliczenie wszystkich rekordów to 2 minuty) efektem wykonania takich przeliczeń jest bardzo szybki wynik zapytania o dane dotyczące uprawnień danego zdarzenia Uprawnienia per zdarzenie podzielone są na uprawniania które wyliczane są automatycznie jak również te które modyfikowane są ręcznie (ikona zegarka). Uprawnienia modyfikowane ręcznie przez administratora sytemu, oznaczone kolorem czarnym z ikona zegarka natomiast te wyliczane automatycznie są konsekwencja ręcznej modyfikacji i oznaczone kolorem niebieskim
+
+Konstrukcja modelu uprawniań
+Jak już wcześniej wspomniano uprawnienia dotyczące danego typu zdarzenia podzielono na możliwość modyfikacji zarówno dostępu jak i edycji. Idąc dalej kolejnym wyróżnikiem jest podział na:
+• Domniemanie czyli uprawniania które przeliczane sa automatycznie i nie możliwości ich modyfikacji oraz
+• System czyli parametry które są częściowo edytowalne natomiast ich wynik zależny jest od zmian na poniższych gałęziach.
+
+Images
+
+

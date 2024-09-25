@@ -1,0 +1,18 @@
+Reklamacje plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/reklamacje-plugin
+scraped_at: 2024-09-05T12:21:54.790947
+last_updated: 2024-09-05T12:21:54.790981
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Reklamacje plugin
+meta_tags: ['reklamacji', 'ustawień', 'widok', 'pracy', 'jest', 'plugina', 'dodaj', 'należy', 'wybrać', 'oraz']
+
+Content
+Reklamacje plugin
+Informacje ogólne
+Implementacja rozwiązania pozwala na rozbudowę karty zdarzeniowej o dodatkowe zakładki odpowiedzialne za możliwość tworzenia reklamacji od odbiorcy i do dostawcy.
+Parametryzacja / Ustawienia
+Przed przystąpieniem do pracy konieczne jest podegranie stosownego plugina. Operacja ta odbywa się wg standardowego schematu instalacji pluginów w systemie Vendo. Dostępna jest ona z poziomu Ustawień głównych systemu > Parametry pracy > Pluginy > Dodaj plugin.
+W pierwszej kolejności należy wybrać przinajmniej dla jednego typu reklamacji procedurę oraz jej zlecenie włase i dokumenty. Należy utworzyć i wybrać słownik przyczyn i rozwiązań oraz dodać wartości dowolne przyciskiem znajdującym się na dole ustawień - Dodaj lub aktualizuj wartości dowolne.
+Kolumny widoczne przy wyszukiwaniu partii, dokumentów itp. można konfigurować i zapisywać klikając przycisk w lewym dolnym rogu: Funkcje > Widok > Układ > Zapisz układ jako. W szczególności, widok nagłówka reklamacji można edytować z ustawień plugina klikając przycisk znajdujący się na dole ustawień - Konfiguruj widok reklamacji.

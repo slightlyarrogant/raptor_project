@@ -1,0 +1,10 @@
+# Zdarzenia
+
+W ramach funkcjonalności karty zdarzenia użytkownik ma możliwość korzystania z następujących funkcji:
+- drukuj – program wygeneruje wydruk zaznaczonego zdarzenia, np. likwidacja środka trwałego
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+
+![tmp8e9097b4-3744-46ae-a7bb-10c0bc3607ed](https://www.cfi.pl/vendohelp/content/imgs/O2/8969eb12d6073fbd4f07b5bc1a84347d-12187-0.png)

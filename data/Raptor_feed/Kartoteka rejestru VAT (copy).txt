@@ -1,0 +1,50 @@
+## Kartoteka rejestru VAT
+
+Kartoteka rejestru VAT w VENDO.ERP  pełni kilka istotnych funkcji, które mają na celu usprawnienie zarządzania i kontrolę nad danymi dotyczącymi rejestru VAT w firmie. Dzięki kartotece zapewniona jest jednoznaczna identyfikacja zakupów i sprzedaży wchodzącej do rejestru VAT. Kartoteka rejestru Vat zawiera unikalne identyfikatory dla poszczególnych zapisów, co umożliwia precyzyjne między różnymi pozycjami transakcji. Dzięki temu pracownicy mogą szybko i łatwo odnaleźć potrzebne zapisy z rejestru VAT.  Jest ona miejscem gromadzenia i przechowywania istotnych danych o każdym zapisie, takie jak numer dokumentu, kontrahent, rodzaj transakcji VAT, itd. Te informacje są niezbędne do prawidłowego zarządzania zapisami czy generowania deklaracji JPK. Kartoteka rejestru VAT stanowi również najniższy poziom analityki dostępnej w analizach i raportach dotyczących sprzedaży i zakupów. Warto zaznaczyć, że istnieje możliwość usunięcia stworzonej kartoteki rejestru VAT poprzez funkcje na karcie.
+
+![tmp789f032a-797a-40e3-8f34-b2ce4b9ae00c](https://www.cfi.pl/vendohelp/content/imgs/Q0/46a688e9f72283128fbaaba0f1883a1f-95473-0.png)
+
+
+
+Nazwa pola | Opis | Typ
+-------- | -------- | --------
+Dokument |	Numer dokumentu. |	Tekst
+Korekta do | Wskazanie dokumentu do którego zapis z kartoteki VAT jest korektą (możliwe do uzupełnienia po wybraniu w rodzaju dokumentu korekty). |	Tekst
+Rejestr |	Określenie czy transakcja VAT dotyczy sprzedaży lub zakupu. |	Słownik
+Transakcja VAT |	Wybranie rodzaju transakcji VAT, np. Sprzedaż krajowa, WNT, export towarów, itd.). |	Słownik
+Data wystawienia |	Data wystawienia dokumentu. |	Data
+Data operacji |	Data operacji gospodarczej. |	Data
+Data otrzymania |	Data otrzymania dokumentu. |	Data
+Data płatności |	Data płatności za dokument. |	Data
+Forma płatności |	Wskazanie formy płatności za dokument. |	Słownik
+Miesiąc deklaracji |	Miesiąc ujęcia transakcji w deklaracji JPK. |	Data
+Kontrahent |	Wskazanie odbiorcy/dostawcy z faktury. Jeśli zrobimy to z poziomu kartoteki kontrahentów, wszystkie dane dotyczące kontrahenta zostaną automatycznie uzupełnione na karcie rejestru VAT. |	Tekst
+Nazwa |	Nazwa kontrahenta. |	Tekst
+Adres |	Adres kontrahenta. |	Tekst
+Miejscowość |	Kod pocztowy i nazwa miejscowości. |	Tekst
+Nip |	Numer NIP kontrahenta. |	Liczba
+Kod klienta |	Kod kontrahenta z kartoteki klientów. |	Tekst
+Rodzaj dokumentu |	Określenie czy jest to dokument lub korekta. |	Słownik
+Rodzaj nabywcy |	Wskazanie czy kontrahentem jest firma lub osoba fizyczna. |	Słownik
+Rozrachunek z |	Określenie czy powstały rozrachunek dotyczy bezpośrednio kontrahenta czy pracownika firmy, który dokonał transakcji w imieniu firmy. |	Słownik
+Typ magazynu |	Wskazanie czy magazyn jest krajowy czy zagraniczny (OSS). |	Słownik
+Kraj wysyłki |	Kraj wysyłki pozycji z dokumentu. |	Słownik
+Opis |	Możliwość dodania własnego opisu dla kartoteki rejestru VAT. |	Tekst
+Stawka |	Wybór stawki podatku VAT. |	Słownik
+Netto |	Wskazanie kwoty netto dokumentu. |	Liczba
+Vat |	Wskazanie kwoty VAT dokumentu. |	Liczba
+Brutto |	Wskazanie kwoty brutto dokumentu. |	Liczba
+Symbol |	Symbol znacznika VAT JPK. |	Słownik
+Nazwa |	Nazwa znacznika VAT JPK. |	Słownik
+Razem netto |	Podsumowanie kwoty netto pozycji z karty rejestrów VAT. |	Sumowanie automatyczne
+Razem VAT |	Podsumowanie kwoty podatku VAT pozycji z karty rejestrów VAT. |	Sumowanie automatyczne
+Razem brutto |	Podsumowanie kwoty brutto pozycji z karty rejestrów VAT. |	Sumowanie automatyczne
+
+
+Kartoteka rejestru VAT oferuje użytkownikowi następujące funkcje:
+ - Dokument źródłowy – program otworzy dokument do którego powstała kartoteka rejestru VAT przy użyciu funkcji „Przenieś do rejestru VAT” (nie dotyczy kartoteki rejestru VAT dodanej „z ręki’.
+ - Znaczniki VAT_JPK – dodawanie lub usuwanie znaczników VAT JPK
+ - Funkcje – sprawdzenie czy EuroNIP jest zarejestrowany, pokazanie historii zapytań o NIP
+ - Utwórz StorNo zapisu – Wystornowanie zapisu VAT
+ - Usunięcie zapisu – usunięcie zapisu rejestru VAT
+ - Funkcje specjalne – zmiana roku deklaracji

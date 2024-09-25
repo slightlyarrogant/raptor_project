@@ -1,0 +1,14 @@
+# Ponaglenia
+
+W ramach funkcjonalności karty ponaglenia użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj płatność – generowanie dokumentu wpłaty/wypłaty
+- rozliczenie z dokumentem – powoduje otwarcie listy nierozliczonych dokumentów z kontrahentem i umożliwia ich rozliczenie
+- usuń rozliczenie – usunięcie istniejącego już rozliczenia
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp7c890541-722a-4baa-b573-51f6c23649a8](https://www.cfi.pl/vendohelp/content/imgs/E2/ea283d3bc1335cd2bab5bb2a2ff41258-27689-0.png)
+
+
+![tmpcb6c95f0-6d6b-432d-b5d7-617940adf47c](https://www.cfi.pl/vendohelp/content/imgs/P1/57d0e5f44ae7d609d394e8b81dea78ad-2568-0.png)

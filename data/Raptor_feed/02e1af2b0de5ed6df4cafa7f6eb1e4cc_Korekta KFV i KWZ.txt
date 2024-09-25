@@ -1,0 +1,71 @@
+Korekta KFV i KWZ
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/korekta-kfv-kwz
+scraped_at: 2024-09-05T12:13:57.214350
+last_updated: 2024-09-05T12:13:57.214413
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Korekta KFV i KWZ
+meta_tags: ['dokumentu', 'korekty', 'dokument', 'korektę', 'jest', 'dokumentów', 'należy', 'funkcje', 'korekta', 'przypadku']
+
+Content
+Cel:
+Instrukcja dotyczy wystawiana korekt do dokumentów sprzedażowych FV oraz dokumentów magazynowych powiązanych z tymi dokumentami (KWZ) w programie Vendo.ERP i przeznaczona jest dla szkoleń wewnętrznych pracowników CFI.
+Opis funkcjonalności
+Wystawianie korekt w programie Vendo.ERP
+System Vendo.ERP pozwala na wprowadzenie korekty do większości dokumentów w nim wystawionych. Korekta jest szczególnie często stosowana i wystawiana w przypadku faktur VAT ale nie tylko. Należy pamiętać że korektę do dokumentu da się wystawić tylko po jego zamknięciu. Można utworzyć dowolna ilość korekt, należy tylko pamiętać, że wystawia się je zawsze z dokumentu pierwotnego, a nie poprzedzającej już wystawionej wcześniej korekty istniejącej w systemie Vendo (czyli nie robimy korekty do korekty).
+
+W przypadku dokumentów sprzedażowych są dwie drogi tworzenia dokumentów >potwierdzających zawarcie transakcji i wydanie towaru z magazynu:
+
+
+Tworzymy dokument WZ (wydanie zewnętrzne) poprzez naciśnięcie z klawiatury klawisza [INSERT] lub poprzez Funkcje > Dodaj dokument będąc na liście z odpowiednim dokumentem magazynowym, wybieramy magazyn z którego będziemy wydawać towar oraz walutę i eksportowość dokumentu na którym umieszczamy towar do wydania dla klienta z magazynu i z takiego dokumentu WZ tworzymy przez Funkcje > Utwórz FV dokument faktury VAT który jest skojarzony z dokumentem WZ i to skojarzenie można zobaczyć klikając w przycisk na dokumencie [Dok. Skojarz.]
+Tworzymy dokument FV (Faktura VAT) na którym są pozycje ze sprzedanym towarem następnie z dokumentu FV tworzymy dokument WZ (wydanie zewnętrzne) poprzez Funkcje > Utwórz WZ by magazynier wiedział jaki towar ma wydać klientowi.
+
+Korektę w systemie Vendo.ERP można wystawić na dwa sposoby:
+
+Z pozycji listy dokumentów FV należy odnaleźć dokument, który chcemy skorygować i nacisnąć na klawiaturze klawisz [DELETE]. Uwaga!! w ten sposób wystawimy korektę tylko do zamkniętych dokumentów, natomiast dokumenty będące W BUFORZE zostaną USUNIĘTE
+Na otwartej karcie wybranego dokumentu sprzedażowego FV do którego chcemy utworzyć korektę.
+
+Poniżej opisany jest sposób tworzenia korekty dokumentu sprzedażowego FV i dokumentu WZ. Z poziomu karty dokumentu sprzedażowego wybieramy Funkcje > Korekty > Utwórz korektę.
+
+W tym momencie pojawia nam się okno dodawania nowej korekty do dokumentu FV.
+
+Po zatwierdzeniu numeru i serii korekty zostaje utworzony dokument korygujący, który można edytować. Poniżej widzimy utworzony już dokument korekty KFV z zaznaczonymi polami w których możemy dokonać korygujących wpisów dla pozycji dokumentu.
+
+korekty dla wybranych pozycji dokonujemy wklikując się w pozycję na utworzonym dokumencie korekty KFV. Możemy skorygować zarówno ilość jak i cenę do odpowiednich wartości w przypadku gdy jest ona inna niż na dokumencie pierwotnym. Jak widać program podaje stan pozycji towarowej przed korekta, a jeśli do dokumentu były wystawione już korekty stan ten jest już tu uwzględniony (opis dalszej części dokumentacji). W dolnej sekcji wprowadzamy zmiany korygujące ilość, cenne, rabat, VAT. Z oczywistych względów niemożliwa jest zmiana odbiorcy, nabywcy. Na korekcie podobnie jak na fakturze pierwotnej możemy określać szczegóły dotyczące daty dokumentu i formy płatności. Po wprowadzeniu niezbędnych zmian zamykamy dokument. w przypadku gdy korekta ma być korekta całkowita (korekta zerująca wszystkie ilości)należy z pozycji karty dokumentu korygującego skorzystać menu Funkcje > Funkcje > Korekta na cały dokument.
+
+Dokument KFV po korekcie przedstawiać będzie nową kwotę do zapłaty lub zwrotu w zależności od tego co i w którą stronę było korygowane (zwiększona ilość/zmniejszona ilość towaru lub zwiększona/zmniejszona cena). Po zatwierdzeniu zmian należy taką korektę zamknąć. Przy zamykaniu dokumentu KFV program poinformuje użytkownika, że nie wprowadzono przyczyny korekty i czy przejść do jej wprowadzenia.
+
+Po zatwierdzeniu komunikatu w polu uwagi możemy wpisać powód korekty.
+
+Po zrobieniu korekty dokumentu FV należy pamiętać aby wystawić również korektę WZ. Na otwartej karcie wybranego dokumentu KFV do którego chcemy utworzyć korektę dokumentu WZ należy wybrać menu Funkcje > Wydanie Zewnętrzne-utwórz Program utworzy na podstawie korekty faktury również korektę dokumentu magazynowego WZ.
+
+W tym momencie pojawia nam się okno dodawania nowej korekty do dokumentu WZ.
+
+System utworzy nagłówek do dokumentu KWZ i po kliknięciu [OK] zostanie utworzony dokument KWZ na podstawie wcześniej utworzonej korekty KFV.
+
+Wyklikując się w pozycję na utworzonym dokumencie korekty KWZ isnieje możliwość sprawdzenia iż dane z dokumentu KFV zostały przeniesione (zarówno informacje o skorygowanej ilości jak i cenie).
+Po zatwierdzeniu zmian na korekcie należy taką korektę zamknąć. Podczas zamykania dokumentu KWZ program poinformuje użytkownika, że nie wprowadzono przyczyny korekty i czy przejść do jej wprowadzenia analogicznie jak w przypadku KFV.
+
+Po zatwierdzeniu komunikatu w polu uwagi możemy wpisać powód korekty i przejść do zamknięcia dokumentu KWZ.
+
+W ten oto sposób mamy poprawnie skorygowany dokument sprzedażowy jak i magazynowy.
+
+Powyżej opisany sposób tworzenia korekt jest prawidłowym sposobem i kolejnością. w przypadku gdy operacja wystawienia korekty odbyła by sie w odwrotnej kolejności tj. z dokumentu WZ wystawiamy KWZ na podstawie dokumentu KWZ nie jesteśmy w stanie wystawić dokumentu KFV który przedstawiał by faktyczny stan korygowanych dokumentów. Utworzenie dokumentu KFV z KWZ jest niemożliwe.
+
+
+
+Przy zamykaniu dokumentu KWZ program analogicznie zasugeruje nam wprowadzenie przyczyny korekty. Z zamkniętego dokumentu KWZ nie uda nam się poprzez Funkcje > utworzyć dokumentu KFV.
+Images
+
+
+
+
+
+
+
+
+
+
+
+

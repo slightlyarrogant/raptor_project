@@ -1,0 +1,43 @@
+Projekt Vendo
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/solution
+scraped_at: 2024-09-05T12:18:50.749278
+last_updated: 2024-09-05T12:18:50.749311
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Projekt Vendo
+meta_tags: ['vendo', 'amag', 'projects', 'master', 'debug', 'podać', 'należy', 'properties', 'katalogu', 'trybie']
+
+Content
+Ogólne informacje
+Repozytorium Vendo powinno być umieszczone w katalogu:
+D:\Projects\Vendo\{branch}\
+np.
+D:\Projects\Vendo\master\.
+Solucję należy kompilować w trybie Release , inaczej nie zadziała.
+Jeżeli przy kompilacji wystąpi błąd w pliku .NETFramework,Version=v4.5.AssemblyAttributes.cpp, należy usunąc jego zawartość, zapisać i skompilować jeszcze raz.
+Uruchamianie Vendo w Visual Studio
+Aby uruchomić Vendo w VS np. w trybie debug należy ustawić:
+
+opcję Amag.App -> Properties -> Debug -> Start external program
+i podać ścieżkę do D:\Projects\Vendo\master\Release\Amag.App.exe
+w Amag.App -> Properties -> Debug -> Working directory
+podać scieżkę do D:\Projects\Vendo\master\Release
+w Amag.App -> Properties -> Debug -> Command line arguments
+podać startową linię poleceń np.
+vendo_launcher "2.8.4" "0" "start" "" "newrr" "192.168.50.1" "nazwabazy" "userbazy" "haslobazy" "loginvendo" "haslovendo" -pass_not_enc -ignorepatchcheck
+
+Uruchamianie Unit Test'ów
+Aby uruchomić Unit Test'y należy:
+
+w Amag.TestsRunner -> Properties -> Debug -> Working directory
+podać scieżkę do D:\Projects\Vendo\master\Release
+
+Dodatkowo w parametrach (Command line arguments) można podać:
+
+/scenario:nazwa - nazwę scenariusza, który ma się wykonać
+Nazwa ta pochodzi z atrybutu DeveloperTestScenario. Każdy ma swój scenariusz w katalogu: D:\Projects\Vendo\Master\Amag\Amag.TestsRunner\Scenarios\
+/coordinator - uruchamia koordynator "stres testów" (w rozwoju)
+/autoclose - kończy działanie programu po zakończeniu testów
+
+*[VS]: Visual Studio

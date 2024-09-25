@@ -1,0 +1,189 @@
+# Kalkulacje
+## Opis
+
+Karta kalkulacyjna jest obiektem wykorzystywanym w procesie przygotowania kalkulacji oraz rekalkulacji na potrzeby zebrana i zapisania oczekiwanych poziomów kosztowych związanych produkcja. W późniejszym czasie może być dodatkowo powiązana z technologią, umożliwiając dzięki temu analizy i zarządzania kosztami związanymi z produkcją danego produktu. W systemie VENDO.ERP jest to dokument, który zawiera szczegółowe informacje dotyczące wszystkich kosztów związanych z produkcją wyrobu, począwszy od kosztów surowców i materiałów, poprzez koszty narzędzi, wymaganej pracy, aż po koszty pośrednie.
+
+![tmpaec7ab20-e937-43cf-b7b3-6fdfa627cb09](https://www.cfi.pl/vendohelp/content/imgs/C4/c647eb63fbe9ca98c9f5a4839165c7ae-106200-0.png)
+ 
+### 	Numeracja
+Każda kartoteka Kalkulacji posiada indywidualny numer budowany według zasady:
+
+NUMER_KOLEJNY / KALK
+
+Gdzie:
+-	Numer kolejny – nadawany narastająco numer kolejny
+-	KALK - skrót kalkulacji
+
+
+Przykłady numeracji:
+-	13/KALK
+-	14/KALK
+-	1/KALK
+
+## 	Zakładki
+### 	Karta kalkulacji
+
+![tmpc896aad6-4535-4883-af58-6388bcefc47d](https://www.cfi.pl/vendohelp/content/imgs/C4/c647eb63fbe9ca98c9f5a4839165c7ae-106200-0.png)
+
+| Nazwa pola                           | Opis                                                                                                  | Typ               |
+|--------------------------------------|-------------------------------------------------------------------------------------------------------|-------------------|
+| Numer                                | Numer kalkulacji                                                                                      | Tekst             |
+| Data                                 | Data kalkulacji, domyślnie data utworzenia                                                            | Data              |
+| Zlecenie                             | Referencja do zlecenia (najczęściej Procesu sprzedaży Projektu)                                        | Słownik           |
+| Kolor                                | Kolorystyczne oznaczenie kartoteki                                                                     | Słownik           |
+| Szablon                              | Oznaczenie kalkulacji jako szablon do generowania docelowych kalkulacji                                | Tak / Nie         |
+| Kod                                  | Kod kartoteki towaru                                                                                   | Tekst             |
+| Nazwa                                | Nazwa kalkulacji                                                                                       | Tekst             |
+| Towar                                | Referencja do kartoteki towaru                                                                         | Słownik           |
+| Ilość                                | Ilość, dla której tworzona jest kalkulacja                                                             | Liczba             |
+| Opis                                 | Opis kalkulacji                                                                                        | Tekst             |
+| Waluta                               | Waluta końcowa, według której obliczana jest kalkulacja                                                | Słownik           |
+| Kurs                                 | Kurs kalkulacji oraz tabela kursów, waluta według których obliczana jest kalkulacja                    | Liczba             |
+| Cennik                               | Cennik, według których domyślnie będą stosowane ceny na zakładkach związanych z kartotekami towaru     | Słownik           |
+| Bieżącej kal. / Wraz z podrzędnymi   | Sterowanie widocznością Rodzaju kosztów w przypadku, gdy kalkulacja posiada powiązane pozycje podrzędne | Pole typu radiobutton |
+| Materiały bezpośrednie               | Koszty materiałów – koszty przychodów                                                                  | Liczba             |
+| Koszty zakupu                        | Materiały bezpośrednie * Procent                                                                       | Liczba             |
+| Robocizna bezpośrednia               | Koszt robocizny (bez narzutu wydziałowego)                                                             | Liczba             |
+| Obróbka obca i inne koszty bezpośrednie | Koszty kooperacji (bez narzutu wydziałowego)                                                           | Liczba             |
+| Narzędzia                            | Koszty narzędzi                                                                                        | Liczba             |
+| Koszty wydziałowe                    | Koszty robocizny i kooperacji (narzut wydziałowy)                                                      | Liczba             |
+| Koszty ogólno – zakładowe            | Robocizna bezpośrednia * Procent                                                                       | Liczba             |
+| Razem koszty wytworzenia             | Suma poprzednich powyższych pól                                                                        | Liczba             |
+| Strata w brakach                     | Razem koszty wytworzenia * Procent                                                                     | Liczba             |
+| Inne koszty + koszty przerobu        | Koszt Inne Koszty + Razem koszty wytworzenia * Procent                                                 | Liczba             |
+| Razem koszty własne                  | Razem koszty wytworzenia + Strata w brakach + Inne koszty + koszty przerobu                            | Liczba             |
+| Narzut / marża                       | Razem koszty własne * Procent                                                                          | Liczba             |
+| Wartość                              | Razem koszty własne + Narzut / marża                                                                   | Liczba             |
+
+
+### 	Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmpcac93d37-2865-4dc1-9818-fb9f0a1c212f](https://www.cfi.pl/vendohelp/content/imgs/M6/658405f72db2c293b40da11be5002263-24747-0.png)
+
+### Pliki
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp736b613b-c893-49e6-98a4-5f877b6ab4e5](https://www.cfi.pl/vendohelp/content/imgs/D3/07144f2ced8390838787f29b9a98f044-29673-0.png)
+
+### Materiały
+
+Na karcie kalkulacji, znajduje się także zakładka informująca o surowcach, materiałach i półproduktach, które w trakcie realizacji produkcji są wymagane i będą uwzględnione do obliczeń kalkulacji. 
+
+![tmp321e03f3-2c70-4869-a613-e9022dfacaac](https://www.cfi.pl/vendohelp/content/imgs/W8/b343c12bb2482409202e62191ab9257a-84554-0.png)
+
+| Nazwa pola           | Opis                                                                                     | Typ       |
+|----------------------|------------------------------------------------------------------------------------------|-----------|
+| Kalkulacja           | Referencja do kalkulacji                                                                 | Słownik   |
+| Operacja             | Możliwość powiązania rozchodu z operacją w kalkulacji                                    | Słownik   |
+| Składnik (F3)        | Referencja do kartoteki towaru                                                           | Słownik   |
+| Cena jedn.           | Cena do obliczenia kosztu                                                                | Liczba    |
+| Ilość na operacje    | Możliwość podania wymaganej ilości przy pomocy licznika / mianownik + stała              | Liczba    |
+| Wartość jedn.        | Obliczona wartość dla jednej ilości kalkulowanej                                         | Liczba    |
+| Wartość całk.        | Obliczona wartość dla całej ilości kalkulowanej                                          | Liczba    |
+| Ilość na             | Ilość przeliczona dla ilości, dla której obliczana jest kalkulacja                       | Liczba    |
+| Opis                 | Opis materiału w kalkulacji                                                              | Tekst     |
+| Kod (skrypty)        | Dodatkowy opis materiału w kalkulacji                                                    | Tekst     |
+
+### 	Przychody
+
+![tmp385c3b87-9124-458d-9030-c2f46d9532dc](https://www.cfi.pl/vendohelp/content/imgs/V5/4152f2334c1b01315795b8042909a869-71497-0.png)
+
+| Nazwa pola           | Opis                                                                                     | Typ       |
+|----------------------|------------------------------------------------------------------------------------------|-----------|
+| Kalkulacja           | Referencja do kalkulacji                                                                 | Słownik   |
+| Operacja             | Powiązanie przychodu z operacją w kalkulacji                                             | Słownik   |
+| Składnik (F3)        | Referencja do kartoteki towaru                                                           | Słownik   |
+| Cena jedn.           | Cena do obliczenia kosztu                                                                | Liczba    |
+| Ilość na operacje    | Możliwość podania wymaganej ilości przy pomocy licznika / mianownik + stała              | Liczba    |
+| Wartość jedn.        | Obliczona wartość dla jednej ilości kalkulowanej                                         | Liczba    |
+| Wartość całk.        | Obliczona wartość dla całej ilości kalkulowanej                                          | Liczba    |
+| Ilość na             | Ilość przeliczona dla ilości, dla której obliczana jest kalkulacja                       | Liczba    |
+| Opis                 | Opis przychodu w kalkulacji                                                              | Tekst     |
+| Kod (skrypty)        | Dodatkowy opis przychodu w kalkulacji                                                    | Tekst     |
+
+
+### 	Narzędzia
+
+
+![tmp85a82b1a-3a8c-4a0a-b483-0ac42653e97c](https://www.cfi.pl/vendohelp/content/imgs/Q2/03208f89c6b5e8866b6f64f59a7fa263-64517-0.png)
+
+| Nazwa pola       | Opis                                                                                     | Typ       |
+|------------------|------------------------------------------------------------------------------------------|-----------|
+| Kalkulacja       | Referencja do kalkulacji                                                                 | Słownik   |
+| Operacja tech.   | Powiązanie przychodu z operacją w kalkulacji                                             | Słownik   |
+| Narzędzie (F3)   | Referencja do kartoteki towaru                                                           | Słownik   |
+| Stanowisko       | Referencja do stanowiska wymagającego narzędzia                                          | Słownik   |
+| Cena jedn.       | Cena do obliczenia kosztu                                                                | Liczba    |
+| Krotność         | Możliwość podania wymaganej ilości                                                       | Liczba    |
+| Wartość jedn.    | Obliczona wartość dla jednej ilości kalkulowanej                                         | Liczba    |
+| Wartość całk.    | Obliczona wartość dla całej ilości kalkulowanej                                          | Liczba    |
+| Opis             | Opis narzędzia w kalkulacji                                                              | Tekst     |
+| Kod (skrypty)    | Dodatkowy opis narzędzia w kalkulacji                                                    | Tekst     |
+
+### 	Inny koszty
+
+![tmpde95732d-5d0f-42c8-a7aa-f38c8d25d85e](https://www.cfi.pl/vendohelp/content/imgs/V9/871a0c18494fe5565101497419866af0-67667-0.png)
+
+
+
+
+Nazwa pola |	Opis|	Typ
+-|-|-|
+|Kalkulacja	| Referencja do kalkulacji |	Słownik
+|Operacja	| Powiązanie przychodu z operacją w kalkulacji	 |Słownik
+|Koszt (F3)	| Referencja do kartoteki towaru (Usługa, Koszt) |	Słownik
+|Cena jedn.	|Cena do obliczenia kosztu  |	Liczba
+|Koszt stały	 |Wartość kosztu dodawana niezależnie od ilości	 |Liczba
+|Wartość jedn.|	Obliczona wartość dla jednej ilości kalkulowanej |	Liczba
+|Wartość całk. |	Obliczona wartość dla całej ilości kalkulowanej |	Liczba
+|Opis |	Opis kosztu w kalkulacji	 | Tekst
+|Kod (skrypty)	| Dodatkowy opis kosztu w kalkulacji |	Tekst
+
+
+### 	Robocizna
+
+![tmpa64fda2c-df85-4774-af6f-a04d09d05e0b](https://www.cfi.pl/vendohelp/content/imgs/B7/089eb467a224899a8a74576d10e68768-112249-0.png)
+
+| Nazwa pola                           | Opis                                                                                                                                                                                                 | Typ       |
+|--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Kalkulacja                           | Referencja do kalkulacji                                                                                                                                                                             | Słownik   |
+| Lp.                                  | Numer kolejny operacji w kalkulacji                                                                                                                                                                  | Liczba    |
+| Nazwa                                | Nazwa operacji                                                                                                                                                                                       | Tekst     |
+| Operacja                             | Słownik operacji technologicznych                                                                                                                                                                    | Słownik   |
+| j.m.                                 | Jednostka operacji technologicznej                                                                                                                                                                   | Słownik   |
+| Ciąg techn.                          | Słownik ciągów technologicznych, możliwość podziału operacji na grupy                                                                                                                                 | Słownik   |
+| Ilość                                | Przelicznik ilości operacji względem ilości wyrobu przez podanie Licznik / Mianownik + Stała                                                                                                          | Liczba    |
+| Stanowisko                           | Słownik stanowisk. Określenie stanowiska do obliczenia kosztu operacji                                                                                                                               | Słownik   |
+| Opis                                 | Opis operacji                                                                                                                                                                                        | Tekst     |
+| Czas przygotowawczo-zakończeniowy (Tpz) | Czas przygotowawczo-zakończeniowy – Ilość minut niezbędnych do przeprowadzenia nieprodukcyjnych prac, by możliwe było przeprowadzenie operacji produkcyjnych na maszynie                             | Liczba    |
+| Czas produkcji (T)                   | Czas produkcyjnej pracy maszyny liczony w minutach                                                                                                                                                   | Liczba    |
+| Ilość (operacji/T)                   | Liczba operacji wykonywanych w czasie T                                                                                                                                                              | Liczba    |
+| Ilość osób (pracowników)             | Liczba pracowników obsługujących maszynę                                                                                                                                                             | Liczba    |
+| Koszt stanowiska [PLN/MH]            | Koszt związany z amortyzacją danego stanowiska, stawka za godzinę                                                                                                                                    | Liczba    |
+| Koszty pracy [PLN/rbh]               | Koszt wykonania danej operacji w przeliczeniu na godzinę                                                                                                                                             | Liczba    |
+| Koszt akordu [PLN/ilość]             | Koszt wykonania operacji w przeliczeniu na wykonywaną ilość operacji                                                                                                                                 | Liczba    |
+| Koszt [PLN/ilość]                    | Koszt akordu dla ilości kalkulowanej                                                                                                                                                                 | Liczba    |
+| Ilość operacji                       | Ilość operacji w kalkulacji                                                                                                                                                                          | Liczba    |
+| Jednostkowy koszt robocizny          | Wartość robocizny dla jednej jednostki kalkulowanej                                                                                                                                                  | Liczba    |
+| Narzut wydziałowy                    | Procentowy współczynnik, którego skutkuje powstaniem kosztów wydziałowych uzależnionych od kosztu robocizny                                                                                          | Liczba    |
+| Jednostkowy koszt robocizny z narzutem | Wartość robocizny dla jednej jednostki kalkulowanej z narzutem                                                                                                                                       | Liczba    |
+| Całkowity czas trwania produkcji     | Suma czasu produkcji dla ilości kalkulowanej                                                                                                                                                         | Liczba    |
+| Całkowity koszt robocizny            | Wartość robocizny dla całej ilości kalkulowanej                                                                                                                                                      | Liczba    |
+| Całkowity koszt robocizny z narzutem | Wartość robocizny dla całej ilości kalkulowanej z narzutem                                                                                                                                           | Liczba    |
+| Wartości dowolne                     | Możliwość dostępu i edycji wartości dowolnych dla operacji w technologii. Zgodnie z opisem podpunktu Wartości dowolne.                                                                               | Lista     |
+
+
+### 	Definicja czynności
+
+W ramach kalkulacji dostępna jest możliwość definiowania dodatkowych czynności, wymaganych do przeniesienia do technologii.
+
+![tmpf3e426e9-eb38-49b3-8c4d-656d00841796](https://www.cfi.pl/vendohelp/content/imgs/S6/a56bf2e857d32faf311dc2ffc40e445b-31462-0.png)
+
+### 	Rysunki pomiarowe
+
+Możliwość wprowadzenia wizualizacji pomiarów produkcyjnych
+
+![tmp73758fd1-9013-4840-9174-2dab5212ffc8](https://www.cfi.pl/vendohelp/content/imgs/W2/3c9f42440001d9824019df4d5274bb6c-25396-0.png)

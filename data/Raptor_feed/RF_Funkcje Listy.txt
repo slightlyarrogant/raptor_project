@@ -1,0 +1,48 @@
+# Raport finansowy
+W ramach dostępu do zakładki raport finansowy użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp2107cfaf-fff0-42b2-ab7e-1dce4381be78](https://www.cfi.pl/vendohelp/content/imgs/P3/6079501690df8268741ab2c00247aa91-3413-0.png)
+
+- tryb
+
+
+![tmp3dcc84e7-cc5c-4207-a9ff-52cc51a4275f](https://www.cfi.pl/vendohelp/content/imgs/F1/9bd032ad1f43c338c7411ddfe72bd8fc-3697-0.png)
+- wpłaty – tylko przychody
+- wypłaty – tylko rozchody
+- waluta – możliwość wyświetlania rozliczeń w wybranej walucie
+
+Poza możliwością filtrowania użytkownik ma możliwość przeprowadzania operacji czy wprowadzania zmian. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp5503d24d-b765-49aa-b17f-1421ddb3349c](https://www.cfi.pl/vendohelp/content/imgs/C8/3c51be7be3b8803bb17f4536050663db-8797-0.png)
+
+![tmpc7da4d73-18c7-4213-b639-d38c5794e237](https://www.cfi.pl/vendohelp/content/imgs/G0/c4c5c60ca058ac3b12e7de4dafd8d34f-47059-0.png)
+
+Dostępne w programie funkcje przedstawiają się następująco:
+- usuń rozliczenia
+- wydruk dokumentów kasowych
+- dodaj wpłatę
+- dodaj wypłatę
+- dodaj wypłatę między oddziałami dla zaznaczonych
+- skopiuj operację
+- import – funkcja pozwala na wprowadzenie płatności do banku użytkownika za pomocą dostępnych formatów obsługiwanych przez poszczególne banki
+
+![tmp7d29e9ba-b13c-42a8-93ec-57232819f11a](https://www.cfi.pl/vendohelp/content/imgs/H7/63992e0db31cfb8dd4f69845a05f2507-66229-0.png)
+
+- raporty – funkcja pozwala na stworzenie poszczególnych raportów, które pomagają kontrolować sytuację przedsiębiorstwa
+
+![tmp67351454-13cb-4e72-adb8-4ddb97161e50](https://www.cfi.pl/vendohelp/content/imgs/H9/9191a3ec75f0f638844f83f3b5588a6e-73598-0.png)
+
+- operacje blokowe – zmień numer obcy
+- parowanie płatności – pozwala na rozliczenia z poziomu raportu
+- poczekalnia przelewów – możliwość podglądu zobowiązań przygotowanych do płatności
+- przenieś do poczekalni – funkcja przenosi zobowiązanie do poczekalni
+- księgowość
+
+![tmp749b2298-2384-4760-a324-d423fa4fbf0d](https://www.cfi.pl/vendohelp/content/imgs/P5/2bcdb8b6a1c84edd028d4abd5efdd547-81066-0.png)
+
+- statusy
+
+![tmp0f74d30d-3d87-43cf-8bba-18733d9d90ad](https://www.cfi.pl/vendohelp/content/imgs/D1/1e9c9a855f9ba2df051e28bf90bb5bc2-74785-0.png)
+
+
+- karta skojarzonego zlecenia – wyświetlenie zlecenia (jeśli istnieje)

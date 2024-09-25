@@ -1,0 +1,14 @@
+# Kompensaty
+
+W ramach funkcjonalności karty kompensaty użytkownik ma możliwość korzystania z następujących funkcji:
+- funkcje specjalne
+    - przenieś na inny dzień
+    - zmień numer
+- drukuj – wydruk kompensaty
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp405e9766-57fd-415d-ba45-906f0672cdaf](https://www.cfi.pl/vendohelp/content/imgs/B9/10168fd9820bdb54afa4e6621aa59a44-57744-0.png)
+
+![tmpd830f8a3-25ae-4aae-bcb0-5eb712df5801](https://www.cfi.pl/vendohelp/content/imgs/C0/4371a6520c3169c7b40f16830b163349-2515-0.png)

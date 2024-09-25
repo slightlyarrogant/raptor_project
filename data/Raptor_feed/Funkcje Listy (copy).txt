@@ -1,0 +1,14 @@
+# e-deklaracje
+
+W ramach dostępu do zakładki e-deklaracje użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmpb787e66c-8bdf-406c-8183-ed8cbc363dec](https://www.cfi.pl/vendohelp/content/imgs/L9/e78d13629b04f01baa0ca808a9a75de6-3644-0.png)
+
+- typ deklaracji – wybór typu deklaracji, które program ma wyświetlić
+
+![tmpfbbb80f6-dae2-49b9-a284-c32952ceca8a](https://www.cfi.pl/vendohelp/content/imgs/L7/3a67e475cdbaff6dcc45621e4bd53377-30819-0.png)
+
+- miesiąc – wybór miesiąca, z którego deklaracje użytkownik chce zobaczyć
+- status – wybór konkretnych deklaracji po ich statusie w programie
+
+![tmpedb381f1-1281-45da-b64e-a34cd74b3c53](https://www.cfi.pl/vendohelp/content/imgs/G2/cac7f741cc3fe9b393a7d5edab3d43f8-2538-0.png)

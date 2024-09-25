@@ -1,0 +1,72 @@
+# Zamówienie Ramowe Sprzedaży (od Odbiorcy)
+
+Zamówienie Ramowe Sprzedaży (ZS) służy do wprowadzenia zamówienia okresowego Odbiorcy które będzie realizowane w dłuższym czasie. Potocznie takie zamówienia nazywane są jako Forecast, Zamówienie sezonowe,  Prognoza Sprzedaży, odzwierciedlenie umowy handlowej na dostarczenie towarów w dłuższej perspektywie czasowej. Z dokumentu ZS generowane są Zamówienia Obce, które realizowane są przez Sprzedaż.  Funkcjonalności i wygląd dokumentu są zbliżone do Zamówienia Obcego.
+
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Zamówienie Ramowe Sprzedaży| ZS | 
+
+
+## Opis dokumentu
+
+
+ 
+Dokument Zamówienia Ramowego  jest dokumentem handlowym prezentującym  prognozę sprzedaży. Cechuje się takimi danymi jak:
+-	Data Wpływu
+-	U klienta – termin na kiedy ma być dostawa dostarczona
+-	D..realizacji  - termin realizacji zamówienia
+-	Zamawiający – klient który jest płatnikiem 
+-	Odbiorca - - adres na który ma być dostarczone zamówienia
+-	Forma płatności 
+-	Wartość netto, brutto, VAT
+-	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki, Zadłużenie klienta – w pozycji Zaliczki pokazane są wartość zaliczek wpłaconych przez Nabywcę nie rozliczonych
+-	Detal – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q2/d6e4a094bd0072226417b478128d0d84-39130-0.png)
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe Zamawiającego i Odbiorcy. Zakładka zawiera pełen dane adresowe i NIP 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K4/3e4fa5f193107b9a63965a1d7da895c1-34042-0.png) 
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer Obcy – numer zamówienia klienta
+-	Realizowane przez – Dowolne, zamówienie Obce – w jaki sposób będzie realizowane zamówienie, czy przez dowolny dokument (np. WZ, FV, ZO) lub tylko i wyłącznie zamówienie Obce
+-	Handlowiec lub Mechandiser to pola w których umieszczane są dane pracownika odpowiedzialnego za Dokument Faktury, wg tych pól naliczana może być premia dla pracownika.
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Spedycja – pole oznaczający przewoźnika towarów występujących na dokumencie, dodatkowo możliwe jest zaznaczenie jakiego typu jest przesyłka
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+-	Warunki – pole tekstowe określające warunki realizacji zamówienia. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/P9/bb12889a4ce07d7067bb6d6abc9a735f-35968-0.png)
+
+W zakładka Opis i uwagi wprowadzane są dane na podpis dokumentu oraz uwagi które mogą być drukowane na wydruku dokumentu Zamówienia
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/W0/c7471787d9ab16d20041447343ca18c1-20246-0.png)
+
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. Pola są te definiowane przez użytkownika dla nagłówka dokumentu Zamówienia Ramowego
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N3/2a83a333637fbad3dffeb41a2bce2134-30856-0.png)
+
+Pozycje zamówienia w sumie nie różnią się niczym innym od innych pozycji dokumentów. Pozycje posiadają :
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N3/fe1e0834374e18b07fc21b41b4c8515b-25358-0.png)
+ 
+-	Nazwę produktu
+-	Ilość
+-	Rabat
+-	Stawka VAT
+-	Cena Netto i Brutto
+-	Grupę cen
+-	Cena 0 – cena przed naliczeniem rabatu
+-	Stan
+-	Magazyn – ilość w magazynie realizacji pozycji
+-	Rezerwacja – ilość rezerwacji dla kartoteki
+-	Jednostki alternatywne
+-	Z rezerwacja – przy zamkniętym dokumencie tworzy się rezerwacja
+-	Data realizacji – data kiedy ma być wysłana pozycja do klienta
+-	Data u klienta – data na kiedy ma być zrealizowana pozycja i dostarczone u klienta
+-	Magazyn – magazyn z którego będzie realizowana pozycja zamówienia
+

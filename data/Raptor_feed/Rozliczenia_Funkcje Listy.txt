@@ -1,0 +1,16 @@
+# Rozliczenia
+
+W ramach dostępu do zakładki rozliczenia użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp5a94b298-6481-4ad2-ba95-4060c2669f37](https://www.cfi.pl/vendohelp/content/imgs/I8/c02b2ac1cb0d9bb931f2acd4bb819759-4188-0.png)
+
+- klient – możliwość wyświetlenia rozliczeń dla konkretnego kontrahenta
+- nierozliczone – program wyświetli nierozliczone pozycje
+- rozliczone – program wyświetli rozliczone pozycje
+- zaksięgowane – program wyświetli zaksięgowane rozrachunki
+- niezaksięgowane – program wyświetli niezaksięgowane rozrachunki
+
+Poza możliwością filtrowania rozliczeń  użytkownik ma możliwość generowania raportów rozliczeń oraz podejrzenia szczegółów danego rozliczenia. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+
+![tmp06e00ac3-0daf-4bd4-8c04-beb4347aef1a](https://www.cfi.pl/vendohelp/content/imgs/N3/6037f7b241a527b504083f9f8b52c682-12474-0.png)

@@ -1,0 +1,126 @@
+Obsługa zewnętrznych systemów składowania
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/interfejsy/scenariusze/warehouseplacedevice
+scraped_at: 2024-09-05T12:18:40.849778
+last_updated: 2024-09-05T12:18:40.849822
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Obsługa zewnętrznych systemów składowania
+meta_tags: ['public', 'param', 'miejsca', 'return', 'półki', 'metoda', 'identyfikator', 'guid', 'interfejs', 'składowania']
+
+Content
+Obsługa zewnętrznych systemów składowania
+Omawiany interfejs dodaje obsługę zautomatyzowanych systemów składowania, takich jak Kardex.
+Urządzenie tego typu ma w sobie miejsca składowania towarów, które są mapowane na miejsca magazynowe w Vendo.
+Podstawowa implementacja
+Atrybut eksportowy
+VPWarehousePlaceDeviceExport
+
+Atrybut nie ma parametrów
+Interfejs
+IVPWarehousePlaceDevice
+
+Implementując interfejs należy zaimplementować trzy metody
+string Open(WarehousePlaceDeviceOpenModel param)
+
+Metoda dostarcza wybraną półkę do operatora
+Model zawiera podstawowe parametry które będą użyteczne podczas komunikacji z urządzeniem
+
+OpenKind - typ operacji, get jeżeli będziemy coś pobierać z urządzenia, put jeżeli będziemy tam coś wkładać
+ForeignId - identyfikator półki w urządzeniu, jest on podawany w definicji miejsca magazynowego w Vendo
+BatchId - id partii, planowany
+ProductId - id towaru, planowany
+WarehousePlaceId - id miejsca magazynowego
+Quantity - ilość do włożenia/wyciągnięcia, planowana
+
+Metoda musi zwrócić identyfikator operacji, który następnie będzie przekazany jako parametr metody Confirm lub Cancel
+UWAGA: Jeżeli metoda zwróci NULL, oznacz to że proces otwarcia się nie udał
+void Confirm(WarehousePlaceDeviceConfirmModel param)
+
+Metoda potwierdza wykonanie operacji. Może być wywołana tylko, jeżeli metoda Open zwróciła wartość różną od NULL
+Parametry w modelu
+
+ReturnOpen - identyfikator zwrócony przez metodę Open
+ForeignId - identyfikator półki w urządzeniu, jest on podawany w definicji miejsca magazynowego w Vendo
+WarehousePlaceId - id miejsca magazynowego
+BatchId - id partii, potwierdzony
+ProductId - id towaru, potwierdzony
+
+Quantity - ilość do włożenia/wyciągnięcia, potwierdzona
+void Cancel(WarehousePlaceDeviceCancelModel param)
+
+
+Metoda anuluje dostarczoną już półkę. Może być wywołana po wywołaniu metody Open
+Parametry w modelu
+
+ReturnOpen - identyfikator zwrócony przez metodę Open
+
+Przykład implementacji
+ [VPWarehousePlaceDeviceExport]
+ [Guid("E0AE8F3B-39D4-4895-B94D-974FA1BFED9E")]
+ public class WarehousePlaceDeviceKardex : IVPWarehousePlaceDevice
+ {
+        public string Open(WarehousePlaceDeviceOpenModel param)
+        {
+            //kod odpowiedzialny za przywołanie półki         
+            return Guid.NewGuid().ToString();
+        }
+
+        public void Confirm(WarehousePlaceDeviceConfirmModel param)
+        {
+            //kod odpowiedzialny za potwierdzenie że włożyliśmy/pobraliśmy towar do/z półki
+            return;
+        }
+
+        public void Cancel(WarehousePlaceDeviceCancelModel param)
+        {
+            //kod odsyłający półkę na miejsce
+            return;
+        }
+ }
+
+UWAGA: Zaleca się nadanie GUID na całą klasę (choć nie jest to konieczne)
+Rozbudowa o własne funkcję, specyficzne dla danego urządzenia
+Implementując interfejs urządzenia, można dodać własne funkcje. Będą one dostępne jako przyciski/w menu ogólnym lub w meny funkcyjnym.
+W stosunku do poprzedniego przykładu są dwie różnice
+Klasa którą implementujemy musi dziedziczyć z klasy VPTriggerForm
+Piszemy własną funkcję
+[VPAction(VPActionType.Menu)]
+public ViewProcedureActionResponse CheckDevice(VPTriggerActionContext c)
+{
+    return PopupMessage(DataStateType.Information, "Komunikat z systemy składowania");
+}
+
+W parametrze funkcji c mamy dostęp do aktualnego stanu (aktualnej formatki)
+Przykład rozbudowany o implementacje własnych funkcji
+[VPWarehousePlaceDeviceExport]
+ [Guid("E0AE8F3B-39D4-4895-B94D-974FA1BFED9E")]
+ public class WarehousePlaceDeviceKardex : VPTriggerForm, IVPWarehousePlaceDevice
+ {
+     [VPAction(VPActionType.Menu)]
+     public ViewProcedureActionResponse CheckDevice(VPTriggerActionContext c)
+     {
+         return PopupMessage(DataStateType.Information, "Komunikat z systemy składowania");
+     }
+
+     public string Open(WarehousePlaceDeviceOpenModel param)
+     {
+         //kod odpowiedzialny za przywołanie półki         
+         return Guid.NewGuid().ToString();
+     }
+
+     public void Confirm(WarehousePlaceDeviceConfirmModel param)
+     {
+         //kod odpowiedzialny za potwierdzenie że włożyliśmy/pobraliśmy towar do/z półki
+         return;
+     }
+
+     public void Cancel(WarehousePlaceDeviceCancelModel param)
+     {
+         //kod odsyłający półkę na miejsce
+         return;
+     }
+ }
+
+Konfiguracja po stronie Vendo
+Po wgraniu plugin z implementacją tego interfejsu, należy skonfigurować miejsca magazynowe w Vendo. Dla każdego miejsca należy wybrać interfejs który będzie obsługiwał dane urządzenie oraz id półki w danym urządzeniu

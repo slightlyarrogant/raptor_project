@@ -1,0 +1,19 @@
+Laguna
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/laguna/readme
+scraped_at: 2024-09-05T11:50:42.981782
+last_updated: 2024-09-05T11:50:42.981810
+parent_id: 36874aa589bcf7fddd40d2ef36cc723d
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna
+meta_tags: ['instrukcja', 'skatalogowanie', 'rozwiązań', 'które', 'zostały', 'wdrożone', 'firmie', 'lagunaopis', 'poniższy', 'spis']
+
+Content
+Cel:
+Skatalogowanie rozwiązań które zostały wdrożone w firmie Laguna
+Opis:
+Poniższy spis ma na celu skatalogowanie rozwiązań które zostały wdrożone w firmie Laguna.
+B2B instrukcja stanowiskowa
+Analizy instrukcja stanowiskowa
+Okucia instrukcja stanowiskowa
+Profile instrukcja stanowiskowa

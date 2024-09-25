@@ -1,0 +1,30 @@
+LivePrice Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/clients/morslivepriceplugin
+scraped_at: 2024-09-05T12:18:58.319075
+last_updated: 2024-09-05T12:18:58.319104
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/LivePrice Plugin
+meta_tags: ['eksport', 'import', 'oraz', 'ustawienia', 'systemu', 'lifeprice', 'plugina', 'należy', 'pracy', 'konieczna']
+
+Content
+LivePrice - Plugin
+Informacje ogólne
+Plugin pozwala na import informacji o towarach z systemu LifePrice oraz ich eksport z systemu Vendo na serwer FTP.
+Konfiguracja
+Przed przystąpieniem do pracy konieczna jest podegranie stosownego plugina oraz jego konfiguracja. Plugin podegrać należy wg następującego schematu Ustawienia > Pluginy > Dodaj plugin.
+Po wgraniu plugina konieczna jest jego konfiguracja. Konfiguracji takiej dokonać należy wchodząc w Ustawienia znajdujące się w zakładce plugina
+Dostępne ustawienia:
+
+URL importu pliku z systemu LifePrice wraz z tokenem importu
+IP serwera FTP, do którego eksportowane będą pliki
+ścieżka foldera, do którego eksportowane będą pliki (np. folder1/folder2/ zakończona '/' lub pusta)
+login i hasło do serwera FTP
+
+Dostępne ustawienia dla bota:
+
+import / eksport, zaznaczeni zapewni wykonywanie akcji importu / eksport w trakcie pracy bot'a
+
+Zasada działania
+Po poprawnym zdefiniowaniu wartości dowolnych oraz poprawnej konfiguracji plugina można rozpocząć import oraz eksport towarów. Na zakładce towary należy wcisnąć ppm > Lifeprice > Import / Eksport, lub uruchomić bota.

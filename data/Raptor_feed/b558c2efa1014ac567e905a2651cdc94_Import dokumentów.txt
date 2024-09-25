@@ -1,0 +1,71 @@
+Import dokumentów
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/import-dokumentow
+scraped_at: 2024-09-05T12:20:36.009537
+last_updated: 2024-09-05T12:20:36.009601
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Import dokumentów
+meta_tags: ['dokumentów', 'jest', 'importu', 'dokumentu', 'określenie', 'pliku', 'importowanych', 'użytkownik', 'vendo', 'importowanego']
+
+Content
+Cel
+System VENDO.ERP posiada dedykowane rozszerzenie (plugin) służący do automatycznego importu dokumentów. Zastosowanie to przeznaczone jest tylko i wyłącznie do użytku wewnętrznego dla pracowników firmy CFI. Ma ono na celu ułatwienie importu dokumentów do systemu Vendo. Zaleta plugina jest możliwość importu najważniejszych dokumentów dostępnych w systemie Vendo, pozwała na import zarówno wszystkich typów dokumentów zdefiniowanych w pluginie na jednym szablonie jak również wymuszeniu na importowanych danych jednego typu dokumentu. Podczas importu system weryfikuje przygotowany szablon i przydziela odpowiednie pozycje do nagłówka dokumentu.
+Lokalizacja/uprawnienia
+Ustawienia > Pluginy > dodaj plugin > ImportDokumentowSerwisCFIPlugin
+Lokalizacja Vendo
+Zakładka Programy dostępna z poziomu okna głównego programu > Import
+
+Opis plugina/konfiguracja
+Konfiguracja ustawień plugina dostępna jest po uruchomieniu funkcji importu. Ustawienia te podzielone zostały na trzy sekcje Dokumenty, Konfigurator kolumn, Pozostałe.
+Sekcja Dokumenty pozwala na określenie lokalizacji pliku jak oraz ustalenie podstawowych danych parametrów importowanych dokumentów.
+Dokumenty
+Sekcja Dokumenty pozwala na określenie lokalizacji pliku oraz określenie podstawowych danych parametrów dla importowanych dokumentów. Z poziomu zakładki Dokumenty użytkownik ma możliwość określenia takich parametrów jak:
+Ścieżka do pliku – informacja o lokalizacji importowanego pliku. Z tego poziomu użytkownik ma za zadnia wskazać miejsce w którym znajduje się szablon z danymi do importu zaimportowane.
+Stały magazyn – parametr określający na który magazyn mają trafić towary z importowanych dokumentów. Po zaznaczeniu tej opcji zostanie wyświetlone dodatkowe pole w którym użytkownik świadomie określa magazyn dla importowanych towarów. W przypadku gdy parametr ten nie jest uzupełniony Informacja o magazynie zostanie pobrana z pliku wejściowego
+Stała seria – określenie serii dokumentów jaka zostanie nadana podczas importu dokumentów. Zaznaczanie tej opcji spowoduje wyświetlenie dodatkowego pola w którym użytkownik ma możliwość wybór serii dokumentów dostępnych w Vendo. Serie dokumentów definiowane są z poziomu ustawień słownikowych po wejściu w Ustawienia > Gównie > Słowniki > serie dokumentów. W przypadku gdy nie jest on określony Informacja o serii zostanie pobrana z pliku wejściowego
+Stały typ dokumentu – parametr odpowiedzialny za określenie typu importowanego dokumentu. Import dokumentów możliwy jest dla wybranych typów. Poniżej znajduje się zestawienie dla rodzajów importowanych dokumentów. Jeśli opcja ta nie zostanie uzupełniona wówczas Informacja o typie dokumentu zostanie pobrana z pliku wejściowego| | Kod dokumentu| Nazwa dokumentu| 1| FV – faktura VAT| 2| WZ – wydanie zewnętrzne| 3| IS – Inna sprzedaż| 4| ISR – Inna sprzedaż rozrachunek| 5| PW – Przychód wewnętrzny| 6| RW – rozchód wewnętrzny| 7| PK – Przyjęcia od kontrahenta| 8| WK – Wydanie do kontrahenta| 9| PZ – Przyjęcie zewnętrzne| 10| KO – Koszty| 11| NO – Noty obciążeniowe| 12| ZO – Zamówienie obce| 13| ZW – Zamówienie własne| 14| AW – Awizo wydania| 15| AP – Awizo przyjęcia| 16| OF – Oferta
+---|---  
+Zamknij dokument – ustawienie pozwalające na zamknięcie dokumentów po ich imporcie. Domyślnie dokumenty po zakończeniu importu trafią do bufora a użytkownik ręcznie dokonuje zamknięcia dokumentu .
+
+Konfigurator kolumn
+Sekcja ta jest odpowiedzialna za dopasowanie właściwości kolumn tj. z tego poziomu użytkownik dokonuje mapowania nazw importowanych kolumn. W zakładce tej widoczne są rekordy odpowiedzialne za utworzenie nagłówka jak również pozycji dokumentu. Bardzo istotne jest to iż nawet jeśli jakąś kolumna ma nie zawierać danych i tak musi ona zostać zmapowana w systemie Vendo. Podczas mapowania kolumn użytkownik ma obowiązek wskazania kolumn takich jak:
+
+Kod Towaru – unikalny kod definiujący towar
+Nazwa pozycji – nazwa określająca pozycje importowanego towaru.
+Typ dokumentu – określenie typu importowanego dokumentu. Parametr ten możliwy jest do zdefiniowania na sztywno w zakładce dokumenty
+Kod Klienta 1 – unikalny kod klienta rozumianego jako Nabywca/Dostawca w zależności od importowanego dokumentu
+Kod Klienta 2 – unikalny kod klienta rozumianego jako Odbiorca/Nabywca w zależności od importowanego dokumentu
+Magazyn – kolumna określająca ID magazynu na który ma trafić towar z importowanych pozycji
+Seria – określenie serii dokumentów jaka zostanie nadana podczas importu dokumentów
+Data 1 – data sprzedaży/zakupu
+Data 2 – data wystawienia
+Forma płatności – określenie formy płatności dla importowanego dokumentu
+Data płatności – termin płatności importowanego dokumentu
+Nr. Obcy – jest to najważniejszy parametr który określa użytkownik podczas mapowania kolumn. To właśnie numer obcy jest parametrem który pozwala na klasyfikowanie pozycji dokumentu i przydzielenie ich do właściwego dokumentu .
+Ilość – ilość towaru dla importowanej pozycji dokumentu
+Cena netto – Wartość towaru dla danej pozycji. Na podstawie ceny netto naliczana jest cena brutto wg stawki Vat zdefiniowanej w Vendo
+Nr seryjny – Seryjny numer pozycji dokumentu
+Data ważności – data ważności towaru na pozycji dokumentu
+Opis pozycji – dodatkowy opis związany z pozycją dokumentu
+Wartości dowolne – obecnie ten parametr nie jest obsługiwany
+
+
+Pozostałe
+Mapowanie towaru – określenie po jakim parametrze ma zostać definiowany towar.
+
+Mapowanie klienta - określenie po jakim parametrze ma zostać definiowany klient.
+
+Pomiń pozycje gdy towar nie istnieje – Gdy powyższe ustawienie jest zaznaczone tworzona jest tymczasowa kartoteka towarowa o kodzie zdefiniowanym przez odbiorcę. Pomiń dokument gdy klient nie istnieje – parametr mówiący o tym iż w przypadku gdy kod kontrahenta zdefiniowanego w importowanym pliku nie zostanie znaleziony w bazie danych Vendo system automatycznie pominie takie rekordy
+
+Zasada działania
+W celu dokonania importu dokumentów należy z poziomu okna głównego programu wybrać zakładkę Programy a następnie a następnie kliknąć w ikonkę odpowiedzialną za Import znajdującą się w nagłówku okna dialogowego. Spowoduje to uruchomienie mechanizmu plugina w którym użytkownik winien wskazać lokalizacje pliku gdzie zapisany jest przygotowany szablon importu następnie dokonać konfiguracji zgodnie z opisanym powyżej schematem. Przed przystąpienie do importu właściwego zaleca sie wykonanie testów w postaci przygotowania szablonu/ów należ zdefiniować po kilka przykładów importowanych danych dla każdego z rodzaju dokumentów
+Plugin nie kontroluje unikalności numeru obcego w związku z tym kilkukrotne wczytanie tego samego pliku spowoduje powielenie dokumentów w bazie Vendo! Spowoduje to zaimportowanie uprzednio przygotowanego szablonu. Po zakończeniu importu wyniki widoczne będą w zakładce dokumentów w zależności od rodzaju jaki dokument został zaimportowany.
+
+Images
+
+
+
+
+
+

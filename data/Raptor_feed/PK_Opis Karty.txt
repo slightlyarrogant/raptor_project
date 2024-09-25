@@ -1,0 +1,38 @@
+# Plan kont
+
+Plan kont zorganizowany jest w układzie syntetyczno-analitycznym gdzie domyślna liczba znaków kont syntetycznych wynosi 3 (z możliwością jej zwiększenia w zależności od konfiguracji). Liczba znaków dla kont analitycznych jest definiowalna indywidualnie dla każdego konta (domyślnie 2). Do budowy kont używamy znaków numerycznych. Ilość poziomów analityk nie jest ograniczona. Plan kont definiowany jest dla każdego roku obrachunkowego osobno. Zostanie on zdefiniowany przed dokonaniem pierwszych księgowań w KH. Mamy możliwość jego kopiowania pomiędzy latami księgowymi. W trakcie roku księgowego możliwe jest m.in. dodawanie kolejnych analityk do kont syntetycznych, usuwanie kont bez zapisów oraz zmiana nazw kont istniejących.
+
+![tmpb4434315-54ca-4c0c-aceb-60042acfef1b](https://www.cfi.pl/vendohelp/content/imgs/K0/e9f14554050b959a6a0f24e2e21f7bcd-63426-0.png)
+
+*Widok planu kont*
+
+Na zakładce Plan kont w module KH definiujemy i modyfikujemy zakładowy plan kont. W systemie Vendo istnieje możliwość tworzenia wielopoziomowej analityki do każdego konta syntetycznego. Domyślnie do programu został wpisany najprostszy zakładowy plan kont. Należy ułożyć plan kont pod swoje potrzeby i wymagania. Każde konto możemy usunąć z planu bądź dodać mu analityczne konta, dopóki nie ma na nim zapisów księgowych.
+
+Zakładowy plan kont może składać się zarówno z kont nieposiadających analityki jak i kont o bardzo rozbudowanej analityce. Nie można tworzyć dalszej analityki do konta, jeśli:
+- Istnieją już zapisy księgowe na tym koncie. Na przykład, jeśli mamy konto 403 – 01, na którym istnieją już zapisy księgowe to nie możemy utworzyć do niego kolejnego poziomu analityki 403 – 01 – 01.
+- Jeśli podczas tworzenia konta zostanie ono powiązane z pracownikiem, klientem, zleceniem, kasą/bankiem, magazynem. Wtedy konta tworzone są automatycznie podczas księgowania z modułu magazynowo – księgowego. Ważną zasadą jest również to, że zapisy możemy robić tylko na ostatnich analitykach kont tzw. "liściach". Jeśli mamy konto 403-01 i do niego kolejny poziom analityki 403-01-01 to zapisu możemy dokonać tylko na ostatnim koncie.
+
+### Dodanie konta księgowego.
+
+Konta księgowe dodajemy zawsze z zakładki Planu kont. Równorzędne konto do wyświetlonych na liście dodajemy klawiszem INSERT lub Dodaj. Subkonta (analityka) dodajemy zaznaczając (podświetlając) konto, do jakiego chcemy dodać subkonto i naciskając CONTROL+INSERT lub z Funkcji > Dodaj subkonto.
+
+![tmp4747635b-604a-4960-a83b-6089854fc339](https://www.cfi.pl/vendohelp/content/imgs/J1/467633280aeebb8eb45cdb22c27bddd1-74446-0.png)
+
+*Dodawanie nowego konta*
+
+Jeśli np. z powyższej listy chcemy dodać konto nr 203 'Rozrachunki z odbiorcami zagranicznymi', naciskamy INSERT. Jeśli chcemy dodać analitykę 201-01 'Rozrachunki z odbiorcami krajowymi' do konta 201 'Rozrachunki z odbiorcami', zaznaczamy konto 201 i naciskamy CONTROL+INSERT lub z Funkcji > Dodaj subkonto. Po dodaniu subkonta program wyświetli listę wszystkich subkont danego konta. Na tym poziomie, jeśli naciśniemy INSERT (dodajemy konto równorzędne do wyświetlanych) dodamy dalszą analitykę konta 201 np. 201-02 'Rozrachunki z odbiorcami zagranicznymi'. Natomiast jeśli naciśniemy CONTROL+INSERT dodamy subkonto do podświetlonego konta np. 201-01-01 'Rozrachunki z odbiorcami krajowymi osoby fizyczne'. Przy dodawaniu konta syntetyki pojawia się następujące okienko:
+
+![tmpc7663903-d224-443e-9961-3f574cb70a72](https://www.cfi.pl/vendohelp/content/imgs/Y6/99b7e6b99d7fdc816a843a70e17b948f-17927-0.png)
+
+*Dostępne funkcje przy konfiguracji nowego konta*
+
+Wpisujemy numer konta syntetycznego i jego nazwę. Określamy również czy ma to być konto rozrachunkowe (obustronne salda) czy nie. Konto księgowe może być powiązane z następującymi kartotekami istniejącymi w module magazynowo - rozliczeniowym:
+- Pracownicy
+- Kontrahenci
+- Bank/Kasa
+- Magazyn
+- Zlecenie
+
+
+To z jakim zbiorem jest związane konto jest o tyle istotne, że przy próbie dodania subkonta system wpierw zapyta o konkretny element tego zbioru, dla którego zakładamy subkonto. Na przykład konto rozrachunkowe z kontrahentami 201 powinno być powiązane z kartoteką klientów. Jeśli będziemy zakładać konto klienta, Vendo poprosi o wskazanie z okna modalnego klienta, dla którego zakładamy konto i z jego karty pobierze nazwę oraz numer ID, który stanowi numer konta analitycznego. Takie powiązanie jest o tyle wygodne, że unikamy zakładania konta przed księgowaniem - subkonta zakładane są dopiero wtedy, kiedy trzeba na nich księgować. Podczas księgowania Vendo utworzy konto dla klienta pobierając dane z jego karty. Powiązanie konta z kontrahentem jest bardzo ważne, jeśli chcemy korzystać z raportu kontroli rozrachunków z księgą (porównanie danych w modułach Płatności i KH). Jeśli konto zostanie powiązane, nie będzie możliwości dodawania innej analityki konta niż wynikające z danych wpisanych w powiązanej bazie. Tzn., jeśli konto 201 'Rozrachunki z odbiorcami' zostanie powiązane z klientem, możliwe będzie założenie analityki tylko dla klienta wpisanego w bazie kontrahentów. Jeśli konto 201 chcesz podzielić na np. 201-01 'Odbiorców krajowych' oraz 201-02 'Odbiorców zagranicznych', to konto 201 powinno być niezwiązane. Dopiero konta 201-01 i 201-02 powinny być powiązane z kontrahentem, jeśli ich analitykę będą stanowić już konta samych klientów. Uzupełnienie numerów subkont „do” pozwala określić, ile cyfr będzie liczyła analityka subkonta. Na przykład analitykę subkonta rozrachunków z kontrahentami powinniśmy uzupełnić do 5 cyfr. Po założeniu konta możemy dokonywać na nim zapisów bądź utworzyć do niego konta analityczne.
+

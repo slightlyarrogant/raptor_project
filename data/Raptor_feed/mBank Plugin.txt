@@ -1,0 +1,100 @@
+# mBank Plugin
+## Informacje ogólne
+
+
+W celu ułatwienia parowania rozrachunków importowanych z mBanku został stworzony mechanizm pozwalając na automatycznie parowania wpłat importowanych do systemu z dokumentami dostępnymi w Vendo.   
+Plugin mBank pozwala na ustawienie połączenia za pomocą usługi WebServices z bankowością elektroniczną mBank CompanyNet. Dzięki tej usłudze plugin może realizować bezpośrednio z poziomu systemu Vendo funkcjonalności takie jak. 
+
+-	Sprawdzanie salda
+-	Status zlecenia (przelewu)
+-	Zlecenia
+    -	Krajowy,
+    -	Zagraniczny
+    -	SEPA
+    -	Split payment
+- 	Automatyczne rozliczanie dokumentów na podstawie pobranych transakcji
+
+# Wymagania
+-	Podstawowym wymogiem który musi być spełniony przez kontrahenta, jest wykupienie usługi mBank CompanyConnektWSService
+-	W usłudze mBank CompanyConnectWSService musi być włączona opcja Web Services Konfiguracja w Vendo ERP
+-	Należy dodać do Vendo dwa pluginy AutomatyczneRozliczeniaPlugin.dll oraz plugin odpowiedzialny za komunikacje z wybranym bankiem np. MBankPlugin.dll przy czym podegranie plugina odpowiedzialnego za komunikacje z bankie spowoduje automatyczną instalacje tego pierwszego 
+
+
+
+# Konfiguracja po stronie Vendo
+Podstawowe ustawienia dotyczy dokumentów dla których ma zostać wykonane rozliczanie płatności znajdują sie w: 
+`Ustawienia` > `Główne` > `Parametry pracy` > `Dokumenty` > `Ustawienia dla rodzaju dokumentu` > `Wybór właściwego dokumentu` > Zakładka `Inne` > `Można podpiąć do płatności` Oznaczenie tej funkcji pozwali na automatyczne rozliczanie dokumentu z płatnościami po uprzedniej porwanej konfiguracji ustawień plugina
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K8/d809b62ad7e6223b8664265a5585ebde-148457-0.png)
+
+
+
+## Wartości dowolne  
+Przed przystąpieniem do pracy należy zdefiniować stosowne wartości dowolne pracowników. Dokonać tego należy z poziomu `Ustawień głównych` > `Słowniki` > `Pracownik` > `Wartości dowolne pracowników` Aby wyodrębnić definiowane pola zalecane jest stworzenie odrębnej zakładki Bank 
+Definiowane wartości dowolne [nazwa][nazwa w skryptach]
+- DIK - DIK
+- ID - ID_BANK
+- Nazw CA - CERT_CA
+- Wystawca CA 
+ 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U6/ad506408e9b2f4c7ee4220880e47bb1a-33744-0.png)#
+ 
+
+ 
+
+## Konfiguracja kartoteki kontrahenta
+
+Kolejnym krokiem jest wprowadzenie danych do uprzednio zdefiniowanych pól na kartotece pracowniczej. W tym celu należy w  `Menu` głównym wybrać `Pracownicy` > `Pracownicy` > `Wybór właściwego rekordu` (otwieramy go dwuklikiem myszy bądź wciskając Enter) > `Wartości dowolne` -> zakładka `Bank`. Znajdować sie tam będa uprzednio zdefioniowane wartości dowone Dane które są konieczne do uzupełnienia to:
+- DIK – wartość podawana przez bank
+- ID – wartość podawana przez bank
+- Nazw CA – Nazwa certyfikatu
+- Wystawca CA – dane podawane przez bank
+
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U6/ad506408e9b2f4c7ee4220880e47bb1a-33744-0.png)#
+
+
+# Dodanie certyfikatu na stanowisku roboczym. 
+Na Stanowisku użytkownika należy uruchomić konsolę mmc następnie Plik > Dodaj/Usuń przystawkę… > Certyfikaty > Dodaj > OK. Z drzewa wybieramy Osobisty > Certyfikaty. 
+
+ 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E8/5963bd7a11937c9bd020f58811e06f10-83048-0.png)
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R3/f3edc1852efcf89380d739cbb47fd216-41121-0.png)
+ 
+
+
+Klikamy dwukrotnie w wybrany certyfikat. Wpisujemy dane z pola nr 1 przedstawionego na rys 2.
+
+
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R1/04860b034689ac0894094a14febe1811-37960-0.png)
+
+
+## Zakładka Główne (Certyfikaty) 
+
+Na poziomie konfiguracji pluguina użytkownik określa parametry dotyczące komunikacji z wybranym bankiem. Każdy bak posiada odrębny sposób certyfikowania połączenia z nim przykładem może być mBank posiadamy podpis kwalifikowany na postawie którego generowany jest token
+Sesja – Odpowiedzialna jest za nawiązanie długotrwałego połączenia z Bankiem. Funkcja ta dotyczy mBanku i obywa się za pośrednictwem certyfikatu kwalifikowanego. Aby płatność została zrealizowana Użytkownik powinien posiadać certyfikat kwalifikowany. System odczytuje taki certyfikat uzupełniając dane w pluginie. Dane wyświetlane są w polu Cert. 
+
+Użytkownik ma możliwość określenia długości trwania sesji połączeni a z Bankiem. Uzupełniając pole Koniec sesji określa do kiedy taka sesja jest aktywna. Informacja o długości trwania sesji prezentowana jest poniżej.
+
+„Cert” Certyfikat kwalifikowany – po stronie klienta do załatwienia, który jest Certyfikatem autoryzacyjnym po stronie systemu autoryzacji firmy.
+
+Zamknij sesję – buton pozwalający na zakończenie pracy bota odpowiedzialnego za połączenie z Bankiem
+
+ 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D5/1e54c05e202bc72ab0222f618d42a7b3-35081-0.png)
+
+
+# Konfiguracja bota
+
+```
+[PluginTask]
+name=mBankSynchTurnover
+cronTxt= */30 * * * *
+```
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C4/e7964a64b8e94dfd845afbc110ce5788-47352-0.png)

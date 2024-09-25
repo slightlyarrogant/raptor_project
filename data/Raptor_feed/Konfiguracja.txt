@@ -1,0 +1,41 @@
+## Definiowanie roku obrachunkowego
+Rok obrachunkowy definiujemy w słownikach systemowych. Należy wejść w: 
+-	`Ustawienia` -> `Parametry Pracy` i wybrać przycisk `Słowniki`. 
+-	W słownikach odnajdujemy pozycję **Księga Handlowa: Rok obrachunkowy**. 
+-	Otwieramy ja naciskając *ENTER*. 
+-	Nowy rok dodajemy naciskając *INSERT*. 
+-	Wpisujemy oznaczenie roku i zakres kalendarzowy (początek i koniec), następnie *ZAPISZ*.
+
+Opisujemy Rok księgowy, np. "Rok 2018" i wybieramy początek i koniec okresu. W Vendo rok księgowy nie musi pokrywać się z rokiem kalendarzowym i jego długość może być różna niż 12 miesięcy - np. kwiecień 2017 – sierpień 2018. Program nie pozwoli na to, aby poszczególne lata księgowe "zachodziły" na siebie (ani jeden miesiąc z roku poprzedniego nie może być wybrany do roku następnego). 
+Jeśli rok księgowy "2018" określimy pomiędzy grudniem 2017 a grudniem 2018, to program nie pozwoli na utworzenie roku księgowego "2019" pomiędzy grudniem 2018 a grudniem 2019, ponieważ miesiąc grudzień 2018 występuje w roku 2018 i 2019.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E6/92f539b5175e506a63462268da1892b1-22743-0.png)
+
+ Praca na Księdze Handlowej zawsze dotyczy jednego roku obrachunkowego. Dany rok, na którym chcemy aktualnie pracować wybieramy w **Parametrach Pracy KH**.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J7/206e8cb134c8d64924963dc71a687641-7408-0.png)
+
+ Żeby wybrać właściwy rok księgowy: 
+-	Należy wybrać: `menu Ustawienia` -> `Okresowe` -> `Parametry Pracy KH`. 
+-	Wskazać odpowiedni rok pracy i miesiąc (w ciągu roku można zmieniać miesiąc, księgując domyślnie zawsze pojawia się miesiąc z Parametrów Pracy KH). 
+-	Określać Datę wydruków. Jeśli wydruki z Rejestrów VAT i KH wykonywane są po terminie urzędowo określonym, przed wydrukiem należy samemu określić "ręcznie" datę, natomiast jeśli używana ma być aktualna data systemowa należy zaznaczyć pole **`Użyj daty bieżącej`**.
+
+## Konfiguracja dzienników księgowych
+
+**Definiowanie dzienników księgowych.**
+
+System posiada zdefiniowane domyślne dzienniki księgowań. Jednak jeśli chcemy zdefiniowania własne  lub zmodyfikować już istniejące należy: 
+-	Skorzystać z `menu Ustawienia` -> `Parametry Pracy` i nacisnąć przycisk `Słowniki`. 
+-	W słownikach odnajdujemy pozycję **Księga Handlowa: Dzienniki księgowań**. 
+-	Otwieramy ją naciskając *ENTER*. 
+-	W programie domyślnie założone są dzienniki: Sprzedaży, Banku i Kasy, Kosztu, Zakupu towarów oraz Pozostałych księgowań. Zmian dziennika dokonujemy poprzez otwarcie pozycji klikając *ENTER* i wpisać własną nazwę. 
+-	Nowy dziennik dodajemy klawiszem *INSERT*, określamy jego nazwę i kod.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A6/f089852ed14676f9445b589a9e1f1a0b-14972-0.png) 
+
+
+**Moduł Księgowy** (nazwany w VENDO Księga Handlowa) jest zorganizowany w postaci dzienników księgowych. Dzienniki księgowe zawierają ustalone w odpowiedniej chronologii (według dat) zapisy księgowe (zwyczajowo po dokonaniu ich renumeracji). Zorganizowane są w układzie miesięcznym, tzn. ich numeracja zamyka się w obrębie danego miesiąca kalendarzowego. Z reguły są tworzone w celu rozdzielenia zapisów księgowych reprezentujących poszczególne typy operacji gospodarczych (np. zakup towarów i materiałów, koszty, sprzedaż, płatności, PK, itp.). Zarówno ilość, jak i nazwy dzienników w systemie Vendo są w pełni dowolne i edytowalne - z zastrzeżeniem, że raz utworzony dziennik nie może już zostać usunięty (mogą natomiast zmienić się parametry jak nazwa lub kod, pod warunkiem, że nie było jeszcze zapisów księgowych przypisanych do danego dziennika). Ilość dzienników może być dostosowana do potrzeb funkcjonalnych działu księgowości. Możemy sformułować osobne dzienniki na księgowanie poszczególnych rodzajów dokumentów lub też na poszczególne ich podrodzaje (np. na osobne dzienniki na poszczególne serie dokumentów kosztowych KO), poszczególne konta bankowe, kasy, itp. Każdy z dzienników posiada odrębną miesięczną numerację (według schematu: KOD DZIENNIKA/MIESIĄC DZIEŃ/NUMER ZAPISU, np. SP/1801/1, co oznacza pierwszy zapis księgowy w miesiącu stczniu2018 roku w dzienniku SPRZEDAŻ (SP)), która w dowolnym momencie może zostać zrenumerowana według dat zapisów.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M2/36d49d2fc88a093a43480cbd15632f9f-33185-0.png) 
+
+Renumeracja spowoduje zmianę pozycji danego zapisu księgowego w ramach dziennika, dlatego też należy pamiętać, że numeracja konkretnych zapisów księgowych może ulec zmianie. Opcja renumeracji jest dobrowolna. Dzienniki możemy drukować z poziomu programu, jako wszystkie zapisy w danym miesiącu lub w danym okresie (zakres dat od – do). Wydruki zawierają szczegółowe informacje z zapisów księgowych z podziałem na konta księgowe i wartości. Mogą odzwierciedlać dokonane księgowania w ramach konkretnego dziennika.

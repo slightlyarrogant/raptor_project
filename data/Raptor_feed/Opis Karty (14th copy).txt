@@ -1,0 +1,131 @@
+# e-Deklarcje
+### e-Deklaracje
+Moduł Księgowy VENDO.ERP to również kompletne rozwiązanie dotyczące obsługi i rozliczania podatku VAT – Rejestry VAT VENDO.ERP oraz moduł e-Deklaracji zapewniający automatyzację w przygotowaniu i wysyłce deklaracji podatkowych i plików JPK.
+### Konfiguracja
+Przed przystąpieniem do generowania deklaracji wysyłanych do urzędu skarbowego konieczne jest dokonanie niezbędnych ustawień. 
+- Podstawowa konfiguracja to wgranie do systemu pliku plugina a następnie instalacja na Bazie danych zakładki e-deklaracji, która odpowiada za generowanie deklaracji. 
+- Kolejnym bardzo istotnym parametrem konfiguracji jest weryfikacja, czy podczas definiowania ustawień związanych z danymi firmy zostały uzupełnione informacje dotyczące Danych urzędowych. To właśnie z tego miejsca będą one w późniejszym czasie pobierane podczas generowania deklaracji. 
+- Bardzo ważnym polem podczas definiowania danych urzędowych jest określenie Urzędu skarbowego, do którego przesyłana będzie deklaracja
+- Wprowadzenie Urzędu Skarbowego, pod który podlega Firma, odbywa się z poziomu Danych Firmowych. Aby tego dokonać należy: 
+    - Wejść w menu Ustawienia > Główne > Parametry Pracy > Ogólne > Dane firmy [Pokaż Dialog] 
+    - Zakładka Dane Urzędowe 
+    - Pole Urząd Skarbowy, należy wprowadzić czterocyfrowy kod Urzędu Skarbowego, kody urzędu dostępne są na stronie internetowej (rysunek poniżej).
+![tmp3a69e9f6-4020-4139-9e60-55393b66711a](https://www.cfi.pl/vendohelp/content/imgs/K8/598a8fe0a7d26e9aa13a40e2e1fbf911-38731-0.png)
+
+*Dane Urzędowe - definiowanie nr Urzędu*
+- Kolejnym punktem konfiguracyjnym (przed przystąpieniem do generowania deklaracji) jest nadanie stosownych uprawnień. Uprawnienia te pozwalają na dostęp do zakładek znajdujących się w module Rejestr VAT e-Deklracje. Aby nadać uprawnienia do zakładek należy: 
+    - W module Pracownicy wybrać zakładkę Pracownicy > zakładka pozostałe dane > Uprawnienia 
+    - W sekcji Kategoria wybrać zakładkę eDeklaracje. Nadanie uprawnień odbywa się poprzez zaznaczenie checkboxa obok pozycji, z deklaracją która ma być dostępna dla definiowanego pracownika. 
+
+![tmp24a1368a-864c-4664-b45d-e4a43599ada0](https://www.cfi.pl/vendohelp/content/imgs/P5/2d7306bd21e2bb196ba644e785a7e37c-99815-0.png)
+
+*Nadanie uprawnień – eDeklaracje*
+
+Uprawnienia te wiążące są jedynie w przypadku, gdy użytkownik posiada uprawnienie „Dostępu do rejestru VAT”.
+
+
+
+###	Obsługa e-Deklaracji
+Na podstawie rejestrów VAT i zapisów w nich zawartych (przeniesione faktury, wpisy ręczne) mamy możliwość przejrzenia przygotowanej przez system deklaracji (w postaci gotowego raportu), a następnie jej podpisania i wysłania drogą elektroniczną bezpośrednio do US. Wszystkie dane na potrzeby wypełnienia deklaracji system pobiera z rejestrów VAT (i ustawień firmy w systemie), dlatego w przypadku jakichkolwiek pomyłek, stosownych poprawek możemy dokonać w rejestrach (bądź w ustawieniach). Aktualnie system VENDO.ERP umożliwia wysyłkę elektroniczną m.in. deklaracji: 
+	
+-	VAT-7 (wersja 20),
+-	VAT-7K (wersja 14),
+-	VAT-UE
+-	VAT-UEK
+-	JPK_V7M
+-	JPK_V7K
+
+Wersje deklaracji są na bieżąco aktualizowane zgodnie z wymogami MF. Wszystkie dane zawarte w deklaracjach możemy zweryfikować w rejestrach oraz raportach rejestrów VAT. Identycznie sytuacja wygląda z raportami JPK_VAT, które są elektronicznym odzwierciedleniem zagregowanych danych z rejestrów. System umożliwia ich automatyczne przygotowanie, a po zaakceptowaniu przez użytkownika, podpisanie i wysłanie do MF drogą elektroniczną. Obsługiwane jest pobranie i zapisanie w systemie dokumentu UPO potwierdzającego poprawność wysyłki. Aby dokonać wysłania dokumentów elektronicznych JPK_VAT oraz deklaracji VAT (wtedy, kiedy nie jest to osoba fizyczna) wymagane jest posiadanie aktualnego kwalifikowanego podpisu elektronicznego.
+![tmpc60737e7-efff-42e4-81f6-73f33d708bf2](https://www.cfi.pl/vendohelp/content/imgs/I2/8c93e11b756b847fc319b3bf5cfea052-57466-0.png)
+
+*Deklaracje podatkowe i JPK*
+
+**Deklaracja VAT-7**
+
+Przed przystąpieniem do generowania deklaracji VAT-7 w pierwszej kolejności należy uzupełnić kod Urzędu Skarbowego, do którego przesyłana będzie deklaracja. Generowanie plików JPK odbywa się na podstawie wystawionych dokumentów sprzedażowych oraz wprowadzonych dokumentów zakupowych przeniesionych do rejestrów VAT. 
+Generowanie Deklaracji VAT-7 dostępne jest dla Firmy, która posiada licencję do modułu KH. 
+Aby wygenerować deklarację VAT-7 należy w menu głównym odnaleźć sekcję Rejestr VAT a następnie kliknąć w zakładkę e-Deklaracje. Po wyborze właściwej pozycji na liście dostępnych deklaracji należy wskazać okres, dla którego generowane będzie zestawienie. 
+ 
+
+![tmpccae9198-3dc3-427f-ae1c-d2a2628f14c3](https://www.cfi.pl/vendohelp/content/imgs/F9/c74d116aa50815de21b7032a7dba9f7e-10322-0.png)
+
+*Wybór wersji deklaracji VAT*
+
+Po wygenerowaniu pliku pokazuje się okno, w którym mamy możliwość weryfikacji poprawności wszystkich zebranych danych. Sprawdzony i wygenerowany plik należy zapisać do bufora.
+Lista wszystkich plików deklaracji VAT (oraz JPK), które zostały wygenerowane w systemie VENDO.ERP widoczna będzie na liście w zakładce e-Deklaracje. W celu ułatwienie weryfikacji aktualnego statusu przypisanego do pliku, dla każdego ze statusów zdefiniowany został konkretny kolor. Dla deklaracji wysłanych - zielony, dla zatwierdzonych - biały, dla niezatwierdzonych – niebieski, oraz dla błędnych - czerwony (rysunek poniżej). Na liście znajdują się również szczegółowe informacje dotyczące wygenerowanego pliku.
+
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F7/08f4aa234889de782ccdf7e2b7366bd4-49387-0.png)
+
+*e-Deklaracje - lista wygenerowanych plików*
+
+Metodą na weryfikację poprawności wygenerowanych danych jest raport. Daje on możliwość porównania danych z deklaracji VAT-7 z deklaracją JPK. Opcja ta dostępna jest spod konkretnej deklaracji VAT-7, okna JPK - Vat, po kliknięciu opcji Funkcje > Raport Porównaj z VAT. 
+Po wygenerowaniu raportu porównania system wyświetli wyniki z pozycjami porównującymi dane z deklaracją VAT-7 oraz aktualnym zestawieniem na Rejestrze VAT sprzedaży/zakupu. Dane te mogą minimalnie różnić się od siebie, gdyż wartości generowane w deklaracjach JPK prezentowane są z zaokrągleniem groszowym, natomiast VAT-7 z zaokrąglaniem do pełnych złotych.
+Wysyłka VAT-7 możliwa jest tylko dla zatwierdzonych dokumentów. Należy tego dokonać poprzez funkcję Zatwierdź po wyborze konkretnej deklaracji VAT-7. W celu potwierdzenia, iż przesłany plik został zarejestrowany na serwerze urzędu pobieramy plik UPO (Urzędowe Potwierdzenie Odbioru).
+ 
+
+**Korekta Deklaracji VAT-7** 
+
+Wykonanie korekty dla deklaracji VAT-7 polega na powtórnym wygenerowaniu formularza z poprawnymi danymi a następnie zaznaczenie checkboxa obok pozycji nr [7] (rysunek poniżej). Końcowym etapem wygenerowanej korekty jest zatwierdzanie dokumentu a następnie przesłanie go do zdefiniowanego wcześniej Urzędu Skarbowego.
+ 
+![tmpf439d03b-3957-49f6-ad0f-34bb3f8efc26](https://www.cfi.pl/vendohelp/content/imgs/H5/cde5b9b531d97035a3c3b428109ae485-113692-0.png)
+
+*Korekta deklaracji VAT-7*
+
+**Generowanie deklaracji VAT-UE**
+
+W przypadku, gdy kontrahent zajmuje się importem/exportem towarów do krajów UE konieczne jest wygenerowanie deklaracji VAT-UE. Proces generowania deklaracji jest bardzo zbliżony do wyżej opisanego i przebiega następująco: 
+-	W module `Rejestr VAT` wybrać zakładkę `e-Deklaracje`, 
+-	Kliknąć w ikonę globusa znajdująca się w lewym górnym oknie programu a następnie wybrać zakładkę `VAT` , 
+-	Z rozwijanej listy wybrać pozycję `VAT-UE`. 
+
+Generowanie deklaracji odbywa się na podstawie dokumentów przeniesionych wcześniej do rejestru sprzedaży dla faktur wewnątrzunijnych. Po wyborze pozycji `VAT-UE` na liście dostępnych pozycji należy określić okres, dla którego generowane będzie zestawienie. Po wygenerowaniu deklaracji informacje dotyczące sumarycznych wartości wystawionych dokumentów i numerach NIP kontrahentów, u których wykazane były transakcje, zawarte będą w zakładce `Dokumenty` na formularzu deklaracji. W przypadku, gdy dla danego kontrahenta wystawione było „n” faktur, informacja o ich wartości prezentowana będzie sumarycznie. Dla każdego kontrahenta, w stosunku do którego w systemie zarejestrowane były transakcje, informacja o obrotach prezentowana będzie w oddzielnym rekordzie wraz z informacją o jego NIP-ie oraz sumarycznej wartości wystawionych dokumentów.
+ 
+![tmp5fc3971a-5ced-4dcb-8b07-982d4cb6444b](https://www.cfi.pl/vendohelp/content/imgs/Y6/c97c9b744a41627327ce3c39c7af9ccb-68403-0.png)
+
+*VAT-UE - lista dokumentów*
+
+**Korekty dla deklaracji Vat-UE**
+
+W sytuacji, gdy na przesłanej przez użytkownika deklaracji wystąpi błąd, istnieje możliwość wygenerowania korekty. Generowanie korekty możliwe jest pod warunkiem, iż pierwotny dokument został wystawiony a następnie zatwierdzony oraz wysłany z systemu VENDO.ERP. Opcja korekty dostępna jest w oknie pierwotnej deklaracji VAT-UE. Po kliknięciu klawisza Funkcje > Generuj korektę system utworzy deklarację korekty VAT-UE. 
+Po wygenerowaniu korekty dla deklaracji użytkownik będzie miał możliwości weryfikacji jakie dane zostały skorygowane. Na formularzu korekty prezentowany jest stan przed i po korekcie. Jeśli wszystkie dane są poprawne tak wypełniony dokument należy zapisać, zatwierdzić i następnie przesłać.
+
+
+![tmpa036eb89-47f3-47fc-b327-1443339478be](https://www.cfi.pl/vendohelp/content/imgs/O4/8a548d2e6a395344bf289fc8de2df32f-91745-0.png) 
+
+*VAT-UE – korekta*
+
+**Pozostałe struktury JPK**
+System VENDO.ERP przygotowany jest standardowo do tworzenia oraz wysyłania następujących plików JPK:
+-	JPK_FA (wersja 3)
+
+Dane do JPK Faktury VAT, generowane są spod modułu `Dokumenty`, z poziomu listy dokumentów Faktur sprzedażowych (FV). Użycie funkcji `Generuj JPK Faktury`, pozwoli użytkownikowi na wyeksportowanie danych do pliku i zapisanie go na dysku we wskazanej lokalizacji. Plik ten, dostosowany jest do specyfikacji Ministerstwa Finansów. Standardowo możliwość generowania wszystkich plików JPK znajduje się w panelu `Rejestry VAT` > `e-Deklaracje`: ikona `e-Deklaracje` > `JPK` > `Faktury VAT`.
+
+![tmp36e46a5e-dd12-4ffd-912e-88b366ae0b59](https://www.cfi.pl/vendohelp/content/imgs/Q4/f31ac86bb0d9096609340cf2516858dd-18618-0.png)
+
+*Wybór deklaracji JPK*
+
+-	JPK_MAG
+
+Plik JPK Magazynowy, generowany jest spod modułu `Deklaracje`, z poziomu zakładki `e-Deklaracje - magazyn`.  Innym miejscem na wygenerowanie stosownego pliku jest moduł e-deklaracji w rejestrze VAT (jest to miejsce, gdzie zawarty jest dostęp do wszystkich struktur JPK, w tym tych „na żądanie”). System eksportuje dane o dokumentach magazynowych. Dane dotyczą konkretnego magazynu (jest on wybierany z listy podczas generowania pliku) oraz określonego przez Użytkownika okresu (zakresu miesięcy) dokumentów magazynowych.
+
+-	JPK_KR
+
+Pliki JPK_KH generujemy spod modułu `e-Deklaracje` zamieszczonego w `Rejestrach VAT`. Zakres i struktura danych dotyczy zapisów księgowych z Księgi. System umożliwia wyeksportowanie do pliku również zapisów znajdujących się w buforze Księgi.   
+Wymienione pliki kontrolne tworzone są automatycznie na podstawie danych z dokumentów źródłowych, generowane w systemie w postaci elektronicznej. Istnieje możliwość ich zapisywania zgodnie z wytycznymi MF.  
+
+Dostęp do poszczególnych struktur JPK lub deklaracji warunkują uprawnienia systemowe. Jeżeli Użytkownik nie widzi wymienionych wyżej wersji deklaracji VAT lub struktury JPK, wówczas najprawdopodobniej nie posiada stosownych uprawnień.
+
+W przypadku pliku JPK_WB należy mieć na uwadze, iż powinien on zostać wygenerowany przez banki obsługujące rachunki bankowe Klienta.
+
+
+**Generowanie pliku JPK**
+
+Po wyborze właściwej pozycji na liście dostępnych deklaracji JPK należy określić okres, dla którego generowane będzie zestawienie.
+
+![tmp8bdcf449-f46b-4c3f-a387-f64172ae02c5](https://www.cfi.pl/vendohelp/content/imgs/U2/c94e984c085bffdfda4be5daf7adcf65-8361-0.png)
+
+*Wybór okresu dla generowanego pliku*
+
+Po wygenerowaniu pliku pokazuje się okno, w którym mamy możliwość weryfikacji poprawności wszystkich zebranych danych. Sprawdzony i wygenerowany plik należy zapisać do bufora a następnie zatwierdzić. Wysyłka JPK możliwa jest tylko dla zatwierdzonych plików.   
+Potwierdzeniem właściwej wysyłki i rejestracji pliku na serwerze Urzędu Skarbowego jest pobrany przez użytkownika plik UPO (Urzędowe Potwierdzenie Odbioru).

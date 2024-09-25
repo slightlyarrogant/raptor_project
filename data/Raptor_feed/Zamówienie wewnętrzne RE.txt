@@ -1,0 +1,92 @@
+# Zamówienie wewnętrzne
+## Inforacje ogólne
+
+Dokument Zamówienia wewnętrznego RE jest dokumentem bez wpływu na stan magazynu jednie zamówienie na przesunięcie towaru pomiędzy magazynami. Wystawiając dokument MM mamy możliwość wybrania zamówienia wewnętrznego do realizacji i przeniesienia pozycji na MM z dokumentu zamówienia wewnętrznego. Po zamknięciu dokumentów RE możliwe jest zarezerwowanie towaru na magazynie źródłowym do czasu. Należy zaznaczyć tutaj że w momencie realizacji pozycji dokumentu, pozycje dokumentu nie będą widoczne. Widoczne będą pozycje które jeszcze nie zostały zrealizowane – taj jak na każdym zamówieniu.
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |RE
+|Wpływ na stan magazynowy |Nie
+|Rodzaj dokumentu | Magazynowy - przyjęcie
+|Czy wchodzi do płatności| Nie
+|Czy możliwe korekty| Tak
+|Nazwa dla dat|Data1:ataRealizacji; Data2:DataWystawienia;
+|Nazwa dla klienta |Klient1:"Odbiorca" Klient2:null
+|Czy dokument przenosimy do rej. Vat | Nie
+|Czy wchodzi do Analiz Sprzedaży| Nie
+|Czy wchodzi do Analiz Zakupu| Nie
+|Pozwolenie na ceny zerowe | Tak
+|Pozwolenie na zerowe ilości na pozycji |Nie
+|Liczenie brutto | Nie
+|Wielowalutowy, |Nie
+|Czy dokument może być eksportowy |Nie
+|Musi być klient, | Nie
+|Czy dokument skojarzony z dokumentem handlowym |Nie
+|Ma możliwość użycia cen indywidualnych | Tak 
+|Czy może posiada ceny ujemne | Nie
+|Pozwolenie na ceny ujemne | Nie
+
+
+
+## Opis dokumnetu
+Główne pola znajdujące sie na dialogu dokumentu PW to:
+
+|Nazwa Pola | Definicja | 
+|
+|	Numer | numer dokumentu generowany zgodnie z konfiguracją
+|	Magazyn źródłowy | Magazyn z którego wydany będzie towar
+|	Magazyn docelowy | Magazyn na który będzie przekazany towar
+|	Data realizacji
+|	Wystawienie | Data wystawienia
+|	Odbiorca | Pole nie jest obowiązkowe, może być ustawianie w momencie wystawiania na podstawie Zlecenia produkcyjnego
+|	Osoba kontaktowa | osoba odpowiedzialna za przeniesienie towaru pomiędzy magazynami
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O8/de967b4ee794e0c218d1761a22863e36-25041-0.png)
+
+W zakładce Dane kontrahenta są szczegółowe dane dotyczące odbiorcy
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H5/25db8443d289a4da638a095835764c93-21063-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta i kurs waluty dla dokumentu
+-	Forma dostawy
+-	Spedycja
+-	Numer obcy
+-	Realizacja przez - sposób realizacji Zamówienia Wewnętrznego : przez Dowolny Dokument, Przesunięcie Miedzy magazynowe, Rozchód Wewnętrzny, Dyspozycja Wydania, Wypożyczenie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/P9/7a23426d4b120f41a024e6b73a09ab5f-3971-0.png)
+ 
+-	Kontakt
+-	Handlowiec – pracownik
+-	Numer zamówienia
+-	Numer Dostawy
+-	E-mail
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/2150b3cf12f828fcbdd926fa3644bb5e-26079-0.png)
+ 
+W zakładka Opis i uwagi wprowadzane są dane które mogą być drukowane na wydruku dokumentu. Długi Opis i Uwagi. W polu Uwagi mogą się przenosić numery dokumentów źródłowych 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U2/96ad7182f2aa4235415c1bf8f463c124-19405-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U4/ab9ad1fc2b0169f62372905ed922a077-31067-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla RE zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Grupa Cen – grupa cen ostatnia cena zakupu towaru
+-	Cena0 : - Cena z cennika ceny ostatniej ceny zakupu
+-	Ilość – ilość przyjętych  kartotek towarowych w podstawowej jednostce 
+-	Rabat – wyliczony, wprowadzony lub przeniesiony z zamówienia własnego. 
+-	Cena netto – brak możliwości zmiany ceny, ustawia się zgodnie z wydawaną partii
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na dokumencie, oraz ilość zarezerwowana na innych dokumentach. 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Z rezerwacją – po zaznaczeniu tej opcji i zamknięciu dokumentu towar na magazynie źródłowym zostanie zarezerwowany pod tą pozycję dokumentu
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A6/9cc4178312c54864882aff559a082e56-22022-0.png)
+ 
+Wystawiając dokument Zamówienia Wewnętrznego mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. Należy pamiętać że dla RE- w statusie zamknięty pojawią się dokument RE+ także zamknięty z taki samym numerem.

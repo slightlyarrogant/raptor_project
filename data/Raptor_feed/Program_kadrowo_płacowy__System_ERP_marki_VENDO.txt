@@ -1,0 +1,141 @@
+# Program kadrowo płacowy | System ERP marki VENDO
+
+# Program kadrowo płacowy
+
+## Kadry i Płace
+
+Vendo UnaHR to prosty w obsłudze system kadrowo-płacowy.  Obejmuje zarządzanie personelem, precyzyjne naliczanie wynagrodzeń oraz eliminuje błędów w obliczeniach. System ERP Vendo.UnaHR skraca czas potrzebny na przygotowanie raportów i  ułatwia przygotowanie dokumentów kadrowych, które można przechowywać w postaci elektronicznej. Szczególnie ważnym aspektem jest gwarancja dostosowania się systemu do zmieniającego się prawa pracy.
+
+System umożliwia  wymianę danych z urzędami, takimi jak ZUS, Urząd Skarbowy instytucje finansowe oferujące PPK. Umożliwia też efektywną kontrolę nad wykorzystaniem urlopów przez pracowników oraz pomaga w planowaniu i monitorowaniu czasu pracy, co przekłada się na lepsze zarządzanie zasobami ludzkimi.
+
+## Jakie funkcje realizuje Vendo w obsłudze kadr i płac
+
+### Kartoteki pracownicze
+
+- dane osobowe,
+- informacje o niepełnosprawności,
+- dane dotyczące emerytury czy renty
+
+### Automatyzacja procesów zarządzania personelem
+
+- rejestracja czasu pracy i nieobecności,
+- kontrola limitów oraz zestawienia wykorzystanego urlopu,
+- raportowanie nieobecności,
+- elektroniczne wnioski urlopowe,
+- śledzenie historii zatrudnienia i awansów pracowników,
+- dokumentacja pracownicza zgodnie z przepisami,
+- rejestracja danych dotyczących szkoleń BHP, badań lekarskich i kursów pracowników
+
+### Ewidencja umów i dokumentacji
+
+- ewidencja umów o pracę, cywilnoprawnych oraz innych z gotowymi wzorami do wydruku,
+- obsługa i PPK – deklaracje zgłoszeniowe, zmiany danych,
+- deklaracje zgłoszeniowe ZUS,
+- dostosowanie dokumentacji pracowniczej do aktualnych przepisów.
+
+### Rejestracja czasu pracy
+
+- obsługa wielu systemów czasu pracy, uwzględniająca nadgodziny, godziny nocne i zmiany w harmonogramie,
+- integracja kalendarzy produkcyjnych z danymi w kadrach,
+- import zwolnień lekarskich z PUE ZUS
+
+### Wynagrodzenia i listy płac
+
+- szczegółowa konfiguracja składników wynagrodzeń,
+- możliwość definiowania składników wyliczeniowych na podstawie danych (z nieobecności czy innych modułów),
+- analiza wyliczonych składników listy płac,
+- automatyczne naliczanie list płac zgodnie z ustaloną definicją,
+- dodawanie naliczeń lub potrąceń do pracowników,
+- wydruki list płac i pasków wynagrodzeń,
+- ewidencjonowanie pożyczek oraz potrąceń komorniczych,
+- generowanie miesięcznych deklaracji podatkowych,
+- generowanie miesięcznych deklaracji ZUS,
+- tworzenie miesięcznych deklaracji PPK,
+- możliwość elektronicznej wysyłki pasków wynagrodzeń
+
+### Raporty i analizy danych
+
+- generowanie sprawozdań GUS,
+- PFRON – tworzenie miesięcznych deklaracji z możliwością importu do SODIR,
+- raporty i zestawienia kadrowe z możliwością indywidualnego dostosowania widoku,
+- raporty i zestawienia płacowe, także koszty pracodawcy,
+- analiza rotacji pracowników
+
+### Integracja z systemami
+
+- połączenie z systemem e-Deklaracji,
+- połączenie z ZUS PUE
+- współpraca z systemami finansowymi,
+- integracja z platformami bankowości elektronicznej,
+- integracja z innymi modułami systemu VENDO.ERP®,
+
+### Automatyzacja procesów kadrowo-płacowych
+
+- deklaracje rozliczeniowe ZUS oraz PPK,
+- blokowe tworzenie umów o pracę, cywilnoprawnych i innych,
+- naliczanie list płac zgodnie z ustaloną definicją,
+- generowanie raportów kadrowych oraz płacowych
+
+### Ewidencja świadczeń pracowniczych
+
+- ewidencja pożyczek i potrąceń komorniczych,
+- ewidencja świadczeń pracowniczych, takich jak premie, dodatki i bonusy,
+- ewidencja wypłat z ZFŚS
+
+### Zgodność z przepisami prawa
+
+- zgodności z aktualnymi przepisami prawa,
+- monitorowanie terminów ważności badań lekarskich i szkoleń BHP,
+- weryfikacja i aktualizacja dokumentacji pracowniczej
+
+### Kontrola płatności
+
+- monitorowanie terminów płatności,
+- kontrola wykonanych przelewów,
+- audytowanie transakcji finansowych związanych z wynagrodzeniami,
+- śledzenie statusu zaksięgowanych płatności,
+- analiza bieżących i przyszłych kosztów związanych z wynagrodzeniami,
+- monitorowanie terminów spłaty pożyczek pracowniczych i potrąceń komorniczych
+
+### Deklaracje podatkowe
+
+- generowanie deklaracji podatkowych PIT4, PIT11, PIT 8AR,
+- wysyłka deklaracji podatkowych bezpośrednio z systemu,
+- automatyczne wypełnianie danych podatkowych pracowników w deklaracjach,
+- weryfikacja poprawności danych przed generowaniem deklaracji,
+- śledzenie terminów i zmian w przepisach podatkowych.
+- wysyłka PIT11 do pracowników,
+- generowanie raportów dotyczących podatków i składek
+
+### Podatki i ubezpieczenia
+
+- kalkulacja podatków i składek ZUS,
+- generowanie deklaracji podatkowych i ZUS,
+- aktualizowanie stawek podatkowych i składek ZUS,
+- śledzenie terminów płatności podatków i składek,
+- zgodność z aktualnymi przepisami podatkowymi i ubezpieczeniowymi
+
+### Komunikacja i powiadomienia
+
+- powiadomienia o terminach płatności,
+- wysyłka przypomnień o ważności badań lekarskich oraz szkoleń BHP,
+- powiadomienia o kończących się umowach
+
+
+
+- Informowanie o nowych dokumentach i aktualizacjach.
+
+### Transakcje finansowe i płatności
+
+- realizacja bezpośrednich przelewów wynagrodzeń i składek ZUS, US oraz komorników,
+- wysyłka przelewów bezpośrednio z systemu,
+- monitorowanie statusu przeprowadzonych transakcji finansowych,
+- generowanie raportów dotyczących płatności i przelewów,
+- automatyczne powiadomienia o zakończonych transakcjach
+
+### Historia i zmiany w wynagrodzeniach
+
+- przechowywanie danych dotyczących wynagrodzeń pracowników,
+- rejestrowanie zmian w strukturze płacowej firmy,
+- monitorowanie historii zmian wynagrodzeń i składników płacowych pracowników
+

@@ -1,0 +1,54 @@
+# Zdarzenia windykacyjne
+
+W ramach funkcjonalności karty zdarzenia windykacyjne użytkownik ma możliwość korzystania z następujących funkcji:
+- kopiuj linki do rekordu
+- sprawdź historię GPS
+- wyślij chatem
+- wyślij zaproszenie
+- załącznik
+    - dodaj plik
+    - dodaj obiekt z Vendo
+    - dodaj plik z Vendo
+- opis HTML
+- kontrahent – karta kontrahenta
+- zlecenia
+    - podepnij do zlecenia
+    - nowy proces sprzedaży
+    - dodaj obiekt serwisowy
+- statusy
+    - nadaj status
+    - nadaj status kanban
+    - historia statusów
+    
+•	drukowanie
+
+![tmp16b53492-2742-41c6-89fa-d0eb6baff8de](https://www.cfi.pl/vendohelp/content/imgs/V7/ef432b011a0b1428ed2edeb1c4e141f8-4171-0.png)
+
+- funkcje specjalne
+    - podepnij zdarzenie do delegacji
+    - zmiana rodzaju zdarzenia
+    - ustaw procedurę sprawy
+
+
+- nowy dokument
+
+
+![tmp832f3f94-7bf3-4f76-86ba-5b2c4057e98f](https://www.cfi.pl/vendohelp/content/imgs/V3/ee0cf5d949beecd700472ed484dee5a8-47514-0.png)
+
+- logistyka
+    - dodaj list przewozowy
+    - dodaj do istniejącego listu przewozowego
+- sprawa
+    - pokaż sprawę
+    - odłóż sprawę
+    - odepnij od sprawy
+- cykliczność
+- GUI – zmień kolejność tabulacji
+- kopia zdarzenia
+- usuń zdarzenie
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp406fffca-eaa6-4442-9b60-bf5f0b4243e5](https://www.cfi.pl/vendohelp/content/imgs/Q2/1e9ebe212015f332621c60b91cbf2f18-74100-0.png)
+
+![tmp58d77a28-f8b2-4296-b915-5d5ce737799a](https://www.cfi.pl/vendohelp/content/imgs/C0/64ceb8b7e3a26411432f83c8f475b0e2-8144-0.png)

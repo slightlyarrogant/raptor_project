@@ -1,0 +1,39 @@
+Kardex
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/kardex
+scraped_at: 2024-09-05T12:21:17.337621
+last_updated: 2024-09-05T12:21:17.337659
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Kardex
+meta_tags: ['odpowiedź', 'kardex', 'jest', 'szafy', 'półki', 'danych', 'vendo', 'miejsce', 'magazynowe', 'jmif']
+
+Content
+Kardex
+Informacje ogólne
+Kardex Plugin umożliwia wymianę danych pomiędzy Vendo ERP a systemami magazynowymi marki Kardex. Wymiana danych odbywa się poprzez pliki zwane dalej telegramami. Cała obsługa realizowana jest poporzez standardowe scenariusze Vendo Kolektor. Plugin jest dostepny dla wersji 04.04.2020.
+Konfiguracja - ogólne
+
+Ścieżki do folderów wymiany:
+Export - folder do zapisu telegramów z Vendo ERP. Import - folder do zapisu odpowiedzi z Kardex. Archiwum - folder do zapisu archiwalnych plików z odpowiedziami
+Interwał pobierania danych [sekundy] - jak często plugin ma sprawdzać czy pojawiła się odpowiedź z Kardex. Interwał odświeżania wątku [minuty] - czas życia wątku pobierania danych. Oczekiwanie na odpowiedź szafy [sekundy] - maksymalny czas oczekiwania na odpowiedź z Kardex.
+Konfiguracja - Miejsce magazynowe
+W celu poprawnej integracji z Kardex nalezy skonfigurować miejsce magazynowe. Struktura miejsc magazynowych musi odpowiadć realnemu przyporządkowaniu półek do szafy.
+
+Jako końcowe miejsca magazynowe wskazujemy półki wraz ich identyfikatorami z systemie Kardex. Nadrzędne miejsce magazynowe względem półek odpowiada szafie wraz z jej identyfikatorem.
+
+Poprawna konfiguracja miejs magazynowych jest niezbędnym warunkiem poprawnej identyfikacji półki w szafei Kardex.
+Kardex - telegramy
+Przykładowy obieg dokumentów za pomocą telegramów.
+1|4|1|3|3|11|22|200|400|part ABC|99|description| #prośba o przywiezienie półki numer 3 do okna dostepowego 1 – wysłana z WMS 1|201 #odpowiedź JMIF 1|202 #odpowiedź JMIF 1|203 #odpowiedź JMIF 1|50|1|3|3|11|22|200|400|part ABC|99|description| #potwierdzenie wykonania operacji na półce 3 w oknie dostępowym 1 – wysłana z WMS 1|201 #odpowiedź JMIF 1|0 #odpowiedź JMIF
+Vendo kolektor
+Komunikacja z szafą magazynową jest realizowana z poziomu interfejsu graficznego Vendo Kolektor. Jeżeli miejsce magazynowe ma wybrane system zewnętrzny "Kardex", po jego zestanowaniu pojawi się przycik Przywieź Półkę.
+
+Po jego naciśnięciu zostaje wysłany rozkaz do szafy. Maksymalny czas oczekiwania na odpowiedź jest parametryzowalny w ustawieniach pluginu (Oczekiwanie na odpowiedź szafy [sekundy]). Po odebraniu poprawnego komunikatu potwierdzenia przywiezienia półki do okna dostępowego pojawiają się dwa przyciski.
+ZATWIERDZ - wysyła do szafy potwierdzenie odłożenia/wyjęcia towaru z półki. ANULUJ - anuluje poprzedni rozkaz.
+
+Images
+
+
+
+

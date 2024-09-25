@@ -1,0 +1,198 @@
+# Paragon Fiskalny
+## Informacje ogólne
+
+Dokument Paragon Fiskalny jest bezpośrednim dokumentem handlowym mającym wpływ na zadłużenie Klienta. Podczas jego zamykania wymagana jest fiskalizacja.  Cechą Paragonu Fiskalnego jest to że sprzedaż nastąpiła od razu i nastąpiło całkowite rozliczenie dokumentu, a nabywca i odbiorca to ten sam podmiot. Reszta zasady działania i pól jest analogiczna jak w przypadku Faktury VAT. 
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Paragon Fiskalny| PF| 
+
+
+## Opis dokumentu
+ 
+
+ 
+Główne pola znajdujące sie na dialogu dokumentu PF to:
+
+-	Data Sprzedaży
+-	Nabywca – klient który jest płatnikiem 
+-	Osoba Kont. – osoba kontaktowa powiązana z Nabywcą
+-	Forma płatności , data Płatności
+-	Wartość netto, brutto, VAT
+-	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki
+-	Grupa I – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z7/ae8007b4cd223920d126a61498816456-174104-0.png)
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Nabywcy. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T7/66bf3d54626969dd161b8624e05122f4-128186-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer zamówienia – Numer Zamówienia Obcego (od odbiorcy), w momencie gdy generowana jest Faktura z zamówienia w tym polu umieszczany jest numer zamówienia ZO
+-	Numer Dostawy
+-	Handlowiec lub Mechandiser to pola w których umieszczane są dane pracownika odpowiedzialnego za Dokument Faktury, wg tych pól naliczana może być premia dla pracownika.
+-	Koszty dodatkowe – pole w którym podana może być wartość o jaką musi zostać zwiększone zadłużenie .
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Spedycja – pole oznaczający przewoźnika towarów występujących na dokumencie, dodatkowo możliwe jest zaznaczenie jakiego typu jest przesyłka
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R5/5d95d825db207b18baa27c951c5b9683-142887-0.png)
+ 
+W zakładka Opis i uwagi wprowadzane są dane na podpis dokumentu Stopka  oraz Uwagi które mogą być drukowane na wydruku dokumentu Faktury.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T7/e1b6559c97184f26815c1083888fae90-98845-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q6/a94b9178636f11f573c5825be12d25ea-150321-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla Paragonu Fiskalnego zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej, którą podczas dodawania do dokumentu możemy zmienić
+-	Grupa Cen – grupa cen sprzedaży przypisana do Nabywcy
+-	Cena0 : - Cena sprzedaży przed obniżkami cen sprzedaży
+-	Ilość – ilość sprzedawanych  kartotek towarowych w podstawowej jednostce 
+-	Rabat – wyliczony, wprowadzony lub przeniesiony z zamówienia obcego. Wyliczony może być na podstawie danych z kartoteki Klienta, Nabywcy
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na Fakturze, oraz ilość zarezerwowana na innych dokumentach. 
+-	Poniżej ilości w magazynie w polu podane jest źródło pochodzenia pozycji jeśli była przenoszona z innego dokument np. zamówienia obcego lub wydania zewnętrznego.
+-	Magazyn – nazwa magazynu z którego Faktura zrobi rezerwację 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji Paragonu Fiskalnego.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J7/35e93a4ec1be13f01e1f3f854f17123e-141553-0.png) 
+
+Paragon Fiskalny tak jak inne dokumenty sprzedaży może być generowany z innych dokumentów tak jak i z PR można generować inne dokumenty. Podczas zamknięcia Paragonu Fiskalnego można automatycznie wygenerować dokument Wydania Zewnętrzny WZ. Natomiast PR można wygenerować na podstawie WZ, ZO, AW.
+
+Paragon Fiskalny musi zostać rozliczony z płatnościami Nabywcy. Stad też dokument PR jest ściśle powiązany z rozrachunkami kontrahenta, płatnościami jego oraz ma wpływ na Zadłużenie, jednak należy pamiętać, że Paragon Fiskalny jest dokumentem gdzie płatność jst od razu czy to przelewem, karta płatnicza lub gotówką, nie powinien robić zadłużenia na koncie klienta. 
+
+Wystawiając Paragon Fiskalny mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. Paragon Fiskalny będący w stanie Zamkniętym oznacza że został sfiskalizowany, wydrukowany na drukarce fiskalnej. Zmiany wykonywane na Paragonie Fiskalnym dostępne z poziomu Funkcji i tak:
+-	Dodawanie pozycji – możemy dodawać pozycje na kilka sposobów:
+	-	Dodanie pozycji poprzez wybór kartoteki – wybieramy kartotekę towarową
+	-	Dodanie pozycji z miejsca magazynowego – w pierwszej kolejności wybieramy miejsce magazynowe a następnie kartotekę towarową która znajduje się na tym lokalizatorze
+	-	Przeniesienie z jednostki logistycznej – przeniesienie wszystkich pozycji z jednostki logistycznej 
+
+-	Wydanie Zewnętrze  - utwórz – tworzenie dokumentu WZ z przeniesieniem wszystkich pozycji
+-	Zamówienia / Rezerwacji
+	-	Przeniesienie z zamówienia – Z listy wybieramy pozycje dokumentów Zamówienia Obcego ZO lub Awizo Wydania AW. Na liście widoczne są ilości pozycji zamówienia do realizacji, ilość możliwa do realizacji oraz ilość dostępną na magazynie
+	-	Wybrać dokument ZO lub AW do realizacji – dokument który będzie realizowany przez FV. Jeśli zostanie wybrany dokument do realizacji to w Funkcje > Zamówienia/Rezerwacje  pojawi się funkcja Przenieś z zamówienia. Wtedy będzie można dodawać tylko pozycje z tego zamówienia.
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U2/6c0642b1f9363e1bd8765907cb96c433-33289-0.png)
+
+Jeśli Odbywa się sprzedaż wyrobów z opakowaniami zwrotnymi możliwe jest wystawienie  dokumentu TK Funkcje -> Dokumenty pochodne -> Wystaw dokument TK.  W dokumencie tym wprowadzamy ile opakowań zwrotnych zostało przekazane do klienta a ile odebranych. W dokumentach skojarzonych w będzie widoczne powiązanie. Opis Dokumentu TK widoczny jest w opisie dokument.
+
+Paragon Fiskalny jest dokumentem handlowym czyli obciążającym rachunek Klienta. W Funkcji -> Płatności możliwe jest sprawdzenie rozliczenia Klienta, sprawdzić zadłużenie klienta oraz sprawdzić rozrachunki. Dodatkowo można podejrzeć jakie były zdarzenia windykacyjne do tego dokumentu oraz klienta, można także utworzyć nowe zdarzenie windykacyjne.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G8/958f62f23a1fb987388d3b2a55f65b59-26437-0.png)
+  
+Klikając Rozrachunki otworzy się okno z rozrachunki dotyczącymi dokumentu z którego wywołano funkcję. W oknie widoczna będzie kwota na jaką widnieje rozrachunek oraz jaka kwota pozostało do rozliczenia. Chcąc sprawdzić co się składa na rozrachunek, wystarczy kliknąć dwa razy na rozrachunek. Pojawi się okno pokazujące wpłaty jakie rozliczają danych rozrachunek. Z tego poziomu możliwe jest także dodanie wpłaty która dotyczy rozliczenia danego Paragonu Fiskalnego.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M4/d119a7199458c0c619785929c6367816-37018-0.png)
+ 
+Wybierając funkcję Rozliczenie dokumentu przejdziemy od razu do wpłat jakie rozliczają Paragon Fiskalny. Tutaj można wprowadzić wpłatę która rozliczy dokument. Jeśli istnieją rozrachunki nie rozliczone dla danego Kontrahenta to można wybrać które rozliczą dokument. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/S4/892131e01bc2f5174f6027a8443277e6-39147-0.png) 
+
+Pod funkcjonalnością Zadłużenie kontrahenta kryje się lista dokumentów nie rozliczonych dokumentów. Na czerwono świecą się dokumenty które są już przeterminowane – termin płatności minął a nie został rozliczony dokument, oraz na czarno dokumenty które wpływają na zadłużenie kontrahenta a nie minął termin płatności. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y4/268fbb7f22ef5f5c21dad69ed19de19f-151662-0.png)
+ 
+W płatnościach możliwe jest także dodanie zdarzenia windykacyjnego oraz podejrzeć wszystkie zdarzenia windykacyjne dla danego kontrahenta. Zdarzenie windykacyjne jest ponagleniem wystawianym na danego Kontrahenta w przypadku zalegania z płatnością za rozrachunek.
+Przydatnymi funkcjonalnościami  dokumentu są Funkcje Specjalne. Umożliwiają zmienić niektóre parametry dokumentu. Takimi parametrami są:
+-	Zmiana numeru – umożliwia zmianę numeru i serii dokumentu
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O6/1c1810c1dda41b8aa936240888b151bc-18537-0.png)
+ 
+-	Zmiana metody liczenia VAT – możliwe jest liczenia podatku VAT  od wartości brutto lub netto oraz sumowania wartości netto, VTA i brutto.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I8/0f71c74f89fecefac4269ccb696d0212-32009-0.png)
+ 
+-	Zmiana stawki VAT na zaznaczonych pozycjach
+
+-	Zmiana rodzaju i oddziału dokumentu – umożliwia zmianę podrodzaju dokumentu typu Wewnątrzunijny, eksportowy itp. Oraz zmianę oddziału na inny zdefiniowany w systemie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E8/3ac94d3e92406d8ff3ed58b001353fe6-25577-0.png)
+ 
+-	Zmiana OPK na pozycjach – zmiana ośrodka powstawania kosztów na inny niż będący zdefiniowanych na kartotekach towarowych.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U0/c5351b52d586bd0e304414d7206046e9-49357-0.png)
+ 
+-	 Scal pozycje rozmiarówki – umożliwia scalić pozycje Faktury VAT do pozycji nadrzędnego indeksu. Pomocna ta funkcja jest dla pozycji wielorozmiarowych aby zmniejszyć ilość pozycji na dokumencie.
+-	Zmiana Wartości dowolnych pozycji
+-	Wykonaj skrypt – umożliwia uruchomienie wcześniej zdefiniowanego skryptu wykonującego pewne wyliczenia np. ustawienie lub obliczenie wartości na podstawie innych danych.
+-	Opcje podatku cukrowego
+-	Rejestr zmian
+Kolejnym zestawem funkcjonalności są Funkcje. Umożliwiają one :
+-	Zmianę źródła pochodzenia dokumentu – źródłem pochodzenia dokumentu jest informacja jak powstał dokument. Może być importowanych ze sklepu internetowego lub utworzony wewnątrz systemu, bądź pochodzić z zewnętrznego systemu. Poniższy zrzut ekranu pokazuje możliwe źródła pochodzenia.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/07d2f74291c6669b140bedb87b9bc055-56214-0.png)
+
+-	Zmiana typu sprzedaży/zakupu
+-	Kopiowanie pozycji z innego dokumentu – możliwość skopiowania wszystkich pozycji z innego dokumentu Paragonu Fiskalnego
+-	Kopiowanie wybranych pozycji – po zaznaczeniu wybranych pozycji z tego dokumentu i uruchomienie te funkcji spowoduje zdublowanie  zaznaczonych pozycji
+-	Utwórz kopię dokumentu – tworzy kopię dokumentu
+-	Zmiana kolejności pozycji
+-	Przeniesienie pozycji
+-	Zmiana kolejności pozycji wg kryteriów
+-	Pliki do dokumentu
+-	Otwarcie szuflady
+Każdy dokument mona eksportować do postaci pliku w odpowiednim formacie. Służą do niego funkcjonalności w *Funkcje > Import/Eksport* 
+-	Eksport do EDI – umożliwia wyeksportować dany dokument zgodnie z popularnymi schematami wymiany danych pomiędzy systemami
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I4/5be7551d0c870e4fcc1770856147c904-45120-0.png)
+ 
+-	Eksport do SAD/Intrastat – eksport do pliku zgodnie z formatami dostępnymi dla programu Huzar
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B3/5e62a805590bad5ea55488eceea20084-32264-0.png)
+ 
+-	Eksport do schowka systemowego
+Każdy dokument ma swoje odzwierciedlenie w module księgowość. W zależności od licencji i wykupionego modułu księgowego możliwe są różne funkcje księgowania. Znajdzie je w *Funkcje > Księgowość*
+-	Predekret
+-	Paramentry księgowania – konfiguracja schematu księgowania dokumentu 
+-	Przeniesienie dokumentu do rejestry VAT 
+-	Przenieś do KPiR
+-	Zaksięguj dokument
+-	Zaksięguj dokument (technicznie)
+-	Controling  - dekretowanie dokumentu
+-	Przenieś do modułu Controlingu
+
+Każdy dokument tak jak Paragon Fiskalny można przypisać/ podłączyć do różnego rodzaju zlecenia *Funkcje > Zlecenia*. Do zleceń można zaliczyć takie jak Zlecenia serwisowe, produkcyjne, projekty, umowy najmu, procesy sprzedaży itp. Chcą przypisać zlecenie wybieram już istniejące zlecenia filtrując po dacie i rodzaju zlecenia. Możliwe jest także bezpośrednie utworzenie zlecenia z tego poziomu, gdzie przenoszą się dane dotyczą klienta.  
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/eebca8737e5bc735ef827ad8690e9c60-95438-0.png)
+ 
+Dokumenty można powiązać z zleceniami przewozowymi. W Funkcje -> Logistyka można :
+ 
+-	Dopiąć/przepiąć do zbioru listów przewozowych lub zleceń transportowych
+-	Dopięcie/ przepięcie listu przewozowego
+-	Wystawienie logistyki do dokumentu
+
+Każdy dokument możemy przypiąć do Zdarzenia lub utworzyć nowe zdarzenie. Można to zrobić w Funkcje > CRM
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z3/76bbf6322f8e26b423a003f10166894c-14183-0.png)
+
+Pomocnymi  funkcjonalnościami – Funkcje -> Widoki  są:
+-	Porównanie cen dokumentu z wybraną grupą – umożliwia porównanie cen z pozycji dokumentów z wybraną grupą cenową. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/f069ae848ecac10d7b3d9d4fe590fb67-64998-0.png)
+ 
+-	Pozycje wg opakowań – pokazuje pozycje dokumentu w przeliczeniu na opakowania zdefiniowane na kartotekach towarowych  
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X1/a51a2d77b405eb0c0170884e8a6cb872-60366-0.png)
+ 
+-	Miejsca magazynowe wg pozycji z dokumentu – pokazuje gdzie jakie kartoteki towarowe z pozycji dokumentu znajdują się na magazynie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/c5d21bf5d9ba77f7601319ec2cda5057-72123-0.png)
+ 
+
+W dolnej części okna z dokumentem jest przycisk Dok.Skojarz. Po wciśnięciu tego przycisku pokazuje się nowe okno ze skojarzonymi dokumentami. W przypadku Paragon Fiskalny mogą to być Zamówienia Obce, Zlecenia, Wydania Zewnętrzne, Oferty itp. Możliwe jest filtrowanie po typie dokumentu. Poniżej widać możliwości filtrowania. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/W6/ebf14667d441f0ed0d399df1ba0f8a78-69152-0.png)
+ 
+Na każdym typie dokumentu możliwa jest obsługa dokumentu poprzez klawiaturę. Widoczne są przy niektórych funkcjach skróty klawiszowe np. Insert – dodanie pozycji, F8 - Rozliczenie dokumentu, CTRL+L – wystawienie listu przewozowego. Możliwe jest także skonfigurowanie kolejności tabulacji na dokumencie, umożliwia to ustawienie kolejności przeskakiwania kursora pomiędzy polami.
+  
+
+Należy pamiętać że, niektóre funkcjonalności mogą się pojawić lub znikać w zależności w jakim stanie jest dokument : W buforze, Zamknięty, zaksięgowany. 

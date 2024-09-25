@@ -1,0 +1,43 @@
+Automat Zmiany Chodliwości
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/automat-zmiany-chodliwosci
+scraped_at: 2024-09-05T12:19:21.200355
+last_updated: 2024-09-05T12:19:21.200399
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Automat Zmiany Chodliwości
+meta_tags: ['chodliwości', 'nazwa', 'przy', 'stan', 'zmiany', 'ustawień', 'maila', 'jakie', 'muszą', 'warunku']
+
+Content
+Automat Zmiany Chodliwości
+Informacje ogólne
+AutomatZmianyChodliwosciPlugin to mechanizm służący do automatycznej zmiany chodliwości towarów w zależności od dostępnych stanów handlowych. Zakresy stanów, które mają być weryfikowane, a następnie przypisywane odpowiednie chodliwości ustawiane są przy pomocy pliku excel-owego. Mechanizm uruchamiany jest za pomocą bota.
+Konfiguracja plugina
+Pierwszym etapem jest instalacja plugina niezbędnego do wykonania automatyczne zmiany chodliwości. Dokonać tego należy wg następującego schematu:
+
+Ustawienia główne > Pluginy > Dodaj plugin
+Określenie lokalizacji na dysku w której uprzednio zapisano plik .dll a następnie jego wybór
+
+Po poprawnej instalacji należy przejść do jego konfiguracji, dokonać tego należy klikając ikonę narzędzi znajdująca się w prawym górnym rogu okna dialogowego. Z poziomu Ustawień plugina użytkownik ma dostęp do ustawień takich jak:
+Opis ustawień pluginu:
+
+Nazwa zmiennej z plikiem do analizy chodliwości – nazwa wartości dowolnej oddziału firmy o typie „Plik”.
+Nazwa zmiennej na towarze z informacją o aktualizacji pozycji – nazwa wartości dowolnej na towarze mówiąca o tym, czy dany towar ma być brany pod uwagę przy przeliczaniu chodliwości.
+Id maila dla notyfikacji o błędach z aktualizacji chodliwości – id maila z którego mają wychodzić notyfikacje mailowe o błędach przy zmianie chodliwości towarów (id pobieramy z Ustawienia -> Słowniki -> CRM -> Konta e-mail).
+Nazwa maila odbiorcy dla notyfikacji – Nazwa maila na, który mają przychodzić informacje o błędach jakie wystąpiły przy zmianie chodliwości
+
+![Image%201
+Przykład ustawień pluginu
+Opis kolumn importowanego szablonu zmiany chodliwości
+Warunek – warunek jaki muszą spełnić stany dla towaru. W warunku analizujemy stan handlowy i stan minimalny towaru. Przykładowy warunek: stan handlowy > % stan min. W warunku możemy zmieniać tylko symbol działania (=, !=, <, >, <=, >=).
+Procent – jest to procent wykorzystywany w działaniu opisywanym powyżej.
+Chodliwość – znak chodliwości jaki ma być ustawiony w przypadku spełnienia warunków przez towar.
+GrupaI – ID-ki grup towarowych jakie muszą posiadać szukane towary.
+GrupaII – ID-ki grupy II jakie muszą posiadać szukane towary.
+Grupa www – ID-ki grup www jakie muszą posiadać szukane towary.
+Magazyn dla stanu handlowego – nazwa magazynu dla którego ma być brany stan handlowy przy wyliczeniu warunku.
+Magazyn dla stanu min/max – nazwa magazynu dla którego ma być brany stan minimalny przy wyliczeniu warunku.
+
+Przykład uzupełnionego szablonu zmiany chodliwości
+Images
+

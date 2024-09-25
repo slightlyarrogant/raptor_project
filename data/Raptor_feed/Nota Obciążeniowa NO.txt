@@ -1,0 +1,156 @@
+#  Nota Obciążeniowa
+## Informacje ogólne
+
+Nota Obciążeniowa jest dokumentem obciążającym konto klienta – zwiększającym jego zadłużenie.  
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Nota Obciążeniowa| NO| 
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu NO to: 
+-	Data – data dokumentu
+-	Płatnik   - klient 
+-	Forma płatności 
+-	Kwota do zapłaty
+-	Zapłacono – ile zostało rozliczone z dokumentem
+-	Pozostało do zapłaty
+-	Wpłacone zaliczki
+-	Detal – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B3/ffbbcb8ba5f6c5a1297da1d84dc2b6be-30580-0.png)
+
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe Płatnika. Zakładka zawiera pełen dane adresowe i NIP 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z7/3ac18394646f2b6a13af3963eea0a842-24458-0.png)
+ 
+W zakładce inne parametry znajdują się dane:
+-	Waluta i kurs waluty do PLN
+-	Handlowiec i Merchandiser – osoba na która wyliczony będzie obrót
+-	Numer Obcy
+-	Kontakt i email
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K6/cd1252113306f1eac4dd6304c8bbeeaa-25324-0.png)
+
+W zakładka Opis i Uwagi wprowadzane jest Stopka i Uwagi które mogą być drukowane na wydruku dokumentu Noty Obciążeniowej
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N1/9d38765e8d881346bafa426f5e2f3b92-21123-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. Pola są te definiowane przez użytkownika dla nagłówka dokumentu Zamówienia Ramowego
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N1/1a2e97efc53d234949f43ac9154986b3-32204-0.png)
+ 
+
+Pozycje Planów Sprzedaży w sumie nie różnią się niczym innym od innych pozycji dokumentów. Pozycje posiadają :
+-	Nazwę produktu
+-	Ilość
+-	Cena Netto i Brutto wynoszą tyle samo
+-	Stawka VAT wynosi 0%
+-	Grupę cen
+-	Cena 0 – cena przed naliczeniem rabatu
+-	Stan 
+-	Jednostki alternatywne
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N1/6f18592c35f6958137aa617bb51ac6c4-19633-0.png)
+ 
+W funkcja dokumentu Nota Obciążeniowa znajduje się wiele funkcji umożliwiające różne ułatwienia i sterowanie dokumentem
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B3/0b354e0b3b1b2d01b40cf3e877a4c1d1-20923-0.png)
+ 
+-	Koszt wysyłki – określone jakie koszty będą dotyczyły realizacji zamówienia
+-	Sprawdzenie NIP-u – weryfikacja numeru NIPu klienta
+-	Dodaj Pozycje – dodanie pozycji do dokumentu
+-	Usuń pozycje – usunięcie zaznaczonej pozycji na dokumencie
+-	Dodaj nagłówek sekcji – dodanie separatora pozycji dokumentów
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q2/b4ba71cbde349802dbf2213866904871-12478-0.png)
+ 
+-	Drukowanie – możliwość wydrukowania dokumentu w różnych wariantach wraz z etykietami
+-	Korespondekcja – Mail – możliwość wysłania maila lub SMSa do klienta wraz z potwierdzeniem zamówienia
+-	Płatności – rozliczenia dokumentów lub możliwość utworzenia płatności do dokumentu
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/P5/db51b6471ee445a78ad80d80e65aa6df-4500-0.png)
+ 
+Przydatnymi funkcjonalnościami  dokumentu w statusie Bufora są Funkcje Specjalne. Umożliwiają zmienić niektóre parametry dokumentu. Takimi parametrami są:
+-	Zmiana numeru – umożliwia zmianę numeru i serii dokumentu
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O6/1c1810c1dda41b8aa936240888b151bc-18537-0.png)
+
+-	Zmiana waluty dokumentu  - umożliwia zmianę waluty dokumentu na dostępną oraz ustawienie kursu dokumentu, wg którego przeliczany jest na PLN
+-	Zmiana rodzaju i oddziału dokumentu – umożliwia zmianę podrodzaju dokumentu typu Wewnątrzunijny, eksportowy itp. Oraz zmianę oddziału na inny zdefiniowany w systemie
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E8/3ac94d3e92406d8ff3ed58b001353fe6-25577-0.png) 
+
+-	Wykonaj skrypt – umożliwia uruchomienie wcześniej zdefiniowanego skryptu wykonującego pewne wyliczenia np. ustawienie lub obliczenie wartości na podstawie innych danych.
+-	Rejestr zmian
+Kolejnym zestawem funkcjonalności są Funkcje. Umożliwiają one :
+-	Zmianę źródła pochodzenia dokumentu – źródłem pochodzenia dokumentu jest informacja jak powstał dokument. Może być importowanych ze sklepu internetowego lub utworzony wewnątrz systemu, bądź pochodzić z zewnętrznego systemu. Poniższy zrzut ekranu pokazuje możliwe źródła pochodzenia.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/07d2f74291c6669b140bedb87b9bc055-56214-0.png)
+
+-	Kopiowanie pozycji z innego dokumentu – możliwość skopiowania wszystkich pozycji z innego dokumentu 
+-	Kopiowanie wybranych pozycji – po zaznaczeniu wybranych pozycji z tego dokumentu i uruchomienie te funkcji spowoduje zdublowanie  zaznaczonych pozycji
+-	Utwórz kopię dokumentu – tworzy kopię dokumentu
+-	Utwórz kopię dokumentu z oryginału – tworzy kopię dokumentu
+-	Pliki do dokumentu
+-	Otwarcie szuflady
+Pod funkcja Zmian cen widnieją funkcjonalności za pomocą których możliwe jest przeliczenie cen wg ustalonych zasad.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O6/cdc88eb141381c53f5f17c9e73cd25e4-15065-0.png)
+ 
+Można dodać rabar na wybrane pozycje lub wszystkie, obniżyć wartość dokumentu o podaną kwotę, zmienić przypisanie do grupy cenowej, zmienić grupę cenową lub zmienic cenę wg narzutu  do ceny nabycia towarów.
+
+Każdy dokument mona eksportować do postaci pliku w odpowiednim formacie. Służą do niego funkcjonalności w Funkcje > Import/Eksport 
+-	Eksport do EDI – umożliwia wyeksportować dany dokument zgodnie z popularnymi schematami wymiany danych pomiędzy systemami
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I4/5be7551d0c870e4fcc1770856147c904-45120-0.png)
+
+-	Eksport do SAD/Intrastat – eksport do pliku zgodnie z formatami dostępnymi dla programu Huzar
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B3/5e62a805590bad5ea55488eceea20084-32264-0.png)
+
+-	Eksport do schowka systemowego
+
+Każdy dokument tak jak Nota Obiążeniowa można przypisać/ podłączyć do różnego rodzaju zlecenia Funkcje -> Zlecenia. Do zleceń można zaliczyć takie jak Zlecenia serwisowe, produkcyjne, projekty, umowy najmu, procesy sprzedaży itp. Chcą przypisać zlecenie wybieram już istniejące zlecenia filtrując po dacie i rodzaju zlecenia. Możliwe jest także bezpośrednie utworzenie zlecenia z tego poziomu, gdzie przenoszą się dane dotyczą klienta.  
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/eebca8737e5bc735ef827ad8690e9c60-95438-0.png)
+
+Dokumenty można powiązać z zleceniami przewozowymi. W Funkcje -> Logistyka można :
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/8f2d9cf987e72f8024ade84792124e14-28427-0.png)
+ 
+-	Dopiąć/przepiąć do zbioru listów przewozowych lub zleceń transportowych
+-	Dopięcie/ przepięcie listu przewozowego
+-	Wystawienie logistyki do dokumentu
+-	Dodaj koszty transportu do klienta
+-	Pokaż wydanie w trybie czytnika
+
+Każdy dokument możemy przypiąć do Zdarzenia lub utworzyć nowe zdarzenie. Można to zrobić w Funkcje > CRM
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z3/76bbf6322f8e26b423a003f10166894c-14183-0.png)
+ 
+Pomocnymi  funkcjonalnościami – Funkcje -> Widoki  są:
+-	Porównanie cen dokumentu z wybraną grupą – umożliwia porównanie cen z pozycji dokumentów z wybraną grupą cenową. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/f069ae848ecac10d7b3d9d4fe590fb67-64998-0.png)
+ 
+-	Pozycje wg opakowań – pokazuje pozycje dokumentu w przeliczeniu na opakowania zdefiniowane na kartotekach towarowych  
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X1/a51a2d77b405eb0c0170884e8a6cb872-60366-0.png)
+ 
+-	Miejsca magazynowe wg pozycji z dokumentu – pokazuje gdzie jakie kartoteki towarowe z pozycji dokumentu znajdują się na magazynie
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/c5d21bf5d9ba77f7601319ec2cda5057-72123-0.png)
+
+W dolnej części okna z dokumentem jest przycisk Dok.Skojarz. Po wciśnięciu tego przycisku pokazuje się nowe okno ze skojarzonymi dokumentami. W przypadku NO mogą to być Zamówienia Obce, Zamówienia Własne lub  Zlecenia, faktury ,. Możliwe jest filtrowanie po typie dokumentu. Poniżej widać możliwości filtrowania. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H7/d95694ec37f4b6bf8e53674351160d78-13187-0.png)
+ 
+Na każdym typie dokumentu możliwa jest obsługa dokumentu poprzez klawiaturę. Widoczne są przy niektórych funkcjach skróty klawiszowe np. Insert – dodanie pozycji, F8 - Rozliczenie dokumentu, CTRL+L – wystawienie listu przewozowego. Możliwe jest także skonfigurowanie kolejności tabulacji na dokumencie, umożliwia to ustawienie kolejności przeskakiwania kursora pomiędzy polami.
+  
+
+Należy pamiętać że, niektóre funkcjonalności mogą się pojawić lub znikać w zależności w jakim stanie jest dokument : W buforze, Zamknięty, zaksięgowany. 

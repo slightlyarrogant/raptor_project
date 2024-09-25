@@ -1,0 +1,78 @@
+# Przesunięcia Międzymagazynowe
+## Informacje ogólne
+Dokument Przesunięcia Międzymagazynowe jest dokumentem magazynowym służącym przesuwaniu towaru pomiędzy magazynowymi. Z jednego magazynu zdejmuje ze stanu towar i przyjmuje ten sam towar na drugi. Tworząc dokument MM powstanie dokument ściągający ze stanu MM- , przy zamknięciu tego dokumentu pojawi się zamknięty dokument MM+.  Dokument ten nie ma wpływu na wycenę towaru, nie zdejmuje i nie przyjmuje towaru, jedynie przesuwa pomiędzy magazynami.
+Uwaga : Nie wolno otwierać dokumentów MM- i MM+, możliwe jest zafałszowanie stanu magazynowego i wymagana będzie ingerencja programistów. Jeśli błędnie zostanie wystawiony dokument to należy wystawić dokument przeciwstawny.
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |MM
+|Wpływ na stan magazynowy |Tak
+|Rodzaj dokumentu | Magazynowy 
+|Czy wchodzi do płatności| Nie
+|Czy możliwe korekty| Nie
+|Nazwa dla dat|Data1:DataPrzesuniecia;
+|Nazwa dla klienta |Klient1:"Kontrahent 1" Klient2:"Kontrahent 2";
+|Czy dokument przenosimy do rej. Vat | Nie
+|Pozwolenie na ceny zerowe | Tak
+|Sposoby liczenie netto/brutto | Tak
+|Wielowalutowy, |Nie
+|Czy dokument może być eksportowy |Nie
+|Czy dokument może mieć ceny zerowe | Tak
+|Czy dokument może posiadać pozycje zerowe |Nie
+|TypRejestruVAT Zakup
+|Musi być klient, | Tak
+|Księgowany |Tak
+|Jakie cenniki | kartoteki cennikowe
+|Czy są płatności - rozrachunki| Nie
+|Czy są płatności - skojarzenie z WP/WY|Nie
+|Czy może posiada ceny ujemne | Nie
+|Czy dokument księgujemy | Nie
+|Pozwolenie na ceny ujemne | Nie
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu MM to: 
+
+|Nazwa Pola | Definicja |
+|
+| Numer | Numer dokumentu generowany zgodnie z konfiguracją
+|	Magazyn źródłowy | Informacja o magazynie z którego wydany będzie towar
+|	Magazyn docelowy | magazyn na który będzie przekazany towar
+|	Data 
+|	Kontrahent | Pole nie jest obowiązkowe, może być ustawianie w momencie wystawiania dokumentu na podstawie Zlecenia produkcyjnego
+|	Odpowiedzialny | Osoba odpowiedzialna za przeniesienie towaru pomiędzy magazynami
+
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D5/dbce846dc803f5bb52a5d1b484f3a5ac-26198-0.png)
+
+Brak zakładki Kontrahent
+W zakładce Inne parametry znajdują się dane:
+-	Koszty dodatkowe 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/5ea763b7b36ea600d532e9998e920165-19615-0.png)
+ 
+W zakładka Opis i uwagi wprowadzane są dane które mogą być drukowane na wydruku dokumentu. W polu Uwagi mogą się przenosić numery dokumentów źródłowych 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z5/3979db4c4461c100d9665c9c36af1d36-20113-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L1/233cf0449c282e5b1a8f9401055bf549-29878-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla MM zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Grupa Cen – grupa cen ostatnia cena zakupu towaru
+-	Cena0 : - Cena z cennika ceny ostatniej ceny zakupu
+-	Ilość – ilość przyjętych  kartotek towarowych w podstawowej jednostce 
+-	Rabat – wyliczony, wprowadzony lub przeniesiony z zamówienia własnego. 
+-	Cena netto – brak możliwości zmiany ceny, ustawia się zgodnie z wydawaną partii
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na dokumencie, oraz ilość zarezerwowana na innych dokumentach. 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G8/9462801de45ec0bed1b71db69059ba3a-17616-0.png)
+
+Wystawiając dokument Przesunięcia Międzymagazynowego mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. Należy pamiętać że dla MM- w statusie zamknięty pojawią się dokument MM+ także zamknięty z taki samym numerem.

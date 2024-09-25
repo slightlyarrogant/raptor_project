@@ -1,0 +1,80 @@
+RMK Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/instrukcja-rmk
+scraped_at: 2024-09-05T12:20:57.701843
+last_updated: 2024-09-05T12:20:57.701903
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/RMK Plugin
+meta_tags: ['odpisów', 'dokumentu', 'oraz', 'poszczególnych', 'konto', 'karty', 'jest', 'odpisu', 'księgowania', 'rozpisania']
+
+Content
+Cel:
+System VENDO.ERP posiada dedykowane rozszerzenie (plugin) służący do ewidencji i automatycznego naliczania okresowych kosztów (RMK) i przychodów (RMP) oraz księgowania tego typu operacji. Umożliwia on rejestrację zdarzeń, które potrzebujemy aktywować w kosztach lub przychodach w czasie. Automatyzuje proces naliczania odpisów oraz ich księgowania do Księgi Handlowej, jak również kontroluje wartości poszczególnych odpisów tak, aby nie doszło do rozpisania kwoty większej, niż wynikającej z wartości RMK/RMP.
+W ramach funkcjonalności, moduł zawiera m.in.:
+
+tworzenie rejestru dokumentów rozliczanych okresowo (zarówno dla kosztów jak i przychodów),
+tworzenie planów miesięcznych rozliczeń danego przychodu i kosztu,
+automatyczne wyliczanie i księgowanie poszczególnych odpisów RMK i RMP.
+
+Zastosowanie rozwiązanie w postaci modułu RMK/RMP znacznie ułatwia rozliczanie kosztów i przychodów w czasie oraz automatyzuje rozliczenia księgowe z tym związane.
+Ustawienia/parametryzacja
+Moduł posiada możliwość konfiguracji niektórych parametrów. Potrzebnych ustawień i zmian parametryzacyjnych możemy dokonać w menu Ustawienia > Pluginy. W pojawiającym się oknie, z lewej strony (z dostępnej listy rozszerzeń) zaznaczamy [RMKPlugin] i w prawym górnym rogu okna wybieramy przycisk [Funkje]. Następnie wybieramy przycisk [Pokaż ustawienia]. Jeżeli jest on niedostępny to oznacza, że zalogowany Użytkownik nie posiada uprawnień do edycji rozszerzeń (pluginów).
+
+Okno konfiguracyjne dla rozszerzenia RMK
+W konfiguracji modułu mamy możliwość ustawienia konta księgowego dla przeksięgowania kosztów lub przychodów (dla RMK będzie to np. konto 490) Jest to konto, dla którego wartości księgowane są po stronie MA. Ponadto w ustawieniach mamy możliwość zdefiniowania domyślnej liczby miesięcy (odpisów), ustawienia domyślnego dziennika księgowego (który będzie podpowiadał się na nowozakładanej karcie RMK/RMP), jak również parametryzacji pozycji i opisów w zapisie księgowym PK za pomocą predefiniowanych makr.
+Obsługa kart i naliczeń RMK / RMP
+Aby zacząć korzystać z modułu należy w KH VENDO (moduł Księga Handlowa) wybrać zakładkę RMK, gdzie znajduje się lista wszystkich wprowadzonych w systemie RMK i RMP. Tutaj także zakładamy nowe zdarzenia RMK/RMP oraz edytujemy istniejące. Po wybraniu na liście przycisku [Dodaj] (w lewym górnym rogu listy), pojawi się nowa, pusta karta odpisu. Z ustawień podpowiedzą się informacje dotyczące dziennika księgowego, liczby miesięcy, a także data utworzenia (jako data bieżąca) oraz miesiąc rozpoczęcia (też bieżący). W ramach karty RMK/RMP:
+
+określamy nazwę kosztu/przychodu,
+definiujemy dziennik księgowań , w którym rejestrowane będą zapisy księgowe,
+podajemy numer dowodu, datę operacji ,
+określamy rodzaj operacji: koszt lub przychód ,
+podajemy kwotę do rozpisania (nie musi być ona tożsama z kwotą dokumentu źródłowego),
+oznaczamy miesiąc rozpoczęcia naliczania odpisów,
+ustalamy liczbę miesięcy dokonywania odpisów,
+podajemy konto księgowe dla RMK np. 641-xx (konto możemy wpisać ręcznie lub wybrać z okienka zawierającego listę planu kont, podobnie postępujemy w przypadku konta przychodowego dla RMP),
+podpinamy dokument KO (w przypadku RMK) lub inny, z modułu dokumenty (dzięki temu bezpośrednio z karty RMK/RMP będziemy mieć dostęp do dokumentu źródłowego w systemie),
+uzupełniamy opis (czego dotyczy dana operacja… np. jeżeli jest to ubezpieczenie, możemy podać numer rej. samochodu lub dane użytkownika; w zależności od ustawienia, opis może kopiować się do poszczególnych odpisów miesięcznych jako komentarz, a także jako opis dekretacji w KH).
+
+
+Karta odpisu RMK
+W nagłówku karty RMK/RMP określamy także, czy jest ona otwarta bądź zamknięta. Status otwarty powinien dotyczyć wszystkich aktywnych zdarzeń, które jeszcze nie zostały w całości rozliczone i zaksięgowane. Status zamknięty oznacza, że dane zdarzenie już się wykonało, jego rozpisanie zostało wykonane i zaksięgowane w KH. Ponadto na karcie RMK/RMP, na podstawie wprowadzonych danych, system automatycznie wyliczy:
+
+miesięczną kwotę odpisu,
+kwotę rozpisania,
+określi kwotę nierozpisaną (różnica pomiędzy wartością dokumentu do rozpisania (z reguły wartość netto dokumentu), a wartością podaną w polu „kwota do podziału”),
+określi kwotę zaksięgowaną (jako sumę z już zaksięgowanych odpisów).
+
+Za pomocą przycisku [Dodaj] zielony [+] (z prawej strony okna karty RMK/RMP), rozpisujemy pierwsze naliczenie RMK, podając konta księgowe do aktywacji kosztu/przychodu (z reguły dla RMK Konto nr 1 to konto zespołu 4xx a Konto nr 2 to konto zespołu 5xx). Następnie potwierdzamy miesiąc, od którego ma nastąpić naliczanie odpisów RMK (podpowiada się automatycznie z wprowadzonych wcześniej danych), sprawdzamy kwotę naliczenia dla odpisu (również jest wyliczana automatycznie), oraz sprawdzamy i w miarę potrzeb uzupełniamy komentarz (również podpowie się automatycznie z opisu).
+
+Karta rozpisania odpisu
+Tak przygotowany pierwszy odpis będzie stanowił pierwowzór dla pozostałych naliczeń. Za pomocą przycisku Funkcje dokonujemy rozpisania pozostałych odpisów na wzór pierwszego przygotowanego przez nas naliczenia (opcja Rozpisz na wzór pierwszego niezaksięgowanego miesiąca). Spowoduje to uzupełnienie tabeli z naliczonymi odpisami na karcie RMK/RMP w deklarowanych miesiącach.
+
+Rozpisanie odpisów RMK w poszczególnych miesiącach
+Księgowanie RMK / RMP
+Proces księgowania poszczególnych odpisów zaprojektowany został na podobieństwo księgowania dokumentów w module Księgi Handlowej. Na liście zapisów poszczególnych RMK/RMP należy zaznaczyć te, które będziemy chcieli zaksięgować, a następnie wybieramy przycisk [Zaksięguj zaznaczone RMK] z górnego menu w programie. Proces zaznaczania pozycji przebiega podobnie jak w innych programach (np. arkuszach kalkulacyjnych), należy kliknąć na pozycji, a następne zaznaczyć pozostałe trzymając wciśnięty klawisz [Ctrl] lub [Shift]. Po wybraniu przycisku [Zaksięguj…] program zapyta o miesiąc księgowy, do którego zostaną wygenerowane PK z gotowymi dekretacjami oraz datę księgowania, która zostanie umieszczona na zapisach księgowych.
+
+Proces księgowania zaznaczonych (na czerwono) odpisów RMK/RMP
+Zaksięgowane odpisy zostaną odpowiednio oznaczone, a kwota z nich zaktualizuje wartości w polach Kwota zaksięgowana na kartach RMK/RMP oraz w kolumnie na liście zapisów dla poszczególnych RMK/RMP.
+
+Okno z informacją o zaksięgowanych RMK
+
+Widok tabeli z listą aktywnych RMK i kwotami już zaksięgowanymi (na czerwono) i do zaksięgowania (na pomarańczowo)
+Generowanie karty RMK spod dokumentów kosztowych KO
+W systemie VENDO zapisy poszczególnych RMK mogą być powiązane z dokumentami źródłowymi np. KO. W tym celu wystarczy podpiąć np. dokument kosztowy KO na karcie RMK.
+ Dokument źródłowy podpięty na karcie odpisu RMK
+Warto zauważyć, że jeżeli klikniemy w niebieski napis Dokument na powyższym rysunku, system otworzy nam kartę skojarzonego dokumentu. Mamy więc możliwość przeniesienia się na kartę dokumentu źródłowego bezpośrednio z karty RMK/RMP.
+System VENDO umożliwia, oprócz ręcznego dodania odpisu (jak opisano powyżej w niniejszej Instrukcji), wygenerowanie karty RMK bezpośrednio spod odpowiedniego dokumentu KO. Funkcja dostępna jest na dokumencie KO po przejściu przez Funkcje i dalej Księgowość > RMK.
+
+Generowanie odpisu RMK spod karty dokumentu kosztowego
+Dokument musi być zamknięty, nie jest wymagane jego zaksięgowanie. System automatycznie utworzy kartę nowego RMK, pobierając odpowiednie dane z dokumentu (takie jak nazwa z pola opis/uwagi dokumentu, numer, data, kwota, miesiąc rozpoczęcia czy opis dla RMK z odpowiadających im pól na dokumencie). Resztę konfiguracji dokonujemy identyczne jak przy kartach RMK tworzonych ręcznie.
+Images
+
+
+
+
+
+
+
+

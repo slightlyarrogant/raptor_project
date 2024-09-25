@@ -1,0 +1,202 @@
+Wymiary Kontrolingowe
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/kontroling
+scraped_at: 2024-09-05T12:13:46.666236
+last_updated: 2024-09-05T12:13:46.666330
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Wymiary Kontrolingowe
+meta_tags: ['kont', 'konta', 'jest', 'konto', 'kontrolingowych', 'kontrolingowe', 'kontrolingowy', 'obiektowe', 'poziom', 'modelu']
+
+Content
+Cel
+Nowy moduł kontrolingowy mający na celu umożliwić klientowi prowadzenie kontroli w firmie na zasadzie rejestrów kosztów i przychodów w ramach przyjętych wymiarów i modeli kontrolingowych Zasada działania modułu kontroling zbliżona jest do funkcjonowania dotychczasowego modułu księgowego, ma ona zastąpić wymiary księgowe
+Uprawnienia lokalizacja
+Menu główne > Kontroling
+Opis ogólny
+Wymiary kontrolingowe są modułem Vendo.ERP służącym do rozliczania przychodów i kosztów wg zdefiniowanych kryteriów. Przykładowymi wymiarami kontrolingowymi są:
+
+Plany i realizacja sprzedaży
+Rozliczenie zleceń - planowane i faktyczne przychody i koszty zleceń
+Koszty samochodów / Środków trwałych
+
+Umiejscowienie
+Praca na module Wymiary Kontrolingowe wymaga licencji znajdującej się w kluczu licencyjnym. Modułu znajduje się w bocznym menu.
+
+Główne komponenty
+Moduł Wymiary kontrolingowe oparte są o struktury danych i logikę działania księgowości.
+
+Wymiary i konta kontrolingowe
+Zapisy
+Wzorce księgowań
+Obroty i Salda Kont Wymiarowych
+Raporty kontrolingowe
+Budżety wymiarów
+Raport wykonanie budżetu Istnieje jednak kilka różnic pomiędzy oficjalną rachunkowością a kontrolingiem:
+Zamiast nazewnictwa stron winien / ma używamy Koszt / Przychód
+Zapis kontrolingowy nie musi być zbilansowany
+Konta oprócz numeru i nazwy posiadają jeszcze kod. Ułatwia to osobom nie posiadającym wiedzy księgowej poruszanie się po raportach kontrolingowych
+Rok księgowy jest ciągły na przestrzeni całego kontrolingu. Nie wszystkie operacje gospodarcze, które znajdują się w rachunkowości muszą mieć swoje odzwierciedlenie w kontrolingu
+Oprócz zapisów kwotowych, na koncie ostatniego poziomu może wystąpić również zapis w jednostce pomocniczej tzw. KVI. Czyli oprócz wynagrodzenia w złotych możemy również podać liczbę roboczogodzin.
+
+Wymiary i konta kontroligowe
+Informacje ogólne o kontach kontrolingowych
+Podobnie jak w rachunkowości konta księgowe mają strukturę drzewa: Konto – Subkonto poziomu 1 – Subkonto poziomu 2 Konto jest określane poprzez
+
+Numer
+Kod – nazwa skrócona
+Pełna nazwa konta
+
+
+
+Rodzaje Kont Kontrolingowych:
+
+Wymiar (konto syntetyczne) – poziom 1
+Konto obiektowe – poziom od 2 do n
+Konto rodzajowe - poziom od n+1 do m
+
+
+
+Konto najwyższego poziomu (syntetyczne) jest Wymiarem Kontrolingowy.
+Nie można zakładać kont analitycznych do konta wymiaru, jeśli nie mamy zdefiniowanego Modelu Kontrolingowego
+
+Podobnie jak w księgowości konto księgowe ma dwie strony:
+
+Koszt (Wn)
+Przychód (Ma)
+
+
+
+Dodatkową informacją / liczbą która pojawia się na kontach, obrotach kont i zapisach jest:
+KVI (Key Volume Identyficator)
+To kluczowy wskaźnik ilości odpowiadający charakterowi danego konta. Jeśli np. rozliczamy pracę pod zlecenie możemy określić roboczogodzinę (rbh) jako KVI, w przypadku energii elektrycznej możemy ustawić kWh, dla delegacji mogą być to np. kilometry.
+Konto syntetyczne - wymiar
+Konto syntetyczne – konto najwyższego poziomu jest wymiarem
+Zakładamy je z pozycji Wymiary Kontrolingowe > Wymiary i Konta > Funkcje > Dodaj Wymiar/Konto
+Konta obiektowe
+Konta obiektowe są to konta mające bezpośrednie relacje do obiektów Vendo (np. Pracownik, Zlecenie, Grupa Towarów, OPK, itp.). Konta obiektowe w danym modelu tworzą strukturę drzewa, gdzie każdy z poziomów jest jednym z obiektów controlingowych.
+Aby móc zakładać konta obiektowe trzeba mieć najpierw zdefiniowany model kontrolingowy. Model kontrolingowy znajduje się na definicji konta syntetycznego (wymiaru)
+Konta rodzajowe
+Konta rodzajowe to konta kosztowe i przychodowe (Przychody, materiały, delegacje, usługi zewnętrzne, itp.) powiązane z ostatnim poziomem kont obiektowych.
+Konta rodzajowe są generowane na podstawie modelu kontrolingowego po utworzeniu konta obiektowego ostatniego poziomu
+Model wymiaru Kontrolingowego
+Informacje ogólne
+Model Wymiaru Controlingowego to wzorzec/szablon określający sposób ułożenia kont kontrolingowych dla wymiaru. Tworzone subkonta kontrolingowe (obiektowe i rodzajowe) MUSZĄ być zgodne z Modelem kont kontrolingowych.
+Implementacja modelu
+Definicji modelu kontrolingowego dokonujemy na koncie syntetycznym pod przyciskiemModel Kontrolingowy
+W praktycznej implementacji:
+
+Wymiar to konto syntetyczne
+Konta obiektowe – poziom analityki od 2 do n
+Konta rodzajowe – poziom analityki od n+1 do m
+
+
+W Modelu musi istnieć choć jeden poziom kont obiektowych.
+
+Definiowanie kont obiektowych w modelu – W górnej części dialogu Model Kontrolingowy klikamy ikonkę [+] aby dodać pierwszy i kolejne poziomy kont obiektowych. W kolumnie Rodzaj obiektu wybieramy z jakim obiektem będą powiązane poszczególne konta. Kont obiektowe mogą być połączone z:
+Pracownik
+Zlecenie
+Towar
+Grupa Towarów
+Kontrahent
+Środek Trwały
+Obiekt
+Magazyn
+OPK Struktura drzewa kont obiektowych w wymiarze będzie budowana wg kolejność jaka jest na tej liście. Każde konto obiektowe n-tego poziom będzie musiało być powiązane z rodzajem obiektem, który jest zdefiniowany na n-tym miejscu tej listy
+
+
+Definiowanie kont rodzajowych w modelu – W lewej dolnej części dialogu Model Kontrolingowy klikamy ikonkę [+] aby dodać pierwszy poziom kont rodzajowych. Subkonta do konta rodzajowego tworzymy poprzez kliknięcie ikonki
+
+KVI (Key Volume Identyficator)
+To kluczowy wskaźnik ilości odpowiadający charakterowi danego konta. Jeśli np. rozliczamy pracę pod zlecenie możemy określić roboczogodzinę (rbh) jako KVI, w przypadku energii elektrycznej możemy ustawić kWh, dla delegacji mogą być to np. kilometry. Jednostkę miary zapisu księgowego definiujemy w Modelu Kontrolingowym Wartości dla KVI są odnoszone zawsze na ostatnim poziomie analityki za pomocą zapisu księgowego.
+Użycie modelu
+Opracowanie ile będzie wymiarów, jaki model będzie posiadał każdy z nich jest jedną z najważniejszych prac koncepcyjnych i JEST TO ZDECYDOWANIE NAJWAŻNIEJSZA CZĘŚĆ WDROŻENIA WYMIARÓW KONTROLINGOWYCH
+Wymaga to spędzenia wielu godzin i uwzględnienia wszystkich istotnych aspektów.
+Konta obiektowe tworzymy ręcznie. Zapobiega to zbytniemu rozdrobnieniu i pozwala się skupić na tych obiektach, które są istotne.
+W momencie, kiedy na planie kont kontrolingowych utworzymy konto obiektowe ostatniego poziomu, automatycznie wg modelu generowane są do niego konta rodzajowe
+Po utworzeniu pierwszych kont kontrolingowych do wymiaru, szablony kont obiektowych NIE mogą być zmieniane
+Istotną cechą jest to, że każdy poziom kont obiektowych ma konto „00 – Pozostałe”. Przykładowo firma ma 1000 środków trwałych lecz chce kontrolować tylko 20 najważniejszych (hale produkcyjne, główne maszyny, itp.) zakłada konta obiektowe tylko dla tych najważniejszych. Automaty księgowań jeśli nie napotkają dekretować na nie będą na dokumenty powiązane tymi środkami trwałymi, które nie pasują do żadnego z utworzonych kont obiektowych.
+Konto Kontrolingowe, które nie jest już używane, a są na nim zapisy księgowe możemy zmienić na archiwalne
+Przykładowe konta kontrolingowe dla wymiaru Plan i Realizacja Sprzedaży
+
+Przykład implementacji wymiaru
+Model: Sprzedaż wg pracowników i grup produktowych| | | | | | | | | | Konta wymiarowe| | Konta rodzajowe| | | | | | |  622800| Pracownik| Grupa| Rodzaj| Konto| styczeń| luty| marzec| kwiecień| maj| SUMA| Kowalski| Rowery| Sprzedaż| 1100-01-01-700| 3300| 1700| 2200| 4100| 4800| 35300| | Skutery| Sprzedaż| 1100-01-02-700| 1100| 1200| 1100| 5000| 4200| 38100| | Usługi| Sprzedaż| 1100-01-03-700| 4200| 1700| 4400| 5000| 2600| 36400| Nowak| Rowery| Sprzedaż| 1100-02-01-700| 2600| 4900| 3400| 3700| 1700| 35800| | Skutery| Sprzedaż| 1100-02-02-700| 4900| 2300| 3400| 3400| 4700| 37700| | Usługi| Sprzedaż| 1100-02-03-700| 1600| 3600| 1300| 3100| 1300| 29800| Jabłoński| Rowery| Sprzedaż| 1100-03-01-700| 3400| 3400| 1700| 1200| 2900| 28400| | Skutery| Sprzedaż| 1100-03-02-700| 2700| 4800| 1200| 2900| 4800| 34800| | Usługi| Sprzedaż| 1100-03-03-700| 2100| 3300| 3700| 2200| 1200| 38400
+---|---|---|---|---|---|---|---|---|---  
+Zapisy Kontrolingowe (dekrety)
+Informacje ogólne
+Podobnie jak i w księgowości wartości na kontach pojawiają się na podstawie Zapisów (Dekretów). Zapis Kontrolingowy może być tworzony ręcznie lub za pomocą wzorców
+Zapis Kontrolingowy ma dwa stany
+
+Bufor – może być jeszcze edytowany lub usuwany
+Zamknięty – brak możliwości edycji
+Raporty i obroty kontrolingowe mogę uwzględniać zapisy w buforze lub nie.
+Aby utworzyć zapis ręcznie. Należy wejść na zakładkę Zapisy i dać Insert lub nacisnąć przycisk [+] w górnej belce. Pojawia się kart zapisu kontrolingowego.
+
+Karta zapisu kontrolingowego
+Karta zapisu kontrolingowego w budowie i sposobie działania jest zbliżona do karty zapisu księgowego.
+
+
+Zapis posiada nagłówek i pozycje
+Jeden zapis kontrolingowy może dotyczyć kliku wymiarów (ponieważ wymiar to konto syntetyczne)
+Zapisy mogą być wielowalutowe
+Pozycje zapisów realizujemy na ostatnim poziomie drzewa kont kontrolingowych po stronie Koszt (Wn) lub Przychód (Ma)
+Sumatory obrotów przenoszą sią na nagłówek zapisu
+Zapisy Kontrolingowy może być jednostronny lub niezbilansowany. Strony Wn i Ma nie muszą się mieć takich samych wartości
+Na zapisie i pozycji zapisu może być referencja do dokumentu ERP
+Zapisy tworzymy ręcznie i wg wzorców
+Na nagłówku zapisu jest kwota do rozpisania. Wskazana kwota powinna być w całości rozpisana na poszczególne wymiary
+Oprócz rozpisania kwot na konta kontrolingowe, możemy również rozpisać KVI – np. liczbę roboczogodzin przy koncie koszty wynagrodzeń
+Zapisów dokonujemy w wybranym miesiącu kontrolingowym
+
+Lata i miesiące zapisów
+Miesiącem kontrolingowym jest jeden miesiąc kalendarzowy. Kontekst miesiąca w którym chcemy pracować ustawiamy klikając odpowiednio:
+Ustawiania gównie ikonka w lewym górnym rogu aplikacji > Ustawienia okresowe > Parametry pracy KH i Kontrolingu
+Wymiary kontrolingowe nie są ograniczone do roku księgowego. Zapisy na kotach kontrolingowych mogą się odbywać na przestrzeni wielu lat. Praktycznie zapis powinien być pomiędzy stycznie 2010 a grudniem 2100 roku
+Dekretowanie
+Dekretowanie ręczne
+Aby utworzyć zapis „ręcznie”. Należy wejść na zakładkę Zapisy i dać Insert lub nacisnąć przycisk [+] w górnej belce. Pojawia się kart zapisu kontrolingowego.
+Budżety
+Informacje ogólne
+Konto Kontrolingowe może posiadać swój budżet. Budżet jest tworzony na miesiące na ostatnim poziomie kont kontrolingowych dla poszczególnych miesięcy i przenoszony w górę struktury kont.
+Budżety mogą dotyczyć:
+
+Kwoty
+KVI Kwoty na kontach są tworzone za pomocą Zapisu
+
+Umiejscowienie budżetów
+Funkcjonalność dotycząca budżetów znajduje się w Menu Kontroling na zakładce Budżety Wymiarów
+Tworzenie budżetu i karta budżetu
+Aby utworzyć budżet na konta należy wejść na zakładkę Budżet Wymiarów oraz dodać przycisk budżet. Należy wypełnić pola: Okres budżetu (miesiąc od – miesiąc do), Opis i kliknąć przycisk matryca. Pojawia się kontrolka do wpisywania budżetu. Zakres miesięcy wynika z nagłówka. W kolejnym etapie powinniśmy wybrać konto lub węzeł kont, dla którego będziemy tworzyć budżet. To znaczy jeśli tworzymy budżet dla zlecenia, to powinniśmy wskazać konto obiektowe tego zlecenia. Jeśli tworzymy budżet obiektu/środka trwałego powinniśmy wybrać konto tego obiektu/środka trwałego. W praktyce budżety powinniśmy osadzać na pierwszym poziomie kont obiektowych. Po wybraniu odpowiedniego konta pojawia się konta ostatniego poziomu (liście), które są powiązane z wybranym kontem. Wpisujemy wartości w odpowiednie komórki po stronie Koszt lub Przychód. Dla tych kont, gdzie zdefiniowane są KVI, możemy zabudżetować również ich wartość. Po uzupełnieniu budżetu klikamy zapisz i zamknij. Budżet został zapisany
+
+Obrotówka kont kontrolingowy
+Ponieważ Kontroling jest oparty o logikę Księgowości, to Obrotówka kont kontrolingowych działa w oparciu o ten sam mechanizm. Zapisy na kontach kontrolingowych są przenoszone w górę struktury drzewa oraz są miesięcznie grupowanie obroty na poszczególnych kontach Mamy więc:
+
+Obroty po stronach Przychód i Koszt za okres
+Obroty po stronach Przychód i Koszt narastająco
+KVI za okres i narastająco
+Filtr zakresu
+Obroty tylko na na podstawie zatwierdzonych zapisów lub z uwzględnieniem bufra
+
+
+Wzorce księgowań
+Rozbudowane i analizujące nagłówek i pozycje dokumentów wg tych samych makr i filtrów
+
+Rodzaje wzorców
+Wzorce per dokument ERP
+Wzorce na różnice kursowe
+Wzorce typu szablon
+Przeksięgowanie - Wzorce przeksięgujące w tym wzorce przeksięgujące z kont KH do kont kontrolingowych i w drugą stronę wg wskaźników
+Wzorce znajdują się w zakładce „Wzorce” Modułu Kontroling. Tworzenie wzorców zostało opisane w dokumentacji dotyczącej Księgowości
+
+
+
+Raporty
+Raporty oparte o konta kontrolingowe tworzy i używa się w analogiczny sposób jak w Module Księgowość. Ich tworzenie zostało opisane w dokumentacji dotyczącej Księgowości
+Images
+
+
+
+
+
+
+

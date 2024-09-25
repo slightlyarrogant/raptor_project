@@ -1,0 +1,49 @@
+#	Naliczanie miesięcznej amortyzacji
+
+## Naliczanie miesięcznej amortyzacji
+
+Naliczenie amortyzacji odbywa się dwoma metodami:
+- amortyzacja liniowa (czyli comiesięczne odpisy w stałej wartości),
+- jednorazowe umorzenie.
+
+System VENDO w pełni obsługuje naliczenie obydwoma powyższymi metodami.
+
+W przypadku amortyzacji liniowej, każdy z wprowadzonych środków trwałych ma przypisywaną indywidualnie stawkę amortyzacji wprowadzoną oddzielnie dla wartości bilansowej jak i podatkowej (jeżeli dotyczy).
+
+Naliczenia amortyzacji dokonujemy na Liście środków trwałych. W pierwszej kolejności należy odpowiednio przygotować listę aktywnych kartotek środków trwałych, przefiltrowując ją z kartotek, które zostały już w pełni zamortyzowane. W tym celu należy założyć filtr na kolumnie Wartość bieżąca klikając prawym przyciskiem myszy na nagłówek z nazwą kolumny i wybierając opcję Dodaj filtr na kolumnę. W parametrach filtra należy wykluczyć wartość „0,00” dla przedziału pierwszego (zgodnie z Rysunkiem poniżej). Dzięki temu na liście zostaną tylko te kartoteki ŚT, których wartość bieżąca jest większa od zera, co oznacza, że posiadają jeszcze wartość do zamortyzowania / umorzenia. Jeżeli na Liście środków trwałych nie mamy kolumny Wartość bieżąca wówczas należy ją dodać klikając opcję [Dostosowanie listy kolumn] z nagłówka listy z nazwami kolumn i wybrać przeciągając ją na wiersz z nagłówkami kolumn.
+
+![tmp1fc82cf9-67a4-4a6e-97cc-f8a68435fcf3](https://www.cfi.pl/vendohelp/content/imgs/A0/f71a6081677ff2d01d371cc697841626-10201-0.png)
+
+*Dialog ustawienia parametrów filtra na kolumnie z Wartością bieżącą*
+
+Po przygotowaniu listy (przefiltrowaniu tylko kartotek posiadających wartość bieżącą do amortyzacji) zaznaczamy wybrane lub wszystkie kartoteki w ramach listy i prawym przyciskiem myszy wskazujemy stosowną opcję:
+- Generuj miesięczną amortyzację dla zaznaczonych środków trwałych,
+- Generuj miesięczną amortyzację dla wszystkich środków trwałych.
+
+Po wybraniu jednej z powyższych opcji system podpyta o miesiąc, dla którego ma być naliczona amortyzacja w ramach roku obrachunkowego, w którym aktualnie pracujemy. Następnie zostaną automatycznie utworzone odpisy amortyzacyjne dla wskazanych (lub wszystkich) środków trwałych. Należy pamiętać, że w ramach zaznaczonych środków trwałych do naliczenia amortyzacji nie powinniśmy uwzględniać środków trwałych zamortyzowanych jednorazowo (pod warunkiem, że uprzednio została dla nich już naliczona amortyzacja). Naliczenie amortyzacji jest widoczne w ramach kartoteki środka trwałego w dolnej części, dotyczącej wyświetlanych wartości przeliczonych na wskazany miesiąc oraz zbiorczo w osobnej zakładce Amortyzacje (PrtScn poniżej). Ponadto wszystkie naliczenia z danego miesiąca są widoczne w zakładce Miesięczna amortyzacja w ramach modułu.
+
+![tmp0011d4c2-6410-4a56-992a-a74101e0faf2](https://www.cfi.pl/vendohelp/content/imgs/V5/ac4965e6ae953be1a7adc174d45a59b0-57031-0.png)
+
+*Zakładka Amortyzacje w ramach kartoteki ŚT*
+
+Dopóki naliczenia amortyzacji nie zostaną zaksięgowane, mamy możliwość ich swobodnego usuwania (na zaznaczonych naliczeniach należy wybrać z klawiatury [Delete] i zaakceptować usunięcie).
+
+### Księgowanie naliczonej amortyzacji
+System VENDO umożliwia automatyczne księgowanie dokonanych naliczeń amortyzacji. Aby było to możliwe należy na każdym środku trwałym podlegającym amortyzacji wypełnić dane odnośnie do kont księgowych, przewidzianych do księgowania naliczeń amortyzacji.
+![tmp8fea5172-f812-4e84-b060-43470db1ef52](https://www.cfi.pl/vendohelp/content/imgs/S8/46bb5741897fa272b8dc3b605550c6ed-78028-0.png)
+
+*Okno z kontami księgowymi dla amortyzacji /konta poglądowe/*
+
+Zgodnie z powyższą ilustracją, do podstawowych kont dla księgowania amortyzacji zaliczamy:
+- konto umorzenia (gdzie podajemy stosowne konto zespołu „0” dla księgowania umorzeń),
+- konto amortyzacji podatkowej (konto kosztowe amortyzacji podatkowe/bilansowej),
+- konto amortyzacji niepodatkowej (używane, kiedy na karcie środka trwałego zaznaczono opcję „Różna amortyzacja podatkowa i bilansowa”),
+- konto amortyzacji zespołu 5 (konto kosztowe amortyzacji podatkowej księgowanej równolegle),
+- konto rozliczenia kosztów (zwykle „490”).
+
+Oprócz ww. kont do dyspozycji są również konta dla księgowań pozabilansowych WN / MA, które można wykorzystać także dla dodatkowych księgowań bilansowych równoległych. Obok nazwy każdego konta księgowego, w nawiasie, podano skrót klawiszowy do wyświetlenia planu kont dla danego pola i wyboru konta księgowego z planu (zamiast wpisywać konto ręcznie).
+Po odpowiednim skonfigurowaniu kartoteki środka trwałego (ustawieniu parametrów dotyczących amortyzacji i kont księgowych) możemy przystąpić do księgowania naliczonych wcześniej odpisów. Aby tego dokonać należy udać się do zakładki Miesięczna amortyzacja i zaznaczyć odpisy, które chcemy zaksięgować. Następnie prawym przyciskiem myszy (lub po wybraniu przycisku „Funkcje” w górnym lewym rogu okna) wskazujemy stosowną opcję:
+- Księguj wszystkie miesięczne amortyzacje lub
+- Księguj zaznaczone miesięczne amortyzacje.
+
+Po wybraniu jednej z powyższych możliwości system zapyta o Dziennik księgowy, w którym ma zostać zaksięgowany PK z amortyzacją, miesiąc księgowania oraz opis nagłówka zapisu księgowego. Po wskazaniu odpowiednich parametrów, system automatycznie zaksięguje odpisy amortyzacyjne w module Księgi Handlowej. Stosowny zapis księgowy dostępny będzie w odpowiednim dzienniku i okresie Księgi, jak również w module Środki Trwałe, po wskazaniu konkretnego naliczenia odpisu amortyzacyjnego i wybraniu funkcji Dokument księgujący amortyzację.

@@ -1,0 +1,74 @@
+CzechlogisticPaxy plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/prestashop-plugin
+scraped_at: 2024-09-05T12:21:49.495609
+last_updated: 2024-09-05T12:21:49.495659
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/CzechlogisticPaxy plugin
+meta_tags: ['prestashop', 'vendo', 'wybieramy', 'pluginu', 'należy', 'ustawienia', 'klikamy', 'magazyn', 'sklepu', 'zakładki']
+
+Content
+PrestaShop plugin
+1. Uzyskanie klucza API do sklepu
+Przed rozpoczęciem instalacji pluginu należy zdobyć klucz API niezbędny do komunikacji ze sklepem PrestaShop.
+W tym celu w panelu sklepu wchodzimy do zakładki Konfiguruj -> Zaawansowane -> API. Dodajemy nowy klucz ustawiając poziomy dostępu.
+Po dodaniu klucza należy go skopiować i wgrać do ustawień pluginu PrestaShop w Vendo.
+
+
+2. Instalacja i konfiguracja pluginu
+Domyślna nazwa pluginu to: PrestaShopPlugin.dll
+Wgrywamy plugin do klienta.
+Kopiujemy plik z pluginem lokalnie na komputer. Uruchamiamy aplikację Vendo. Przechodzimy do zakładki Ustawienia -> Pluginy.
+
+Klikamy przycisk Dodaj. Dodajemy plugin znajdujący się na dysku lokalnym. Plugin zostaje dodany, można go wyszukać i zobaczyć jego status.
+Przechodzimy do ustawień pluginu, w tym celu klikamy przycisk Ustawienia.
+
+Aby komunikacja przebiegała prawidłowo w obie strony należy w ustawieniach wypełnić niezbędne pola.
+W zakładce Główne uzupełniamy następujące pola:
+
+Adres url strony - adres do API sklepu
+Klucz API - klucz API wygenerowany z panelu sklepu PrestaShop
+Nazwa - nazwa konta w ustawieniach
+Sklep w PrestaShop - wybieramy z którym sklepem w PrestaShop będziemy sie łączyć (domyślnie jest tylko jeden sklep do wyboru), aby lista była wypełniona należy wcześniej kliknąć powyższy przycisk który załaduje listę sklepów z PrestaShop
+System zewnętrzny - wybieramy "Presta Shop"
+Rodzaj dokumentu - wybieramy rodzaj dokumentu
+Grupa cen na dokumencie - wybieramy grupę cen, dzięki temu ustawieniu będą wysyłane ceny z systemu Vendo do PrestaShop w zależności od wybranej grupy
+Magazyn dokumentu - wybieramy magazyn dokumentu, domyślnie jest to "Magazyn Główny"
+
+
+W zakładce Produkty wypełniamy:
+
+Stan ogólny ze wszystkich magazynów - aby wybierać stany produktu ze wszsytkich magazynów zaznaczamy tę opcję
+Magazyn stanu towaru - domyślnie wybieramy "Magazyn Główny"
+Kategorie według - wybieramy grupę kategorii, następnie klikamy przycisk obok w celu wyeksportowania kategorii z Vendo do sklepu PrestaShop
+Stany z magazynów - domyślnie wybieramy "Magazyn Główny"
+
+
+Wprowadzone wyżej ustawienia są niezbędne aby prawidłowo mogła przebiegać komunikacja w obie strony Vendo - PrestaShop dla:
+
+wysyłka towarów/produktów z Vendo do PrestaShop
+wysyłka kategorii produktów z Vendo do PrestaShop
+pobieranie zamówień z PrestaShop do Vendo
+
+Pozostałe ustawienia są opcjonalne.
+3. Obsługa i testowanie
+Jeżeli ustawienia pluginu zostały wprowadzone prawidłowo można przejść do testowania działania pluginu PrestaShop.
+3.1. Wysyłanie towarów / produktów
+Uwaga! Zanim przystąpimy do wysyłania towarów lub pobierania zamówień należy wyeksportować kategorie z Vendo do sklepu PrestaShop. Robimy to w ustawieniach pluginu opisane wyżej.
+Jeżeli chcemy wysłać towary / produkty z Vendo do PrestaShop należy wykonać poniższe czynności.
+Wchodzimy do zakładki Magazyn -> Towary, zaznaczamy określony rekord, klikamy prawym przyciskiem myszy i z menu wybieramy PrestaShop -> Synchronizuj zaznaczone produkty PrestaShop.
+Produkty zostaną wysłane do PrestaShop.
+
+3.2. Pobieranie zamówień
+Przechodzimy do zakładki Dokumenty -> Dokumenty sprzedażowe. Klikamy prawym przyciskiem myszy na liście i wybieramy pozycję PrestaShop -> Pobierz zamówienia z PrestaShop.
+Zamówienia zostaną przesłane z PrestaShop do Vendo.
+
+Images
+
+
+
+
+
+
+

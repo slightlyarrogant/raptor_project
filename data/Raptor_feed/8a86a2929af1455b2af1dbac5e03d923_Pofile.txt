@@ -1,0 +1,62 @@
+Pofile
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/laguna/profile
+scraped_at: 2024-09-05T11:51:18.928860
+last_updated: 2024-09-05T11:51:18.928910
+parent_id: 9d4b1644053ac9efd2c208ea51dac0b8
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Pofile
+meta_tags: ['zamówienia', 'należy', 'screen', 'profili', 'status', 'realizacji', 'zlecenia', 'wydziału', 'danego', 'brygadzista']
+
+Content
+Cel:
+TODO
+Opis funkcjonalności:
+Jeżeli zamówienie klienta wymaga realizacji na wydziale produkcyjnym, wówczas na podstawie zamówienia należy wygenerować powiązane zlecenie produkcyjne, aby to wykonać, należy ustawić się na zamówieniu klienta, następnie PPM(prawy przycisk myszy) > Generowanie > Zlecenie z planem/Plan do zlecenia
+
+System uruchomi okno w którym, dostępne są opcje dotyczące zlecenia, w miarę potrzeb, należy je edytować, następnie za pomocą przycisku [Generuj]generujemy zlecenie produkcyjne, w którym każda pozycja zlecenia ma relację do pozycji z zamówienia.
+
+Screen 2. Okno generowania zlecenia
+
+System wygenerował zlecenie w którym, będą znajdowały się wszystkie pozycje z zamówienia klienta, zarówno dotyczące wydziału profili jak i wydziału okuć, dlatego należy uruchomić funkcje (PPM lub przycisk Funkcje) i wybrać Pozostaw Towary z Grupy WWW ‘Profile
+
+Po uruchomieniu powyższej funkcji, system usunie pozycje nie dotyczące wydziału profili, użytkownik w kolumnie Stan ogólny widzi jaki jest stan magazynowy danego towaru i może zdecydować o jego nieprodukowaniu, wówczas należy taką pozycję usunąć poprzez funkcję Usunięcie pozycji zlecenia lub klawisz [DELETE], tak samo należy usunąć pozycje które nie wymagają cięcia np. ramiak L 6000
+
+Po oczyszczeniu zlecenia z pozycji nie wymagających produkowania, należy uruchomić funkcję Automatyczne generowanie KKW na cięcie, wówczas system wygeneruje jeden przewodnik do danego zlecenia, a jego symbol i referencja(odwołanie) zostanie dodane do kolumny Numer KKW
+
+Przewodnik jest podzielony na dwie sekcje, po prawej stroni to co ma powstać oraz odpad, a po lewej z jakiego profilu ma to być zrealizowane
+ Screen 7. Przewodnik cięcia profili Za pomocą przycisku [Drukuj] użytkownik generuje wydruk przewodnika, dla wydziału profili został przygotowany wzorzec PROFILE, na pierwszej stronie wydruku znajdują się wszystkie przychody z przewodnika oraz co istotne kod kreskowy operacji cięcia
+ Screen 8. Wydruk KKW strona 1 Z kolei na drugiej stronie wydruku KKW znajdują się wszystkie pozycje związane z zamówieniem klienta dotyczące wydziału profili, czyli wszystko to co powinno być spakowane, taki wydruk należy przekazać pracownikowi na produkcji
+ Screen 9. Wydruk KKW strona 2 Aktualizacja procesu i funkcji związana z realizacją zamówień bez drukowanych KKW Dla potrzeb realizacji zamówień z wyłączeniem drukowania przewodników produkcyjnych, na wydziale profili, na zamówieniach obcych, zostały dodane dwa nowe pola:
+
+Status – pole do określenia na jakim etapie, jest dane zamówienie
+Imię Nazwisko:Profile – pole w którym brygadzista przyporządkowuje z imienia i nazwiska pracownika do realizacji danego zamówienia
+
+
+Screen 10. Zamówienia obce - nowe pola do obsługi procesu bez drukowania KKW Brygadzista, aby przyporządkować dla danego pracownika realizację zamówienia, powinien wejść w dane zamówienie, następnie przejść do zakładki Wartości dowolne, w której w polu Profile, wskazuje pracownika, któremu przydziela realizację całego zamówienia. Dzięki przypisaniu, pracownik produkcji po zalogowaniu się na swój pulpit, będzie miał możliwość wskazania zamówienia do aktualnej realizacji bez konieczności drukowania i przekazywania wydruku przewodnika do danego zamówienia.
+
+Screen 11. Przypisanie pracownika do realizacji zamówienia Dzięki polu Status brygadzista określa na jakim etapie jest dane zamówienie, poprzez wywołanie funkcji, zarówno z poziomu przeglądu, jak i pojedynczego zamówienia, w sekcji Statusy, brygadzista, ma dostępne dwie funkcje:
+
+Statusy dokumentu  - przegląd nadanych statusów i ich historia
+Nowy status do dokumentu  - nadanie/edycja statusu dla zamówienia
+
+
+Screen 12. Funkcje związane ze statusami Funkcja Statusy dokumentu uruchamia okno, zbudowane z dwóch zakładek, w zakładce Lista znajdują się nadane statusy dla zamówienia, z kolei w Historia znajduje się informacja o ich nadaniu
+
+Screen 13. Statusy zamówienia Aby nadać lub anulować status, brygadzista po uruchomieniu funkcji Nowy status do dokumentu, wybiera z listy rodzaj statusu, może zmienić datę oraz dodać opis, natomiast w przypadku wycofania statusu, zaznacza pole Anulacja statusu, po uzupełnieniu informacji poprzez przycisk aktualizuje status zamówienia.
+
+Screen 14. Aktualizacja statusu
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+

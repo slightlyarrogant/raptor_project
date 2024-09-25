@@ -1,0 +1,20 @@
+# Zapisy księgowe
+
+W ramach dostępu do zakładki **zapisy księgowe** użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp2e8a0805-22df-4ddd-8eb8-d00f2cd26d0e](https://www.cfi.pl/vendohelp/content/imgs/W8/b8f52d94889d0b828afd73addab48862-7474-0.png)
+
+- miesiąc – wybór miesiąca, za który program ma wyświetlić zapisy, 
+- dziennik – wybór dziennika księgowań, z którego program ma wyświetlić zapisy (np. polecenia księgowania),
+- operator – pracownik odpowiedzialny,
+- znacznik – ustalone wcześniej przez użytkownika,
+- stan – bufor lub dokumenty zatwierdzone,
+- widok – miesiąc, bilans otwarcia lub bilans zamknięcia,
+- tylko niezgodne,
+- widok – pozycje lub nagłówki.
+
+Poza możliwością filtrowania zapisów księgowych użytkownik ma możliwość generowania raportów, zamknięcia miesiąca, wydruku dziennika księgowań, dodawania i usuwania zapisów oraz przenoszenia ich do księgi głównej. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp790d6dab-1e41-4f05-b973-17dc2598a8c7](https://www.cfi.pl/vendohelp/content/imgs/I2/bd5a411e28248530c64a2fd6bf05b2f8-45400-0.png)
+
+![tmp42a6dc12-e02c-4af7-85a8-d7093e3702e3](https://www.cfi.pl/vendohelp/content/imgs/K4/042f60aba7737bf01eaea3ad240351b8-47203-0.png)

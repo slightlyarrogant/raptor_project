@@ -1,0 +1,39 @@
+# Zobowiązania funkcje listy
+
+W ramach dostępu do zakładki zobowiązania użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy zobowiązań. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmpa8b3b668-b497-452b-9af6-0e73056d459e](https://www.cfi.pl/vendohelp/content/imgs/X1/231f6057343654095867b9ad80da83e7-38122-0.png)
+
+- data płatności – do konkretnego dnia lub wszystkie
+- seria dokumentu – serie są nadawane przez użytkownika
+- kontrahent – można wyświetlić zobowiązania dla konkretnego kontrahenta
+- oddział – miejsce powstanie zobowiązania
+- grupa I – przykładowe grupy poniżej:
+
+![tmp7677466d-638c-4b03-bccf-a000d3beabfc](https://www.cfi.pl/vendohelp/content/imgs/V5/4da9657038006e8114324184b610bdfb-26612-0.png)
+
+- tylko zaległości
+- tylko rozliczone
+- tylko zamknięte płatności
+- wg. kontrahenta 2 – gdy kontrahentem 1 jest np. pracownik dokonujący transakcji na rzecz przedsiębiorstwa
+- tylko sporne/sądowe
+- tabela kursów
+
+Poza możliwością filtrowania zobowiązań użytkownik ma możliwość przeprowadzania na nich operacji czy wprowadzania zmian. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp3f60a87f-c749-4b40-8e67-4495d72e6d7b](https://www.cfi.pl/vendohelp/content/imgs/C8/3c51be7be3b8803bb17f4536050663db-8797-0.png)
+
+![tmp755dedb6-cb97-4130-8e62-5f703e3cf8fa](https://www.cfi.pl/vendohelp/content/imgs/J3/4c1cd1eae1e8c5a348201995d0e26b3e-27760-0.png)
+
+Dostępne w programie funkcje przedstawiają się następująco:
+- wprowadź zapłatę za zaznaczone – dodawanie przychodu bankowego z tytułu płatności za wskazane zobowiązanie
+- przygotowanie zbiorczych płatności – możliwość wskazania mnogiej liczby pozycji w celu dokonania płatności
+- dodawania należności ‘z ręki’ – w tym miejscu użytkownik może sam dodać dowolne zobowiązanie
+- lista należności i zobowiązań ‘z ręki’ – podgląd do listy samodzielnie wprowadzonych należności i zobowiązań
+- przenieś rozrachunki ze/do spornych/sądowych – funkcja pozwala przenosić zobowiązania do grupy zobowiązań spornych/sądowych lub je z tej grupy wycofywać
+- funkcje specjalne – zmiana daty lub formy płatności
+- windykacje – podgląd listy zdarzeń windykacyjnych i
+możliwość dodania nowego zdarzenia windykacyjnego 
+- statusy:
+
+![tmp276f57d6-b73e-4c15-9eed-e23de9ca2831](https://www.cfi.pl/vendohelp/content/imgs/T9/11e38e0077e511fda710eecfb7e9eede-44741-0.png)

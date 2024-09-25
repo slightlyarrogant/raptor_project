@@ -1,0 +1,88 @@
+# Faktura Zaliczkowa
+## Informacje ogólne
+Faktura Zaliczkowa służy do zarejestrowania wpłaty Nabywcy na poczet przyszłych zakupów lub złożonego zamówienia. Faktura zaliczkowa wpływa dodatnio na rozrachunek z klientem. Pozycjami faktury zaliczkowej są kartoteki towarowe rodzaju Usługa. 
+
+**Faktura Zaliczkowa zawsze jest wystawiana z poziomu Zamówienia Obcego (od Klienta)** , na podstawie dokonanej płatności. Funkcjonalności i wygląd dokumentu są zbliżone do Faktury VAT.
+
+Dokument Faktura Zaliczkowa  jest dokumentem handlowym mającym wpływ na zadłużenie Klienta – in plus klienta.
+
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Faktura Zaliczkowa| ZA| Wielowalutowość
+|||Rodzaje: Kraj, Export, EU
+|||Musi być podany klient
+|||Musi być skojarzony z ZO
+|||Dokument posiada rozrachunki
+|||Podstawa do rejestru vat
+|||Księgowany
+
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu ZA to: 
+
+-	Data Wystawienia
+-	Nabywca – klient który jest płatnikiem 
+-	Osoba kontaktowa – wybieramy osobę klienta przypisanego do Nabywcy, jeśli jest kilku
+-	Forma płatności 
+-	Wartość netto, brutto, VAT
+-	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki, Zadłużenie klienta – w pozycji Zaliczki pokazane są wartość zaliczek wpłaconych przez Nabywcę nie rozliczonych
+-	Detal – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A0/0f90b6a6cb89a68610a535f822cff79a-159840-0.png)
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Nabywcy 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D5/329c8f2ab7da125a54e9e4b2e35f955b-111739-0.png)
+
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer zamówienia – Numer Zamówienia Obcego (od odbiorcy), w momencie gdy generowana jest Faktura z zamówienia w tym polu umieszczany jest numer zamówienia ZO
+-	Numer Dostawy
+-	Handlowiec lub Mechandiser to pola w których umieszczane są dane pracownika odpowiedzialnego za Dokument Faktury, wg tych pól naliczana może być premia dla pracownika.
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Spedycja – pole oznaczający przewoźnika towarów występujących na dokumencie, dodatkowo możliwe jest zaznaczenie jakiego typu jest przesyłka
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N3/58c79505205022ac38c19f972d9fb076-119152-0.png)
+
+W zakładka Opis i uwagi wprowadzane są dane na podpis dokumentu oraz uwagi które mogą być drukowane na wydruku dokumentu Faktury
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V3/02f10991e5d930cccbdf242c88bc5142-85894-0.png) 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T1/2805a6ddb69b39dd628ce0e00ad8c20c-147751-0.png)
+ 
+Faktura Zaliczkowa posiada jedną pozycję gdzie kodem towarowym jest  ZALICZKAVAT  
+-	Nazwę 
+-	Ilość – zawsze wynosi 1
+-	Cena brutto, netto wynosi zawsze tyle co wprowadzona wartość zaliczki.
+-	Wartość brutto – wynosi tyle co wprowadzona zaliczka
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D9/a0df7a3afa380e1c840ab32fb8d371dd-64766-0.png)
+ 
+Faktura Zaliczkowa wystawiana jest na podstawie 
+Wystawiając Fakturę Zaliczkową mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. Zmiany te są dostępne z poziomu Funkcji i tak:
+-	Dodawanie wartości zaliczki – dodajemy tylko wartość wpłaconej zaliczki
+-	Usunięcie wprowadzonej pozycji Faktury Zaliczkowej
+
+Faktura Zaliczkowa jest dokumentem handlowym wpływającym na Należności klienta. W Funkcji > Płatności możliwe jest sprawdzenie rozliczenia Klienta, sprawdzić zadłużenie klienta oraz sprawdzić rozrachunki. Dodatkowo można podejrzeć jakie były zdarzenia windykacyjne do tego dokumentu oraz klienta, można także utworzyć nowe zdarzenie windykacyjne.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G8/958f62f23a1fb987388d3b2a55f65b59-26437-0.png)
+  
+Klikając Rozrachunki otworzy się okno z rozrachunki dotyczącymi dokumentu z którego wywołano funkcję. W oknie widoczna będzie kwota na jaką widnieje rozrachunek oraz jaka kwota pozostało do rozliczenia. Chcąc sprawdzić co się składa na rozrachunek, wystarczy kliknąć dwa razy na rozrachunek. Pojawi się okno pokazujące wpłaty jakie rozliczają danych rozrachunek. Z tego poziomu możliwe jest także dodanie wpłaty którą może rozliczyć dana Faktura Zaliczkowa
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C6/1b3cd8236841498d9b9f137a57e5b0ad-40469-0.png)
+ 
+Wybierając funkcję *Rozliczenie dokumentu* przejdziemy od razu do wpłat które są wzięte do rozliczenia z Fakturą Zaliczkową. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O4/d8d87ac49b5f50798dd5f358e4a21ace-42973-0.png)
+ 
+Pod funkcjonalnością Zadłużenie kontrahenta kryje się lista dokumentów nie rozliczonych dokumentów. Na czerwono świecą się dokumenty które są już przeterminowane – termin płatności minął a nie został rozliczony dokument, oraz na czarno dokumenty które wpływają na zadłużenie kontrahenta a nie minął termin płatności. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y4/268fbb7f22ef5f5c21dad69ed19de19f-151662-0.png)
+ 
+W płatnościach możliwe jest także dodanie zdarzenia windykacyjnego oraz podejrzeć wszystkie zdarzenia windykacyjne dla danego kontrahenta. Zdarzenie windykacyjne jest ponagleniem wystawianym na danego Kontrahenta w przypadku zalegania z płatnością za rozrachunek.
+
+

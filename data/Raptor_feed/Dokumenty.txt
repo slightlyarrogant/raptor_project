@@ -1,0 +1,241 @@
+# Dokumenty
+## Analizy
+
+VENDO.ERP dysponuje całym szeregiem raportów, które pozwalają na dokładne śledzenie handlowego aspektu działalności firmy. W łatwy sposób z danych zapisanych w bazy VENDO.ERP można uzyskiwać odpowiedzi na kluczowe dla każdej firmy pytania o wielkość i wartość sprzedaży, zakupów i poniesionych kosztów, oceniać znaczenie klienta przez pryzmat wymiany handlowej z nim, porównywać okresy działalności handlowej, prognozować na ich podstawie i uzyskiwać wiele innych informacji. To jak bardzo trafna i szczegółowe informacje pozyskamy zależy od umiejętnego ustawienia filtrów i warunków raportu. Wszelkie kwoty w analizach są podawane PLN a w razie, gdyby dokumenty były sporządzane na inna walutę kwota zostanie przeliczona po kursie z dokumentu.   
+Chcąc w pełni skorzystać z możliwości, jakie dają analizy warto zrozumieć mechanizm działania filtru Gdzie i pola jego wartości (obok Gdzie). Pole Gdzie pozwala na wprowadzanie dodatkowego warunku analizy, a pole obok pozwala na określenie wartości tego warunku. Jeśli na przykład chcemy dowiedzieć się, jaka jest wartość towarów z grup towarów najczęściej kupowanych przez klient 'X' to w filtrze Analiza wg wybieramy "grupy towarów", w filtrze Gdzie ustawiamy "nabywca" i w polu obok (nazwa jego jest taka, jak wartość wybrana w polu Gdzie – tym razem będzie to "nabywca") z listy klientów wybieramy klienta 'X'. Po odświeżeniu pojawi się lista, gdzie w wierszach będą widoczne grupy towarowe wraz z danymi o sprzedaży dla klienta 'X' (ilość, wartość, marża itd.).  
+
+Reasumując:
+-	W polu Analiza wg podajemy kategorie, wg której będą wyświetlane wiersze raportu wraz z odpowiadającymi jej informacjami.
+-	W polu Gdzie wybieramy kategorie, dla której w polu obok określimy konkretna wartość ograniczającą raport.
+-	W polu, które przyjmie nazwę kategorii wybranej w punkcie powyżej (pole Gdzie) wybieramy konkretna wartość – analiza będzie się odnosiła tylko do niej.
+Podany schemat działania można stosować we wszystkich dostępnych analizach. Istnieje możliwość grupowego filtrowania zawartości i wielokrotnego przechodzenia przez rekordy w celu uszczegółowienia analizy. Dostępne są standardowe funkcjonalności dotyczące dodawania i usuwania dodatkowych, powiązanych logicznie kolumn.
+## 	Analiza sprzedaży
+Raport pokazuje wielkość sprzedaży w wybranym okresie. Do raportu sprzedaży brane się pod uwagę faktury VAT i paragony. Nim jednak sporządzimy konkretne analizy warto uściślić rodzaj dokumentów pod analizę – zwróćmy uwagę na grupę filtrów ukryta pod przyciskiem Filtry. Pozwala on na dokładna selekcje dokumentów, na jakich podstawie będzie tworzony raport.
+**Widok główny**
+Przykładowy wygląd analizy sprzedaży razem z możliwymi kolumnami do dodania do widoku zaprezentowano poniżej. Wśród dostępnych kolumn istnieje również możliwość skorzystania ze specjalnej kolumny Dane rozszerzone. Będzie ona zawierała powiązane logicznie dane związane z kryterium Analiza wg.
+
+![tmp756a838b-5157-48ef-8f91-d427b1a3a98b](https://www.cfi.pl/vendohelp/content/imgs/Z9/ec73f8fe1d5d056a271300762e89463c-88694-0.png)
+
+**Filtry wewnętrzne**
+
+![tmpfae1b5ae-7f2d-4f89-99ad-1fe098dec741](https://www.cfi.pl/vendohelp/content/imgs/Q2/2b97db415380653cbd9d2d3086ac01e2-44251-0.png)
+
+![tmp810fc013-4531-4262-a5e9-cbb2b6ec9580](https://www.cfi.pl/vendohelp/content/imgs/Y6/9ff0ec4c4941a2da10e24aa7dece080d-28467-0.png)
+
+Jak widać można np. decydować o rodzaju i stanie dokumentów będących przedmiotem
+analizy oraz czy analiza ma obejmować również usługi.
+
+**Filtry zewnętrzne**
+
+![tmpcedaa60b-7247-46d6-93b0-aa17a6021b61](https://www.cfi.pl/vendohelp/content/imgs/G0/ded6a5de16d563263603ca88efcdb61f-9356-0.png)
+
+**Analiza wg**
+
+Poniżej wymieniono możliwy wybór kryteriów dla „Analiza wg.”. Użytkownik samodzielnie ma możliwość wyb oru sposobu grupowania i wyświetlania danych wybierając spośród dostępnych standardowych pól:
+
+![tmp5c32c5b7-8f9d-4a92-9b83-167f60b1b448](https://www.cfi.pl/vendohelp/content/imgs/L7/51a61eef8b480c179fbd1318e828db0f-68664-0.png)
+
+Poniżej zaprezentowano przykładowy widok tej samej analizy sprzedaży, ale według innego kryterium. 
+
+![tmp7d9c1b03-73d2-4745-88b0-a0a9fc862d64](https://www.cfi.pl/vendohelp/content/imgs/V9/78d999f0e0231aa65a297c84652b8aee-284033-0.png)
+
+Filtry zewnętrzne, które można wykorzystać przy tworzeniu raportu:
+-	Analiza według
+-	Okres od - do
+-	Seria
+-	Data
+-	Gdzie 
+-	Nabywca
+-	Analiza rozszerzona
+-	Według składników kompletów
+-	Bez podsumowania zysków
+-	Prognoza roczna
+-	Wartości
+
+## 	Analiza kosztów
+
+**Widok główny**
+
+Przedmiotem analizy kosztów są dokumenty wprowadzane w z poziomu listy KO, czyli
+KO i KKO. Zasady działania tej analizy są bardzo zbliżone do Analizy sprzedaży.
+Różnice dotyczą głównie kryteriów, wg których można analizę kosztów przeprowadzić.
+
+![tmp0a03c17e-2379-4eb5-8b5e-ab0d293a9ecf](https://www.cfi.pl/vendohelp/content/imgs/X5/0b1c248602ca79088f49afa040098b1d-54694-0.png)
+
+**Filtry wewnętrzne**
+
+![tmp259db0ae-716c-439a-9668-4a177d9853e1](https://www.cfi.pl/vendohelp/content/imgs/F3/de4cccf4d13ad3e74141edae6c933751-41360-0.png)
+
+![tmp4d949b17-371b-46a7-8a8a-3f5b8c557d50](https://www.cfi.pl/vendohelp/content/imgs/T5/db4e7078a6ea0ce70eb70c1d9a5a0e0a-26776-0.png)
+
+**Filtry zewnętrzne**
+
+![tmp6b4c2ef2-26d3-421c-884a-e090eb429039](https://www.cfi.pl/vendohelp/content/imgs/C8/ea0dda8602c101b2cf1d75b9e5cb3240-7493-0.png)
+
+**Analiza wg**
+
+![tmp64b5baf8-e5de-4814-bc86-57270f2cc7a4](https://www.cfi.pl/vendohelp/content/imgs/A0/97339065fe7574ad28486b7390d84dec-11520-0.png)
+
+## Analiza zakupów
+
+**Widok główny**
+
+Raport dotyczący zakupów jako źródło danych bierze listę utworzonych dokumentów PZ. Zasady działania tej analizy są bardzo zbliżone do Analizy sprzedaży. Różnice dotyczą głównie kryteriów, według których można analizę zakupów przeprowadzić. Zwróćmy uwagę na pole Bez usług – system nie będzie brał pod uwagę pozycji usług nawet jeśli te znalazły się na PZ.
+
+**Filtry wewnętrzne**
+
+![tmp9c4f3672-5912-4316-8881-c3613ef4c1aa](https://www.cfi.pl/vendohelp/content/imgs/N3/b8e04c01dfd70423a9d8d3b2ff15bf99-47336-0.png)
+
+![tmp1b0ab3bf-6b74-4fa3-be11-7a2bb5dffa44](https://www.cfi.pl/vendohelp/content/imgs/G2/4723a6f03c22e89d16355377e92c93cc-29950-0.png)
+
+**Filtry zewnętrzne**
+
+![tmp7684057d-6468-429d-9823-435647c7f996](https://www.cfi.pl/vendohelp/content/imgs/V7/96c74e0730bc0e53e538e370d1878ba6-7639-0.png)
+
+**Analiza wg**
+
+![tmp13ba2205-bc35-466b-877e-efc95d766d03](https://www.cfi.pl/vendohelp/content/imgs/B7/6d56160d393c32060be6dfebe20b991d-12796-0.png)
+
+## 	Podsumowanie dokumentów
+
+**Widok główny**
+
+Raport umożliwiający wybór i podsumowanie konkretnego typu dokumentu, różne ujęcia dokumentów według pozycji, towaru, itp. Raport działający w zadanym okresie prezentujący również wartości wynikające z dokumentów.
+
+![tmp41dc15ab-cf0f-44c7-95ea-e1c9e931fba8](https://www.cfi.pl/vendohelp/content/imgs/V7/34e35cb2398b0c32f768ed24d1cbe2f8-170010-0.png)
+
+Filtry, które można wykorzystać przy tworzeniu raportu:
+-	Od – do
+-	Seria
+-	Magazyn
+-	Ustawienia listy
+-	Pomiń rodzaj dokumentu
+-	Nr obcy
+-	K2 (klient odbiorca)
+-	D2 (data druga)
+-	Kody
+
+**Filtry wewnętrzne**
+
+![tmp4ad74e4c-e796-4674-8a9b-b22092e7fa60](https://www.cfi.pl/vendohelp/content/imgs/F7/5432bde599907ef3b4da31768cc0f831-27960-0.png)
+
+![tmp4d0e05b4-995a-4e9f-855a-7496b7f9cb14](https://www.cfi.pl/vendohelp/content/imgs/V1/890778c18b819c0025d8f05bb7345f2b-27122-0.png)
+
+![tmp70493a63-1bb0-4279-984a-4dddb0ac8942](https://www.cfi.pl/vendohelp/content/imgs/S2/7ffb5a9e0ebc09170d606c10c5f7fe36-11517-0.png)
+
+**Filtry zewnętrzne**
+
+![tmp0b4a4e20-27af-40d4-bce1-6ee044bd82f3](https://www.cfi.pl/vendohelp/content/imgs/D1/d7cb4227f695339eb99a32b04801ca1a-6290-0.png)
+
+## 	Średni czas realizacji zamówienia
+Raport pokazuje zamówienia w wybranym okresie. W zależności od wybranego filtru w raporcie prezentowane są Zamówienia od klienta lub Zamówienia do dostawców. Standardowo raport pokazuje pozycje zamówień. Istnieje również możliwość grupowania widok według Towaru, Klienta, Dokumentu. 
+
+**Widok główny**
+
+![tmp3255f815-efb2-4888-829b-747c55beb550](https://www.cfi.pl/vendohelp/content/imgs/Z3/9ab2792b95015dc86e9bd568757be8b2-141964-0.png)
+
+**Filtry wewnętrzne** 
+
+Brak
+
+**Filtry zewnętrzne**
+
+![tmp17816f35-d54b-43fd-a902-e9a20b3e1fd3](https://www.cfi.pl/vendohelp/content/imgs/B9/31392ae1faf5824fb68cbb6115222cdb-6076-0.png)
+
+## OTIF dla ZO
+
+Raport realizacji zamówień od klientów
+
+**Widok główny**
+
+![tmp37e08985-0bd6-4e74-bba4-276666d5bea1](https://www.cfi.pl/vendohelp/content/imgs/J7/791da863ff633584e7798c16dadb7ab7-150086-0.png)
+
+
+**Filtry wewnętrzne**
+
+Brak
+
+**Filtry zewnętrzne**
+
+![tmp630942e0-e513-4fd4-84aa-a4ebb8812856](https://www.cfi.pl/vendohelp/content/imgs/I6/e2ab2eda217f08a2c80e5aed693b7203-4137-0.png)
+
+## OTIF dla ZW
+
+Raport realizacji zamówień do dostawców
+
+**Widok główny**
+
+![tmp8da8d47a-cab0-4b4e-b7a5-d343ecbb9383](https://www.cfi.pl/vendohelp/content/imgs/S4/04885bf0596a5c6f89ab0ca1677ecd5e-184037-0.png)
+
+
+**Filtry wewnętrzne**
+
+Brak
+
+**Filtry zewnętrzne**
+
+![tmp16c8f22c-fd31-4704-8cb7-121d8ccf783a](https://www.cfi.pl/vendohelp/content/imgs/O4/d11c923bf9f474d328804631fd313918-4038-0.png)
+
+## 	Zamówienie obce 
+
+Raport prezentujący pozycje dokumentów Zamówienia obce
+**Widok główny**
+
+![tmpbf108361-5dc2-42ee-a5ff-89b6a0072a24](https://www.cfi.pl/vendohelp/content/imgs/Y6/09574d6c34ff09031434495863eeafde-187611-0.png)
+
+**Filtry wewnętrzne**
+
+![tmpfc03bcd1-44fd-4d9b-b41a-e9cffd1469dc](https://www.cfi.pl/vendohelp/content/imgs/L3/2310f0d94cbfa6ee5e68039e1bf96616-26133-0.png)
+
+
+**Filtry zewnętrzne**
+
+![tmpc21eb125-507c-481f-a624-ddfd1a8d0ea6](https://www.cfi.pl/vendohelp/content/imgs/I8/f22efdd529a3a6969f9e860f8a62b599-10277-0.png)
+
+## Awiza Wydania 
+
+Raport prezentujący pozycje dokumentów Awiza wydania
+
+**Widok główny**
+
+![tmp7a1804f1-23dc-4e80-810f-f2c32e3a1dfb](https://www.cfi.pl/vendohelp/content/imgs/Q0/0731f003f4bc201b395ce1d713c9f1c9-61301-0.png)
+
+**Filtry wewnętrzne**
+
+![tmpaad57aaa-59da-4b1f-82df-dd4ab2db8f0d](https://www.cfi.pl/vendohelp/content/imgs/H3/3d406696d247afc6b3867ced8f98fb59-24288-0.png)
+
+**Filtry zewnętrzne**
+
+![tmp13020d1e-f23d-40ce-9633-e4ea6c51e45e](https://www.cfi.pl/vendohelp/content/imgs/P7/4f6bc22d07c3195744e2aa09e6065f5c-10276-0.png)
+
+## 	Zamówienia własne 
+
+Raport prezentujący pozycje dokumentów Zamówienia własne
+
+**Widok główny**
+
+![tmp8afda932-40da-4ac0-8c80-8020f65b5d36](https://www.cfi.pl/vendohelp/content/imgs/J5/26e0c0c83e5354d5211e96cf7204e4b7-205051-0.png)
+
+**Filtry wewnętrzne**
+
+
+![tmp8caaf6e6-f4fe-47ac-a8cf-23d4b3b3809d](https://www.cfi.pl/vendohelp/content/imgs/G6/362bf97306383a0bcf04190d5efdcfe4-25131-0.png)
+
+
+**Filtry zewnętrzne**
+
+![tmp08af3db5-e84d-469f-b0fc-8c19da22e7f6](https://www.cfi.pl/vendohelp/content/imgs/T3/15fa42303b99deffdaa1c782cd7a2b0f-6467-0.png)
+
+## Zamówienia wewnętrzne
+
+**Widok główny**
+
+![tmp49243457-8e69-4721-a414-b4157bf1b113](https://www.cfi.pl/vendohelp/content/imgs/N9/c130bf7bd628d76daf0efdf28a778b4d-44334-0.png)
+
+**Filtry wewnętrzne**
+
+![tmpfdba0f37-6f42-4835-b0e4-302da567ff17](https://www.cfi.pl/vendohelp/content/imgs/P1/984485dcec3d400a00bcd1df6fb0bcc4-24531-0.png)
+
+**Filtry zewnętrzne**
+
+![tmp8b047ebc-1da6-4e44-919f-ae0f26ba7bab](https://www.cfi.pl/vendohelp/content/imgs/B7/b8430a5e517a026ed88da67abbc5dc00-6310-0.png)

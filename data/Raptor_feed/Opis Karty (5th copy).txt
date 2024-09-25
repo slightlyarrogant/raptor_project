@@ -1,0 +1,114 @@
+
+# Kalendarze pracownicze
+
+
+# Cel:
+
+Kalendarz pracowniczy ma za zadanie prezentacje jak również rozplanowanie w danym miesiącu dni przewidzianych m. in., jako:
+- dni pracy 
+- dni wolne, 
+- dni urlopu
+- chorobowe.  
+
+Normatyw rbh określa ilość przepracowanych godzin w poszczególne dni, wynikająca z zarejestrowanych przez pracownika prac. 
+Karta kalendarza pracowniczego, jest też oknem, w którym pracownik może bardzo wygodnie i sprawnie rejestrować prace dla wybranego dnia kalendarza.
+Karta kalendarza może przedstawiać również pewne podsumowania, kwoty wynagrodzeń oraz inne informacje, które dla kalendarzy można dowolnie zdefiniować.
+
+# Lokalizacja
+
+Menu główne > Pracownicy > Kalandarze pracownicze
+
+# Opis funkcjonalności zasady działania
+
+
+Aby dokonać wglądu weryfikacji jak również zmian w swoim kalendarzu, użytkownik zalogowany w Vendo powinien wybrać:  `[Menu główne]` > `[Pracownicy]` > `[Kalendarze pracownicze]`. 
+W oknie dialogowym użytkownik zobaczy listę własnych kalendarzy miesięcznych.
+Pracownik, najczęściej ma ograniczone uprawnienia i może mieć wgląd tylko w swoje kalendarze.
+Tworzeniem oraz rozplanowaniem kalendarzy Pracowniczych zajmują się osoby za to odpowiedzialne mające odpowiednie uprawnienia w systemie  
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N5/10bb095d57404add04bb6f2af151c2f4-77857-0.png)
+
+
+Aby otworzyć kartę kalendarza, należy na wyświetlonej listy wybrać rekord określający właściwy miesiąc dla którego kalendarz został utworzony. Wybór zatwierdzić klikając dwukrotnie myszka bądź wciskając klawisz Enter. 
+
+
+### Zakładki kalendarza pracowniczego
+
+
+***Nagłówek*** -  zakładka ta jest głównym oknem kalendarza pracowniczego gdzie prezentowane są wszystkie niezbędne informacje. Z poziomu tejże zakładki użytkownik ma wgląd w rozplanowany miesiąc. Aby ułatwić weryfikacje rozplanowanych dni zastosowano wyróżniki w postaci kolorów i tak: 
+-	dni robocze – oznaczone są kolorem czarnym
+-	dni chorobowe – oznaczone są kolorem czerwony,, 
+-	urlop – oznaczone są kolorem zielonym, 
+-	wolne - oznaczone są kolorem niebieskim,
+-	dodatkowy typ Inne - kolor szary.
+
+Najważniejsze pola zakładki Nagłówek to :
+
+-	Data utworzenia – data wygenerowania kalendarza
+-	Pracownik – informacja o pracowniku 
+-	Miesiąc – miesiąc którego dotyczy karta kalendarza
+-	Wynagrodzenie – informacja o wynagrodzeniu pracownika, parametr uzupełniany z poziomu karty pracowniczej
+-	Premia – informacja o przydzielonej premii, parametr uzupełniany z poziomu karty pracowniczej
+-	Suma – suma wynagrodzenia wraz z premia
+-	Normatyw – ilość godzin pracy łącznie w danym miesiącu kalendarzowym 
+-	Obecność – parametr korzystający z czytnika RCP
+-	Przepracowane – łączna suma przepracowanych godzin
+-	Chorobowe- łączna suma godzin w których pracownik przebywał na zwolnieniu lekarskim
+
+***Sekcja to Koszty rbh***  - określa łączny koszt pracy pracownika
+
+W dolnej sekcji okna głównego użytkownik ma możliwość skorzystania z filtrów które pozwalają na selekcje godzin pod względem godzin przepracowanych, urlopu, chorobowego itd.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T3/a98ecd854c5f19ae323ef8c79087cf9f-233145-0.png)
+
+
+Szczegóły dotyczące dowolnego dnia z kalendarza otwieramy przez podświetlenie wybranego dnia a następnie dwukrotne kliknięcie klawiszem myszy bądź wciskając `[Enter]`.
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q6/968945dd81b0c735c90e30c7db34317f-17744-0.png) 
+
+
+Zwykły pracownik, najczęściej ma ograniczone uprawnienia jeśli chodzi modyfikacje danych tak więc zmianami w rozplanowanym kalendarzu  dotyczącymi wpisem chorobowego, urlopu, normatywu rbh na poszczególne dni zajmują się odpowiedzialne za to osoby.
+
+
+
+***Zakładka Prace*** - W zakładce Prace użytkownik ma możliwość weryfikacji, modyfikacji, dodania prac wykonywanych w danym dniu. Sposób dodawania, rejestracji czasu pracy dniu wygląda analogicznie jak  w przypadku opisanym poniżej.
+Tak więc w zakładce ***Prace*** można sprawdzić wszystkie prace w miesiącu oraz rejestrować prace w dowolnie wybranym dniu:
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/953cba7db792507f316d3c3f9caa5e73-84650-0.png)
+
+***Pliki i wartości dowolne*** – w zakładce tej istnieje możliwość dodania plików, definiowania dodatkowych pól, tworzenia katalogów związanych z kalendarzem 
+
+
+## Rejestracja oraz weryfikacja prac dla wybranego dnia w kalendarzu pracowniczym
+
+
+Rejestracja/modyfikacji prac w kalendarzu odbywa się dwojako. Użytkownik ma możliwość dokonania tego zarówno z poziomu zakładki Nagłówek jak również po przejściu na zakładkę Prace.
+W przypadku rejestracji bądź modyfikacji z poziomu zakładki Nagłówek należy najechać kursorem na wybrany dzień , w  kolumnie `[Przepracowane [rbh]]`, kliknąć w link na wyświetlanej ilości rbh. W otwartym oknie dialogowym użytkownik ma możliwość dodania nowego rozliczenia pracy. W przypadku gdy w danym dniu były już wykonywane jakieś czynności będą one również widoczne
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M8/7a265587c294afb90b6c995c7e401ba0-58131-0.png)
+
+
+Z poziomu powyższego okna Użytkownik ma możliwość dodać bądź modyfikować wykonanie w danym dniu prace. Aby tego dokonać należy kliknąć `[Dodaj]` lub `[klawisz Insert]` zostanie wyświetlone okno gdzie należy podpiąć swoja prace pod projekty, zlecenia, procesy sprzedaży, bądź inne zdarzenia. 
+Istnieje również możliwość  dodania nowo wykonanych prac jako niepodpiętych czyli prac nie skojarzonych z żadnym zleceniem bądź innego typu zdarzeniem  - przycisk `[Dodaj niepodpięte]` `[Shift+Insert]`.
+
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K2/48a9aba382a28f77383897a9e160f878-113997-0.png)
+
+
+Podpięcie prac wiąże się z wyborem obiektu (zdarzenie, zlecenie, projekt itp.) a następnie uzupełnieniu pozostałych niezbędnych do rejestracji danych
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/e73a9c7ece9f3dc9edaeaf1e67cd785a-13850-0.png)
+
+W przypadku niepodpinanej pracy powyższe okno pojawi się jako pierwsze.
+W obu przypadkach, potwierdzenia dokonuje się klikając `[Zatwierdź]` `[lub Ctrl+Enter]` - praca zostanie dodania:
+
+
+Liczba godzin przepracowanych w poszczególne dni wynikająca łącznie z dodanych prac zostanie odświeżona po ***przeliczeniu*** kalendarza ( buton `[Przelicz]` - funkcja dostępna z poziomu zakładki Nagłówek). Do operacji tej zwykły pracownik może nie mieć uprawnień, wtedy czynią to odpowiedzialni za to pracownicy.
+
+
+
+
+
+
+

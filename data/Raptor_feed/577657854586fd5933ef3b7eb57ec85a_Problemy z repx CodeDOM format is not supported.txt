@@ -1,0 +1,38 @@
+Problemy z .repx (CodeDOM format is not supported)
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/repx
+scraped_at: 2024-09-05T12:18:50.454917
+last_updated: 2024-09-05T12:18:50.454948
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Problemy z .repx (CodeDOM format is not supported)
+meta_tags: ['repx', 'plik', 'formacie', 'codedom', 'opcje', 'pliki', 'funkcje', 'zapisz', 'jako', 'files']
+
+Content
+Przyczyna
+Ze względów bezpieczeństwa DevExpress wyłączył opcje deserializacja raportów - pliki .repx i styli - pliki .repss przechowywanych w formacie CodeDOM.
+Próba ich załadowania spowoduje rzuceniem wyjątku:
+Deserialization from CodeDOM format is not supported in .NET Core applications.
+Rozwiązanie
+Szablon należy otworzyć w Vendo (max w wersji 2022) :
+
+Wejdź w: Spedycja > Zlecenia transportowe > Dowolne zlecenie > Funkcje > Wydruk etykiety z szablonu > Funkcje > Dodaj nowy szablon > Projekt
+W kreatorze raportu: Plik > Otwórz, wybierz plik .repx
+"Czy plik z bezpiecznego źródła?" >> Tak
+"The XtraReport contains bindings. Do you want to convert them to expressions?" >> Tak
+Plik > Zapisz jako, zapisz jako plik .repx, sprawdź czy w środku jest xml
+
+Zapobieganie
+Plik .repx może być zapisany na dwa sposoby:
+
+Report Files (.repx) - zapisane w formacie CodeDOM, przypomina zwykłą klasę C#, powoduje błędy*
+Report XML Files (.repx) - zapisane w formacie xml, przypomina plik xml, działa poprawnie*
+
+Obie opcje zapiszą plik o rozszerzeniue .repx, jednak będą różnić się treścią!
+
+Pomocne linki
+
+Opcje zapisu pliku raportu
+DevExpress o wyłączeniu funkcji
+
+Images

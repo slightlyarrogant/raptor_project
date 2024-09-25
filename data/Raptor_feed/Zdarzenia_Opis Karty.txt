@@ -1,0 +1,137 @@
+# 	Karta dokumentu zdarzeniowego
+## 	Opis
+Dokumenty zdarzeniowe są reprezentacją zachodzących w firmie procesów związanych z komunikacją i organizacją zadań. Są to konkretne czynności związane z obsługa klienta, wewnętrznymi zadaniami lub ustalonymi schematami postępowania. Dokumenty zdarzeniowe to również formularze posiadające nagłówek, dedykowane pola oraz zakładki umożliwiające powiązanie z innymi obiektami w systemie. Dokumenty zdarzeniowe są podzielone według Rodzajów zdarzeń, np. Spotkania, Zadania, Kontakty. Każdy z rodzajów posiada możliwość definiowania indywidualnych uprawnień dotyczących dostępu i edycji oraz osobną możliwość dostosowania karty w zakresie widoku zakładek oraz wybranych pól na formularzu. 
+
+Przykłady dokumentu zdarzeniowego Kontakt zaprezentowano na poniższym rysunku.
+
+![tmp4d5f6a45-96a0-4fd5-bcf3-6a7b944e38bf](https://www.cfi.pl/vendohelp/content/imgs/Z3/ef0e8cd2c2fd896ab615f3315a6356bb-74828-0.png)
+
+### 	Rodzaje dokumentów zdarzeniowych
+Podstawowy podział dokumentów zdarzeniowych to:
+-	Kontakt
+-	Notatka 
+-	Spotkanie
+-	Zadanie 
+
+Istnieje jednak możliwość spersonalizowania opcji wyboru w zależności od potrzeb użytkownika, poprzez rozszerzenie listy dostępnych wariantów np. reklamacja, szkolenie, informacja
+
+
+### 	Numeracja
+Każdy dokument zdarzeniowy posiada indywidualny numer budowany według zasady:
+
+NUMER_KOLEJNY / RODZAJ_ZDARZENIA
+
+Gdzie:
+-	Numer kolejny – numer kolejny
+-	Rodzaj zdarzenia – skrót rodzaju zdarzenia  
+
+
+Przykłady numeracji zdarzeń:
+-	Spotkanie: 13/SPT
+-	Notatka: 65/NOT
+-	Zadania: 28/ZAD
+
+
+
+
+
+## 	Zakładki
+
+### 	Nagłówek
+
+![tmp4d5f6a45-96a0-4fd5-bcf3-6a7b944e38bf](https://www.cfi.pl/vendohelp/content/imgs/Z3/ef0e8cd2c2fd896ab615f3315a6356bb-74828-0.png)
+
+| Nazwa pola        | Opis                                                                                               | Typ               |
+|-------------------|----------------------------------------------------------------------------------------------------|-------------------|
+| Numer             | Numer zdarzenia                                                                                    | Tekst             |
+| Kontrahent        | Referencja do kartoteki klienta                                                                    | Słownik           |
+| Osoba klienta     | Referencja do kartoteki człowieka klienta                                                          | Słownik           |
+| Zlecenie          | Referencja do zlecenia (Proces sprzedaż, Zlecenie produkcyjne, Zlecenie serwisowe itp.)             | Słownik           |
+| Etap              | Referencja do Etapu w ramach powyższego Zlecenia                                                   | Słownik           |
+| Obiekt            | Referencja do obiektów (np. Salki konferencyjne, Stanowiska pracy itp.)                            | Słownik           |
+| Typ               | Słownik typu zdarzenia                                                                             | Słownik           |
+| Kolor zlecenia    | Kolorystyczne oznaczenie zlecenia                                                                  | Słownik           |
+| Praca             | Liczba rbh zarejestrowana w ramach zdarzenia                                                       | Liczba            |
+| Plan              | Planowana liczba rbh na wykonanie zdarzenia                                                        | Liczba            |
+| Stan              | Stały słownik. Stan zlecenia produkcyjnego: Realizowane / Zamknięte / Anulowane                     | Pole typu radiobutton |
+| Rozpoczęcie       | Planowana data rozpoczęcia wykonywania zdarzenia                                                   | Data i czas       |
+| Zakończenie       | Planowana data zakończenia wykonywania zdarzenia                                                   | Data i czas       |
+| Termin            | Wyznaczony termin na wykonanie zdarzenia                                                           | Data i czas       |
+| Temat             | Główny powód utworzenia zdarzenia                                                                  | Tekst             |
+| Miejsce           | Opis dotyczący miejsca zdarzenia                                                                   | Tekst             |
+| Opis              | Opis zdarzenia                                                                                     | Tekst             |
+
+### Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmpaf3c726c-6054-474f-8618-b64067022aad](https://www.cfi.pl/vendohelp/content/imgs/T9/f6f63e6ad46bd790eddbd093b0f39152-62498-0.png)
+
+### Klienci
+
+Możliwość dodawania kolejnych kartotek klientów lub ludzi klienta do zdarzenia.
+
+![tmpa1f942e5-b2b5-4411-a5b3-d8b4f1f340bb](https://www.cfi.pl/vendohelp/content/imgs/P5/c44766ed51b0b9dacaef4696f8c426f7-71250-0.png)
+
+### 	Dokumenty
+
+Dokumenty systemowe zarejestrowane w VENDO.ERP powiązane z danym zdarzeniem, np. zamówienia obce
+
+![tmpc4d31891-8e1d-422f-bace-9d56e9ff3c72](https://www.cfi.pl/vendohelp/content/imgs/X3/c45077a6904965389256bdf25a434256-73320-0.png)
+
+### Zdarzenia powiązane
+
+Dokumenty zdarzeniowe zarejestrowane w VENDO.ERP powiązane z danym zdarzeniem, np. inne zadania, kontrole
+
+![tmp2b420a81-0b88-4f0f-9ce4-7092739b9216](https://www.cfi.pl/vendohelp/content/imgs/C8/d5c7fd6656055c823f05193ae99f4349-75463-0.png)
+
+### Zasoby
+
+
+Możliwość powiązania zdarzenia z zasobami w celu np. ich rezerwacji
+
+![tmpf4ae19df-e8ec-45b2-b401-d12a6d6ec145](https://www.cfi.pl/vendohelp/content/imgs/H5/df06d7b315fafd74e27006aed0330507-78569-0.png)
+
+### Prace
+
+Prace -  zakładka informująca o czasie przeznaczonym na wykonanie danego zdarzenia. Funkcja ta pozwala na precyzyjne rozliczenie czasu jak również kosztów związanych z wykorzystaniem danego zdarzenia.  
+
+![tmp890f0528-fe55-4262-9e02-621cab987390](https://www.cfi.pl/vendohelp/content/imgs/G6/900e35dc4bc8f025c578367f07816dea-77083-0.png)
+
+### 	Pracownicy
+
+Osoby przydzielone do wykonania danego zdarzenia. W przypadku gdy istnieje konieczność aby w zdarzeniu brały udział osoby trzecie istnieje możliwość dopisania ich do zdarzenia w zakładce pracownicy (wykonujący zdarzenie jest oznaczony jako pracownik domyślny). Aby dopisać pracownika do należy wybrać jedna z opcji „Dodaj do wykonania” bądź „Dodaj do wiadomości”.
+
+![tmpc4917605-3253-4527-8c99-cef16a907fcd](https://www.cfi.pl/vendohelp/content/imgs/U6/141dffe72efacea533da82abfd9936de-72100-0.png)
+
+
+### Pliki
+
+Kartoteka posiada możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd
+
+
+
+![tmpfe6aa7ac-6533-4e3a-9c8b-d96ce7e2d155](https://www.cfi.pl/vendohelp/content/imgs/E2/d5503034c169aa5e299265a0cee06a73-68698-0.png)
+
+### Załącznik główny
+Załącznik główny - w przypadku, gdy zdarzenie ma zawierać załączniki można je utworzyć zarówno z poziomu systemu jak również dopiąć z podanej przez użytkownika lokalizacji. Po zapisaniu zdarzenia dodany załącznik będzie widoczny w zakładce załącznik główny
+
+![tmpa94743eb-1bae-481c-a34a-f148e651d6db](https://www.cfi.pl/vendohelp/content/imgs/Z7/085f1843131599b708806177e919ce24-74152-0.png)
+
+
+### 	Tworzenie dokumentów zdarzeniowych
+Zdarzenia w systemie można utworzyć na kilka sposobów. Pierwszym i najczęściej popularnym sposobem jest zaznaczenia w kalendarzu okresu w jakim planujemy wykonać daną czynność. Następnie poprzez klikniecie prawym przyciskiem myszki wybieramy opcje `Nowe zdarzenie` > rodzaj czynności np. `Zadanie`
+
+
+Innym sposobem dodania zdarzenia jest przejście do zakładki `Zdarzenia` (`CRM`>`Zdarzenia`). Kliknięcie prawym przyciskiem myszy bądź wciśnięcie klawisza `[Insert]` wybieramy opcje `Dodaj zdarzenie`> rodzaj czynności np. `Zdarzenia` 
+ 
+
+Jeśli konieczne jest szybkie utworzenie nowego zdarzenia np. podczas rozmowy telefonicznej z kontrahentem, można to zrobić klikając `Praca na nowym zdarzeniu` funkcja ta umiejscowiona jest w głównym menu programu znajdującego się w zakładce Program.  W kolejnych krokach postępujemy analogicznie jak niżej opisanych przykładach.
+ 
+
+Po założeniu zdarzenia należy określić parametry takie jak: Właściciel, czyli osoba zajmująca się danym zdarzeniem (domyślnie właścicielem jest osoba zakładające zdarzenie) oraz pole Kontrahent, czyli instytucje której dotyczy zdarzenie.  Wyboru dokonujemy poprzez kliknięcie w ikonę trzech kropek obok wypełnianego pola lub wpisując początek nazwy. Opcjonalnie można również wypełnić pole „Osoba klienta” - pole to mówi kto jest osoba kontaktową danej firmy.
+ 
+W momencie, gdy temat zostanie zakończony użytkownik zaznacza opcje `[Wykonane]` (opcje zlokalizowana w lewym dolnym rogu formatki) oraz zapisz. Spowoduje to, iż informacja o zdarzeniu zniknie z zakładki moje zadania a w kalendarzu oznaczy się jako wykonane.   
+ 
+
+

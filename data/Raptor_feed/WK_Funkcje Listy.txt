@@ -1,0 +1,12 @@
+# Wzorce księgowań
+
+W ramach dostępu do zakładki wzorce księgowań użytkownik ma możliwość skorzystania z dostępnych funkcjonalności. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpb967b39a-1c4a-41aa-99e9-0fb9ac90dc8e](https://www.cfi.pl/vendohelp/content/imgs/B9/169ffb3e76a3d27f1b98cc3afe0f5067-20076-0.png)
+
+Do listy wzorców księgowań program VENDO ERP. oferuje następujące funkcje:
+- dodawanie nowego wzorca
+- edytowanie nazwy istniejącego już wzorca
+- usuwanie wzorca
+- kopiowanie wzorca
+- kopiowanie wzorca na bieżący miesiąc

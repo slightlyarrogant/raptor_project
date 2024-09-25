@@ -1,0 +1,72 @@
+# Struktura produktu
+## Opis
+Struktura produktu to hierarchiczna organizacja komponentów, składników lub elementów, które tworzą dany produkt. W systemie VENDO. ERP, struktura produktu jest prezentowana w formie drzewa, gdzie każdy element wchodzący w skład produktu jest przedstawiony jako węzeł w hierarchii. Węzłami w hierarchii są inne struktury, które stanowią osobne etapy produkcji bezpośrednio skojarzone z docelowymi kartotekami towarowymi (półproduktami). Struktury można podzielić na trzy rodzaje: Kupowany, Produkowany, Kooperacyjny.  Pomiędzy strukturami występującymi w formie drzewa istnieje relacja z przelicznikiem definiującym ilość wymaganych poprzedniej struktury, z którą jest powiązana.
+
+![tmpce58267b-4c50-4274-8335-8a21da231e46](https://www.cfi.pl/vendohelp/content/imgs/Y0/87a1a225fa6a7e6a543a435bb957478d-44119-0.png)
+
+Jedna kartoteka towaru może mieć więcej niż jedną strukturę produktu. Wyróżnienie struktur dla tej samej kartoteki realizowane jest przez dodatkowe pole Wariant. System na podstawie Kodu i Wariantu zapewnia unikalność takiego powiązania, nie dopuszczając do wystąpienia duplikatów. Przy zatwierdzaniu struktury możliwe jest oznaczenie struktury produktu jako domyślnie stosowanej dla kartoteki towaru. Dzięki temu na pozycji ZLP będzie oznaczona ikonką jako domyślna i automatycznie wybierana do generowania struktury pozycji zlecenia i KKW. 
+
+## Zakładki
+### Nagłówek 
+
+![tmp3f2b92dc-db0e-4bd1-bee7-292bc0e7b388](https://www.cfi.pl/vendohelp/content/imgs/I8/417b22fda87d5905f59f0c019eb0cfb9-89606-0.png)
+
+| Nazwa pola                                 | Opis                                                                                                                                                                                                                                                                                                                | Typ       |
+|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Nr. Rysunku (kod)        | Kod struktury produktu. Razem z polem Wariant tworzą unikalny i jednoznacznie identyfikujący klucz struktury produktu. Możliwe wpisanie liter i liczb.                                                                                                                       | Tekst     |
+| Wariant                                     | Rozróżnienie sposobu produkcji. Razem z polem Nr. Rysunku (kod) tworzą unikalny i jednoznacznie identyfikujący klucz struktury produktu. Możliwe wpisanie liter i liczb.                                                                                                      | Tekst     |
+| Grupa                                       | Słownik grupy technologicznej                                                                                                                                                                                                                                                                                       | Słownik   |
+| Przeliczenie                                | Możliwość zastosowania skryptów automatycznie wyliczających potrzebną ilość jednostkową                                                                                                                                                                                                                             | Słownik   |
+| Nazwa                                       | Nazwa struktury                                                                                                                                                                                                                                                                                                     | Tekst     |
+| Ilość                                       | Możliwość podania wymaganej ilości przy pomocy licznika / mianownik + stała. Pomimo widoczności na karcie struktury to pole dotyczy relacji do struktury nadrzędnej                                                                                                                                                  | Liczba    |
+| Możliwość zmiany na pochodnych strukturach | Możliwość modyfikacji przelicznika ilości na strukturach pochodnych                                                                                                                                                                                                                                                 | Tak / Nie |
+| Opis                                        | Opis struktury produktu                                                                                                                                                                                                                                                                                             | Tekst     |
+| Zachowanie                                  | Stały słownik wyboru: Zwykła, Ukryta, Pomocnicza                                                                                                                                                                                                                                                                    | Słownik   |
+| Towar                                       | Referencja do kartoteki towaru                                                                                                                                                                                                                                                                                      | Słownik   |
+| Rodzaj                                      | Stały słownik wyboru: Zakupowa, Produkcyjna (wymaga powiązania z technologią produkcyjną), Kooperacja. Główną różnicą pomiędzy powyższymi rodzajami jest ich zachowanie w stosunku do przeliczników na magazynie. Natomiast pod względem wyglądu kartoteki struktury sposobu pracy są to kategorie dość zbliżone do siebie | Słownik   |
+| Technologia                                 | Referencja do technologii produkcyjnej. Jest obowiązkowa dla struktur o Rodzaju Produkcyjna                                                                                                                                                                                                                          | Słownik   |
+
+
+### Drzewo struktury
+
+Struktura produktu jest prezentowana w formie drzewa, gdzie każdy element wchodzący w skład produktu jest przedstawiony jako węzeł w hierarchii.
+
+![tmp9b1c8dfe-5b3d-4e8d-8be3-47524bd28e5c](https://www.cfi.pl/vendohelp/content/imgs/D9/a434f0fe88e7c083882fec14c39b9d59-85996-0.png)
+
+
+### Dane elementu
+
+![tmpf6a98d46-320e-44dc-9923-1ce37e84cf45](https://www.cfi.pl/vendohelp/content/imgs/H9/91ab5bd267764bc96c10159d26049874-124895-0.png)
+
+| Nazwa pola                                  | Opis                                                                                                                                                              | Typ       |
+|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Wymiary (Długość Szerokość Grubość)         | Wymiary netto struktury produktu                                                                                                                                  | Liczba    |
+| Narzut (Długość Szerokość Grubość)          | Narzut na wymiary netto struktury produktu                                                                                                                        | Liczba    |
+| Norma                                       | Norma wykonania                                                                                                                                                   | Tekst     |
+| Odpad / narzut [%]                          | Procentowy odpad / narzut na wymiary brutto                                                                                                                       | Liczba    |
+| Materiał                                    | Referencja do kartoteki towaru stanowiąca materiał (surowiec), z którego wykonany zostanie wyrób / półprodukt                                                     | Słownik   |
+| Ilość [j.m.] (Netto Brutto Z odpadem / narzutem) | Obliczona ilość na podstawie wymiarów netto, brutto i odpadu / narzutu                                                                                            | Liczba    |
+| Waga [kg] (Netto Brutto Z odpadem / narzutem)   | Obliczona ilość na podstawie wymiarów netto, brutto i odpadu / narzutu. System w celu obliczenia pobiera Wagę z kartoteki towaru z pola Materiał                    | Liczba    |
+| Powierzchnia [m2] (Netto Brutto Z odpadem / narzutem) | Obliczona ilość na podstawie wymiarów netto, brutto i odpadu / narzutu. System w celu obliczenia pobiera Powierzchnię z kartoteki towaru z pola Materiał            | Liczba    |
+| Objętość [m3] (Netto Brutto Z odpadem / narzutem)    | Obliczona ilość na podstawie wymiarów netto, brutto i odpadu / narzutu. System w celu obliczenia pobiera Objętość z kartoteki towaru z pola Materiał                | Liczba    |
+| Cecha 1                                     | Dodatkowe pole opisu struktury                                                                                                                                    | Tekst     |
+| Cecha 2                                     | Dodatkowe pole opisu struktury                                                                                                                                    | Tekst     |
+| Cecha 3                                     | Dodatkowe pole opisu struktury                                                                                                                                    | Tekst     |
+| Operacja 1                                  | Referencja do operacji technologicznej                                                                                                                            | Słownik   |
+| Operacja 2                                  | Referencja do operacji technologicznej                                                                                                                            | Słownik   |
+| Operacja 3                                  | Referencja do operacji technologicznej                                                                                                                            | Słownik   |
+| Operacja 4                                  | Referencja do operacji technologicznej                                                                                                                            | Słownik   |
+
+
+### Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmpc86c0fb9-6053-435f-b4d4-bd44053f770b](https://www.cfi.pl/vendohelp/content/imgs/X9/dc6f4d507d3d67da5bb931aefa04ac5e-59672-0.png)
+
+### Struktury pochodne
+
+![tmp6f84b7f4-5f0d-4777-abcf-f925a4d629c7](https://www.cfi.pl/vendohelp/content/imgs/W6/3927e17a128b03492f7ede6519778b6b-64080-0.png)
+
+### Pliki
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd. 

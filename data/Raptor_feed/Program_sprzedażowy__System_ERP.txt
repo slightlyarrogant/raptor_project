@@ -1,0 +1,153 @@
+# Program sprzedażowy | System ERP
+
+# Program sprzedażowy
+
+
+
+## Obsługa sprzedaży
+
+Vendo wspomaga sprzedaż w obszarze wyceny, ofertowania, cenników, zamówień i fakturowania. Porządkuje przebieg poszczególnych czynności oraz całego procesu.
+
+Jako system ERP automatyzuje transakcje handlowe i generowania powiązanych dokumentów minimalizując ryzyko błędów oraz skraca czas obsługi zamówienia.
+
+Oprogramowanie Vendo zarządza również rezerwacjami, gospodarką magazynową, zaopatrzeniem i zleceniami produkcyjnymi podnosząc efektywność pracy działu handlowego.
+
+Umów się na prezentację systemu Vendo.ERP
+
+## Jakie funkcje realizuje Vendo w sprzedaży?
+
+### Kalkulacja i ofertowanie
+
+- oferty wraz ze zdjęciami, opisami, parametrami produktów,
+- kalkulacja produktów i usług na podstawie parametrów np. wymiary, kolor, rodzaj doposażenia, itp.
+- wydruk i wysyłka – wszystkich dokumentów w formacie: pdf, html, xlsx, docx,
+- kalkulacje produkcyjne,
+- konfigurator produktów,
+
+### Obsługa zamówień
+
+- zamówienia „z ręki”,
+- automatyczny import zamówień z systemów zewnętrznych: eCommerce, EDI, systemy mobilne, Allegro, Baselinker,
+- panel zarządzania realizacją zamówień,
+- realizacja zamówień dokumentami magazynowymi lub handlowymi,
+- częściowa realizacja lub anulowania zamówień,
+
+### Dokumenty sprzedaży
+
+- rodzaje dokumentów:Faktury VAT,Paragony,Faktur proforma,Oferty,Zamówienia do klienta,Faktury zaliczkowe,
+- Faktury VAT,
+- Paragony,
+- Faktur proforma,
+- Oferty,
+- Zamówienia do klienta,
+- Faktury zaliczkowe,
+- automatyzacja tworzenia i generowania dokumentów,
+
+- Faktury VAT,
+- Paragony,
+- Faktur proforma,
+- Oferty,
+- Zamówienia do klienta,
+- Faktury zaliczkowe,
+
+### Obsługa posprzedażowa
+
+- reklamacje,
+- serwis urządzeń,
+- badanie satysfakcji klienta,
+
+### Automatyzacja procesów handlowych
+
+- automatyzacja procesów obsługi sprzedaży począwszy od zapytania ofertowego kończąc na rozliczeniu należności za FV,
+
+### Polityka cenowa
+i rabatowa
+
+- indywidualne upusty, okresowe promocje,
+- cenniki grupowe i indywidualne,
+- definiowanie cen uzależnionych od ilości (ceny progowe),
+- rabaty od wartości dokumentu,
+- limity kredytowe, terminy i formy płatności,
+
+### Finanse w sprzedaży
+
+- limity kredytowe, terminy i formy płatności,
+- aktualne informacje o zadłużeniu,
+- blokada klientów,
+- biała księga, sprawdzenie aktywności podatnika,
+- rozbicie płatności za faktury na kilka rat,
+- automatyczne windykacja płatności,
+
+### E-commerce
+
+- automatyczna wymiana informacji ze sklepami internetowymi i systemami B2B dotycząca m.in. towarów i produktów oraz zamówień i ich statusów,
+- integracje mi.in. z:Magento,Shoper,Idosell,Baselinker,
+- Magento,
+- Shoper,
+- Idosell,
+- Baselinker,
+- API,
+
+- Magento,
+- Shoper,
+- Idosell,
+- Baselinker,
+
+### Gospodarka magazynowa w sprzedaży
+
+- rezerwacje towarów,
+- rezerwacje „w przód” – po pojawieniu się na stanie towar jest rezerwowany,
+- rezerwacje wybranych partii,
+- towary zapotrzebowane,
+- zlecenia magazynowe wydania zamówienia,
+
+### Współpraca z zagranicą
+
+- dokumenty eksportowe i wewnątrzunijne,
+- szablony wydruków, nazwy i opisy produktów w językach obcych,
+- wielowalutowość dokumentów,
+- definiowanie kodów, nazw opisów produktów w różnych językach
+- automatyczne pobieranie kursów walut,
+- wielojęzyczna platforma Vendo.B2B
+- sprawdzanie EuroNIP (VIES) oraz deklaracja Intrastat,
+
+### Proces pozyskiwania klientów
+
+- karta procesu sprzedaży,
+- dokumenty w ramach procesu (oferty, zamówienia),
+- nadzór nad terminami, wyznaczanie osób odpowiedzialnych,
+- planowanie i rejestracja zadań i kontaktów,
+- lejek sprzedaży,
+- procedury działania (workflow),
+
+### Karta klienta
+
+- prowadzenie karty klienta,
+- informacje, dokumenty, analizy klienta z pozycji karty,
+- definiowanie pól i charakterystyk klienta, podpinanie plików,
+
+### Wsparcie dla handlowców
+
+- kalendarze zadań i spotkań,
+- mobilny dostęp handlowców do systemu,
+- naliczanie handlowcom wynagrodzeń i premii poprzez definiowalne algorytmy,
+
+### Relacje z klientem
+
+- dostęp do informacji o kliencie z jednego miejsca,
+- zarządzanie relacjami z klientem poprzez CRM,
+- panel B2B dla klienta dający mu dostęp do informacji o ofercie, zamówień, serwisu,
+
+### Akcje marketingowe
+
+- karta akcji marketingowej,
+- wybór uczestników akcji (klientów) akacji wg zaawansowanych kryteriów,
+- harmonogram zadań w ramach akcji,
+- odnotowywanie realizacji kontaktów,
+- ceny specjalne (np. promocje gazetkowe),
+- korespondencja seryjna: mailing, etykiety adresowe,
+
+### Mobilność
+
+- ofertowanie, zamówienia, sprzedaż przy pomocy telefonów i tabletów z systemem Android lub iOS,
+

@@ -1,0 +1,67 @@
+Rozliczenie produkcji
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/inter-stal/rozliczenie-produkcji
+scraped_at: 2024-09-05T11:50:30.180090
+last_updated: 2024-09-05T11:50:30.180138
+parent_id: 8897f44783a5c723d9cd9a83d6df6ae9
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji
+meta_tags: ['produkcji', 'wartości', 'dokumentów', 'poziomu', 'weryfikacja', 'należy', 'celu', 'jest', 'weryfikacji', 'wybrać']
+
+Content
+Cel:
+TODO Weryfikacja rozchodów/przychodów przy rejestracji produkcji w poparciu o przewodniki KKW, Jak również wyceny kosztu produkcji w poprzez przeliczenia wartości dokumentów PW a w konsekwencji po wykonaniu niezbędnych analiz zamknięcie przewodnika produkcyjnego KKW
+Opis funkcjonalności
+Codzienna weryfikacja produkcji pod kontem rozchodów i przyjęć
+W celu przeprowadzenia rozliczenia produkcji konieczna jest weryfikacja poprawności rejestracji na czytnikach pod kontem dyspozycji przychodowych oraz rozchodowych. Procedura codziennej weryfikacji produkcji pod kontem rozchodów i przychodów powinna wykonywana być z opóźnieniem jednej zmiany gdyż rozpoczęte taśmy/kręgi w akumulatorze nie są kończone na jednej zmianie. W celu weryfikacji można wykorzystać raport Rozliczenie produkcji.
+
+W pasku programu wybrać zakładkę Program > Dodaj raport i wybrać dwuklikiem Rozliczenie produkcji.
+W sekcji poświęconej filtrom wybrać odpowiedni zakres dat weryfikowanych KKW
+Po odpowiednim dopasowaniu listy kolumn (sortowanie, grupa technologii) użytkownik będzie miał możliwości weryfikacji aktualnie wykonywanych KKW.
+
+
+
+Dodatkowo, wszelkie niezgodności zaczytanych i rozchodowanych taśm możemy zweryfikować w raporcie Zaczytane taśmy
+
+Kolejny etap weryfikacji odbywa się z poziomu zakładki KKW.
+
+Na liście KKW stworzone zostały kolumny wyleczalne z informacją różnic wagowych rozchodów i przyjęć (Różnica[t] full). W przypadku różnic wagowych pomiędzy RW a PW powyżej 15% system sygnalizuje taka informacje wyświetlając wartości w kolorze czerwonym.
+
+
+Z poziomu list KKW i raportu Rozliczenie produkcji użytkownik ma możliwość wejścia w przewodnik produkcji w celu weryfikacji poprawności wystawionych dokumentów przychodowych/rozchodowych - zakładka Dokumenty. Poprzez odznaczenie chcekboxa Przychody/Rozchody wyświetlone zostaną dokumenty którymi zostały wykonane powyższe operacje. W celu dogłębnej analizy użytkownik może sprawdzić Dyspozycje magazynowe , Rozchody oraz Przychody powstałe w procesie produkcji danego zlecenia poprzez wybór odpowiedniej zakładki dostępnej z poziomu Karty kontroli wyrobu KKW.
+
+W celu korekty rozchodów należy prześledzić odpowiednie dokumenty i porównać z zapisami stanowiskowymi
+Przeliczenie wartości dokumentów PW na wykonanych KKW
+Przeliczenia wartości dokumentów PW wykonujemy w celu wyceny kosztów produkcji Opcja ta dostępna jest z poziomu karty KKW poprzez Funkcje znajdująca się w lewym górnym rogu okna programu (lub prawy przycisk myszy) a następnie wybór pozycji Funkcje > Przeliczenie wartości PW – na podstawie KKW (InterStal). Przeliczenie wartości PW wykonuje się w zakresie dat wystawienia dokumentów rozchodowych/przychodowych.
+
+Przed uruchomieniem funkcji przeliczanie należy ustawić zakres dat dla wykonywanej operacji. Data od jest data utworzenia dokumentu. Funkcja przeliczenia wartości PW spowoduje zaktualizowanie wartość przychodu poszczególnych KKW na podstawie zdefiniowanego wcześniej algorytmu wyceny produkcji.
+
+Weryfikacja poprawności dokumentów KKW
+Weryfikacja wyceny może odbywać się na kilka sposobów:
+
+Pierwszy to wykorzystanie raportu Rozliczenie produkcji, omówiony powyzej.
+Drugi może się odbyć się z poziomu Menu Analizy. Aby tego dokonać należy w Menu Analizy odnaleźć moduł Produkcja, następnie wybrać zakładkę Rozliczenie KKW. Raport ten pozwala na uzyskanie informacji odnośnie sumarycznych wartości kosztów oraz przychodów dla poszczególnych przewodników.
+
+
+
+Trzeci sposób to Weryfikacja wyceny dla pojedynczych pozycji dokumentów możliwa jest z poziomu Menu Analizy > Dokumenty > Podsumowanie dokumentów > RW, PW.
+
+Z poziomu raportu Podsumowania dokumentów istnieje możliwość weryfikacji wartości dla poszczególnych pozycji wystawionych dokumentów PW, RW. Szczegółowa weryfikacja możliwa jest po uruchomieniu a następnie zastosowaniu odpowiednich filtrów dostępnych w lewej części okna programu. Aby wyniki wyświetlane dla danego raportu były bardziej szczegółowe istnieje możliwość skorzystanie z szeregu dostępnych filtrów. Jedną z możliwości selekcji wyboru jest założenie filtrów na poszczególne kolumny. Funkcja dostępna po kliknięciu [prawym przyciskiem myszy] w nagłówek kolumny > Dodaj filtr na kolumnę > uzupełnić frazę po której ma zostać wykonanie sortowanie. Aby dokonać podsumowania wyświetlanych wartości dla wybranych okresów zdefiniowanych filtrami należy użyć klawisza F10.
+
+Zamknięcie KKW
+Po wykonaniu wszystkich operacji związanych z weryfikacja, ewentualną poprawą wystawionych dokumentów a następnie przeliczeniu wartości PW na wykonanych KKW należy zamknąć wystawione przewodniki KKW Zamknięcie KKW odbywa się z poziomu listy KKW, aby tego dokonać należy:
+
+W Menu głównym moduł Produkcja wybrać zakładkę KKW
+Na liście dostępnych pozycji oznaczy te które mają zostać zamknięte
+Kliknąć prawy klawisza myszy, następnie z listy dostępnych opcji wybrać Zamknij zaznaczone KKW
+
+W oknie zbiorczego zamykania KKW należy zaznaczyć checkbox pozycji [Zamknij ZLP] w przypadku, jeśli wszystkie KKW zostały zamknięte (PrtScn poniżej)
+
+Images
+
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+MES - Stan maszyn - projektowanie
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/mes/mes-schematy-widoku
+scraped_at: 2024-09-05T12:12:07.168131
+last_updated: 2024-09-05T12:12:07.168181
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/MES - Stan maszyn - projektowanie
+meta_tags: ['widoku', 'schemat', 'nowy', 'schematu', 'nasz', 'nowego', 'ustawienia', 'wybieramy', 'danych', 'link']
+
+Content
+Opis
+Do przygotowania nowego schematu widoku możemy wykorzystać już istniejący - jeden ze schematów wbudowanych - lub utworzyć zupełnie pusty.
+Tworzenie nowego na podstawie istniejącego schematu
+W tym celu należy:
+
+Przejdź na zakładkę MES - Stan maszyn;
+Z menu: Zakładka > wybierz: Ustawienia;
+Ustaw na widoczny ten schemat widoku jaki chcesz wybrać jako ten źródłowy dla nowego schematu. Przykładowo, wybierzmy widok podstawowy: --- Historia stanów ---, następnie zapisujemy ustawienia Ok;
+Wybieramy dowolny kafelek, klikamy na przycisk Definicja widoku;
+W nowym oknie - edytora schematów widoku - wybieramy: Export i zapisujemy do pliku nasz szablon. Po zapisaniu zamykamy edytor.
+Przechodzimy w głównym menu programu do Ustawienia -> Główne -> Słowniki. Rozwijamy opcję Ustawienia ogólne i klikamy dwukrotnie na Schematy widoków. W nowym oknie pokaże nam się lista ze zdefiniowanymi schematami na naszej bazie danych.
+
+
+Tutaj nie są widoczne wbudowane schematy widoku dla MES stan maszyn.
+
+
++ dodajemy nowy schemat w kontekście: TG_OBIEKTY.
+
+
+Jeśli wybierzemy inny kontekst to nasz schemat nie będzie dostępny do wyboru.
+
+
+Dla nowego schematu dodajemy + nową wersję. W oknie edytora dajemy Import i wczytujemy szablon z pliku (tan, który został zapisany w punkcie 5.
+Nie dokonujemy na tym etapie żadnych zmian, zapisujemy nasz nowy schemat widoku i przechodzimy z powrotem do widoku naszej zakładki MES stan maszyn.
+W ustawieniach - tak jak w punkcie 2 - wybieramy z listy nasz nowy schemat widoku. Zmianę zatwierdzamy Ok.
+Teraz, jak już mamy utworzony i wybrany jako widoczny, nasz nowy schemat może być edytowany. Wybieramy kafelek, klikamy na przycisk Definicja widoku;
+
+W tym momencie mamy otwarty edytor z załadowanym kontekstem danych dla naszego stanowiska. Dzięki temu widoczny mamy podgląd, który - wraz z nanoszonymi zmianami - będzie aktualizowany. Po dokonaniu naszych modyfikacji, zapisujemy zmiany i teraz wystarczy kliknąć w przycisk Przebuduj widok aby nowy schemat widoku został załadowany na kafelek.
+
+Opcja Odśwież na zakładce Mes stan maszyn powoduje tylko załadowanie nowych danych do zbudowanego wcześniej schematu - nie powoduje jego przebudowy.
+
+Tworzenie nowego pustego schematu widoku
+Aby zbudować czysty schemat widoku wystarczy wykonać:
+
+Przechodzimy w głównym menu programu do Ustawienia -> Główne -> Słowniki. Rozwijamy opcję Ustawienia ogólne i klikamy dwukrotnie na Schematy widoków. W nowym oknie pokaże nam się lista ze zdefiniowanymi schematami na naszej bazie danych.
++ dodajemy nowy schemat w kontekście: TG_OBIEKTY.
+Dla nowego schematu dodajemy + nową wersję.
+Nie dokonujemy na tym etapie żadnych zmian, zapisujemy nasz nowy schemat widoku i przechodzimy z powrotem do widoku naszej zakładki MES stan maszyn.
+W ustawieniach - tak jak w punkcie 1 - wybieramy tym razem z listy nasz nowy schemat widoku. Zmianę zatwierdzamy Ok.
+Teraz, jak już mamy utworzony i wybrany jako widoczny, nasz nowy schemat może być edytowany. Wybieramy kafelek, klikamy na przycisk Definicja widoku;
+
+Dane dla schematu
+Wszystkie dane, dostępne w trybie projektowania, można wyciągnąć:
+
+z załadowanego modelu - z tego korzystają szablony wbudowane;
+z bazy danych - za pomocą zapytań SQL;
+
+Preferowanym oraz prostszym sposobem jest korzystanie z gotowego relacyjnego modelu. Aby z niego skorzystać należy - w edytorze schematu dostępnego pod Definicja schematu - wybrać z menu Add from model wtedy zostanie zaprezentowana lista dostępnych wartości dla osoby projektującej.
+
+Wbudowane - w model danych pola specjalne - które warto znać:
+
+OpenDetailLink - link do otwarcia okna ze szczegółami
+OpenLogLink - link do otwarcia listy z historią alertów
+MesAlertsActive - lista aktywnych alertów
+SetMesStatusWidgetLink - link specjalny, działa w trybie MES kolektor. Kliknięcie w ten link powoduje załadowanie do widgetu Mes status dla stanowiska na którym został on aktywowany
+
+
+ Przedstawione zdjęcie pokazuje interakcję aktywacji pola SetMesStatusWidgetLink z widgetem MES Statusy na jednym z wbudowanych szablonów. Wbudowane szablony mają pod ikoną z kolorem stanu podpięty link do SetMesStatusWidgetLink.
+
+Aby na pustym schemacie dodać możliwość otwierania szczegółów, należy:
+
+Dodać pole, które będzie wykorzystane do kliknięcia (w celu otwarcia szczegółów);
+Dodać LINK dla tego pola, które swoją wartość pobierzez z modelu z pola OpenDetailLink.
+
+
+Images
+
+

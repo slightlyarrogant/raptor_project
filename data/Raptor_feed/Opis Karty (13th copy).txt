@@ -1,0 +1,216 @@
+# 	Zlecenie produkcyjne
+
+## 	Opis
+Zlecenie produkcyjne pełni kilka istotnych funkcji i ma wiele zastosowań w zarządzaniu procesem produkcji w systemie VENDO.ERP. Dzięki zleceniom produkcyjnym można efektywnie zarządzać produkcja wyrobów, półproduktów. Określają one, jakie produkty mają być wytwarzane, w jakiej ilości i w jakim terminie. Zlecenie produkcyjne to elektroniczna teczka, w której będą składowane wszystkie niezbędne dokumenty dotyczące realizacji produkcji.   
+Zlecenie produkcyjne to formularze posiadające nagłówek oraz pozycje.  Nagłówek posiada ogólne informacje dotyczące numeru, Klienta, daty, dodatkowe pola, uwagi, przyjmującego zlecenie, odpowiedzialnego oraz wartości dowolne.   
+Pozycje są częścią składową zlecenia. Pozycja może być jedna lub wiele na zleceniu. To pozycja określa jakie ilości i w jakim terminie są wymagane do wyprodukowania i automatycznie wpływa na liczniki towaru (oczekiwane, zapotrzebowanie). Pozycja oparta jest zawsze o kartotekę towarową i ilość. Kartoteki mogą być różnego rodzaju w zależności od potrzeby i typu dokumentu (Towary, Usługi, Komplety). Pozycje zlecenia produkcyjnego następnie podstawową do tworzenia przewodników produkcyjnych, które to z kolei służą do planowania i harmonogramowania procesów produkcyjnych.
+Przykład zlecenia produkcyjnego zaprezentowano na poniższym rysunku.
+
+![tmp39a2af1d-e95e-47f1-88a1-89c9848a7fee](https://www.cfi.pl/vendohelp/content/imgs/I6/b06e74ae943bd27e90a4329e4c35a717-92638-0.png)
+
+
+
+## 	Numeracja
+ Każde zlecenie produkcyjne posiada indywidualny numer budowany według zasady:
+ 
+ NUMER_KOLEJNY / SERIA / ROK / ZLP
+
+Gdzie:
+-	Numer kolejny – nadawany w ramach Serii
+-	Seria - to słownikowy składnik numeracji dokumentów systemowych. Na podstawie serii możliwe jest określenie uprawnień (dostępu do danych zleceń, danej serii)
+-	Rok – rok, w którym wystawiane zlecenie
+-	ZLP - skrót zlecenia produkcyjnego
+
+Przykłady numeracji zleceń produkcyjnych:
+-	13/S/24/ZLP
+-	14/S/24/ZLP 
+-	13/A/24/ZLP
+
+
+## Zakładki
+
+Nagłówek – informacje dotyczące całego zlecenia.
+
+![tmpe60128fc-6011-4ca7-8b42-c1066f0bb4a9](https://www.cfi.pl/vendohelp/content/imgs/I6/b06e74ae943bd27e90a4329e4c35a717-92638-0.png)
+
+
+| Nazwa pola                | Opis                                                                                                                                                                                                                                                | Typ               |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------|
+| Numer zlecenia            | Numer zlecenia produkcyjnego                                                                                                                                                                                                                         | Tekst             |
+| Data założenia            | Data utworzenia zlecenia produkcyjnego                                                                                                                                                                                                               | Data i czas       |
+| Termin zakończenia        | Zakładany termin zakończenia                                                                                                                                                                                                                         | Data              |
+| Dotyczy                   | Tytuł zlecenia                                                                                                                                                                                                                                        | Tekst             |
+| Odbiorca                  | Odbiorca, referencja do kartoteki klienta                                                                                                                                                                                                            | Słownik           |
+| Zlecający                 | Zlecający, referencja do kartoteki klienta                                                                                                                                                                                                           | Słownik           |
+| Kontakt                   | Dane kontaktowe do domyślnej osoby klienta                                                                                                                                                                                                           | Tekst             |
+| Rodzaj zlecenia           | Słownik rodzaju zlecenia                                                                                                                                                                                                                             | Słownik           |
+| Kolor zlecenia            | Kolorystyczne oznaczenie zlecenia                                                                                                                                                                                                                    | Słownik           |
+| Opis / Uwagi              | Pole dla dodatkowego opisu                                                                                                                                                                                                                           | Tekst             |
+| Okres z procedur          | Okres wynikający z podpiętych pod zlecenie produkcyjne procedur                                                                                                                                                                                      | Data i czas       |
+| Okres według zdarzeń      | Okres wynikający z podpiętych pod zlecenie produkcyjne dokumentów zdarzeniowych                                                                                                                                                                      | Data i czas       |
+| Przyjmujący zlecenie      | Referencja do kartoteki pracownika, który wpisał zlecenie produkcyjne                                                                                                                                                                                | Słownik           |
+| Odpowiedzialny            | Referencja do kartoteki pracownika, który został wyznaczony jako główny odpowiedzialny za realizację zlecenia produkcyjnego                                                                                                                           | Słownik           |
+| Dział                     | Referencja do działu pracownika odpowiedzialnego                                                                                                                                                                                                     | Słownik           |
+| Etap                      | Wyróżniony dokument zdarzeniowy                                                                                                                                                                                                                      | Słownik           |
+| Ostatni status zlecenia   | Informacja o ostatnio ustawionym statusie zlecenia produkcyjnego                                                                                                                                                                                     | Słownik           |
+| Czas wynikający z procedury | Czas pomiędzy pierwszym i ostatnim etapem                                                                                                                                                                                                           | Liczba            |
+| Pozycje                   | Pozycje – lista pozycji zlecenia produkcyjnego pobranych z zamówień lub wprowadzonych przez użytkownika ręcznie. Pozycje będą określały zarówno kartotekę towaru, jak i ilość potrzebną do wyprodukowania na wymagany termin. Pozycje automatycznie pokażą też oczekiwane ilości danej kartoteki towaru w ogólnych przelicznikach w systemie. | Referencja        |
+| Stan                      | Stały słownik. Stan zlecenia produkcyjnego: Realizowane / Wykonane / Anulowane / Zawieszone                                                                                                                                                          | Pole typu radiobutton |
+
+
+## 	Lista dokumentów
+
+Lista dokumentów – dokumenty zarejestrowane w VENDO.ERP powiązane nagłówkowo z danym zleceniem, np. zamówienia obce
+
+![tmp5a0652a5-3f0e-44b8-be38-2ef4dbee3099](https://www.cfi.pl/vendohelp/content/imgs/W6/36f2809732218a760df63b622b5a5ef9-52295-0.png)
+
+## KKW
+
+KKW – lista Kart Kontrolnych Wyrobu, to przewodniki produkcyjne powiązane ze zleceniem, zawierające konkretne operacje produkcyjne do wykonania i zarejestrowania dla wyrobów i półproduktów generowanych w ramach tego zlecenia produkcyjnego.
+
+
+![tmp3fa05e25-8352-40b7-80f0-e530bce411e8](https://www.cfi.pl/vendohelp/content/imgs/X9/268b46b8e80f7dbe3e7021d89344c31f-73714-0.png)
+
+## 	Operacje KKW
+
+Operacje KKW – lista operacji produkcyjnych które są zapisane na KKW w ramach tego zlecenia
+
+![tmp02ac7a24-77bd-4ab8-bfeb-b7e086766b2f](https://www.cfi.pl/vendohelp/content/imgs/N7/6699de21f5bfb1edf7c2d1b9e57d114d-81973-0.png)
+
+## 	Struktura zlecenia
+
+Widok umożliwiający prowadzenie projektów w ramach zlecenia (etapy, zadania w ramach etapów, budżety). Łączy pozycje zlecenia produkcyjnego  z innymi dokumentami zdarzeniowymi
+
+
+![tmpf997bb4a-5d0f-4745-a2a1-e89dc7321c73](https://www.cfi.pl/vendohelp/content/imgs/Q0/ab334ca253c4a9ee7e802e02e585c543-52091-0.png)
+
+
+## 	Prace
+
+Prace – zarejestrowany czas pracy przez pracowników na dane zlecenie. Prace mogą wynikać z rejestracji pracy na przewodnikach produkcyjnych lub być pracami bezpośrednio wpisanymi pod zlecenie produkcyjne
+
+
+![tmp5f32ba7f-c92b-4c44-91db-a954d26ee55a](https://www.cfi.pl/vendohelp/content/imgs/T7/c9a26555e92fcc451531f55a251382a0-51927-0.png)
+
+## Zdarzenia
+
+Zdarzenia – lista zdarzeń (zarejestrowanych w CRM) związanych z danym zleceniem
+
+![tmpffc5b11e-1af5-4aa5-b6d9-b2119d9fc6ea](https://www.cfi.pl/vendohelp/content/imgs/K0/1c414478a70f70385e670bb5f7e54c55-46793-0.png)
+
+
+## Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmpa1d8037d-3419-4303-841b-bd48e821d580](https://www.cfi.pl/vendohelp/content/imgs/H3/9e8dcb9779ad2e987a9faba261186ddc-24867-0.png)
+
+## Pliki
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp8c19be71-5d0a-449b-96a3-b3f135a95513](https://www.cfi.pl/vendohelp/content/imgs/Z5/a035d09bad656de0a49527ba87f0b43e-29653-0.png)
+
+## 	Wspólne pliki
+
+![tmpb8ceb89f-f328-4884-8c58-f87c2cc84833](https://www.cfi.pl/vendohelp/content/imgs/F1/d3a2de311d9882c0fac521e2d9c9d509-30130-0.png)
+
+
+
+
+
+
+
+
+
+Karta zlecenia produkcyjnego jest teczka spinająca wszelkie informacje o całym procesie produkcyjnych.
+
+![tmpaf39cd6b-40cd-48f5-97dd-8033f65a2b7f](https://www.cfi.pl/vendohelp/content/imgs/R3/62818f4ab1203430df5a81fbd7bcd1cf-115280-0.png)
+
+W zleceniu produkcyjnym dostępne są zakładki między innymi takie jak:
+
+
+
+- **Nagłówek** – Podstawowe informacje na temat zlecenia produkcyjnego (co, ile i dla kogo ma być produkowane)
+- **Pozycje** – lista pozycji dodanych do zlecenia  
+- **KKW** - Karta kontrolna wyrobu. Cześć modułu MRP. Pozwala na szczegółowe rozplanowanie i ewidencjonowanie procesu produkcyjnego.
+- **Lista dokumentów** - Lista dokumentów analogiczna jak w module Dokumenty. Można dodawać tu nowe dokumenty, które w ten sposób będą kojarzone automatycznie ze zleceniem.
+- **Budżetowanie** – pozwala na określenie oraz zaplanowanie budżetu, który przeznaczony będzie na dane zlecenie
+- **Struktura ZLECENIE** - zakładka pozwala na rozpisanie zdarzeń, etapów które mogą zostać przydzielone do odpowiednich użytkowników i wykonywane będą w trakcie realizacji procesu produkcyjnego 
+Wspólne Pliki - Pozwala na rozplanowanie procesu produkcyjnego na etapy oraz dopinanie plików do zlecenia.
+- **Gantt** – wykres Gantta pozwala na graficzne wyświetlenie przedziałów czasowych oraz elementów chodzących w skład zlecenia 
+Wartości dowolne – w zakładce tej widoczne są dodatkowe pola zdefiniowane przez użytkownika, który wykorzystywane są w procesie produkcyjnym 
+
+
+
+
+Zlecenie produkcyjne powinno być podstawa organizacji produkcji w firmie produkcyjnej.
+Wszelkie operacje związanie ze zleceniem produkcyjnym wykonuje na otwartym oknie konkretnego zlecenia produkcyjnego.
+
+## Przyjęcie zlecenia
+
+
+Zlecenie może być wystawione na podstawie:
+-	Zamówienia klienta (ZO)
+-	Planu sprzedaży (PS)
+-	Z ręki
+
+### 	Zlecenie generowane z ZO
+
+Jako podstawa do tego generowania służy zamknięty dokument ZO.
+Kolejno wykonywane operacje:
+
+-	W Dokumentach z listy ZO zaznaczamy odpowiednie ZO lub wchodzimy na kartę dokumentu ZO.
+-	Wybieramy z menu Funkcje > Generowanie:
+-	Zlecenie z planem – kiedy chcemy utworzyć zarówno zlecenie jak i plan.
+-	Pan do zlecenia – kiedy chcemy utworzyć jedynie plan do istniejącego zlecenia.
+-	Zlecenie z planem na brakujący asortyment – kiedy chcemy utworzyć zlecenie produkcyjne na brakujące towary.
+-	Plan do zlecenia na brakujący asortyment – kiedy chcemy utworzyć jedynie plan do istniejącego zlecenia na brakujące towary.
+ 
+![tmp2a5c9e8f-5ee3-4a40-aa28-3332cd464f82](https://www.cfi.pl/vendohelp/content/imgs/Z1/081c0fc2e5f983ec10a755cecb09a7f4-99055-0.png)
+
+-	W kolejnym etapie pojawi się okno, gdzie wybieramy schemat, wg którego generowane będzie zlecenie produkcyjne. Należy pamiętać, aby przed wyborem stosownego schematu uprzednio dokonać stosownej jego parametryzacji. Edycja szablonu możliwa jest po klikniecie w ikonę długopisu znajdującego się w po prawej stronie okna dialogowego
+
+![tmp94919339-fab4-47ac-8c7d-f97a42bcc82d](https://www.cfi.pl/vendohelp/content/imgs/I6/62179976b1b2c29a337e8e4a20fe5a77-5041-0.png)
+ 
+
+-	W oknie konfiguracyjnym schematu użytkownik ma możliwość na określenie parametrów, wg których generowane będzie zleceni zlecenie produkcyjne. Istnieje możliwość zapisania kilku odrębnych szablonów które dostępne będą podczas generowania. 
+
+![tmpa21f2828-1b4c-4eaa-a47c-54f7aa6b457a](https://www.cfi.pl/vendohelp/content/imgs/I4/efdf856f11d729e3e0d438e69adfc560-63444-0.png)
+ 
+
+-	Po wyborze właściwego szablony system utworzy nowe ZLP i pokaże jego kartę, z poziomu której będziemy następnie przeprowadzać pozostałe operacje związane z produkcja.
+
+![tmp59c1ea8b-cbfd-4aa2-97b9-8cf979ca532e](https://www.cfi.pl/vendohelp/content/imgs/I2/c1583364eaefeb7a5ab1af6735bf7c6b-115396-0.png) 
+
+### 	 Zlecenie Generowane z Planów sprzedaży
+
+Podstawowa do generowania z Planu Sprzedaży jest zamknięty dokument PS.
+Wchodzimy w moduł Dokumenty i z utworzonego planu sprzedaży (PS) w typowy sposób (menu Funkcje > Generowanie) generujemy zlecenie produkcyjne. Operacja
+przebiega w identyczny sposób jak w przypadku generowania z ZO.
+
+### Dodawanie zlecenia 'Z ręki'
+
+Kiedy nie chcemy tworzyć `[ZO]` ani `[PS`], istnieje możliwość dodania zlecenia z poziomu modułu `Produkcja` > `Zlecenia produkcyjne`. To co mam być produkowane dodajemy wedle własnego uznania poprzez dodanie pozycji dostępnych w kartotekach towarowych, a nie pobieramy z innego dokumentu jak w przypadku wcześniej opisanych generowań.
+
+
+Żeby dodać zlecenie produkcyjne 'z ręki' kolejno wykonujemy poniższe operacje:
+
+-	Wchodzimy do modułu Produkcja na zakładkę Zlecenia produkcyjne.
+-	Klawiszem `[INSERT]` dodajemy nowe zlecenie. System zasugeruje numer nowego ZLP, który można modyfikować, po zatwierdzeniu pojawi się gotowa do wypełnienia karta zlecenia.
+-	Określamy kontrahenta (odbiorca/zlecający) `[F2]`/`[F9]` i klawiszem `[INSERT]` dodajemy kolejne pozycje do produkcji.
+
+![tmp624071b4-7a2f-4236-8bfd-1c3d773f76e1](https://www.cfi.pl/vendohelp/content/imgs/K0/ab16c1b947caa293c874a4c03a3f990a-103962-0.png) 
+
+-	Po dodaniu wszystkich pozycji produkcyjnych zatwierdzamy zlecenia i wychodzimy z jego karty (przycisk `Zapisz` a następnie `Wyjdź`). Zlecenie zostało utworzone i można z poziomu jego karty zarządzać jago wykonaniem.
+
+### Zamkniecie zlecenia
+
+W sytuacji, kiedy zlecenie produkcyjne jest wykonane - rozchodowaliśmy niezbędne materiały (utworzone RW), poniesione koszty są zewidencjonowane (utworzone KO, FZ) oraz przyjęte towary z produkcji (utworzone PW) możemy zamknąć zlecenie produkcyjne, czyli zmienić status zlecenia na 'Wykonane' i zatwierdzić (Zapisz).
+
+![tmp39de7150-1aaf-49ef-aab2-9fd228c7a40a](https://www.cfi.pl/vendohelp/content/imgs/V9/404ff179c506cc1fd71bb7628f14d522-113910-0.png)
+ 
+Można sobie przyspieszyć prace zaznaczając opcje w ustawieniach Zamkniecie Zlecenia
+Zamyka Dok. (RW,PW,ZWR). Aktywacja tej opcji będzie skutkowała tym, że zamykając zlecenie zamknięte zostaną również dokumenty z bufora związane z danym zleceniem. Zamknięte zlecenie da się otworzyć korzystając z jego menu Funkcje > Funkcje specjalne > Otwarcie zlecenia [CONTROL+F8]. Oczywiście do otwierania zamkniętych zleceń trzeba mieć odpowiednie uprawnienia.
+
+

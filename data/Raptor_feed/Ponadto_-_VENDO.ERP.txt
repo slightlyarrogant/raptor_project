@@ -1,0 +1,89 @@
+# Ponadto - VENDO.ERP
+
+# Ponadto
+
+Vendo.ERP to również …
+
+### Wielofirmowość
+
+- jedna baza danych – wiele podmiotów,
+- elektroniczna wymiany dokumentów pomiędzy firmami,
+
+### Komunikator wewnętrzy
+
+- chat – komunikacja pomiędzy użytkownikami,
+- powiadomienia od systemu do użytkowników,
+- przekazywanie czatem linków do dokumentów,
+- kanały tematyczne,
+
+### System powiadomień użytkownika
+
+- definiowanie alertów wysyłanych przez system do pracowników i kontrahentów
+- powiadomienia i raporty cykliczne,
+- powiadomienia i raporty po zaistnieniu zdarzenia np.: oferta do zatwierdzenia, awaria stanowiska, nowe zadanie,
+- trzy kanały wysyłania powiadomień: chat, mail, sms,
+
+### Indywidualna rozbudowa systemu
+
+- technologia gwarantująca indywidualną:funkcjonalność,dostosowanie formularzy,nowe moduły,
+- funkcjonalność,
+- dostosowanie formularzy,
+- nowe moduły,
+
+- funkcjonalność,
+- dostosowanie formularzy,
+- nowe moduły,
+
+przy zachowaniu kompatybilności systemu z najnowszymi wersjami systemu.
+
+### Interfejs programistyczny APIS
+
+- integracja z aplikacjami i systemem zewnętrznymsklepy internetowefirmy spedycyjnesystemy BIbankowość elektroniczna
+- sklepy internetowe
+- firmy spedycyjne
+- systemy BI
+- bankowość elektroniczna
+- ponad 1500 dostępnych funkcji z obszarów:zamówienia i sprzedażmagazynprodukcjaksięgowośćCRM
+- zamówienia i sprzedaż
+- magazyn
+- produkcja
+- księgowość
+- CRM
+
+- sklepy internetowe
+- firmy spedycyjne
+- systemy BI
+- bankowość elektroniczna
+
+- zamówienia i sprzedaż
+- magazyn
+- produkcja
+- księgowość
+- CRM
+
+### Dostosowanie do zmian prawnych
+
+- zgodność z aktualnymi przepisami podatkowymi
+- automatyczna aktualizacja systemu do nowych zmian
+
+### Integracja z urządzeniami peryferyjnymi
+
+- drukarki etykietprogram magazynowy współpracuje z drukarkami etykiet i czytnikami kodów kreskowychobsługa kodów kreskowych w wielu standardach w tym kodów 2D
+- program magazynowy współpracuje z drukarkami etykiet i czytnikami kodów kreskowych
+- obsługa kodów kreskowych w wielu standardach w tym kodów 2D
+- systemy wagowe
+- centralki telefoniczne
+- kolektory i czytniki kodów kreskowych
+
+- program magazynowy współpracuje z drukarkami etykiet i czytnikami kodów kreskowych
+- obsługa kodów kreskowych w wielu standardach w tym kodów 2D
+
+### Anglojęzyczny interface
+
+- anglojęzyczny interface
+- możliwość samodzielnego tłumaczenia tekstów na inny język
+
+### Uprawnienia dostępu
+
+- uprawnienia dostępu do modułów, funkcjonalności i zakresu danych
+

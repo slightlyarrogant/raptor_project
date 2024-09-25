@@ -1,0 +1,804 @@
+Konwencje i Wytyczne
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/guidelines
+scraped_at: 2024-09-05T12:18:47.239526
+last_updated: 2024-09-05T12:18:47.239651
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Konwencje i Wytyczne
+meta_tags: ['public', 'user', 'string', 'static', 'return', 'void', 'jest', 'bool', 'class', 'record']
+
+Content
+1. Wstęp
+Plik ten zawiera ogólne zasady tworzenia czytelnego i zrozumiałego kodu, które są wspólne dla wszystkich programistów pracujących nad tym projektem. Jeżeli jakieś zagadnienie nie zostało poruszone, to należy przyjąć ogólne uznane reguły oraz domyślne ustawienia/sugestie programu Visual Studio.
+2. Ogólne
+2.1. Badanie użyteczności
+Testuj użyteczność swojego API. Możesz poprosić osobę nieznającą Twojego rozwiązania, aby przedstawiła główne scenariusze wykorzystania. Dzięki temu zlokalizujesz części nieintuicyjne.
+Warto zrozumieć, że większość osób wykorzystujących Twój kod nie jest Tobą. Projektuj swoje API z myślą o większości użytkowników.
+2.2. Samo dokumentujący się kod
+Programiści wykorzystujący Twoje klasy/metody powinni być w stanie zaimplementować główne scenariusze użycia, bez czytania dokumentacji. Pomóż użytkownikowi zrozumieć jakich typów ma użyć i jaka jest semantyka głównych metod, poprzez dobór intuicyjnych nazw typów i składowych.
+Ludzie, którzy czytają Twój kod, to również programiści. Właściwy dobór nazewnictwa pozwoli wszystkim jednakowo spojrzeć na problem. Nie chcemy tracić czasu na tłumaczenie za co odpowiada określona zmienna lub co robi dana funkcja.
+Źródło: .Net Core - Design Guidelines
+3. Nazewnictwo
+Nieraz dobór odpowiednich nazw jest trudny i zabiera dużo czasu, jednakże ostatecznie zaoszczędzi więcej czasu osobą czytającym i próbującym zrozumieć Twój kod (z Tobą włącznie). Nazwa powinna odzwierciedlać co "to" robi i jaki jest "tego" kontekst.
+3.1. Notacje
+
+Pascal - Pierwsza litera identyfikatora i każdego kolejnego słowa pisana jest wielką literą, pozostałe małą.
+
+Przykład:
+    * HasClientId
+Zastosowanie:
+    * typy (class, struct, ...),
+    * metody,
+    * właściwości,
+    * zdarzenia,
+    * pola w enum'ach,
+    * pola o zakresie public,
+    * pola statyczne typu readonly.   
+
+Camel - Pierwsza litera identyfikatora pisana z małej, każde kolejne słowo rozpoczyna się wielką literą, pozostałe litery pisane z małymi.
+
+Przykład:
+    * hasClientId
+Zastosowanie:
+    * parametry,
+    * zmienne lokalne,
+    * pola o zakresie innym niż public.
+3.2. Skróty
+Skróty składające się z więcej niż dwóch znaków piszemy zawsze małymi literami. Ta sama zasada obowiązuje przy skrótach dwuliterowych, o ile nie występują w nazwie przestrzeni. Nie stosując się do tej zasady pojawiają się problemy przy identyfikatorach składających się z wielu słów, ponieważ może występować dużo wielkich liter obok siebie, co utrudnia odnalezienie, gdzie zaczyna się nowe słowo, np. FTPServerName.
+Przykłady:
+
+namespace System.UI
+namespace System.IO.Ftp
+namespace System.Web.Http
+int ClientId
+int ClientNip
+int ClientNipNormalized
+
+3.3. Pisać po polsku czy po angielsku?
+Plusy pisania po polsku:
+
+znajomość znaczenia słów,
+jednoznaczność nazewnictwa przy wykorzystaniu już istniejącego kodu w tym języku.
+
+Plusy pisania po angielsku:
+
+ogólnie przyjmuje się, aby pisać w języku angielskim,
+.Net i większość bibliotek jest napisanych po angielsku, dzięki czemu łatwiej nazywać typy pochodne i składane,
+przyszłościowe, nie uczy złych nawyków,
+łatwe tworzenie nazw (nie trzeba zastanawiać się jak coś nazwać, aby uniknąć odmian),
+krótkie zrozumiałe nazwy i proste przedrostki (Can, Is, Has) - np. HasFile oraz IsFile po polsku należałoby nazwać CzyMaPlik oraz CzyPlik,
+brak problemu związanego z odmienianiem słów.
+
+
+Bardzo istotne jest, by nie mieszać języków. Jeśli zdecydowaliśmy się używać polskiego, używajmy go od początku do końca; przeplatanie ze sobą dwóch języków robi złe wrażenie. Wyjątek może stanowić używanie polskiej nazwy jako nazwy własnej tak jakby nie posiadała tłumaczenia, jednak takie podejście prowadzi do rozrastania się nieeleganckiego kodu.
+
+Jeżeli zdecydujemy się pisać po polsku, należy przyjąć następujące zasady:
+
+nie używamy polskich znaków,
+nie odmieniamy słów, gdyż nie da się później znaleźć wystąpień powiązanych elementów, np. wyszukując słowo Dokument znajdziemy frazę DokumentId, ale CzyWystepujeNaDokumencie już nie,
+nazwy powinny określać element zgodnie z zasadą od ogółu do szczegóły, czyli np. DokumentId zamiast IdDokumentu, dzięki temu łatwiej znaleźć wszystkie właściwość związane z danym obiektem, nazwy są jednoznaczne i łatwiejsze w tworzeniu.
+
+Przykłady:Dobrze| Źle| DokumentId| IdDokumentu, IdDokument| DokumentKlientNazwa| NazwaKlientaDokumentu| KlientKod| KodKlienta| IgnorujKamienieMilowe| BezKamieniMilowych| UstalonaGodzina| OUstalonejGodzinie
+---|---  
+3.4. Wytyczne
+Kilka ogólnie akceptowanych zasad:
+
+nazwy interfejsów muszą zaczynać się od I np. IFileSystem,
+nie wolno nazywać klas tak jak przestrzenie nazw np. IO, UI,
+o ile to możliwe to przestrzeń nazw powinna być zapisana w liczbie mnogiej, np. System.Windows.Forms, System.Collections, itp.,
+nazwa parametru szablonowego musi zaczynać się od T np. class Dictionary<TKey, TValue>.
+
+Zasady przyjęte za projektem .Net Core
+
+statyczne pola klasy o typie dostępu innym niż public i do zapisu (nie readonly) nazywamy z przedrostkiem s_ od static np. s_name,
+niestatyczne pola klasy o typie dostępu innym niż public nazywamy z przedrostkiem _, np. _userId(jeżeli edytowany plik wykorzystuje prefix m_ wtedy tego stylu używamy, ale nie do pól powiązanych z właściwościami),
+unikamy użycia this. jeżeli to tylko możliwe.
+
+Używaj następujących sufiksów:
+
+Exception dla klas dziedziczących po Exception,
+EventArgs dla klas dziedziczących po EventArgs,
+EventHandler dla klas dziedziczących po Delegate,
+Attribute dla klas dziedziczących po Attribute,
+Collection dla klas implementujących IEnumerable,
+Dictionary dla klas implementujących IDictionaryor IDictionary<K,V>.
+
+3.5. Wskazówki
+3.5.1. Używaj pełnych słów
+Nazwa powinna odzwierciedlać czym "to" jest, jaki jest kontekst. Należy unikać skrótów, nie każdy będzie w stanie je rozwinąć lub może rozumieć je inaczej.
+Źle:
+int f;
+string ctxN;
+
+Dobrze:
+int firstRowIndex;
+string contextName;
+
+Wyjątkiem są popularne nazwy wykorzystywane w ściśle określonym kontekście. Np:
+
+zmienna i w pętli for (wiadomo, że odnosi się do indeksu),
+zmienne x, y w prostych wyrażeniach lambda.
+
+
+Źle:
+var l = new[] { "Austin", "New York", "San Francisco" };
+
+for (var i = 0; i < l.Count(); i++)
+{
+    var li = l[i];
+
+    DoStuff();
+    DoSomeOtherStuff();
+
+    // ...
+    // ...
+    // ...
+    // Wait, what is `li` for again?
+    Dispatch(li);
+}
+
+Dobrze:
+var locations = new[] { "Austin", "New York", "San Francisco" };
+
+foreach (var location in locations) 
+{
+    DoStuff();
+    DoSomeOtherStuff();
+
+    // ...
+    // ...
+    // ...
+    Dispatch(location);
+}
+
+3.5.2. Unikaj dezinformujących nazw
+Źle:
+var dataFromDb = provider.GetFromDb();
+
+Dobrze:
+var clients = clientRepository.GetActiveClients();
+
+3.5.3. Nazwa musi być wymawialna
+Niewymawialna lub skrótowa nazwa zbiera wiele czasu na zrozumienie jej znaczenia.
+Źle:
+int? uId;
+TimeSpan wStartT;
+var ymdstr = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+Dobrze:
+int? userId;
+TimeSpan workStartTime;
+var currentDate = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+3.5.4. Nie dodawaj nadmiarowo kontekstu do nazw
+Źle:
+public class Car
+{
+    public string CarModel { get; set; }
+    public Color CarColor { get; set; }
+}
+
+Dobrze:
+public class Car
+{
+    public string Model { get; set; }
+    public Color Color { get; set; }
+}
+
+3.5.5. Nazwa funkcji powinna określać co ta funkcja robi
+Źle:
+public class Email
+{
+    public void Execute(); // ???
+}
+
+Dobrze:
+public class Email
+{
+    public void Send();
+}
+
+3.5.6. Unikaj zaprzeczeń
+Zrozumienie zaprzeczonych warunków zajmuje znacznie więcej czasu i prowadzi do błędów.
+Źle:
+public bool IsElementNotVisible();
+
+if (!IsElementNotVisible()) // ??
+
+Dobrze:
+public bool IsElementVisible();
+
+3.5.7. Nazwy zdarzeń
+Nie dodawaj prefiksu Before lub After do nazwy zdarzenia, zamiast tego wykorzystaj przeszły lub ciągły.Dobrze| Źle| WindowClosed| AfterWindowClose, AfterWindowClosed| WindowClosing| BeforeWindowClose, BeforeWindowClosing
+---|---  
+
+W tym miejscu pojawia się pytanie jak nazwać takie zdarzenia po polsku? OknoZamkniete, OknoZamykane, OknoWTrakcieZamykania?
+
+4. Struktura Projektu
+4.1. Wytyczne
+
+nazwy folderów powinny odpowiadać przestrzeniom nazw,
+deklaracje class/interface/enum należy umieszczać w osobnych plikach, za wyjątkiem deklaracji zagnieżdżonych i typów "jednorazowego użytku" - typów wykorzystywanych tylko w tej klasie np. EventArgs.
+
+4.2. Przykładowa struktura katalogów dla rozszerzeń
+Poniższa struktura jest wzorcowa, natomiast nie wszystkie elementy są potrzebne i obowiązkowe, np. możemy zrezygnować z Module i/lub SubModule, jeżeli wiadomo, że rozszerzenie dotyczy tylko jednej funkcjonalności.
+Ważne jes
+PluginProject
+    ├─ Module                        // można pominąć, jeżeli projekt jest związany tylko z jednym modułem
+    │   ├─ Api                       // funkcje udostępniane na zewnątrz przez API (HTTP)
+    │   │   ├─ Controllers           // klasy kontrolerów
+    │   │   └─ Models                // klasy DTO wykorzystywane w kontrolerach
+    │   ├─ DB                        // wszystko co związane z obsługą bazy danych np. wykonywanie zapytań
+    │   │   ├─ Entities              // definicje rekordów tabel
+    │   │   ├─ Models                // modele pomocnicze do zwracania/modyfikacji danych
+    │   │   ├─ Repositories          // klasy związane z obsługą tabel, np. ClientRepository
+    │   │   ├─ Tables                // definicje tabel implementujące ITableInfo 
+    │   │   └─ Sql                   // definicje tabel SQL oraz klasy pomocnicze do budowy zapytań
+    │   ├─ DT                        // trigger'y DT i klasy pomocnicze
+    │   ├─ Bot                       // usługi działające na bocie
+    │   ├─ Links                     // kontrolery do obsługi linków
+    │   ├─ Resources                 // zasoby związane z modułem
+    │   ├─ Security                  // definicje uprawnień i klasy do zarządzania
+    │   ├─ Services                  // usługi działające w tle programu
+    │   ├─ Settings                  // definicje ustawień i klasy do zarządzania
+    │   └─ UI                        // wszystko co związane z UI
+    │       ├─ Common                // klasy wspólne dla wszystkich podmodułów (struktura jak w SubModule)
+    │       └─ SubModule             // można pominąć, jeżeli jest tylko jeden podmoduł
+    │           ├─ Commands          // komendy rejestrowane w ribbonie
+    │           ├─ Controllers       // kontrolery widoków
+    │           ├─ Dialogs           // przesłonięte dialogi lub zakładki (z MFC)
+    │           ├─ MenuActions       // komendy rejestrowane w istniejących menu w MFC
+    │           ├─ ViewModels        // definicje widoków
+    │           └─ Windows           // okna rejestrowane w programie
+    ├─ Reports                       // wszystko co związane z nowymi raportami
+    │   ├─ Commands                  // komendy związane z raportami
+    │   └─ PluginUnitManager.cs      //
+    ├─ Resources                     // wspólne zasoby
+    │   ├─ Icons                     // ikony
+    │   └─ Sqls                      // pliki .sql zawierające duże zapytania i aktualizacje
+    ├─ Plugin.cs                     // 
+    └─ Program.cs                    //
+
+5. Struktura Pliku
+5.1. Kolejność składowych klasy
+
+Sekcja danych statycznych:
+zmienne,
+zdarzenia,
+właściwości.
+
+
+Sekcja danych lokalnych:
+zmienne,
+zdarzenia,
+właściwości,
+indeksery.
+
+
+Konstruktory, destruktor:
+konstruktor statyczny,
+konstruktory lokalne,
+destruktor.
+
+
+
+
+Odstęp dwóch lini (jedyne miejsce w pliku, gdzie występują dwie puste linie obok siebie)
+
+
+Sekcja metod:
+metody lokalne,
+metody statyczne,
+operatory.
+
+
+Sekcja typów:
+typy enum,
+typy interface,
+typy class.
+
+
+
+5.2. Białe znaki
+
+jeden wiersz odstępu pomiędzy grupami,
+jeden wiersz odstępu pomiędzy elementami grupy jeżeli różnią się przeznaczeniem,
+jeden wiersz odstępu przed i po słowach: #region, #endregion,
+nie należy zostawiać pustych wierszy po znaku { i przed znakiem },
+dwa wiersze odstępu pomiędzy sekcją danych i konstruktorów, a sekcją metod i typów (to jedynie miejsce gdzie powinny wystąpić dwa puste wiersze po sobie).
+
+5.3. Grupowanie
+
+każda grupa powinna być wewnętrznie uporządkowana zgodnie z przeznaczeniem,
+gdy ilość wierszy w pliku przekracza rozsądne rozmiary (> 200 linii) można zastosować podział za pomocą: #region, #endregion,
+nie należy używać grupowania zagnieżdżonego za pomocą #region, #endregion,
+kolejność definiowania składowych klasy może być inna pod warunkiem, że plik jest bardzo duży, a sekcje sa otoczone przez #region, w takim wypadku kolejność regionów może być dowolna, ale wewnątrz regionów należy stosować ustaloną powyżej kolejność.
+
+5.4. Wytyczne
+
+zawsze określaj zakres widoczności np. private int _id;
+
+5.5. Przykład
+Źle:
+class User
+
+{
+    static User();
+
+    public static IList<User> GetAllUsers();
+
+    private static User s_activeUser;
+
+
+    public static void SwitchActiveUser(User user);
+
+    private string _login;
+
+    public User(int id, string login);
+    ~User();
+
+    public string Login { get; }
+
+    public string FullName { get; }
+
+    public void RefreshInfo();
+
+    public EventHandler IsActiveChanged { get; }
+
+    public override bool Equals(object obj);
+    public EventHandler InfoChanged { get; }
+
+    public void RemoveFromGroup(UserGroup group);
+
+    public override int GetHashCode();
+
+
+    public override string ToString();
+
+    public bool IsActive { get; }
+    public static User ActiveUser { get; }
+
+    private class UserData
+    {
+
+        public string FullName { get; set; }
+    }
+    private UserData _data;
+
+    public static EventHandler AciveUserChanged { get; }    
+    public int Id { get; }
+
+    public static bool operator ==(User left, IIdentity right);
+    public static bool operator !=(User left, IIdentity right);
+
+    public void AssignToGroup(UserGroup group);
+
+
+    public static User LastRemovedUser { get; }
+    public static EventHandler UserRemoved { get; }
+
+
+}
+
+Też źle:
+class User
+{
+    private static User s_activeUser;
+    private UserData _data;
+    private string _login;
+
+    public static EventHandler ActiveUserChanged { get; }
+    public static User ActiveUser { get; }
+    public string FullName { get; }
+    public int Id { get; }
+    public EventHandler InfoChanged { get; }
+    public bool IsActive { get; }
+    public EventHandler IsActiveChanged { get; }
+    public static User LastRemovedUser { get; }
+    public string Login { get; }
+    public static EventHandler UserRemoved { get; }
+
+    static User();
+    public User(int id, string login);
+    ~User();
+
+
+    public void AssignToGroup(UserGroup group);
+    public override bool Equals(object obj);
+    public override int GetHashCode();
+    public void RefreshInfo();
+    public void RemoveFromGroup(UserGroup group);
+    public override string ToString();
+
+    public static IList<User> GetAllUsers();
+    public static void SwitchActiveUser(User user);
+
+    public static bool operator ==(User left, IIdentity right);
+    public static bool operator !=(User left, IIdentity right);
+
+    private class UserData
+    {
+        public string FullName { get; set; }
+    }
+}
+
+Dobrze:
+class User
+{
+    private static User s_activeUser;
+
+    public static EventHandler ActiveUserChanged { get; }
+    public static EventHandler UserRemoved { get; }
+
+    public static User ActiveUser { get; }
+    public static User LastRemovedUser { get; }
+
+    private UserData _data;
+    private string _login;
+
+    public EventHandler InfoChanged { get; }
+    public EventHandler IsActiveChanged { get; }
+
+    public int Id { get; }
+    public string Login { get; }
+    public string FullName { get; }
+    public bool IsActive { get; }
+
+    static User();
+    public User(int id, string login);
+    ~User();
+
+
+    public void RefreshInfo();
+
+    public void AssignToGroup(UserGroup group);
+    public void RemoveFromGroup(UserGroup group);
+
+    public override bool Equals(object obj);
+    public override int GetHashCode();
+    public override string ToString();
+
+    public static IList<User> GetAllUsers();
+    public static void SwitchActiveUser(User user);
+
+    public static bool operator ==(User left, IIdentity right);
+    public static bool operator !=(User left, IIdentity right);
+
+    private class UserData
+    {
+        public string FullName { get; set; }
+    }
+}
+
+6. Struktura Kodu, Formatowanie, itp.
+6.1. Wytyczne
+
+przede wszystkim formatuj kod przed zakończeniem pracy. Najlepiej wykorzystać do tego wtyczkę do Visual Studio, która automatycznie formatuje kod przy zapisie pliku - Format On Save. Dzięki temu następna osoba nie wprowadzi "przypadkowych" zmian przy formatowaniu,
+używanie aktywnego CodeLens, może prowadzić do zostawiania zbędnych odstępów, aby tego uniknąć można podpiąć włączenie/wyłączenie tej funkcji pod skrót klawiszowy, tak jak opisano to tu: CodeLens On/Off,
+używaj nameof(...) zamiast "..." gdzie tylko ma to sens.
+
+6.2. Wskazówki
+6.2.1. Unikaj wielokrotnego zagnieżdżenia
+Źle:
+public long Fibonacci(int n)
+{
+    if (n >= 0 && n < 50)
+    {
+        if (n != 0)
+        {
+            if (n != 1)
+            {
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        throw new System.Exception("Not supported");
+    }
+}
+
+Dobrze:
+public long Fibonacci(int n)
+{
+    if (n < 0 || n >= 50)
+        throw new ArgumentOutOfRangeException(nameof(n));
+
+    if (n == 0)
+        return 0;
+
+    if (n == 1)
+        return 1;
+
+    return Fibonacci(n - 1) + Fibonacci(n - 2);
+}
+
+
+Poprawność argumentów należy sprawdzać na początku funkcji. Dzięki temu od razu wiadomo jakie są jej wymagania, kod staje się czytelniejszy, a potencjalne błędy szybciej zauważalne.
+
+Lepiej:
+public long Fibonacci(int n)
+{
+    if (n < 0 || n >= 50)
+        throw new ArgumentOutOfRangeException(nameof(n));
+
+    return n > 1
+        ? Fibonacci(n - 1) + Fibonacci(n - 2)
+        : n;
+}
+
+
+Proste warunki warto zastąpić operatorem trójargumentowym (?:). Pozwala to na zwiększenie czytelności kodu, szczególnie gdy takich wyrażeń jest bardzo wiele.
+
+6.2.2. Unikaj "magicznych" wartości
+"Magiczne" wartości to liczby lub teksty zaszyte bezpośrednio w wyrażeniach, które wpływają na działanie programu. Często takie wyrażenia kończą jako wielokrotnie zduplikowane w kodzie, a ponieważ nie można ich automatycznie zaktualizować, to stają się źródłem błędów podczas wprowadzania zmian w działaniu aplikacji.
+Źle:
+if (userRole == "Admin")
+{
+    // ...
+}
+// ...
+if (otherUserRole == "Admin")
+{
+    // ...
+}
+
+Dobrze:
+const string AdminRole = "Admin";
+
+if (userRole == AdminRole)
+{
+    // ...
+}
+// ...
+if (otherUserRole == AdminRole)
+{
+    // ...
+}
+
+Lepiej:
+public bool IsAdminRole(string role);
+
+if (IsAdminRole(userRole))
+{
+    // ...
+}
+// ...
+if (IsAdminRole(otherUserRole))
+{
+    // ...
+}
+
+6.2.3. Usuwaj nieużywany kod
+Nie ma sensu utrzymywać nieużywany kod w programie. Pamiętaj, że stara wersja jest "bezpieczna" w historii wersji (git). Zbędny kod prowadzi jedynie do kłopotów podczas wprowadzania zmian lub zapoznawania się z kodem.
+Nie dotyczy to np. zakomentowanych warunków obarczonych komentarzem, ponieważ pełnią rolę informacji przy złożonych sprawdzeniach, pozwalając na uniknięcie już raz popełnionych błędów.
+6.2.4. Porządkuj swój kod
+Źle:
+public void Execute(DTFunctionCallContext context)
+{
+
+    //  return;
+
+    var dokuemnnt = context.DT as DTDokument;
+    if (dokuemnnt == null)
+        return;
+
+
+//    System.Windows.Forms.MessageBox.Show(dokuemnnt.Record.Zamknieta.ToString());
+//    System.Windows.Forms.MessageBox.Show(dokuemnnt.OriginalRecord.Zamknieta.ToString());
+
+
+    // sprawdzamy tylko FV i ZO
+    if (dokuemnnt.Record.Rodzaj != 1 && dokuemnnt.Record.Rodzaj != 30)
+        return;
+
+    int id = dokuemnnt.ID;
+
+    if (dokuemnnt.Record.Klient != null)
+    {
+        int flaga =0;
+        var idklienta1 = dokuemnnt.Record.Klient.ID;
+
+        using (var link = DbManager.CreateLink())
+        {
+
+
+            flaga =  link.ExecuteScalar<int>("select (k_flaga&(3<<9))>>9 from tb_klient where k_idklienta = " + idklienta1);
+        }
+
+        if (  flaga ==3 )
+            throw new Exception("Nie można zamknac dokumentu, klient jest Miejscem dostawy");
+        }
+
+    // sprawdzamy tylko przy zamknieciu
+
+    // sprawdzenie czy Nabywca nie jest Miejscem dostawy
+    /*
+
+        9, 10 bit: rodzaj kartoteki
+    0 - firma
+    1 - osoba fizyczna
+    2 - rolnik ryczaltowy
+    3 - miejsce dostawy
+    */
+
+    //    System.Windows.Forms.MessageBox.Show(dokuemnnt.Record.Klient.Flaga.ToString());
+}
+
+Dobrze:
+public void Execute(DTFunctionCallContext context)
+{
+    // Warunki wykonania
+    if (!(context.DT is DTDokument dokument))
+        return;
+
+    if (dokument.Record.Klient == null)
+        return;
+
+    if (!dokument.Record.Rodzaj.In((int)eRodzajDokumentu.RDI_FV, (int)eRodzajDokumentu.RDI_PZAM))
+        return;
+
+    // Sprawdzenie rodzaju klienta
+    var query = new Query("select (k_flaga&(3<<9))>>9 from tb_klient where k_idklienta = {0}", dokument.Record.Klient.ID);
+    var klientRodzaj = DbManager.ExecuteScalar<int>(query);
+
+    if (klientRodzaj == (int)eRodzajKlienta.eRodzKl_MiejsceDostawy)
+        throw new UserException("Nie można zamknac dokumentu, klient jest Miejscem dostawy.");
+}
+
+Lepiej:
+public void Execute(DTFunctionCallContext context)
+{
+    // Warunki wykonania
+    if (!(context.DT is DTDokument dokument))
+        return;
+
+    if (dokument.Record.Klient == null)
+        return;
+
+    if (!dokument.Record.Rodzaj.In((int)eRodzajDokumentu.RDI_FV, (int)eRodzajDokumentu.RDI_PZAM))
+        return;
+
+    // Sprawdzenie rodzaju klienta
+    if (dokument.Record.Klient.RodzajKlienta == (int)eRodzajKlienta.eRodzKl_MiejsceDostawy)
+        throw new UserException("Nie można zamknac dokumentu, klient jest Miejscem dostawy.");
+}
+
+
+Źle:
+public override void Execute()
+{
+
+    var userId = Amag.Modules.Reader.ReaderManager.UserID;
+
+
+    //if (!userId.HasValue)
+    //    return;
+    if (userId <= 0)
+        return;
+
+
+    var viewModel = new FindKKWVM();
+    var dialog = VendoUIManager.CreateDynamicWindow(viewModel);
+
+    if (dialog.ShowDialog() == true)
+    {
+        string kodKKW = "";
+
+        kodKKW = viewModel.Code;
+        string nrKKW = "";
+        nrKKW = viewModel.NrKKW;
+
+
+        if (String.IsNullOrEmpty(kodKKW) && String.IsNullOrEmpty(nrKKW))
+                return;
+
+        if (String.IsNullOrEmpty(nrKKW))
+        {
+            var dt = DTManager.Default.GetDT(kodKKW);
+            if (dt == null)
+                return;
+
+            Amag.Services.Printing.PrintingUIManager.ShowPrintPreview(new Amag.Data.DB.RecordInfo(kodKKW));
+            //return;
+        }
+        else
+        {
+            try
+            {
+                using (var link = DbManager.CreateLink())
+                {
+
+                    int idKKW = link.ExecuteScalar<int>("select kwh_idheadu from tr_kkwhead where kwh_numer={0}", nrKKW);
+
+                    if (idKKW > 0)
+                    {
+                        DTKKWNaglowek kkw = (DTKKWNaglowek)DTManager.Default.GetDT<IKKWNaglowek>(idKKW);
+
+                        Amag.Services.Printing.PrintingUIManager.ShowPrintPreview(new Amag.Data.DB.RecordInfo(kkw.Record.TID.ToString()));
+                    }
+
+                } 
+            }
+            catch (Exception ex)
+            {
+                TBS.UI.UserMessageHelper.ShowException(this, ex);
+            }
+        }
+
+    }
+}
+
+Dobrze:
+public override void Execute()
+{
+    var userId = Amag.Modules.Reader.ReaderManager.UserID;
+    if (userId <= 0)
+        return;
+
+    // Find kkw
+    var viewModel = new FindKKWVM();
+    if (VendoUIManager.ShowViewDialog(viewModel) != true)
+        return;
+
+    var kkwKod = viewModel.Code;
+    var kkwNr = viewModel.NrKKW;
+    if (string.IsNullOrEmpty(kkwKod) && string.IsNullOrEmpty(kkwNr))
+        return;
+
+    // Print
+    if (!string.IsNullOrEmpty(kkwKod))
+    {
+        var kkw = DTManager.Default.GetDT(kkwKod);
+        if (kkw == null)
+            return;
+
+        PrintingUIManager.ShowPrintPreview(new RecordInfo(kkwKod));
+    }
+    else
+    {
+        var kkwId = DbManager.ExecuteScalar<int>("select kwh_idheadu from tr_kkwhead where kwh_numer={0}", kkwNr);
+        if (kkwId > 0)
+        {
+            var kkw = (DTKKWNaglowek)DTManager.Default.GetDT<IKKWNaglowek>(kkwId);
+            PrintingUIManager.ShowPrintPreview(new RecordInfo(kkw.Record.TID.ToString()));
+        }
+    }
+}
+
+Lepiej:
+public override void Execute()
+{
+    var userId = Amag.Modules.Reader.ReaderManager.UserID;
+    if (userId <= 0)
+        return;
+
+    // Find kkw
+    var viewModel = new FindKKWVM();
+    if (VendoUIManager.ShowViewDialog(viewModel) != true)
+        return;
+
+    DTKKWNaglowek kkw = null;
+    if (!string.IsNullOrEmpty(viewModel.Code))
+        kkw = DTManager.Default.GetDT(viewModel.Code) as DTKKWNaglowek;
+    else if (!string.IsNullOrEmpty(viewModel.NrKKW))
+    {
+        var kkwId = DbManager.ExecuteScalar<int?>("select kwh_idheadu from tr_kkwhead where kwh_numer={0}", viewModel.NrKKW);
+        kkw = DTManager.Default.GetDT<IKKWNaglowek>(kkwId) as DTKKWNaglowek;
+    }
+
+    if (kkw == null)
+        return;
+
+    // Print
+    PrintingUIManager.ShowPrintPreview((RecordInfo)kkw.TID);
+}

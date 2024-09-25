@@ -1,0 +1,177 @@
+# Wartości dowolne
+
+## Typ wartości dowolnych
+
+W systemie występuje cała masa obiektów, na których pracują użytkownicy. Obiektem takim może być magazyn, dokument czy klient. Każdy obiekt posiada swoje cechy, przykładowo Klient opisywany jest przez nazwę, kod, NIP, status itd., podobnie w przypadku towaru (np. nazwa, kod, rodzaj, cło itd.). Mimo, że do opisywania obiektów w systemie istnieją zdefiniowane pola, może się okazać, iż z pewnych przyczyn są one niewystarczające. W przypadku towaru (np. samochód) może się okazać, że kluczową jego cechą, z jakichś względów jest kolor nadwozia. Karta towaru nie posiada wbudowanego domyślnie pola 'Kolor nadwozia', nic nie stoi na przeszkodzie, aby użytkownik w prosty sposób sam dodał sobie na kartę towaru takie lub inne pole. Możemy tworzyć pola od dowolnym niemal typie. Poniżej opis najważniejszych:
+ 
+![tmpcaef8a4d-e7aa-4de0-aba3-ecd38fa5b654](https://www.cfi.pl/vendohelp/content/imgs/M8/54bdaecf40bea9d3aac80846fb9ecf91-87266-0.png)
+
+Ze względu na mnogość rożnego rodzaju wartości dowolnych zostały one pogrupowane. Poniżej opisano wybrane rodzaje:
+-	Tekst/Pole tekstowe - System pozwali na wypełnianie pola zwykłym tekstem.
+-	Liczba - System pozwoli wypełniać pole jedynie liczbami. 
+-	Data - System pozwoli wprowadzić w pole wartości dowolnej dane w postaci daty.
+-	Słownik - System pozwoli wypełnić pole jedną z wartości znajdujących się w tabeli, którą sami możemy zbudować.
+-	Klient - Będzie można pole uzupełnić klientem wybieranym z listy.
+-	Towar - Będzie można pole uzupełnić towarem wybieranym z listy. 
+-	Tak/Nie - System pozwoli na wprowadzanie w pole jedynie wartości Tak lub Nie. 
+-	Kraj - System pozwala uzupełniać pole zdefiniowanym  krajem 
+-	Tabela kursów walut – możliwość wypełnienia pola aktualnym kursem dostępnym w tabeli kursowej
+-	Plik - zdefiniowanie wartości pozwalającej dodawać pliki
+-	Skrót do pliku - Możliwość uzupełnienia pola linkiem do zdefiniowanego pliku
+-	Skrót do katalogu - Możliwość uzupełnienia pola linkiem do zdefiniowanego katalogu
+-	Pracownik - System pozwala na dodanie pola z możliwością wyboru pracownika.
+-	Magazyn - System pozwala na dodanie pola z możliwością wyboru magazynu
+System pozwala na definiowanie wielu innych typów wartości dowolnych
+
+## Karta wartości dowolne
+
+Właśnie wartości, które użytkownik sam może definiować w programie nazywamy Wartościami dowolnymi. Pożyteczną cechą wartości dowolnych jest możliwości ich wydruku na dokumentach, można też wykorzystywać je w skryptach kalkulacyjnych wystarczy wcześniej w oknie definiowania wartości dowolnej (poniżej), w polu Nazwa zmiennej określić jej nazwę. Poniżej przykładowe okno tworzenia pola wartości dowolnej.
+
+![tmpad412547-f66b-47c2-a438-a0d8da5f0fd6](https://www.cfi.pl/vendohelp/content/imgs/P9/28ab5016c1bea476df701ce8f6d73890-29679-0.png)
+
+
+Oprócz typów danych zwróćmy też uwagę na pola: 
+-	*Opis* - Etykieta przypisana do pola wartości dowolnej.
+-	*Zakładka* - wybór zakładki w której występować będzie tworzona wartość dowolna
+-	*Domyślnie pokazuj na dialogu* - określenie czy definiowana wartość widoczna będzie zawsze niezależnie od tego czy jej wartość będzie wypełniona czy też nie
+-	*Możliwość edycji  po zamknięciu (zatwierdzeniu ) dokumentu* - Pozwala na modyfikacje utworzonej wartości dowolnej w przypadku gdy dokument jest już zamknięty ( wartości definiowane na dokumentach zakupowych sprzedażowych oraz magazynowych)
+-	*Wartość przenaszalna* - określenie czy wartość dowolna ma być przenoszona na wybrane obiekty
+-	*Wartość przenaszalna on-line* 
+-	*Wartość wyliczalna skryptem* - Utworzenie wartości dla zdefiniowania której konieczne będzie utworzenie skryptu pozwalającego na jej uzupełnienie. Wartość definiowana na potrzeby klienta
+-	*Obowiązkowa* - Zaznaczenie pola spowoduje, iż konieczne będzie uzupełnienie wartości dowolniej
+-	*Wielokrotna* - Zaznaczenie opcji spowoduje, że będzie można klawiszem INSERT dodawać wielokrotnie tę samą wartość dowolną (np. na karcie towaru). 
+-	*Logowanie zmian* – oznaczenie to określa czy zmiany wykonywanie na dodanej wartości dowolnej będą logowane w trakcie użytkowania programu 
+-	*Możliwość importu i operacje blokowe* – oznaczenie tej opcji pozwala na importowanie dodanej wartości dowolnej za pośrednictwem standardowych importów w Vendo jak również dokonanie zmian przy użyciu operacji blokowych 
+-	*Wartość zawsze przenaszalna* - określenie czy wartość ma być przenaszalna na wiele obiektów
+-	*Wymiana WWW* - Zaznaczenie tej opcji pozwala na przenoszenie wartości na strony www (przykładem może być B2B)
+-	*Nazwa zmiennej* - Nazwa wykorzystywana w polach macro w celu definiowania wartości np. na wydruku
+-	*Drukowanie (Zawsze/Tylko wypełnione/Nigdy)* - Decydujemy, kiedy lista wartości dowolnych ma zostać wydrukowana (np. wartości dowolne towaru na FV).
+-	*Przenaszalność* – okno kontekstu przenaszalności, informacja na jakie obiekty wartość będzie kopiowana
+
+## 	Dodanie wartości dowolnej i jej zastosowanie
+
+Możemy dowolnie wybierać typ dodawanej Wartości dowolnej dodawanej dla obiektów wymienionych we wcześniejszym punkcie.
+Aby przedstawić mechanizm dodawania i używania wartości dowolnych przedstawiony zostanie przykład dodania wartości typu słownik. 
+
+### 	Schemat postępowania - dodawanie słownika wartości dowolnych: 
+
+-	Wejście w menu `Ustawienia` > `Główne` > `Słowniki`. 
+-	W liście tabeli słownikowych wyszukujemy sekcje a następnie zakładkę w której maja zostać dodane wartości dowolne, wciskając ENTER wchodzimy na pozycję – w tym przypadku  Słowniki wartości dowolnych.
+-	Z poziomu okna słowników wartości dowolnych, klawiszem INSERT dodajemy nowy słownik - w naszym przypadku będzie to słownik kolorów.
+ 
+![tmp9fff3b9b-15c7-4ef1-a0e1-79507e04d5aa](https://www.cfi.pl/vendohelp/content/imgs/V9/665fb9f72f1637d3183f6da339e07cc7-24967-0.png)
+
+-	Po dodaniu nowego słownika wchodzimy klawiszem `ENTER` w jego okno, a po wejściu klawiszem `INSERT` dodajemy kolejno jego pozycje (kolory). Dodatkowo dla każdego z dodawanych elementów słownika możemy określić towar, dla którego element może być dostępny (pole Towar) oraz Wartość - wartość, która będzie mogła być używana w skryptach.
+ 
+![tmp3a151d65-e851-4d19-954c-6cefb5291816](https://www.cfi.pl/vendohelp/content/imgs/F7/969540b772935e790f910fe87ae9da74-13722-0.png)
+
+-	Po wprowadzeniu wszystkich potrzebnych elementów słownika zamykamy okno. Przykładowy słownik kolorów może wyglądać następująco:
+
+![tmpde29f18f-bb16-40dd-85d3-a282cdee2014](https://www.cfi.pl/vendohelp/content/imgs/G0/57e6a4a24b6334b77affb511d7e3191d-9384-0.png)
+ 
+
+Dodany w ten sposób słownik można wykorzystać do definiowania wartości dowolnych, które potem będą widoczne np. na dokumencie i możliwe do wydruku. 
+
+
+## Schemat postępowania - zastosowanie wartości dowolnych:
+
+-	Wchodzimy w menu `Ustawiania Główne` > `Słowniki`. 
+-	W module Magazyn odnajdujemy pozycje wartości dowolnych kartoteki towarowej (słowniki mogą być używane również do definiowania innych wartości dowolnych np. kontrahenta czy obiektu), klawiszem `ENTER` zatwierdzamy wybór.
+-	Na liście wartości dowolnych naciskamy `INSERT` - pojawi się okno definiowania nowej wartości. Należy wybrać typ wartości pozycja ”Słownik”
+
+![tmp9ee1dcb6-a504-46b0-ba42-42fe3596d0c2](https://www.cfi.pl/vendohelp/content/imgs/S0/46da92aca5b77643de339c5fa22f7910-91455-0.png)
+ 
+
+-	Wartość Dowolną „Kolor obiektu” należy uzupełnić niezbędnymi informacjami wraz z oznaczeniem wszystkich funkcji właściwych dla definiowanej wartości. Bardzo ważne w tym przypadku jest wybór słownika który przypisany będzie dla danej wartości. Oczywiście podczas zakładania wartości towaru istnieje możliwość zdefiniowania innego typu 
+
+![tmp07b2be49-78ae-411f-aa4c-fced9129d7a8](https://www.cfi.pl/vendohelp/content/imgs/Z1/743361b4fb279e0043e7614c213895e9-28891-0.png)
+
+
+Chcąc sprawdzić jak wygląda działanie pola wartości dowolnych wchodzimy na kartę towaru > zakładka Wartości dowolne. Następnie klikając prawy przycisk myszy > Dodaj wartość dowolna wybieramy właściwa pozycje.
+
+![tmp526958ee-9f2c-4bbe-a1ca-f1be1a8d1193](https://www.cfi.pl/vendohelp/content/imgs/T3/af750dff18ea85cd4e04f75b14670088-74087-0.png)
+ 
+
+Jak widać pole 'Kolor obiektu' zostało dodane. Po wybraniu wartości zatwierdzamy klawiszem `ENTER` bądź dwuklikiem na wybranej pozycji. Na karcie towaru system wprowadzi zmianę     
+
+W powyższym przykładzie zastosowaliśmy pole wartości dowolnych, gdzie wartość wybieraliśmy z tablicy kolorów, którą sami wcześniej zdefiniowaliśmy. W prostszych wariantach nie ma potrzeby budowania tabel z wartościami - wystarczy w polu typu wartości dowolnych wybrać zamiast 'słownik' np. 'tekst', wtedy użytkownik chcąc wprowadzić wartość np. na karcie towaru nie będzie wybierał jej z listy tylko wpisywał "z ręki". 
+
+## 	Przenaszalność:
+
+Wartość przenaszalna, zawsze przenaszalna – funkcje używane w przypadku, gdy wartość ma się przenosić na inne obiekty niż definiowany obecnie dialog. Jest to element służący do kopiowania wartości z jednego elementu na inny 
+
+Mechanizm działania przenoszenia wartości na inne obiekty działa następująco:
+
+-	Należy utworzyć wartość dowolna na elemencie, z którego ma ona być przenoszona
+-	Aby możliwe było kopiowanie wartości dowolnej, podczas jej tworzenia należy zaznaczyć ChecBox „Wartość przenaszalna” jeśli ma ona przenosić się na jeden wybrany obiekt lub Wartość zawsze przenaszalna jeśli ma przenosić się na wiele obiektów
+
+![tmpe785f490-20a4-46e4-a7e5-0ebb812972c5](https://www.cfi.pl/vendohelp/content/imgs/B7/a746103691b1777acaf1eadd6e9099a3-62347-0.png)
+
+
+-	Następnym etapem tworzenia wartości przenaszalnej jest określnie na które obiekty wartość będzie przenoszona. W tym celu należy w tabelach słownikowych wybrać właściwą pozycje - Miejsce docelowe przenoszenia wartości > klawiszem `ENTER` zatwierdzić wybór 
+-	Klikając lewym przyciskiem myszy wybieramy opcje „Przenieś definicje z innej wartości” następnie określamy która wartość ma zostać przeniesiona
+
+![tmp698b9383-073c-4226-9071-83861cb40076](https://www.cfi.pl/vendohelp/content/imgs/K2/a91558a0b9e2b4030d4c154e34514a14-137557-0.png)
+ 
+
+
+-	Po wyborze i zaakceptowaniu właściwej pozycji w dolnej części okna dialogowego zostanie wyświetlona informacja o kontekście przenaszalności, czyli informacja z którego miejsca wartość jest kopiowana
+-	Aby dodać kolejne miejsca, w które wartości mają się przenosić a tym samym ustalić całą ścieżkę kopiowania jej wartości należy kliknąć w zielony plus znajdujący się w prawym dolnym rogu okna
+-	System wyświetli całą listę pozycji dla których możliwe jest kopiowanie/przenoszenie zdefiniowanej wartości.
+
+![tmp59ed628f-d29b-4388-a701-21d3a9baf462](https://www.cfi.pl/vendohelp/content/imgs/R7/16f32230c4a1c0d074c4ea9babc03a9f-118306-0.png)
+ 
+
+
+### 	Pętla VENDO
+
+Pętla Vendo – pętla Vendo pozwala na stworzenie mechanizmu  przenoszenia wartości dowolnych pomiędzy pozycjami obiektów. System z automatu tworzy zależności, według których przenoszony będzie zdefiniowany przez użytkownika parametr. Innymi słowy jest to mechanik pozwalający ustandaryzować przez użytkownika, kiedy i w jakie miejsca wartości będą się przenosiły a kiedy nie. Ustalenie obiegu pracy z dokumentami na które dokumenty te wartości mają się przenosić.
+
+Proces tworzenia pętli Vendo:
+
+Aby utworzyć wartość dowolną przenoszoną pętla Vendo należy:
+-	Rozpoczynając proces tworzenia wartości dowolnej wybrać opcje „Dodaj wartość dowolną z pętlą Vendo”. 
+-	Wypełnić wszystkie niezbędne dane dotyczące definiowanej wartości
+-	Po zatwierdzeniu System automatycznie utworzy schemat połączeń pomiędzy dokumentami. 
+-	Od tego momentu wartość dowolna utworzona w pętli Vendo widoczna będzie na wszystkich zdefiniowanych przez system obiektach
+
+
+![tmp3e4591af-43cd-47be-8cb2-f9c63ffab5c0](https://www.cfi.pl/vendohelp/content/imgs/R7/ba304498f037ca9919dc5709e7130b97-130339-0.png)
+
+## Konteksty przenaszalności Partia, Pozycja dokumentu
+
+### Partie
+
+-	**Pozycja dokumentu** – pozycja dokumentu przy działaniu na której został utworzony rekord partii,
+-	**Dane rozszerzone pozycji dokumentu** – analogicznie jak „Pozycja dokumentu” z tym ze tyczy się rekordu TG_TEEX,
+-	**Dyspozycja magazynowa** – analogicznie jak powyższe, z tym ze dla rekordu dyspozycji (TR_DYSPOZYCJAMAG),
+-	**Materiałówka KKW** – analogicznie z tym, że dla TR_MRPNODREC lub TR_KKWNODWYKRUCH
+-	**Ruch wykonania KKW** – analogicznie z tym ze dla TR_KKWNODWYKRUCH
+
+### Pozycja dokumentu:
+
+-	**Towar pozycji** – z kartoteki towaru
+-	**Towar pozycji (hot)** – z kartoteki towaru, wartość aktualna na moment otwarcia dialogu pozycji dokumentu (wartości typu hot nie są zapisywane do bazy danych tylko wyliczane na moment otwarcia dialogu),
+-	**Generowanie nieściągające** – dokument źródłowy – ze źródłowej pozycji dokumentu na podstawie, której powstała dana pozycja gdy generowanie nie realizowało źródłowej pozycji,
+-	**Przesunięcie międzymagazynowe** – dokument źródłowy – gdy pozycja jest pozycją dokumentu MM+ ze skojarzonej pozycja dokumentu MM-,
+-	**Dokument magazynowy** – dla dokumentu FV lub PR – pozycja WZ dla której jest tworzona pozycja FV lub PR, gdy takich pozycji jest więcej brana jest arbitralnie jedna z nich,
+-	**Dokument handlowy** – dla dokumentów magazynowych (PZ/WZ) pozycja dokumentu handlowego (FZ/FV/PR)
+-	**Skojarzone zamówienie** – dla dokumentów realizujących zamówienia z pozycji realizowanej
+-	**Źródłowa partia** – partia która pochodzi ze wskazanego wcześniej źródła (np. via dialog wyboru z partii/dostawy) pod warunkiem że per rodzaj dokumentu włączone jest ustawienie „Przy wyborze partii uaktualnij przenoszone wartości dowolne z towaru według parametrów partii”
+-	**Źródłowy plan zlecenia** – pozycja planu zlecenia dla której jest tworzona pozycja dokumentu
+-	**Przyjęcie: wzorcowa charakterystyka partii plusowej dla nowej pozycji** – dla dokumentów przychodowych partia przychodowa, gdy została ona podana przy tworzeniu pozycji dokumentu,
+-	**Wydanie: wzorcowa charakterystyka partii plusowej dla nowej pozycji** – dla dokumentów rozchodowych partia przychodowa, gdy została ona wskazana przy tworzeniu pozycji dokumentu,
+-	**Zamówienie: wzorcowa charakterystyka partii plusowej dla zamówień** – dla dokumentów zamówieniowych partia przychodowa, gdy została ona wskazana przy tworzeniu pozycji dokumentu,
+-	**Źródłowe pomocnicza charakterystyka partii** – z rekordu TG_PARTIEHELPER  - zwykle w sytuacji gdy pozycja dokumentu jest tworzona z użyciem skryptu wyliczającego partię z dodatkowymi informacjami (np. ilość)
+-	**Źródłowa kalkulacja MRP** – z kalkulacji MRP
+-	Kartoteka dla klienta – Nagłówek dokumentu – z wartości dowolnych charakterystyki towaru per klient gdy pozycja dokumentu została utworzona z użyciem charakterystyki,
+-	**Partia pozycji dokumentu (tylko gdy w trybie const)** – ze wskazanej partii, gdy partia została wskazana dokładnie i jednoznacznie (w trybie const).
+
+
+
+
+
+
+
+
+

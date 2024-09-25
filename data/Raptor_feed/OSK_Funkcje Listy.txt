@@ -1,0 +1,25 @@
+# Obroty i salda kont
+
+W ramach dostępu do zakładki *obroty i salda kont* użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp8ede383c-481d-4337-bb14-9a1fcaa0ec00](https://www.cfi.pl/vendohelp/content/imgs/V3/bf2999bdde9274b4e67a7b24cba5a9dc-39523-0.png)
+
+- od miesiąca – początek zakresu,
+- do miesiąca – koniec zakresu,
+- poziom – poziom planu kont,
+- widok – zatwierdzone lub zatwierdzone + w buforze,
+- od konta – pierwsze konto, od którego program stworzy obrotówkę,
+- do konta – ostatnie konto, do którego program stwory obrotówkę,
+- obroty łączne z BZ – uwzględnianie bilansu zamknięcia dla wybranych kont,
+- obroty łączne bez BO – nie uwzględnianie bilansu otwarcia dla wybranych kont,
+- typ – wybieranie typu kont, które zostaną uwzględnione w obrotówce ( bilansowe, wynikowe, pozabilansowe, nieokreślone lub wszystkie),
+- saldo BO dla rozrachunków – uwzględnianie salda bilansu otwarcia,
+- znaczniki – nadawane przez użytkownika,
+- konta bez obrotów – możliwość wyłączenia z obrotówki kont bez obrotów,
+- bez zerowych sald – możliwość wyłączenia z obrotówki kont z zerowym saldem,
+- pełne drzewo – uwzględnienie wszystkich kont z widoku drzewa planu kont,
+- nie rozwijaj analityk kontrahenta.
+
+Poza możliwością filtrowania obrotów użytkownik ma możliwość wydruku obrotów i sald. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpa9a31040-f1e9-4a3f-aa04-81ff113b4833](https://www.cfi.pl/vendohelp/content/imgs/Q0/67294e36662f9f35920b1d131c08fbf4-35097-0.png)

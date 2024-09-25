@@ -1,0 +1,102 @@
+# Przyjęcie Zewnętrzne PZ
+## Informacje ogólne
+Dokument Przyjęcie Zewnętrzne jest dokumentem magazynowym przychodowym, przyjmującym towary na stan magazynowy. Jako że jest to dokument przychodowy ustala on cenę zakupu i ma wpływ na wycenę towaru na magazynie. Dokument PZ może być wystawiony z ręki i na jego podstawie generowana jest Faktura Zakupu, lub też wygenerowany z dokumentu Zamówienia Własnego. Będzie on powiązany bezpośrednio z dokumentami zakupowymi. Należy pamiętać, dopiero po zamknięciu dokumentu zwiększane są stany magazynowe.
+
+
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |PZ
+|Wpływ na stan magazynowy |Po zamknięciu dokumentu
+|Rodzaj dokumentu | Magazynowy - przyjęcie
+|Czy wchodzi do płatności| Jeśli posiada FZ
+|Czy możliwe korekty| Tak
+|Nazwa dla dat|Data1:DataPrzyjecia; Data2:DataDokumentu;
+|Nazwa dla klienta |Klient1:Dostawca; Klient2:Nadawca;
+|Czy dokument przenosimy do rej. Vat | Tak
+|Czy wchodzi do Analiz Sprzedaży| Nie
+|Czy wchodzi do Analiz Zakupu| Tak
+|Pozwolenie na ceny zerowe | Tak
+|Sposoby liczenie netto/brutto | Tak
+|Wielowalutowy, |Tak
+|Czy dokument może być eksportowy |Nie
+|Czy dokument może mieć ceny zerowe | Tak
+|Czy dokument może posiadać pozycje zerowe |Nie
+|TypRejestruVAT Zakup
+|Musi być klient, | Tak
+|Księgowany |Tak
+|Jakie cenniki | kartoteki cennikowe
+|Czy są płatności - rozrachunki| Nie
+|Czy są płatności - skojarzenie z WP/WY|Nie
+|Czy dokument skojarzony z dokumentem handlowym |Tak
+|Ma możliwość użycia cen indywidualnych | Tak 
+|Czy może posiada ceny ujemne | Nie
+|Czy dokument księgujemy | Tak
+|Pozwolenie na zerowe ilości na pozycji |Nie
+|Pozwolenie na ceny ujemne | Nie
+|Sposoby liczenie netto/brutto | Tak
+
+
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu PZ to: 
+
+|Nazwa Pola | Definicja |
+|
+|	Numer | Numer dokumentu generowany zgodnie z konfiguracją
+|Magazyn	| Informacja o magazynie z którego wydany będzie towar
+| Data przyjęcia | Data kiedy został przyjęty towar
+|	Dokument | Data wystawienia dokumentu
+|	Dostawca | Klient który dostarczył towar 
+|	Nadawca | Klient który jest powiązany z Dostawcą
+|	Forma płatności i data płatności|
+| Wartość netto w cenach zakupu, Vat, Do zapłaty, Zapłacono Pozostało do zapłaty, zaliczki, Całkowite zadłużenie| Informacje dotyczace rozliczenia dokumnetu oraz saldo klienta |
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F5/6ede83548b2f43462b1694e1f780867a-34773-0.png)
+ 
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Dostawcy i Nabywcy. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I0/ff55be8d27ee35f74e4030bb6c38ec4a-26733-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer zamówienia – Numer Zamówienia klienta
+-	Numer Dostawy
+-	Numer Obcy – numer dokumentu na podstawie którego wykonano przyjęcie
+-	Zamówił lub Zatwierdził to pola w których umieszczane są dane pracownika odpowiedzialnego za powstanie dokumentu
+-	Koszty dodatkowe do granicy– pole w którym podana może być wartość o jaką musi zostać zwiększone koszty zakupu poza granicami kraju .
+-	Koszty dodatkowe kraju– pole w którym podana może być wartość o jaką musi zostać zwiększone koszty zakupu w granicach kraju .
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Wartość VAT (z SAD)  
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G6/510adeafe14bf98d6a3f69b6cba5c839-29225-0.png)
+ 
+W zakładka Opis i uwagi wprowadzane są dane na podpis dokumentu oraz uwagi które mogą być drukowane na wydruku dokumentu Przyjęcia Zewnętrznego. W polu Uwagi mogą się przenosić numery dokumentów źródłowych : Zamówienie Własne, Awizo Przjęcia, Faktura Zakupu.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K0/b19a0fb2980cafe747ab788e8f29c534-19189-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N3/007e5f997afdfeb42086f3dbc2ba1d8b-30446-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla PZtki zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Grupa Cen – grupa cen ostatnia cena zakupu towaru
+-	Cena0 : - Cena z cennika ceny ostatniej ceny zakupu
+-	Ilość – ilość przyjętych  kartotek towarowych w podstawowej jednostce 
+-	Raba – wyliczony, wprowadzony lub przeniesiony z zamówienia własnego. 
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na dokumencie, oraz ilość zarezerwowana na innych dokumentach. 
+-	Poniżej ilości w magazynie w polu podane jest źródło pochodzenia pozycji jeśli była przenoszona z innego dokument np. zamówienia własnego lub Faktury Zakupu.
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q4/786755b8393935101abfacd25c34c013-28829-0.png) 
+
+Podczas zamknięcia dokumentu Przyjęcia Zewnętrznego można automatycznie wygenerować dokument Faktury Zakupu. 
+Wystawiając Przyjęcie Zewnętrzne  mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. 

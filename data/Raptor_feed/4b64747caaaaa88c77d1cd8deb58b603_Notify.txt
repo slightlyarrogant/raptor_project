@@ -1,0 +1,107 @@
+Notify
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/notify
+scraped_at: 2024-09-05T12:21:29.843091
+last_updated: 2024-09-05T12:21:29.843156
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Notify
+meta_tags: ['powiadomienia', 'wysłanie', 'pozwala', 'vendo', 'jest', 'powiadomień', 'oraz', 'można', 'dokumentu', 'będzie']
+
+Content
+Cel
+Notyfikacje w programie Vendo służą do wysłania różnego rodzaju powiadomień z różnych obiektów dostępnych w systemie takich jak: dokumenty, klienci, towary, listy przewozowe, zdarzenia, zlecenia itp. Dzięki zautomatyzowaniu systemu do rutynowych powiadomień zyskujemy sporo czasu, jaki użytkownik musiałby poświęcić na ręczne wysyłanie tego typu monitów.
+Opis funkcjonalności
+
+Informacje ogólne
+
+Rozwiązanie to w Vendo oparte jest na pluginie, który należy podegrać poprzez wgranie pliku do systemu. Do wykorzystania tego rozwiązania w pełni, klient musi mieć wykupiony plugin Notify, posiadać w kluczu moduł CRM przynajmniej w standardzie oraz jeżeli chce wykorzystać powiadomienia cykliczne - dostęp do trybu automatycznego BOTa. Najnowsza wersja pluginu znajduje się zawsze na dysku sieciowym w M:!!!!! Wdrozenia!!!Pluginy, wybieramy wersję naszego programu a następnie katalog Notify. Aby podegrać notyfikacje do Vendo należy wybrać lewy górny róg „V” -> Ustawienia -> Pluginy. Otworzy się okno widoczne poniżej.
+
+Następnie należy wybrać zaznaczony przycisk „Dodaj plugin” i wskazać plik z pluginem (ważne: plik z pluginem jaki wskazujemy, musi znajdować się u nas lokalnie na komputerze np. pulpicie, nie możemy wskazać pliku z lokalizacji sieciowej!). Aby móc wprowadzać i edytować mechanizmy utworzone w pluginie Notify należy mieć włączone uprawnienie na karcie pracownika o nazwie „Zarządzanie pluginami i skryptami w programie”.
+
+II. Budowa edytora powiadomień
+
+Edycja mechanizmów znajduje się w prawym górnym rogu otwartego okna (ikonka skrzyżowanych narzędzi) a następnie „Pokaż ustawienia”.
+
+Edytor składa się w głównym oknie z dwóch zakładek: „Triggers” – czyli lista mechanizmów powiadomień stworzonych przez użytkownika o różnych typach oraz „Pozostałe ustawienia” – w tym miejscu możemy ustawić raportowanie błędów poprzez zapis do pliku tekstowego lub wysłanie komunikatu błędu mailem na wskazany adres mailowy. W przypadku raportowania błędów, jest to dość pomocna funkcja, która pozwala na wychwycenie błędu w utworzonym mechanizmie w postaci np. wprowadzenia niepoprawnych danych autoryzacyjnych do skrzynki mailowej w Vendo, z której powiadomienia będą wysyłane. W zakładce „Triggers” po lewej stronie znajduje się lista z ustawionymi powiadomieniami a po prawej szczegóły danego powiadomienia. Poprzez zielony plusik dodajemy nowy mechanizm. U dołu okna jest dostępny przycisk Funkcje, pozwalający na zapisanie wszystkich utworzonych mechanizmów do jednego pliku lub wczytanie mechanizmów z wcześniej zapisanego pliku. W ten sposób można zrobić backup już utworzonych powiadomień, na przykład po to, by podegrać nową wersję pluginu z pliku. Przyciski po prawej stronie pozwalają na zapisanie dotychczasowych zmian. Powiadomienia mogą być tworzone z różnych obiektów oraz na różne akcje, związane z tymi obiektami. Wyszczególnić można tutaj dwa typy powiadomień:
+
+na akcje - wykonywane przez użytkownika np. zamknięcie dokumentu - zmiana statusu itp.
+powiadomienia cykliczne. W przypadku powiadomień związanych z akcją, dane powiadomienie jest wysyłane w momencie dokonania przez użytkownika jakiejś czynności dla danego obiektu. I tak np. możemy utworzyć mechanizm o typie „Dokument” wysyłający eFakturę po zamknięciu dokumentu faktury Vat. Takie powiadomienie, będzie tworzone i wysyłane dokładnie wtedy, gdy pracownik zamknie dany dokument (zatwierdzi bufor). W przypadku powiadomień cyklicznych, to program będzie wysłał automatycznie dane powiadomienia, zgodnie z czasem jaki ustawimy w mechanizmie. Przykładem wykorzystania powiadomień cyklicznych są np. ponaglenia odnośnie niezapłaconych faktur. Do powiadomień cyklicznych konieczne jest utworzenie i konfiguracja Vendo w trybie BOTa, czyli trybu automatycznego. Gdy dodamy nowy mechanizm w oknie edytora, uaktywnia się jego prawa część, gdzie widać szczegóły danego powiadomienia. Dla przykładu dodamy powiadomienie dla Dokumentu.
+
+
+Okno to składa się z pięciu zakładek: Główne, Filtry, Alerty, Zdarzenia, Działania. W zakładce Główne mamy możliwość włączenia lub wyłączenia działania danego powiadomienia, wprowadzenia nazwy widocznej tylko w edytorze powiadomień oraz wybranie operacji dla jakiej to powiadomienia ma zostać użyte.
+
+W zakładce Filtry jest możliwość ustawienia warunków jakie muszą zostać spełnione aby dane powiadomienie mogło być wysłane. Dla tego mechanizmu mamy możliwość wybrania rodzaju dokumentu z jakiego chcemy wysyłać monity, ustawić limit na kwotę dokumentu od jakiej powiadomienie ma wychodzić, wskazać pozycję towarową, którą dokument musi zawierać lub z jakiej grupy towary bierzemy pod uwagę, uwzględnić konkretny magazyn oraz jest możliwość dodania zapytania SQL na warunek, który nie został uwzględniony we wcześniejszych filtrach a jaki jest nam potrzebny. Zapytanie to, musi zwracać w odpowiedzi prawdę lub fałsz i od tego będzie zależało czy dany dokument będzie brany pod uwagę czy nie. Oczywiście wszystkie te warunki są opcjonalne i nie muszą być wypełnione. Zaleca się jednak aby wskazać konkretny rodzaj dokumentu, jaki chcemy obudować notyfikacjami. W zakładce Alerty mamy możliwość ustawić typy powiadomienia jakie mają być wysyłane, więcej na ten temat będzie w dalszej części tego dokumentu.
+
+W zakładce Zdarzenia program oprócz wysłania powiadomienia może również utworzyć zdarzenie dla wskazanego pracownika. W tym miejscu mamy możliwość ustawić wzór zdarzenia, jakie będzie tworzone z wszystkimi najważniejszymi polami znajdującymi się na obiekcie typu zdarzenie czyli właściciel, podpięcie zlecenia, ustawienie klienta, wybranie rodzaju zdarzenia, ustawienie tematu, opisu i ewentualnie dodania załącznika.
+
+W zakładce Działania możemy ustawić kolejne dodatkowe akcje przewidziane dla dokumentów, które będą wykonane w tym samym czasie oprócz wysłania powiadomienia. W tym miejscu możemy wymusić aby plugin Notify zamknął dany dokument (jeżeli jest w buforze) oraz zmienił status na dokumencie. Statusu jakie są w tym miejscu do wybrania, pobierane są ze statusów dostępnych dla danego rodzaju dokumentu ustawianych w Ustawienia -> Parametry pracy -> Dokumenty – Pokaż dialog -> wybieramy rodzaj dokumenty -> zakładka Statusy.
+
+Rodzaje dostępnych powiadomień w pluginie Notify (stan na lipiec 2019)
+
+
+Z dostępnych typów powiadomień możemy wybrać:
+
+Awarie maszyn – pozwala na wysłanie powiadomienia w momencie rozpoczęcia oraz zakończenia awarii na produkcji,
+Dokumenty – pozwala na wysłanie powiadomienia na otwarcie zamkniętego, zamknięcie, zmianę daty realizacji, usunięcie, zmianę klienta, zmianę statusu, zamianę wartości dowolnej i wydrukowanie dla wszystkich standardowych rodzajów dokumentów,
+KKW – pozwala na wysłanie powiadomienia na otwarcie zamkniętego, zamknięcie i zmianę statusu na KKW,
+Klienci – pozwala na wysłanie powiadomienia na utworzenie nowej kartoteki klienta,
+List przewozowy – pozwala na wysłanie powiadomienia w momencie eksportu nowego listu przewozowego do spedytora z Vendo,
+Obiekty – pozwala na wysłanie powiadomienia na utworzenie nowego obiektu oraz zmianę wartości dowolnej na obiekcie np. serwisowym,
+Plan zlecenia – pozwala na wysłanie powiadomienia przy zmianie statusu na pozycji zlecenia,
+Płatność – pozwala na wysłanie powiadomienia na zatwierdzenie płatności (np. wpłaty, wypłaty) z bufora,
+Pozycja dokumentu – pozwala na wysłanie powiadomienia podczas utworzenia pozycji na dokumencie lub zmiany statusu,
+Rejestracja operacji KKW – pozwala na wysłanie powiadomienia w momencie rozpoczęcia lub zakończenia wykonania na operacji KKW,
+Rozliczenia – pozwala na wysłanie powiadomienia cyklicznego, gdzie program po odpowiedniej konfiguracji tego mechanizmu będzie wysłał informację o przeterminowanych płatnościach z dokumentu,
+Rozpoczęcie/zakończenie zlecenia – pozwala na wysłanie powiadomienia w momencie rozpoczęcia pracy na zdarzeniu,
+Technologia – pozwala na wysłanie powiadomienia na otwarcie zatwierdzonej, zatwierdzenie i zmianę statusu na technologii,
+Towary – pozwala na wysłanie powiadomienia na utworzenie nowej kartoteki towarowej,
+Transport – pozwala na wysłanie powiadomienia na utworzenie oraz zmianę wartości dowolnej na zleceniu transportowym,
+Wynik zapytania – pozwala na wysłanie powiadomienia dla zdefiniowanych obiektów takich jak dokument, klient, obiekt serwisowy, pozycja dokumentu, pracownik, zdarzenie, zlecenie poprzez niestandardowe, warunkowane przez użytkownika cele za pomocą zapytania SQL. Dzięki temu typowi mechanizmu można tworzyć wiele różnych powiadomień, gdzie użytkownik może sam zadecydować jakie dane będzie filtrował a następnie ustawiał dla nich powiadomienia. Z użytego zapytania SQL zwracane są ID w/w obiektów, które będą przekazane do wysyłki wybraną metodą powiadomienia,
+Zdarzenia – pozwala na wysłanie powiadomienia na utworzenie, anulowanie, otwarcie zamkniętego, wykonanie, zamknięcie, zmianę klienta, zmianę statusu, zmianę wartości dowolnej, zmianę właściciela na zdarzeniu w module CRM,
+Zlecenie – pozwala na wysłanie powiadomienia na anulowanie, utworzenie nowego, wykonanie, zawieszenie zleceń dostępnych w programie m. in. produkcyjnych, serwisowych, księgowych, akcji marketingowej, procesu sprzedaży itp.
+
+
+Typy powiadomień
+
+W każdym mechanizmie dostępna jest zakładka Alerty, w której mamy możliwość wybrania jakiego typu ma być wysyłane powiadomienie. Można w jednym mechanizmie, użyć kilku typów powiadomień np. mail i chat równocześnie. Dostępne typy to:
+
+Chat
+
+
+Chat czyli wykorzystanie dostępnego z Vendo programu Vendo Phone. Każdy pracownik ma swoje konto w Vendo, które przypisane jest do użytkownika w Vendo Phonie. Można ustawić aby powiadomienia z pluginu Notify, były wysyłane jako osobne wiadomości na chatcie. W oknie tego typu powiadomienia w zakładce „General” mamy do uzupełnienia temat oraz treść wiadomości. W przypadku przesyłanej treści można użyć dostępnych w programie tzw makr. Lista makr standardowych jakie są dostępne do wybrania, znajduje się zawsze w katalogu z wersją programu, przykładowa ścieżka: C:\ProgramData\Vendo\Repository[vendo_app][2018-05-24__14..00..00]\etykiety\macros.xml. W zakładce Odbiorcy wskazujemy pracownika (wybierany z listy pracowników dostępnych w Vendo), do którego dane powiadomienie ma trafić.
+
+Mail
+
+
+Najbardziej popularnym typem powiadomienia używanego w pluginie Notify jest wiadomość mailowa. W zakładce „General” ustawiamy wzór maila, jaki będzie wysyłany do odbiorcy. Uzupełniamy temat, Nadawcę (skrzynkę mailową skonfigurowaną w Ustawienia -> Parametry pracy -> Słowniki -> Konta e-mail), jeżeli mamy skonfigurowane szablony mailowe można wybrać dostępny szablon oraz uzupełniamy treść podzieloną na nagłówek i stopkę. Pomiędzy tymi sekcjami (nagłówkiem i stopką) mamy możliwość wstawienia dodatkowo tabelki np. z listą dokumentów, która będzie się wyświetlała właśnie między nagłówkiem a stopką. Tabelkę tworzymy za pomocą zapytania SQL. Treść formatowana jest z udziałem języka HTML, więc należy zastosować tagi, które ten język używa np. przejście do nowej linii 
+. Można skorzystać z edytora dostępnego w Internecie, gdzie wklejamy treść naszego powiadomienia i konwertujemy ją na treść otagowaną znacznikami HTML, można skorzystać z bezpłatnej strony: https://html-online.com/editor/. W treści maila można użyć również, tak jak w przypadku chata, dostępnych pól z pliku macros.xml. Dodatkowo, są do wyboru jeszcze opcjonalne ustawienia, jakie wiadomość mailowa może zawierać. Można ustawić, żeby do wiadomości podpinał się załącznik w postaci obiektu, z którego korzysta dany mechanizm np. dla dokumentów będzie to wydruk danego dokumentu w pliku PDF. Wysłanie danej wiadomości może skutkować również utworzeniem kopi potwierdzenia wysłania powiadomienia w Vendo w postaci zdarzenia typu mail, na skrzynce mailowej z jakiej został on wysłany. Przy wysyłce powiadomienia program może również zmienić status na obiekcie (np. na dokumencie) oraz logować wysłanie wiadomości w osobnym pliku.
+
+W zakładce Odbiorcy możemy wpisać adresy mailowe do jakich ma być wysyłane powiadomienie na sztywno lub/i wykorzystać zapytanie SQL, pobierające adres mailowy np. z karty klienta lub z jakiejś wartości dowolnej umieszczonej na kartotece klienta, dokumencie itp. Gdy zaznaczymy osobę „Z obiektu” - „Wpisujący” lub „Zalogowany pracownik”, wtedy zostanie pobrany adres mailowy z karty odpowiedniego pracownika.
+
+Powiadamiacz
+
+
+Powiadamiacz to funkcjonalność w Vendo, która bazuje głownie na zdarzeniach w module CRM. Za pomocą tego typu powiadomienia, będzie wyświetlane okienko w którym pojawiać się będą przypomnienia pracownikowi, dotyczące danego mechanizmu Notify. W tym przypadku uzupełniamy dwa pola podobnie jak w przypadku chatu tj. temat i opis, czyli treść powiadomienia.
+
+W zakładce Odbiorcy podobnie jak przy powiadomieniu mailowym, mamy pola do wybrania pracownika wpisującego, zalogowanego, wpisania adresu mailowego na sztywno oraz za pomocą zapytania SQL. Dodatkowo jest możliwość ustawienia w jakim czasie po utworzeniu, ma się pojawić dane przypomnienie pracownikowi.
+
+SMS
+
+
+Ostatnim typem powiadomienia jest wiadomość tekstowa SMS. W przypadku tego powiadomienia podobnie jak w przypadku chatu, uzupełniamy pole temat i opis z tym, że temat jest bardziej informacyjny, gdyż nie wyświetli się na telefonie powiadamianej osoby. Zakładka odbiorcy wygląda tak samo, jak w poprzednich opisanych powiadomieniach i uzupełnia się te same pola. Aby można było skorzystać z możliwości wysyłania SMS z Vendo, należy założyć konto na stronie https://promosms.com/ a następnie wprowadzić dane dostępowe takie jak login i hasło w ustawieniach programu (Ustawienia -> Parametry pracy -> drzewko Wymiana danych -> Bramka SMS, pokazane na poniższym zdjęciu). Vendo współpracuje obecnie tylko z bramką PromoSMS i za jej pomocą wysyłane są wiadomości SMS.
+
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+

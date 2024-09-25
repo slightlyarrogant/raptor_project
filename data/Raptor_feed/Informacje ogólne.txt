@@ -1,0 +1,91 @@
+# 	Zestawienie raportów i analiz:
+## Dokumenty:
+
+-	Analiza sprzedaży
+-	Analiza kosztów
+-	Analiza zakupów
+-	Podsumowanie dokumentów
+-	Raport szefa
+-	Średni czas realizacji dokumentów
+-	FV/PR do których WZ wystawiono w innym okresie
+-	OTIF dla ZO
+-	OTIF dla ZW
+
+## Klienci:
+-	Kartoteki tymczasowe
+
+## Magazyn:
+-	Zapotrzebowanie i oczekiwanie
+-	Stany na dzień
+-	Analiza magazynów na dzień
+-	Stany wg. Dostaw
+-	Towary zalegające
+-	Wartość magazynów  wg. Dostawców
+-	Obroty magazynowe
+-	BackOrder w okresie
+-	Zaokrąglenie i KWM
+-	Bilans TK
+-	Kartoteki tymczasowe
+
+## Płatności:
+-	Nierozliczone płatności
+-	Należności i zobowiązania na dzień
+-	Należności i zobowiązania wg okresów wymagalności wg. dokumentów
+-	Należności i zobowiązania wg okresów wymagalności wg. Kontrahentów
+-	Raport różnic kursowych
+-	Kantor walut
+
+## Produkcja:
+-	Gantt realizacji
+-	Kalendarz stanowisk
+-	Plany operacji
+-	Produkcja – Rozliczenie
+-	Plan stanowiskowy
+-	Porównanie dokumentów
+-	Kalendarz grup roboczych
+-	Kalendarz kubełków symulacyjnych
+-	Matrycy umiejętności
+-	Wydajności pracowników
+-	Wydajność stanowisk
+-	Zarejestrowane kooperacje
+-	Zarejestrowane operacje
+-	Rozliczenie KKW
+-	Awarie stanowisk
+-	Operacje technologii produkcyjnych
+-	Robocizny kalkulacji
+-	Definicje pomiarów technologii produkcyjnych
+-	Definicje pomiarów KKW
+-	Wykonania pomiarów KKW
+-	Rozkłady pomiarów KKW
+-	PRE-IN-POST
+
+## Serwis:
+-	Serwis – Rozliczenie
+-	Porównanie dokumentów
+-	Materiały
+
+## CRM:
+-	Procesy – Rozliczenie
+-	Procesy – Porównanie dokumentów
+-	Akcje marketingowe – Rozliczenie
+-	Akcje marketingowe – Porównanie dokumentów
+
+## Księga handlowa:
+-	Kontrola kręgu kosztów
+-	Zestawienie zapisów kont
+-	Podsumowanie obrotów dzienników
+-	Kontrola rozrachunków z księgą
+-	Kontrola magazynu z księgą
+-	Kontrola rejestru VAT z księgą
+-	Należności i zobowiązania wg okresów wymagalności wg. Kont
+
+## Pracownicy:
+-	Prace
+-	Logi
+-	Wynagrodzenie operatora
+-	Godziny pracy – RCP
+-	Rozkład bezczynności pracowników
+-	Kalendarz prac
+-	Monitor pracowników
+-	Aktualnie wykonywane prace
+

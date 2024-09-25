@@ -1,0 +1,12 @@
+# Obroty i salda kont
+
+W ramach modułu księgowego systemu VENDO.ERP do dyspozycji Użytkownika zaimplementowano standardowy, wbudowany w system raport **„Zestawienie obrotów i sald”** (analitycznie, syntetycznie, dla wybranego zakresu kont). 
+
+Podstawowe w pracy modułu księgowego zestawienie, zawierające informacje o obrotach na poszczególnych kontach księgowych w ujęciu *„wartości bilansu otwarcia”*, *„obrotów za okres”*, *„obrotów narastająco”*, *„sald”* oraz *„per salda”* na poszczególnych stronach Winien i Ma. Raport pozwala filtrować dowolne okresy miesięczne lub narastające po sobie w ramach danego roku obrachunkowego. Możemy więc zaprezentować raport za okres jednego miesiąca, np. 05-2024, jak również za okres od 02-2024 do 05-2024, itp. Raport pozwala na wyświetlanie zapisów z bufora i zatwierdzonych (łącznie) lub tylko zatwierdzonych (zamkniętych). Prezentowane dane mogą być wyświetlane w ramach syntetyki kont lub dowolnego poziomu szczegółowości analityki. Dodatkowo mamy możliwość filtrowania kont bez obrotów, kont bez zerowych sald, analityk kontrahentów czy kont pozabilansowych. Raport dostępny jest z poziomu zakładki w module `Księgi Handlowej`.
+
+
+![tmp09da9797-0fad-413f-ad1e-b588097f4644](https://www.cfi.pl/vendohelp/content/imgs/P3/7b0923d8d3d474e3543f53cef1dd7436-108778-0.png)
+
+> Raport "Obroty i salda".
+
+Z zakładki `Obroty i Salda kont` można również uzyskać szczegółową informację o zapisach księgowych danego konta (*[Enter]* na danym koncie) oraz raport obrotów i sald w formie wydruku (funkcja *Wydruk obrotów i sald*). 

@@ -1,0 +1,73 @@
+PKO BP Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/h2h-pkobp-plugin
+scraped_at: 2024-09-05T12:20:21.683085
+last_updated: 2024-09-05T12:20:21.683135
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/PKO BP Plugin
+meta_tags: ['pkobp', 'vendo', 'integra', 'należy', 'użytkownika', 'jest', 'przez', 'celu', 'parametry', 'pracy']
+
+Content
+PKOBP Plugin
+Plugin do komunikacji z usługą PKO Integra
+Instalacja
+Do prawidłowego działania PKOBP Plugin wymaga poprawnie zainstalowanego modułu AutomaticSettelments. Instrukcja instalacji i konfiguracji modułu opisana została w oddzielnym dokumencie.
+
+Wgrać plik PKOBPPlugin.zip jako plugin.
+Wgrać licencję na plugin.
+Uruchomić instalację modułu na bazie : Pluginy -> PKOBPPlugin.zip -> Instalacja na bazie. W trakcie instalacji baza przejdzie w tryb serwisowy.
+
+Konfiguracja
+Ogólne
+Do prawidłowego nawiązania komunikacji z PKO Integra banku należy uzupełnić na karcie centrali wartość dowolną „[PKOBP] PKOBP ContextId”. Wartość dowolna jest tworzona automatycznie przy instalacji pluginu. Numer 'ContextId' jest podawany klientowi przez bank.
+Konfiguracja połaczenia
+
+Certyfikat komunikacyjny
+
+W celu nawiązania połaczenia z PKO BP Integra należy, w ustawieniach Vendo.ERP, wskazać poprawnie zainstalowany certyfikat komunikacyjny. Certyfikat jest dostarczany klientowi przez bank.
+Vendo.ERP -> Parametry pracy -> HomeBanking -> Banki -> PKOBP -> PKO Autryzacja -> Autoryzacja
+
+  2. Domyślny użytkownik autoryzujący
+Aby umożliwić komunikację z bankiem użytkownikom Vendo.ERP nie posiadającym własnej sesji należy ustawić domyślnego użytkownika autoryzującego. W takim wypadku wszystkie operacje wykonywane przez w.w. użytkowników będą autoryzowane za pomocą sesji użytkownika domyślnego. W tym celu należy wejść w Parametry pracy -> HomeBanking -> Banki -> PKOBP -> PKO Autryzacja -> Autoryzacja -> Domyślny użytkownik autoryzujący.
+  3. Utworzenie sesji
+W serwisie PKO Integra autoryzacja użytkownika odbywa się za pomocą tokenu. W celu jego uzyskania należy:
+     * Zaistalować czytnik oraz kartę (typu smart card) na stanowisku , z którego sesja będzie nawiązywana.
+     * W ustawieniach Vendo.ERP wskazać bibliotekę ze sterownikami karty. Przykładowo dla sterownika ACR i kart Certum można go znaleść w folderze instalacjynym oprogramownia proCertum SmartSign. Nalezy pamiętać aby zaistalować wersję oprogramownia kompatybilną z architekturą wersji Vendo.ERP (32 bit dla 2022 i starszych, 64 bit dla 2023 i nowszych).
+Vendo.ERP -> Parametry pracy -> HomeBanking -> Banki -> PKOBP -> PKO Autryzacja -> Autoryzacja -> Ścieżka sterownika karty
+**\Certum\SimplySign Desktop\proCertum SmartSign\crypto3PKCS.dll
+Link do pobierania plików instalacyjnych: https://pomoc.certum.pl/pl/oprogramowanie/procertum-smartsign/
+     * Utworzyć nową sesję.
+Vendo.ERP -> Parametry pracy -> HomeBanking -> Banki -> PKOBP -> PKO Autryzacja -> Autoryzacja -> Sesja
+
+Pola:
+       * Identyfikator firmy: wartość dowolna z kartoteki odziału/centrali "[PKOBP] PKOBP ContextId",
+       * Identyfikator użytkownika: identyfikator użytkownika w PKO BP.
+       * PIN: pin do karty smart card.
+       * Zapisuj dane logowania - w przypadku zaznaczenia "Identyfikator uzytkownika" i "PIN" zostaną zapisane w bazie użytkownika. Pozowoli to na ponowne nawiązanie połączenia bez konieczności wpisywania danych.
+       * Odświeżaj botem - w przypadku zaznaczenia sesja użytkownika będzie uwzględniana w trakcie probu jej przedłużania przez automatyzer.
+Po poporawnym uzupełnieniu danych i kliknięciu przyciusku "Utwórz sesję" nastąpi próba uzyskania tokenu komunikacyjnego z serwisu PKO Integra. Uzyskany token jest ważny przez 600 sekund. W celu podtrzymania ważności tokenu należy uruchomić zadanie dla bota "PkoRefreshSessions":
+
+[PluginTask]
+ name=PkoRefreshSessions
+ cronTxt=/1 * * * 
+
+
+UWAGA! W PKO BP użytkownik tworzący sesję musi mieć nadane uprawnienia do PKO Integra. Dostęp do konta poprzez aplikacje mobilną banku nie wystarczy, serwis PKO BP Integra ma swoją, niezależną gałąź uprawnień. 
+Pobieranie wyciągów
+Pobieranie wyciągów odbywa się poprzez zadanie bot-a PkoBpGetStatment.
+
+[PluginTask]
+ name=PkoBpGetStatment
+ cronTxt= 0 /2 * * 
+
+
+Ustawienia automatycznych rozliczeń wpłat i wypłat jest analogiczne jak przy pozostałych integracjach bankowych.
+Wysyłka przelewów
+Wysyłka przelewów odbywa się z poziomu Poczekalni przelewów Vendo.ERP.
+Poczekalnia przelewów -> Eksport zbiorczy do H2H
+W celu poprawnego rozpoznania płatności wysłanych w Vendo.ERP należy włączyć w PKO BP obsługę referencji własnej dla wyciągów w formacje MT940. Usługę tą nalezy włączyć dla szystkich obsługiwanych kont!
+Istnieje możliwość ustawienia edytowaloności paczki przelewów po wysłaniu do PKO Integra. Opcja ta musi się zgadzać ze ustawieniem po stronie PKO BP.
+Vendo.ERP -> Parametry pracy -> HomeBanking -> Banki -> PKOBP -> PKO Komuniacja -> Oznacz paczkę przelewów jako edytowalną
+Images
+

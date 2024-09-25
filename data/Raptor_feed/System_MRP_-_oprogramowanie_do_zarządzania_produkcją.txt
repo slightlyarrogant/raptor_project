@@ -1,0 +1,116 @@
+# System MRP - oprogramowanie do zarządzania produkcją
+
+# System MRP  – program do zarządzania produkcją
+
+## System MRP – co to jest?
+
+System MRP – Planowanie Zasobów Produkcyjnych (ang. Manufacturing Resource Planning) jest to system informatyczny, która odpowiada za usprawnienie zarządzanie zasobami i procesami produkcyjnymi. W skrócie MRP jest to program do zarządzania produkcją.
+
+
+
+
+
+
+
+## Ewolucja systemu
+
+MRP – Material Requirements Planning czy Manufacturing Resource Planning?
+
+W swej pierwszej wersji system MRP skupiał się przede wszystkim na planowaniu i zarządzaniu materiałami niezbędnymi do wykonania produkcji (Material Requirements Planning). Na podstawie BOMu oraz zakładanej produkcji system obliczał zapotrzebowanie na materiały, dzięki czemu optymalizował poziom zapasów. MRP II (Manufacturing Resource Planning) objął dużo szersze aspekty planowania zasobów przedsiębiorstwa produkcyjnego.  Do zarządzania materiałami doszło, planowanie takich zasobów jak ludzie, maszyny, narzędzia, finanse.
+
+## Funkcje systemu MRP
+
+Jedną z jego najważniejszych funkcji  systemu MRP jest obliczanie Głównego Planu Produkcji, znanego jako masterplan. Jest to średniookresowy plan produkcji, obejmujący zazwyczaj 2-3 miesięczny horyzont czasowy, który umożliwia określenie harmonogramów produkcji, uwzględniając zapotrzebowanie rynkowe oraz dostępność zasobów.
+
+System MRP Vendo  precyzyjnie określa zapotrzebowanie materiałowe, tworząc harmonogramy zakupów materiałów niezbędnych do realizacji produkcji. Dzięki temu przedsiębiorstwa mogą skutecznie zarządzać zapasami i unikać opóźnień. Zarządzanie zleceniami produkcyjnymi to kolejna istotna funkcja MRP. Umożliwia ono definiowanie asortymentu, ilości oraz terminów produkcji wyrobów i półproduktów, co pozwala na precyzyjne planowanie, co, ile i na kiedy produkować.
+
+System MRP pozwala również na zarządzanie strukturami produktu (BOM) oraz technologiami produkcyjnymi. Dzięki temu przedsiębiorstwa mogą efektywnie zarządzać listą materiałową oraz procesami produkcyjnymi, takimi jak marszruta, czasy technologiczne, stanowiska pracy, materiały i narzędzia. Szczegółowe planowanie produkcji realizowane jest w podsystemie APS, co umożliwia rozplanowanie operacji produkcyjnych na stanowiska pracy z uwzględnieniem terminów, dostępności ludzi, maszyn, materiałów i półproduktów oraz narzędzi.
+
+System Vendo ERP jako oprogramowanie do zarządzania produkcją wspiera procesy poprzez przekazywanie informacji niezbędnych do realizacji produkcji od planistów na stanowiska robocze. Dzięki bieżącej rejestracji postępu prac na hali produkcyjnej (w ramach podsystemu MES) możliwe jest monitorowanie realizacji zleceń produkcyjnych i szybkie reagowanie na ewentualne problemy. Ponadto, system MRP obsługuje planowanie dostępności narzędzi i pomocy warsztatowych, co pozwala na terminowe wykonanie planu produkcji i minimalizację przestojów.
+
+Dzięki tym funkcjom system MRP pozwala na efektywne zarządzanie zasobami, optymalizację procesów produkcyjnych oraz zapewnienie terminowej realizacji zamówień.
+
+Umów niezobowiązującą prezentację systemu i konsultację
+
+
+
+
+
+## Jak działa system MRP?
+
+Praca na systemie MRP obejmuje kilka kluczowych etapów:
+
+Tworzenie BOMów i technologii
+
+Jednym z pierwszych etapów pracy na systemie Vendo jest zdefiniowanie BOMów i technologii produktu. W skrócie, BOM definiuje strukturę materiałową wyrobu, a technologia określa marszrutę produkcyjną wraz z normatywami czasowymi.
+
+Obliczanie Masterplanu
+
+Masterplan, czyli średniookresowy Główny Plan Produkcji jest tworzony w MRP na podstawie planów sprzedaży, kontraktów ramowych i aktualnych zamówień. Określa, co ma być produkowane, w jakiej ilości oraz kiedy produkcja ma zostać zrealizowana.
+
+Tworzenie planów zakupowych i tworzenie zamówień do dostawców
+
+Plan zakupów tworzony jest w Vendo na podstawie bilansowania następujących danych:
+
+- BOMów,
+- analizy stanów magazynowych,
+- dostaw w drodze
+- wystawionych zleceń produkcyjnych
+- masterplanu oraz długości cyklu produkcyjnego
+
+Określa on ilości i terminy dostaw materiałów. W ten sposób w kolejnym kroku uruchamiany jest proces zamawiania.
+
+Generowanie zleceń produkcyjnych
+
+Generowanie zleceń produkcyjnych oraz dokumentacji produkcyjnej, takich jak przewodniki produkcyjne to kolejny istotny etap w systemie MRP. Zlecenia produkcyjne precyzują, co, ile i na kiedy ma zostać wyprodukowane. Dokumentacja produkcyjna zawiera szczegółowe instrukcje dla pracowników na poszczególnych stanowiskach pracy, co umożliwia spójne i efektywne zaplanowanie i wykonanie operacji produkcyjnych. Ponadto system Vendo.ERP  określa jakie materiały i narzędzia będą potrzebne do realizacji danego zlecenia.
+
+Tworzenie szczegółowego harmonogramu produkcji
+
+System MRP Vendo , a konkretnie jego moduł Vendo APS tworzy szczegółowe harmonogramy produkcji. Określają one kiedy termin rozpoczęcia i zakończenia zadań produkcyjnych z uwzględnieniem dostępności zasobów: ludzi, maszyn, narzędzi, materiałów i półproduktów.
+
+Rejestracja produkcji
+
+Po rozplanowaniu produkcji, zadania produkcyjne są przydzielane przez system pracownikom. Pracownicy na bieżąco rejestrują czas i ilości wykonanych operacji. Bieżąca rejestracja produkcji w Vendo MES zapewnia również pełne traceability.
+
+Rozliczenie kosztów produkcji
+
+Program MRP rozlicza rzeczywiste koszty produkcji i porównuje je do planowanych. Osiąga to w rezultacie znajomości realnego czasu pracy i ceny każdej partii materiału wydanego na produkcję.
+
+## Korzyści
+
+Prawdę mówiąc, bez systemu MRP zarządzanie produkcją i zasobami produkcyjnymi w średniej i większej firmie staje się bardzo drogie.
+
+- System Vendo optymalizuje wykorzystanie zasobów. Dzięki niemu poziom zapasów i wskaźniki rotacji są na odpowiednim poziomie. Zapewnia to, z jednej strony dostępność materiałów, a z drugiej brak mrożenia finansów w nadmiarowych stanach magazynowych.
+- Dzięki lepszemu planowaniu zasobów takich jak ludzie, maszyny i materiały system minimalizuje przestoje i zwiększa wydajność.
+- Na dodatek, zauważalna jest również poprawa terminowości realizowanych zamówień.
+- Ułatwia bieżący nadzór nad przebiegiem produkcji i szybkie podejmowanie działań korygujących w przypadku odchyleń.
+- Pozwala obliczyć rzeczywisty koszt produkcji.
+
+## ERP i MRP
+
+ERP obejmuje całość procesów wspomagających zarządzanie firmą, podczas kiedy MRP odpowiada za szeroko rozumiane zarządzanie zasobami produkcyjnymi. System MRP może funkcjonować jako osobna aplikacja połączona z ERP integracją lub być jednym system z ERP
+
+### ERP i MRP jako jeden zintegrowany system
+
+Vendo jest jednym zintegrowanym systemem klasy MRP / ERP. Zalety takiego rozwiązania obejmują przede wszystkim to, że wszystkie dane znajdują się w jednym miejscu, co znacząco ułatwia dostęp do informacji w czasie rzeczywistym. Centralizacja danych przyczynia się również do ulepszonej współpracy między działami, ponieważ informacje mogą swobodnie przepływać pomiędzy różnymi obszarami działalności firmy. Lepsza ergonomia pracy użytkowników wynika z tego, że nie ma konieczności korzystania z dwóch oddzielnych systemów; dostęp do danych zarówno z części ERP, jak i MRP zależy jedynie od uprawnień użytkownika. Usprawnione planowanie produkcji jest możliwe dzięki temu, że algorytmy mają dostęp do wszystkich danych zawartych w systemie ERP, w tym także do danych kadrowych dotyczących dostępności pracowników oraz danych finansowych. Dodatkową korzyścią jest brak kosztów integracji różnych systemów.
+
+Niektórzy dostawcy oprogramowania ERP nie oferuje rozwiązań dla produkcji albo posiadają one niewystarczającą funkcjonalność w stosunku do potrzeb firmy. W takiej sytuacji można rozważyć 3 ścieżki:
+
+- dokupienie zewnętrznego modułu produkcyjnego lub,
+- zamówienie brakującej funkcjonalności u producenta lub,
+- wymianę systemu ERP.
+
+### ERP i MRP jako dwie niezależne, połączone ze sobą aplikacje
+
+Na wdrożenie systemu MRP jako osobnej aplikacji najczęściej decydują się firmy, które już korzystają z dobrze działającego systemu ERP w obszarach finansów, magazynu, sprzedaży i CRM, ale potrzebują bardziej zaawansowanego wsparcia w obszarze produkcji.
+
+Zaletą takiego rozwiązania jest elastyczność, ponieważ firma może wybrać system MRP, który najlepiej odpowiada jej unikalnym potrzebom, nie będąc ograniczoną do funkcji oferowanych przez system ERP. Ponadto, osobny system MRP może oferować bardziej zaawansowane i specjalistyczne funkcje, które są dedykowane specyficznym wymaganiom branży.
+
+Jednak wdrożenie osobnego systemu MRP wiąże się z pewnymi wadami. Integracja systemu MRP z istniejącym ERP może być kosztowna, ponieważ system MRP potrzebuje dużej ilości danych do prawidłowego funkcjonowania. Niezbędne dane obejmują zamówienia od odbiorców, plany sprzedaży, listy materiałów wraz ze stanami, cenami i partiami, dostawy materiałów w drodze oraz planowane terminy dostaw, a także kalendarz obecności pracowników. Dodatkowo, mogą wystąpić problemy z synchronizacją danych przy aktualizacji każdego z systemów, co może komplikować zarządzanie i obniżać efektywność operacyjną.
+
+### Podsumowanie
+
+Podsumowując, posiadanie jednego, dopasowanego do specyfiki, zintegrowanego systemu do zarządzania firmą jest niewątpliwą korzyścią. Dzięki temu, wszystkie procesy są w jednej bazie, użytkownicy pracują na jednej aplikacji. Mają dostęp do wszystkich potrzebnych informacji bez koniczności logowania się go innego systemu. Odchodzą problemy integracją skomplikowanych struktur przy uruchomieniu i aktualizacji.
+
+Umów się na prezentację systemu
+

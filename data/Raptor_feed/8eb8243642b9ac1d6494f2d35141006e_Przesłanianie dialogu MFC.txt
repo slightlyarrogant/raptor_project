@@ -1,0 +1,39 @@
+Przesłanianie dialogu MFC
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/plugins/override-native-view
+scraped_at: 2024-09-05T12:18:43.675636
+last_updated: 2024-09-05T12:18:43.675667
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Przesłanianie dialogu MFC
+meta_tags: ['public', 'kontrolka', 'kontrolki', 'dialogu', 'należy', 'vendouinativecontrolfromparent', 'została', 'zarejestrowana', 'pierwotnym', 'list']
+
+Content
+Osadzanie natywnej kontrolki z przesłoniętego dialogu
+Aby na przesłoniętym dialogu osadzić natywną kontrolkę (przesłoniętą) należy użyć atrybutu VendoUINativeControlFromParent. W konstruktorze wystarczy przekazać nazwę kontrolki pod jaką została zarejestrowana na pierwotnym dialogu (większość list została zarejestrowana pod nazwą lista). Dodatkowo przy tworzeniu kontrolki przesłaniającej należy przekazac kontekst (IViewContext) do metody VendoUIManager.CreateDynamicControl.
+Przykład przesłonięcia nagłówka karty zdarzenia wraz z osadzeniem listy.
+Kod modelu.
+public class View
+{
+    [UILayout(0, RowSizeMode = SizeMode.Fill)]
+    [UILabel(Show = false)]
+    [VendoUINativeControlFromParent("lista")]
+    public string List { get; set; }
+}
+
+Kod klasy przesłaniającej.
+[Export("Dialog_21023", typeof(INativeControlReplecemantProvider))]
+public class ZdarzenieNaglowekRP : INativeControlReplecemantProvider
+{
+    public Control CreateControl(IViewContext context) => VendoUIManager.CreateDynamicControl(new View(), null, context);    
+    public Rectangle GetRectangle() => new Rectangle(5, 0, 684, 515);
+    public RectangleF GetResizeRectangle() => new RectangleF(0, 0, 1, 1);
+}
+
+Uwagi dla deweloperów Vendo
+Jeżeli kontrolka osadzona za pmocą VendoUINativeControlFromParent nie pokazuje się lub ma dziwne położenie, należy sprawdzić czy:
+
+kontrolka nie została ukrywa w UkryjCoNiepotrzebne()
+kontrolka nie jest manualnie resize'owana.
+
+W obu przypadkach można otoczyć te instrukcje sprawdzeniem czy kontrolka jest osadzona na pierwotnym dialogu (control.GetParent() == (CWnd*)this).

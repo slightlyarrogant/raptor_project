@@ -1,0 +1,39 @@
+hashtagi
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/hashtagi
+scraped_at: 2024-09-05T12:20:25.035050
+last_updated: 2024-09-05T12:20:25.035097
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/hashtagi
+meta_tags: ['systemie', 'hashtag', 'vendo', 'rozwiązanie', 'hashtagi', 'jest', 'poziomu', 'pozwala', 'obiektów', 'należy']
+
+Content
+Hashtagi w Vendo
+W systemie Vendo zostało zaimplementowane rozwiązanie pozwalające na wyszukiwanie fraz w oparciu o tagi. Funkcjonalność ta ma na celu usprawnienie wymiany informacji pomiędzy działami w firmie. Obszary w których zostało ono zaimplementowane to Zlecenia. Zdarzenia, Towary, Klienci.
+Lokalizacja uprawnienie
+Przed przystąpieniem do pracy konieczne jest podegranie stosownego plugina. Konfiguracji takiej dokonujemy z poziomu: Ustawienia > Główne > Pluginy > Dodaj plugin
+Konfiguracja ustawień z poziomu Vendo odbywa się po wejściu w Ustawienia > Główne > Słowniki > Hashtagi
+Opis funkcjonalności:
+Funkcjonalność ta pozwala na stworzenie kompendium wiedzy w obrębie firmy związanym z najbardziej istotnymi tematami, jak również możliwością szybkiego wyszukania tagowanych obiektów w systemie. Pozwala ona na tagowanie wybranych obszarów w systemie Vendo. Obiekty do których użytkownik może zdefiniować/przypisać hashtag to Zlecenie, Zdarzenia, Towar, Klienci. Rozwiązanie to pozwala w łatwy sposób wyszukania wyżej wymienionych obszarach tagowanych obiektów. Przed przystąpienie do tagowania wybranych obiektów należy zdefiniować frazy którymi będą tagowane obiekty. Definiowanie obiektów odbywa się z poziomu słowników systemowych. Dokonujemy tego w następujący sposób: Ustawienia > Główne > Słowniki > Hashtagi Najważniejsze pola które należy zdefiniować podczas tworzenia nowego hashtag’a to:
+
+Hastag – #fraza którą tagowane będą obiekty
+Nazwa wyświetlana – informacja wyświetlana w momencie wpisania słowa klucza
+Wyrazy powiązane – wszystkie frazy które mogą się pojawić podczas wpisu słowa klucza
+Tagi powiązane – kluczowe wersy powiązane z definiowanym hashtag’iem Kolejna sesja poświęcona jest definiowaniu osób które posiadają wiedze związaną na z tagowanym obiektem
+
+
+Zastosowanie funkcjonalności opartej na hashtag’ach w systemie ma szerokie zastosowania, to właśnie na jej podstawie w systemie został stworzony plugin „Potrzeba konsultacji”. Informacja związana z opisem zasady działania została opisana w odrębnej dokumentacji.
+Karta zdarzeniowa
+W obecnej chwili rozwiązanie oparte na hashtag’ah zostało zastosowane w przypadku kart zdarzeniowych. Funkcjonalność ta oparta jest o rozwiązanie pluginowe która zmodyfikuje wygląd karty zdarzeniowej(PrtScn poniżej) Działanie tej funkcjonalności polega na wyszukaniu w bazie fraz zdefiniowanych uprzednio w słownikach systemowych - hashtagi, które przyporządkowane zostaną do wpisywanego tekstu, a na ich podstawie przyporządkowanie tematu zdarzenia do właściwego modułów. Pozwala to w późniejszym czasie na szybki dostęp do zdarzeń w których znajdują się opisy gotowych rozwiązań w przypadku gdy w systemie pojawi się taki sam bądź zbliżony problem.
+
+Najlepszym rozwiązanie aby wyszukać informacje związane z obszarem odnośnie którego chcemy mieć wiedzę jest skorzystanie z wewnętrznej wyszukiwarki w systemie Vendo poprzez wpisanie frazy poprzedzonej #
+
+Kartoteka kontrahentów
+Podobnie jak w przypadku kart zdarzeniowych również kartoteki kontrahentów mogą zostać tagowana. Frazy odpowiedzialne za tagowanie kartoteki kontrahentów zależą od profilu działalności bądź wewnętrznych ustaleń kontrahenta. Sposób definiowania słowników został opisany powyżej. W celu przypisania hashtag dla wybranego kontrahenta należy z poziomu karty kontrahenta użyć skrótu klawiszowego Ctrl+Shift+T. Pozwoli to na przypisanie wybranemu kontrahentowi właściwych tagów. W przyszłości pozwoli to na szybkie wyszukanie go po zdefiniowanych słowach klucz.
+
+Aby dodać stosowne hashtagi w innych obszarach Vendo należy postępować wg opisanego powyżej schematu
+Images
+
+
+

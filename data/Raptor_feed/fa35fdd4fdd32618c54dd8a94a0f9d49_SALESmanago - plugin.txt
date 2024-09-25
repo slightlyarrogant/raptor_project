@@ -1,0 +1,86 @@
+SALESmanago - plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/sames-manago
+scraped_at: 2024-09-05T12:22:07.229858
+last_updated: 2024-09-05T12:22:07.229905
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/SALESmanago - plugin
+meta_tags: ['salesmanago', 'klienta', 'akcji', 'należy', 'poziomu', 'marketingowych', 'lista', 'kontrahenta', 'kontrahentów', 'kampanii']
+
+Content
+SALESmanago plugin
+Informacje ogólne
+SALESmanago to oprogramowanie do automatyzacji marketingu wykorzystywane przez działy marketingu i sprzedaży. SALESmanago rozpoznaje użytkowników odwiedzających stronę, analizuje ich zachowanie online i dokonywane transakcje. Na podstawie tych informacji buduje kompletny i indywidualny profil klienta. Informacje te są przetwarzane przez algorytmy systemu Machine Learning & AI
+Plugin SALESmanago odpowiedzialny jest za integracje pomiędzy systemem Vendo a platformą SALESmanago. Jego zadaniem jest export danych kontaktowych kontrahentów, ludzi klienta i akcji marketingowych na platformę, jak również podgląd informacji znajdujących się na platformie SALESmanago, miedzy innymi kto i w jakich akcjach marketingowych uczestniczył.
+Konfiguracja konta SALESmanago.
+Przed przystąpienie do pracy konieczne jest założenie konta a następnie zalogowanie się na platformie SALESmanago. Dokonać tego należy z poziomu poniższego adresu:
+https://www.salesmanago.pl/login.htm?language=pl
+Po zalogowaniu się w SALESmanago wygenerowane zostaną dane, niezbędne będą do konfiguracji plugina odpowiedzialnego za komunikacje Vendo SALESmanago jak również możliwe będzie tworzenie nowych akcji marketingowych a następnie przesyłanie ich do konkretnych kontrahentów.
+Konfiguracja plugina
+Pierwszym etapem jest instalacja plugina niezbędnego za integracje SALESmanago z systemem Vendo. Dokonać tego należy wg następującego schematu
+
+Ustawienia główne > Pluginy > Dodaj plugin
+Określenie lokalizacji na dysku w której uprzednio zapisano plik dll a następnie jego wybór
+
+Po poprawnej instalacji należy przejść do jego konfiguracji, dokonać tego należy klikając ikonę narzędzi znajdująca się w prawym górnym rogu okna dialogowego. Z poziomu Ustawień plugina użytkownik ma dostęp do ustawień takich jak: Opis ustawień pluginu:
+
+Strona internetowa (Endpoint) – adres strony przez którą będą wywoływane metody api.
+ClientId – wewnętrzny id klienta SALESmanago, informacja dostępna po zalogowaniu się na platformie
+API Secret – wewnętrzny klucz api SALESmanago, informacja dostępna po zalogowaniu się na platformie
+Mail opiekuna – Mail użytkownika w ramach którego będą wykonywane żądania np. dodawania nowego klienta (tzw. właściciel)
+Status dla nowych klientów – lista statusów jakie mogą zostać nadane przy tworzeniu nowego klienta w SALESmanago
+Pokazuj listę kampanii kontrahenta – Znacznik, czy na kartotece kontrahenta ma być pokazywana lista jego kampanii marketingowych
+Pokazuj listę maili kontrahenta - Znacznik, czy na kartotece kontrahenta ma być pokazywana lista jego maili
+
+
+
+Działania po stronie Vendo
+Po poprawnej konfiguracji plugina, użytkownik z poziomu systemu Vendo ma możliwość eksportu danych kontrahentów uczestniczących w akcjach marketingowych. Eksportu dokonać można zbiorczo dla wszystkich kontrahentów jak również pojedynczo dla wybranych osób klienta.
+Zbiorczy eksport kontrahentów do SALESmanago
+Zbiorczego importu danych klientów na platformę SALESmanago dokonać należy z poziomu listy kontrahentów. Opcja ta możliwa będzie do wywołania po wejściu w Menu główne > Klienci > Lista klientów > PPM > SALESmanago > Exportuj do SALESmanago.
+[]
+Uruchomienie exportu spowoduje wyświetlenie dialogu z informacją o wszystkich pracownikach (osobach klienta), którzy zostali zdefiniowani na kartach kontrahenta. Aby dokonać expotru należy na wyświetlonej liście oznaczyć osoby biorące udział w kampanii a następnie użyć klawisza „Wybierz”. spowoduje to wyświetlenie okna podsumowania, gdzie znajdować się będą uprzednio wybrane osoby.
+[
+Należy pamiętać, iż wyświetlone zostaną tylko te osoby które maja poprawnie zdefiniowane adresy mailowe. Z poziomu okna eksportu kontrahentów, użytkownik ma możliwość tagowania uczestników akcji marketingowych. Określenie tagu dla użytkownika oznacza usprawnienie wysyłania akcji marketingowych w przyszłości, oraz wyfiltrowania uczestników danych akcji. Jeśli wszystkie dane są poprawne należy przenieść kontakty na platformę klikając „Exportuj:
+
+Po poprawnym eksporcie system zgłosi komunikat „Wybrane kontakty zostały wyeksportowane”
+Export pojedynczego kontrahenta do SALESmanago
+Export pojedynczych kontrahentów (Ludzi klienta) do SALESmanago, może odbywać się zarówno z poziomu kartoteki kontrahenta (po wejściu w kartę kontrahenta zakładka ludzie klienta , wybór odpowiedniej osoby: Funkcje > SALESmanago > Exportuj do SALESmanago) Jak również dane exportowane mogą być z poziomu zakładki ludzie klienta dostępnej w module kontrahenci. Dokonujemy tego w analogiczny jak wyżej opisany sposób.
+
+Pobieranie informacji o osobie klienta z SALESmanago
+Rozwiązanie zaimplementowane w Vendo pozwala również na weryfikacje uczestnictwa kontrahenta w akcjach marketingowych. Funkcjonalność ta wywoływana jest z poziomu katy osoby klienta po kliknięciu w Funkcje > SALESmanago > Podgląd danych z SALESmanago.
+
+Wywołanie funkcji spowoduje wyświetlenie okna informacyjnego w którym użytkownik ma możliwość weryfikacji informacji takich jak:
+
+Scoring – scoring pracownika (wyliczany przez SALESmanago na podstawie aktywności użytkownika)
+Lista tagów – lista tagów pod jakie został podpięty użytkownik
+Lista maili – lista kampanii mailingowych w jakich pracownik bierze udział
+Lista współpracowników – informacja dotycząca osób w obrębie danej firmy będący zarejestrowanymi użytkownikami w SALESmanago
+
+
+Pobranie danych o kliencie z SALESmanago
+Kolejną informacja która użytkownik ma możliwość zweryfikować z poziomu Vendo są dane dotyczące kampanii odnoszących się do klienta. Funkcja ta wywoływana jest z poziomu karty klienta po kliknieciu Funkcje > SALESmanago > Podgląd danych z SALESmanago.
+
+Wywołanie funkcji spowoduje wyświetlenie okna dialogowego w którym użytkonik ma możliwość zweryfikowania informacji takich jak:
+
+Scoring – sumaryczny scoring wszystkich pracowników firmy zarejestrowanych w SALESmanago
+Lista kampanii marketingowych – lista kampanii marketingowych wszystkich pracowników firmy zarejestrowanych w SALESmanago
+Lista maili osób klienta - Lista kampanii mailingowych wszystkich pracowników firmy zarejestrowanych w SALESmanago
+
+
+Zasadza działania
+System Vendo w standardzie posiada możliwość tworzenia Akcji marketingowych. Funkcja ta została rozbudowana o możliwość przesyłania ich na platformę SALESmanago za pośrednictwem dedykowanego do tego celu plugina. Dodanie nowej Akcji Marketingowej odbywa się z poziomu zakładki CRM > Akcje marketingowe. Proces jej tworzenia został opisany w oddzielnej dokumentacji. Podczas tworzenia nowej Akcji Marketingowej należy pamiętać o określeniu podstawowych parametrów takich jak: Data rozpoczęcia/zakończenia oraz Nazwy akcji, należy pamiętać iż nazwa akcji jest unikalna i w przypadku gdy użytkownik zaplanuje akcje o tej samej nazwie, system zgłosi błąd i nie pozwoli przesłać jej do SALESmanago. Przesłanie utworzonej Akcji odbywa się po użyciu klawisza Funkcje > Exportuj do SALESmanago. Spowoduje to wyświetlenie okna dialogowego w którym użytkownik określa informacje dotycząca grupy oraz etapów z których składać się będzie kampania. Jeśli grupa nie zostanie uzupełniona, to w takim przypadku zostanie automatycznie przypisana domyślana grupa po stronie SALESmanago.
+
+Jeśli wszystkie dane zostały poprawnie zdefiniowane należy wyeksportować je na platformę SALESmanago. Wszystkie informacje które zostały opisane powyżej i przesłane na platformę SALESmanago będą widoczne po zalogowaniu się na platformie
+Images
+
+
+
+
+
+
+
+
+
+

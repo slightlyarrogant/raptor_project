@@ -1,0 +1,7 @@
+#	Roczna tabela amortyzacji
+
+## Roczna tabela amortyzacji
+Amortyzacja w zestawieniu rocznym wg. grup – podobnie jak powyżej, raport prezentuje wartości amortyzacji według grup środków trwałych dla następujących wartości: Amortyzacja BO (amortyzacja na początek roku), suma już wykonanej amortyzacji w roku, wartość amortyzacji narastająco z BO, amortyzacja nieaktywnych środków trwałych, amortyzacja dla poszczególnych miesięcy (od stycznia do grudnia – miesiącami), Amortyzacja BZ (wartość amortyzacji bilansu zamknięcia). Raport można wykonać w Raportach dostępnych spod przycisku „Funkcje” na Liście środków trwałych.
+![tmp0e929df9-3edf-46a1-a320-50fadd17060c](https://www.cfi.pl/vendohelp/content/imgs/X7/5c49624d5edd44a47dbffee3bc39bd8d-68136-0.png)
+
+*Fragment rocznej tabeli amortyzacji*

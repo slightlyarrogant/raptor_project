@@ -1,0 +1,137 @@
+## Parametry pracy
+Podstawowa konfiguracja modułu CRM dostępna jest z poziomu ustawień głównych programu > `[Parametry Pracy]` > `[CRM]`. W gsekcji CRM możliwe jest dokonanie  następującej konfiguracji:
+Poniżej opisano ustawienia znajdujace sie poszczególnych sekcjach
+#####	Używane zakładki w module CRM – sekcja ta pozwala na określenie jakie zakładki oprócz standardowych będą  widoczne w module  CRM
+- Moje sprawy
+- Procedury
+- Procedury procesów
+- Procedury akcji
+#####	Ustawienia
+- Oddzielne ustawienia list dla różnych rodzajów zdarzeń – możliwość definiowania list dla zadań, spotkań, spraw, notatkę, kontakt itp.
+- Zapisuj załączniki do bazy danych - załączniki zapisywane są w bazie a nie poza bazą (umiejscowienie plików zależne od konfiguracji serwera)
+- Używaj kontrolki nowego kalendarza
+- Dowolna modyfikacja zleceń i procedur na zdarzeniach – pozwala na przepinanie zleceń podpiętych do zdarzeń jak również daje możliwość wyboru procedur podczas jej uruchomienia
+- Domyślny rodzaj zdarzeń odpowiedzialny za kontakt – pozwala na określenie jaki rodzaj zdarzenia będzie wywoływany podczas tworzenia kontaktu (wybór z listy rodzajów zdarzeń)
+- Domyślny rodzaj zdarzeń odpowiedzialny za notatkę – pozwala na określenie jaki rodzaj zdarzenia będzie wywoływany podczas tworzenia notatki (wybór z listy rodzajów zdarzeń)
+- Domyślny rodzaj zdarzeń odpowiedzialny za zadanie – pozwala na określenie jaki rodzaj zdarzenia będzie wywoływany podczas tworzenia zadania (wybór z listy rodzajów zdarzeń)
+- Domyślny rodzaj zdarzeń na wydrukach
+- Domyślny rodzaj zdarzeń dla zaproszeń - pozwala na określenie rodzaju zdarzenia podczas tworzenia zaproszeń
+- Usuwanie zdarzeń podpiętych pod dokumenty w przypadku zmiany zlecenia na tych dokumentach - nowy Proces sprzedaży, projekt, system zleceń
+    - Ilość zdarzeń tworzonych w ramach zdarzeń cyklicznych – pozwala na określenie ilości zdarzeń podczas tworzenia zdarzeń cyklicznych
+
+#####	Sekretariat
+-	Domyślny rodzaj dokumentu – określenie rodzaju dokumentu podczas tworzenia zdarzeń w module sekretariat (Mail, Fax, List, List pol.)
+-	Dodawanie nowej korespondencji jako przychodzącej określenie kierunku podczas tworzenia zdarzeń korespondencyjnych
+-	Domyślny status – określnie domyślnego statusu podczas tworzenia zdarzeń korespondencyjnych Oczekujący, Wykonany, Anulowany
+-	Używaj nazwy Kancelaria zamiast Sekretariat
+#####	Delegacje
+-	Rozliczenie Delegacji – generowanie dokumentów – określenie jakim rodzajem dokumentu będą rozliczane delegacje  - do wyboru dokument KO lub FZ
+-	Rozliczenie Delegacji – do wyboru dokument KO lub FZ
+#####	Przypomnienie zdarzenia
+-	Domyślny przypominacz – możliwość ustawienia czasu z jaki wyprzedzeniem pojawi się komunikat przed rozpoczęciem zdarzenia
+-	Opis (makro) – treść komunikatu pojawiający się w chmurce
+
+
+![tmpb6234fcc-73e5-45d2-8af2-4eabfb7b99e8](https://www.cfi.pl/vendohelp/content/imgs/T9/c6c2e749d6bc705ed9670da753758557-60718-0.png)
+
+
+##	Konfiguracja  Dialogów spraw i zdarzeń
+
+Istnieje możliwość definicji wyglądu dialogów spraw i powiązanych z nią zdarzeń. Konfigurowany jest tutaj wygląd oraz możliwości zmian nagłówka, karty zdarzenia/sprawy, pracy, widoczności pól. Konfiguracja dialogów odbywa się w Ustawienia->Główne->Parametry Pracy. Osobno konfigurowane są zdarzenia i sprawy jednak mechanizm i sposób konfiguracji  jest ten sam. Konfiguracja dotyczy każdego rodzaju zdarzenia i sprawy dla rodzaju zdarzenia.
+
+![tmp212c71de-e085-4d21-8817-9edd539da7ab](https://www.cfi.pl/vendohelp/content/imgs/O8/7abcf80555843d0e8d7a31904b572079-46784-0.png)
+
+Ustawienia zdarzeń pozwalają na konfiguracje każdego rodzaju zdarzenia osobno. A każdy rodzaj zdarzenia może być powiązany ze sprawą lub nie poprzez „Usunięcie powiązania ze sprawą”. Ustawienia zdarzeń dzielą się na pięć zakładek gdzie każda odpowiada za inną parametryzację zdarzenia. Pierwsza zakładka to Nagłówek, gdzie konfigurujemy skrót, nazwę oraz Suffix numeru oraz odmiany nazwy zdarzenia poprzez przypadki, nazwa katalogu i nazwa zakładki. 
+Należy  także ustawić Domyślny termin zdarzenia oraz minimalny i domyślny czas trwania zdarzenia
+Dodatkowe parametry to:
+-	Ograniczenia zmian w terminie, temacie i właścicielu
+-	Przypominacz automatyczny – możliwość uruchomienia przypominacza 
+-	Przypomnienie wykonania 
+-	Zdarzenie posiada załącznik – możliwość dodawania załączników do zdarzenia
+-	Domyślne wykonanie – automatycznie przy zapisaniu zdarzenia ustawia je jako wykonane
+-	Przepinanie zleceń na zamkniętych zdarzeniach – pozwala na zmiana zlecenia przypisanego do zdarzenie nawet po jego zamknięciu
+-	Edycja tylko przez właściciela i wpisującego
+-	Wykonanie tylko przez właściciela – zdarzenie może wykonać jedynie jego właściciel 
+-	Rozsyłanie komunikatów przy dodaniu
+-	Zdarzenie może być cykliczne – możliwość ustawienia cykliczności na danym zdarzeniu
+-	Parsuj przy dodawani załączników do zdarzeń
+-	Auto. Ustawianie podpinanych dok. Jak załączniki – podczas podpinania dokumentów do zdarzenia oznaczone one będą jako załączniki
+-	Panel telefoniczny 
+
+Możliwe także ustawienie w jakich modułach /typach zleceń dane zdarzenie będzie występować :
+-	Akcje marketingowe
+-	CRM
+-	Procesy sprzedaży
+-	Projekty + własne
+-	Umowy najmu
+-	Zlecenia kontroli dostaw
+-	Zlecenia księgowe
+-	Zlecenia produkcyjne
+-	Zlecenia serwisowe
+-	Zlecenia turystyczne
+-	Księga procedur
+
+Występuje w zakładkach - pozwala na zdefiniowanie lokalizacji w której zdarzenie będzie występować   
+-	Osobna zakładka – możliwość utworzenia odrębnej zakładki w module CRM 
+-	Zdarzenia – oznaczenie tej opcji spowoduje, iż dane zdarzenie będzie występować jako odrębna zakładka na innych zdarzeniach
+-	B2B – określenie czy dany rodzaj zdarzenia występuje w module B2B
+-	Kalendarz określenie czy dane zdarzenie występuje w kalendarzu
+-	Moje zadanie określenie czy dane zdarzenie występuje w moich zadaniach 
+
+Kolejną zakładką jest Karta zdarzenie która ma za zadanie spersonalizować zdarzenie. Ustawiane jest tutaj :
+-	Tytuł karty zd. (makro) – tytuł definiowany za pomocą makr i wyświetlany w nagłówku
+-	Temat (makro) – wstępne utworzenie tematu zdarzenia za pomocą makr które ustawia się podczas utworzenia nowego zdarzenia danego rodzaju
+-	Domyślny typ – jakiego typu jest nowy rodzaj zdarzenia – może to być dowolny rodzaj zdarzenia już utworzony
+-	Domyślny rodzaj sprawy – jakiego rodzaju jest tworzona sprawa powiązana z tym rodzajem zdarzenia
+-	Pytaj i utworzenie sprawy podczas zapisu zdarzenia
+-	Automatycznie załóż sprawę przy tworzeniu zdarzenia
+Na tej zakładce definiowane jest dostępne zakładki dla tego rodzaju zdarzeniu, zaznacza się dostępne zakładki :
+-	Prace
+-	Dokumenty
+-	Zdarzenia powiązane
+-	Pracownicy
+-	Klienci
+-	Zasoby
+-	Wartości dowolne sprawy
+-	Płatności
+-   Rozmowy
+-	Wspólne zakładki sprawy
+-	Historia GPS
+-	Chat
+
+
+
+Możliwe jest dodatkowo ustawienie czy zakładka plików, wartości dowolnych ma być osobno czy razem czy w ogóle jest nie potrzebna:
+-	Brak zakładki
+-	Tylko pliki
+-	Tylko wartości dowolne 
+-	Pliki i wartości dowolne
+-	Osobne pliki i wartości dowolne
+-	Wartości dowolne sprawy i zdarzenia
+-	Zakładka pliki oraz zakładka wartości dowolnych sprawy i zdarzenia
+
+Dodatkowo opcja do ustawienia na tej stronie konfiguracji zdarzenia:
+-	INS na liście uczestników – nowa osoba – dodanie nowej osoby do zdarzenia poprzez klawisz Insert
+-	Pokazuj wartości dowolne na karcie zdarzenia
+-	Pokazuj wartości dowolne sprawy na karcie zdarzenia
+-	Na nagłówku zdarzenie pokazuje wartości dowolne w jednej kolumnie
+-	Użyj schematu widoku – lista zdefiniowanych widoków domyślnych dla tego rodzaju zdarzenia
+-	Przesłoń cały dialog
+
+
+
+
+
+
+Kolejną zakładką umożliwiająca konfigurację zdarzenia jest Karta zdarzenia CD. W zakładce tej administrator mam możliwość określenie widoczności/ wymagalności pól informacyjnych zdarzenia. Dodatkowo isnieje możliwość nadani im nazw preferowanych przez użytkowa
+
+Kolejna zakładka Ustawień zdarzeń  to Prace, w której konfigurowany jest sposób naliczania czasu oraz sposób wyliczania kosztów pracy.
+-	Praca – rejestracja – RBH lub Start-stop – sposób rejestracji czasu pracy na zdarzeniu.
+-	Koszty pracy 
+        - Z karty czynności
+        - Koszt RBH z karty pracownika
+        - Koszt z grupy cen z karty – grupa cen wybierana z listy
+        - Domyślna czynność
+-	Domyślny temat (ustalany przez makra)
+-	Domyślny temat premii (ustawiane przez makra)
+-	Możliwość ręcznie wpisywania koszt

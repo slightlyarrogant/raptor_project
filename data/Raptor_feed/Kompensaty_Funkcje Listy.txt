@@ -1,0 +1,15 @@
+# Kompensaty
+W ramach dostępu do zakładki kompensaty użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmpd8ffd3bd-3c85-434c-bcce-0d32a1f1b350](https://www.cfi.pl/vendohelp/content/imgs/U0/8b9e339e03556b11dd5cc1b8a90cd765-4465-0.png)
+
+- okres od/do – możliwość wyboru okresu czasu, dla którego program ma wyświetlić kompensaty
+- kontrahent – wybór klienta, z którym użytkownik chce zobaczyć kompensaty
+- typ
+    - wszystkie
+    - nasze
+    - od klienta
+
+Poza możliwością filtrowania kompensat użytkownik ma możliwość wydrukowania kompensaty, usunięcia kompensaty, zaksięgowania płatności oraz eksportu. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp98b17b72-11ac-4176-8ff3-c907c8da1cd4](https://www.cfi.pl/vendohelp/content/imgs/G6/586c52296fa1e6a4a5c3b3986495c0ba-38778-0.png)

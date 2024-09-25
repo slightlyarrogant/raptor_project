@@ -1,0 +1,79 @@
+Import technologii
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/import-technologii
+scraped_at: 2024-09-05T12:20:52.547182
+last_updated: 2024-09-05T12:20:52.547229
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Import technologii
+meta_tags: ['technologii', 'jest', 'import', 'które', 'szablonu', 'będą', 'operacje', 'podczas', 'pracy', 'wartości']
+
+Content
+Cel:
+Aby ułatwić prace konstruktorom/technologom proces dodawania nowych technologii został stworzony Plugin którego zadaniem jest import stworzonych wcześniej bądź wyeksportowanych technologii. Import ten odbywa się na podstawie uprzednio przygotowanego szablonu
+Ustawienia/Lokalizacja:
+Ustawienia > Pluginy > Ustawienia plugina
+Import odbywa się z poziomu:
+Menu > Produkcja > Technologie produkcyjne > PPM > Operacje blokowe > Import technologii
+Opis funkcjonalności:
+Funkcjonalność oparta jest na rozwiązaniu Pluginowym. Jej zadaniem jest pomoc podczas Tworzenia nowych technologii w systemie Vendo. Ideą rozwiązania jest umożliwienie Użytkownikowi przygotowanie odpowiednio sformatowanego szablonu w formacie .xls a następnie jego import do systemu Vendo.
+Przed przystąpieniem do pracy bardzo istotne jest aby odpowiednio przygotować kartoteki towarowe poprzez założenie indeksów towarowych które będą importowane jak również stworzenie odpowiednich wartości słownikowych z operacjami które będą wykonywane na importowanych technologiach
+Plugin:
+W celu dodania plugina należy przejść do Ustawień Głównych programu > Pluginy Po poprawnym dodaniu plugina użytkownik ma możliwość ustawania w nim ścieżki lokalizacji gdzie zapisywane będą pliki z ewentualnymi błędami podczas importu.
+
+W podanej lokalizacji zapisane zostaną wszystkie rekordy których nie udało się zaimportować co ma na celu weryfikacja powodów dla których import się nie powiódł.
+
+Przygotowanie szablonu importu: Import technologii wykonywany jest na podstawie uprzednio przygotowanego szablonu. Bardzo istotne jest aby podczas tworzenia szablonu odpowiednio wypełnić wartości kolumn które będą importowane. Odpowiadają one polom które znajdują się na karcie technologii dostępnej w systemie Vendo. Podczas tworzenia szablonu Użytkownik określa wszystkie wartości oraz parametry które mają zostać zaimportowane. Szablon importu został podzielony na odpowiednie sekcje.
+
+Sekcja czerwona odpowiedzialna jest za nagłówek technologii w jej skład wchodzą:
+
+
+KODTECHNO – Unikalny kod technologii
+NAZWATECHNO – Domyślna nazwa technologii
+KODWYROB – Domyślny kod wyrobu gotowego
+MAGAZYNWYROB – Określenie miejsca na który ma trafić wyrób gotowy
+WIELKOSCPARTII – Domyślna wielkość Partii
+DOMYSLNA – Czy technologia ma być domyślną dla danego indeksu, indeks może mieć kilka technologii dlatego istotne jest określenie czy importowana technologia będzie domyślna
+
+
+Sekcja żółta poświęcona informacji znajdującym się w nagłówku operacji technologicznej
+
+
+LPOPERACJI – Liczba porządkowa dla wykonywanej operacji
+NAZWAOPERACJA – Dowolna nazwa pod jaką chcemy umieścić daną operacje technologiczną
+OPERACJA – Nazwa wykonywanej operacji pole słownikowe Ustawienia > Parametry pracy > przycisk Słowniki > Produkcja – Operacje technologiczne MRP
+JMOPERACJA – Jednostka miary
+CIAGTECHNO – Ciąg technologiczny
+PW – Przeniesienie wyrobów na magazyn
+
+
+Sekcja zielona odpowiedzialna za określenie przychodów i rozchodów materiałowych
+
+
+KODMATERIAL – Kod materiału wykorzystanego w procesie produkcyjnym importowanej technologii
+ILOSCMATERIAL – Ilość potrzebnego materiału w procesie produkcyjnym importowanej technologii
+MAGAZYNMATERIAL – Magazyn na którym zlokalizowany jest materiał
+RODZAJ – określenie przychodów/rozchodów gdzie 1 = przychód -1 = rozchód
+
+
+Oraz sekcja niebieska określająca stanowiska pracy wraz z ich normatywami
+
+
+STANOWISKOPRACY - Definiowanie fizycznego stanowiska roboczego
+TPZ- Czas przygotowawczo-zakończeniowy
+T - Czas produkcyjnej pracy maszyny
+WYDAJNOSC -wydajność pracownika obsługującego maszyne
+ILOSCOSOB - Liczba pracowników obsługujących maszynę.
+KOSZTH- Koszt wykonania danej operacji w przeliczeniu na godzinę
+
+
+System Vendo
+W calu zaimportowania technologii należy z poziomu Menu > Produkcja > technologie produkcyjne > PPM > Operacje blokowe > Import technologii uruchomić funkcje która pozwala na zaimportowanie uprzednio przygotowanej technologii. Po uruchomieniu funkcji wskazać lokalizacje na dysku gdzie znajduje się plik z zapisaną technologią, zaakceptować wybór.
+
+Dokonanie importu spowoduje utworzenie nowego rekordu w zakładce technologii produkcyjnej. Po jego otworzeniu będą widoczne wszystkie wartości które zostały zdefiniowane na importowanym szablonie.
+
+Images
+
+
+
+

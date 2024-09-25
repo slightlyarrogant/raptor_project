@@ -1,0 +1,238 @@
+# Funkcje
+## GUS
+Funkcja pozwalająca na aktualizacje kartoteki kontrahenta na podstawie danych dostępnych w centralnej bazie GUS. Uruchomienie funkcji powoduje komunikacje systemu Vendo z centralna bazą GUS a następie porównanie danych znajdujących sie w Vendo względem danych GUS'u. W przypadku gdy informacje zapisane w systemi są nieaktualne System po uprzednim poinformowaniu o dalszych krokach zaktualizuje je. 
+
+Podczas aktualizacji nadpisywane sa następujące wartości:
+* Nazwa
+* Regon
+* Wojewodztwo
+* Ulica
+* Numer budynku
+* Numer lokalu
+* KodPocztowy
+* Miejscowość
+* Telefony
+* Emaile
+* WWW
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H9/88503e2b31ebc9408da39f8c2acf6c45-41429-0.png)
+
+Weryfikacja danych klienta możliwa jest również pod adresem
+https://wyszukiwarkaregon.stat.gov.pl/appBIR/index.aspx
+## Pokaż historię zapytań o NIP
+Funkcja pozwala na weryfikacje rezultatów wyszukiwania funkcjami:
+- Sprawdź aktywność jako podatnik VAT
+- Sprawdź czy EuroNIP jest zarejestrowany 
+
+Wynik prezentowany jest w formie listy z poziomu której użytkownik ma możliwość wglądu w informacje odnośnie daty wykonania zapytania oraz statusu podatnika jako płatnika VAT jak również danych identyfikacyjnych w postaci numeru NIP
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B9/603132eca4fe4e3d5895af68eccedd75-33131-0.png)
+## Sprawdz aktywność jako podatnik VAT
+Weryfikacja czy podmiot o podanym NIP jest zarejestrowany jako podatnik VAT
+
+Funkcja służy do weryfikacji czy podmiot o podanym NIP jest zarejestrowany jako podatnik VAT wg aktualnego stanu danych, tj. na dzień poprzedzający przesłanie zapytania. https://www.podatki.gov.pl/media/3275/specyfikacja-we-wy.pdf.  
+
+Wynik zapytania zwraca informacje w której użytkownik ma wgląd w informacje takie jak: 
+- Nazwa firmy, 
+- Numer idetyfikacyjny NIP, 
+- Status mowiący o aktywnosci kontrahenta jako podatnika VAT
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K8/3387d4ad6109e57f7a0330ff98aa616a-37230-0.png)
+## Sprawdź czy EuroNIP jest zarejestrowany
+Weryfikacja numerów identyfikacyjnych VAT podmiotów gospodarczych zarejestrowanych w Unii Europejskiej
+
+Użycie tej funkcji możliwe jest po uzupełnieniu Pola Kraj. Pod warunkiem, iż na  karcie klienta ma ona wartość kraju należącego do Unii Europejskiej
+
+Weryfikacja numerów identyfikacyjnych VAT podmiotów gospodarczych zarejestrowanych w Unii Europejskiej dla potrzeb transakcji transgranicznych dotyczących towarów i usług.
+http://ec.europa.eu
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/a044ffa1580155e65857191c5774356a-42063-0.png)
+## Zmiana hasła
+Funkcja wykorzystywana przez administratorów w przypadku gdy system Vendo zintegrowany jest z platformą B2B.
+
+Zmiana hasła do platformy możliwa jest po dodaniu stosownych uprawień. Dokonać tego należy z poziomu Uprawnień głównych `Uprawnienia do kart, zakładek i obiektów` > `Klienci` > `Uprawnienia` > `Dostęp do podglądu i zmiany hasła dostepowego dla kontrahenta`, bądź uprawnień kontekstowych klikając Ctrl+F2 z poziomu listy kontrahentów. Dodanie uprawnień skutkować będzie możliwością nadania bądź zmiany hasła do portalu B2B. 
+
+Zmiana hasła odbywa sie poprze wpisanie ciągu znaków tj hasła właściwego a następnie potwierdzeniu go poprzez ponowne jego wpisanie. Po zatwierdzeniu logowanie do portalu B2B możliwe będzie za pośrednictwem nowo nadanego hasła
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X1/dae664f8d18be160abc998c04ca39bc5-40081-0.png)
+## Zmiań kontrahenta na firme
+Funkcja wykorzystywana przez użytkownika w przypadku gdy zachodzi konieczność zamiany kontrahenta oznaczonego jako osoba fizyczna na kontrahenta firmowego bądź odwrotnie. Występowanie funkcjonalności zlokalizowane jest na kartotekach o rodzaju 
+- Osoba fizyczna/firma
+- Rolnik
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L1/7a20c05685ebe02f13f38f16f4ca1319-38168-0.png)
+## Zmień kontrahenta na rolnika ryczałtowego
+Funkcja wykorzystywana przez Użytkownika w przypadku gdy zachodzi konieczność zmiany kontrahenta oznaczonego jako firma bądź osoba fizyczna na kontrahenta typu Rolnik ryczałtowy   
+Występowanie funkcjonaliści zlokalizowane jest na kartotekach o rodzaju 
+- Firma
+- Osoba fizyczna
+
+Zmiana rodzaju kontrahenta spowoduje zmianę jego formy prawnej a co za tym idzie konieczne będzie podanie dodatkowych informacji identyfikujących kontrahenta. Zmiana statusu organizacji na rolnika ryczałtowego wiąże sie ze zmianami odnośnie informacji identyfikujących kontrahenta dlatego też zmianie ulegnie okno dialogowe kartoteki gdzie należy podać informacje dotyczące dowodu osobistego. 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X9/19ea0298fb1f94276366ab8c17dc12f4-38740-0.png)
+
+Po wywołaniu funkcji zmiany kontrahenta na rolnika ryczałtowego wygląd okna dialogowego będzie przezntowany zgodnie z PrtScn poniżej
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U2/eb070d8eab01f6de96c96d2944e96b2c-20272-0.png)
+
+
+# CRM
+## Nowa notatka
+
+Pozwala na dodanie nowego zdarzenia o rodzaju Notatka, które po utworzeniu będzie z automatu będzie miało ustawionego klienta.
+
+Aby funkcja ta była dostępna z poziomu kartoteki kontrahenta Użytkownik musi posiadaćstosowne uprawnienia. Definiowane są one z poziomu `Uprawnień głównych` > `Uprawnienia do kart`, `zakładek i obiektów` > `CRM` > `Rodzaje zdarzeń` > `Notatka` - `Dostęp do kart i listy`
+
+Funkcja powalająca na szybkie sporządzenie notatki z poziomu kartoteki kontrahenta. Jest ona przydatna podczas kontaktów biznesowych z kontrahentem gdzie użytkownik ma możliwość spisania najważniejszych informacji dotyczących np. rozmowy telefonicznej z kontrahentem.
+Utworzenie zdarzenia typu notatka po odpowiedniej parametryzacji systemu skutkuje pojawieniem sie stosownych wpisów w module `CRM` > `Zdarzenia`/`Moje zadania`/`Kalendarz`. Sporządzeni notatki z poziomu karty kontrahenta możliwe jest zarówno poprzez użycie `Funkcji` znajdującej sie w prawym dolnym rogu okna programu jak również skrótu klawiszowego CTRL+N 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H9/442d0f51626b0b86e275e018bd8063ca-40446-0.png)
+
+## Team Viewer - Utwórz sesję pomocy technicznej
+
+Funkcjonalność opowiedziana za utworzenie sesji pomocy technicznej pozwalającej na zdalne połączenie z stanowiskiem kontrahenta.
+
+Mówimy tutaj o uruchomieniu zewnętrznego oprogramowania Team Viewer, które wykorzystywane jest podczas świadczenia usług wsparcia serwisowego oraz szkoleniowego przez CFI Systemy Informatyczne. Pozwala na zdalne połączenie ze stanowiskiem użytkownika bezpośrednio z karty kontrahenta. Funkcja ta działa analogicznie jak w przypadku uruchomienia sesji zdalnej dostępnej z poziomu `Usawień Głównych` > `Pomoc` > `Pomoc zdalna` oraz po uruchomieniu Vedo Starter'a nagłowek okna `Pomoc` > `Pomoc zdalna`
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X9/f4288fa91328e5b038bcf37bba4bf208-40195-0.png)
+
+## Zaplanuj kontakt
+Wybór tej opcji pozwala na utworzenie nowego zdarzenia o rodzaju `Kontakt`, które po utworzeniu automatycznie będzie miało skojatrzonego klienta.
+
+Funkcja ta zależna jest od uprawnienia i aby była ona dostępna z poziomu kartoteki kontrahenta Użytkownik musi posiadać `Uprawnienia do kart`, `zakładek i obiektów` > `CRM` > `Rodzaje zdarzeń` > `Kontakt - dostęp do kart i listy`
+
+Powala na szybkie utworzenie zdarzenia przypominającego o zaplanowanym kontakcie z kontrahentem.  Funkcjonalność przydatna podczas rozmów biznesowych gdzie użytkownik ma możliwość zaplanowania potencjalnego kontaktu z kontrahentem .
+Utworzenie zdarzenia typu kontakt po odpowiedniej parametryzacji systemu skutkuje pojawieniem sie stosownych wpisów w module `CRM` > `Zdarzenia`/`Moje zadania`/`Kalendarz`. Sporządzenie zdarzenia typu kontakt z poziomu karty kontrahenta możliwe jest zarówno poprzez użycie `Funkcje` > `CRM` > `Zaplanuj kontakt`, jak również skrótu klawiszowego `[CTRL+K]` 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R7/4311cb9214522e2dc93be10b25f52b46-40465-0.png)
+
+
+# Raporty
+## Adresy nadania
+Specjalny rodzaj kartotek klienta miejsca dostawy rozumiany jako odbiorca na dokumentach
+
+
+Funkcjonalność Adresy nadania pozwala na definiowanie dodatkowych adresów w przypadku gdy są one inne niż adres centrali firmy. Dodanie adresu nadania odbywa sie w sposób analityczny jak w przypadku dopisania kontrahenta do bazy danych z tą jednak różnica iż zdefiniowana w ten sposób kartoteka w nagłówku oznaczona będzie jako "Adres dostawy". Dzięki zdefiniowaniu dodatkowych adresów nadania skojarzonych z kartotek kontrahenta pozwala na szybkie ich przydzielenie na etapie tworzenia dokumentów. W praktyce oznacza to iż użytkownik tworząc rożnego rodzaju dokumenty ma możliwość po zastosowaniu odpowiednich filtrów ograniczyć listę wyświetlanych wyników do adresów nadania skojarzonych z kartoteka kontrahenta
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z5/470eaf0d07f3a05726c6aa9288b4545b-61825-0.png)
+## Aktualne cany indywidualne
+Funkcja ta pozwala wgląd w listę aktualnych indywidualnych cen dla klienta. Wgląd w tego typu informacje możliwe jest po dodaniu stosownych uprawień.
+
+Uprawnienia te definiować można w następującej lokalizacji `Uprawnienia główne` > `Uprawnienia do kart, zakładek i obiektów` > `Sprzedaż` > `Dostęp do cen indywidualnych` bądz z poziomu uprawnień kontekstowych pod skrótem klawiszowym `[Ctrl+F2]` na liscie kontrahentów. 
+
+Aby sprawdzić aktualne ceny indywidualne użytkownik może tego dokonać klikając `Funkcje` > `Raporty` > `Aktualne ceny indywidualne` bądź używając skrótu klawiszowego F6. Definiowanie cen indywidualnych możliwe jest zarówno z poziomu kartoteki kontrahentów, kartoteki towarowej bądź z poziomu odrębnej zakładki zlokalizowanej w w module magazyn.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I6/c660681eaa487ccd1ff65a022b2c7ffe-35872-0.png)
+
+## Aktualne cany indywidualne
+Funkcja ta pozwala wgląd w listę aktualnych indywidualnych cen dla klienta. Wgląd w tego typu informacje możliwe jest po dodaniu stosownych uprawień.
+
+Uprawnienia te definiować można w następującej lokalizacji `Uprawnienia główne` > `Uprawnienia do kart, zakładek i obiektów` > `Sprzedaż` > `Dostęp do cen indywidualnych` bądz z poziomu uprawnień kontekstowych pod skrótem klawiszowym `[Ctrl+F2]` na liscie kontrahentów. 
+
+Aby sprawdzić aktualne ceny indywidualne użytkownik może tego dokonać klikając `Funkcje` > `Raporty` > `Aktualne ceny indywidualne` bądź używając skrótu klawiszowego F6. Definiowanie cen indywidualnych możliwe jest zarówno z poziomu kartoteki kontrahentów, kartoteki towarowej bądź z poziomu odrębnej zakładki zlokalizowanej w w module magazyn.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I6/c660681eaa487ccd1ff65a022b2c7ffe-35872-0.png)
+
+## Charakterystyki towarów klienta
+Z poziomu zakładki charakterystyki towarów klienta użytkownik ma możliwość sporządzenia listy charakterystyk towaru dla danego kontrahenta. Innymi słowy pozwala ona na definiowanie indeksów towarowych zgodnie z oznaczeniami dostępami u kontrahenta. Parametry możliwe do zdefiniowania to Kod, Nazwa EAN, domyślna jednostka na wybrany towar dla danego klienta  
+
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H9/3a2eee3a8923fdd4986a091547306039-51402-0.png)
+
+## Sprawy zanaczonych klientów
+Sprawy zaznaczonych klienów spowoduje wywołanie listy zdarzeń, dokumentów i zleceń dla klienta. Wgląd w tego typu informacje możliwy jest po nadaniu stosownych uprawnień. 
+Definiowane są one z poziomu Uprawnień głównych `Uprawnienia do kart, zakładek i obiektów` > `Klienci` > `Sprawy związane z klientem` bądź z poziomu uprawnień kontekstowych dostępnych na liście kontrahentów pod skrótem klawiszowym `[Ctrl+F2]`
+
+Uruchomienie funkcjonalności spowoduje wyświetlenie listy z informacją o wszystkich dokumentach zdarzeniach jak również zleceniach dotyczących wybranego klienta. Z poziomu wyświetlonego okna dialogowego użytkownik ma możliwość skorzystania szeregu filtrów odnoszących sie do zakresu datowego jak również rodzajów dokumentów, zdarzeń, zleceń prezentowanych na liście. Chcąc ograniczyć listę wyświetlanych rekordów pod względem datowym należy skorzystać z Filtrów zlokalizowanych w górnej części okna natomiast jeżeli chodzi o rodzaje prezentowanym informacji związanych z dokumentami zdarzeniami bądź zleceniami, filtry znajdują sie w danej części okna w pod butonami `Dokumenty`, `Zadania`, `Zlecenia` 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K2/d5edcb3d884973e1cc8cd38cfffc72ee-64886-0.png)
+
+## Udział w akcjach marketingowych
+Zakładka Udział w akcjach marketingowych pozwala na wgląd w akcje marketingowe skojarzone z danym kontrahentem w których jest uczestnikiem. Wgląd w tego typu informacje możliwy jest po nadaniu stosownych uprawnień. Konfiguracji takiej można dokonać z poziomu `Uprawnień głównych` > `Uprawnienia do kart, zakładek i obiektów` > `Zlecenia` > `Rodzaje zleceń` > `Akcja marketingowa - dostęp do karty i listy`
+
+Dodawanie nowych akcji marketingowych odbywa sie z poziomu moduły CRM. Podczas definiowania Akcji marketingowych użytkownik określa jaj parametry oraz uczestników których dana akcja dotyczy . Zakładka Udział w akcjach marketingowych pozwala na wgląd w wszystkie akcje marketingowe w których dany kontrahent uczesticzy/ł z poziomu kartoteki kontrahenta. Wywołanie funkcji odbywa się poprze użycie butona `Funkcje` > `Raporty` > `Akcje marketingowe` bądź skóku klawiszowego `[F5]`. Spowoduje to wyświetlenie listy z możliwością wglądu w wybrane akcje. Możliwe jest to poprzez zastosowanie hiperlinków po kliknięciu w który użytkownik zostanie przekierowany do stosownej akcji 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q2/4f371f1ee794f7b30863d594be633f96-42530-0.png)
+
+## Wydruk informacji o towarach dostawcy
+Wywołane tej funkcji spowoduje wygenerowanie wydruku gdzie użytkownik dostanie informacje w postaci listy kartotek towarów dla których dostawcą jest wybrany Klient.  
+
+Prezentowany wydruk dostarcza informacje odnośnie Kodu towarowego, Nazwy jednostki miary oraz informacji jakim kodem oraz nazwą dany produkt oznaczony jest u dostawcy.
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J3/8b2c0a204c7b625a7e32d61af04ad3a7-64097-0.png)
+
+# Statusy
+## Dodaj nowy status do karty
+Pozwala na oznaczenie karateki kontrahenta zdefiniowanym uprzednio statusem. Statusy pozwalają na oznaczenie kontrahenta wg. ustalonych prze użytkownika kryteriów bądź słów kluczowych. 
+
+Nadanie nowego statusu dla kartoteki Klienta możliwe będzie tylko dla użytkowników posiadających stosowne uprawienia. Nadawane są on z poziomu `Uprawnień głównych` > `Uprawnienia do kart, zakładek i obiektów` > `Ogólne` > `Dostęp do nadawania statusów` bądź z poziomu uprawnień kontekstowych które dostępne są na liśie kontrahentów pod skrótem klawiszowym Ctrl+F2
+
+Statusy dodawane są w słownikach systemowych. Aby tego dokonać należy przejść do `Ustawień głównych systemu` > `Słowniki` > `Kontrahent` > `Statusy dla klientów`
+
+Zdefiniowany dla danego kontrahenta Status pozwala na weryfikacje kontrahentów jak również wyszukiwanie ich po danym statusie. Informacja o statusie widoczna będzie z poziomu listy kontrahentów po uprzednim dostosowaniu widoku kolumn
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H3/76caa8e631f4ebc4563741ec2d386b5f-37055-0.png)
+## Lista statusów
+Lista ustawionych statusów na karcie klienta, są to statusy zdefiniowane uprzednio w Słownikach systemowych. 
+
+`Ustawienia główne systemu` > `Słowniki` > `Kontrahent` > `Statusy dla klientów`
+
+Lista statusów pozwala na wgląd jakim statusem można oznaczyć kontrahenta oraz po przejściu na odpowiednią zakładkę wgląd w historie zmian statusów wykonanych na danym kontrahencie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R5/75c894a6508161a066b8b9d170af9a6b-30553-0.png)
+
+# Wydruki
+## Etykiety
+Wydruk etykiet klienta postaci kodu kresowego z informacjami o danym kontrahencie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I0/620adfcd279eb9031ca58cd8cbfd5310-45308-0.png)
+## Wydruk karaty klienta
+Wydruk karaty klienta pozwala na wygenerowanie wydruku na którym znajdą sie pełne informacje dotyczące danych kontrahenta. Wydruk prezentuje informacje takie jak:
+- kod klienta
+- dane teleadresowe
+- Numery kont bankowych
+- informacje odnośnie ewentualnych rozliczeń
+- opiekuna klienta
+- osobie kontaktowych wraz z numerem telefonu oraz adresem mail
+
+
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V3/90c56b27756fd6aca6d6d6c0b47e9f38-55888-0.png)
+
+# Zaplanuj kontakt
+Wybór tej opcji pozwala na utworzenie nowego zdarzenia o rodzaju `Kontakt`, które po utworzeniu automatycznie będzie miało skojatrzonego klienta.
+
+Funkcja ta zależna jest od uprawnienia i aby była ona dostępna z poziomu kartoteki kontrahenta Użytkownik musi posiadać `Uprawnienia do kart`, `zakładek i obiektów` > `CRM` > `Rodzaje zdarzeń` > `Kontakt - dostęp do kart i listy`
+
+Powala na szybkie utworzenie zdarzenia przypominającego o zaplanowanym kontakcie z kontrahentem.  Funkcjonalność przydatna podczas rozmów biznesowych gdzie użytkownik ma możliwość zaplanowania potencjalnego kontaktu z kontrahentem .
+Utworzenie zdarzenia typu kontakt po odpowiedniej parametryzacji systemu skutkuje pojawieniem sie stosownych wpisów w module `CRM` > `Zdarzenia`/`Moje zadania`/`Kalendarz`. Sporządzenie zdarzenia typu kontakt z poziomu karty kontrahenta możliwe jest zarówno poprzez użycie `Funkcje` > `CRM` > `Zaplanuj kontakt`, jak również skrótu klawiszowego `[CTRL+K]` 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R7/4311cb9214522e2dc93be10b25f52b46-40465-0.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,74 @@
+# System MES w systemie Vendo.ERP
+
+# Program MES – rejestracja i kontrola produkcji
+
+## Monitorowanie postępu produkcji
+
+Vendo MES to program do zarządzania produkcją umożliwiający nadzór nad przebiegiem produkcji w czasie rzeczywistym. Jego główną rolą jest przydzielanie zadań pracownikom i monitorowanie ich realizacji. Umożliwia dokładną rejestrację produkcji, kontrolę jakości oraz zarządzanie przestojami. MES integruje się z maszynami poprzez sterowniki i czujniki, zapewniając automatyczne zbieranie danych o przebiegu i parametrach produkcji.
+
+Dzięki panelowi operatora pracownicy mogą rejestrować wykonywane operacje, zużycie materiałów z dokładnością do partii i numerów seryjnych oraz przestoje. Mogą także uzyskać dostęp do dokumentacji technicznej.
+
+Vendo.MES pozwala na efektywne zarządzanie produkcją, poprawę jakości oraz minimalizację przestojów.
+
+## Jakie funkcje realizuje Vendo MES?
+
+### Sterowanie produkcją
+
+- dostarczanie planów produkcji na panele operatorskie,
+- emisja dokumentacji produkcyjnej,
+- przeplanowanie w przypadku odchyleń w wykonaniu, awarii maszyn, zmian w zamówieniu, zmianie priorytetów, przesunięcia terminów dostaw materiałów,
+- przydzielanie zadań pracownikom,
+
+### Rejestracja produkcji
+
+- kontrola i dokumentowanie etapów produkcji przez pracowników za pomocą uproszczonego, łatwego w obsłudze modułu oraz czytnika kodów kreskowych daje pełną informację o aktualnym zaawansowaniu produkcji, jakości oraz zużytych materiałach,
+
+### Panel operatora
+
+- rejestracja wykonanie produkcji,
+- rejestracja przerw i przestojów w pracy maszyn – automatyczna lub przez operatora,
+- dostęp operatora od dokumentacji technicznej,
+- rejestracja zużytych materiałów,
+- panel kontroli jakości,
+
+### Kontrola jakości
+
+- identyfikacja partii produkcyjnej: materiały, pracownicy stanowiska,
+- karty pomiarowe,
+- zarządzanie brakami produkcyjnymi naprawialnymi i nienaprawialnymi,
+- potwierdzanie poprawności operacji przez uprawnione osoby,
+
+### Rejestracja przerw i przestojów
+
+- rejestracja przestojów pracy maszyn:automatyczna,operatorska,
+- automatyczna,
+- operatorska,
+- słowniki przyczyn przestojów,
+- liczenie OEE stanowiska,
+- powiadamianie działu utrzymania ruchu o przestoju,
+
+- automatyczna,
+- operatorska,
+
+### Integracja z maszynami
+
+- Integracja z maszynami poprzez:sterowniki,czujniki pracy maszyny,
+- sterowniki,
+- czujniki pracy maszyny,
+- Automatyczne i bieżące pobieranie danych o parametrach pracy maszyny i przestojach,
+
+- sterowniki,
+- czujniki pracy maszyny,
+
+### SCADA
+
+- zautomatyzowane pobieranie parametrów pracy maszyn,
+- ręczna rejestracja parametrów maszyn i produktów,
+- alertowanie odchyleń,
+- treacability – powiązanie parametrów pracy maszyny z partią produkcyjną,
+
+### Wydruk etykiet
+
+- wydruk etykiet na produkt, opakowanie, paletę,
+- etykiety standardzie 1D lub 2D(QR),
+

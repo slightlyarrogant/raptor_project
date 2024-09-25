@@ -1,0 +1,50 @@
+Autofakturowanie WZ
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/autofakturowanie-wz
+scraped_at: 2024-09-05T12:19:19.956094
+last_updated: 2024-09-05T12:19:19.956132
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Autofakturowanie WZ
+meta_tags: ['plugina', 'ustawienia', 'użytkownik', 'dokumentów', 'dokumentu', 'wartości', 'poziomu', 'jest', 'podczas', 'wartość']
+
+Content
+Cel:
+W Systemie Vendo została rozbudowana funkcjonalność auto-fakturowania dokumentów WZ. Obecnie system daje możliwość fakturowania dokumentów WZ, została ona jednak wzbogacona o dodatkowe funkcjonalności po spełnieniu których dokumenty WZ są automatycznie fakturowane uwzględniając ustawienia pozwalają na sparametryzowanie i przyspieszenie tego procesu
+Ustawienia lokalizacja
+Ustawieni plugina
+Ustawienia > Plugiy > [Dodaj Plugin] > Autofakturowania > [Ustawienia plugina] (ikona narzędzi w lewym górnym rogu okna programu
+Lokalizacja Vendo
+Menu główne > Dokumenty >Dokumenty magazynowe > Wydanie zewnętrzne WZ
+Opis Plugin’a
+Plugin odpowiedziały za autofakturowanie jest rozbudową mechanizmu fakturowania dokumentu WZ dostępnego obecnie w Vendo.
+Został on rozbudowany o dodatkowe ustawienia pozwalające na określenie jakie czynności będą wykonywane podczas zamykania dokumentu WZ. Ustawienia te pozwalają użytkownikowi na precyzyjne określenie jakie operacje mają zostać wykonane w związku z zamknięciem dokument WZ. Użytkownik z poziomu ustawień plugina określa czy dokument ma zostać z automatu wydrukowany a na jego podstawie generowana będzie faktura sprzedaży która również zostanie zamknięta i wydrukowana czy też będzie ona wysłana drogą elektroniczną. W przypadku gdy Użytkownik korzysta z elektronicznej wysyłki dokumentów e-faktury wówczas plugin współpracuje z takim ustawieniem i nie będzie drukował dokumentów sprzedażowych. Podczas parametryzacji plugina Użytkownik ma dostęp do takich opcji jak:
+
+Automatyczne fakturowanieWZ – podstawowe ustawienie w którym użytkownik decyduje czy po zamknięciu dokumentu WZ system ma automatycznie wystawić dokument FV. Po zaznaczeniu tej opcji możliwa jest dalsza konfiguracja plugina
+Czy automatycznie fakturować klienta – Parametr pozwalający na określenie którzy kontrahenci będą automatycznie fakturowani. Rozwiązanie oparte na zdefiniowanej wartości dowolnej w kartotece kontrahenta w postaci check boksa TAK/NIE. Po zdefiniowaniu takiej wartości dowolniej użytkownik musi w ustawieniach plugina uzupełnić nazwę zmiennej. W przypadku gdy wartość ta nie zostanie uzupełniona automat fakturował będzie wszystkich kontrahentów
+Automatycznie zamykanieFV – Użytkownik decyduje czy po wygenerowaniu Dokumentu FV na podstawie WZ ma zostać ona zamknięta
+Automatyczne drukowanieFV – Parametr decydujący o tym czy po wygenerowaniu dokumentu FV ma zostać on wydrukowany. Z tego poziomu użytkownik decyduje również o ilości kopi które mają zostać wydrukowane
+Automatyczne drukowanieWZ – Pozwala na wydrukowanie dokumenty WZ po jego zamknięciu. Funkcjonalność jest bardzo przydatna w przypadku gdy konieczne jest wydrukowanie pakietu dokumentów WZ > FV. Z tego poziomu również Użytkownik decyduje o ilości kopi drukowanego dokumentu
+Drukarka – ustawienie to pozwala na zdefiniowanie parametrów związanych z drukarką. Użytkownik decyduje czy:
+Podczas drukowania dokumentów ma być używana drukarka domyślna (parametr pobierany z ustawień systemu windows)
+Określenie nazwy drukarki - w polu tym Użytkownik świadomie wpisuje nawę drukarki informacja taka dostępna jest w ustawieniach systemu Windows > Drukarki.
+Wartość Dowolna Dokumentu – Parametr definiowany jako wartość dowolna na karcie dokumentu. Funkcja używana podczas wydruku dokumentu z poziomu kolektora
+
+
+Wartość dowolna klienta z zgoda na e-fakture – wartość dowolna definiowana na kartotece kontrahenta. Dostarcza informacji iż dokumenty wysyłane są drogą elektroniczną i nie należy ich drukować
+
+
+Opis działania.
+Funkcjonalność auto fakturowania dostępna jest po wgraniu stosownego plugina Dokonać tego należy z poziomu ustawień głównych systemu wchodząc w Ustawienia > Pluginy > Dodaj Plugin > Autofakturowania >Ustawienia plugina (ikona narzędzi w lewym górnym rogu okna programu. Po dodaniu plugina należy przejść do jego konfiguracji, dokonać jej należy zgodnie z opisem powyżej. Ustawienia te określają jakie czynności wykonane będą w związku zamknięciem dokumentu WZ i należy je ustawić zgodnie z procesami zachodzącymi w danej firmie. Pełna konfiguracja plugina wymaga również stosownych zmian po stronie systemu VENDO, nie są one jednak obowiązkowe. Dokonujemy ich w przypadku gdy chcemy dokładnie sparametryzować działanie mechanizmu. Parametryzacja polega na stworzeniu wartości dowolnych dla kartotek kontrahenta oraz kart dokumentów które określają miedzy innymi dla których klientów plugin ma wykonać zdefiniowane operacje. Wartości dowolne definiowane są poziomu słowników systemowych, poniżej opisany został schemat stworzenia ich dla karty klienta :
+
+Ustawienia > Główne > Słowniki > Kontrahent > Wartości dowolne klienta
+Z poziomu listy wartości dowolnej klawisz [Insert] lub Funkcje > Dodaj wartość dowolną > [Tak/Nie]
+Dodanie odpowiednich wartości dowolnych które wykorzystywane będą do poprawnego działania plugina AutofakturowanieWZ
+
+
+Bardzo istotne aby podczas tworzenia wartości dowolnych uzupełnić Nazwę zmiennej, to właśnie tą wartość wykorzystywana będzie podczas konfiguracji plugina zgodnie z opisem powyżej Tak zdefiniowane ustawienia pozwalają na prawidłową prace plugina odpowiedzialnego za zamykanie dokumentów WZ
+
+Definiowanie wartości dowolnych w przypadku dokumentów wygląda w analogiczny sposób
+Images
+
+

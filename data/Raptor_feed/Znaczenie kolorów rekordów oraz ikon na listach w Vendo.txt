@@ -1,0 +1,118 @@
+# Znaczenie kolorów rekordów oraz ikon ostrzegawczych na listach w Vendo
+
+Dla poprawiania przejrzystości list (np. towarów, dokumentów, klientów) w programie wykorzystane są oznaczenia graficzne natomiast rekordy na listach prezentowane są w kolorystyce. Poniżej opisano znaczenie ich na poszczególnych listach.
+
+# Dokumenty
+
+## Listy - informacje ogólne.
+Poszczególne wiersze listy mogą występować w różnych kolorach (domyślnie):
+- **Czarny** – podstawowy kolor listy, np. zamknięte dokumenty.
+- **Niebieski** – są to rekordy znajdujące się w buforze. To znaczy takie, które nie są
+zamknięte i można je jeszcze edytować (na przykład dokumenty `FV`, `RW`).
+- **Czerwony** – oznacza zwykle 'przeterminowanie' pozycji, np. w kolorze czerwonym
+mogą się pojawić należności i zobowiązania, których termin płatności minął. 
+Na liście towarów kolor czerwony oznacza pozycje, których stan magazynowy jest poniżej stanu
+minimalnego.
+- **Szary** – oznacza anulowane/stornowane pozycje.
+- **Zielony** - występuje głównie na zamówieniach i oznacza zamówienie zrealizowane. W
+przypadku płatności oznacza on pozycje importowane.
+
+
+## Lista dokumentów.
+
+Kolory rekordów oraz ikony dostępne na listach:
+- **Niebieski** - dokument w buforze - można edytować a nawet usunąć. Dokumenty
+przychodowe (np. `PW`, `PZ`) będąc w buforze zwiększają stan oczekiwanych, ale nie
+zwiększają stanu na magazynie. Dokumenty Rozchodowe (np. `RW`,`WZ`) będąc już w
+buforze pomniejszają stan magazynowy. Rezerwacje z tytułu `FV/ZO` są tworzone już w
+momencie, kiedy dokument trafia do bufora.
+- **Czarny** - dokument zatwierdzony (zamknięty) - możliwość edycji jedynie w polu *Uwagi* lub
+poprzez funkcje specjalne (łącznie z otwarciem dokumentu).
+- **Szary** - dokument anulowany - jeśli w systemie ustawiona blokadę usuwania
+dokumentów innych niż ostatnie w serii, pozostałe dokumenty można jedynie anulować
+(nie wpływają na stan magazynów/należności/zobowiązań/płatności, ale pozostaje po
+nich ślad).
+- **Czerwony** - występuje na dokumentach `PZ/PW/MM` i oznacza, że któraś pozycja
+towarowa na tych dokumentach posiada cenę zerową (zerowa cena zakupu/przyjęcia).
+Ikony:
+  - Dokument przeniesiony do rejestru `VAT`.
+  - Dokument zaksięgowany w `KH/KPiR`.
+  - Dokument podpięty do zlecenia (produkcyjne, serwisowe, akcja marketingowa,
+proces).
+  - W przypadku `FV` oznacza brak wydania całości towaru na WZ (i odwrotnie), w
+przypadku `FZ` oznacza brak przyjęcia całości towaru na PZ (i odwrotnie), w przypadku
+paragonów oznacza niezafiskalizowane dokumenty. Jeśli w firmie rozdzielono `RP` od `WZ`
+do również paragony niezrealizowane przez `WZ` będą oznaczane wykrzyknikiem.
+  - Dokument skojarzony z zleceniem transportowym/listem przewozowym.
+- Dokument wyeksportowany do systemu zewnętrznego.
+  - Dokument pochodzi z systemu zewnętrznego
+  - Fiskalizacja dokument zafiskalizowany
+ - Dokument wydrukowany.
+
+# Klienci
+## Lista klientów:
+Kolor rekordów na jakim wyświetlana jest kartoteka kontrahenta:
+* **Czarny** - klient aktywny - można wystawiać na niego wszelkie dokumenty.
+* **Szary** - klient oznaczony, jako nieaktywny/potencjalny - na takich klientów nie
+można wystawiać dokumentów.
+
+## Statusy klientów
+Przeglądając listę klientów natkniemy się na oznaczenia ich poprzez kolory:
+- **Czarny** – klient aktywny, można wystawiać na niego wszelkie dokumenty, zlecenia,
+-	**Szary** – klient oznaczony, jako nieaktywny/potencjalny, na takich klientów nie
+można wystawić dokumentów.
+-	**Zielony** - klient oznaczony, jako wewnętrzny. Wszelkie operacje dozwolone (jak w
+przypadku oznaczenia kolorem czarnym), z tym, że do klientów wewnętrznych dostęp
+może być blokowany dodatkowym uprawnieniem (nie każdy pracownik ma możliwość wglądu w kartoteka klientów wewnętrznych).
+
+# Magazyn 
+## Lista Towarów.
+Kolory rekordów, na jakich prezentowane są kartoteki na licie towarowej.
+-	**Czarny** - towar (usługa/koszy) oznaczony, jako aktywny - przeznaczony do obrotu i
+posiadający stany nie mniejszy niż stan minimalny definiowany na karcie towaru (stany
+min./max. dotyczą tylko towarów - usługi i koszty nie posiadają stanów).
+-	**Czerwony** - ilość towaru dostępna na magazynie poniżej stanu minimalnego.
+-	**Szary** - towar został zaznaczony, jako nieaktywny (wycofany z obrotu).
+
+## Stany Partii
+Na liście znajdują się znaczniki dokumentów KJ, zarzadzania partiami związanymi ze zwolnieniem do wydawania. 
+-	**Żółta** - oczekuje na weryfikacja, 
+-	**Czerwona** - zablokowana, 
+-	**Zielona** - dobra, można wydawać.
+
+
+# Płatności - Lista płatności.
+
+Kolor rekordów, na jakim wyświetlana jest płatność:
+•	Niebieski - płatność w buforze - można edytować a nawet usunąć. Płatności
+będące w buforze mogą służyć do rozliczania dokumentów.
+•	Czarny - płatność zatwierdzona - edycja jedynie w zakresie na jaki pozwalają funkcje
+specjalne.
+•	Zielony - płatność zaimportowana, dla której system nie znalazł kontrahenta (system
+sprawdza numery kont z karty klienta i jeśli jest w stanie dopasować je do tych
+zaimportowanych automatycznie to robi, jeśli nie wtedy zaznacza kolorem zielonym).
+•	Szary - płatności stornowane ("anulowane") - tego typu płatności nie wpływają na
+stan rozliczeń.
+Ikony:
+  - Płatności przeniesione do poczekalnie przelewów.
+  - Płatność zaksięgowana.
+  - Płatność skojarzona ze zleceniem.
+
+# Zlecenia (produkcyjne, serwisowe, akcje marketingowe, procesy):
+Kolor rekordów, w jakim prezentowane są zlecenia:
+-	**Czarny** - zlecenie w realizacji.
+-	**Zielony** - zlecenie zrealizowane.
+-	**Szary** - zlecenie anulowane.
+-	**Czerwony** - zlecenia tworzone (nie mające wybranego statusu).
+
+# Produkcja - Kolor rekordów, w jaki prezentowane są dokumenty KKW:
+-	**Czarny** - KKW zamknięte - bez możliwości edycji. `KKW` zamknięte nie wpływają na
+wielkość oczekiwanych/braków.
+-	**Zielony** - `KKW` wykonane, czyli takie dla którego przyjęto już PW na wyroby gotowe. Po
+zamknięciu kolor zmieni się na czarny.
+-	**Niebieski** - `KKW` w buforze, czyli przeznaczone do edycji.
+-	**Czerwony** - termin pozycji zlecenia jest wcześniejsza niż termin realizacji `KKW` (`KKW` jest przeterminowane).
+# Zlecenia transportowe/Listy przewozowe:
+Kolor rekordu, w jakim prezentowane są listy przewozowy/zlecenie transportowe:
+-	**Czarny** - list/zlecenie transportowe zatwierdzone (zamknięte).
+-	**Niebieski** - list/zlecenia transportowe w buforze (dostępne do edycji).

@@ -1,0 +1,131 @@
+Modula WMS Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/clients/modulawms
+scraped_at: 2024-09-05T12:18:57.955144
+last_updated: 2024-09-05T12:18:57.955193
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Modula WMS Plugin
+meta_tags: ['modula', 'vendo', 'plik', 'plików', 'root', 'orderid', 'ordername', 'lineid', 'materialid', 'maxstockperbin']
+
+Content
+Wymiana danych VENDO ERP – Modula WMS.
+Informacje ogólne
+Modula WMS Plugin służy do wymiany danych pomiędzy systemami VENDO ERP a Modula WMS. Komunikacja odbywa się za pomocą plików XML. Pliki muszą znajdować się w lokalizacji sieciowej (folderze) dostępnym dla obydwu systemów. W jednym momencie może być przetwarzany tylko jeden dokument. Z poziomu VENDO ERP export plików odbywa się ręcznie poprzez wywołanie funkcji „Wyślij do Modula WMS” na dokumencie lub kartotece towarowej. Import plików z potwierdzeniem przyjęcia/wydania może odbywać się ręcznie poprzez wywołanie funkcji "Pobierz z Modula WMS" lub automatycznie poprzez zadanie uruchamiane na Agencie Vendo (Bot). Po wykonaniu importu system VENDO ERP przenosi plik z potwierdzeniem do folderu Archiwum. Funkcjonalność exportu plików jest dostępna również z poziomu scenariuszy na kolektorze poprzez wywołanie funkcji: Przyjęcie do Modula/Wydanie z Modula.
+Komunikacja VENDO ERP –> Modula WMS.
+System VENDO ERP wysyła do systemu Modula WMS trzy typy plików. Nazwy plików są parametryzowalne w ustawieniach pluginu:
+
+
+export.xml – plik zawierający informację o dokumencie i jego pozycjach. Jest on podstawą komunikacji pomiędzy systemami. Obsługiwane typy dokumentów przychodowych : PW, PZ rozchodowych: RW, WZ. Przykład struktury pliku:
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+471454
+676/PROD/19/PZ
+0
+V
+0
+2019-11-05
+
+
+471454
+676/PROD/19/PZ
+3240753
+38255
+135829
+AF00002559860
+AF00002559860
+10.0000
+AF00002559860
+
+
+471454
+676/PROD/19/PZ
+3240754
+39625
+135830
+BFH2280460000_000
+BFH2280460000_000
+20.0000
+BFH2280460000_000
+
+
+
+
+
+
+exportWare.xml – plik zawierający informację o towarze.
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+38255
+AF00002559860
+AF00002559860
+szt
+0
+0
+0
+0
+0
+0
+0
+
+
+
+
+
+exportBin.xml – plik zawierający informację o łączeniu towaru z przegrodą w szafie. Informację o typach przegród i maksymalnej ilości w przegrodzenie dla danego towaru w musza być wprowadzone do systemu VENDO ERP jako wartości dowolne.
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+38255
+Karton
+10
+
+
+39625
+Karton
+25
+
+
+
+
+
+Komunikacja Modula WMS -> VENDO ERP.
+Po wykonaniu operacji przyjęcia/wydania system Modula WMS generuję plik z potwierdzeniem. Plik zawiera informację o towarze, partii, pozycji dokumentu oraz planowanej i rzeczywistej ilości , która została pobrana bądź wydana. Po poprawnym imporcie pliku do systemu VENDO ERP następuję potwierdzenie kolektorowe ilości na pozycji. Przykładowy plik potwierdzenia:
+<?xml version="1.0" encoding="UTF-8"?>
+<SYSTORE>
+   <EXP_ORDINI>
+      <ORD_ORDINE>65/IS/20/PZ</ORD_ORDINE>
+      <ORD_DES>20602</ORD_DES>
+      <ORD_TIPOOP>V</ORD_TIPOOP>
+      <EXP_ORDINI_RIGHE>
+         <RIG_ORDINE>65/IS/20/PZ</RIG_ORDINE>
+         <RIG_ARTICOLO>6054</RIG_ARTICOLO>
+         <RIG_SUB1>6608</RIG_SUB1>
+         <RIG_QTAR>20</RIG_QTAR>
+         <RIG_QTAE>20</RIG_QTAE>
+         <LineID>57842</LineID>
+      </EXP_ORDINI_RIGHE>
+   </EXP_ORDINI>
+</SYSTORE>
+
+Wymagane wartości dowolne:
+
+WYSLANODOMODULA typ [TAK/NIE] - Dokument, Kartoteka Towarowa.
+*TYPPRZEGRODYMODULA typ [Słownik] - Kartoteka Towarowa.
+*ILOSCWPRZEGRODZIEMODULA [typ Liczba] - Kartoteka Towarowa.
+
+Zamknięcie dokumentu przez Modula WMS
+Zamknięcie dokumentu przez Modula WMS następuję (poza standardowymi warunkami VENDO) jeżeli:
+
+jest zaznaczona opcja "Zamknij dokument po potwierdzeniu ilości",
+Wszystkie pozycje dokumentu są kompletne w tym sensie, że w pliku powiedzenia z Modula ilość potwierdzona( RIG_QTAE) jest nie mniejsza od ilości planowanej (RIG_QTAR)
+
+W celu pewniejsze identyfikacji dodano do pluginu funkcję zapisu logów do pliku.
+W ustawieniach pluginu po znaczeniu opcji Zapis Logów logi będą zapisywane w ścieżce: C:\Users\nazwa użytkownikaAppData\Roaming\Vendo#ModulaWMS.
+Dodatkowo po zaznaczeniu opcji Lokalny folder zapisu logów logi będą równolegle zapisywane pod wskazaną ścieżką.
+
+Images

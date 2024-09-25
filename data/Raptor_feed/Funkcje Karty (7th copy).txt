@@ -1,0 +1,21 @@
+# Zakup
+
+W ramach funkcjonalności karty zakup użytkownik ma możliwość korzystania z następujących funkcji:
+
+- dokument źródłowy
+- funkcje
+
+![tmp4b573768-a386-4372-8ead-5a6fd1cc43c5](https://www.cfi.pl/vendohelp/content/imgs/S6/b40e0531da2bb995181daaf7ce32c828-2617-0.png)
+
+- edytuj dokument
+- utwórz storno zapisu
+- usunięcie zapisu
+- pokaż zapis skojarzony
+- funkcje specjalne – zmień rok deklaracji
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpd3d61b44-c530-4be1-a16b-9ba495e085ba](https://www.cfi.pl/vendohelp/content/imgs/Q4/467065ea9aa8521e0dcad2c9952296de-82371-0.png)
+
+![tmpd0792816-36ec-48dc-871c-8633dfcdbe10](https://www.cfi.pl/vendohelp/content/imgs/N7/f5f70347a20758dc61bfba438421f0c4-4271-0.png)

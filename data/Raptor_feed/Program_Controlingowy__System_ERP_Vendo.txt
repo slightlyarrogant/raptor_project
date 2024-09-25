@@ -1,0 +1,62 @@
+# Program Controlingowy | System ERP Vendo
+
+# Program Controllingowy
+
+## Controlling
+
+Vendo Controlling skupia się na planowaniu, kontrolowaniu, koordynowaniu i monitorowaniu procesów biznesowych, w tym zarządzaniu budżetem, analizie odchyleń, oraz wspieraniu strategicznego zarządzania. Controlling dostarcza danych finansowych, łatwych do interpretacji, dzięki czemu umożliwia podjęcie działań korekcyjnych.
+
+Vendo Controlling ma dostęp do wszystkich danych systemu ERP i umożliwia ich rozliczanie wg zdefiniowanych wymiarów, takich jak:
+
+- plany i realizacja sprzedaży,
+- projekty i zlecenia – planowane vs faktyczne przychody i koszty projektów i zleceń,
+- koszty samochodów / środków trwałych.
+
+## Jakie funkcje realizuje Vendo w Controllingu
+
+### Wymiary kontrolingowe
+
+- wymiary kontrolingowe np.:zlecenia,miejsca powstawania kosztów,środki trwałe,pracownicy,
+- zlecenia,
+- miejsca powstawania kosztów,
+- środki trwałe,
+- pracownicy,
+- konta kontrolingowe wymiaru:wielopoziomowość,konta obiektowe – powiązane ze zleceniami, pracownikami, produktami,konta rodzajowe – rodzaje przychodów i kosztów,generowanie kont kontrolingowych w oparciu o model / szablon,
+- wielopoziomowość,
+- konta obiektowe – powiązane ze zleceniami, pracownikami, produktami,
+- konta rodzajowe – rodzaje przychodów i kosztów,
+- generowanie kont kontrolingowych w oparciu o model / szablon,
+- KVI – kluczowe wskaźniki np. wielkość produkcji w kg,
+
+- zlecenia,
+- miejsca powstawania kosztów,
+- środki trwałe,
+- pracownicy,
+
+- wielopoziomowość,
+- konta obiektowe – powiązane ze zleceniami, pracownikami, produktami,
+- konta rodzajowe – rodzaje przychodów i kosztów,
+- generowanie kont kontrolingowych w oparciu o model / szablon,
+
+### Dekrety
+
+- dekretacja dokumentów,
+- dekrety walutowe,
+- automatyzacja tworzenia dekretów w oparciu o wzorce (szablony) księgowań,
+
+### Budżety
+
+- budżety wymiarów kontrolingowych,
+- raporty rozliczenia budżetu,
+
+### Automatyzacja księgowani i przeksięgowania
+
+- wzorce księgowań do kontrolingu,
+- przeksięgowania wg kluczy i dynamicznych wskaźników,
+
+### Raporty kontrolingowe
+
+- wykonanie budżetu,
+- obroty i salda kont wymiarów,
+- kreator raportów użytkownika,
+

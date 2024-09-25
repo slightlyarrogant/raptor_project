@@ -1,0 +1,102 @@
+# Suus Plugin
+
+## Informacje ogóle
+
+Implementacja rozwiązania w systemie Vendo miało na celu stworzenie uniwersalnego plugina mającego
+umożliwienie komunikacji jak również wymiany danych pomiędzy spedytorem Suus a systemem VENDO.
+Zasadza działania wygląda analogicznie jak w przypadku pozostałych spedytorów 
+
+## Wytyczne do wdrożenia
+
+### Niezbędne informacje
+
+#### Dane dostępowe do środowiska testowego i produkcyjnego po stronie Suus:
+
+1. Login
+2. Hasło
+3. Login (do środowiska testowego)
+4. Hasło (do środowiska testowego)
+
+**Login i Hasło muszą być ustawione w parametrach pracy spedytora na wszystkich stanowiskach,
+z których będzie odbywać się wysłka listów przewozowych.**
+
+### Szczegóły usług oferowanych przez Suus:
+
+#### Wybór i ustawienia usług
+
+1. Regóły handlu międzynarodowego (dla przesyłek międzynarodowych), Dostępne opcje:
+    - Ex Works (EXW)
+    - Free Carrier (FCA)
+    - Free Alongside Ship (FAS)
+    - Free On Board (FOB)
+    - Cost and Freight (CFR)
+    - Cost, Insurance and Freight (CIF)
+    - Carriage Paid To (CPT)
+    - Carriage and Insurance Paid to (CIP)
+    - Delivered at Place (DAP)
+    - Delivered Duty Paid (DDP)
+2. Rodzaj przewożonego towaru (informacja dla usługi ubezpieczenia)
+3. Ryzyko dodatkowe (informacja dla usługi ubezpieczenia)
+
+### Usługi B2C
+
+1. Usługa wniesienia
+2. Dostawa w dni robocze w godzinach niestandardowych
+
+### Usługi B2B
+
+1. Dostawa własna do terminala / Załadunek z terminala
+2. Odbiór własny z terminala
+3. Usługa paleciaka
+4. Usługa windy (udźwig do 750 kg)
+5. Załadunek boczny
+6. Rozładunek boczny
+7. Rozładunek na godzinę
+8. Dodatkowe pole na etykiecie (usługa dostępna po zgłoszeniu
+zapotrzebowania przez Opiekuna Handlowego) (max. 150 znaków)
+
+## Konfiguracja
+
+Przed przystąpieniem do pracy konieczne jest podegranie stosownego plugina.
+Konfiguracji takiej dokonujemy z poziomu:
+
+`Ustawienia` > `Główne` > `Pluginy` > `Dodaj plugin`
+
+W następnym etapie konfiguracyjnym należy przejść do ustawień odpowiedzialnych za
+komunikacje pomiędzy systemem Vendo a Suus. Dokonujemy tego z poziomu:
+
+`Ustawienia` > `Główne` > `Parametry pracy` > `Logistyka` > `Spedytorzy` > `Ustawienie globalne` > `Suus Plugin`
+
+Ustawienia parametryzowane z tego poziomu, należy ustawić wspólnie z opiekunem
+przydzielonym przez spedytora. Dane które należy uzupełnić:
+- *Login*
+- *Hasło* 
+
+W kolejnym etapie konfiguracji, należy przejść do ustawień słowników systemowych.
+Parametryzacja taka wykonywana jest wspólnie ze opiekunem przydzielonym przez spedytora.
+Dostępna jest ona poprzez wybór: `Ustawienia` > `Główne` > `Słowniki` > `Logistyka` : `Spedycje` > `Suus Plugin`.
+
+Po wyświetleniu ustawień konfiguracyjnych, zakładka > Ogólne konfigurowana jest w
+standardowy sposób dla wszystkich spedytorów.
+
+Konfiguracja odnosząca się do Spedytora Suus dostępna jest z poziomu zakładki "Suus Plugin".
+
+W zakładce "Suus Plugin" zaznaczyć można dodatkowe usługi.
+
+System Vendo odpowiada za poprawne przesłanie danych do Suus za pośrednictwem API,
+na podstawie zdefiniowanych parametrów podczas konfiguracji ustawień.
+W systemie nie ma domyślnych ustawień dostępnych po uruchomieniu plugina. 
+
+ 
+## Zasada działania.
+
+Wywołanie funkcjonalności odbywa się z poziomu `Menu głównego` > `Logistyka` > `Listy przewozowe`.
+Opis funkcjonalności "Zakładek" Listu przewozowego opisany jest w oddzielnej dokumentacji.   
+
+Funkcjonalność plugina, po odpowiedniej jego konfiguracji, polega na wywołaniu danych udostępnianych
+przez spedytora za pośrednictwem API. Dane te widoczne będą podczas generowania wydruku etykiet jak
+i listów przewozowych, tam właśnie prezentowane sa wszystkie informacje które zostały zdefiniowane
+na etapie konfiguracji. 
+
+Z poziomu dialogu "Dane spedytora" użytkownik ma możliwość wydruku Etykiet listu przewozowego.
+Generowanie wydruku możliwe jest z poziomu listy Listów przewozowych.

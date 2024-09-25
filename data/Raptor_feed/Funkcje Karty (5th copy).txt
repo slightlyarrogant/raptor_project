@@ -1,0 +1,13 @@
+# e-Deklaracje
+
+W ramach funkcjonalności karty e-Deklaracje użytkownik ma możliwość korzystania z następujących funkcji:
+- anuluj deklarację
+- usuń deklarację
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp02539c5f-4a92-406d-baf3-8af6a3f6eb0e](https://www.cfi.pl/vendohelp/content/imgs/Y6/57cbf61d289aad489fb9257096e7722a-53969-0.png)
+
+
+![tmp6c434441-148c-4b66-b83f-36a267a560d9](https://www.cfi.pl/vendohelp/content/imgs/T3/8ecf5fb5c31a0618b1ef5827baa8db4a-2092-0.png)

@@ -1,0 +1,13 @@
+# Salda na dzień
+
+W ramach funkcjonalności karty salda na dzień użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj płatność – generowanie dokumentu wpłaty/wypłaty
+- rozliczenie z dokumentem – powoduje otwarcie listy nierozliczonych dokumentów z kontrahentem i umożliwia ich rozliczenie
+- usuń rozliczenie – usunięcie istniejącego już rozliczenia
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp3127b8fb-9f70-4ee6-bb0f-721a0b2c7f3c](https://www.cfi.pl/vendohelp/content/imgs/E2/ea283d3bc1335cd2bab5bb2a2ff41258-27689-0.png)
+
+![tmp538bce4a-8e1f-4eec-bef7-92e10ddf225a](https://www.cfi.pl/vendohelp/content/imgs/P1/57d0e5f44ae7d609d394e8b81dea78ad-2568-0.png)

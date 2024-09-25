@@ -1,0 +1,9 @@
+##	Konfiguracja ustawień
+
+Konfiguracji ustawień dokupujemy w ustawieniach głównych programu wchodząc w: `Ustawienia` > `Główne` > `Parametry pracy` > `Rejestry VAT` należy uzupełnić pole „Ulga na złe długi – termin (dni)” -ilość dni wg., której ma być wyliczana liczba dni od daty z dokumentu Termin płatności.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C2/657d0bc3fc430928c4002843f432c08c-56335-0.png)
+ 
+ Konfiguracja parametrów
+
+Korzystając z raportu Raport złych długów VAT należy pamiętać, aby raport uzgadniać za dany miesiąc a nie za okres. Wskazując miesiąc po lewej stronie raportu filtry Od – Do, należy podać miesiąc, który będzie weryfikował Karty VAT według daty.

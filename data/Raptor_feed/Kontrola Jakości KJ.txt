@@ -1,0 +1,36 @@
+# Kontrola jakości KJ
+## informacje ogólne
+Dokumenty Kontroli Jakości są dokumentami odpowiedzialnymi za zmianę kwalifikacji partii. Pozwalają one na przeprowadzenia kontroli jakości towarów przychodzących w dostawie co daje możliwość szybkiej oceny oraz sprawdzenia statusu danych partii towaru. 
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |KJ
+
+
+## Opis dokumentu
+Kontrola wejściowa, może być połączona z danym magazynem. warunkiem koniecznym do przeprowadzenia kontroli jest oznaczenie z poziomu kartoteki towarowej, iż dany towar ma podlegać kontroli jakości (tylko na kartotece, nie dla grupy towarowej). 
+Kontrola może odbywać się zawsze lub w ramach danej dostawy (nie rzadziej niż raz na dostawę) i z określaniem, co którą sztukę danego towaru. Oczywiście, może odbywać się na żądanie -  związana będzie z pozycją ZW, PZ (oznaczenie odnośnie kontroli).
+W momencie zamknięcia dokumentu dostawy (PZ/PK/PW) towar wchodzi na stan magazynu. Jeżeli w charakterystyce towaru jest zaznaczone, że wymaga przeprowadzenia kontroli jakości, to wchodzi on na stan partii ale niedostępnej do dalszych ruchów.
+
+Dla partii wyróżniane są trzy stany:
+-	„Stan Oczekuje” – dla partii, które oczekują jeszcze na kontrolę jakości (żółte)
+-	„Stan Ok” – dla partii, które nie wymagają KJ lub przeszły ją pozytywnie (zielone)
+-	„Stan Wynik negatywny” – dla partii o negatywnym wyniku KJ (czerwone)
+
+
+Zmiana stanu partii odbywa się poprzez wystawienie dokumentu Kontrola Jakości (skrót KJ), na którym wybiera się partię, którą chce się skontrolować, podaje ilość i zmienia jej stan na zielony lub czerwony.
+  
+
+![tmp9d4ceae1-0947-4ef2-a4fd-96476d6a4ff2](https://www.cfi.pl/vendohelp/content/imgs/J1/c2ded933d88dd1f54ea9ef0f07d10f99-67912-0.png)
+
+Dodanie nowego dokumentu KJ odbywa się zgodnie ze standardowym mechanizmem tworzenia dokumentów czyli po otwarciu zakładki dokumenty magazynowe > KJ > Dodaj. Po otwarciu dokumentu użytkownik ma możliwość dodania pozycji zarówno ze stanu oczekującego jak również tych uprzednio trafiły na stan z wynikiem negatywnym tak więc partie żółte można zamienić na zielone lub czerwone, partie czerwone zmienić na zielone i odwrotnie. Nie ma możliwości zmiany powrotnie na żółte (oczekuje).
+
+
+
+![tmp603fd363-4754-469a-9035-f9c429ee0964](https://www.cfi.pl/vendohelp/content/imgs/O0/a6472abcc66c344e7717a04f4980f6dd-23397-0.png)
+
+Powyższe trzy stany partii są stałe, nie można dodawać innych. Wyłącznie partie „zielone” mogą zostać skutecznie przesunięte pod produkcje.
+
+

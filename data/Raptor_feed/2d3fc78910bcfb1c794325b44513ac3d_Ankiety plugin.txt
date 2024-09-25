@@ -1,0 +1,46 @@
+Ankiety plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/ankiety-plugin
+scraped_at: 2024-09-05T12:19:13.074664
+last_updated: 2024-09-05T12:19:13.074706
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Ankiety plugin
+meta_tags: ['jest', 'ankiety', 'poziomu', 'pytań', 'ankiet', 'pozwala', 'które', 'tworzenia', 'należy', 'odpowiednich']
+
+Content
+Ankiety plugin
+Informacje ogólne
+Implementacja rozwiązania pozwala na rozbudowę karty zdarzeniowej o dodatkową zakładkę odpowiedzialna za możliwość tworzenia rożnego rodzaju ankiet. Funkcjonalność wykorzystywana może być w przypadku, gdy zachodzi potrzeba uzyskania informacji i wykorzystywania może być np. w celu sprawdzenia zadowolenia klienta. Mechanizm pozwala na tworzenie dowolnego zestawu pytań przypisanych do wybranego rodzaju zdarzenie.
+Parametryzacja / Ustawienia
+Przed przystąpieniem do pracy konieczne jest podegranie stosownego plugina. Operacja ta odbywa się wg standardowego schematu instalacji pluginów w systemie Vendo. Dostępna jest ona z poziomu Ustawień głównych systemu > Parametry pracy > Pluginy > Dodaj plugin. Konfiguracji ustawień dotyczących ankiet dokonać można dwojako. Jednym ze sposobów jest określenie pytań oraz szablonów z poziomu słowników systemowych. W tym calu należy przejść do Ustawień Głównych > Słowniki > CRM: Pytania do ankiet. Pytania definiowane dla potrzeb Ankiety oparte na wartości dowolnych tak więc sposób ich tworzenia odpowiednia standardowemu procesowi dodawania wartości dowolnych.
+
+System Vendo pozwala również na tworzenie odpowiednich szablonów wraz z pytaniami które wchodzą ich skład z poziomu modułu CRM. Operacja taka możliwa jest po wejściu w Menu główne > CRM > Lista ankiet.
+Zasadza działania
+Plugin Ankiety pozwala na definiowane szeregu szablonów z określonymi pytaniami które po odpowiedniej parametryzacji dostępne są z poziomu kart zdarzeniowych. Prace z ankietami zacząć należy przechodząc do zakładki Lista ankiet która zlokalizowana jest z module CRM. Zakładka ta widoczna będzie dopiero po wgraniu stosownego plugina. Z poziomu zakładki Lista ankiet użytkownik ma wgląd wszystkie zdarzenia na których zostały przeprowadzone ankiety. Aby utworzyć nowy szablon ankiety należy uprzednio przygotować zestaw pytań który następnie skojarzony zostanie z właściwym szablonem. Celem przystąpienia do tworzenia pytań które maja znaleźć się w odpowiednim szablonie należy w nagłówku okna odnaleźć ikonę notatnika – Pytania do Ankiet. Wybór tej opcji spowoduje otwarcie okna dialogowego z poziomu którego możliwe jest utworzenie właściwych zapytań. Okno w który definiowane są pytania jest tożsamym, które wywoływane jest z poziomu słowników systemowych tak wiec dodawanie nowych pytań odbywa się analogicznie jak w przypadku tworzenia standardowych wartości dowolnych
+
+Jeśli pula wszystkich pytań jest gotowa, należy przejść do konstrukcji odpowiednich zestawów w skład których wchodzić będą zdefiniowane pytania. Definiowanie odpowiednich zestawów odbywa się wg następującego schematu:
+
+Użycie klawisza Zestaw, spowoduje to wyświetlenie listy zdefiniowanych zestawów
+Z poziomu listy zestawów wcisnąć insert, spowoduje to otwarcie nowego zestawu.
+Po utworzeniu nowego zestawu wklikać się w niego, zostanie wyświetlony dialog listy pytań które mają wejść w jego skład. Dodanie nowych obywa się poprzeż użycie klawisza insert, spowoduje to wyświetlenie listy utworzonych pytać. Po odnalezieniu odpowiednich oznaczyć je, wybór zaakceptować dwukrotnym kliknięciem myszki bądź wciskając Enter. Operacja powinna być powtarzana aż, do momentu uzupełnienia wszystkich pytań wchodzących w skład konstruowanej ankiety
+
+
+Kolejnym etapem tworzenia ankiety jest spersonalizowanie odpowiednich szablonów które widoczne będą z poziomu wybranych zdarzeń. Personalizacja odpowiednich szablonów możliwa jest poprzez klikniecie w ikonę szablonu zlokalizowana w lewym górnym rogu okna programu. Zostanie wyświetlony dialog lity wszystkich zdefiniowanych ankiet z poziomu którego możliwe jest też utworzenie nowego, poprzez klikniecie Dodaj. W wyświetlonym oknie Użytkownik parametryzuje wszystkie niezbędne informacje dotyczące ankiety. Najważniejsze dane które należy uzupełnić to:
+
+Data rozpoczęcie/zakończenia – informacja od/do kiedy ankiety mają być przeprowadzone a co za tym idzie widoczne na karcie zdarzeniowej
+Nazwa - Nazwa pod którą będzie widoczny zdefiniowany szablon
+Opis - Dodatkowe informacje dotyczące szablonu Ankiety
+Zestaw pytań – Pole zdefiniowane jako rozwijana lista, pozwala na wybór zdefiniowanego wcześniej zestawu
+Rodzaj zdarzenia - pole to pozwala na określenie dla których zdarzeń widoczne będą utworzone ankiety
+Rodzaj klienta - pozwala na określenie grupy klientów do których skierowana będzie ankieta. Informacje o ankiecie widoczne będą na karcie zdarzeniowej po przydzieleniu do niej stosownego klienta
+Handlowiec - informacja mówiąca który handlowiec odpowiedzialny będzie za przeprowadzenie ankiety. Określenie handlowca dostępne jest na karcie zdarzeniowej jako właściciel zdarzenia Sekcja poświęcona definiowaniu klientów których dotyczy ankieta. Podczas dodawania szablonu ankiety istnieje również możliwość precyzyjnego określenia do których klientów skierowana będzie ankieta
+
+
+W momencie gdy wszystkie informacje dotyczące definiowanej ankiety zostaną określone widoczna ona będzie po utworzeniu nowego zdarzenia i widoczne one będą tylko na zdarzenia określonych w trakcie jej tworzenia. w przypadku gdy dla danego zdarzenia zostanie określona więcej niż jedna ankieta informacja taka również widoczna jest na karcie zdarzeniowej jako odrębna zakładka i to użytkowik decyduje która ankieta ma zostać przeprowadzona.
+
+Images
+
+
+
+

@@ -1,0 +1,64 @@
+Finanse i ksiegowosc
+Metadata
+
+url: http://192.168.33.19/master/docs/company/procedury-standaryzacyjne/finanse-i-ksiegowosc/readme
+scraped_at: 2024-09-05T12:17:21.444874
+last_updated: 2024-09-05T12:17:21.444899
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Finanse i ksiegowosc
+meta_tags: ['niezbędne', 'księgowego', 'handlowych', 'firmach', 'zaksięgowania', 'dokumentówdokumenty', 'sprzedażydokumenty', 'zakupowe', 'kosztowedokumenty', 'firm']
+
+Content
+Notyfikacje
+Instrukcja SW
+Zapoznaj sie z dokumentacja
+
+Cel
+Zakupy wewnątrzwspólnotowe i importowe
+Odwrotne obciążenie (OO) krajowe
+Księgowanie transakcji
+
+Zamknięcie msc w firmach handlowych i usługowych
+Zapoznaj sie z dokumentacja
+
+Wstęp
+Czynności niezbędne do zaksięgowania dokumentów
+Dokumenty sprzedaży
+Dokumenty zakupowe / kosztowe
+Dokumenty magazynowe (w przypadku firm handlowych)
+
+
+Czynności niezbędne do dokonania księgowego rozliczenia okresu
+Czynności niezbędne do przygotowania księgowego zamknięcia miesiąca
+Czynności obejmujące dokumenty i moduł księgowy
+Dodatkowe sprawdzenia i weryfikacje (dotyczy firm handlowych)
+
+
+Księgowe zamknięcie okresu
+Zamykanie ksiąg / zaksięgowanie dokumentów do Dziennika
+Przeniesienie Bilansu Otwarcia (BO) na Nowy Rok obrachunkowy
+
+
+
+Zamknięcie msc w firmach produkcyjnych
+Zapoznaj sie z dokumentacja
+Wstęp
+
+Wstęp
+Czynności niezbędne do zaksięgowania dokumentów
+Dokumenty sprzedaży
+Dokumenty zakupowe / kosztowe
+Dokumenty magazynowe
+
+
+Czynności niezbędne do dokonania księgowego rozliczenia produkcji
+Czynności niezbędne do przygotowania księgowego zamknięcia miesiąca
+Czynności obejmujące dokumenty i moduł księgowy
+Dodatkowe sprawdzenia i weryfikacje
+
+
+Księgowe zamknięcie okresu
+Zamykanie ksiąg / zaksięgowanie dokumentów do Dziennika
+Przeniesienie Bilansu Otwarcia (BO) na Nowy Rok obrachunkowy
+
+

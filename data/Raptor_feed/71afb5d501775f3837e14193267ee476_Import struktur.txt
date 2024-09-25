@@ -1,0 +1,97 @@
+Import struktur
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/import-struktur
+scraped_at: 2024-09-05T12:20:49.432893
+last_updated: 2024-09-05T12:20:49.432950
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Import struktur
+meta_tags: ['struktury', 'struktur', 'jest', 'plugina', 'ustawienia', 'towarowej', 'import', 'importu', 'towarów', 'poziomu']
+
+Content
+Cel
+Plagin Import struktur konstrukcyjnych wykorzystywany będzie w dziale technologicznym. Pozwala on w łatwy i szybki sposób na zaimportowanie zdefiniowanych uprzednio szablonów struktur konstrukcyjnych po wcześniejszym sparametryzowaniu plugina według potrzeb użytkownika Parametryzacja plugina polega na dostosowaniu importowanych danych poprzez zmapowanie kolumn zgodnie z importowanym szablonem.
+Ustawienia lokalizacja
+Ustawienia > Pluginy > ImportStrukturExs > Ustawienia plugina Import odbywa się z poziomu: Menu > Produkcja > Struktury konstrukcyjne > PPM > Import struktur
+Opis działania
+Funkcjonalność oparta jest na rozwiązaniu pluginowym pozwala na importowanie a co za tym idzie tworzenie nowych nawet bardzo złożonych struktur konstrukcyjnych w systemie Vendo na podstawie odpowiednio przygotowanego szablonu w formacie .xls Przed przystąpienie do pracy bardzo ważne jest aby w odpowiedni sposób sparametryzować ustawienie plugina. Parametryzacja ta polega na określeniu pól znajdujących się w ustawieniach plugina względem nagłówków kolumn importowanego szablonu Mówimy tutaj o zmapowaniu nazw kolumn szablonu z polami znajdującymi się w ustawieniach plugina, odpowiadającym wartością znajdującym się na karcie struktury konstrukcyjnej jak również karcie towarowej. Ustawienia takie pozwalają na automatyczny import.
+Plugin
+Plugin odpowiedzialny za import struktur dodawany jest z poziomu ustawień głównych programu. Należy tego dokonać wchodząc Ustawienia główne programu > Pluginy > Dodaj plugin. Po dodaniu plugina konieczna jest jego konfiguracja której dokonać można wchodząc w ustawienia (ikona narzędzi zlokalizowana w prawym górnym rogu okna programu). Ustawienia plugina zostały podzielone na cztery sekcje : Ustawienia importu, Ustawienia wspólne, Parametryzacja CSV, Ustawienia dla towarów. Podczas definiowania wartości które maja zostać zmapowane należy pamiętać iż te oznaczone gwiazdka są polami obowiązkowymi. Dla pól które nie są obowiązkowe i nie występują w importowanym szablonie system zwróci wartość null’owa
+W sekcji poświęconej Ustawieniom importu Użytkownik ma możliwość konfiguracji parametrów takich jak:
+
+Brak kartoteki towarowej – Funkcja pozwala na tworzenie nowych indeksów w przypadku gdy podczas importu struktur system nie napotka na takie w kartotece towarowej. Bardzo ważne jest aby pamiętać, iż tworzone mogą być tylko i wyłącznie liście dla struktury. Indeks dla struktury głównej musi zostać świadomie założony w kartotece towarowej.
+
+W przypadku gdy import ma odbywać się tylko i wyłącznie dla indeksów które zostały już założone w kartotece towarowej użytkownik powinien wybrać opcje Pomiń kartotekę.
+
+Ścieżka plików do importu – Pozwala na określenie lokalizacji w której znajdują się przygotowane uprzednio szablony z importowanymi strukturami
+Ścieżka plików zaimportowanych – funkcjonalność pozwalająca na skopiowanie zaimportowanych plików do ustawionej lokalizacji w celu późniejszej weryfikacji które struktury zostały już zaimportowanie.
+
+Sekcja Ustawienia wspólne. Jest ona najbardziej istotna pod względem konfiguracji. To właśnie z tego poziomu użytkownik dokonuje mapowania importowanych pól względem przygotowanego szablonu. Najważniejsze parametry dostępne w Ustawieniach wspólnych to:
+
+Wybór arkusza z danymi – z tego poziomu użytkownik określa w jaki sposób system ma klasyfikować akrusz/e z danymi. Istnieje możliwość określenia czy importowane mają być wszystkie arkusze począwszy od pierwszego, czy też wybrane klasyfikowane po nazwie bądź kodzie Towaru
+Nazwa arkusza - w przypadku gdy w polu „Wybór arkusza z danymi” użytkownik ustawi wartość „Nazwa” konieczne jest podanie takiej informacji
+Aktualizuj wersje rodzica przy zmianie wersji dziecka – Parametr pozwalający na aktualizacje wersji gałęzi (nagłówek) w przypadku gdy aktualizowane są liście struktury (pozycje) Twórz po kodzie rodzica – nie uwzględniane sa kody pozycji system bierze pod uwagę tylko kod rodzica - nagłówka Pozostałe wartości uzupełniane są zgodnie z danymi znajdującymi się na importowanym szablonie
+Nazwa kolumny Pozycja LP – pole ustawione domyślnie określa płaszczyznę położenia liczby porządkowej
+Nazwa kolumny pozycja Kod – parametr nadrzędny określający gałąź struktury – nadindex (relacja ojciec dziecko)
+Nazwa towaru/struktury (rozdzielone;) – Nazwa określająca produkty wchodzące w skład struktury
+Kod towaru/struktury – unikalny kod produktu wchodzący w skład struktury
+Ilość do ojca – ilość produktu w określonej jednostce asortymentu wchodzący w skład struktury danego indeksu
+Ilość mianownik – przelicznik określający iloraz ilość w stosunku do rodzica
+Ilość dodatkowa – wartość pozwalająca dodanie stałej ilości
+Materiał – surowiec z którego wykonany jest produkt struktury
+Wymiary X, Y, Z – Parametry określające wymiary materiału wchodzącego w skład struktury
+Masa – wartość wagowa
+Rodzaj struktury – Parametr określający rodzaj struktury rodzaje struktur. Dzielą się one na Produkcyjne, zakupowe, kooperacyjne
+Mapowanie wyrobów rozdzielone – wartość mapowanej kolumny dla wyrobów
+Mapowanie surowców rozdzielone – wartość mapowanej kolumny dla surowców
+Mapowanie kooperacj i – określenie rodzaju mapowanej kooperacji (kupowany, Produkowany, Kooperacja)
+Grupa I nowo zakładanych towarów – określenie do jakiej grupy towarowej będą należały nowo zakładane indeksy podczas importu – parametr kartoteki towarowej Kod dostawcy nowo zakładanych towarów – informacja o kodzie towaru pod którym dostępny jest on u dostawcy – parametr kartoteki towarowej
+Grupa – określenie grupy technologicznej – parametr definiowany w słownikach systemowych
+Domyślna grupa towarowa dla zakupowych – Domyślna grupa technologiczna dla nowo zakupionych towarów należących do struktury
+Domyślna grupa towarowa dla produkowanych – domyślna grupa technologiczna dla nowo wyprodukowanych towarów należących do struktury
+Status – określenie statusu importowanej struktury
+Wersja – określenie wersji dla importowanej struktury
+Statusy do zatwierdzenia struktur – parametr określający status jeśli struktura ma zostać zaimportowana jako zatwierdzona.
+Statusy z dodawaniem do bufora - parametr określający status jeśli struktura ma zostać zaimportowana i pozostać w buforze.
+Opis (rozdzielone) - wartość pozwalająca na uzyskanie wyniku połącznia dwóch kolumn – łączenie importowanych kolumn
+
+Sekcja Parametryzacja CSV - Struktury mogą być importowane w różnych formatach plików. Parametryzacja ta pozwala na określenie separatorów którymi rozbielane będą dane dla importowanych struktur Ostania z sekcji odpowiedzialnej za parametryzacje plugina jest Ustawienia dla towarów. Pozwala ona na:
+
+Aktualizacje istniejących towarów – oznaczenie tej funkcji pozwala na aktualizacje w kartotekach towarowych w przypadku gdy wartości importowanych struktur będą inne niż obecnie znajdujących się w systemie
+Dodatkowe pole bazy danych do szukania kodu – pozwala na określenie dodatkowego parametru pozwalającego na wyszukiwanie towarów w BD
+Cecha 1,...6 nowo zakładanych towarów – określenie cech nowo zakładanych indeksów, parametr dostępny w kartotece towarowej
+Dni dostawy nowo zakupionych towarów - termin po którym zakupione towary biorące udział w strukturach znajda się na magazynie
+Kod u dostawcy – numer obcy, kod dostępny u dostawcy
+Ścieżka do zdjęcia – informacja określająca lokalizacje plików zdjęć dla importowanych struktur
+
+
+Szablon Importu
+Szablony importu tworzone mogą być ręcznie bądź też na podstawie danych eksportowanych z innych systemów. Nagłówki kolumny mogą nie być spójne z nazwami znajdującymi się w VENDO. To właśnie te informacje mają zostać uzupełnione w trakcie konfiguracji plugina w celu ich poprawnego zmapowania
+
+Import struktur
+Import struktur możliwy jest z plików w formatach .xls, .csv, .XML. Użytkownik może tego dokonać w dwojaki sposób, zarówno z poziomu Magazyn > Towary > Kartoteka towarowa jaki i z poziomu modułu Produkcja > Struktury konstrukcyjne > PPM > Import struktury. Pierwszy sposobów importu dokonywany jest wg poniższego schematu:
+
+w Menu głównym przejść do modułu Magazyn > Towary > lista kartoteki
+odnaleźć rekord w kartotece towarowej z nawą struktury głównej
+po wejściu w wybrany rekord z poziomu kartoteki towarowej wybrać Funkcje > Import struktury
+
+
+W kolejnym kroku użytkownik określa rodzaj importowanego pliku oraz typ importu tj. czy ma on odbywać się dla jednego wybranego pliku czy też ma zostać zaimportowanie wiele katalogów. Po określeniu rodzaju oraz typu importu należy podać lokalizacje uprzednio przygotowanego szablonu i zatwierdzić wybór
+Innym sposobem importu struktur konstrukcyjnych jest import z poziomu modułu produkcyjnego. Dokonujemy tego wchodząc w zakładkę Struktury konstrukcyjne > Lista struktur > PPM > Import struktur. W kolejnych krokach postępujemy zgodnie z opisana powiej procedurą.
+
+Po poprawnym zaimportowaniu wskazanego pliku w systemie zostanie wyświetlony szablon zaimportowanych struktur z możliwością naniesienia ewentualnych poprawek. Na tym etapie użytkownik ma możliwość zadecydowania o dalszych krokach. Na podstawie wygenerowanego schematu istnieje możliwość utworzenia nowych indeksów w przypadku gdy system nie znajdzie ich w kartotece towarowej, bądź zmapowania ich już istniejącymi. Mapowanie rekordów dla których system nie znalazł indeksów z istniejącymi towarami odbywa się poprzez zaznaczenie rekordu z pustą wartością Kod towaru w Vendo a następnie przejść do kartoteki towarowej klikając w ikonę trach kropek pola „Towar” znajdującą się w górnej belce okna programu Jeśli wszystkie dane są poprawne należy wygenerować strukturę Klikając Generuj strukturę zostanie nadanie ID struktury.
+
+W przypadku gdy system nie znajdzie indeksu towarowego w kartotece zostanie wyświetlona stosowna informacja.
+
+Kartotekę taką można dodać ręcznie bądź utworzyć z poziomu importowanego szablonu klikając Utwórz towar. Jeśli wszystkie dane są poprawne, po wygenerowaniu struktury w systemie VENDO w zakładce Struktury konstrukcyjne zostanie utworzony rekord po wklikaniu się w który widoczna będzie importowana struktura
+
+Karta struktury podzielona została na dwie zakładkim, pierwsza z nich określa podstawowe dane struktury natomiast po przejsciu na zakładkę „Dane elementu” użytkownik ma możliwość wglądu/edycji zaimportowanych parametrów pod warunkiem iż zostały one poprawnym zmapowane w ustawieniach plugina
+
+Images
+
+
+
+
+
+
+

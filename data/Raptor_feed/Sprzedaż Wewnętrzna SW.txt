@@ -1,0 +1,155 @@
+# Sprzedaż Wewnętrzna
+
+## Informacje ogólne
+Dokument Sprzedaż Wewnętrzna 
+
+
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Plany Sprzedaży| SW| 
+
+
+## Opis dokumentu
+
+Dokument Sprzedaż Wewnętrzna (SW wewnątrzunijne)  cechuje się takimi informacjami jak:
+-	Data Sprzedaży
+-	Wystawienia – data wystawienia dokumentu
+-	Dostawca – klient 
+-	Nabywca – klient
+-	Forma płatności , data Płatności
+-	Wartość netto, brutto, VAT
+-	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki
+-	Grupa I – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/153fadd6b9f3679a4846bd57102a797c-34441-0.png)
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Dostawcy i Nabywcy . 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B7/03bf97bc912d3978cb182d99a2e50990-30855-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer zamówienia – Numer Zamówienia Obcego (od odbiorcy), 
+-	Numer Dostawy
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Numer Obcy
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/S6/48c0ed88be550b48e78d21ff5545e813-26178-0.png)
+ 
+W zakładka Opis i Uwagi można wprowadzić Uwagi które mogą być drukowane na wydruku dokumentu SW.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H5/f199d9f016123f6975fe86a331aebfd6-21049-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M6/aaed6d44911a2d36400b1bcab0666e27-32842-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla Sprzedaży Wewnętrznej zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej, którą podczas dodawania do dokumentu możemy zmienić
+-	Grupa Cen – grupa cen sprzedaży przypisana do Nabywcy
+-	Cena0 : - Cena sprzedaży przed obniżkami cen sprzedaży
+-	Ilość – ilość sprzedawanych  kartotek towarowych w podstawowej jednostce 
+-	Rabat – wyliczony, wprowadzony lub przeniesiony z zamówienia obcego. Wyliczony może być na podstawie danych z kartoteki Klienta, Nabywcy
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie oraz ilość zarezerwowana na innych dokumentach. 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji Paragonu Fiskalnego.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K0/cc2fcb1765e43f9e504814d30ef23d66-21247-0.png)
+ 
+W Funkcja dokumentu można skorzystać z różnych opcji umożliwiające operacje na dokumencie. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/68da426a2c2f18091697d3b80b83cf1b-15505-0.png)
+ 
+-	Koszt wysyłki – określone jakie koszty będą dotyczyły realizacji zamówienia
+-	Sprawdzenie NIPu – możliwość zweryfikowania NIPU klienta jako podatnika VAT
+-	Zaproś do konwersacji i wyślij wiadomość – możliwość wysłania wiadomości na czacie do innego użtkownika
+-	Dodaj Pozycje – dodanie pozycji do dokumentu
+-	Usuń pozycje – usunięcie zaznaczonej pozycji na dokumencie
+-	Drukowanie – możliwość wydrukowania dokumentu w różnych wariantach wraz z etykietami
+-	Korespondekcja – Mail – możliwość wysłania maila lub SMSa do klienta wraz z potwierdzeniem zamówienia
+-	Dodaj załącznik – możliwość dołączenia dowolnego dokumentu w formacie PDF, JPG itp.
+
+Przydatnymi funkcjonalnościami  dokumentu w statusie Bufora są Funkcje Specjalne. Umożliwiają zmienić niektóre parametry dokumentu. Takimi parametrami są:
+-	Zmiana numeru – umożliwia zmianę numeru i serii dokumentu
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/O6/1c1810c1dda41b8aa936240888b151bc-18537-0.png)
+
+-	Zmiana metody liczenia VAT – możliwe jest liczenia podatku VAT  od wartości brutto lub netto oraz sumowania wartości netto, VTA i brutto.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I8/0f71c74f89fecefac4269ccb696d0212-32009-0.png)
+ 
+-	Zmiana stawki VAT na zaznaczonych pozycjach
+-	Zmiana waluty dokumentu  - umożliwia zmianę waluty dokumentu na dostępną oraz ustawienie kursu dokumentu, wg którego przeliczany jest na PLN
+-	Zmiana rodzaju i oddziału dokumentu – umożliwia zmianę podrodzaju dokumentu typu Wewnątrzunijny, eksportowy itp. Oraz zmianę oddziału na inny zdefiniowany w systemie
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E8/3ac94d3e92406d8ff3ed58b001353fe6-25577-0.png) 
+
+-	Wykonaj skrypt – umożliwia uruchomienie wcześniej zdefiniowanego skryptu wykonującego pewne wyliczenia np. ustawienie lub obliczenie wartości na podstawie innych danych.
+-	Opcje podatku cukrowego
+-	Rejestr zmian
+
+Kolejnym zestawem funkcjonalności są Funkcje. Umożliwiają one :
+
+-	Zmianę źródła pochodzenia dokumentu – źródłem pochodzenia dokumentu jest informacja jak powstał dokument. Może być importowanych ze sklepu internetowego lub utworzony wewnątrz systemu, bądź pochodzić z zewnętrznego systemu. Poniższy zrzut ekranu pokazuje możliwe źródła pochodzenia.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F1/07d2f74291c6669b140bedb87b9bc055-56214-0.png)
+ 
+-	Zmiana typu sprzedaży/zakupu
+-	Kopiowanie pozycji z innego dokumentu – możliwość skopiowania wszystkich pozycji z innego dokumentu 
+-	Kopiowanie wybranych pozycji – po zaznaczeniu wybranych pozycji z tego dokumentu i uruchomienie te funkcji spowoduje zdublowanie  zaznaczonych pozycji
+-	Utwórz kopię dokumentu – tworzy kopię dokumentu
+-	Pliki do dokumentu
+-	Otwarcie szuflady
+Każdy dokument mona eksportować do postaci pliku w odpowiednim formacie. Służą do niego funkcjonalności w Funkcje -> Import/Eksport 
+-	Eksport do EDI – umożliwia wyeksportować dany dokument zgodnie z popularnymi schematami wymiany danych pomiędzy systemami
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I4/5be7551d0c870e4fcc1770856147c904-45120-0.png)
+ 
+-	Eksport do SAD/Intrastat – eksport do pliku zgodnie z formatami dostępnymi dla programu Huzar
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B3/5e62a805590bad5ea55488eceea20084-32264-0.png)
+ 
+-	Eksport do schowka systemowego
+
+Każdy dokument tak jak SW można przypisać/ podłączyć do różnego rodzaju zlecenia Funkcje > Zlecenia. Do zleceń można zaliczyć takie jak Zlecenia serwisowe, produkcyjne, projekty, umowy najmu, procesy sprzedaży itp. Chcą przypisać zlecenie wybieram już istniejące zlecenia filtrując po dacie i rodzaju zlecenia. Możliwe jest także bezpośrednie utworzenie zlecenia z tego poziomu, gdzie przenoszą się dane dotyczą klienta.  
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/eebca8737e5bc735ef827ad8690e9c60-95438-0.png)
+
+Dokumenty można powiązać z zleceniami przewozowymi. W Funkcje -> Logistyka można :
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/8f2d9cf987e72f8024ade84792124e14-28427-0.png)
+ 
+-	Dopiąć/przepiąć do zbioru listów przewozowych lub zleceń transportowych
+-	Dopięcie/ przepięcie listu przewozowego
+-	Wystawienie logistyki do dokumentu
+-	Dodaj koszty transportu do klienta
+-	Pokaż wydanie w trybie czytnika
+
+Każdy dokument możemy przypiąć do Zdarzenia lub utworzyć nowe zdarzenie. Można to zrobić w Funkcje > CRM
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z3/76bbf6322f8e26b423a003f10166894c-14183-0.png)
+ 
+Pomocnymi  funkcjonalnościami – Funkcje -> Widoki  są:
+-	Porównanie cen dokumentu z wybraną grupą – umożliwia porównanie cen z pozycji dokumentów z wybraną grupą cenową. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/f069ae848ecac10d7b3d9d4fe590fb67-64998-0.png)
+ 
+-	Pozycje wg opakowań – pokazuje pozycje dokumentu w przeliczeniu na opakowania zdefiniowane na kartotekach towarowych  
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X1/a51a2d77b405eb0c0170884e8a6cb872-60366-0.png)
+ 
+-	Miejsca magazynowe wg pozycji z dokumentu – pokazuje gdzie jakie kartoteki towarowe z pozycji dokumentu znajdują się na magazynie
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/c5d21bf5d9ba77f7601319ec2cda5057-72123-0.png)
+
+W dolnej części okna z dokumentem jest przycisk Dok.Skojarz. Po wciśnięciu tego przycisku pokazuje się nowe okno ze skojarzonymi dokumentami. 
+
+Na każdym typie dokumentu możliwa jest obsługa dokumentu poprzez klawiaturę. Widoczne są przy niektórych funkcjach skróty klawiszowe np. Insert – dodanie pozycji, F8 - Rozliczenie dokumentu, CTRL+L – wystawienie listu przewozowego. Możliwe jest także skonfigurowanie kolejności tabulacji na dokumencie, umożliwia to ustawienie kolejności przeskakiwania kursora pomiędzy polami.
+  
+
+Należy pamiętać że, niektóre funkcjonalności mogą się pojawić lub znikać w zależności w jakim stanie jest dokument : W buforze, Zamknięty, zaksięgowany. 

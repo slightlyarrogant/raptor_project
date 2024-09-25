@@ -1,0 +1,129 @@
+OCR Google Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/clients/ocrgoogle
+scraped_at: 2024-09-05T12:19:05.588360
+last_updated: 2024-09-05T12:19:05.588431
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/OCR Google Plugin
+meta_tags: ['określenie', 'jest', 'dokumentu', 'google', 'należy', 'system', 'pliku', 'danych', 'których', 'wartości']
+
+Content
+OCR Google Plugin
+OCR – informacje ogólne
+OCR system optycznego rozpoznawanie znaków, pozwala na zamianę tekstu istniejącego w formie pliku graficznego na tekst, który można edytować albo wydrukować. OCR wykorzystywany jest w przypadkach, gdy konieczne jest wprowadzić do systemu znaczną ilość dokumentów. Rozwiązanie zaimplementowane w Vendo współpracuje z usługą Google Cloud Vision, usługa ta odpowiedzialna jest za rozpoznawanie tekstu, natomiast Vendo odpowiada za znalezienie informacji przetworzonym tekście niezbędnych do utworzenia dokumentów, system Vendo nie odpowiada za przełożenie plików graficznych na tekst, zadaniem OCR jest interpretacja tekstu w taki sposób aby pozyskać niezbędne informacje. Należy pamiętać, iż pliki na podstawie których tworzone są dokumentu w systemie Vendo w pierwszym etapie przetwarzane są przez Google tak więc wychodzą ona poza wewnętrzna infrastrukturę klienta. Obecnie nie jest dostępne rozwiązanie, które pracuje w trybie offline
+Ustawienia/ konfiguracja
+Konfiguracja Google Cloud Vision
+Czynności niezbędne do uruchomienia OCR, W celu uruchomienia pluginu OCR Google Plugin niezbędne jest dostarczenie danych do autoryzacji w usłudze Google Cloud Vision. W tym celu należy wygenerowanie klucz API w formacie JSON do usług Google: Cloud Vision i Storage. Pełny opis do generowanie klucza: https://cloud.google.com/vision/docs/before-you-begin Przed rozpoczęciem korzystania z usługi Google Cloud Vision i Cloud Storage należy skonfigurować sposób płatności. https://cloud.google.com/billing/docs/how-to/manage-billing-account?hl=pl W usłudze Google Storage należy założyć kontener (bucket) i folder do przechowywania odpowiednio: plików źródłowych i odpowiedź Google Cloud Vision. https://cloud.google.com/vision/docs/quickstart#create_a_cloud_storage_bucket Nazwy kontenera i folderu są niezbędne do prawidłowej konfiguracji połączenia w Vendo.
+Konfiguracja Vendo
+Do prawidłowego funkcjonowania OCR Plugin konieczne jest zamieszczenie informacji o kluczu w systemie Vendo. W tym celu należy zdefiniować stosowną wartość dowolną odpowiedzialna za przechowywanie informacji o kluczu. Definiowanie wartości dowolnej odbywa się wg standardowych procedur i wykonywane jest wg następującego schematu:
+
+Słowniki systemowe > Ustawienia ogólne > Wartości dolne oddziałów firmy > Funkcje: Dodaj Wartość dowodną > Rodzaj wartości dowodnej: Plik > określenie nazwy wartości dowolnej OCR Google API Key (nazwa zmiennej: OCR_GOOGLE_API_KEY)
+Po utworzeniu wartości dowolnej należy zapisać wygenerowany klucz. Zapisu takiego dokonać należy z poziomu centrali firmy: Ustawienia > Parametry pracy > Ogólne > Dane firmy > Wybór centrali > Wartości dowolne > Dodaj plik
+
+
+Ustawienie/ konfiguracja plugina
+Konfiguracje plugina należy rozpocząć od jego podegrania. Proces ten odbywa się wg standardowego schematu:
+
+Ustawienie Główne > Pluginy > Dodaj plugin
+określenie lokalizacji zapisanego pliku a następnie jego wybór.
+
+Praca z OCR wymaga stworzenia a następnie konfiguracji schematów, za pośrednictwem których system dokona interpretacji przetworzonych plików. Jeden schemat może odpowiadać jednemu typowi wydruków przesyłanych od klienta, dlatego aby możliwa była praca z wieloma szablonami należy utworzyć kilka różnych schematów. Wynika to z faktu, iż wydruki dokumentów, dostarczanych przez kontrahentów różnią się od siebie, aby możliwa była ich interpretacja należy skonfigurować parametry którymi system będzie sie kierował w celu ich przetworzenia. W przypadku gdy większość przetwarzanych dokumentów jest tego samego rodzaju, wystarczy zdefiniować jeden rodzaj schematu Konfiguracja oraz dodanie nowych schematów dostępne są po wejściu w ustawienie plugina. Dokonać tego należy z poziomu Ustawień głównych > Pluginy > Narzędzia (ikona narzędzi zlokalizowana w prawym górnym rogu okna programu) > Pokaż ustawienia Parametry dostępne podczas konfiguracji plugina zostały podzielone na sekcje związane z:
+
+ustawieniami ogólnymi
+interpretacja danych znajdujących się w nagłówku
+interpretacją danych znajdujących się w pozycjach,
+ustawieniach pracy bota
+
+
+Ustawienia ogólne
+Wszystkie ustawienia dostępne w tej zakładce, zdefiniowane są domyślnie z możliwością ich edycji Ogólne
+
+Nazwa schematu - Informacja określająca używany szablon
+Typ pliku – wybór formatu dla których zdefiniowany schemat będzie przetwarzał przesłane pliki. Rodzaje plików dla których możliwe będzie ich przetwarzanie narzucone jest przez Google, ich formaty to PDF oraz TIFF. Należy pamiętać, iż jeden schemat może obsługiwać jeden rodzaj plików.
+Domyślny - określenie czy definiowany szablon będzie każdorazowo wywoływany w celu przetworzenia wprowadzanych dokumentów. Oznaczenie to wykorzystywane jest w przypadku, gdy większość dokumentów od klienta ma taką samą konstrukcje
+
+Parametry rozpoznawania tekstu
+
+Maksymalna odległość pomiędzy znakami w słowie – Jest automatem pozwalającym na połączenie ciągu znaków w obrębie jednego słowa, które w procesie przetwarzania zostały błędnie zinterpretowane przez google i podzielone na kilka składowych. Parametr określa odległość pomiędzy znakami które występują w danym słowie. Określenie parametru może być istotne w przypadku dalszej konfiguracji ustawień gdzie określone zostanie mapowane pola po których następuje wyszukanie kontrahenta bądź towarów dostępnych w bazie danych (brak możliwości odnalezienia danych w BD)
+Maksymalne odchylenie w linii – określenie parametru pozwala na wyszukiwanie pozycji dokumentu. Działanie mechanizmu polega na podziale całego dokumentu na linie, na podstawie których obliczany jest środek każdego ze słów. Jeśli wszystkie obliczone w ten sposób punkty znajdują się w linii wówczas system przyjmuje, że frazy znajdują się w linii. Określenie współczynnika pozwala na wytyczenie jednostki odchylenia punktu centralnego względem wyliczonej linii. W przypadku bardziej rozstrzelonych wydruków parametr ten należy zwiększyć
+Pozycja wyznaczenia centroidu słowa – określenie liczby miejsc po przecinku podczas wyliczenia centralnego punktu w słowie
+Maksymalna różnica liczby kolumn w tabeli – Funkcja odpowiedzialna za przyporządkowanie pozycji do nagłówka tabeli. Przyporządkowanie polega na sprawdzeniu zmapowanych pól nagłówka względem pozycji odnoszących się do danej kolumny. Parametr określa maksymalna ilość pozycji dokumentu które mogą być puste. Sprawdzenie odbywa się do momentu, aż system nie natknie się na pozycje gdzie ilość pustych miejsc jest większa niż określona w parametrze.
+Maksymalna odległość pomiędzy centroidami w kolumnie – określenie odchylenia pomiędzy punktem centralnym, wyliczonym na podstawie nagłówka względem punktów centralnych pozycji. Porównanie tych dwóch parametrów spowoduje przydzielenie pozycji do danej kolumny/nagłówka
+Wieloliniowe pozycje – funkcja używana w przypadku gdy na dokumencie znajdować się będą pozycje które maja więcej niż jeden wiersz. Zaznaczenie jej spowoduje wyświetlenie dodatkowej listy ustawień odpowiedzialnych z interpretacje przez system takich pozycji
+Maksymalna liczba wierszy w pozycji – określenie maksymalnej ilości wierszy które mogą się znaleźć w danej pozycji
+Maksymalna odległość pomiędzy pozycjami – określenie/podanie odległości pomiędzy pozycjami dokumentu.
+Maksymalna odległość pomiędzy wierszami w pozycji – określenie odległości między wierszami w danej pozycji
+
+
+Interpretacja danych znajdujących się w nagłówku
+Nagłówek – pozwala na określenie ustawień domyślnych względem których interpretowany będzie dokument.
+
+Typ dokumentu - określenie rodzaju dokumentu który zostanie utworzony w systemie Vendo
+Seria – określenie serii dokumentu który zostanie utworzony w systemie Vendo
+Domyślne zlecenie – wskazanie zlecenia, z nowo utworzone dokumenty zostaną automatycznie skojarzone
+Domyślna waluta – domyślna waluta dokumentu
+*Numer Obcy – pozwala na określenie/zmapowanie słowa określające numer obcy. Po zmapowaniu stosownej frazy, system dokona przeszukania tekstu w celu jej odnalezienia następnej kolejności odczyta wartość znajdującą się po wyszukanej frazie, gdzie będzie spodziewał się wartości który uzna z numer obcy. Istnieje możliwość wpisania kilku fraz po których następowało będzie wyszukiwanie, w takim przypadku należy rozdzielić je znakiem „|”
+Magazyn – określenie magazynu na który zostanie dodany na dokumencie, działa w analogiczny sposób jak wyszukiwanie w nagłówku, tj. system wyszukuje zmapowane słowo, natomiast po jego odnalezieniu w następnej kolejności spodziewa się znalezienia frazy określającej magazyn
+Domyślny – określenie magazynu na który ma zostać dodany dokument, ustawienie magazynu domyślnego spowoduje, iż magazyn zostanie dodany bez wyszukiwania go przesłanym pliku
+
+
+Klient1/Klient2 – określenie klienta, który zostanie przypisany do wprowadzanego dokumentu, polega na zmapowaniu pola frazą, która ma zostać wyszukana w przesłanym pliku, po jej znalezieniu system sprawdza co znajduje się po danej frazie i taka wartość przyjmuje jako klient. Wyszukanie wartości odbywa się wzdłuż linii wiersza jak również po wartościach znajdujących się pod wyszukaną frazą
+Domyślny – ustawienie na sztywno kontrahenta który uzupełniany będzie na dokumencie
+Typ – określenie rodzaju danych po których ma zostać wykonana weryfikacja przesłanego pliku. Użytkownik ma możliwość wyboru trzech typów danych po których nastąpi weryfikacja NIP ,Nazwa, Kod.
+
+
+Data sprzedaży/dokumentu/płatności – określenie słowa kluczowego po którym odbędzie się weryfikacja pliku. Polega na określeniu frazy po której system będzie przeszukiwał teks. W momencie jej znalezienia, pobierana będzie wartość znajdująca się za znalezionym tekstem
+Wzorzec – określenie formatu zapisu daty na weryfikowanym pliku. Istnieje możliwość wskazania wzorca daty np: dd.MM.yy dla 01.12.2020, yyyy-MM-dd dla 2020-12-01.
+
+
+
+
+Interpretacją danych znajdujących się w pozycjach
+Parametry wyszukiwania
+
+Separator – wykorzystywany w celu określenia separatora odpowiedzialnego za podział wartości/ilości na części całkowite oraz dziesiętne
+Pomiń niekompletne pozycje – mechanizm czyszczący którego zasadza działania polega na ponownej weryfikacji dokumentu pod kątem zgodności odnalezionych pozycji względem wzorca.
+Sekcja słowa kluczowe - wskazują na nagłówek dokumentu. Wartości znajdujące się w tej sekcji służą do identyfikacji tabeli pozycji na dokumencie w związku z tym ich jakość i poziom kompletacji bezpośrednio wpływa na niezawodność działania całego mechanizmu. W sekcji tej zawarte są informacje dotyczące standardowych pól znajdujących się na dokumencie tj. LP, VAT, Nazwa, Towar, Ilość, Cena netto. Zasadza działania polega na zmapowaniu pól po których system dokona weryfikacji pliku. W momencie gdy określone frazy zostaną znalezione, system zastąpi je odpowiednimi które widoczne będą na dokumencie.
+Towar domyślny – określenie domyślnej kartoteki towarowej w przypadku gdy nie zostanie ona odnaleziona w wyszukiwanym pliku W sekcji tej znajduje się również obszar w którym istnieje możliwość zdefiniowania dodatkowych informacji, które mogą znaleźć się w weryfikowanym pliku a nie zostały domyślnie przewidziane. Przed wprowadzenie dodatkowego pola, która powinna znaleźć się na dokumencie należy utworzyć wartość dowolna typu „tekst” gdzie zapisywane będą niezbędne informacje. Wartość dowolna powinna zostać utworzenia na pozycji dokumentu a sposób jej utworzenia odbywa się wg standardowej procedury tworzenia wartości dowolnych Zasadza działania polega na dodaniu za pomocą zielonego plusa rekordu w który znajdą się informacje takie jak: Nazwa – nazwa wyświetlanej kolumny w Vendo
+Słowo kluczowe – fraza po której dokonana będzie identyfikacja kolumny w tabeli
+Wartość dowolna - nazwa zmiennej wartości dowolnej na której zapisane zostaną dodatkowe informacje
+
+
+Ustawienia odpowiedzialne za prace bota
+
+Pracuj w trybie ciągłym – parametr pozwalający na uruchomienie pracy w tle za pośrednictwem Bota
+Usuń plik wynikowy po przetworzeniu – spowoduje usunięcie przetworzonych plików po wczytaniu ich do systemu.
+Lokalizacja dokumentów – określenie lokalizacji w której znajdować się będą pliki które należy wczytać do systemu
+Lokalizacja odpowiedzi – określenie ścieżki dostępu w której znajdować się będą wstępnie przetworzone pliki z odpowiedzią Google Cloud Vision.
+
+
+Zasadza działania
+OCR Google plugin jest funkcjonalności której zadaniem jest wspieranie użytkowników w procesie dodawania dokumentów w systemie Vendo. Nie mniej jednak konieczna jest weryfikacja przez Użytkownika poprawności przetworzonych danych na postawie których zostaną utworzone dokumenty. Warto zauważyć, iż za przetworzenie plików odpowiedzialna jest usługa Google tak więc znajdować się one będą na serwerach zewnętrznych, wychodzić one będą poza wewnętrzna infrastrukturę klienta. Obecnie nie ma rozwiązania działającego w trybie offline.
+Uruchomienie funkcjonalności odpowiedzialnej za przetwarzanie plików odbywa się z poziomu nagłówka okna programu > ikona Dokumenty. Wywołanie funkcji spowoduje uruchomienie mechanizmu weryfikacyjnego którego zadaniem jest uzyskanie na podstawie przetworzonego pliku danych niezbędnych do utworzenia dokumentu. Dokument taki po akceptacji przez użytkownika widoczny będzie w systemie Vendo.
+
+Kolejne etapy dodania dokumentu wyglądają następująco:
+Po uruchomieniu funkcjonalności wyświetlone zostanie okno, gdzie użytkownik określa informacje dotyczące lokalizacji z których pobierane będą dane. Wczytanie plików może odbywać się dwojako.
+
+uruchomienie wczytywanie poprzez podanie lokalizacji do wybranego liku
+wybór odpowiedniego szablonu przetworzonego pliku
+
+
+Uruchomienie funkcjonalności spowoduje otwarcie okna Potwierdzenia dokumentu w którym użytkownik ma możliwość weryfikacji, modyfikacji oraz zatwierdzenia zaczytanego pliku. Okno zostało zaprojektowane w taki sposób, że użytkownik ma możliwość podglądu pliku źródłowego i na jego podstawie dokonania stosownych zmian które w późniejszym czasie znajda się na dokumencie dodanym w systemie Vendo. Informacje znajdujące się na dialogu potwierdzenia dokumentu wynikają ze wcześniejszej parametryzacji ustawień plugina, nie mniej jednak są one edytowalne tak wiec użytkownik ma możliwość poprawy nieścisłości pomiędzy tworzonym dokumentem a oryginałem i w konsekwencji ostatecznie decyduje o danych które znajdą się na dokumencie. dane które zmapowane bądź rozpoznane zostały poprawnie wyświetlone będą w kolorze zielonym. W przypadku gdy system nie znajdzie bądź błędnie zinterpretuje informacje zawarte na pliku źródłowym zasygnalizuje to kolorem czerwonym. W przypadku wczytania wartości domyślnej pole zostanie podświetlone na pomarańczowo. W przypadku błędnej interpretacji danych konieczna jest ingerencja użytkownika i ręczna poprawa.
+
+Jeśli zajdzie konieczność dokonania modyfikacji na pozycja dokumentu, czynności takiej dokonać należy poprzez oznaczenie rekordu, a następnie użyci klawisza edytuj. Spowoduje to wyświetlenie informacji dotyczących danych znajdujących się w pozycji dokumentu
+
+Po wykonaniu przez użytkownika szczegółowej weryfikacji, następnym krokiem jest utworzenie dokumentu. Operacji takiej dokonać należy klikając „Utwórz dokument”. Spowoduje to wyświetlenie informacji, iż dokument o numerze… został utworzony.
+Dopisany dokument widoczny jest po wejściu w moduł dokumenty a następnie wybór odpowiedniego rodzaju dokumentów
+
+Images
+
+
+
+
+
+
+
+
+
+

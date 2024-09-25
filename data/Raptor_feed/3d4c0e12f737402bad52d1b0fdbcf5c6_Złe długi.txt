@@ -1,0 +1,81 @@
+Złe długi
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/zle-dlugi
+scraped_at: 2024-09-05T12:17:07.073367
+last_updated: 2024-09-05T12:17:07.073425
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Złe długi
+meta_tags: ['2019', 'miesiącu', 'rejestru', 'miesiąc', 'system', 'raporcie', 'złych', 'długów', 'raport', 'dokument']
+
+Content
+Złe długi
+Raport złych długów VAT – jest raportem, który ułatwia użytkownikowi prace za pomocą wprowadzonego mechanizmu obliczania ulgi na złe długi, działa on tylko w oparciu o dokumenty przeniesione do rejestrów VAT.
+Konfiguracja ustawień – Raportu złych długów VAT
+Konfiguracji ustawień dokupujemy w ustawieniach głównych programu wchodząc w: Ustawienia > Główne > Parametry pracy > Rejestry VAT należy uzupełnić pole [Ulga na złe długi – termin (dni)] -ilość dni wg., której ma być wyliczana liczba dni od daty z dokumentu Termin płatności.
+
+Korzystając z raportu Raport złych długów VAT należy pamiętać, aby raport uzgadniać za dany miesiąc a nie za okres. Wskazując miesiąc po lewej stronie Raportu – filtry od – do, należy podać dany miesiąc, który będzie weryfikował Karty VAT według daty.
+Raport złych długów VAT – Zakup
+W programie został wprowadzony przykładowy dokument zobowiązania (moduł Dokumenty):
+
+Dokument Zobowiązania 1/A/01/19/KO z miesiąca 01-2019 został uwzględniony w Rejestrach VAT Zakup w miesiącu - styczeń 2019. Zarówno w deklaracji jak i w JPK – dokument został uwzględniony – w polu 45 (kwota netto – Nabycie towarów i usług pozostałych) w polu 46 (wartość vat) kwota podatku naliczonego – Nabycie towarów i usług pozostałych.
+
+Termin 90 dni – ulga na złe długi VAT – liczony jest od daty z pola termin płatności, wg. powyższego przykładu termin płatności na dokumencie KO to 14-01-2019. 90 dni mija 14-04-2019, zatem dokument zobowiązania zostanie wycofany z VAT w misiącu kwiecień 2019 z przypisaną domyślną transakcją przez system Korekta podatku naliczonego art. 89.B.1. W Raporcie Raport złych długów VAT – system wskaże w kolumnie Miesiąc wycofania 04-2019. Za pomocą Funkcji [Wycofaj z Rejestru VAT na podstawie zaznaczonych rozrachunków] [(F7)].
+
+Po wybraniu tej funkcji, system utworzy we wskazanym miesiącu – kartę Rejestru VAT zakup – z domyślnie przypisanym polem Wycofanie.
+
+W deklaracji VAT-7 oraz JPK – dokument zostanie uwzględniony we właściwych polach – wg przypisanej transakcji, tj. pole 49 – Korekta podatku naliczonego, o której mowa w art.89.B. ust.1 (podatek naliczony) – wartość kwoty vat z karty rejestru zakupu wycofanie. W przypadku częściowego rozliczenia Zobowiązania, system uwzględni wyliczoną kwotę w Raporcie złych długów VAT w zakładce Powroty – przypisując miesiąc z daty płatności w kolumnie Miesiąc powroty – w tym przypadku jest to maj 2019.
+
+Za pomocą Funkcji spod listy Raportu w Typie Powroty – w celu utworzenia automatycznej Karty Rejestru VAT przez program – należy użyć funcjonalności – wskazując pozycję > Powróć z rejestru VAT na podstawie zaznaczonych rozrchunków / (F7)
+
+W kolumnie – Powrócono brutto system wskaże wartość rozliczonego zobowiązania. Odwołując się do miesiąca wskazanego na Raporcie – system pokaże tą informację również w kolumnie Powrócono brutto w miesiącu.
+
+Po użyciu Funkcji [F7] - system utworzył automatycznie Kartę Rejestru VAT – z domyślnie przypisaną transakcją Korekta podatku naliczonego art. 89 B.4. z polem informującym użytkownika, że jest to karta typu: Powrót w miesiącu maj - 2019r.
+
+Po wygenerowaniu deklaracji VAT-7 / JPK za miesiąc 05-2019, program wykaże wartość VAT we właściwych polach, tj. pole 50 Korekta podatku naliczonego, o której mowa w art. 89B. ust.4 kwota 123 PLN.
+Jeżeli dokument zobowiązania – zostanie rozliczony końcowo w miesiącu czerwcu 2019 (data z płatności), program wskaże dokument Zobowiązania w Raporcie Raportu złych długów VAT w miesiącu czerwiec 2019.
+
+Program ponownie, poinformuje użytkownika na Raporcie w zakładce Powroty o miesiącu powrotu do modułu Rejestru VAT oraz kwocie, którą należy wykazać w module Rejestrów VAT – (w tym przypadku – do powrotu brutto 246 PLN). Po wybraniu – Funkcji Powróć z rejestru VAT na podstawie zaznaczonych rozrachunków / (F7), program utworzy automatycznie kartę Rejestru VAT z typem Powrót – w tym przypadku miesiąc czerwiec 2019, z domyślnie przypisaną przez system transakcją Korekta podatku naliczonego art. 89B. 4.
+
+W Raporcie w kolumnie Powrócono brutto – użytkownik uzyska inf. o całości uregulowanego zobowiązania a w kolumnie Powrócono brutto w miesiącu – kwotę, która została wykazana na Karcie Rejestrów VAT zakup – miesiąc 06-2019.
+
+
+Po wygenerowaniu deklaracji VAT-7 / JPK za miesiąc 06-2019, program wykaże wartość VAT we właściwych polach, tj. pole 50 Korekta podatku naliczonego, o której mowa w art. 89B. ust.4 kwota 246 PLN.
+Raport złych długów VAT - Sprzedaż
+Działanie Raportu – Raport złych długów VAT Sprzedaż, działa analogicznie jak dla Zakupu. W celu zaprezentowania przykładu – do programu została wprowadzona FV w miesiącu styczeń 2019.
+
+FV sprzedaży została wykazana w Rejestrach VAT Sprzedaży – na miesiącu styczeń 2019 rok.
+
+Raport w miesiącu kwiecień 2019, wykazał FV na Raporcie Raport złe długi VAT – od dnia 21-01 termin 90 dni minął w miesiącu 04-2019.
+
+Za pomocą Funkcji [F7] Wycofaj z rejestru VAT na podstawie zaznaczonych rozrachunków – program utworzył kartę Rejestru VAT sprzedaży w miesiącu kwietniu 2019 z wpisem Wycofanie.
+
+
+Następnie dokument FV został uregulowany w miesiącu 05-2019, tym sposobem program wykazał FV w Raporcie na zakładce `Powrotów inf. o dokumencie.
+
+W Raporcie na zakładce typ: powroty Raport złe długi VAT – należy przenieść za pomocą Funkcji [F7], transakcję do VAT.
+
+System w kolumnie Powrócono brutto w miesiącu odwoła się do miesiąca wskazanego w Raporcie w polu okres i poda informację o kwocie która została wykazana w Rejestrach VAT.
+
+System utworzył z automatu kartę Rejestru VAT – Powrót na miesiącu 05-2019
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

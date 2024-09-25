@@ -1,0 +1,22 @@
+Uprawnienia pod rekordy
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/plugins/extend-record-permissions
+scraped_at: 2024-09-05T12:18:41.751023
+last_updated: 2024-09-05T12:18:41.751048
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Uprawnienia pod rekordy
+meta_tags: ['uprawnień', 'jest', 'można', 'plugina', 'własny', 'model', 'zgodnie', 'który', 'konsultacji', 'klientem']
+
+Content
+Własny system uprawnień
+Założeniem działania uprawnień przypisanych pod dany rekord jest to iż taki model można zbudować zgodnie z wytycznymi klienta. Funkcjonalność taka realizowana jest za pomocą plugina który przy konsultacji z klientem można wykonać wg jego wytycznych. Podczas tworzenie uprawnień per klient należy dokonań weryfikacji szablonu uprawnień tzw klasy uprawnień która po konsultacji z klientem można skonstruować zgodnie z jego oczekiwaniami. Jako klasę uprawnień rozumiemy tutaj pewien model który możliwy jest do zastąpienia za pośrednictwem odpowiednio skonstruowanego plugina. Tak więc struktura uprawnień może całkowicie różnić się od tej która obecnie widoczna jest w VENDO CFI. Po skonstruowaniu uprawnień pluginowych (Własny typ uprawnień) podstawowy szablon zostaje odinstalowany i zastąpiony nowym stworzonym przez klienta
+Przekładkowa klasa uprawnień:
+Klasa definiująca uprawnienia dla zdarzeń:
+TODO
+https://cl1p.net/ZdarzenieRecordPermissionSystemBuilder
+TODO
+
+Instalacja własnego systemu uprawnień z poziomu plugina:
+var rps = PermissionManager.GetRecordPermissionSystem(eDataType.TB_ZDARZENIA);
+rps.InstallCustom(new ZdarzenieRecordPermissionSystemBuilder());

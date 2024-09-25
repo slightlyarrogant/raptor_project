@@ -1,0 +1,244 @@
+# Generator zamówień
+
+#	Opis
+Vendo posiada system wsparcia Łańcucha Dostaw poprzez Generator Zamówień. Jest to narzędzie, które zbiera dane dotyczące zapotrzebowania na materiały lub towary. Umożliwia wygenerowanie zamówień do dostawców lub zlecenia produkcyjne. Na podstawie zlecenia produkcyjnego tworzone są KKW, które to wygenerują Zapotrzebowania na materiały oraz Oczekiwania na wyrób. 
+ 
+**Czym są Zapotrzebowania i Oczekiwania?**
+Zapotrzebowania jest to potrzeba, która jest wymagana do zrealizowania zamówienia. Zamówieniem może być Zamówienie od Klienta ZO, może to by także dokument Faktury Sprzedaży, Awizo Wydania AW, Wymagania Materiałowe dla planu zlecenia lub Karty Kontroli Wyrobu KKW. 
+
+![tmp9d761b27-c09e-4b4c-96be-173fc089bcf7](https://www.cfi.pl/vendohelp/content/imgs/P5/6a5cfc6bb05180e0696b5eb2b2b0a1ad-48463-0.png)
+ 
+Oczekiwania są to tzw. Towary w drodze, towary lub materiały które mają określony czas dostarczenia na magazyn. Można to odczytać jako towary/materiały zakupione u dostawcy ZW, fakturze zakupu, awizo przyjęcia, wyroby gotowe lub półprodukty  na KKW lub planie zlecenia. 
+
+![tmp720de5f2-214a-4d06-9399-76bb5bf42115](https://www.cfi.pl/vendohelp/content/imgs/W2/fddbdf615e16e305f45f1fe48e652bcf-38009-0.png)
+ 
+Dodatkowo system ma możliwość generowania zamówień w celu utrzymania stanów minimalnych materiałów/towarów na podstawie zdefiniowanych charakterystyk magazynowych:
+ 
+-	Stan minimalny – minimalna ilość towaru na stanie  
+-	Stan Maksymalny – maksymalna ilość towaru na stanie
+-	Krotność zamówienia – co, ile jednostek towaru zwiększane jest zamówienie
+-	Minimalna wielkość zamówienia – minimalna ilość jaka należy zamówić u dostawcy
+-	Dni dostawy – czas dostawy
+Charakterystyki te definiowane są na kartotece towarowej. Jeśli kartoteka towarowa posiada podindeksy (kartoteki rozmiarowe)  to charakterystyka magazynowa na głównej kartotece towarowej jest obowiązująca. 
+#	Analiza Zapotrzebowanie i Oczekiwanie 
+Analiza ta wspomaganie zarządzania oraz kontrolę nad aktualnymi za potrzebowaniami i oczekiwanymi towarami. 
+ 
+![tmp254c7760-301c-4ff9-af37-55334167d682](https://www.cfi.pl/vendohelp/content/imgs/G2/4d0dc032a8e8f5716e7ed76dc37d6c4b-89083-0.png) 
+ 
+Jak widać na powyższym zrzucie widoczne są poszczególne Towary wraz informacjami pochodzenia danego zapotrzebowania lub oczekiwania. Takimi informacjami są:
+-	Data powstania
+-	Numer Zlecenia
+-	Numer dokumentu/ KKW
+-	Kod klienta – jeśli istnieje 
+-	Rodzaj 
+-	Dodatkowo możliwe jest wyciagnięcie dowolnej informacji z Dokumentu, KKW, Pozycji dokumentu, Zlecenia skojarzonego, operacje KKW
+Dodatkową analizę można sprawdzić na kartotece towarowej w Raportach (wcisnąć klawisz F8 będąc na otwartej kartotece towarowej). W zakładce Zapotrzebowane i Oczekiwane zobaczymy listę zapotrzebować i oczekiwań z dokładnością do daty, dokumentu, ilości.
+ 
+Analiza jedynie obrazują stan jaki jest dla danej kartoteki, i pomaga podjąć decyzje o tworzeniu dodatkowy zamówień lub zleceń produkcyjnych. Prawidłowo ustawiony łańcuch dostaw to taki gdzie oczekiwania zgrywają się ze stanem i zapotrzebowaniem w określonym czasie, czyli oczekiwania odbiorców lub produkcji zostały spełnione.  Wspomagającym raportem do określenia spełnionych oczekiwań w zadanych okresach czasowych jest raport BackOrder w Okresie
+ 
+W zależności od konfiguracji raport pokaże okresy ( okres obejmuje ilość dni wprowadzone w polu Długość okresu) które reprezentują stan na magazynie licząc zapotrzebowania i oczekiwania które mają czas realizacji w danym okresie.
+
+#	Powstawanie Zapotrzebowania i Oczekiwania
+
+Źródłem powstania zapotrzebowania są zamówienia od klienta które są odzwierciedleniem potrzeb klienta. Aby spełnić potrzeby klienta należy wyprodukować wyrób lub zakupić towary ewentualnie materiały potrzebne do produkcji. Do utworzenia dokumentów lub zleceń produkcyjnych służy Generator Zamówień.  Generator na podstawie Złożonych zamówień ZO (Zatwierdzonych) lub KKW wygeneruje zamówienie zgodnie z ustawieniami na kartotece towarowej w zakładce Gospodarka mag.
+Aby uruchomić Generator Zamówień należy wejść do Menu -> Magazyn -> Generowanie zamówień
+Po wybraniu tej funkcji pojawi się okno przedstawiające rozbudowany konfigurator wraz z filtrami dotyczący kartotek towarowych oraz puste okno z danymi. Jest to podstawowe okno służące do generowania zamówień. W pierwszym kroku należy odpowiednio ustawić konfigurator, aby zaprezentował na wymagane kartoteki towarowe dla których chcemy utworzyć zamówienia i wstępną konfigurację zamówienia. 
+
+
+
+Na liście w zależności od wybranych kolumn można zobaczyć oprócz kodu i nazwy towaru można zobaczyć:
+-	Kod dostawcy – jeśli jest zdefiniowany na towarze
+-	jednostka miary
+-	wskaźniki MWO i DWO
+-	Stan – stan ogólny, na magazynie, handlowy 
+-	Charakterystyka magazynowa towaru – stan min, max, krotność itp.
+-	Zapotrzebowanie
+-	Oczekiwane
+Dwukrotnie klikając na jedną linii listy pojawi się okno z podsumowaniem dla danego towaru
+ 
+![tmpfc56407a-1b97-43c9-af66-48c168f6cd94](https://www.cfi.pl/vendohelp/content/imgs/E6/0638abe631a6613c85c9eb6e7f717f29-90400-0.png)
+
+Jak widać na powyższym zrzucie widoczna jest pełna charakterystyka towaru:
+- Przelicznik
+- Stan
+- Oczekiwan
+- Zapotrzebowanie
+- Stan min i max
+- Obrót
+- Proponowane zamówienie
+- Zamówienia – w tym polu możemy ręcznie wprowadzić ilość do zamówienia
+- Ostatnia dostawa
+- Dokument dostawy
+- Dostawca
+Aby wyliczyć ilość do zamówienia wg zapotrzebowania i oczekiwania biorąc pod uwagę charakterystykę magazynową towaru należy wcisnąć prawy klawisz myszki na liście. Pojawi się okno z możliwymi funkcjami do wyboru:
+ 
+-	Wyliczenia zamówienia :
+       - Metodą analizy obrotów
+       - Uzupełnienia stanów
+       - Pod plan sprzedaży
+-	Zmiana normatywów lub przeliczenia MWO
+-	Wybór dostawcy
+-	Generowania zamówienia:
+       - Do dostawców
+       - Do jednego dostawcy
+       - Zapytania ofertowego (ZP)
+       - Zlecenia produkcyjnego
+
+Powyższe funkcje mają za zadanie wyliczenie ilości do zamówienia oraz do wygenerowania zamówienia.
+
+##	Wyliczenie zamówienia – analiza obrotów
+
+Metoda analizy obrotów służy do wyliczenia ilości towarów analizując zużycie towaru na przestrzenie okresu. Zużycie może to być pobranie materiałów do produkcji lub sprzedaż towarów. 
+ 
+![tmp452bae24-39ac-40cb-a761-cd5cbff2635a](https://www.cfi.pl/vendohelp/content/imgs/X3/83937fd16cb761ecbb7a92e7a0c15e51-79144-0.png)
+
+Parametry jakie wybieramy do wyliczeń to 
+-	Okres - za jaki okres mają być pobrane dane zużycia
+-	Uwzględnić wzrost zapotrzebowania na towar
+-	Dostawa – na jaki dzień planujemy dostawę 
+-	Zapotrzebowanie na – na ile dni ma nam starczyć towar patrząc historycznie, ile zużyliśmy
+-	Uwzględnij dokumenty RW – czy dokumenty RW mają zostać wzięte do analizy
+-	Nie uwzględniaj dokumentów MM – przesunięcia magazynowe mają być nie brane do analizy
+-	Uwzględnij dokumenty IS – maja być wzięte do analizy dokumenty Innej sprzedaży
+-	Uwzględnij stan min – czy ma być brany stan minimalny do analizy
+-	Mają być brane pod uwagę zapotrzebowania i oczekiwania
+-	Uwzględni tylko zapotrzebowanie do daty – do jakiego dnia mają być brane zapotrzebowania pod uwagę 
+-	Uwzględnij czas dostawy z karty towaru - czy czas dostawy ma być brany z karty towaru
+-	Uwzględnij daty dostawy przy wyliczeniu zamówienia
+-	Uwzględnij ilość minimalną – ma być brana pod uwagę ilość minimalną do zamówienia z karty towaru
+-	Uwzględnij krotność zamówienia – ma być brana pod uwagę krotność zamówienia
+-	Zapis na kartę towaru wyliczony MWO – czy ma zostać zaktualizowany wskaźnik MWO na karcie towaru po wykonaniu wyliczeń
+Po skonfigurowaniu metody wyliczeń klikamy klawisz OK. Nastąpi wyliczenie ilości Zamówienie na liście oraz zaznaczy tylko te kartoteki dla których zostanie wyliczona ilość.
+
+##	 Metoda Uzupełniania Stanów
+Metoda uzupełniania stanów ma za zadanie wyliczenie takiej ilości towaru do zamówienia, aby uzupełnić stany w zakresie Stanów min-max.
+ 
+![tmp8305b53a-960b-42f3-a8b9-6eaee9f8fad0](https://www.cfi.pl/vendohelp/content/imgs/X9/b03d0503bbcf80da720b0ba923dd9f8a-133413-0.png)
+
+Parametry do konfiguracji wyliczenia zamówienia: 
+-	Dopełnij zamówienia pod stan – do jakiej maksymalnej ilości ma wyliczyć zamówienie pod stan minimalny, maksymalny czy brak
+-	Powyżej stanu – zakres procentowy powyżej stanu
+-	Uwzględnić zapotrzebowanie – czy mają być ujęte zapotrzebowanie do wyliczeń
+-	Uwzględnić zapotrzebowanie do daty – do jakiej daty mają zostać ujęte zapotrzebowania
+-	Uwzględnić czas dostawy z kart towaru
+-	Uwzględnić oczekiwania z innych magazynów – można wybrać konkretny magazyn
+-	Uwzględnić zapotrzebowanie na innych magazynach – można wybrać konkretny magazyn
+-	Uwzględnić towar w drodze na ten magazyn – czy mają zostać ujęte oczekiwania (towar w drodze) na magazyn, który chcemy uzupełnić
+-	Uwzględnić ilość minimalną – czy ma być uwzględniona ilość minimalna do zamówienia z kartoteki towarowej
+-	Uwzględnić krotność zamówienia -  czy ma być uwzględniona krotność ilości zamawianej pobranej z kartoteki towarowej
+
+
+Po skonfigurowaniu metody wyliczeń klikamy klawisz OK. Nastąpi wyliczenie ilości Zamówienie na liście oraz zaznaczy tylko te kartoteki dla których zostanie wyliczona ilość.
+
+
+
+
+#	 Metoda wyliczenia pod Plan Sprzedaży
+Metoda ta wylicza ilość do zamówienia na podstawie utworzonego wcześniej Planu Sprzedaży
+ 
+![tmp9be04fd4-703d-478f-9847-3a4076803648](https://www.cfi.pl/vendohelp/content/imgs/C8/59bac4548ebbf9526e0740642c1e0ade-31175-0.png)
+
+Parametry to:
+-	Plan sprzedaży – wybieramy konkretny Plan Sprzedaży (PS) dla którego będzie wyliczana ilość do zamówienia
+-	Zapotrzebowanie na – podajemy ilość dni do wyliczeń, które mają zostać ujęte podczas pobierania z Planu Sprzedaży 
+-	Uwzględnij stan minimalny – czy ma być ujęty stan minimalny podczas wyliczeń zapotrzebowania
+Po naciśnięciu OK zostanie wyliczona i uzupełniona ilość zapotrzebowania oraz zaznaczone kartoteki których to dotyczy
+
+##	Zmiana normatywu i lub MWO
+Funkcja ta służy do wyliczeń wskaźnika MWO (Miesięczny Wskaźnik Obrotu) oraz do wyliczenia i ustawienia parametrów Charakterystyki Magazynowej karty towaru. 
+
+![tmp4dd1f357-7bcf-4391-9557-3a1e6b2de4d6](https://www.cfi.pl/vendohelp/content/imgs/M2/806f66bebaea61a630c9048f8d02942b-80809-0.png)
+
+Parametry dzielą się na trzy segmenty – MWO, przeliczenie normatywu, Wyliczenie normatywu
+Przelicz MWO:
+-	Okres – wybieramy za jaki okres ma zostać wyliczony wskaźnik 
+-	Magazyn – jeśli wskaźnik ma zostać wyliczony tylko dla konkretnego magazynu wybieramy go tutaj
+-	Uwzględnij RW – czy mają zostać ujęte dokumenty RW
+-	Bez MM – czy mają zostać pominięte dokumenty przesunięć między magazynowych MM
+-	Uwzględnij Inna sprz. – czy mają zostać ujęte dokumenty IS
+
+
+Przelicz normatyw:
+-	Ogólne – czy mają zostać przeliczone normatywy ogólnie dla wszystkich towarów
+-	Magazyn – czy mają zostać przeliczone normatywy dla towarów z zdefiniowanym magazynem
+Wyliczenie normatywu:
+-	Skrypt – wybierany jest tutaj skrypt, wg którego będą wyliczane normatywy na kartotekach towarowych – Funkcja zlecana po wcześniejszej konsultacji z pracownikami Vendo
+-	Wprowadzenie parametrów ręczne – włączenie tego parametru umożliwia ustawienie ręczne danych w charakterystyce magazynu na towarze – należy pamiętać, że ustawienie to nadpisze wcześniejsze dane – można wybrać konkretne normatywy i ilości
+         
+    - Stan min 
+    - Stan max
+    - Krotność zamówienia 
+    - Min. Wielkość zamówienia
+    - Dostawa (dni)
+    - Jest powyżej
+-	Wg długości zapasu – parametr ten załącza funkcję, która będzie określać ilość dla normatywu na podstawie obrotów MWO i na ile dni chcemy mieć zapas towarów 
+        
+       - Stan min wg długości zapasu (dni)
+           - Uwzględnić czas dostawy 
+    - Stan max wg długości zapasu (dni)
+        - Uwzględnić czas dostawy
+
+Korzystając z tej funkcjonalności trzeba mieć na uwadze zmiany dotyczą tylko listy Generowanie zamówień i nie mają wpływu na ustawienia na kartotece towarowej.
+##	Wybór dostawcy 
+Funkcjonalność ta służy do ustawienia dostawcę na liście Generowania Zamówień według parametrów.
+
+![tmp981e04dd-1934-48a5-bec6-b6ba7a4c63db](https://www.cfi.pl/vendohelp/content/imgs/P5/d5469b71ead69ff92c42798175702312-87620-0.png)
+ 
+Kryterium wyboru dostawcy to:
+-	Dostawca wg karty towaru
+-	Dostawca, od którego było najtaniej w podanym okresie
+-	Dostawca, od którego było najwięcej w podanym okresie
+-	Według najlepszej oferty na podstawie zatwierdzonych zapytań (ZP)
+-	Według najlepszej oferty na podstawie zatwierdzonych ofert (OD)
+-	Dostawca alternatywny ( grupa dostawców alternatywnych)
+-	Wskazany dostawca
+-	Okres dla jakiego mają zostać wyszukani dostawcy wg dokumentów
+-	W przypadku nieznalezienia nowego pozostaw istniejący
+Wciskając przycisk OK zostaną ustawieni dostawcy na liście.
+
+
+
+##	 Generowanie zamówienia do dostawców
+Funkcja ta wygeneruje dokument zamówienia na podstawie danych na liście w kolumnach Zamówienie i Dostawca dla zaznaczonych kartotek towarowych. Dlatego wcześniejszymi krokami powinno być wyliczenie zamówienia lub wprowadzenie ręcznie ilości.
+
+![tmp035a2173-1b81-4b54-9b20-990c25b6f767](https://www.cfi.pl/vendohelp/content/imgs/G8/9638359244fd68223cd2dff7230fe0ef-116560-0.png)
+
+Po uruchomieniu tej funkcji nastąpi agregacja towarów po ustawionych dostawcach na liście. Na powyższym oknie widzimy po lewej stronie dostawców, dla których tworzone będą zamówienia. W górnej części okna podane są parametry dokumentów zamówienia ZW takie jak:
+-	Dla – dostawca wybór listy zawsze można zmienić
+-	Seria- seria dokumentu
+-	Magazyn 
+-	Rok
+-	Do zlecenia – możliwość przypisania zlecenia
+-	Waluta
+-	Kraj – dokument krajowy, importowy wewnątrzunijny itp.
+
+W dolnej części mamy podany proponowany numer oraz wartość wyliczona na podstawie cen domyślnych zakupu
+Środkowa lista to lista towarów które zostaną przeniesione na zamówienie wraz z ilościami i cenami. Dodatkowo można dodać dodatkowe kolumny takie jak stan, zapotrzebowanie, oczekiwania itp. 
+Po wciśnięciu klawisza Generuj nastąpi utworzenie dokumentu ZW w stanie Bufora. Dokument zostanie otwarty i można tutaj go Zamknąć ( co zmieni Oczekiwania ) lub pozostawić w buforze do dalszej analizy lub procesowania.
+
+Po zamknięciu okna dokumentu lista dostawców zmniejszy się o ten dla którego zostało wygenerowane zamówienie. Można tutaj kontynuować generowanie kolejnych zamówień lub zaprzestać dalszych czynności.
+
+
+##	 Generowanie zamówienia do jednego dostawcy
+
+Funkcja ta działa na takiej samej zasadzie jak „Generowanie zamówień do dostawców”  z małym wyjątkiem że tutaj będziemy wybierać już dostawcę jednego dla wszystkich zamawianych towarów. 
+
+![tmp337edbea-339a-4976-901f-657fba07fc33](https://www.cfi.pl/vendohelp/content/imgs/A0/89582b221a36cf051a51582362891b4c-69002-0.png)
+ 
+Tutaj dostawcę możemy wybrać już ustawiając w polu Dla lub na wygenerowanym dokumencie ZW
+ 
+
+#	 Generowanie zapytania ofertowego ZP
+
+Generowanie zapytania ofertowego jest tożsame jak generowanie dla Zamówienie do dostawcy z tym że generujemy dokument Zapytania Ofertowego ZP
+ 
+#	 Generowanie zlecenia Produkcyjnego
+
+Generator ten służy do utworzenia Zlecenia produkcyjnego dla zaznaczonych towarów na liście.
+ 
+
+Wybierając wcześniej odpowiednią grupę wyrobów i wyliczając ilość Zamówienia możliwe jest utworzenie Zlecenia produkcyjnego. Na podstawie Zlecenia utworzymy KKW i powstaną zapotrzebowania, na materiały które mogą zostać ujęte przy generowaniu Zamówień do dostawców (w skrócie mówiąc). 
+
+Powyższe metody pozwalają w znacznym stopniu zaradzać łańcuchem dostaw i tworzyć dokumenty Zamówień do Dostawców ZW
+
+

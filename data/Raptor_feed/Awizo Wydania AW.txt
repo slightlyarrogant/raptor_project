@@ -1,0 +1,110 @@
+## Awizo Wydania
+## Informacje ogólne
+Dokument Awizo Wydania jest zleceniem skompletowani towarów realizujące Zamówienie Obce.  należy do dokumentów sprzedażowych i jest dokumentem  świadczącym o przygotowaniu towarów do wysyłki do  Klienta. AW jest dokumentem komunikacji pomiędzy Sprzedawcą/Handlowcem a magazynierem, można nazwać ten dokument zleceniem kompletacji wysyłki. 
+
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |AW
+|Wpływ na stan magazynowy |Możliwe rezerwacje na dokumencie w buforze oraz zamkniętym, sam dokument wpływa tylko na backordery
+|Rodzaj dokumentu | Magazynowy - wydanie
+|Czy wchodzi do płatności| Nie
+|Rodzaje: Kraj, Export, EU
+|Nazwa dla daty D1|DataRealizacji
+|Nazwa dla daty D2|DataPrzyjecia
+|Nazwa dla klienta K1 |"Zamawiający" 
+|Nazwa dla klienta K2 |"Odbiorca"
+|Czy dokument ma rozrachunki | Nie
+|Czy dokument może mieć podpięte płatności (nie przez rozrachunki) | Może, kwestia ustawień
+|Czy dokument przenosimy do rej. Vat | Nie
+|Czy dokument Ksiegujemy | Nie
+|Czy wchodzi do Analiz Sprzedaży| Nie
+|Czy wchodzi do Analiz Zakupu| Nie
+|Pozwolenie na ceny zerowe | Tak
+|Pozwolenie na zerowe ilości na pozycji |Nie
+|Liczenie brutto | Tak
+|Wielowalutowy, |Tak
+|Czy dokument może być eksportowy |Tak
+|Czy dokument może mieć rezerwacje| Tak, kwestia ustawień oraz oznaczenia pozycji na dokumencie
+|Czy dokument ma backordery|Tak - oczekiwane, zawsze na zamknięciu, na otwarciu zgodnie z ustawieniami
+
+
+## Opis dokumnetu
+Główne pola znajdujące sie na dialogu dokumentu PW to:
+
+|Nazwa Pola | Definicja |
+|
+|	Numer
+|	D. realizacji | data na kiedy ma nastąpić sprzedaż odbiorcy
+|	U klienta | data na kiedy ma być dostarczony zamówiony towar u klienta
+|	Zamawiający | klient który będzie płatnikiem na fakturze
+|	Odbiorca | klient który jest powiązany z Nabywcą, adres dostawy
+|	Forma płatności 
+|	Płatność | kiedy ma nastąpić płatność za zamówiony towar, obok ilość dni płatności 
+|	Wartość netto, brutto, VAT
+|	VAT (od netto) – zmień metodę | możliwość zmiany metody płatności liczenia wartości VAT, od netto lub od brutto
+|	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki, Zadłużenie klienta
+|	Grupa I | Oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Q6/4472e5b09a5a60ae39212e35b9319215-46867-0.png)
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Nabywcy i Odbiorcy. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T9/bc97eb2994eb10f0a594ad25b5bc16de-35935-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Forma dostawy
+-	Spedycja – wybór typu spedytora i rodzaju wysyłki
+-	Oznaczenie jakiego typu będzie wysyłka : Zwykły, pólpaletowy, paletowy, gabarytowy
+-	Numer obcy – numer zamówienia klienta
+-	Realizacja przez – rodzaj dokumentów jaki będzie realizował zamówienie
+-	Nr zamówienia
+-	Dostawy
+-	Warunki – pole tekstowe umożliwiające dopisanie dodatkowych warunków realizacji zamówienia
+-	Kontakt i @ - osoba kontaktowa ze strony klienta
+-	Handlowiec lub Mechandiser to pola w których umieszczane są dane pracownika odpowiedzialnego za Dokument Faktury, wg tych pól naliczana może być premia dla pracownika.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/N3/ba336645c7b326fa01c8d5398b33ba34-31891-0.png)
+ 
+W zakładka Opis i uwagi wprowadzane są Długi Opis dokumentu oraz Uwagi które mogą być drukowane na wydruku dokumentu Awizo Wydania
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A0/fd9db5c2d1950363ff0349b4f592cf4c-32186-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/W6/b309eb5c201ad98b58d52d0d4fa429e6-86231-0.png)
+ 
+Każdy dokument posiada pozycje.
+ 
+ Pozycje dla Awizo Wydania zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Grupa Cen – grupa cen sprzedaży przypisana do Nabywcy
+-	Cena0 : - Cena sprzedaży przed obniżkami cen sprzedaży
+-	Ilość – ilość sprzedawanych  kartotek towarowych w podstawowej jednostce 
+-	Raba – wyliczony, wprowadzony lub przeniesiony kartoteki klienta. Wyliczony może być na podstawie danych z kartoteki Klienta, Nabywcy
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie, wybranym na Fakturze, oraz ilość zarezerwowana na innych dokumentach. 
+-	Magazyn – nazwa magazynu z którego Faktura zrobi rezerwację 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Data realizacji – data realizacji pozycji może być inna niż data realizacji całego zamówienia
+-	Data u klienta – data kiedy ma być zamówienie zrealizowane u klienta
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji faktur sprzedaży.
+-	Rezerwacja  - zamknięty dokument robi rezerwacje towaru
+
+## Funkcje dedykowane dla tego dokumentu
+### Z pozycji karty dokumentu
+Anulowanie niezrealizowanych pozycji
+Generowanie FV, WZ
+
+### Z pozycji karty pozycji dokumentu (Formalarza ceny i ilości)
+
+### Funkcje specjalne dla dokumentu zamkniętego
+ctrl+I
+
+
+## Pozostałe dostępne funkcje
+Zgodnie z dokumentem link do funkcji wspolnych

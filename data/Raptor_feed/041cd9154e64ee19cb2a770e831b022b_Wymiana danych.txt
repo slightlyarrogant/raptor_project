@@ -1,0 +1,970 @@
+Wymiana danych
+Metadata
+
+url: http://192.168.33.19/master/docs/public/wymiana-danych
+scraped_at: 2024-09-05T12:11:13.090298
+last_updated: 2024-09-05T12:11:13.090580
+parent_id: 8a86a2929af1455b2af1dbac5e03d923
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Pofile/Wymiana danych
+meta_tags: ['import', 'importu', 'pliku', 'danych', 'oraz', 'wybieramy', 'jest', 'zgodnie', 'tekstowego', 'dane']
+
+Content
+Wymiana danych
+System Vendo ma możliwość wymiany danych pomiędzy systemami. Dane można eksportować i importować. Eksporty i importy danych mogą być w popularnym formacie CSV, XLS lub XML. Wymiana danych znajduje się w części konfiguracyjnej Vendo. Zakres eksportu danych dotyczy zakresu :
+
+Konfiguracja
+Kontrahenci
+Płatności
+Rejestr VAT
+
+
+Import danych do Vendo zawiera swoim zakresem prawie cały obszar Vendo :
+
+Konfiguracja
+Receptury
+Urządzenia / Obiekty
+Programy zewnętrzne
+Dane zleceń
+Pracownicy
+Produkty
+Normatywy towarów
+Charakterystyki klienta dla towaru
+Pełny cennik
+Przynależności do katalogu
+Tabela bazy danych
+Wartości dowolne
+Części zamienne
+Stany magazynowe
+Rozrachunki
+Jednostki alternatywne
+Ludzie klienta
+Kolornik
+Cenny indywidualne
+Plan kont
+Środki Trwałe
+Dane listów przewozowych
+Kontrahenci
+Zamienniki
+Cennik
+Miejsca magazynowe
+Struktury Konstrukcyjne
+Stany u kontrahentów
+
+
+Eksport
+Eksport konfiguracji
+Eksport konfiguracji służy do weksportowania danych konfiguracyjnych Vendo. DO danych zaliczamy Użytkowników, Grupy, Grupy – relacje, Grupy – Pracownicy, Uprawnienia, Hashtagi, Zwroty grzecznościowe, Formy płatności.
+
+Po lewej stronie mamy listę możliwych eksportów. Po prawej stronie w górnym oknie mamy listę danych które możemy weksportować. W dolnym oknie po prawej stronie, mamy listę kolumn które wyeksportujemy. Możliwe jest zaznaczenie wybranych czy to form płatności lub kolumn z tymi danymi związanych. W przedstawionym zrzucie mamy wyświetloną listę form płatności. Możliwe jest zaznaczenie wszystki danyc eksportowych. Po lewej stronie na dole okna jest przycisk Funkcje i tam należy wybrać Zaznacz wszystko CTRL+A. Po naciśnięciu przycisku eksport wybieramy nazwę pliku oraz katalog w którym zapisany zostanie plik.
+
+Dane zapisane są w formacie Json. Dane takie można zaimportować do innej bazy danych Vendo w Importach Import konfiguracji.
+
+Eksport Kontrahentów
+Do wyeksportowania listę kontrahentów służy Eksport Kontrahentów. W oknie dialogowym mamy do wyboru wybranie ścieżki gdzie ma być zapisany plik eksportowy oraz jaki symbol ma być separatorem pomiędzy danymi.
+
+Dane wyeksportowane można podejrzeć w edytorze plików tekstowych
+
+lub otworzyć w Excelu.
+
+Dane takie można wedytować i ponownie zaimportować do systemu Vendo, innej bazy danych.
+Eksport Płatności
+Eksport płatności służy do eksportowania wpłat i wypłat zarejestrowanych w systemie Vendo. Rejestrując płatności w systemie Vendo mamy uaktualnione rozrachunki z kontrahentami i możemy je eksportować do zewnętrznego systemu księgowego.
+
+Aby wyeksportować płatności musimy wykonać pewną konfigurację:
+
+Okres – datę początkową i końcową zakresu danych płatności
+Filtry - Kasa / Bank – wybieramy rejestr płatności, kasę, konto banków itp.
+Inne – Pomijaj płatności jako zaksięgowane – płatności które są zaksięgowane nie zostaną ujęte w eksporcie, oraz oznacz jako zaksięgowane – płatności które zostaną wyeksportowane zmienią status na zaksięgowane; przy zaznaczeniu tych dwóch opcji zostaną wyeksportowane tylko nowe płatności.
+Ustawienia – jak nazwany zostanie kasa, opcja użyj nazw kas w Vendo, pomiń dowody do dokumentów gotówkowych
+Ścieżki do plików – lokalne – ścieżka na lokalnym komputerze oraz nazwa pliku który zostanie wyeksportowany, lub na serwerze – podajemy nazwę serwera – hosta
+Należy pamiętać o tym że eksportowane są płatności tylko zamknięte, nie mają statusu W buforze.
+
+Plik eksportowany jest do formatu tekstowego, rozdzielanego przecinkami. Plik ten można zaimportować do formularzu excelowego i tam zaprezentować w formie arkusza kalkulacyjnego.
+
+Eksport Rejestr VAT
+Funkcjonalność ta służy do wyeksportowania danych z zakresu dokumentów sprzedaży i kosztowych wymaganych do zaimportowania tych danych do zewnętrznego systemu księgowego.
+
+Zakres danych eksportowanych do pliku zależy od ustawień filtrów:
+
+Okres – data początkowa i końcowa – zakres dat określający zakres danych eksportowanych
+Filtr Daty – wg daty1, wg daty2 – czy wybrany zakres dat obejmuje datę 1 lub 2 występująca na dokumencie
+Inne – Pomijaj płatności jako zaksięgowane – płatności które są zaksięgowane nie zostaną ujęte w eksporcie, oraz oznacz jako zaksięgowane – płatności które zostaną wyeksportowane zmienią status na zaksięgowane; przy zaznaczeniu tych dwóch opcji zostaną wyeksportowane tylko nowe płatności, dodatkowo do wyboru są wartości które mają być eksportowane netto, brutto czy wszystkie
+Rodzaje dokumentów – który rodzaj dokumentów handlowych i kosztowych ma być eksportowany : Faktura VAT, Paragony, Faktury Eksportowe, Przyjęcia (PZ), Koszty, Korekty, Faktury Zaliczkowe, korekty przyjęć.
+Filtry – filtrowane dokumenty po Serii Rejestrze, Koncie syntetycznym sprzedaży lub zakupu, dodatkowo można ustawić nazwę rejestru jako seria dokumentu.
+Ścieżki do plików – lokalne – ścieżka na lokalnym komputerze oraz nazwa pliku który zostanie wyeksportowany, lub na serwerze – podajemy nazwę serwera – hosta Należy pamiętać, że dokumenty w buforze nie będą eksportowane. Dane eksportowane są do formatu tekstowego, gdzie dane rozdzielane są przecinkiem i dane tekstowe zawarte są w podwójnym cudzysłowiu.
+
+
+Eksport kartotek
+Eksport ten służy do wyeksportowania kartotek towarowych w odpowiednim formacie.
+
+Do wyboru mamy trzy formaty CFI-CSF z możliwością wyboru rozdzielnika, z nazwami kolumn w pierwszym wierszu
+
+CFI-XML – dane w formcie xml
+
+Procad-XML – format xmlz inną złożoną strukturą danych
+
+Można zawęzić zakres danych po dacie modyfikacji kartoteki towarowej, eksportowane są wszystkie dane zmodyfikowane po tej dacie.
+Import
+Import służy dane przygotować w arkuszu o importowania danych lub konfiguracji zgodnie z ustalonym schematem. W przypadku danych konfiguracyjnych muszą być zgodne z formatem json. W przypadku reszty danych do importu można przygotować w formacie excela. W arkuszu kalkulacyjnym z góry ustalonym szablonie można przygotować szybko dane i zaimportować je do Vendo. Ułatwia to przenoszenie danych pomiędzy systemami lub uzupełnić brakujące dane będące w Vendo.
+Import Konfiguracji
+Konfigurację importujemy z góry ustalonym schemacie w formacie json. Aby zaimportować wystarczy wskazać plik z konfiguracją. Po wskazaniu pliku danymi do importu otworzy się okno dialogowe gdzie wybieramy zakres danych do importu.
+
+Po lewej stronie zaznaczamy który zakres danych konfiguracyjnych chcemy zaimportować a po prawej stronie zaznaczamy danych które chcemy zaimportować. W dolnej części okna pod przyciskiem Funkcje występuje funkcja Zaznacz Wszystko. Po wybraniu danych do importu wciskamy przycisk Import , następnie rozpocznie się import. Po zakończeniu importu pojawi się komunikat o pomyślny zaimportowaniu danych.
+
+Import receptur
+Import receptur odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Receptur pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu receptur.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+AKTYWNA – Określa czy dana receptura ma być oznaczona jako aktywna. Domyślnie ”TAK”
+DOMYSLNA – Określa czy dana receptura ma być oznaczona jako domyślna. Domyślnie ”NIE”
+TESTOWA – Określa czy dana receptura ma być oznaczona jako testowa. Domyślnie ”NIE”
+NAZWARECEPTURA – Nazwa receptury [dowolny tekst] – pole Obowiązkowe
+WYROBKOD - Kod wyroby [pole KOD z kartoteki towarowej] – pole Obowiązkowe
+WYROBILOSC - Ilość wyroby z receptury [liczba]
+WSPOLCZYNNIKKOSZT - Współczynnik zwiększający wartość wyrobu gotowego o podaną wartość w odniesieniu do kosztów [liczba] Domyślnie ”0”
+WSPOLCZYNNIKZANIK - Współczynnik, o który ma być zmniejszona ilość wyrobu gotowego [liczba]. Domyślnie ”0”
+WSPOLCZYNNIKOGOLNY - Współczynnik zwiększający wartość wyrobu gotowego o podaną wartość [liczba] Domyślnie ”0”
+MATERIALKOD - Kod materiału [pole KOD z kartoteki towarowej] – pole Obowiązkowe
+MATERIALILOSCNTO - Ilość NETTO materiału na wyrób gotowy [liczba] – pole Obowiązkowe
+MATERIALBRAKI - Procentowy narzut na MATERIALILOSCNETTO, “zanik” materiału [liczba]
+MATERIALMAGAZYN - Magazyn, z którego rozchodowane są materiały [pole KOD z karty magazynu] Przykładowo uzupełniony szablon excelowy :
+
+
+Rzut ekranu z receptury po zaimportowaniu przykładowych danych
+
+Import obiektów / Urządzeń
+Import Obiektów / Urządzeń odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowym
+Po wybraniu funkcjonalności Import Urządzeń / Obiekty pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu receptur.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import wartości dowolnych – importowane są wartości dowolne przypisane do tego obiektu
+Łączenie obiektów z dokumentów przyjęcia według numeru seryjnego – powiązanie dokumentu kosztowego z obiektem
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+KODMODELU – kod modelu obiektu
+KODKLIENTA – kod klienta
+NAZWAOBIEKT - Nazwa obiektu
+KODOBIEKT - Kod obiektu
+LOKALIZACJA
+NUMERSERYJNY - Numer seryjny
+CECHA1 - Cechy obiektu
+CECHA2
+CECHA3
+DATAOD - Serwisowanie od...
+DATADO - Serwisowanie do ...
+GWARANCJAOD - Gwarancja od ...
+GWARACJADO - Gwarancja do ...
+OPIS - Opis obiektu
+JEDNPRZEBIEGU - skrot jednostki przebiegu
+WART_DOW:NAZWAZMIENEJ - Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po :
+ELEM:TOWAR:KODELEMENTU - Ustawienie towaru w elemencie obiektu. Rodzej elementu znajdywany wg kodu elementu
+ELEM:OBIEKT:KODELEMENTU - Ustawienie obiektu w elemencie obiektu
+ELEM:NUMER:KODELEMENTU - Ustawienie numeru w elemencie obiektu
+ELEM:ILOSC:KODELEMENTU - Ustawienie ilości w elemencie obiektu
+ELEM:CECHA1:KODELEMENTU - Ustawienie cechy1 w elemencie obiektu
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+Import dane Zleceń
+Import Zleceń odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego. Po wybraniu funkcjonalności Import Dane Zleceń pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Zleceń.
+ Parametry W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+ID - ID Zlecenia
+WART_DOW:NAZWAZMIENEJ Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po :Przykładowo uzupełniony szablon excelowy : Przykładowy wypełniony excel poniżej. W pierwszym wierszu nazwa WART_DOW a po dwukropku nazwa wartości dowolnej.
+
+
+Rzut ekranu z Wartości dowolnej na Zleceniu po zaimportowaniu przykładowych danych (zaznaczone w czerwonej ramce).
+
+Import Pracowników
+Import Pracowników odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Pracowników pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Pracowników. Możliwe jest także aktualizowanie danych pracowników poprzez import do wyboru jest opcja Gdy karta istnieje wybieramy Pomiń lub Aktualizuj.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import wartości dowolnych – w szablonie importowane są wartości dowolne
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+LOGIN – login pracownika do systemu Vendo
+HASLO – hasło pracownika do systemu Vendo
+IMIE
+NAZWISKO
+ADRES Ulica
+KODPOCZTOWY
+MIEJSCOWOSC
+TELEFONKOM
+TELEFONDOM
+EMAIL
+CZYAKTYWNY (1/0)
+STANOWISKO - Nazwa stanowiska (KOD)
+DZIAL - Nazwa działu (KOD)
+UPRAWNIENIATPL - Login pracownika od którego zostaną skopiowane ustawienia (KOD pracownika)
+GRUPATOWAROWA - Domyślna grupa towarów (KOD)
+APTYPE - System zewnętrzny wystawianych dokumentów (KOD)
+AGENT - Tylko klienci agenta (KOD)
+DEFKLIENT - Klient powiązany (KOD)
+PROCENTHAN - Procent premi od obrotów ([0, 1])
+KOSZTNAH - Koszt RBH
+LIMITMOBILNY - Limit mobilny
+CANNOTLOGIN - Czy pracownik posiada uprawnienia do logowania (1/0).
+KOPIABAZY - Czy wykonać kopie bazy danych po wylogowaniu (1/0). Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Rzut ekranu z kartoteki Pracownika po zaimportowaniu przykładowych danych
+
+Import Produktów
+Import Kartotek Towarowych odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Kartotek Towarowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Kartotek. Możliwe jest także aktualizowanie danych kartotek lub cenników poprzez import do wyboru jest opcja Gdy karta istnieje wybieramy Pomiń, Aktualizuj, Aktualizuj tylko ceny, tylko Aktualizacja
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane. Dodatkowo mamy do wyboru dwa formaty XML : CFI-XML lub PROCAD-XML
+
+Dodatkowe parametry importu to :
+
+Import wartości dowolnych – w szablonie importowane są wartości dowolne
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KOD Kod towaru
+NAZWA Nazwa towaru
+TYP T – Towar U – Usługa O – Koszt C – T. Kaucjonowany Z – Zestaw (komplet) B – Bilet N – Czynność
+STVAT ZW – Zwolniony (0%) NP – Nie podlega (0%)
+JM Jednostka – skrót
+EAN Kod kreskowy
+KODNADINDEKSU Kod nadindeksu do którego bieżący towar ma być podindeksem
+SCHEMATNADINDEKSU Schemat kodów podindeksów dla nadindeksów (tylko przy dodawaniu towarów)
+SUFIKS Sufix podindeksu, jeśli podany musi być podana wartość w kolumnie KODNADINDEKSU Gdy podany kolumna KOD jest nieobowiązkowa
+PKWIU
+CENAI Cena (grupa I)
+CENAII Cena (grupa II)
+CENAIII Cena (grupa III)
+CENAD Cena detaliczna
+CENAB Cena bazowa
+CENAOST
+CENAOSTNAB
+CENA:NIESTANDARDOWA Cena (grupa: niestandardowa) Kolumna p.t. “Cena:nazwa_grupy” – importuje cen? towaru dla grupy cen “nazwa_grupy”
+WALUTAI
+WALUTAII
+WALUTAIII
+WALUTAD
+WALUTAB
+WALUTAOST
+WALUTAOSTNAB
+WALUTA:NIESTANDARDOWA
+GRUPACENDEFAULT Domyślna grupa cen [nazwa]
+GRUPAI Grupy towarów [nazwa]
+GRUPAI_SCIEZKA Ścieżka dla grupy towarów I (musi być podana grupaI lub ściezka, pole grupaI ma pierwszenstwo), separatorem w ścieżce musi być znak :/:
+GRUPAII Grupy II towarów [nazwa]
+GRUPAII_SCIEZKA Ścieżka dla grupyII towarów (musi być podana grupaII lub ścieka, pole grupaII ma pierwszenstwo), separatorem w ścieżce musi być znak :/:
+KHKONTOI
+KHKONTOII
+PCN
+WAGA Waga [kg]
+OBJETOSC Objętość [m3]
+DLUGOSC Długość [mm]
+SZEROKOSC Szerokość [mm]
+WYSOKOSC Wysokość [mm]
+AKTYWNY Czy aktywny (0/1)
+CECHA1 Cechy towaru
+CECHA2
+CECHA3
+CECHA4
+CECHA5
+CECHA6
+STANMIN Stan min.
+STANMAX Stan max.
+KROTNOSC Krotność zamówienia
+MINWIELZAM Minimalna wielkość zamowienia
+ABCD Chodliwość towaru A, B, C lub D
+OPIS
+OPISHTML
+STRONAWWW Adres WWW towaru
+NAZWAUDOST Nazwa u dostawcy
+KODUDOST Kod u dostawcy
+PRZELICZNIKOPAKOWAN
+JMOPAKOWANIA Jednostka Opakowania 1 – skrót
+DOSTAWCA Kod dostawcy
+PRODUCENT Kod producenta
+RBH
+CLO Cło [%]
+WAZNYDNI Ważność [ilość dni]
+JMOPAKOWANIA2 Jednostka Opakowania 2 – skrót
+PRZELICZNIKOPAKOWAN2
+WAGAOPAKOWANIA
+WAGAOPAKOWANIA2
+AKCYZA Akcyza [%]
+OBJETOSCOPAKOWANIA [m3]
+OBJETOSCOPAKOWANIA2 [m3]
+LIMITJEST
+KRAJPOCHODZENIA Kraj pochodzenia
+GRUPAWWW Nazwa grupy WWW
+GRUPAWWW_SCIEZKA Ścieżka dla grupy WWW towarów (pole grupa WWW ma pierwszenstwo), separatorem w ścieżce musi być znak :/:
+WART_DOW:NAZWAZMIENEJ Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po :
+WART_DOW:NAZWAZMIENNEJ:NAZWAZMIENNEJJEZYKA Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po ":", w języku o kodzie takim jak podany po drugim ":" (o ile wartość dowolna jest typu nazwa w języku)
+XYZ Chodliwość 2 towaru X,Y,Z
+RODZAJ_OPAKOWANIA Z - Zwykly P - Paletowy G - Gabarytowy
+CZASDOSTAWY Ilość dni oczekiwania na realizacje zamówienia - wykorzystywane w logistyce magazynowej
+WAGAOPAKOWANIAPOD Opakowanie podstawowe (tara) - w kilogramach
+WYLACZNYMAGAZYN Zasady blokowania - wyłączny magazyn (kod)
+WYLACZNYMAGAZYNPRODUKCYJNY Zasady blokowania - wyłączny magazyn produkcyjny (kod)
+WYLACZNAFIRMA Zasady blokowania - wyłączna firma (centrala) (nazwa skrócona)
+WYLACZNYKLIENT Zasady blokowania - wyłączny klient (kod)
+WYLACZNAGRUPAKLIENTA Zasady blokowania - wyłączna grupa klienta
+GRUPAIII W - wyrob, S - surowiec, P -polprodukt, T - handlowy
+NDOD:KOD:NAZWAZMIENNEJJEZYKA Kod w nazwach dodatkowych dla podanego via NAZWAZMIENNEJJEZYKA jezyka
+NDOD:NAZWA:NAZWAZMIENNEJJEZYKA Nazwa w nazwach dodatkowych dla podanego języka
+NDOD:OPIS:NAZWAZMIENNEJJEZYKA Opis w nazwach dodatkowych dla podanego języka
+NDOD:OPISHTML:NAZWAZMIENNEJJEZYKA Opis HTML w nazwach dodatkowych dla podanego języka
+NDOD:STRONAWWW:NAZWAZMIENNEJJEZYKA Adres WWW w nazwach dodatkowych dla podanego języka
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowana kartotek z powyższego przykładu ma wygląd taki jak poniżej:
+
+Import Normatywów
+Import Normatywów czyli ustawienie konfiguracja ilości minimalnej i maksymalnej dla kartoteki towarowej, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Normatywów pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Normatywu.
+
+Jako, że normatywy to charakterystyka magazynowa na kartotece towarowej to informacja o ilości minimalnej i maksymalnej przypisanej do wybranego magazynu.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KODTOWARU Kod towaru
+STANMIN Stan min.
+STANMAX Stan max.
+KROTNOSC Krotność zam.
+MINWIELZAM Minimalna wielkość zamówienia
+MIEJSCEMAG Miejsce magazynowe
+LIMITJEST Limit "jest"
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowana kartotek z powyższego przykładu ma wygląd taki jak poniżej:
+
+Import Charakterystyki Klienta dla Towaru
+Import Charakterystyki Klient dla Towaru czyli zdefiniowanie kodu, nazwy, EANu, jednosty alternatywnej kartoteki towarowej dla Klienta , odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Charakterystyki Klienta dla Towaru pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Charakterystyki.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane.
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+Gdy karta istnieje – Pomiń , Aktualizuj zaznaczamy wybrana opcję w zależności od potrzeby, jeśli chcemy zaktualizować istniejące kartoteki lub pomijamy jeśli istnieje już taki wpis.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KODTOWARU Kod towaru dla którego importujemy charakterystyke
+KONTRAHENTKOD Kod kontrahenta [pole KOD z kartoteki kontrahentów]
+NAZWAUKLIENTA Alternatywna nazwa towaru u klienta [tekst]
+KODUKLIENTA Alternatywny kod towaru u klienta [tekst]
+EAN Alternatywny kod EAN towaru u klienta [tekst]
+JEDNOSTKAALT Nazwa jednostki alt (np. kg). Puste pole oznacza jednostke domyslna
+AUTOMATYCZNA Określa czy dana jednostka ma być automatycznie używana przy wystawianu dokumentu. Domyślnie ”TAK”
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Import Pełny Cennik
+Import Pełny Cennik czyli zaimportowanie cen sprzedaży kartotek towarowych dla wybranego cennika , odbywa się poprzez import pliku w formacie excela zgodnie z szablonem, w formacie XML lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Charakterystyki Klienta dla Towaru pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Charakterystyki.
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane. Dodatkowo można wybrać format importu XML.
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KOD Kod towaru
+CENAI Cena (grupa I)
+CENAII Cena (grupa II)
+CENAIII Cena (grupa III)
+CENAD Cena detaliczna
+CENAB Cena bazowa
+CENAOST Cena ostatnia
+CENAOSTNAB cena ostatnia nabycia
+CENA:NIESTANDARDOWA Cena (grupa: niestandardowa) Kolumna p.t. “Cena:nazwa_grupy” – importuje cen? towaru dla grupy cen “nazwa_grupy”
+WALUTAI kod waluty dla CennikaI
+WALUTAII kod waluty dla CennikaII
+WALUTAIII kod waluty dla CennikaIII
+WALUTAD kod waluty dla Cennika detalicznego
+WALUTAB kod waluty dla Cennika bazowego
+WALUTAOST kod waluty dla Cennika Ostatnia
+WALUTAOSTNAB kod waluty dla Ostatniej ceny nabycia
+WALUTA:NIESTANDARDOWA
+GRUPACENDEFAULT Domyślna grupa cen [nazwa] Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Wartości dowolnych
+Import Wartości dowolnych przypisanych do Towarów, Klienta, Zdarzenia, Obiekty, Zlecenia, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Wartości Dowolnych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu Wartości Dowolnych. Z konfiguracji wybrać musimy
+
+Rodzaj wartości dowolnych
+Wartość dowolną – jej nazwę
+Mapowanie klucza – po jakim identyfikatorze dla danego rodzaju wartości dowolnej będą przypisywane
+
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KOD Kod odpowiedzialny za mapowanie klucza dla towarów będzie to kod towaru
+WARTOSC – nazwa wartości dowolnej
+WARTOSCEX Przy imporcie wartości dowolnych typu plik - nazwa pliku widziana w Vendo (opis pliku) Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Stanów magazynowych
+Import Stanów Magazynowych jest to import ilości na magazynie danej kartoteki towarowej z możliwością wskazania miejsca magazynowego, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Stanów Magazynowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu, ze wskazaniem magazynu na którym magazynie znajdują się kartoteki towarowe:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KODTOWARU kod kartoteki towarowe
+ILOSC – ilość
+CENAJM – cena magazynowa, zakupu
+MIEJSCEMAG – miejsce magazynowe Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Rozrachunków
+Import Rozrachunków Klienta jest to import wartości zobowiązań lub należności, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Rozrachunków pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu, ze wskazaniem magazynu i serii dokumentów z jakim będą tworzone rozrachunki:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Magazyn – wybieramy magazyn w którym utworzone zostaną dokumenty rozrachunku
+Serię i rok – wybieramy serię i sufix utworzonego numeru rozrachunku w Vendo
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KODKLIENTA Kod klienta
+NALEZNOSCI Kwota należności
+ZOBOWIAZANIA Kwota zobowiązania
+WALUTA Waluta – skrót
+NUMERDOKUMENTU Numer dokumentu
+DATAPLATNOSCI Data płatności
+KURSWALUTY Kurs waluty
+IDKLIENTA ID klienta (przy imporcie musi być podana kolumna IDKLIENTA lub KODKLIENTA)
+DATAOPERACJI
+DATADOKUMENTU
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Import Jednostek Alternatywnych
+Import Jednostek Alternatywnych jest to import przeliczników jednostek lub/i nazwy i kodu u klienta (alternatywna nazwa i kod towaru przypisana do Klienta) odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Stanów Magazynowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu, ze wskazaniem magazynu na którym magazynie znajdują się kartoteki towarowe:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+Gdy karta istnieje – Wybieramy Pomiń lub Aktualizuj
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KONTRAHENTKOD Kod kontrahenta [pole KOD z kartoteki kontrahentów]
+NAZWAUKLIENTA Alternatywna nazwa towaru u klienta [tekst]
+KODUKLIENTA Alternatywny kod towaru u klienta [tekst]
+EAN Alternatywny kod EAN towaru u klienta [tekst]
+KODTOWARU Kod towaru [pole KOD z kartoteki towarowej]
+JEDNOSTKA Nazwa jednostki
+LICZNIK Licznik przelicznika jednostki [liczba] Domyślnie 1
+MIANOWNIK Mianownik przelicznika jednostki [liczba] Domyślnie 1
+WAGAOP Waga opakowania [liczba] Domyślnie 0
+OBJETOSCOP Objętość opakowania [liczba] Domyślnie 0
+POZAKONTAKSTEM Określa czy dana jednostka ma być używana także poza kontakstem kontrahenta. Domyślnie ”NIE”
+AUTOMATYCZNA Określa czy dana jednostka ma być automatycznie używana przy wystawianiu dokumentu. Domyślnie ”TAK”
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Ludzi Klienta
+Import Ludzie Klienta jest to import osób kontaktowych ze strony klienta i ich danych podstawowych i kontaktowych, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego. Po wybraniu funkcjonalności Import Ludzi Klienta pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu, ze wskazaniem mapowania kontrahenta: kod, Nazwa, NIP, Regon, ILN, Konto KH
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KODKLENTA pole po czym mapowany jest klientKod klienta Nazwa NIP Regon ILN Konto KH
+IMIE
+NAZWISKO
+ADRES
+KODPOCZTOWY
+MIEJSCOWOSC
+TELEFON
+EMAIL
+KRAJ
+CZYAKTYWNY tak nie
+STANOWISKO
+TYTUL
+DECYZYJNOSC Nie dotyczy Doradca Decydent
+PLEC kobieta /mężczyzna
+DATA_IMIENIN
+DATA_URODZENIA
+NR_DOWODU
+OPINIA Przykładowy wypełniony Excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Cennika
+Import Cennika jest to import cen towarów przypisanych do danego cennika, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego. Do wyboru mamy grupę cen oraz mapowanie kartoteki towarowej.
+Po wybraniu funkcjonalności Import Cen Indywidualnych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+Uczyń grupę cen jako grupę domyślną.
+Gdy brak kartoteki to pomiń – pomija import ceny gdy brakuje pozycji
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+KOD
+CENAN
+CENAB
+WALUTA Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Plan Kont
+Import Plan kont jest to import pozycji planu kont z zaznaczeniem czy związanym jest z kontrahentem, magazynem, pracownikiem, bankiem i czy jest pozabilansowe, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego. Po wybraniu funkcjonalności Import Plan Kont pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu oraz czy pozycja ma być aktualizowana czy pomijana jeśli taka już istnieje:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się.
+
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+NUMERKONTA Numer konta
+NAZWA Nazwa konta
+ROZRACHUNEK Czy konto rozrachunkowe
+POZABILANS Czy konto pozabilansowe
+ZKONTRAHENTEM Czy subkonta związane z kontrahentem
+ZMAGAZYNEM Czy subkonta związane z magazynem
+ZPRACOWNIKIEM Czy subkonta związane z pracownikiem
+ZBANKIEM Czy subkonta związane z bankiem Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Import środków Trwałych
+Import Środków Trwałych jest to import obiektów zdefiniowanych jako środki trwałe: maszyny, pojazdy, itd., odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Stanów Magazynowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+NRINW numer inwentarzowy środka trwałego
+KST konto środka trwałego
+RODZAJ WNP, ST, W
+NAZWA
+GRUPA Słownik w programie
+OPIS
+DOK_NABYCIA - numer dokumentu nabycia
+DATA_NAB data nabycia
+DATA_PRZYJ data przyjęcia
+RODZ_AMORT L - oznacza liniowa
+RODZ_AM_BIL_POD T - rozna amortyzacja podatkowa od bilansowej
+WART_BIL Wartośc bilansowa środka trwałego
+STATUS A - Aktywny, L - Likwidacja, S - Sprzedany
+WART_POD Wartośc podatkowa środka trwałego
+ST_AM_BIL Stawka am. Bilansowej
+ST_AM_POD Stawka amortyzacji podatkowej
+UMORZENIE_BIL Wartość umorzenia bilansowego (BO)
+UMORZENIE_POD Wartość umorzenia podatkowego (BO)
+ODDZIAL Oddział srodka trwalego
+KONTO_GLOWNE Konto Główne (F2)
+KONTO_UMORZENIA Konto Umorzenia (F3)
+KONTO_AMPODATKOWEJ Konto Amortyzacji Podatkowej (F4)
+KONTO_AMNIEPODATKOWEJ Konto Amortyzacji Niepodatkowej (F5)
+KONTO_ZESPOLU5 Konto Amortyzacji Zespołu 5 (F6)
+KONTO_ROZLICZENIAKOSZTOW Konto Rozliczenia Kosztów (F7)
+KONTO_POZABILANSOWEWN Konto Pozabilansowe Wn (F8)
+KONTO_POZABILANSOWEMA Konto Pozabilansowe Ma (F9)
+WART_DOW:NAZWAZMIENEJ Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po : Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import danych Listów Przewozowych
+Import danych Listów Przewozowych jest to import danych dla lisów przewozowych, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import danych Listów Przewozowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Mapowanie listy przewozowego – po numerze obcym lub numerze własnyn Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+NUMER Pole wymagane warunkowo (w zaleznosci od ustawien importu)
+NUMER_OBCY Pole wymagane warunkowo (w zaleznosci od ustawien importu)
+DATA_DOSTARCZENIA Pole wymagane
+OSOBA_ODBIERAJACA Pole wymagane
+KOSZT Pole opcjonalne Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Kontrahentów
+Import kontrahentów jest to import danych dotyczących klienta, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import danych Kontrahentów pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Import wartości dowolnych – zaznaczone kiedy będą importowane wartości dowolne.
+Gdy karta istnieje – wybieramy Pomiń lub aktualizuj Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+KOD kod klienta unikatowy
+NAZWA Nazwa klienta
+ADRES Ulica
+KODPOCZTOWY
+MIASTO
+TELEFON Telefony klienta w postaci zdefiniowanych pol TELEFON,TELEFON1,TELEFON2,TELEFON3,….,TELEFONN
+FUNKCJA D - Dostawca, O - Odbiorca, A - Agent, W - Wewnetrzny
+TELEFON1
+TELEFON2
+NIPPREFIX Prefix NIPu (dla EuroNIPu)
+NIP
+TERMINPLAT Termin płatności
+FORMAPLAT Forma płatności
+EMAIL
+NRKONTA Nr konta bankowego
+UWAGI
+GRUPAI Grupa klientów
+GRUPAII Grupa II (waga klientów)
+SKADSIEDOWIEDZIAL Skąd się klient o nas dowiedział, dane CRM (słownik, przy imporcie nie zakładamy elementów tego słownika)
+ZNALAZL Login pracownika, który pozyskał klienta, tylko w przypadku dodawania klienta, przy aktualizacji danych to pole nie jest brane pod uwage
+OPIEKUN Login opiekuna klienta
+OSOBAFIZYCZNA Czy osoba fizyczna
+UPUST
+GRUPACEN
+WWW Strona www klienta
+NRDOMU
+NRLOKALU
+PLATNIK Płatnik (polityka sprzedazy)
+ODBIORCA Odbiorca (polityka sprzedazy)
+REGON
+KRAJ
+REGION Województwo
+DOSTAWA Forma dostawy
+WART_DOW:NAZWAZMIENEJ Wartości dowolne o nazwie zmiennej w skryptach przy definicji wartości jak nazwa w kolumnie po :
+KONTOKH Nr konta używany do współpracy z księgowościa
+OPINIE Opinie o kliencie
+HASLO Hasło do współpracy z www
+AGENT Kod klienta który jest przypisany jako agent do importowanego kontrahenta
+GEOY Szerokosc geograficzna
+GEOX Dlugosc geograficzna
+KONTOMASSPAYMENT Numer konta dla uslug MassPayment
+BANKMASSPAYMENT Kod rejestru bankowego (w Vendo) dla numeru konta podanego w KONTOMASSPAYMENT Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import zamienników towarów
+Import Zamienników Towarów jest to import przypisania towaru który może być zamiennikiem towaru i w którym kierunku, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Zamienników Towarów pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+KODSRC Kod towaru pierwotnego
+KODDESC Kod zamiennika
+PRZELICZNIK Przelicznik zamiennika względem towaru pierwotnego
+SYMETRYCZNOSC Czy zamienniki są symetryczne T – Tak
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import miejsc magazynowych
+Import Miejsc Magazynowych jest to import miejsc magazynowych z przypisaniem do magazynu, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import miejsc magazynowych pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu oraz wybieramy magazyn do którego będą należeć importowanych miejsc magazynowych:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+KOD Kod miejsca magazynowego (bez prefixu rodzica)
+KODRODZICA Pełny kod miejsca - rodzica
+OBCIAZENIE - maksymalne obciążenie miejsca magazynowego
+OBJETOSC - maksymalna objętość miejsca magazynowego
+SZEROKOSC – wymiar miejsca magazynowego
+WYSOKOSC - wymiar miejsca magazynowego
+GLEBOKOSC - wymiar miejsca magazynowego
+PALETOWE 1- miejsce paletowe
+ILOSCJL Ilosc jednostek logistycznych (tylko jeśli PALETOWE=1)
+CECHA1
+CECHA2
+CECHA3
+OPIS
+GATE 1 - gate
+KONTEKST Kod klienta
+ZNACZNIK Kod znacznika
+STREFAPAKOWANIA Kod strefy pakowania
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import Struktur
+Import Struktur jest to import elementów struktury oraz powiązań, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import miejsc magazynowych pojawi się okno w którym wybieramy plik do importu:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane. Dodatkowo możliwe jest importowanie struktur w formacie PROCAD-XML
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Zakłada kartoteki towarowe jeśli nie znalezienia po kodzie
+Automatyczne zatwierdzanie struktur importowanych
+Import dwu etapowy – najpierw struktury później relacje
+W przypadku już istniejącej struktury
+Aktualizacja już istniejącej struktury
+Nowa wersja struktury
+Import relacji tylko ojciec dziecko Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+
+
+KOD Kod/Nr rysunku
+WARIANT Wariant
+NAZWA Nazwa struktury
+OPIS Opis struktury
+TOWAR Kod towaru dla którego tworzymy strukturę
+TOWAR_NAZWA Nazwa towaru (jeśli zostanie utworzony)
+TOWAR_JM Jednostka miary towaru – skrót (jeśli zostanie utworzony)
+TOWAR_GRUPAI Grupa I towaru [nazwa] (jeśli zostanie utworzony)
+TOWAR_GRUPAI_SCIEZKA Ścieżka dla grupy I towaru (musi być podana grupaI lub ściezka, pole grupaI ma pierwszenstwo), separatorem w ścieżce musi być znak :/: (jeśli zostanie utworzony)
+TOWAR_GRUPAII Grupy II towaru [nazwa] (jeśli zostanie utworzony)
+TOWAR_GRUPAII_SCIEZKA Ścieżka dla grupy II towaru (musi być podana grupaII lub ściezka, pole grupaII ma pierwszenstwo), separatorem w ścieżce musi być znak :/: (jeśli zostanie utworzony)
+TECHNOLOGIA Kod technologii skojarzony z daną strukturą
+RODZAJ Z - element kupowany, P - element produkowany, E - element podstawowy, K - kooperacja
+WYMIAR_X Wymiar - parametr X
+WYMIAR_Y Wymiar - parametr Y
+WYMIAR_Z Wymiar - parametr Z
+NARZUT_X Narzut - parametr X
+NARZUT_Y Narzut - parametr Y
+NARZUT_Z Narzut - parametr Z
+NORMA Norma dla struktury
+ODPAD % odpadu
+MATERIAL Kod materiału podstawowego
+CECHA1 Cecha 1
+CECHA2 Cecha 2
+CECHA3 Cecha 3
+OPERACJA1 Nazwa operacji 1
+OPERACJA2 Nazwa operacji 2
+OPERACJA3 Nazwa operacji 3
+OPERACJA4 Nazwa operacji 4
+OJCIEC Kod struktury do której dana struktura przynależy, parametr opcjonalny
+OJCIEC_WARIANT Wariant struktury do której dana struktura przynależy, parametr opcjonalny
+ILOSC Ilość (licznik) elementów dla 1 ojca (parametr związany z kolumną ojciec)
+ILOSC_MIANOWNIK Ilość (mianownik) elementów dla 1 ojca (parametr związany z kolumną ojciec)
+ILOSC_SKLADNIK Ilość (skladnik) elementów dla 1 ojca (parametr związany z kolumną ojciec)
+
+Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+Zaimportowane dane wyglądają na kartotece tak:
+
+Import stany u kontrahentów
+Import Stanów u Kontrahenta jest to import stanu towarów u kontrahenta, odbywa się poprzez import pliku w formacie excela zgodnie z szablonem lub pliku tekstowego.
+Po wybraniu funkcjonalności Import Zamienników Towarów pojawi się okno w którym wybieramy plik do importu oraz wybieramy typ szablonu do importu oraz kontrahenta:
+
+W formacie CFI-Excel importuje zgodnie z szablonem excelowym. Natomiast wybierając format importu CFI-CSV importujemy z pliku tekstowego. Wciskając trzy kropki obok formatu CFI-CSF otworzy się okno konfiguracyjne importu z pliku tekstowego. Wybieramy tutaj jaki będzie separator pól, oznaczenie co jest tekstem oraz typ kodowanie tekstu. W dolnej części okna pojawi się podgląd danych co pozwoli nam wstępnie zweryfikować poprawność danych które będą importowane
+
+Dodatkowe parametry importu to :
+
+Import w osobnych transakcjach – oznacza że każda linia importowana jest jak osobny import jednak spowalnia to import, w razie błędu błędna linia importu nie zostanie zaimportowana
+Błąd przerywa import – w momencie błędu import zatrzyma się
+Format excelowy zawiera nazwy kolumn oraz zaznaczone są kolumny obowiązkowe. Wystarczy w wierszach wprowadzić odpowiednie dane zgodnie z schematem:
+KODTOWARU Gdy podany szukanie towaru wg. kodu z pola KODTOWARU
+KODUDOSTAWCY Gdy podany a nie podany KODTOWARU szukanie wg. kodu u dostawcy z pola KODUDOSTAWCY wśród aktywnych towarów
+STAN
+CENANETTO
+WALUTA Przykładowy wypełniony excel poniżej. Zaznaczone Pola na czerwono są obowiązkowe.
+
+
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

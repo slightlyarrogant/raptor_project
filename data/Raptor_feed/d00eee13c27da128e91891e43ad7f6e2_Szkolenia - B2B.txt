@@ -1,0 +1,16 @@
+Szkolenia - B2B
+Metadata
+
+url: http://192.168.33.19/master/docs/company/filmy-instrukta%C5%BCowe/szkolenia-b2b
+scraped_at: 2024-09-05T11:50:03.061842
+last_updated: 2024-09-05T11:50:03.061884
+parent_id: 6ebaaca5eb1ef87ea9ba767a658f1ac8
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B
+meta_tags: ['youtube', 'watch', 'vendo', 'index', 'luxhttps', 'majerhttps', 'erpbartłomiej', 'grządkahttps', 'szkolenia', 'b2btytuł']
+
+Content
+
+Szkolenia - B2B
+
+| | | Tytuł szkolenia| Prowadzący| Lokalizacja pliku z eSzkoleniem| Zmiany w systemie zgłoszeń| Radosław Majer| https://www.youtube.com/watch?v=yvKVOQmGwQM&index=3| Webinar raportowanie i analiza Vendo ERP| Bartłomiej Lux| https://www.youtube.com/watch?v=2sxLVbNc-Q0| RODO| Radosław Majer| https://www.youtube.com/watch?v=uAEiDStl0Ew&| VENDO.ERP gotowe na Split payment| Bartłomiej Lux| https://www.youtube.com/watch?v=7hE6sBWJHiQ&index=1&| Rejestracja produkcji on-line| Łukasz Grządka| https://www.youtube.com/watch?v=BFaXAW2jFVI&| Pomiary na produkcji| Jacek Korabik| https://www.youtube.com/watch?v=mGrtWL9rcgk| Harmonogramowanie produkcji| Radosław Majer| https://www.youtube.com/watch?v=Ogfx6wjLAKw&index=1&| Personalizacja ustawień Użytkownika| Mariola Kij| https://www.youtube.com/watch?v=6xFgdMY5P4A&index=2&| Notyfikacje korzyści| Łukaz Grządka| https://www.youtube.com/watch?v=KyuKh_WsL5o| Obieg dokumentów w VENDO.ERP| Andrzej Zawiślan| https://www.youtube.com/watch?v=4ty7Zv2OpaI&list=UU_WBvIsv2OvT74QR7vqM-bA&index=2&smclient| Webinarium: CRM – możliwości i korzyści| Łukasz Grządka| https://www.youtube.com/watch?v=yozJhofa0aU&index=1&list| Rozliczenia Międzyokresowe Kosztów (RMK)| Paweł Borówka| https://www.youtube.com/watch?v=UZfV5PybXHc| Etykiety GS1| Radosław Majer| https://www.youtube.com/watch?v=a6QAu9OjNkQ| Planowanie kubełkowe| Robert Białecki| https://www.youtube.com/watch?v=DFE7j1fT8ZA| Analizy Qlik Sense dla Sprzedaży| Bartłomiej Lux| https://www.youtube.com/watch?v=VOAhdAIy_Ps| Zarządzanie wysyłką i transportem - VENDO.ERP| Bartłomiej Lux| https://www.youtube.com/watch?v=RG8NErP0LuM| OCR Google - nowy plugin w VENDO.ERP| Norbert Kurpiel| https://www.youtube.com/watch?v=HiN26oTf12c&t=2s| Podpis Elektroniczny w VENDO.ERP| Bartłomiej Lux| https://www.youtube.com/watch?v=M8pTzXLMz64&feature=youtu.be| Przegląd nowości w VENDO.ERP 2020| Paweł Ścipień| https://www.youtube.com/watch?v=fv7-4oIBDZY
+---|---|---

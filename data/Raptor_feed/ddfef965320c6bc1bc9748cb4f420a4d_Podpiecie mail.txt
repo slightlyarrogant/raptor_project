@@ -1,0 +1,46 @@
+Podpiecie mail
+Metadata
+
+url: http://192.168.33.19/master/docs/public/podpiecie-mail
+scraped_at: 2024-09-05T12:30:50.231879
+last_updated: 2024-09-05T12:30:50.231920
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Podpiecie mail
+meta_tags: ['klienta', 'maila', 'jeśli', 'zlecenie', 'mail', 'zlecenia', 'podstawie', 'jest', 'klient', 'został']
+
+Content
+Pobieranie mail – zasady ustawienia klienta, zlecenia, właściciela
+Podstawowymi założeniami dotyczącymi ustawienia klienta, zlecenia, właściciela podczas korespondencji mailowej są:
+Klient i zlecenie ustawiamy na podstawie maila źródłowego, gdy ten został wysłany z Vendo, przykładowo:
+Jeżeli użytkownik wysyła wiadomość mailową do kontrahenta/ów z systemu Vendo a dany kontrahent K_1 przypisany jest do zlecenia Z_1 wówczas przy pobraniu odpowiedzi na zdarzeniu ustawi się odpowiednio klient K1 i zlecenie Z1
+ 
+Jeśli mail nie został wysłany z Vendo i w adresie odbiorców jest wiele domen np. a@gmail.com, b@cfi.pl, c@klient.pl w takim przypadku
+
+Klient,
+Zlecenie,
+Osoba klienta nie są ustawiane. Wynika to z faktu, iż jeśli mamy wiele domen, a klienci i osoby klienta są wyszukiwane na podstawie adresu mailowego istnieje ryzyko, że podepnie się zła kartoteka klienta.
+
+Pozostałe przypadki: gdy mail został pobrany z dowolnego źródła poza Vendo
+
+Zlecenie:
+Parsowanie tematu maila, jeśli w temacie wystąpi „[ZL:”, następuje próba wyszukania zlecenia po numerze
+Zlecenia z maila poprzedniego, gdy w mailu zostanie ustawione zlecenie Z1, w odpowiedzi podpięte zostanie zlecenie Z1
+
+
+Klient/Osoba klienta
+Parsowanie tematu maila, jeśli w temacie wystąpi „[KL:”, następuje próba wyszukania klienta po kodzie
+Wyszukiwanie osoby klienta i klienta na podstawie adresu mailowego: zapytanie do tabeli tb_telefony.
+Klienta i osoba klienta z poprzedniego maila – analogicznie jak zlecenie
+
+
+Właściciel:
+Parsowanie tematu maila, jeśli w temacie wystąpi „[PR:”, następuje próba wyszukania pracownika po loginie
+
+
+Do wiadomości: Jeśli jest mail przychodzący i jest więcej niż jeden odbiorca wówczas:
+Wyszukiwanie pracowników odbywa sie na podstawie adresów mailowych
+
+
+
+Images
+

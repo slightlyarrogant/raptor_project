@@ -1,0 +1,22 @@
+Uprawnienia kontekstowe
+Metadata
+
+url: http://192.168.33.19/master/docs/public/uprawnienia-kontekstowe
+scraped_at: 2024-09-05T12:30:50.511766
+last_updated: 2024-09-05T12:30:50.511796
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Uprawnienia kontekstowe
+meta_tags: ['uprawnień', 'uprawnienia', 'pracownika', 'dostęp', 'listy', 'ctrl', 'pracownicy', 'danego', 'danej', 'które']
+
+Content
+Uprawnienia kontekstowe
+Uprawnienie kontekstowe służą do blokowania wybranych 'miejsc' oraz funkcji w systemie, które są dostępne. Przykładowo w module Płatności mamy do dyspozycji zakładki, które pozwalają na wydobywanie wszelkich informacji odnośnie przepływów pieniężnych, jeśli np. nie chcemy by dany pracownik miał dostęp do listy naszych zobowiązań po prostu wchodzimy na zakładkę Zobowiązania i naciskamy kombinację CTRL+F2. Wyświetli się okno z możliwymi do określania uprawnieniami dla zakładki Zobowiązania(w tym przypadku będzie to: Dostęp do listy zobowiązań). W oknie uprawnień mamy możliwość określenia którzy pracownicy maja dostęp do danego uprawnienia poprzez oznaczenie ich w sekcji Pracownicy. Jeśli więc chcemy nadać uprawnienie do danej funkcjonalności wszystkim pracownikom z danego działu można to zrobić zaznaczając checkboks danej grupy(działu). System z automatu przydzieli uprawnienia do wybranej funkcjonalności wszystkim pracownikom z danego działu. Bardzo ważną funkcja jest opcja „Każda grupa i każdy pracownik”. Opcja ta pozwala jednym kliknięciem przydzielić uprawnienia wszystkim pracownikom z wszystkich działów do danej funkcjonalności. Po odebraniu uprawnień dostępu do danej funkcjonalności w tym przypadku dostępu do listy nie będzie ona widoczna dla danego pracownika – może on nawet nie zdawać sobie sprawy z jej istnienia.
+Zarządzając uprawnieniami kontekstowymi należy pamiętać o kilku kwestiach: - Prawo dostępu do zakładki oznacza prawo edycji i zmian w danym formularzu jak również do korzystania z funkcji, które na danej zakładce się znajdują. Oczywiście nie dotycz to sytuacji, kiedy jakieś funkcje blokujemy na poziomie określonych działań (trzecia grupa uprawnień). Na przykład pracownik może mieć dostęp do listy faktur, ale na poziomie działań nie będzie mógł otwierać zamkniętych faktur ani sprawdzać marży na FV bo te funkcje zablokowano z poziomu modułu Pracownicy.
+
+W ramach tej grupy uprawnień możemy przydzielać prawa dostępu do poszczególnych rodzajów dokumentów. Na przykład nie wszyscy muszą mieć uprawnienia do podglądu listy dokumentów PZ – wchodzimy na listę dokumentów, naciskamy CTRL+F2, wybieramy opcje Dostęp do kart i list PZ i naciskamy ENTER, następnie na liście pracowników odbieramy/dodajemy dane uprawnienie.
+Ponieważ miejsc w systemie, które można blokować jest masa nie ma sensu dla każdego z pracowników powtarzać tej czynności. Lepszym rozwiązaniem jest przekopiowanie uprawnień z już zdefiniowanego konta pracownika: moduł Pracownicy > Karta pracownika > Funkcje > Kopiuj uprawnienia od innego pracownika. Przy kopiowaniu uprawnień należy pamiętać, że system uwzględnia wszystkie zdefiniowane grupy uprawnień.
+Osoba, która ustawia uprawnienia z grupy pierwszej CTRL+F2nie może ich odebrać samemu sobie.
+Uprawnienia do zmiany uprawnień znajdują się na karcie pracownika: Pracownicy > Karta pracownika > zakładka Pozostałe dane > buton Uprawnienia > sekcja Administracja > Zmiana uprawnień.
+Jeśli zablokujemy komuś uprawnienie np. do zakładki Raport finansowy będzie ona niewidoczna dla danego pracownika we wszystkich miejscach gdzie dotychczas występowała.
+Bardzo pożyteczną opcją może być możliwość blokowania górnego menu programu a także zamykania dokumentów określonego typu (po naciśnięciu na karcie dokumentu klawisza Zamknij używamy kombinacji CTRL+F2 i ustawiamy blokadę dla wybranych pracowników).
+Niemal w każdym miejscu w systemie kombinacja CTRL+F2 daje dostęp do kontekstowego panelu uprawnień.

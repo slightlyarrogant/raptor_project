@@ -1,0 +1,81 @@
+
+
+##	Zlecenia Serwisowe
+
+Moduł Serwis powstał by wspomagać zarządzanie procesami serwisu. Korzystający z niego użytkownik uzyskuje możliwość planowania, zarządzania i kontroli całego procesu serwisowania w każdym jego momencie, od chwili kontaktu z klientem i przyjęcia zlecenia serwisowego aż do wystawienia faktury za wykonaną prace. W module Serwis każde zlecenie serwisowe jest traktowane jako odrębna teczka, w której są przechowywane wszelkie informacje związane bezpośrednio z wykonaniem zlecenia. Idea teczki jest taka by procedura dostępu i wyszukiwania informacji o wybranym zleceniu była maksymalnie uproszczona, a podawane przez system informacje były przejrzyste. Dodatkowo system pozwala na przeprowadzanie większości działań na kilka sposobów dzięki czemu każdy może wybrać najwygodniejszy wariant. Tworzenie zleceń serwisowych tzn. przyporządkowanie określonych akcji/zdarzeń/obiektów zdefiniowanych w systemie (prace, przeglądy, dokumenty itd.) do określonego przedmiotu podlegającego serwisowaniu (obiekty, urządzenia) odbywa się szybko również dlatego, że system automatycznie wypełnia pola, które może wywnioskować z posiadanych danych. Oprócz oczywistej opcji tworzenia zlecenia serwisowego dla pojedynczych urządzeń (jedno lub więcej działań serwisowych na urządzeniu) system pozwala na tworzenie zlecenia dla wielu urządzeń (jedno lub więcej działań na grupie urządzeń). Cecha ta pozwala znacznie ograniczyć uciążliwość wynikającą z wielokrotnego wykonywaniem tych samych czynności (np. definiowanie bądź drukowanie odrębnych dokumentów dla poszczególnych urządzeń).
+
+Zlecenie to swego rodzaju teczka spinająca wszelkie informacje i dokumenty związane z wykonaniem większego przedsięwzięcia. Pozwala zachować porządek i uzyskać zbiorcze informacje o wykonaniu zlecenia. Konkretne działania i informacje związane ze zleceniem serwisowym można dodawać na dwa sposoby: 
+-	Wciskając na zakładce Nagłówek właściwego zlecenia przycisk Funkcje i wybierając interesujące  nas działanie (np. dodanie pracy, kontaktu, dokumentu). 
+-	Wybierając na karcie zlecenia właściwą dla danego działania zakładkę (np. chcąc zarejestrować wydanie z magazynu części niezbędnej do przeprowadzenia serwisu należy wybrać w karcie zlecenia zakładkę Lista dokumentów i tam dodać dokument WZ lub RW).
+
+![tmp2affa87d-91fa-49d9-ab83-d5d659426ea8](https://www.cfi.pl/vendohelp/content/imgs/M8/ea8bcafde3a911d54bfdefd1f4e7a51f-101469-0.png)
+ 
+
+Zakładki zlecenia serwisowego
+-	Nagłówek - Edycja podstawowych danych o zleceniu (podmiot zlecający, przedmiot zlecenia i charakter zlecenia).
+-	Lista dokumentów - Dodawanie, modyfikacja, usuwanie dokumentów, wynikających z realizacji zlecenia. Spinanie plików bądź katalogów zawierających dane dotyczące zlecenia oraz definiowanie etapów zlecenia.
+
+
+Często podczas realizacji zlecenia serwisowego musimy zużyć lub wydać pewne towary, konsekwencją tego jest powstawanie dokumentów np. `[RW]` (na wymienione popsutej części) czy faktura za zakupione części (FZ).  System przewiduje możliwości dołączania dokumentów do konkretnego zlecenia serwisowego. Dokumenty te będą potem brane pod uwagę przy rozliczaniu, analizach czy fakturowaniu zlecenia. Do zlecenia można dodawać dowolne typy dokumentów (najczęściej `[RW]`, `[FZ]`, `[FV]`, `[KO]`).
+
+Przykładowo dodamy RW do zlecenia (ewidencja rozchodu materiałów): 
+-	Wchodzimy do moduły Serwis na kartę wybranego zlecenia. 
+-	Przechodzimy na zakładkę Lista dokumentów. W otwartej w ten sposób karcie zlecenia wybrać zakładkę Lista dokumentów. Następnie na górnym pasku okna określić właściwy typ dokumentu, który ma być dodany ze zleceniem (w tym przypadku `[RW]`). 
+-	Modyfikujemy jeśli trzeba i zatwierdzamy okno wstępnych informacji o RW (magazyn, numer) a na oknie RW klawiszem `[INSERT]` dodajemy materiały, które mają być rozchodowane. 
+-	Przyciskiem Zamknij zatwierdzamy `[RW]`. Materiały zostaną zdjęte z magazynu a samo RW będzie podpięte do zlecenia. Dodawane dokumenty są widoczne zarówno w zbiorczym module Dokumenty jak i w Serwisie spięte z właściwym zleceniem serwisowym.
+Chcąc usunąć błędnie dodany dokument wykonujemy typowe operacje: w pierwszej kolejności należy otworzyć dokument (na karcie dokumentu menu: `Funkcje` > `Funkcje specjalne` > `Otwarcie dokumentu`) i wybrać z menu `Funkcje` > `Usunięcie zlecenia`. Dodawanie podstawowych dokumentów można przeprowadzić również otwierając kartę konkretnego zlecenia serwisowego – menu `Funkcje` > `Dodaj dokumenty` (faktura, paragon, koszt).
+-	Budżetowanie - Zbiorczy raport mówiący o skutkach finansowych konkretnych zleceń.
+-	Prace  - Prowadzenie rejestru wykonywanych prac związanych ze zleceniem.
+-	Przejazdy - Prowadzenie rejestru wykonanych przejazdów związanych ze zleceniem.
+-	Zdarzenia – Lista zdarzeń w rozrumienieniu modułu CRM. Poprzez Zdarzenia rozumiemy konkretne czynności związane z obsługą danego zlecenia.
+-	Pliki i wartości dowolne – w zakładce  te istnieje możliwość dodania plików związanych z danym zleceniem, utworzenia katalogu w celu segregacji danych, bądź podpiąć zawartość całego katalogu określając wcześniej lokalizacje danego katalogu 
+
+##	Dodawanie zlecenia serwisowego
+
+System umożliwia dodawanie zleceń serwisowych dwóch rodzajów: 
+-	Dla pojedynczego obiektu. „Dodaj zlecenie serwisowe na jeden ‘Urządzenie’”
+-	Dla klienta (dowolna ilości modeli i/lub obiektów klienta). Dodaj zlecenie serwisowe na wiele ‘Urządzenie’”
+
+![tmp81d4d0c9-1051-4f4a-9c77-6a6ac8d9ba31](https://www.cfi.pl/vendohelp/content/imgs/F9/32a32b876a4462ab48c0d3dd4ba0cf88-6093-0.png) 
+
+
+### 	Dodawanie zlecenia na obiekt
+Dodanie nowego zlecenia dla pojedynczego obiektu można przeprowadzić w dwojaki sposób:
+Pierwszym z nich i najczęściej stosowanym jest postępowanie wg poniższego schematu: Wchodzimy na kartę wybranego obiektu (moduł `Serwis` > zakładka `Obiekty`).
+-	Wybieramy klawiszem `[ENTER`] obiekt do serwisu – otworzy się karta obiektu. 
+-	Przechodzimy na zakładkę Zlecenia i naciskamy `[INSERT]` – po zatwierdzeniu numeru zlecenia utworzy się karta zlecenia serwisowego, którą można dowolnie edytować.
+
+
+Karta zlecenia została dodana do bazy zleceń, można ją odnaleźć zarówno w module `Serwi`s > zakładka `Zlecenia`, jak i po otwarciu karty obiektu, dla którego ono zostało utworzone. Jak widać system automatycznie wypełnił większą część pól nagłówka danymi obiektu, który wcześniej wybraliśmy sami. Teraz można już przejść do definiowania samych czynności serwisowych w ramach zlecenia.
+-	Po naciśnięciu Zapisz zlecenie dostaje status 'Realizowane'.
+Alternatywna droga dodawania zlecenia na jeden obiekt: 
+-	Wchodzimy na do modułu `Serwis` > zakładka `Zlecenia Serwisowe`. 
+-	Naciskamy `[INSERT]` i zatwierdzamy okno z numerem zlecenia. 
+-	Wybieramy `[F4]` obiekt do serwisowania.
+ 
+![tmpc46f3d91-b066-42fc-a461-28a59d2a2baa](https://www.cfi.pl/vendohelp/content/imgs/D3/cbf9402c982ac9d06886013bb410c0a6-103922-0.png) 
+ 
+
+
+### Dodawanie zlecenia serwisowe dla wiele obiektów (dowolna ilości modeli i/lub obiektów klienta)
+
+Chcąc dodać zlecenie na dowolną ilość urządzeń/obiektów musimy skorzystać z poniższego schematu: 
+-	Wchodzimy do modułu `Serwis` > zakładka `Zlecenia`. 
+-	Naciskamy `[SHIFT+INSERT]` lub kliknąć prawym przyciskiem myszy i wybrać> Dodaj zlecenie serwisowe na wiele obiektów/urządzeń i po zatwierdzeniu okna z numerem zlecenia pojawi się karta zlecenia nieco inna niż w przypadku zlecenia na jeden obiekt.
+
+![tmp3b4bbe97-493c-404e-890e-83aa83f50028](https://www.cfi.pl/vendohelp/content/imgs/F3/1321cc26791e58b53caa030643d90807-113648-0.png)
+ 
+
+Podajemy dane do zlecenia, przede wszystkim Zlecającego `[F2]` a przy użyciu przycisków +Model i/lub +Zasób urządzenia, które mają być serwisowane. Po dodaniu urządzeń do serwisu będą one widoczne na liście w dolnej sekcji okna. Warto zwrócić też uwagę na filtry tej listy (Model, Zasób) by nie pominąć żadnych pozycji. 
+
+-	Po wypełnieniu danych nagłówka naciskamy Zapisz – zlecenie dostaje status 'Realizowane'
+
+### 	Dodawanie prac i przejazdów służbowych do zlecenia serwisowego
+Podobnie jak inne elementy składające się na wykonanie zlecenia wyjazdy służbowe również możemy ewidencjonować w ramach zlecenia: 
+-	Wybieramy z moduł Serwis zakładkę Zlecenia. 
+-	Wchodzimy na wybrane zlecenie i przechodzimy na zakładkę Przejazdy. 
+-	W otwartym oknie korzystając z przycisku Dodaj [INSERT] można wstawiać kolejne pozycje. Klawisz `[DELETE]` pozwala usuwać dodane pozycje.
+
+
+Dodając wyjazd służbowy należy wypełnić oczywiste pola (pracownik, ilość kilometrów, cel itd.) oraz sposób rozliczania przejazdu – Ryczałt (koszt każdego wyjazdu traktowany jest jako stały) lub Kilometrówka (koszty wyjazdu zależne od odległości). 
+ 

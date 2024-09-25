@@ -1,0 +1,13 @@
+# Rozrachunki
+
+W ramach funkcjonalności karty rozrachunki użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj płatność – generowanie dokumentu wpłaty/wypłaty
+- rozliczenie z dokumentem – powoduje otwarcie listy nierozliczonych dokumentów z kontrahentem i umożliwia ich rozliczenie
+- usuń rozliczenie – usunięcie istniejącego już rozliczenia
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp181b5fb8-b392-4d1c-a0d3-1323907602bb](https://www.cfi.pl/vendohelp/content/imgs/L3/e25d816021b9aa8ab16578a26ada6b44-30139-0.png)
+
+![tmpbff56419-92ac-4099-81d3-c6ec7ebc8c68](https://www.cfi.pl/vendohelp/content/imgs/P1/57d0e5f44ae7d609d394e8b81dea78ad-2568-0.png)

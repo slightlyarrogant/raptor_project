@@ -1,0 +1,78 @@
+CzechlogisticPaxy plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/czechlogisticpaxy-plugin
+scraped_at: 2024-09-05T12:19:46.356832
+last_updated: 2024-09-05T12:19:46.356901
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/CzechlogisticPaxy plugin
+meta_tags: ['czechlogisticpaxy', 'spedytora', 'paczki', 'plugin', 'wybieramy', 'kraju', 'klikamy', 'dodajemy', 'vendo', 'ustawienia']
+
+Content
+CzechlogisticPaxy plugin
+1. Instalacja pluginu
+Domyślna nazwa pluginu to: SpedytorCzechlogisticPaxyPlugin.dll
+Wgrywamy plugin do klienta.
+Kopiujemy plik z pluginem lokalnie na komputer. Uruchamiamy aplikację Vendo. Przechodzimy do zakładki Ustawienia -> Pluginy.
+
+Klikamy przycisk Dodaj. Dodajemy plugin znajdujący się na dysku lokalnym. Plugin zostaje dodany, można go wyszukać i zobaczyć jego status.
+
+Zamykamy okno z pluginami.
+2. Konfiguracja ustawień w Vendo.
+2.1. Konfiguracja połączenia ze spedytorem
+Wchodzimy do zakładki Ustawienia -> Główne -> Parametry pracy.
+
+W zakładce Logistyka -> Spedytorzy -> Ustawienia globalne wyszukujemy plugin CzechlogisticPaxy Plugin, klikamy go i wprowadzamy następujące dane w polach:
+
+Klucz API: [klucz dostępu do api]
+Token: [token]
+
+
+Klucz i token należy wprowadzić aby system mógł prawidłowo komunikować się z API spedytora.
+2.2. Dodajemy spedytora do słownika
+Wchodzimy do zakładki Ustawienia -> Główne -> Słowniki
+
+W sekcji Logistyka wyszukujemy pozycję Spedycje. Klikamy dwukrotnie na zaznaczonej pozycji. W nowo otwartym oknie wybieramy Dodaj INSERT.
+
+Z listy rozwijanej Shemat wybieramy spedytora CzechlogisticPaxy Plugin. Następnie wprowadzamy dowolną nazwę w polu Nazwa np. CzechlogisticPaxy. Poniżej znajdują się Ustawienia, w których możemy dodatkowo skonfigurować pozostałe parametry konfigurowalne. Zapisujemy i zamykamy okno.
+
+2.3. Dodajemy pola użytkownika
+Przy pierwszym eksporcie paczek plugin powinien automatycznie stworzyć poniższe wartości dowolne, ale jeżeli tak by się nie stało, należy dodać ręcznie. W tym celu w liście tabel słownikowych w zakładce Logistyka wybieramy pozycję Wartości dowolne wspólne logistyki. Klikamy dwukrotnie na zaznaczonej pozycji. W nowo otwartym oknie Lista wartości dowolnych sprawdzamy czy istnieją dwa pola tekstowe (dwa wpisy):
+
+CZECH_LOGISTIC_BOOK_ID
+CZECH_LOGISTIC_COUNTRY
+
+
+Jeżeli nie ma tych pól dodajemy je po kolei, wybieramy Funkcje -> Dodaj wartość dowolną -> Typy proste -> Tekst. Następnie wprowadzamy dane w pola Opis, Nazwa zmiennej. Pole Opis może być dowolne, jest to tylko informacja dla użytkownika. Pole Nazwa zmiennej jest obowiązkowe i musi mieć jedną z dwóch wartości CZECH_LOGISTIC_BOOK_ID lub CZECH_LOGISTIC_COUNTRY.
+ 
+Po zakończeniu dodawania tych pól zamykamy wszystkie otwarte okna i wychodzimy z konfiguracji.
+3. Obsługa spedytora w listach przewozowych
+W celu sprawdzenia działania spedytora CzechlogisticPaxy przechodzimy w Vendo do zakładki Spedcyja -> Listy przewozowe. Dodajemy nowy list przewozowy lub wybieramy istniejący z listy. Jeżeli chcemy edytować istniejący to filtrujemy listę, w polu Spedycja wybieramy pozycję CzechlogisticPaxy. Z listy dostępnych klikamy dwukrotnie na zaznaczonej pozycji.
+
+Zostaje otwarte okno z listem przewozowym. Wybieramy spedytora w polu Spedytor, a następnie usługę w polu Usługa. Kolejnym krokiem jest dodanie paczek w dolnej liście. Klikamy przycisk plus i dodajemy paczki. Paczki muszą być tego samego typu, jeżeli tak nie będzie zostanie zwrócony komunikat o błędzie.
+
+Spedytor CzechlogisticPaxy obsługuje tylko wybrane kraje. Nie możemy obsłużyć spedytora dla kraju znajdującego sie poza listą w punkcie 4. W dodatku musi zostać wybrana odpowiednia Usługa dla danego kraju. Przy dodawaniu paczki musi zostać wybrany odpowiedni Typ paczki dla danego kraju i wybranej wcześniej usługi. Jeżeli użytkownik wybierze nieprawidłowe powiązania Kraj - Usługa - Typ paczki to zostanie poinformowany stosownym komunikatem przy eksporcie paczek. Reasumując, Typ paczki jest ściśle powiązany z Usługą i Kodem kraju (krajem). Cała lista możliwych kombinacji znajduje się w punkcie 4.
+4. Tabela: Kod kraju - Usługa - Typ paczki
+Kraj| Kod kraju| Nazwa firmy kurierskiej| Usługa (carrierCode)| Typ paczki (Type)| Czechy| CZ| Poczta Czeska| poczta| parcel| Czechy| CZ| Poczta Czeska| poczta| baliknapostu| Czechy| CZ| Poczta Czeska| poczta| balikdobalikovny| Czechy| CZ| PPL| ppl| parcel| Czechy| CZ| WeDo| wedo| parcel| Czechy| CZ| FOFR| fofr| parcel| Czechy| CZ| GEIS| geis| pallet| Czechy| CZ| GEIS| geis| halfpallet| Czechy| CZ| Packeta CZ| zasielCz| point| Czechy| CZ| 123 Kuryr| 123kuryr| parcel| Słowacja| SK| 123 Kurier| 123kurier| parcel| Słowacja| SK| Packeta SK| zasielSk| point| Słowacja| SK| Poczta Słowacka| poczta| parcel| Węgry| HU| DPD| dpdhu| parcel| Węgry| HU| Sprinter| sprinter| parcel| Węgry| HU| PickPack| pickpack| parcel| Węgry| HU| Poczta Węgierska| mpl| parcel| Węgry| HU| GLS| glshu| parcel| Rumunia| RO| DPD| dpdro| paczka| Rumunia| RO| FanCourier| fancourier| parcel| Rumunia| RO| FanCourier| fancourier| point| Rumunia| RO| SameDay| sameday| point| Bułgaria| BG| Econt| econt| parcel| Bułgaria| BG| Econt| econt| office| Grecja| GR| Econt| econt| parcel| Chorwacja| HR| Overseas| overseas| parcel| Słowenia| SI| Pošta Slovenije| slovenije| parcel| Austria| AT| DPD| dpdat| parcel| Litwa| LT| LP Express| lpexpress| parcel| Litwa| LT| LP Express| lpexpress| point| Łotwa| LV| Latvijas Pasts| lpl| parcel| Estonia| EE| Omniva| omniva| parcel
+---|---|---|---|---  
+5. Śledzenie statusu przesyłki
+Spedytor wyróżnia następujące statusy przesyłek:StatusCode| Status| pending| w oczekiwaniu| scanned| zeskanowano| sent| wysłano| transport| w transporcie| delivery| w doręczeniu| point| w punkcie odbioru| delivered| doręczono| back| do zwrotu| unclaimed| nie odebrano
+---|---  
+6. CzechlogisticPaxy vs Vendo (obiekty)
+Aby bardziej precyzyjnie określić zależność między obiektami u spedytora, a obiektami w Vendo poniżej znajduje się wyjaśnienie:CzechlogisticPaxy| Vendo| books| zbiór listów przewozowych| parcels| paczki w list przewozowy| labels| etykieta do drukowania dla podanego book number lub tracking numbers|  trackings| śledzenie statusu przesyłek na podstawie tracking numbers
+---|---  
+7. Przykładowe komunikaty błędów
+Poniżej zostały przedstawione przykładowe błędy wraz z krótkim wyjaśnieniem przyczyny ich występowania.Błąd| Opis| No suitable dimension found (Latvijas Pasts / package) for weight (5kg)!| błąd ten oznacza że klient nie ma cennika na Łotwę, ta sama sytuacja może wystąpić w innym kraju dla danej usługi, spedytor CzechlogisticPaxy nie posiada informacji w którym kraju i dla jakich usług wystąpią określone komunikaty, należy wtedy wybrać inną usługę wraz z typem paczki
+---|---
+Images
+
+
+
+
+
+
+
+
+
+
+

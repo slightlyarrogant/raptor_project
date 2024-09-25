@@ -1,0 +1,25 @@
+Konfiguracja 
+Przed przystąpieniem do generowania deklaracji wysyłanych do urzędu skarbowego konieczne jest dokonanie niezbędnych ustawień. 
+*	Podstawowa konfiguracja to wgranie do systemu pliku plugina a następnie instalacja na Bazie danych zakładki e-deklaracji, która odpowiada za generowanie deklaracji. 
+*	Kolejnym bardzo istotnym parametrem konfiguracji jest weryfikacja ,czy podczas definiowania ustawień związanych z danymi firmy zostały uzupełnione informacje dotyczące Danych urzędowych. To właśnie z tego miejsca będą one w późniejszym czasie pobierane podczas generowania deklaracji. 
+*	Bardzo ważnym polem podczas definiowania danych urzędowych jest określenie numeru Urzędu skarbowego, do którego przesyłana będzie deklaracja. Informacje o numerze kodów urzędów Skarbowych, dostępne są na stronie http://www.boinet.one.pl/KodyUS.pdf. Zdefiniowanie numeru urzędu pozwoli na przyporządkowanie właściwej nazwy podczas generowania deklaracji VAT-7. System VENDO.ERP w swojej bazie posiada informacje o wszystkich dostępnych urzędach na terenie kraju. 
+Wprowadzenie kodu Urzędu Skarbowego, pod który podlega Firma, odbywa się z poziomu Danych Firmowych. Aby tego dokonać należy:   
+
+    - Wejść w menu `Ustawienia` > `Główne` > `Parametry Pracy` > `Ogólne` > `Dane firmy [Pokaż Dialog]` 
+    - Zakładka `Dane Urzędowe` 
+    - Pole `Urząd Skarbowy`, należy wprowadzić czterocyfrowy kod Urzędu Skarbowego, kody urzędu dostępne są na stronie internetowej (rysunek poniżej). 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F5/fe7f046ccfd67e2ad148db7c0b0c5355-26854-0.png)
+
+Rysunek 1 Dane Urzędowe - definiowanie nr Urzędu
+
+•	Kolejnym punktem konfiguracyjnym (przed przystąpieniem do generowania deklaracji) jest nadanie stosownych uprawnień. Uprawnienia te pozwalają na dostęp do zakładek znajdujących się w module Rejestr VAT e-Deklracje. Aby nadać uprawnienia do zakładek należy: 
+    - W module `Pracownicy` wybrać zakładkę `Pracownicy` > zakładka `pozostałe dane` > `Uprawnienia` 
+    - W sekcji Kategoria wybrać zakładkę eDeklaracje. Nadanie uprawnień odbywa się poprzez zaznaczenie checkboxa obok pozycji z deklaracją która ma być dostępna dla definiowanego pracownika. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z3/f542f623403daccec7e906d70991a9c4-68416-0.png)
+ 
+Rysunek 2 Nadanie uprawnień – eDeklaracje
+
+
+Uprawnienia te wiążące są jedynie w przypadku, gdy użytkownik posiada uprawnienie `Dostępu do rejestru VAT`.

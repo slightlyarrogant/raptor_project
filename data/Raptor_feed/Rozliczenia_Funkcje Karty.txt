@@ -1,0 +1,15 @@
+# Rozliczenia
+
+W ramach funkcjonalności karty rozliczenia użytkownik ma możliwość korzystania z następujących funkcji:
+- rozliczenie wybranych zapisów
+- automatyczne rozliczenie wybranych zapisów
+- szczegóły rozliczeń
+- raporty rozliczeń
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+
+![tmp7f32c7bb-fd7d-463b-a9a5-3a9e412a6fed](https://www.cfi.pl/vendohelp/content/imgs/V7/e62f81efdcd7f413536b99ee8b22b574-100739-0.png)
+
+![tmpac844777-64df-42b6-9950-21c8b3bbe25a](https://www.cfi.pl/vendohelp/content/imgs/X9/98e514cf73e5180682cae31915327f8e-3538-0.png)

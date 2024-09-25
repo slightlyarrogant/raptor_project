@@ -1,0 +1,1 @@
+-[postgres-12.2.exe](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20BAZA%20BANYCH/Windows/postgres-12.2.exe)

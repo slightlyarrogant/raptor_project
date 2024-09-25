@@ -1,0 +1,18 @@
+## VAT wg kontrahentów
+
+W zależności od typu transakcji – sprzedaży bądź zakupu oraz parametrów wprowadzanych przez Użytkownika w standardowych filtrach raportu, okienko prezentuje dane w różnych układach:
+
+-	Miesiąc od – miesiąc początkowy dla analizy danych,
+-	Do: - miesiąc końcowy dla analizy danych,
+-	Rejestr: - sprzedaż bądź zakup,
+-	Nazwa rejestru – wybór rejestru sprzedaży/zakupu,
+-	Towary/Usługi,
+-	Transakcja VAT – wybór transakcji VAT po stronie sprzedaży/zakupu,
+-	VAT – pole dostępne tylko dla zakupu. Po jego zaznaczeniu program pokazuje wartości operacji:
+    -	Tak - podlegające VAT,
+    -	Nie -  niepodlegające VAT,
+    -	Warunkowo – transakcje oznaczone przez Użytkownika podczas redakcji dokumentu kosztowego jako pozycje do warunkowego odliczenia VAT.
+
+![tmp79d51b43-33cc-43ae-8841-de3e7b500c13](https://www.cfi.pl/vendohelp/content/imgs/V9/78ce3b1d9d54450c87e458c0b025ee7d-121128-0.png)
+ 
+*VAT wg kontrahentów*

@@ -1,0 +1,97 @@
+# Hellmann plugin
+
+## Informacje ogóle
+
+Implementacja rozwiązania w systemie Vendo miało na celu stworzenie uniwersalnego plugina mającego umożliwienie komunikacji jak również wymiany danych pomiędzy  spedytorem Hellmann a systemem VENDO. Zasadza działania wygląda analogicznie jak w przypadku pozostałych spedytorów 
+
+## Wytyczne do wdrożenia
+
+### Niezbędne informacje
+
+#### Dane dostępowe do środowiska testowego i produkcyjnego po stronie Hellmann:
+
+1. Login  
+2. Hasło
+3. Numer Kontrahenta (numer identyfikacyjny nadawany przez Hellmann'a)
+4. ID kontrahenta dla usługi trackingu (identyfikator nadawany przez Hellmann'a).
+6. Hasło dla usługi trackingu
+
+**Dane te muszą być ustawione w parametrach pracy spedytora na wszystkich stanowiskach, z których będzie odbywać się wysłka listów przewozowych.**
+
+W parametrach pracy jest też dostępny checkbox do ustawienia korzystania z serwisów testowych.
+
+### Szczegóły usług oferowanych przez Hellmann:
+
+#### Wybór i ustawienia usług
+
+1. Usługi dostępne sa z poziomu słownika spedycjnego:
+
+	- Załączenie dodatkowych informacji
+	- Zwrot dokumentów do zleceniodawcy
+	- Zwrot dokumentów do archiwum online
+	- Telefon do odbiorcy przed dostawą
+	- Załączenie numeru do osoby kontaktowej
+
+2. Sposoby dostaw dostępne są z poziomu słownika spedycjnego:
+
+	- Dostawa samochodem z windą
+	- Dostawa samochodem DMC
+	- Dostawa samochodem z windą i paleciakiem
+
+3. Ustawienie priorytetu dostawy dostępne są z poziomu słownika spedycjnego:
+
+	- Priorytet
+	- priorytet 8
+	- priorytet 10
+	- priorytet 12
+
+4. Typy spedycji dobierane są automatycznie: "Drobnica kraj" na terenie Polski lub "Drobnica Export PP".
+
+5. Obsługiwane typy palet:
+
+	- Paleta przemysłowa
+	- Pół paleta
+	- Paleta jednorazowa
+
+
+## Konfiguracja
+
+Przed przystąpieniem do pracy konieczne jest podegranie stosownego plugina. Konfiguracji takiej dokonujemy z poziomu:
+
+`Ustawienia` > `Główne` > `Pluginy` > `Dodaj plugin`
+
+W następnym etapie konfiguracyjnym należy przejść do ustawień odpowiedzialnych za komunikacje pomiędzy systemem Vendo a Hellmann. Dokonujemy tego z poziomu:
+
+`Ustawienia` > `Główne` > `Parametry pracy` > `Logistyka` > `Spedytorzy` > `Ustawienie globalne` > `Hellmann Plugin`
+
+Ustawienia parametryzowane z tego poziomu, należy ustawić wspólnie z opiekunem przydzielonym przez spedytora. Dane które należy uzupełnić:
+- *Login* są unikalny numer kontrahenta.
+- *Hasło* 
+- *Numer Kontrahenta* - Nazwa identyfikująca nadawana przez Hellmann'a. Informacja przekazywana przez spedytora.
+- *ID kontrahenta* -  ID kontrahenta dla usługi trackingu.
+- *Hasło dla usługi trackingu*
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U6/e3c149529990719de601fad0fa707711-29105-0.png)
+
+W kolejnym etapie konfiguracji, naleąy przejść do ustawień słowników systemowych. Parametryzacja taka wykonywana jest wspólnie ze opiekunem przydzielonym przez spedytora. Dostępna jest ona poprzez wybór `Ustawienia` > `Główne` > `Słowniki` > `Logistyka` : `Spedycje` > `Hellman`.
+
+Po wyświetleniu ustawień konfiguracyjnych, zakładka > Ogólne > konfigurowana jest w standardowy sposób dla wszystkich spedytorów.
+
+Konfiguracja odnosząca się do Spedytora Hellmann dostępna jest z poziomu zakładki "Dodatkowe".
+
+W zakładce "Hellmann Plugin" zaznaczyć można dodatkowe usługi, sposoby odstawy i nadać priorytet wysyłek
+
+System Vendo odpowiada za poprawne przesłanie danych do Hellmann'a za pośrednictwem API, na podstawie zdefiniowanych parametrów podczas konfiguracji ustawień. W systemie nie ma domyślnych ustawień dostępnych po uruchomieniu plugina. 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L5/436f101bd01c33966091c147e0254685-22611-0.png)
+
+ 
+## Zasada działania.
+
+Wywołanie funkcjonalności odbywa się z poziomu `Menu głównego` > `Logistyka` > `Listy przewozowe`. Opis funkcjonalności "Zakładek" Listu przewozowego opisany jest w oddzielnej dokumentacji.   
+
+Funkcjonalność plugina, po odpowiedniej jego konfiguracji, polega na wywołaniu danych udostępnianych przez spedytora za pośrednictwem API. Dane te widoczne będą podczas generowania wydruku etykiet jak i listów przewozowych, tam właśnie prezentowane sa wszystkie informacje które zostały zdefiniowane na etapie konfiguracji. 
+
+Z poziomu dialogu "Dane spedytora" użytkownik ma możliwość wydruku Etykiet listu przewozowego. Generowanie wydruku możliwe jest z poziomu listy Listów przewozowych.

@@ -1,0 +1,18 @@
+# Lista środków trwałych
+
+W ramach funkcjonalności karty lista środków trwałych użytkownik ma możliwość korzystania z następujących funkcji:
+- konta księgowania środka trwałego
+- wartość amortyzowana poza programem
+- przeliczenie planu amortyzacji środka trwałego
+- kasowanie niewykonanego planu amortyzacji
+- generowanie brakującego planu amortyzacji
+- funkcje specjalne – kopiuj środek trwały
+- pokaż podsumowanie
+- drukuj
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp9f18f65e-be83-495c-803b-e095785aac13](https://www.cfi.pl/vendohelp/content/imgs/B7/68b35b9b9d8fa6f45d2f10b4dec2cabf-109162-0.png)
+
+![tmp74fe3e47-8ca3-416c-8a35-7414059f4975](https://www.cfi.pl/vendohelp/content/imgs/F9/d35ba1e4d043d29763156da83034b484-36760-0.png)

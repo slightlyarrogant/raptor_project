@@ -1,0 +1,37 @@
+H2H-ING Bussines Plugin V2
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/h2h-ingbussines-plugin-v2
+scraped_at: 2024-09-05T12:20:11.104152
+last_updated: 2024-09-05T12:20:11.104204
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/H2H-ING Bussines Plugin V2
+meta_tags: ['przelewów', 'bussines', 'certyfikat', 'vendo', 'oraz', 'wyciągów', 'bankowych', 'poprzez', 'service', 'należy']
+
+Content
+ING Bussines Plugin V2
+Informacje ogóle
+Plugin umożliwia wysyłke przelewów oraz pobierania wyciągów bankowych poprzez integrację z ING Bussines Web Service.
+Konfiguracja połączenia
+W pierwszym kroku Klient musi podpisac umowę z ING, na udostępnienie ING Web Service. Następnie należy w serwisie internetowym ING bussines samodzielnie wygenerować certyfikat komunikacyjny oraz nadać uprawnienia dla użytkownika. Certyfikat nalezy zainstalować dla użytkowników lokalnych na każdym stanowisku, z którego będzie nawiązywana komunikacja z serwisem bankowym.
+W celu wskazania certyfikatu komunikacyjnego należy przejść do Vendo - > Parametry pracy -> HomeBanking -> Banki -> ING -> ING Autoryzacja -> Autoryzacja i wskazać certyfikat komunikacyjny.
+Dane certyfikatu mogą być zapisane w kontekście bazy lub firmy.
+
+Poprawność zainstalowania certyfikatów można sprawdzić za pomocą komendy w Vendo Terminalu:
+
+p-ing certyficate
+
+Pobieranie wyciągów
+Pobieranie wyciągów odbywa się poprzez zadanie bot-a IngGetStatment.
+
+[PluginTask]
+ name=IngGetStatmentV2
+ cronTxt= 0 * * * *
+
+Ustawienia automatycznych rozliczeń wpłat i wypłat jest analogiczne jak przy pozostałych integracjach bankowych.
+Wysyłka przelewów
+Wysyłka przelewów odbywa się z poziomu Poczekalni przelewów Vendo.ERP.
+
+Poczekalnia przelewów -> Eksport zbiorczy do H2H
+
+Images

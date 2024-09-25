@@ -1,0 +1,84 @@
+# Faktura Wewnętrzna
+## Informacje ogólne
+
+Dokument Sprzedaż Wewnętrzna 
+
+
+## Cechy dokumentu
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |FW
+|Wpływ na stan magazynowy |Nie
+|Czy wchodzi do płatności| Nie
+|Czy możliwe korekty| Tak
+|Nazwa dla dat|Data1:DataSprzedazy; Data2:DataWystawienia
+|Nazwa dla klienta |Klient1:"Dostawca" Klient2:"Nadawca";
+|Czy dokument przenosimy do rej. Vat | Nie
+|Czy dokument może mieć ceny zerowe | Tak
+|Czy dokument może posiadać pozycje zerowe |Nie
+|Wielowalutowy, |Tak
+|Czy dokument może być eksportowy |Nie
+|Musi być klient, | Tak
+|Księgowany |Tak
+|Jakie cenniki | kartoteki cennikowe
+|Czy są płatności - rozrachunki| Nie
+|Czy są płatności - skojarzenie z WP/WY|Nie
+|Czy może posiada ceny ujemne | Nie
+|Czy dokument księgujemy | Nie
+|Pozwolenie na ceny ujemne | Nie
+
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu FW to: 
+
+-	Data Sprzedaży
+-	Wystawienia – data wystawienia dokumentu
+-	Dostawca – klient 
+-	Nabywca – klient
+-	Forma płatności , data Płatności
+-	Wartość netto, brutto, VAT
+-	Rozliczenie dokumentu – Pozostało to zapłaty, Zaliczki
+-	Grupa I – oznacza do jakiej grupy cen sprzedaży należy klient Nabywca
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V9/14bdeaf107f6dee3b2d64849d26b8433-35361-0.png) 
+
+
+W zakładce Dane kontrahenta znajdują dokładne dane adresowe oraz NIP Dostawcy i Nabywcy . 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Z5/b0321bed22405ff98209aaad657011d1-30354-0.png)
+ 
+W zakładce Inne parametry znajdują się dane:
+-	Waluta oraz kurs w jakim przeliczany jest dokument Walut do PLN
+-	Numer zamówienia – Numer Zamówienia Obcego (od odbiorcy), 
+-	Numer Dostawy
+-	Forma dostawy – w jaki sposób dostarczony produkt
+-	Spedycja - pole oznaczający przewoźnika towarów występujących na dokumencie, dodatkowo możliwe jest zaznaczenie jakiego typu jest przesyłka
+-	Kontakt oraz E-mail – uzupełniane są dane kontaktowe do odbiorcy mogą być przenoszone z zamówienia
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D9/ac630535332a95215d4485db4c23f922-27447-0.png)
+ 
+W zakładka Opis i Uwagi można wprowadzić Uwagi które mogą być drukowane na wydruku dokumentu FW.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J3/7c79801d9e7b1ef6d31a6f5a439be1da-19527-0.png)
+ 
+W zakładce Wartości dowolne można dodać dowolnego typu pole które będzie wyświetlane w tej zakładce. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X5/bb3c78c37bd4949699c1220f7b2b3aa8-31764-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla Faktury Wewnętrznej zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej, którą podczas dodawania do dokumentu możemy zmienić
+-	Grupa Cen – grupa cen sprzedaży przypisana do Nabywcy
+-	Cena0 : - Cena sprzedaży przed obniżkami cen sprzedaży
+-	Ilość – ilość sprzedawanych  kartotek towarowych w podstawowej jednostce 
+-	Rabat – wyliczony, wprowadzony lub przeniesiony z zamówienia obcego. Wyliczony może być na podstawie danych z kartoteki Klienta, Nabywcy
+-	Cena brutto, netto – cena po naliczeniu rabatu w walucie.
+-	Stawka VAT – przypisana do kartoteki towarowej.
+-	Stan, Magazyn i Rezerwacja – pokazuje ilość kartoteki towarowej, ogólnie na stanie, w danym magazynie oraz ilość zarezerwowana na innych dokumentach. 
+-	Jednostki Alternatywne – jeśli zdefiniowane są przeliczniki jednostek alternatywnych to tutaj pojawi się ilość w jednostce zadeklarowanej
+-	Wartości dowolne – mogą być zdefiniowane dla pozycji Paragonu Fiskalnego.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I8/e61524bd136199bcb3f130b2ca1a7207-22181-0.png)
+

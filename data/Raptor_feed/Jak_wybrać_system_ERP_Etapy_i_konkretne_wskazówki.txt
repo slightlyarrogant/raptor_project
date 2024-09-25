@@ -1,0 +1,70 @@
+# Jak wybrać system ERP? Etapy i konkretne wskazówki
+
+# Jak wybrać system ERP żeby nie żałować?
+
+## Decyzja o rozpoczęciu wyboru systemu ERP
+
+
+
+Wybór systemu ERP oraz dostawcy jest dość istotnym procesem. Należy pamiętać, że decyzje taką podejmuje się na lata. Już samo przygotowanie organizacji do planowanego przedsięwzięcia jest pewnego rodzaju projektem. Zanim podejmiemy działania związane z wyborem systemu ERP powinniśmy zdefiniować własne cele biznesowe. To znaczy, zidentyfikować swoje potrzeby, opisać procesy i zweryfikować gotowość naszej organizacji do wprowadzenia zmiany.
+
+## Na co warto zwrócić uwagę przy wyborze systemu ERP, aby nie żałować?
+
+Przy wyborze systemu ERP warto zwrócić uwagę na cechy systemu oraz doświadczenie  firmy wdrażającej.
+
+### Na co zwrócić uwagę wybierając firmę wdrażającą oprogramowanie?
+
+- Doświadczenie firmy wdrożeniowej –  Bardzo ważne jest upewnienie się, że dostawca posiada wystarczające doświadczenia w firmach o podobnym profilu i wielkości. W ten sposób, unikniesz problemów w trakcie wdrożenia, związanych z niezrozumieniem specyfiki działania.
+- Referencje i opinie klientów –  Zbadaj opinie innych klientów, którzy już korzystają z systemu ERP tego dostawcy. Sprawdź referencje i zbierz informacje o doświadczeniu oferenta z wdrożeniem i obsługą systemu w firmach o podobnym profilu.
+- Wsparcie techniczne –  Skoncentruj się na dostępności i jakości wsparcia technicznego oferowanego przez dostawcę. Sprawdź, czy dostawca oferuje różne kanały wsparcia, jak również umowy SLA (Service Level Agreement).
+- Koszty wdrożenia i utrzymania –  Oceń koszty związane z wdrożeniem systemu ERP, takie jak licencje, implementacja, dostosowywanie, szkolenia, utrzymanie i ewentualne koszty związane z migracją danych. Upewnij się, że nie ma ukrytych opłat i że koszty są zgodne z budżetem firmy.
+
+### Jakie cechy są istotne przy wyborze systemu ERP?
+
+- Funkcjonalność –  Sprawdź, czy system ERP oferuje wszystkie funkcje i moduły, które są niezbędne dla Twojej firmy. Upewnij się, że system jest wystarczająco elastyczny, aby można go było dostosować do specyficznych potrzeb działalności przedsiębiorstwa.
+- Łatwość obsługi –  Sprawdź, czy interfejs użytkownika systemu ERP jest intuicyjny i łatwy w obsłudze. Im prostszy system, tym łatwiej będzie wprowadzić go w życie i zyskać akceptację pracowników.
+- Dostępność rozwiązań mobilnych –  Mobilność jest ważna, dlatego system ERP powinien oferować możliwość dostępu do danych i funkcji systemu z urządzeń mobilnych.  Krótko mówiąc, powinno się sprawdzić, czy dostawca oferuje aplikacje mobilne lub interfejsy dostosowane do urządzeń przenośnych.
+- Otwartość na integracje  poprzez API –  System musi posiadać możliwości dotyczące integracji z innymi rozwiązaniami. Najczęściej spotyka się rozwiązania oparte o otwarte API. API umożliwia połączenie z innymi systemami np. eCommerce, systemy bankowe, spedytorzy, systemy CAD.
+- Skalowalność – Upewnienie się, że system ERP jest skalowalny i będzie w stanie rosnąć wraz z rozwojem Twojej firmy. Ogólnie mówiąc, system powinien być zdolny do obsługi większej liczby użytkowników, zwiększonej ilości transakcji i rozszerzenia działalności na nowe obszary.
+- Zgodność techniczna –  Zweryfikuj, czy system ERP jest zgodny z istniejącą infrastrukturą technologiczną firmy. To znaczy, upewnij się, że system działa na preferowanych przez Ciebie platformach i systemach operacyjnych.
+- Bezpieczeństwo danych –  Upewnij się, że system ERP oferuje odpowiednie mechanizmy bezpieczeństwa danych. Przykładem mogą takie jak szyfrowanie połączeń, autoryzacja dostępu, bezpieczne przechowywanie haseł.
+- Zgodność z przepisami prawa – Upewnij się, że system ERP jest zgodny z aktualnymi przepisami a producent systemu wprowadza aktualizacje na czas.
+
+
+
+## Etapy wyboru systemu ERP
+
+Aby rzetelnie przeprowadzić proces wyboru systemu ERP powinniśmy starannie zaplanować i zrealizować następujące etapy:
+
+### Analiza potrzeb biznesowych
+
+Pierwszym krokiem przy wyborze systemu ERP jest dokładna analiza potrzeb i celów biznesowych firmy. Zrozumienie, jakie procesy i obszary działalności mają być zarządzane przez system ERP, pomoże określić priorytety i cele projektu. Te elementy powinny zostać określone przez Zarząd lub wspólnie z Zarządem firmy, zapisane i przedstawione wszystkim uczestnikom projektu. Zrozumienie idei przez pracowników jest niezwykle istotne i przybliży organizację do pomyślnej realizacji projektu wdrożeniowego.
+
+### Wybór zespołu projektowego
+
+Następnie należy powołać zespół projektowy, który będzie odpowiedzialny za proces wyboru i wdrożenia systemu ERP. W zespole tym powinny znaleźć się osoby reprezentujące różne działy firmy (kluczowi użytkownicy), aby zapewnić wszechstronne spojrzenie na potrzeby organizacji. Bardzo istotną rolę odgrywa również kierownik projektu, który odpowiedzialny będzie za organizację całego przedsięwzięcia.
+
+### Określenie budżetu projektu
+
+Określenie budżetu na wdrożenie systemu ERP jest kluczowe. Natomiast pod uwagę należy wziąć również koszty związane z utrzymaniem systemu po jego wdrożeniu. Konieczna może okazać się również modernizacja infrastruktury sprzętowej (komputery, serwer, itd.). Kalkulując budżet uwzględnić trzeba koszty licencji na oprogramowanie oraz ew. dodatkowych komponentów (np. silnik bazy danych), wdrożenia, szkoleń, wsparcia technicznego i utrzymania systemu (roczne opłaty licencyjne i serwisowe).
+
+### Wybór oferentów systemu ERP
+
+Po przepracowaniu powyższych etapów możemy przejść do badania rynkowego. Wpierw należy zidentyfikować dostawców systemów ERP, którzy spełniają Twoje potrzeby. Nie każdy system ERP i nie każdy dostawca będzie odpowiednim wyborem dla Twojego biznesu lub branży. Rozważ dostawców o uznanej renomie, ugruntowanej pozycji na rynku i posiadających doświadczenie w Twojej branży.
+
+### Przeprowadzenie demonstracji i ocena systemów
+
+Po wyborze kilku potencjalnych dostawców, umów się na prezentacje systemów ERP i przetestuj je w praktyce (prezentacja działającego systemu na przykładzie procesu zbliżonego do Twojej działalności). Zwróć uwagę na:
+
+- obsługę podstawowych i specyficznych procesów firmy,
+- interfejs użytkownika w tym interfejs mobilny,
+- łatwość obsługi,
+- zgodność z wymaganiami,
+- skalowalność i szybkość pracy,
+
+### Przygotowanie wniosków i negocjacje
+
+Po przeprowadzeniu prezentacji i ocenie, przygotuj wnioski, podejmij decyzję o wyborze systemu ERP i dostawcy. Następnie, przystąp do negocjacji w celu uzyskania najlepszych warunków cenowych i korzystnej umowy.
+
+
+

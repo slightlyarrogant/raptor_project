@@ -1,0 +1,433 @@
+MES
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/mes/mes
+scraped_at: 2024-09-05T12:12:26.797527
+last_updated: 2024-09-05T12:12:26.797643
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/MES
+meta_tags: ['jest', 'pracy', 'maszyna', 'maszyny', 'danych', 'pracuje', 'vendo', 'stan', 'dane', 'maszyn']
+
+Content
+Cel
+Założenie ogólne maja na celu kontrole parametrów pracy maszyny na podstawie zainstalowanych czujników. Pobierane dane mogą być wykorzystane do starowania czy maszyna pracuje czy też nie lub są zapisywane do bazy jako wartości punktów pomiarowych.
+Uprawnienia lokalizacja
+Ustawienia główne programu > Parametry Pracy > MES > Przycisk: konfiguracja, Stanowiska, Zestawy pomiarowe
+Opis
+informacje techniczno-handlowe
+
+MES (Manufacturing Execution System) – System Vendo MES służy do efektywnego zbierania informacji o realizacji produkcji w czasie rzeczywistym wprost ze stanowisk produkcyjnych i ich transferu na obszar biznesowy. Systemy MES wykorzystują technologie informatyczne, urządzenia elektroniczne i elementy automatyki, oprogramowanie, umożliwiając zbieranie informacji bezpośrednio z maszyn lub przy udziale pracowników bezpośrednio-produkcyjnych.
+
+Funkcjonalność systemu Vendo MES
+
+śledzenie i wizualizacja produkcji w czasie rzeczywistym,
+śledzenie rzeczywistego czasu i wydajności pracy maszyn i ludzi
+śledzenie rzeczywistych przestojów maszyn
+rejestracja przyczyn przestojów nieplanowanych,
+rejestracja i kontrola wykonania zleceń produkcyjnych na poziomie operacyjnym,
+zbieranie informacji o wadach i jakości produkowanych części,
+możliwość pobierania danych ze sterowników
+natychmiastowe powiadamianie o zatrzymaniach maszyn występujących w czasie produkcji,
+możliwość wprowadzania danych automatycznie (maszyna), jak i ręcznie (operator),
+jeden system – pełna dwukierunkowa wymiana danych z modułami Vendo.ERP Produkcja i Harmonogramowanie
+pracownik na hali produkcyjnej działa na jednym panelu operatorskim – Vendo Czytnik
+generowanie automatycznych raportów, szczegółowa analiza zgromadzonych informacji,
+podsumowania i rozliczenia kosztów pośrednich i kosztów bezpośrednich produkcji,
+
+Korzyści z wdrożenia systemu
+
+wzrost produktywności
+wzrost wskaźnika OEE
+skrócenie czasu cyklu produkcyjnego
+obniżenie kosztów produkcji
+poprawa wizualizacji produkcji w toku
+skrócenie przestojów nieplanowanych
+poprawa jakości produkcji
+zwiększenie stopnia wykorzystania zdolności produkcyjnych
+
+Założenia i architektura MES
+Podstawową ideą systemu Vendo MES jest zautomatyzowane pobieranie informacji o tym czy maszyna pracuje oraz z jaką prędkością bezpośrednio z maszyny. Dodatkowo możliwe jest zbieranie z maszyny dodatkowych informacji o jej parametrach pracy i zapisywanie do bazy jako punkty pomiarowe.
+Informacje są następnie przesyłane do panelu Vendo Czytnik operatora maszyny, który wpisuje informacje o:
+
+Zleceniu / KKW nad którym aktualnie pracuje
+Liczbie wyprodukowanych sztuk
+Liczbie braków
+Przyczynach przestojów
+Przyczynach pracy nienormatywnej
+Pobieranie informacji o statusie pracy maszyny może się odbywać na 3 sposoby
+zewnętrzny czujnik podłączony do maszyny i zbierający informacje o jej aktywności
+podpięcie się do sterownika maszyny i pobieranie danych
+ręczne wprowadzanie przez operatora
+
+
+Instalacja i konfiguracja MES
+Instalacja systemu Vendo MES składa się z następujących etapów
+
+Zlokalizowanie sterowników przy maszynach z których będą pobierane dane. Sterownik musi być wspierany przez MES Kolektor. Lista wspieranych sterowników i protokołów jest opisana w sekcji z adapterami.
+Uzyskanie informacji z jakich adresów w sterowniku będą pobierane dane (informacje te należy uzyskać od lokalnego automatyka zajmującego się opieką nad sterownikami, jakie to są dane można znaleźć w rozdzielę poświęconym konkretnym adapterowi)
+Konfiguracja MES BOT (rozdział VENDO BOT("VENDO BOT") )
+Konfiguracja modułu MES w Vendo.ERP (rozdział Konfiguracja modułu MES("Konfiguracja modułu MES") )
+Konfiguracja czujników MESowych (rozdział Konfiguracja czujników ("Konfiguracja czujników ")) Instalacja i konfiguracja poszczególnych elementów systemu MES została opisana w odpowiednich rozdziałach
+
+Maszyna
+Maszyna – jest to urządzenie / stanowisko pracy, które chcemy monitorować pod kątem wykorzystania i/lub monitorować parametry jego pracy
+Rodzaje stanów maszyny
+Zasadniczo maszyna ma dwa stany. Stan w którym uznajemy, że maszyna pracuje i stan w którym uznajemy, że maszyna nie pracuje. Jednak stany te są wzbogacane o dodatkowe informacje
+Praca: Praca Normatywna
+Dla trybu impulsowego oznacza, że maszyna pracuje zgodnie z normatywem. Dla trybu czasowego oznacza, że maszyna pracuje. Dodatkowo na panelu Vendo Czytnik operator powinien określić pod jakie zlecenie pracuje operator.
+Praca: Praca Nienormatywna
+Występuje wyłącznie w trybie impulsowym. Przejście w ten stan oznacza, że maszyna pracuje o zdefiniowany zakres wolniej lub szybciej niż zakłada normatyw
+Praca: Praca Mikroprzestój
+W trakcie pracy może dochodzić do uzasadnionych technologicznie i normatywnie przerw w pracy maszyny. Przykładowo może być to czas niezbędny na zdjęcie z maszyny wyrobu gotowego, dodanie surowca, drobne regulacje. Określamy to jako mikroprzestój.
+Przestój: Przestój Zwykły
+Automatyczne przejście jeżeli maszyna przestała pracować i upłyną czas podany w mikroprzestoju. Przyczynę przestoju podaje operator (awaria, przezbrojenie, itd.)
+Przestój: Przestój Przezbrojenie
+Jest to stan w którym maszyna nie pracuje z powodu przezbrojenia pod nowe zlecenie
+Przestój: Przestój Mikropraca
+Podczas przezbrojenia operator może na krótki, nie dłuższy niż określony w normatywie okres uruchamiać maszynę w celu sprawdzania poprawności ustawień.
+Brak danych
+Stan brak danych występuje wtedy, kiedy nastąpi utrata połącznia z MES kolektor lub w bazie MES kolektorze brak jest aktualnych danych. Stan ten pojawi się jeżeli brakuje danych przez okres czasu większy niż 30 sek. Jeżeli przyczyna braku danych była chwilowa, to zostaną uzupełnione. Jeżeli dane zostały utracone, to pojawi się stan 'Brak danych'
+Integracja VENDO MES - MASZYNA poprzez sterownik maszyny
+Informacje ogólne
+Każda maszyna pracująca numerycznie posiada swój sterownik. Można pobierać informacje o pracy maszyny bezpośrednio ze sterownika. Jakie aktualnie sterowniki są wspierane, oraz opis jak je podłączyć można znaleźć w sekcji z opisem adapterów
+Integracja VENDO MES - MASZYNA poprzez panel operatora - ręczna rejestracja czasu pracy i przestojów
+Informacje ogólne
+W przypadku, jeśli automatyczne zbieranie informacji o pracy maszyny nie jest możliwe lub wykonanie takiej integracji nie jest opłacalne, informacje o statusie pracy maszyny mogą być wprowadzane „ręcznie” przez operatora na Panelu Operatorskim. Innym zastosowaniem pracy operatorskiej jest awaria uniemożliwiająca zbieranie danych
+Konfiguracja Stanowisk dla MESa Operatorskiego
+Ustawienia programu > Parametry Pracy > MES > Przycisk: [Konfiguracja]
+
+W lewej części dialogu klikamy ikonkę [+] i pojawia się dialog konfiguracji MES. Wystarczy ustawić pole typ MES na MES operatorski i zapisać dialog. W prawej części dialogu klikamy ikonkę [+] i pojawia się dialog dodania maszyny do MESa Operatorskiego. Typ określamy na czasowy wybieramy stanowisko i dajemy zapisz. Kontynuujemy z kolejnymi maszynami.
+VENDO BOT
+Informacje ogólne
+Vendo BOT w architekturze MES ma trzy podstawowe zadania:
+
+Pobieranie danych z sterowników maszyn i zapis tych danych w postaci nieprzetworzonej w lokalnej bazie danych (typu SqlLite). Zajmuje się tym proces zwany MES Kolektor.
+Pobranie wcześniej zapisanych danych przez MES Kolektor i ich przetworzenie oraz interpretacja.
+Przekazywanie informacji o zmianie stanu maszyny do Paneli Operatorskich (Vendo Czytnik) w celu uzupełnienia przez operatora przyczyn zmiany stanu. Np. przyczyny awarii, przyczyny pracy ze zmniejszoną wydajnością, wyboru przewodnika produkcyjnego (KKW) gdy maszyna rozpoczęła pracę.
+
+Konfiguracja BOT'a
+Optymalnym rozwiązaniem jest jeśli do komunikacją z sterownikami zajmuje się osobny BOT. Jego konfiguracji dokonujemy w pliku konfiguracyjnym cfg. Ścieżka do pliku konfiguracyjnego jest określona na profilu połączeniowym w Vendo Starterze.
+
+W pliku konfiguracyjnym wystarczy dodać następującą sekcję:
+[MesBot]
+
+VENDO ERP – Moduł MES
+Informacje ogólne
+Vendo MES jest modułem systemu Vendo ERP, który umożliwia konfigurację oraz prezentację aktualnych stanów maszyny i raportów.
+Konfiguracja modułu MES
+Pojęcia
+MES – fizyczny lub logiczny zbiór czujników.
+Czujnik – aktualnie czujnik jest tożsamy z stanowiskiem/maszyną. Pojedyncza maszyna może mieć jeden czujnik oraz wiele punktów pomiarowych. Dane z czujnika wpływają na to czy maszyna pracuje, nie pracuje, pracuje nienormatywnie, itd.
+Punkt pomiarowy – dodatkowe dane zbierane z maszyny. Mogą wpływać poprzez odpowiednie reguły na stan maszyny.
+Zestawy pomiarowe – zbiór wartości dowolnych do których zapisywane są pomiary
+Konfiguracja MES
+Tutaj MES jest rozumiany jako fizyczny lub logiczny zbiór czujników. W praktyce przeważnie będzie to to prostu sterownik przy maszynie. Dla każdego sterownika definiujemy osobny MES.
+Uruchamiamy Parametry pracy > MES > MES konfiguracja > Dodaj po lewej stronie
+
+
+Aktywny – czy dany mes jest włączony czy też nie
+MesID – id rekordu
+Nazwa – dowolna nazwa jednoznacznie identyfikująca tego MES’a
+Typ MES – typ mes. Obsługiwane typy
+MES Box
+MES API
+MES Advantech Wise
+MES Mitsubishi
+MES operatorski (Specjalny typ mes, używany jeżeli mamy awarie. Nie należy go konfigurować ręcznie)
+
+
+Adres IP – adres sterownika (nie zawsze wymagane)
+Login – login który należy podać pobierając dane z sterownika (nie zawsze wymagane)
+Hasło – hasło które należy podać pobierając dane z sterownika (nie zawsze wymagane)
+Uwagi – dowolne uwagi
+Skasuj dane w MES Kolektor starsze niż – czas jaki będą przechowywane dane w MES Kolektorze. Po tym czasie dane zostaną skasowane.
+
+Konfiguracja czujników
+Czujnik jest tożsamy z stanowiskiem/maszyną. Pojedyncza maszyna może mieć jeden czujnik oraz wiele punktów pomiarowych. Dane z czujnika wpływają na to czy maszyna pracuje, nie pracuje, pracuje nienormatywnie, itd. Podczas jego definiowania musimy podać dane uzyskane od automatyka, mówiące nam z jakich adresów z sterownika mają być pobierane dane
+Dane podstawowe
+
+
+Aktywny – czy są zbierane dane z tego czujnika
+Czujnik ID - id rekordu,
+Typ – typ pracy. Wyróżniamy dwa typy pracy
+Impulsowy – liczymy liczbę impulsów w zadanym czasie
+Czasowy – liczymy całkowity czas trwania impulsu (od zbocza narastającego do kolejnego zbocza narastającego)
+
+
+Adres/numer czujnika – adres czujnika w danym MES jednoznacznie go identyfikujący. Dokładne znaczenie zależy od wybranego typu mes’a w konfiguracji MES
+Typ danych - Typ danych w sterowniku (bool, Int16, Int32). Określa sposób pobierania danych
+Stanowisko – stanowisko na którym znajduje się czujnik
+Nazwa – nazwa czujnika
+Uwagi – uwagi do czujnika
+Sekcja Pomiary – sekcje wypełniamy, jeżeli z danej maszyny mamy zbierać więcej informacji
+Agregacja pomiarów – z jakim interwałem pomiary mają być agregowane
+Zestaw pomiarowy – zestaw wartości dowolnych do których będą zapisywane pomiary
+Lista zmiennych - wynika ona z wybranego zestawu pomiarowego
+Opis - opis wartości dowolnej
+Nazwa zmiennej - nazwa zmiennej wartości dowolnej
+Adres - adres w sterowniku z jakiego będą pobierane dane
+Typ danych - Typ danych w sterowniku (bool, Int16, Int32). Określa sposób pobierania danych
+Nadpisywanie danych, Nadpisuj - czy i kiedy komórka w sterowniku ma zostać nadpisana (wyzerowana)
+Nadpisywanie danych, Wartością - jaką wartością komórka w sterowniku ma zostać nadpisana
+
+
+
+Normatyw -Typ impulsowy
+
+Normatyw - Typ czasowy
+
+
+Wielkość bufora (tylko tryb impulsowy) – opóźnienie w jakim zmieni się stan. Wartość podajemy w liczbie próbek. Przykład:
+Aktualny stan to Maszyna pracuje. Ustawiamy wielość bufora na 2. Wyłączamy maszynę. Jednak status w systemie zmieni się dopiero po odebraniu 2 próbek. Takie opóźnienie zapobiega niepotrzebnym fluktuacją.
+Obliczanie parametrów – są dwa tryby podawania parametrów:
+Ręczny – wszystkie parametry podajemy ręcznie
+Na podstawie technologii – wszystkie parametry które mogą być obliczone na podstawie technologii, zostaną obliczone automatycznie.
+Po przejściu z pracy normatywnej na nienormatywna, zmień typ stanu praca normatywna na praca nienormatywna - zaznaczenie tej opcji spowoduje, że zamiast zakończenia stanu praca normatywna i rozpoczęciu stanu praca nienormatywna, status pracy normatywnej zmieni się na praca nienormatywna.
+Dopuszczenie wcześniejszego rozpoczęcia przerwy W normalnym trybie zakończenie pracy przed przerwą spowoduje wygenerowanie nieplanowanego przestoju z którego należy się wytłumaczyć. Ustawienie tutaj jakiegoś interwału spowoduje dopuszczenie wcześniejszego rozpoczęcia przerwy.
+Dopuszczenie wydłużenia planowanej przerwy Wprowadzenie tutaj stosownego interwału spowoduje że dopuszczamy uruchomienie maszyny z pewnym opóźnieniem w stosunku do zakończenia przerwy
+Grupa poprawna praca dla trybu impulsowego
+Sposób liczenia poprawnej pracy – dopuszczone są dwa tryby:
+Liczba impulsów Liczymy liczbę impulsów w zadanym przedziale czasowym (oba parametry musimy podać). Tryb ten powinien być stosowany jeżeli mamy dużo impulsów na sekundę.
+Czas trwania impulsu Liczymy czas trwania impulsu (od zbocza narastającego do opadającego). W konfiguracji podajemy tylko ten czas (nie podajemy ilości impulsów, która jest zawsze 1). Ten tryb używamy jeżeli pojedynczy impuls trwa wiele sekund
+
+
+Liczba impulsów – liczba impulsów która mieści się w czasie podanym w parametrze ‘w ciągu’. Parametr podajemy tylko jeżeli sposób liczenia poprawnej pracy jest ustawiony na ‘Liczba impulsów’. Dla trybu czas trwania impulsu jest to zawsze 1
+W ciągu[sek] – czas w jakim liczymy impulsy
+Tolerancja impulsów – tolerancja impulsów w dół/górę podana w % lub impulsach. Jeżeli liczba impulsów mieści się w zadanych granicach, to uznajemy że maszyna pracuje normatywnie
+Ilość impulsów na ilość operacji – współczynnik umożlwiający obliczenie ilości operacji na podstawie ilości impulsów
+Grupa poprawna praca dla trybu czasowego
+Maksymalny czas pracy – czas pracy który uznawany jest za poprawny (maszyna pracuje normatywnie). Po przekroczeniu tego czasu maszyna zaczyna pracować nienormatywnie.
+Grupa mikro praca, mikro przestój Podstawową ideą wprowadzenia mikro przestoju oraz mikro pracy jest ignorowanie krótkich zmian stanów maszyny. Takie wahnięcia nie powodują formalnej zmiany stanu maszyny
+Maksymalny czas mikro przestoju – jeżeli maszyna pracuje a następnie nastąpi chwilowe zatrzymanie i powrót do normalnej pracy, to takie wahnięcie zostanie zignorowane jeżeli jego czas mieści się w czasie tutaj zdefiniowanym. Wartość 0 – parametr ignorowany
+Minimalny odstęp między mikro przestojami – parametr zapobiega zbyt częstemu występowaniu mikro przestojów
+Maksymalny czas mikro pracy – parametr odwrotny do mikro przestoju. Występuje tylko w trybie przezbrojenia. Jeżeli maszyna pracuje dłużej niż czas tutaj zdefiniowany, to automatycznie przejdzie w tryb pracy
+Grupa szacowanie ilości zrealizowanych operacji Grupa występuje tylko dla trybu impulsowego. Dla trybu czasowego sposób liczenia zawsze jest robiony na podstawie czasu pracy maszyny
+Sposób liczenia- mamy do wyboru - Na podstawie czasu pracy maszyny - Na podstawie ilości impulsów
+
+Przetwarzanie wstępne
+
+Dzięki tym ustawieniom wartości z pomiarów mogą zablokować informację napływające z głównego czujnika.
+Funkcjonalność może być użyteczna w sytuacjach gdzie logiczna praca maszyny nie równa się jej fizycznej pracy. Maszyna może fizycznie pracować (jest włączona), ale brakło materiału. Oznacza to że konieczność interwencji operatora, gdyż faktycznie ona nic nie produkuje. Fakt braku materiału może być wysyłany osobnym punktem pomiarowym i może on wpłynąć na status całej maszyny
+Pomiar – punkt pomiarowy
+Klucz grupowania logicznego – wszystkie wiersze które mają tą samą wartość są połączone operatorem lub. Wiersze które mają inną wartość są połączone operatorem i
+Wartość pomiaru od/do – jeżeli wartość pomiaru mieści się w tych widełkach to warunek jest spełniony
+Negacja – negacja warunku (wartość pomiaru nie mieści się w widełkach od/do)
+Auto odpowiedź
+
+W normalnym trybie każdy przestój oraz praca nienormatywna wymaga interwencji operatora. Z poziomu kiosku musi odpowiedzieć na pytanie dlaczego maszyna stoi lub dlaczego nie pracuje normatywnie.
+Z poziomu tej zakładki możemy zdefiniować zachowania, w których operator nie będzie musiał odpowiadać na takie pytania.
+Lista po lewej stronie: Statusy stanów na których ma być automatyczna odpowiedz
+Lista górna po prawej stronie: Warunki jakie mają być spełnione aby status zmienił stan na niewymagający odpowiedzi. Budowa warunków jest identyczna jak dla przetwarzania wstępnego
+Przyczyna: Przyczyna jaka zostanie podana
+Alerty
+
+Dla każdego czujnika, który ma skonfigurowane wartości dowolne dla pomiarów, można zdefiniować alerty/ostrzeżenia jakie będą generowane przez system. Każdy alert jest ważny przez czas, który został określony przez operatora w jego definicji.
+Rodzaj
+Każdy z alertów może być wyzwolony w różnych sytuacjach. W zależności jaki typ mamy wybrany to operator (podczas definiowania warunków) ma dostęp do różnych danych:
+
+po zmianie stanu - gdy stan maszyny zmienia stan np. praca normatywna na przestój ;
+przed zapisem - gdy do bazy danych są zapisywane dane pobrane z MES adaptera;
+przed agregacją danych SCADA - gdy dane do agregacji zostaną zebrane, ale nie zostaną jeszcze zagregowane;
+po agregacji danych SCADA - gdy dane zostały już zagregowane;
+
+Dla każdego kontekstu jest przygotowany zbiór zmiannych i funkcji, które wykorzystujemy do zbudowania wyrażeń czy dany alert powinien być wyzwolony czy też nie.
+Definicja warunków
+Podczas definicji alertu można określić jego parametry:
+
+aktywny,
+typ wyzwalacza - zgodnie z w/w opisem;
+opis - wewnętrzny opis do określenia za co odpowiada ta definicja;
+zabezpieczenie co ile sekund ma być wyzwalany;
+warunek - na podstawie wyrażenia przy jakich założeniach ma generować alert;
+treść komunikatu - można zbudować na podstawie wyrażenia (zawrzeć np. wartość pomiaru) albo skorzystać ze stałej treści;
+
+Za budowanie warunków i treści komunikatów odpowiada okno budowania wyrażeń dynamicznych. Spośród dostępnych zmiennych i funkcji budujemy warunki zgodnie z naszymi potrzebami.
+Jeśli mamy już przygotowane wyrażenie, możemy zweryfikować jego konstrukcję za pomocą przycisku "Sprawdź poprawność". Jeśli jakaś funkcja dostanie nieprawidłowe dane, lub wkradnie się literówka, zostaniemy o tym poinformowani.
+W funkcjach, gdzie należy podawać nazwę czujnika pomiarowego, należy zawsze podawać dokładną nazwę wartości dowolnej, która przechowuje wartości.
+Warunek - wyrażenie dynamiczne
+
+Komunikat - wyrażenie dynamiczne
+
+W przykładzie - przedstawionym powyżej - mamy alert, który:
+
+jest aktywny;
+sprawdza dane przed zapisem ;
+będzie wyzwalany co 45 sekund - jeśli dalej warunki będą spełnione;
+domyślna treść komunikatu to "Temperatura czujnika przekroczyła 45 stopni!", lub zostanie zbudowana jego treść na podstawie ustalonych warunków (gdy wartość pomiarów przekroczy 50 stC, lub 60 stC);
+
+W budowaniu warunków sprawdzających zostały wykorzystane funkcje:
+
+
+do pobrania wartości dla konkretnego pomiaru - na podstawie nazwy wartości dowolnej:
+GetMeasurementsByName(SensorData, "Temperatura")
+
+
+
+do pobrania średniej wartości z pomiarów, która przyjmuje jako parametr odfiltrowane wcześniej pomiary:
+GetValueAvg(GetMeasurementsByName(...))
+
+
+
+Wszystkie dostępne funkcje dla użytkownika, podczas budowania warunków sprawdzających, są dostępne w grupie Środowisko. Oprócz funkcji, dostępne są również zmienne z dodatkowymi informacjami dla czujnika np. informacje o MES, o czujniku lub normie. W zależności od wybranego typu alertu, dostępność funkcji i/lub zmiennych może się różnić.
+W podobny sposób - co warunki sprawdzające czy dany alarm powinien zostać wygenerowany - można zdefiniować komunikaty dla bardziej precyzyjnie określonych sytuacji. W przykładzie został zbudowany komunikat, którego komunikat zależy od progu temperatury jaka została przekroczona. Gdy temperatura wynosi powyżej 60 stC, wartość komunikatu budowana jest dynamicznie. Jeśli warunek - dla komunikatu - zostanie spełniony:
+    GetValueMax(GetMeasurementsByName(SensorData, "Temperatura")) > 60
+
+Zostanie zbudowany komunikat na podstawie wyrażenia:
+    "Temperatura czujnika przekroczyła "+GetValueMax(GetMeasurementsByName(SensorData, "Temperatura"))+" stopni!"
+
+Finalnie, tak zdefiniowana notyfikacja, może nam wygenerować komunikat, jeśli temperatura przekroczy np. 61 stC:
+    "Temperatura czujnika przekroczyła 61 stopni!"
+
+
+UWAGA! Jeśli dany alert będzie miał zdefiniowane - w warunkach - komunikaty ale jeśli warunki żadnego z nich nie zostaną spełnione to zostanie wygenerowany alert na podstawie komunikatu domyślnego - w naszym przykładzie będzie to treść: Temperatura czujnika przekroczyła 45 dtopni!
+UWAGA 2! Gdy chcemy wygenerować komunikaty progowo - tak jak w przykładzie - istotna jest kolejność na liście zdefiniowanych warunków w edytorze wyrażenia regularnego. Sprawdzanie warunków odbywa się od góry do dołu, jeśli jakiś warunek zostanie spełniony to pozostałe zostaną pominięte*
+
+Historia
+ 
+Każdy wygenerowany alert jest zalogowany przez system i zapisany w bazie danych.
+Odwołanie do historycznych wpisów wyzwolenia alertów można znaleźć w funkcjach ustawień:
+
+na dialogu edycji czujnika MES,
+na edycji definicji alertu,
+na schemacie widoku w Produkcja / MES - stan maszyn jako link gdy aktualnie jest aktywny/widoczny alert.
+
+Powiadomienia
+Domyślnie zdefiniowane alerty, jeśli zostaną wywołane, zostaną wyświetlone w zakładce Produkcja / MES - stan maszyn, na widoku stanowiska, którego dany alert będzie dotyczył.
+
+Dla każdego rodzaju alertu (przed zapisem, zmiana stanu, przed agregacją SCADA, po agregacji SCADA) można skonfigurować notyfikacje, które będą generowały stosowne powiadomienia dla wybranych odbiorców.
+Szczegółowa konfiguracja notyfikacji opisana jest tutaj.
+Konfiguracja zestawów pomiarowych
+Zestawy pomiarowe są to zbiory wartości dowolnych, do których zapisujemy pomiary z wybranej maszyny.
+Zestawy pomiarowe konfigurujemy w dwóch krokach. Najpierw należy zdefiniować wartości dowolne na obiekcie MES SCADA oraz spiąć je w zestaw
+
+W kroku drugim uszczegóławiamy parametry zestawu (Ustawienia > Parametry pracy > MES > Zestawy pomiarowe).
+
+
+Nazwa punktu pomiarowego – jest to nazwa wartości dowolnej, z tego miejsca nie może być zmieniona
+Typ – typ wartości dowolnej
+Typ agregacji – dane o pomiarach, przed zapisem do bazy danych, są agregowane do jednego rekordu (z przedziału czasu zdefiniowanego w ustawieniach czujnika). Pole to definiuje jaki typ agregacji ma być zastosowany. Dopuszczone typy:
+Domyślna – zależy od typu danych,
+Średnia
+Pierwsza próbka
+Ostatnia próbka
+Minimalna wartość
+Maksymalna wartość
+Suma
+Współczynnik korygujący pomiar, licznik – liczba przez którą, przychodzący pomiar zostanie pomnożony przed zapisem do bazy
+Współczynnik korygujący pomiar, mianownik – liczba przez którą, przychodzący pomiar zostanie podzielony przed zapisem do bazy
+
+MES Stan aktualny
+Zakładka MES Stan Aktualny znajduje się w Menu Analizy > Produkcja. Prezentuje listę maszyn wraz z informacjami dotyczącymi ich aktualnego stanu
+
+MES historia stanów
+Zakładka Historia stanów znajduje się w Menu Analizy > Produkcja. Prezentuje historię stanów wybranej maszyny
+
+MES GANTT
+Zakładka MES GANTT znajduje się w Menu Analizy > Produkcja. Prezentuje historię stanów maszyn podpiętych pod system mes w formie wykresu Gantta
+
+MES – stan maszyn
+
+Zakładka MES Stan Maszyn znajduje się w Menu > Produkcja. Prezentuje aktualny stan maszyn w formie schematu widoku osobno dla każdego stanowiska. Na danym kafelu znajdują się informacje jakie zostały wcześniej określone na szablonie widoku, może to być m.in.:
+
+aktualnie wykonywane zlecenie,
+aktualny stan maszyny,
+informacje o stanie pracy (praca normatywna, przestój itd.).
+
+Widok maszyn jest automatycznie odświeżany co określony czas, określony w ustawieniach.
+Oprócz widoku podstawowego dostępny mamy również widok szczegółowy, który pozwala określić dodatkowy zestaw informacji dla nas istotnych. Szczegółowy widok, umożliwia prezentowanie danych w okresie czasu.
+
+Ustawienia
+Schematy widoku są ładowane w zależności od ustawień. Gdy mamy otwartą kartę z widokiem stanu maszyn przechodzimy do Zakładka > Ustawienia.
+
+Filtrowanie:
+
+Wyświetlaj - pozwala na określenie jakie maszyny mają być widoczne w MES Stan Maszyn. Mogą to być maszyny prezentowane dla określonego wydziału, konkretnego rodzaju lub wybrane ręcznie;
+Wydział - ogranicza do maszyn z wybranego wydziału;
+Rodzaj - ogranicza do maszyn konkretnego rodzaju;
+Sortuj po - sortowanie widoku,
+Częstotliwość odświeżania [s] - parametr określa co ile sekund ma nastąpić odświeżenie widoków.
+
+Schemat widoku:
+
+Liczba kolumn - określa liczbe kolumn w zakładce z widokiem maszyn,
+Liczba wierszy - określa liczbe wierszy w zakładce z widokiem maszyn,
+Podstawowy - wybór widoku podstawowego,
+Szczegóły - wybór widoku dla szczegółów.
+
+
+Dla schematów widoków Podstawowy oraz Szczegółowy dostępna jest konfiguracja na 3 poziomach.
+Globalne - ustawienia znajdują się w: Parametry Pracy > MES > Stanowiska > Przycisk: [Pokaż dialog] > Pole: Informacja o maszynie w Vendo - domyślne schematy widoku.
+Wg czujnika - ustawienia znajdują się w: Parametry Pracy > MES > Konfiguracja > Przycisk: [Pokaż dialog]. Na pierwszej zakładce, w grupie Schematy widoku określamy te, które mają zostać używane w kontekście naszego kafelka w zakładce MES Stan Maszyn.
+Wg ustawienia użytkownika - gdy mamy otwartą kartę z widokiem stanu maszyn przechodzimy w menu do Zakładka > Ustawienia.
+
+Projektowanie własnych schematów
+Oprócz domyślnie dostarczonych schematów widoku, dla widoku podstawowego i szczegółowego, każdy klient może mieć dostępne własne schematy zaprojektowane pod jego potrzeby.
+W celu przygotowania własnego projektu schematu widoku, musimy otworzyć swoją zakładkę MES Stan Maszyn i odnaleźć w menu Widok > Projektowanie schematów widoku.
+
+Po wybraniu tej opcji pojawią się dwa dodatkowe przyciski pod kaźdym kafelkiem:
+
+Definicja schematu - służy do podglądu i modyfikacji widocznego schematu z załadowanymi danymi w kontekście danego stanowiska,
+Przebuduj widok - po modyfikacji można szybko odświeżyć widok na siatce.
+
+
+Wbudowanych schematów widoku nie można modyfikować. Z poziomu edytora pod przyciskiem Definicja schematu możliwe jest jedynie podejrzenie jego budowy oraz Export do pliku w celu późniejszego utworzenia własne widoku w oparciu o ten wbudowany.
+
+Instrukcja tworzenia własnych schematów widoku jest opisana tutaj.
+Panele operatorskie - VENDO czytnik
+Informacje ogólne
+Vendo Czytnik jest panelem dla pracownika produkcyjnego, na którym rejestruje np. aktualnie wykonywane operacje, wyprodukowane ilości, braki, przestoje, pomiary, itp. Panel Operatora MES jest rozszerzeniem funkcjonalnym Vendo Czytnik o dodatkowe funkcjonalności związane z MES. Tworzą razem jedną zintegrowaną aplikację, gdzie operator w szybki i wygodny sposób może reagować na komunikaty dotyczące wykrytych zmian w stanie pracy maszyny. Rozszerzenie jest zrealizowane poprzez widżety
+Konfiguracja panelu
+Podpięcie maszyn pod stanowisko
+Maszyny związane z system MES są łączone z konkretnym stanowiskiem Vendo Czytnik. W niektórych przypadkach uzasadnione może być, aby jeden panel był przypisany do jednej maszyny, jednak w większości sytuacji jeden panel, można skojarzyć z wieloma maszynami Aby skojarzyć stanowisko MESowe z panelem (Vendo Czytnikiem) należy:
+
+Wejść do znajdująca się na górze ekranu zakładki MES > Przycisk: [Podpięte czujniki]
+Pojawia się dialog z listą czujników, na którym zaznaczamy jakie stanowiska będą skojarzone z panelem
+
+
+Konfiguracja widżetów
+Następnym etapem, jest wybór widżetów MESowych
+
+Znajdująca się na górze ekranu zakładka Program > Przycisk: [Dodaj menu widżet] > Wybieramy menu. Pojawia się boczne menu z funkcjonalnościami
+Znajdująca się na górze ekranu zakładka Widok > Przycisk: [Blokada widoku]
+Następnie umieszczamy na pulpicie następujące widżety
+Czytnik – MES Monitor stanowisk
+Czytnik – MES Statusy
+
+
+
+
+Ustawianie normatywów MES dla normatywów na operacji
+Praca na panelu
+Praca na panelu z uruchomionym MES jest bardzo zbliżona do pracy na standardowym Panelu. Operator powinien jednak reagować i opisywać przyczyny zmiany stany maszyny. Jeśli maszyna zatrzyma się ponadnormatywnie, powinien uzupełnić przyczynę przestoju.
+Aktualny status stanowisk znajduje się na widżecie MES Monitor stanowisk
+
+Kolor zielony – maszyna / stanowisko pracuje
+Kolor czerwony – maszyna / stanowisko nie pracuje (przestój)
+Kolor pomarańczowy – maszyna pracuje, ale niezgodnie z normatywem (dla trybu impulsowego
+
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

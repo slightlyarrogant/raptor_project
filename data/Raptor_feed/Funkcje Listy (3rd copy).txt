@@ -1,0 +1,19 @@
+
+# Raport rejestrów
+
+W ramach dostępu do zakładki raport rejestrów użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp3ed09d4d-c03a-41da-845a-d7aca98af1f1](https://www.cfi.pl/vendohelp/content/imgs/H7/8cfa44696e10900223181f98b77424c7-7829-0.png)
+
+- miesiąc – możliwość wyboru miesiąca, za który program ma wygenerować raport
+- od – możliwość wyboru konkretnego okresu, za który program ma wygenerować raport
+- rejestr – wybór między rejestrem sprzedaży lub zakupu
+- nazwa rejestru – wybór między rejestrami stworzonymi przez użytkownika
+- nabywca – wybór między nabywcami w postaci osoby fizycznej lub firmy
+- dodatkowo program może wyświetlić lub pominąć następujące informacje
+    - pokaż rejestr
+    - pokaż stawki VAT
+    - pokaż transakcje VAT
+- transakcje VAT:
+
+![tmpdfb0c2ab-7c67-4fd7-9207-229fa137ce6a](https://www.cfi.pl/vendohelp/content/imgs/S8/b6465cef4ac02c6dd6a1b279d558aa53-11822-0.png)

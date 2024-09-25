@@ -1,0 +1,93 @@
+#	Charakterystyka modułu Środki Trwałe
+
+## Kartoteka Środka Trwałego i dokument OT
+To podstawowy widok listy wprowadzonych kartotek środków trwałych (pierwsza zakładka modułu), który dzięki możliwości personalizacji (dodawania i usuwania kolumn) pozwala przygotować bardzo rozbudowane zestawienia zawierające zdecydowaną większość danych pochodzących z kartotek ŚT oraz planu amortyzacji i naliczeń amortyzacji.
+
+Moduł Środków Trwałych, zwany również Księgą Inwentarzową, zapewnia ewidencję wszelkich środków trwałych (ST), środków trwałych niskocennych (STN), wartości niematerialnych i prawnych (WNIP), czy wyposażenia (W). Pozwala na automatyczne naliczenie i zaksięgowanie miesięcznej amortyzacji według zdefiniowanych parametrów (m.in. stawka, wartość początkowa) na wskazane wcześniej konta księgowe. Umożliwia rejestrację wszelkich zmian w majątku firmy. 
+
+##	Umiejscowienie i uprawnienia
+Warunkiem koniecznym pozwalającym na korzystanie z modułu Środków Trwałych jest posiadanie w kluczu licencyjny dostępu do Księgi Handlowej. Aby rozpocząć prace w module należy z poziomu menu głównego w odnaleźć moduł Środki Trwałe a następnie przejść do właściwej zakładki. Informacje orasz szczegółowy opis zakładek wchodzących w skład Środków trwałych został opisany poniżej.
+
+##	Zasada funkcjonowania
+Moduł Środków trwałych pozwala na ich ewidencje jak również naliczania miesięcznych amortyzacji oraz  dokonywania określonych zdarzeń związanych z jego użytkowaniem
+
+Podzielony został na trzy obszary, do których zaliczamy:
+-	*Listę środków trwałych* – jest to rejestr wszystkich wprowadzonych kartotek środków trwałych; 
+-	*Miesięczną amortyzację* – stanowi listę naliczeń odpisów amortyzacyjnych za wskazany okres;
+-	*Zdarzenia* – jest to lista wszystkich zdarzeń dokonanych na poszczególnych kartotekach ŚT we wskazanym okresie. 
+
+Każdy zakup podlegający ewidencji w Księdze Inwentarzowej firmy jest wprowadzany przez Użytkownika za pośrednictwem karty środka trwałego w module Środki Trwałe. W ramach formularza karty, gromadzone są informacje dotyczące *nagłówka* (czyli danych identyfikujących podany ŚT), *danych początkowych* oraz *danych pochodzących* z OT (związanych z odbiorem ŚT). Do danych podstawowych (zawartych w nagłówku), konfigurowanych podczas zakładania nowej kartoteki, zaliczamy:
+
+-	NUMER INWENTARZOWY (nadawany ręcznie),
+-	NUMER KŚT (wprowadzany ręcznie),
+-	NAZWA i OPIS środka trwałego / WNiP / wyposażenia,
+-	RODZAJ określający, czy jest to środek trwały (ST), środek trwały niskocenny (STN), wartość niematerialna i prawna (WNIP), czy wyposażenie (W),
+-	GRUPA (przypisanie do konkretnej grupy zdefiniowanej w ustawieniach programu),
+-	ODDZIAŁ (w ramach którego użytkowany jest dany ŚT),
+-	RÓŻNA AMORTYZACJA PODATKOWA I BILANSOWA (opcja pozwalająca przypisać różne stawki osobno dla amortyzacji podatkowej i amortyzacji bilansowej lub wprowadzić różne wartości dla każdej z tych rodzajów amortyzacji – funkcja dostępna po zapisaniu kartoteki środka trwałego i wybraniu opcji [Edytuj] w dolnej części formularza),
+
+
+![tmp049590e2-fc3b-462a-b77d-ecddeab1539a](https://www.cfi.pl/vendohelp/content/imgs/Y6/fb67064f10994626103a061ec7f3ae3b-105400-0.png)
+
+ *Karta Środka Trwałego*
+ 
+Po wypełnieniu danych podstawowych i zapisaniu karty należy dokonać przyjęcia środka trwałego. Aby to uczynić, w dolnym prawym rogu okna należy kliknąć przycisk [Funkcje] i dalej [Dodaj nowe zdarzenie], a następnie [Odbiór środka trwałego], tak jak zilustrowano to na PrtScn poniżej. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X7/1d762a8ca95203b04737532ab99088e9-69239-0.png)
+
+*Funkcja utworzenia dokumentu odbioru środka trwałego (OT)*
+
+Na karcie OT wypełniamy pozostałe dane potrzebne do ewidencji środka trwałego z zakresu dokumentu nabycia, dat czy wartości i stawek. W szczegółach są to:
+-	DATA NABYCIA (data zakupu lub praktycznie może być to data wystawienia faktury zakupu),
+-	DATA PRZYJĘCIA (data przyjęcia środka trwałego do użytkowania),
+-	DATA AMORTYZACJI (wskazuje od którego miesiąca rozpocznie się naliczanie amortyzacji, domyślnie dla amortyzacji liniowej będzie to miesiąc następujący po miesiącu z daty przyjęcia),
+-	WARTOŚĆ POCZĄTKOWA BILANSOWA (wartość netto zakupu stanowiąca podstawę dla amortyzacji),
+-	WARTOŚĆ POCZĄTKOWA PODATKOWA (wartość netto zakupu przyjęta dla amortyzacji podatkowej),
+-	RODZAJ STOSOWANEJ AMORTYZACJI (jednorazowa lub liniowa),
+-	STAWKA AMORTYZACJI BILANSOWEJ i PODATKOWEJ (jeżeli są różne),
+-	UŻYTKOWNIK (imię i nazwisko dla loginu z VENDO),
+-	LOKALIZACJA (aktualne miejsce użytkowania dla ŚT),
+-	OPK (aktualny ośrodek/miejsce powstawania kosztu z listy dostępnych OPK),
+-	numer DOKUMENTU NABYCIA (numer faktury zakupowej),
+-	OPIS – dodatkowy opis dla dokumentu OT.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M4/6fbc7ef94e71872ea45695e0284363a3-66894-0.png)
+
+*Dialog - Odbiór środka trwałego (OT)*
+
+W przypadku UŻYTKOWNIKA wybieramy pracownika mającego utworzony login w programie VENDO. Jeżeli takiego loginu nie ma, należy go założyć w menu *Pracownicy* i na zakładce Pracownicy wybrać przycisk „Dodaj” w lewym górnym rogu okna listy.
+
+W kwestii OPK wybieramy dostępny ośrodek/miejsce powstawania kosztu z listy dostępnych OPK. W przypadku konieczności założenia/dołożenia nowego OPK należy udać się do *Ustawień* programu i dalej wybrać *Słowniki*. W ramach Słowników wybieramy z sekcji Ustawień ogólnych – *Ośrodki Powstawania Kosztów* (OPK) i dodajemy nowe lub modyfikujemy dostępne wpisy.
+
+W zakresie ustawień GRUPY ŚRODKÓW TRWAŁYCH, LOKALIZACJI lub WARTOŚCI DOWOLNYCH wszelkich modyfikacji (dodawania nowych lub edycji już istniejących wpisów) dokonujemy w ramach listy tabel słownikowych (menu *Ustawienia > Główne > Słowniki*).
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L9/5d271f1d649d400fa3f531f98a75fa78-47629-0.png)
+
+*Lista tabel słownikowych – parametry modułu Środki Trwałe*
+
+Po uzupełnieniu danych na dokumencie OT i jego zatwierdzeniu, na karcie ŚT następuje ich aktualizacja w obszarze informacji pochodzących z dokumentu nabycia oraz wartości początkowych. Należy pamiętać, że dokument OT w ramach danego środka trwałego możemy dodać tylko raz. Wydruku dokumentu OT dokonujemy wybierając przycisk „Drukuj” z menu „Funkcje” na karcie OT. Wydruk zawiera dane zawarte w ramach dokumentu przyjęcia oraz samej kartoteki ŚT.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A8/f15ea5afdb37c15fa85c3d6f77f93f35-78814-0.png)
+
+*Wydruk dokumentu OT*
+
+Edycji już wprowadzonych danych na karcie ŚT dokonujemy po wybraniu przycisku „Edytuj” w prawym dolnym rogu karty. Wówczas zostaje zwolniona blokada edycji danych początkowych (z nagłówka). 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F5/711934c2f6af919361d7fff91cb04048-12889-0.png)
+
+*Opcja „Edytuj” umożliwiająca edycję zapisanej kartoteki ŚT*
+
+W przypadku modyfikacji danych wprowadzonych na dokumencie OT, należy udać się na zakładkę *Zdarzenia* w ramach karty ŚT i edytować widoczny tam dokument OT (po wyborze tego rodzaju zdarzenia w dolnej części karty).
+
+W ramach karty ŚT mamy dostęp do szeregu opcji dostępnych pod przyciskiem „Funkcje” w dolnym prawym rogu. Zaliczamy do nich możliwość:
+
+-	wprowadzenia/edycji kont księgowych dla księgowania amortyzacji (opcja *Konta księgowania środka trwałego*) – opcja szerzej opisana w podrozdziale dotyczącym księgowania amortyzacji,
+
+-	wprowadzenia BO umorzenia (opcja *Wartość amortyzowana poza programem*) – dotyczy sytuacji, kiedy przenosimy środek trwały do systemu VENDO z innego systemu, gdzie rozpoczęto już jego amortyzację lecz zakończenie jej naliczania będzie mieć miejsce już w VENDO. Wówczas dla prawidłowego wyliczenia wartości bieżącej należy podać wartość już dokonanej amortyzacji w poprzednim programie księgowym;
+-	przeliczenia / skasowania lub wygenerowania brakującego planu amortyzacji dla środka trwałego;
+
+-	dodania nowego zdarzenia dla ŚT (opcja *Dodaj nowe zdarzenie*, opisana w poniższym podrozdziale);
+
+-	pokazania podsumowania wartości dla ŚT;
+
+-	dokonania wydruku dokumentu OT lub dedykowanej etykiety z szablonu.

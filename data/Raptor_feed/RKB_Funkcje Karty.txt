@@ -1,0 +1,14 @@
+# Raporty kasowo/bankowe
+
+W ramach funkcjonalności karty raporty kasowo/bankowe użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj wpłatę – generowanie dokumentu wpłaty 
+- dodaj wypłatę – generowanie dokumentu rozchodu
+- drukuj
+- zamknij raport
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp6deb4612-ce65-40c6-80d4-629e591c5ca0](https://www.cfi.pl/vendohelp/content/imgs/E8/1780505aad4985ca533f7ae6015f3dac-77357-0.png)
+
+![tmpa73edb01-cf2e-4e55-a9c1-21a7621eabb4](https://www.cfi.pl/vendohelp/content/imgs/J9/479f274f9119250f7c7cb148ccd4230a-3143-0.png)

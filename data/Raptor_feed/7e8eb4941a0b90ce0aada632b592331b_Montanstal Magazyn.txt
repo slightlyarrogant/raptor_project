@@ -1,0 +1,64 @@
+Montanstal Magazyn
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/montan-stal/instrukcja-magazyn
+scraped_at: 2024-09-05T12:11:35.716225
+last_updated: 2024-09-05T12:11:35.716266
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Montanstal Magazyn
+meta_tags: ['należy', 'rezerwacji', 'pozycji', 'dokumentu', 'partii', 'zostanie', 'towaru', 'dokumentów', 'dokument', 'towar']
+
+Content
+Cel:
+Opis procesu obiegu dokumentów dopasowywany do działalności firmy MontanStal. Tematy poruszone w poniższej dokumentacji
+Opis:
+Przyjęcie zewnętrzne PZ
+Dokumenty Przyjęcia zewnętrznego PZ realizowane są na podstawie Zamówień własnych (do odbiorców) ZW. Aby wygenerować dokument przyjęcia zewnętrznego należy z pozycji [ZW] użyć opcji Funkcje > Generowanie > Przyjęcie Zewnętrzne (PrtScn poniżej).
+
+Zostanie wyświetlone okno generowania dokumentu. Z tego poziomu mamy możliwość modyfikacji danych dotyczących zakupionego asortymentu. Jeśli wszystkie dane się zgadzają należy kliknąć [Generuj]. Zostanie utworzony dokument PZ
+
+W przypadku gdy do dostawcy zostało wysłane kilka zamówień, podczas generowania dokumentu PZ System będzie nas informował o niezrealizowanych dokumentach. Użytkownik samodzielnie dokonuje wyboru które zamówienie należy przyjąć. Aby wybrać odpowiednią pozycje należy na nią najechać i zaakceptować klawiszem [ENTER] bądź kliknąć na wybraną pozycje dwa razy lewym klawiszem myszy
+
+W przypadku ręcznego tworzenia dokumentu PZ należy postępować w standardowy sposób tworzenia dokumentów w systemie VENDO który został opisany poniżej na przykładzie Zamówienia obcego.
+Rozpisanie pozycji
+Po wybraniu właściwych pozycji istnieje możliwość rozpisania przyjętego towaru na partie z nadaniem im właściwych numerów seryjnych. Aby tego dokonać należy wklikć się w przyjętą pozycje, następnie Funkcje > Dodaj rozpisanie określić ilość przyjmowanej partii. Operacje wykonujemy analogicznie aż do momentu rozpisania całości przyjmowanego towaru.
+
+Wydanie zewnętrzne WZ realizacja AW
+Wydanie zewnętrzne – rozchody towarowe związane z realizacją dokumentów handlowych. Należy pamiętać o związku faktury VAT FV z WZ (FV to dokument handlowy do rozliczenia, a WZ to dokument magazynowy ściągający towar). Rozchody materiałowe w systemie domyślnie są realizowane w oparciu o zasadę FIFO (pierwsze przyszło, pierwsze wychodzi), istnieje także możliwość dowolnego wskazania partii towaru do rozchodu. Na dokumentach (nie tylko magazynowych) użytkownik sam decyduje czy dodawać na nie towar w sposób domyślny (FIFO) czy wybrać konkretne partie. Jest to o tyle istotne, że ten sam towar może być przyjmowany na magazyn w różnych cenach, ma to też znaczenie w przypadku towarów o krótkich terminach przydatności. Stosowanie metody FIFO nie wymaga od użytkownika żadnych dodatkowych działań przy wystawieniu dokumentu (system sam pilnuje kolejności). Natomiast chcąc samemu wybrać towar z partii należy postępować wg schematu:
+
+Tworzymy dokument magazynowy/handlowy - wchodzimy do modułu Dokumenty> Dokumenty magazynowe > WZ i naciskamy [INSERT].
+Ustalamy wstępne informacje dla dokumentu (magazyn, seria, waluta itd.) i zatwierdzamy.
+W calu realizacji awiza wydania AW na liście pozycji dokumentu należy wybrać Funkcje > Zamówienia rezerwacje > Przenieś zamówienia bądź skrót klawiszowy [SHIFT+INSERT]
+Pojawi się karta z listą dokumentów rezerwacji danego towaru. Należy się w nie wklikac
+System wyświetli okno zawierające listę dostępnych partii towaru, z którego klawiszem [ENTER] wybieramy tę właściwą.
+
+
+
+Następnie system wyświetli okno z potwierdzeniem wybranej partii oraz możliwością edycji ilości wydawanej partii. Po zatwierdzeniu okna towar z wybranej partii będzie dodany. W razie potrzeby program przy tej operacji wykonuje podmianę rezerwacji (warunkiem udania tej operacji jest pokrycie w stanach zastępowanej rezerwacji). Jeżeli nie ma pokrycia w stanach na zaspokojone rezerwacje z innych dokumentów operacja dodania pozycji się nie powiedzie. W takich przypadkach konieczna jest podmiana rezerwacji zgodnie z punktem 3. Oczywiście można dodawać towar z kilku partii. Po wypełnieniu dokumentu można go zamknąć lub pozostawić w buforze.
+Operacje wykonujemy analogicznie aż do momentu gdy rezerwacja zostanie zrealizowana.
+
+Podmiana rezerwacji
+W przypadku braku możliwości realizacji dokumentu WZ z powodu rezerwacji zaspokojonej pod inny dokumenty AW/ZO należy podmienić rezerwacji (sytuacja związana z brakiem rezerwacji zaspokojonej pod AW które chcemy zrealizować). Aby tego dokonać wybieramy zamówienie (AW, ZO) które chcemy zrealizować dokumentem WZ . Na szczegółowej liście pozycji wybieramy Funkcje > Zamówienia/Rezerwacje > Przenieś z zamówienia (PrtScn poniżej)
+
+Wyświetlona zostanie lista dokumentów do zrealizowania. Należy wybrać dokument dla którego należy wykonać podmianę rezerwacji, następnie na liście pozycji dwuklikiem wejść w pozycje i sprawdzić rezerwacje dla danego towaru. (PrtScn poniżej)
+
+
+Wyświetlona zostanie lista pozycji dla których wykonana była rezerwacja danego towaru.
+
+Podmiany dokonujemy klikając prawym przyciskiem myszy - opcja Zabierz rezerwacje i wykorzystaj dla…(system z automatu podpowie dla której pozycji na zostać przeniesiona rezerwacja). Po wybraniu opcji zmiany rezerwacji wyświetlone zostanie okno z ilością która należy przenieść
+
+
+Po zaakceptowaniu rezerwacja zostanie przeniesiona na wybraną pozycje. Dzięki czemu realizacja WZ będzie możliwa do wykonania
+
+Images
+
+
+
+
+
+
+
+
+
+
+

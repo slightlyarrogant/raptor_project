@@ -1,0 +1,104 @@
+# Listy Przewozowe
+## 	Opis
+List przewozowy jest odzwierciedleniem danych wymaganych przez spedytora, aby dostarczyć przesyłkę (jedna lub wiele paczek, palet) do odbiorcy. List przewozowy może być powiązany z jednym lub wieloma dokumentami lub być niezależnym dokumentem utworzonym na liście Listów przewozowych.
+
+![tmp1b8caa29-38c3-40e7-a5bb-894e600a234e](https://www.cfi.pl/vendohelp/content/imgs/W8/280eedd6429375541152da5aac49f9e6-94360-0.png)
+
+## 	Numeracja
+Każdy list przewozowy posiada indywidualny numer budowany według zasady:
+
+`NUMER_KOLEJNY / SERIA / ROK / LP`
+
+Gdzie:
+-	Numer kolejny – nadawany w ramach Serii
+-	Seria - to słownikowy składnik numeracji dokumentów systemowych. Na podstawie serii możliwe jest określenie uprawnień (dostępu do danych zleceń, danej serii)
+-	Rok – rok, w którym wystawiano list
+-	LP - skrót listu przewozowego
+
+Przykłady numeracji zleceń produkcyjnych:
+-	13/S/24/LP
+-	14/S/24/LP 
+-	13/A/24/LP
+
+## Zakładki
+
+### Ogólne
+
+![tmp760dabdd-6975-42d3-86b4-38e68168609f](https://www.cfi.pl/vendohelp/content/imgs/W8/280eedd6429375541152da5aac49f9e6-94360-0.png)
+
+| Nazwa pola                | Opis                                                                                                                                                                                            | Typ       |
+|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Status śledzenia          | Stały słownik. Możliwość wyboru: Nieznany, Przygotowana do wysyłki, W drodze, Dostarczono, Dostawa nieudana                                                                                      | Słownik   |
+| Data dostarczenia         | Data dostarczenia wysyłki                                                                                                                                                                        | Data i czas |
+| Osoba odbierająca         | Osoba odbierająca                                                                                                                                                                                | Tekst     |
+| Wysyłający                | Referencja do danych firmy                                                                                                                                                                        | Słownik   |
+| Odpowiedzialny            | Referencja do kartoteki pracownika                                                                                                                                                                | Słownik   |
+| Odbiorca                  | Referencja do kartoteki klienta                                                                                                                                                                   | Słownik   |
+| Departament               | Oddział firmy                                                                                                                                                                                     | Słownik   |
+| Data                      | Data listu przewozowego                                                                                                                                                                           | Słownik   |
+| Spedytor                  | Forma spedycji przesyłki                                                                                                                                                                          | Słownik   |
+| Forma pobrania            | Forma płatności za paczkę – gotówka lub przelew                                                                                                                                                   | Słownik   |
+| Usługa                    | Rodzaj usługi spedycyjnej u danego Spedytora                                                                                                                                                      | Słownik   |
+| Pobranie                  | Wartość do pobrania przez spedytora w momencie przekazania do Odbiorcy, wartość ta może być wyliczana automatycznie z dokumentu handlowego wraz z narzutami kosztów wysyłki                       | Liczba    |
+| Ubezpieczenie             | Wartość ubezpieczenia listu przewozowego                                                                                                                                                          | Liczba    |
+| Koszt listu               | Wartość kosztu listu przewozowego                                                                                                                                                                 | Liczba    |
+| Zawartość                 | Dodatkowy opis                                                                                                                                                                                    | Słownik   |
+| Płatnik                   | Stały słownik. Określenie kto jest płatnikiem za przesyłkę. Możliwość wyboru: Wysyłający, Odbiorca, Trzecia strona                                                                                | Słownik   |
+| Numer listu przewozowego  | Numer obcy występujący w systemie Spedytora                                                                                                                                                       | Tekst     |
+| Wartość                   | Wartość listu przewozowego                                                                                                                                                                         | Liczba    |
+| Waga [kg]                 | Waga listu przewozowego. Może być wyliczana na podstawie wagi zdefiniowanej na karcie towarowej i pozycji dokumentu powiązanego                                                                   | Liczba    |
+| Zbiór listów przewozowych | Referencja do Zbioru listów przewozowych                                                                                                                                                          | Słownik   |
+| Uwagi                     | Pole dla dodatkowych uwag                                                                                                                                                                         | Tekst     |
+| Wartości dowolne          | Możliwość dostępu i edycji wartości dowolnych dla listu przewozowego. Zgodnie z opisem podpunktu Wartości dowolne                                                                                 | Lista     |
+| Paczki                    | Informacje o zdefiniowanych paczkach do listu przewozowego. Rodzaje Paczek definiowane są w ustawieniach w zależności od Spedytora                                                                 | Słownik   |
+
+
+### 	Adresy
+
+![tmpd514f1db-0c93-4678-bdba-2e34f88dfb2d](https://www.cfi.pl/vendohelp/content/imgs/B3/15e70cd0d1c42bcf9f6b22af52889740-82167-0.png)
+
+| Nazwa pola              | Opis                         | Typ       |
+|-------------------------|------------------------------|-----------|
+| Nadawca Kontakt         | Imię i nazwisko              | Tekst     |
+| Nadawca Email           | Adres email                  | Tekst     |
+| Nadawca Telefon         | Telefon                      | Tekst     |
+| Nadawca Typ adresu      | Dane firmy                   | Słownik   |
+| Nadawca Nazwa           | Dane firmy                   | Tekst     |
+| Nadawca Ulica           | Dane firmy                   | Tekst     |
+| Nadawca Numer           | Dane firmy                   | Tekst     |
+| Nadawca Mieszkanie      | Dane firmy                   | Tekst     |
+| Nadawca Kod pocztowy    | Dane firmy                   | Tekst     |
+| Nadawca Miasto          | Dane firmy                   | Tekst     |
+| Nadawca Kraj            | Dane firmy                   | Tekst     |
+| Odbiorca Kontakt        | Imię i nazwisko              | Tekst     |
+| Odbiorca Email          | Adres email                  | Tekst     |
+| Odbiorca Telefon        | Telefon                      | Tekst     |
+| Odbiorca Typ adresu     | Stały słownik. Możliwość wyboru: Z karty klienta, Ręcznie | Słownik   |
+| Odbiorca Nazwa          | Dane odbiorcy                | Tekst     |
+| Odbiorca Ulica          | Dane odbiorcy                | Tekst     |
+| Odbiorca Numer          | Dane odbiorcy                | Tekst     |
+| Odbiorca Mieszkanie     | Dane odbiorcy                | Tekst     |
+| Odbiorca Kod pocztowy   | Dane odbiorcy                | Tekst     |
+| Odbiorca Miasto         | Dane odbiorcy                | Tekst     |
+| Odbiorca Kraj           | Dane odbiorcy                | Tekst     |
+| Powiadomienie przez email | Wysłanie powiadomienia o przesyłce | Tak / Nie |
+| Powiadomienie przez SMS | Wysłanie powiadomienia o przesyłce | Tak / Nie |
+
+### Powiązania
+
+![tmp3f534738-d043-4a86-89e4-cb256c25a2d3](https://www.cfi.pl/vendohelp/content/imgs/P9/ae9500b92e23ffaa39e26f50bbbae2ea-58486-0.png)
+
+Lista powiązanych dokumentów systemowych (handlowych lub magazynowych).
+
+### 	Zawartość
+
+Lista pozycji z powiązanych dokumentów.
+
+![tmp78cf6356-997e-4944-8f3f-6de70c977406](https://www.cfi.pl/vendohelp/content/imgs/Z3/32b346b042f765c28aa569e79ea5b2f1-59509-0.png)
+
+### 	Pliki
+
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp0b2d232c-611a-4878-bf93-47cb62bed7ab](https://www.cfi.pl/vendohelp/content/imgs/S8/aa6760f72e957980b11114bb743c1d99-58959-0.png)

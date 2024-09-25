@@ -1,0 +1,177 @@
+# Oferty 
+
+## Informacje ogólne
+Dokumentem, od którego może sie rozpocząć proces sprzedaży jest Oferta (OF). Na
+ofercie oprócz wypozycjonowania jej składników (towary, usługi) możemy skorzystać z
+opisu i warunków, aby dokładnie przedstawić klientowi swoja propozycje. Dodatkowo
+możemy zamieścić zdjęcia oferowanych towarów. Dzięki mechanizmowi generowania
+system pozwala łatwo tworzyć kolejne dokumenty związane ze sprzedażą (np. ZO, FV,
+PR). Utworzona oferta może byc podstawa dla klienta do złożenia zamówienia lub kupna
+towaru. Natomiast my tworząc ofertę zyskujemy informacje na temat tego co, i na jakich warunkach już proponowaliśmy klientowi.
+
+Dla najbardziej rozbudowanych procesów sprzedaży, na które składają sie oferty,
+spotkania z klientem przygotowano Proces sprzedaży w module CRM. Proces sprzedaży
+tworzy teczkę, w której możemy zbierać wszystkie ważne informacje - daje możliwość
+m.in.:
+- określania etapów i ustalania procedur, wg jakich sprzedaż ma zostać przeprowadzona
+- planowania kontaktów z klientem
+- planowania i zlecania zadań do wykonania związanych z danym procesem
+- ewidencji przejazdów
+- ewidencji wykonanych prac
+- podpinania plików
+
+## Cechy dokumentu
+
+|Nazwa dokumentu |Skrót dokumentu |Cechy
+|
+| Oferty| OF| Oferty
+|||Rodzaje: Kraj, Export, EU
+|||Musi być wybrany klient
+
+
+
+## Lokalizacja uprawnienia
+
+Generowanie dokumentów w tym dokumentów ofertowych w systemie Vendo możliwe jest z wielu poziomów. Użytkownik może tego dokonać z poziomu:
+-  Dokumentów sprzedażowych > Oferty
+-  Zdarzeń dostępnych w module CRM
+-  Projektów/Procesów dostępnych w module CRM 
+Zasada generowani dokumentów z poziomu w/w modułów szczegółowo opisana zostanie w oddzielnej dokumentacji
+ 
+Najczęściej jednak generowanie dokumentów sprzedażowych odbywa sie z poziomu modułu `Dokumenty` > `Dokumenty sprzedażowe` > `Oferty OF`. Dodanie nowego dokumentu możliwe jest po nadaniu użytkownikowi stosownych uprawnień. Dokonać tego można z poziomu `Uprawnień głównych` > `Uprawnienia do kart i zakładek` > `Dokumenty` > `Rodzaje dokumentów` > `Oferta OF` > `Dostęp do kart i list` bądź z poziomu uprawnień kontekstowych po użyciu skrótu klawiszowego Ctrl+F2 na liście dokumentów
+
+## Karta dokumentu ofertowego zasada działania najważniejsze funkcjonalności
+
+Dokument ofertowy jest pierwszym dokumentem od którego może rozpocząć się proces sprzedaży. Obsługa karty dokumentu ofertowego jak również jej dialog zbliżony jest do większości dokumentów występujących w systemie. Z poziomu karty dokumentu ofertowego użytkownik ma możliwość wykonania szeregu czynności decydujących o dalszych krokach związanych z rozpoczętym procesem. Aby przybliżyć zasadę działania mechanizmu tworzenia oraz obsługi dokumentów ofertowych poniżej opisane zostały:
+
+- Sposób tworzenia oferty dla klienta
+- Dodawanie pozycji towarowych i nagłówków
+- Sprawdzenie zasobów na magazynie
+- Ustalanie warunków i opisu ofert
+- Wydruk i wysyłanie oferty klientowi
+- Generowanie zamówienia (ZW, ZO, ZP) z oferty (OF)
+
+
+## Tworzenie oferty dla klienta
+
+Dodawanie dokumentu OF (Oferta sprzedaży) przybiega analogicznie jak w przypadku
+innych dokumentów handlowych:
+
+- Wchodzimy do modułu Dokumenty, na górnym pasku (lista dokumentów) wybieramy
+pozycje OF.
+- Wyświetli sie lista utworzonych dotychczas ofert. Nowa ofertę dodajemy naciskając `[INSERT]` lub przycisk Dodaj (zielony plus w lewym górnym rogu okna).
+- Pojawi sie okno, w którym definiujemy wstępne dane dotyczące tworzonej oferty.
+Należy zwrócić uwagę na wybór właściwego magazyny, serii i rodzaju dokumentu OF,
+te dane beda przenoszone na dokumenty pochodne (np. ZO, FV).
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R9/295c457f14071d3fbaa35050bae83df8-111396-0.png)
+
+
+- Po zatwierdzeniu okna wstępnego pojawi sie typowe okno dokumentu gotowe do
+wypełnienia.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J1/b15c451d256993498021d27facab4198-70729-0.png)
+
+
+Warto zwrócić uwagę na przycisk w centralnej części okna (w tym przypadku podpisany
+jest Grupa I) informuje on nas, z jakiej grupy cenowej program bierze ceny, pozwala też wybrać inna. Od momentu, kiedy widzimy kartę dokumentu oferta jest już w buforze i dopóki będziemy na niej pracować, dla pozostały pracowników będzie widoczna jako dokument zablokowany do edycji (podobnie ja w przypadku innych dokumentów).
+- Wybieramy w polu Dla `[F2]` klienta, dla którego sporządzamy daną ofertę, w zakładce
+Dane kontrahenta system automatycznie dopisze szczegółowe dane kontrahenta. Po
+wybraniu klienta warto zwrócić uwagę na pole Zadłużenie – informuje ono nas o tym,
+na jaka sumę zalega klient.
+Gdyby sie okazało, że na liście kontrahentów wywołanej klawiszem `[F2]` pomimo zastosowania właściwych filtrów nie ma szukanego klienta, naciskamy `[INSERT]` i
+wypełniamy nowa kartę klienta – po jej zatwierdzeniu klient zostanie dodany do bazy
+kontrahentów.
+Na karcie oferty warto też określić daty dokumentu (wystawienia i ważności) oraz dopasać własne komentarze, opisy i warunki oferty na zakładce Inne parametry lub skorzystać z menu `Funkcje` > `Dodatkowe Informacje`. Pole Uwagi jest zawsze dostępna do edycji, nawet po zamknięciu dokumentu, natomiast pola Warunki i Długi opis sa blokowane z chwila zamknięcia oferty. Wszystko to co wpisaliśmy na dokumencie może zostać wydrukowane (przycisk Drukuj).
+
+## Dodawanie pozycji towarowych i nagłówków
+
+w przypadku jeśli oferta ma składać sie z większej ilości pozycji towarowych warto je
+pogrupować w logiczne kategorie i umieścić na ofercie pod odpowiednimi nagłówkami.
+Chcąc dodać nagłówek naciskamy na oknie formularza oferty `[CONTROL+Q]` lub
+wybieramy z menu `Funkcje` > `Dodaj nagłówek sekcji`.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I8/841e6fdcf3e37c8788eb437825468204-3818-0.png)
+
+W polu tekst można wpisać dowolna nazwę kategorii.
+Po dodaniu nagłówka przechodzimy do dodawaniu pozycji towarowych. Pozycje na
+dokument najwygodniej dodawać klawiszem [INSERT] lub przyciskiem `Dodaj`. Otworzy
+sie okno wybór towaru gdzie klawiszem [ENTER] zatwierdzamy pozycje do dodania.
+Kolejne okno, które sie wyświetli pozwala na precyzowanie ceny, ilości, wielkości rabatu.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L1/bebc6f2a886981320ea3deb636c81beb-21416-0.png)
+
+
+Warto zawrócić uwagę na pole Grupa cen – mówi ono z jakiej grupy cen cennika towaru ( `Karta towaru` > `Ceny`) system pobierze cenę do oferty, cena ta automatycznie stanie się Cena 0 (cena od jakiej liczone beda rabaty). W tym momencie można również ustalić
+rabat – będzie to rabat na wybrana pozycje towarowa (można też dawać rabaty na cały
+dokument). Jeśli chcemy by rabat był liczony od innej kwoty niż to wynika z cennika
+wybieramy z menu `Funkcje` > `Zmiana ceny 0`.
+Po naciśnięciu `Zamknij` lub `[ENTER]` towar zostanie dodany do oferty - możemy przejść do dodawania kolejnych pozycji lub nagłówków sekcji.
+
+Jeśli chcemy na dokument dodać większa ilość pozycji towarowych warto na karcie
+wyboru towaru zaznaczyć pole obok przycisku zamykania okna (prawy-górny róg) –
+dzięki temu okno wyboru towaru nie będzie sie automatycznie zamykało po dodaniu
+kolejnych pozycji.
+
+Przykładowa oferta może wyglądać tak jak poniżej.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X9/95460b06e757a4195dbb1dd7013908a8-97063-0.png)
+
+
+Jak widać nasza oferta składa sie z dwóch sekcji "Materiały" i "Dodatki", pod którymi znajdują sie cztery pozycje towarowe.
+
+
+
+## Sprawdzenie zasobów na magazynie
+
+Jeśli chcemy przy wystawieniu oferty skontrolować stan magazynu by mieć pewność, że
+klient będzie mógł natychmiast zakupić zaoferowany mu towar bez jego wcześniejszego
+zamawiania wchodzimy na wybrana pozycje towarowa i naciskamy klawisz `[F7]` lub z
+menu Funkcje wybieramy Lista stanów na innych magazynach.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I6/bdae35300c1bc177333082336e32a140-28954-0.png)
+
+Program wyświetli okno z lista magazynów i dostępnymi na nich ilościami towaru (stany rzeczywiste).
+
+
+## Ustalanie warunków i opisu ofert
+
+Tworząc dowolna ofertę możemy ustalać warunki na jakich ona obowiązuje. Warunki te
+mogą być następnie drukowane jako integralna część oferty.
+Dopisywanie warunków i komentarzy dotyczących oferty przeprowadzamy z poziomu
+otwartej karty OF  zakładek Inne parametry oraz Opis i uwagi .
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L7/9ef79c058dd53ca437cfed4db05e5d8c-53748-0.png)
+
+
+
+
+Jak widać mamy dostępne pola Warunki, Długi opis oraz Uwagi (do tych pól można też dotrzeć korzystając z menu `Funkcje` > `Dodatkowe informacje`). Możemy uzupełniać je
+dowolnymi tekstami wpisywanymi ręcznie. 
+Oczywiście wszystkie uzupełniane pola z powyższych zakładek mogą być drukowane
+na dokumencie ofertowym.
+
+
+
+## Wydruk i wysyłanie oferty klientowi
+
+Oferta (OF) podobnie jak każdy inny dokument może być wysyłana drogą mailową, zapisana jako plik bądź wydrukowana. Jeśli karty towaru na ofercie posiadają podpięte zdjęcia, po uruchomieniu stosownej opcji w ustawieniach wydruku będą one na nim widoczne.
+Chcąc wydrukować ofertę należy z poziomu listy pozycji kliknąć "Drukuj". Przed fizycznym wydrukiem dokumentu zostanie wyświetlony jego podgląd.
+
+Dokument będzie drukowany w takiej postaci, w jakiej  widoczny jest na podglądzie. Jeśli chcemy dopasować wygląd wydruku - dodać/usunąć kolumny bądź treści widoczne na wydruku, korzystamy z przycisku Ustawienia (ikona trybików w wierszu szablon) a następnie  Projekt. Zostanie wyświetlona lista dostępnych modyfikacji dla wydruku dokumentu
+
+To właśnie z poziomu wydruku dokumentu Użytkownik ma możliwość wysłania go droga mailową  zapisania w dowolnej lokalizacji klikając "Eksportuj" bądź wydrukować 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F5/d971df1206406816c664d5596e1e0fa4-122932-0.png)
+
+
+## Generowanie zamówienia (ZW, ZO, ZP) z oferty (OF)
+
+Mając już przygotowana ofertę (OF) możemy w każdej chwili przejść do generowania
+zamówienia na jej podstawie. Generowanie dokumentów pochodnych z OF odbywa sie z poziomu listy pozycji karty oferty. W zależności od sytuacji wybieramy właściwy mechanizm generowania:
+- Jeśli chcemy utworzyć: Fakturę > Funkcje > Generowanie > Faktura VAT.
+- Jeśli interesuje nas wygenerowanie zamówienia obcego : Funkcje > Generowanie >
+Zamówienie Obce ZO.
+- Jeśli chcemy zamówić dany towar od dostawców własnych: Funkcje > Generowanie > Zamówienie własne (do dostawców) – powstanie dokument ZW.
+- Jeśli chcemy złożyć własnym dostawca zapytanie ofertowe: Funkcje > Generowanie > Zapytanie ofertowe (do dostawców) – powstanie dokument ZP (oferta kupna).

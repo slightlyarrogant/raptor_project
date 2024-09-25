@@ -1,0 +1,67 @@
+Inter stal
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/inter-stal/readme
+scraped_at: 2024-09-05T11:50:04.410934
+last_updated: 2024-09-05T11:50:04.410977
+parent_id: ab32bfdafc374496c590204b458c9c42
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal
+meta_tags: ['vendo', 'trybie', 'czytnik', 'pracyrejestracja', 'pracyzakończenie', 'wystawienie', 'zewnętrzne', 'pracypraca', 'dokumentów', 'dokumentacjainterstal']
+
+Content
+Procedura zamknięcia miesiąca - Rozliczenie produkcji
+
+Codzienna weryfikacja produkcji pod kontem rozchodów i przyjęć
+Przeliczenie wartości dokumentów PW na wykonanych KKW
+Weryfikacja poprawności dokumentów KKW
+Zamknięcie KKW
+
+Zapoznaj sie z dokumentacja
+Interstal Magazyn
+
+Ręczne wystawienie dokumentu PZ z uwzględnieniem ZW
+Przyjęcie zewnętrzne PZ na podstawie ZW
+Przychody wewnętrzne PW
+Wydanie zewnętrzne WZ (tryb ręczny)
+Wydanie zewnętrzne WZ (tryb kolektorowy)
+
+Zapoznaj sie z dokumentacja
+Interstal Handel
+
+Zamówienia Obce ZO
+Ręczne wystawienie zamówienia, dodanie pozycji
+
+
+Awizo Wydania AW
+Generowanie Awiza wydania(AW) na podstawie ZO
+Ręczne wystawienie AW z uwzględnieniem zamówienia
+
+
+
+Zapoznaj sie z dokumentacja
+Intrstal Praca z czytnikiem
+
+Praca na Vendo w trybie czytnik – Arkusze
+Rozpoczęcie pracy
+Rejestracja pracy
+Zakończenie pracy
+Praca na Vendo w trybie czytnik - Rury
+Rozpoczęcie pracy
+Rejestracja pracy
+Zakończenie pracy
+
+
+Praca na Vendo w trybie czytnik - Szyny montażowe
+Rozpoczęcie pracy
+Rejestracja pracy
+Zakończenie pracy
+
+
+Praca na Vendo w trybie czytnik - Taśmy
+Rozpoczęcie pracy
+Rejestracja pracy
+Zakończenie pracy
+
+
+
+Zapoznaj sie z dokumentacja

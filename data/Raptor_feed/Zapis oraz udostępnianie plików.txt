@@ -1,0 +1,73 @@
+
+
+## Informacje ogólne 
+W systemie Vendo zmieniona został metoda ustawienia kontenerów, gdzie przechowywane są pliki. Obecnie pliki w zależności od konfiguracji zapisywane mogły być w bazie danych, lokalizacji sieciowej bądź na FTP. Obecnie dodane zostały nowe kontenery w których pliki mogą być przechowywane bądź archiwizowane. W Vendo zaimplementowano również nową funkcjonalność pozwalając na udostępnianie plików oraz obiektów innym użytkownikom
+
+## Zewnętrzne magazyny plików
+
+Konfiguracja lokalizacji w której zapisywane będą pliki dostępna jest z poziomu `Ustawień Głównych` programu > `Parametry prac`y > `Ogólne` > `Pliki`: `Zewnętrzne magazyny plików`.  
+Ustawienia te pozwalają Administratorowi na definiowanie zewnętrznych magazynów (kontenerów), gdzie pliki mogą być zapisywanie zgodnie z regułami lub być migrowane na żądanie.
+
+
+Dostępne kontenery z możliwości zapisu plików to:
+
+#### Zewnętrzna baza danych  
+Baza danych - do wyboru dostępne są zewnętrzne bazy danych zdefiniowane w ustawieniach pod linkiem "Zewnętrzne bazy danych".
+
+**Uwaga** Użytkownik dla prawidłowego działania po wybraniu zewnętrznej bazy dancych wybrać opcję "Przygotuj struktruę tabel".
+
+#### Dysk sieciowy  
+Ścieżka - dowolna ścieżka do dysku sieciowego
+
+#### Dropbox  
+Token - token dostępu do konta
+
+#### Google  
+Poświadczenie (json) - zawartość pliku autoryzacyjnego uzyskanego poprzez dostępy do usługi Google Cloud Storage
+Kubełek (bucket) - nazwa wybranego kubełka danych
+#### S3  
+Url - adres usługi
+Klucze dostępu i bezpieczeństwa - klucze dostępu do usługi
+Kubełek (bucket) - nazwa wybranego kubełka danych
+
+
+ ![tmp8e8f1e04-765c-448e-a999-331b668f7c55](https://www.cfi.pl/vendohelp/content/imgs/A4/7b5a6e901b66b9a62c6df7e0fd9414d6-90681-0.png)
+
+
+
+## Reguły zapisu plików
+Administrator otrzymuje możliwość definicji reguł, które określają wzorzec dopasowania ścieżki w systemie plików daje to możliwość określenia typu, rozszerzenia, oraz kontekstu plików które mają być przypisane do danego kontenera. W praktyce oznacza to, iż dodają plik w Vendo może on być zapisywana w różnych miejscach w zależności od typu rekordu
+### Zasady
+Wzorce zapisu plików oparte są o wildcard. Wybór kontenera następuje poprzez dopasowanie kolejno zdefiniowanych wzorców do pliku, aż do znalezienia pierwszego prawidłowego. Dodatkowo można zdefiniować rozmiar (podany w megabajtach), który jest dolnym ograniczeniem dla zapisywanego pliku.
+
+#### Przykład wzorca:
+
+`/vendo/objects/206/**/*.pdf` - oznacza wszystkie pliki o rozszerzeniu .pdf, które zapisane są pod zdarzenia.
+
+Dla wygody użytkownika wprowadzono prosty edytor pozwalający na wyklikanie ściezki.
+
+**Uwaga** Dla zachowania kompatybilności wstecznej, jeżeli nie ma żadnej reguły na liście widoczny jest wpis **"*.*"** (oznaczający dowolną ścieżkę plików) oraz kontener danych, który uprzednio był zdefiniowany jako domyślny. 
+
+**Uwaga** Wszystkie pliki będące linkami (rozszerzenie .link), niezależnie od reguł, trafiają zawsze do kontenera bazy danych.
+
+![tmp2b31ec8c-5049-43ed-b3c2-697dad94f67b](https://www.cfi.pl/vendohelp/content/imgs/G2/618c8961fbcca47b9140a17b511595eb-92410-0.png)
+
+
+ 
+## Udostępnianie plików
+Kolejna zmianą rozwojowa zaimplementowaną w Vendo jest możliwość udostępniania plików które zostały dodane w Vendo. Opcja ta dostępna jest na nowych kartach i zlokalizowana w zakładce pliki.
+ Udostępnianie plików odbywa się poprzez:
+- przesłanie linku do danego pliku
+- wysyłki za pośrednictwem Venod czata 
+- wygenerowania kodu QR
+
+
+Dodano również możliwość  udostepnienie całego obiektu daje to możliwość przesłania linka wybranej osobie i wglądu w dany obiekt przykładowo za pośrednictwem VendoLite. Link taki można otworzyć za pośrednictwem przeglądarki natomiast wgląd będą miały osoby z mołziwosci pracy poprzez Vendo Lite
+
+![tmp02920865-3acf-4dcf-8f93-72f35ba62388](https://www.cfi.pl/vendohelp/content/imgs/D1/d24edfda28729fad598159df19e03201-61050-0.png)
+ 
+## Migracja plików
+Konfiguracja lokalizacji zapisu plików oraz kontenerów odbywa się po stronie klienta natomiast gdy ustawnienia te są już odpowiednio skonfigurowane istnieje możliwość dokonania migracji plików. Opcja ta dostępna jest jedynie dla administratorów po uruchomieniu trybu serwisowego z poziomu ustawień głównych programu > Narzędzia > Migracja plików. Pozwala to na utomatyczną migracje plików danego typu dla danych obiektów do nowego kontenera.
+Koleja funkcja dostępna w trybie pracy serwisowej jest możliwość migracji załączników do maili. Pozwala ona na zarchiwizowanie załączników z określeniem  daty wiadomości których załączniki mają zostać przeniniesione do odpowiedniego kontenera 
+
+![tmp9450615b-b04e-4cd3-9d11-9e2269242186](https://www.cfi.pl/vendohelp/content/imgs/M2/a62e8a9904fc342b51c4860033865701-50200-0.png) 

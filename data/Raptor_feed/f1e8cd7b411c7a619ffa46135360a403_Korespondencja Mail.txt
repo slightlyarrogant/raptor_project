@@ -1,0 +1,117 @@
+Korespondencja Mail
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/poczta-w-vendo/korespondencja-mail
+scraped_at: 2024-09-05T12:12:34.574023
+last_updated: 2024-09-05T12:12:34.574095
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Korespondencja Mail
+meta_tags: ['wiadomości', 'mail', 'wysyłki', 'vendo', 'systemu', 'jest', 'skrzynki', 'należy', 'poziomu', 'przypadku']
+
+Content
+Korespondencja Mail
+Informacje ogólne
+System Vendo posiada w swojej strukturze możliwość definiowania skrzynek pocztowych będących integralną częścią systemu. Funkcjonalność ta pozwala na gromadzenie wszystkich niezbędnych informacji związanych z korespondencją w ramach Systemu. Zakładka odpowiedzialna za skrzynki mailowe zlokalizowana jest w module CRM. Z tego właśnie poziomu Użytkownicy korzystający z systemu mogą wysyłać oraz odbierać informacje drogą mailową. Informacje dotyczące konfiguracji oraz zasady działania skrzynek mailowych opisana została poniżej
+Ustawienia
+Przed przystąpieniem do wysyłki korespondencji droga mailową, konieczna jest zdefiniowanie odpowiednich skrzynek mailowych. Konfiguracje taka dostępna jest z poziomu słowników systemowych, dokonać tego należy wchodząc w Ustawienia > Słowniki > CRM: Konta-Mail. Kolejnym etapem konfiguracyjnym jest ustawienia klienta pocztowego. Ustawienia takie dostępne są po wejściu w Ustawienia> Parametry pracy > Wymiana danych: Mail. Po dokonaniu powyższej konfiguracji, zdefiniowane skrzynki pocztowe dostępne będą w Menu głównym programu > CRM > Mail
+Konfiguracja
+Utworzenie nowej skrzynki pocztowej
+Utworzenie nowej skrzynki pocztowej odbywa się z poziomu Słowników systemowych. Dokonać tego należy wchodząc w Ustawienia > Słowniki > CRM: Konta Mail. Po wyborze zakładki wyświetlona zostanie lista wszystkich dostępnych skrzynek mailowych zdefiniowanych w Vendo. Dodanie nowej odbywa się poprzez kliknięcie [Dodaj] bądź użycie klawisza [INSERT]. Spowoduje to wyświetlenie karty odpowiedzialnej za Ustawienia kont e-mail Z poziomu okna dialogowego odpowiedzialnego za konfiguracje konta mail Administrator powinien określić parametry takie jak:
+
+Nazwa konta – informacja o nazwie użytkownika dla którego utworzona zostanie skrzynka mailowa
+Adres e-mail – zdefiniowanie adresu mailowego który przyporządkowany zostanie do danego użytkownika
+Właściciel poczty – parametr pozwala na przyporządkowanie użytkownika\ów będących właścicielem\ami skrzynki pocztowej. Konfiguracja pozwala sprecyzować, czy właścicielem definiowanego adresu mailowego będzie:
+Pracownik – Użytkownik systemu Vendo
+Dział – Dział w Firnie zdefiniowany w systemie Vendo
+Rola – Rola pracowników zdefiniowanych w systemie Vendo
+
+
+
+
+W przypadku ustawienia, gdzie odbiorcą będzie Dział lub Rola, zdefiniowana skrzynka dostępna będzie dla wszystkich pracowników przydzielonych do danego działu/roli, dopiero przejęcie wiadomości (funkcja dostępna z poziomu karty zdarzeniowej) sprawi, iż wiadomość przydzielona zostanie do konkretnej osoby.
+
+
+Uprawnienia do ręcznego i automatycznego pobierania poczty – parametr który określa czy pobieranie poczty możliwe będzie przez wybranego pracownika, czy też możliwość taka będą mieli pracownicy przydzieleni do danego Działu bądź Roli
+Zdarzenie > Typ zdarzenia – Widomości które trafiają do systemu Veno traktowane są jako zdarzenia, tak więc z tego poziomu Użytkownik określa jakim rodzajem zdarzenia mają się stać w momencie gdy trafią do systemu Vendo
+Automatyczne tworzenie sprawy – oznaczenie tego check boxa spowoduje, iż w chwili gdy wiadomość trafi do systemu, automatycznie najego podstawie zostanie założona sprawa. Funkcjonalność wykorzystywana najczęściej w przypadku gdy wiadomości trafiające do systemu będą miały kontynuacje, znaczy to, iż zostaną przekazane do kolejnej osoby w celu realizacji konkretnych zadańz wiązanych z przesłana korespondencją.
+Pobieranie poczty
+Typ serwera POP3; IMAP(+ synchronizacja wiadomości )
+
+
+
+
+Protokół POP3 (Post Office Protocol 3) - jest przeznaczony do pracy "offline". Po połączeniu z serwerem cała nieprzeczytana korespondencja wraz z załącznikami transmitowana jest ze skrzynki pocztowej na serwerze do foldera na komputerze lokalnym. Odebrane listy zostają następnie oznaczone jako odczytane i, w zależności od ustawień, pozostawione lub (domyślnie) kasowane z serwera. Po zakończeniu tych operacji, czytanie listów i przygotowywanie odpowiedzi może być przeprowadzone lokalnie bez konieczności utrzymywania połączenia z Internetem. Kolejne połączenie wymagane jest tylko w celu wysłania zredagowanych odpowiedzi i ewentualnego sprawdzenia obecności nowych listów
+Protokół IMAP (Internet Message Access Protocol) - działa w zdecydowanie odmienny sposób. Cała poczta przechowywana jest na serwerze w skrzynce pocztowej i w dodatkowych folderach pocztowych. Po połączeniu z serwerem na komputer lokalny transmitowane są jedynie same nagłówki wiadomości. Transmisja treści oraz załączników następuje dopiero po otwarciu danego listu, dzięki czemu możliwe jest kasowanie i filtrowanie korespondencji bez jej pobierania z serwera. Ten sposób obsługi poczty doskonale sprawdza się w przypadku pracy na wielu komputerach, na każdym z nich widzimy bowiem tą samą zawartość skrzynki. Wadą protokołu IMAP jest natomiast konieczność utrzymywania stałego połączenia z Internetem podczas obsługi poczty oraz trochę większa złożoność jego konfiguracji.
+
+
+Bezpieczeństwo połączenia * Bez szyfrowania, * SSL/TLS, * STARTTLS – określenie czy pobierane wiadomości będą szyfrowane wg dostępnych standardów, czy też pobierane bez szyfrowania.
+Pobieraj wiadomości od dnia - funkcja wykorzystywana podczas synchronizacji skrzynki pocztowej z zewnętrznym serwerem pocztowym, możliwość określenia daty od kiedy wiadomości mają być importowane do systemu Vendo
+Nie pobieraj wiadomości starszych niż – Innym parametrem pozwalającym określić zakres czasowy pobieranych wiadomości, jest określenie limitu dni dla wiadomości które importowane będą do systemu Vendo
+Usuwaj wiadomości starsze niż – określenie czy wiadomości starsze niż[…] mają zostać usuwane z systemu. Wiadomości usuwane będą jedynie z systemu Vendo natomiast pozostaną widoczne na serwerze pocztowym
+Filtr po temacie – określenie parametrów filtrowania w temacie wiadomości. Pozwala na dostosowali listy wyświetlanych wiadomości tak aby wyświetlane wiadomość prezentowane były wg. potrzeb użytkownika
+Adres serwera – system Vendo jest klientem zewnętrznego serwera pocztowego, parametr ten pozwala na określenie adresu serwera z którego Vendo będzie pobierało wiadomości
+Port – informacja o porcie po którym klient Vendo będzie się łączył w celu pobierania wiadomości
+Użytkownik – Nazwa użytkownika definiowanej skrzynki pocztowej
+Hasło – Hasło dostępu do zewnętrznego serwera pocztowego z którego pobierane są wiadomości
+Wysyłanie wiadomości
+Bezpieczeństwo połączenia Bez szyfrowania, * SSL/TLS, * STARTTLS* - określenie czy wysyłane wiadomości mają być szyfrowane wg dostępnych standardów, czy też wysyłane bez szyfrowania.
+Adres serwera - parametr ten pozwala na określenie z pośrednictwem którego serwera system Vendo będzie dokonywał wysyłki wiadomości
+Port – informacja o porcie z którym klient Vendo będzie się leczył w celu wysyłki wiadomości
+Użytkownik – Nazwa użytkownika definiowanej skrzynki pocztowej
+Hasło – Hasło dostępu do zewnętrznego serwera pocztowego z pośrednictwem którego wysyłane będą wiadomości
+
+
+
+**Uwaga podczas pierwszej synchronizacji skrzynki w Vendo z zewnętrznym serwerem pocztowym, po popranym wypełnieniu wszystkich niezbędnych informacji, należy przejść do Funkcji i uruchomić opcje „ Dodaj wiadomości znajdujące się w skrzynce do listy ignorowanych”. Spowoduje to, iż podczas każdorazowego sprawdzania przez vedno wiadomości na serwerem pocztowych ignorowane będą wiadomości oznaczone jako przeczytane. Pozwala to na skrócenie czasu pobierania nowych wiadomości do systemu Vendo.
+
+Ustawienia metody wysyłki mail do Vendo
+System Vendo posiada możliwość konfiguracji metody wysyłki wiadomości mail. Konfiguracja taka dostępna jest z poziomu ustawień systemu w lokalizacji Ustawienia > Główne > Parametry pracy > Wymiana danych > Mail Ustawienie to pozwala użytkownikowi skonfigurować wybraną przez siebie metodę wysyłki wiadomości mail w zależności od potrzeb. Zaznaczenie chcecboxa Ustawienia globalne pozwala skonfigurować metodę wysyłki maili dla wszystkich użytkowników systemu. Po odznaczeniu chceckboxa Ustawienia globalne możemy zdefiniować metodę wysyłki lokalną czyli dla stanowiska na którym aktualnie pracujemy na systemie Vendo.
+Zarówno przy konfigurowaniu metody wysyłki globalnie jak i lokalnie mamy do wyboru opcje:
+
+Simple MAPI -opcję w konfiguracji gdy użytkownik chce korzystać z aplikacji Microsoft, takich jak Outlook, Outlook Express.
+Simple MAPI Thunderbird (alternatywne) - opcja do wyboru w przypadku korzystania z aplikacji Thunderbird do wysyłki wiadomości mail.
+Extended MAPI -opcja do wyboru w przypadku korzystania z aplikacji Microsoft Exchange.
+Bezpośrednie SMTP (bez podglądu) - to opcja do wyboru gdy mamy mechanizm przesyłu poczty elektronicznej bezpośrednio od serwera nadawcy wiadomości do serwera odbiorcy (gdy oba są podłączone do tego samego systemu transportowego).
+Klient wbudowany - opcja do wyboru gdy użytkownik chce korzystać z aplikacji wbudowanej w system Vendo
+
+W tym miejscu ustawień systemu Vendo można też wprowadzić adres SMTP oraz login i hasło jeśli zostanie wybrana taka opcja metody wysyłki mail.
+
+Ustawienie domyślności klienta pocztowego Windows
+Jeżeli użytkownik wybierze w Vendo którąś z opcji metody wysyłki maila opisaną powyżej (poza klientem wbudowanym) koniecznie jest ustawienie domyślności klienta pocztowego w ustawieniach Windows. Użytkownik powinien wskazać aplikację domyślną dla poczty mail. Ustawienia > Aplikacje domyślne > Poczta mail > Wybór stosownej opcji.
+
+Zasada działania
+Dostęp do skrzynki mailowej możliwy jest z poziomu Menu głównego > CRM > Mail. Po jej wyborze wyświetlone zostanie okno dialogowe listy wiadomości z poziomu którego użytkownik ma możliwość wglądu we wszystkie skrzynki powiązane z użytkownikiem, jak również określenia parametrów wg których wyświetlane i sortowane będą wiadomości. Aby tego dokonać należy z poziomu nagłówka okna programu uruchomić opcje filtrowania > pokaż filtry
+Dodanie nowej wiadomości wygląda analogicznie jak w przypadku tworzenia większości dokumentów, zdarzeń, zleceń w systemie Vendo. W tym celu należy kliknąć na ikonę zielonego plusa znajdującego się w prawym górnym rogu okna programu bądź użyć klawisza Insert. Zostanie wyświetlona lista szablonów z poziomu której istniej możliwość definiowania nowych bądź skorzystania z już zdefiniowanych. Chcąc dodać nowego należy użyć klawisza „Pusty mail”. Zostanie wyświetlona karta mailowa w której uzupełnić należy niezbędne informacje.
+
+Wyświetlane wiadomości prezentowane są w postaci kart zdarzeniowych. Z poziomu tak wyświetlonej wiadomości, Użytkownik ma możliwość zdecydowania o jej dalszych etapach. W tym celu może skorzystać z standardowych mechanizmów karty zdarzeniowej jak również dedykowanych specjalnie na potrzeby obsługi operacji związanych z skrzynką pocztową. Aby skorzystać z funkcji typowych dla skrzynki pocztowej należy użyć klawisza „Mail”( ikona w prawym górnym rogu). Opcje dostępne po kliknięciu: Odpowiedz (bez sprawy) – szybka odpowiedz do nadawcy bez zakładania sprawy Prześlij dalej (bez sprawy) – Przesłanie widomości do kolejnego odbiorcy bez zakładania sprawy Nowa wiadomość (bez sprawy) – Utworzenie nowej wiadomości bez zakładania sprawy Tak więc korespondencja mailowa która odbywa się w związku z wykonywaną czynnością można podpiąć do istniejącego zdarzenia bądź utworzyć jako nowe, całkowicie odrębne. Dostępna jest również funkcja przesłania korespondencji na postawie utworzonego zdarzenia łącznie z informacjami zawartymi w zdarzeniu.
+
+Definiowanie edycja szablonów
+W procesie wysyłki korespondencji droga mailową istnieje możliwość definiowania szablonów które mogą zostać wykorzystywane podczas wysyłki wiadomości. Definiowanie szablonów odbywa sie z poziomu listy szablonów aby tego dokonać należy kliknąć Nowy. Spowoduje to otworzenie pustego szablonu który należy uzupełnić informacjami takimi jak
+
+Nazwa szablonu – Informacja opisująca dany szablon, opis widoczny będzie na liście szablonów,
+Temat (opcjonalnie) – Informacja wyświetlana w temacie maila
+Załącznik (opcjonalnie) - załącznik który dodany będzie w trakcie wysyłki korespondencji droga mailowa
+Treść – informacja która wysyłana będzie do odbiorcy
+
+W przypadku gdy zachodzi konieczność zmian w zapisanym szablonie istnieje możliwość jego edycji i naniesienie koniecznych korekt dokonać tego należy po użyciu klawisza „Edytuj”
+
+Vendo daje możliwość wysyłki wiadomości mail również z załączonym wydrukiem dokumentu, zdarzenia, czy też zlecenia. Można również skonfigurować stosowne makra tematów takich wiadomości mailowych wysyłanych z systemu z wybranego dokumentu, zdarzenia, zlecenia. W tym przypadku zastosowanie mają standardowe makra używane w całym systemie Vendo np. nr dokumentu: .
+W przypadku wyboru metody wysyłki Simple MAPI lub innej dostępnej z listy (poza klientem wbudowanym) przy wysłaniu wiadomości mail z dokumentu, zdarzenia, zlecenia uruchomi się automatycznie wybrana aplikacja pocztowa wraz z załącznikiem (Outlook, Thunderbird itp.).
+Aby wysłać taką wiadomość z załączonym dokumentem z Vendo należy kliknąć przycisk Drukuj na wybranym dokumencie a następnie jak wyświetli się stosowny szablon wydruku dokumentu wybrać opcję Wyślij e-mail.
+
+Po wciśnięciu przycisku Wyślij e-mail pojawi się okienko w którym należy wpisać adres mailowy na który ma zostać wysłana wiadomość wraz z załączonym dokumentem. Jeśli dane dotycząca wysyłki korespondencji zostały uprzednio uzupełnione na kartotece kontrahenta, system podpowie uzupełnione adresy mailowe z możliwością wyboru właściwego, nie ma wówczas potrzeby uzupełniania adresu ręcznie. W tym miejscu widoczne są makra dotyczących tematu i opisu wiadomości mail o których wspomniano wcześniej. Następnie należy wybrać przycisk Utwórz wszystkie i Wyślij wszystkie.
+
+Po wybraniu przycisku Wyślij wszystkie uruchomiony zostanie program Outlook, w oknie którego zostanie uzupełniony uprzednio wybrany bądź wpisany ręcznie adres mailowy, jak również tematem zgodnie z makrem jakie zostało użyte i załączonym dokumentem na podstawie którego została wysłana wiadomość mail. W tym momencie użytkownik ma możliwość wpisana własnej treści wiadomości i wysłania jej z programu Outlook wraz z załącznikiem dokumentu. Analogicznie sytuacja wygląda przy wysyłce zdarzenia czy zlecenia.
+Wysyłała mail klient wbudowany
+W przypadku wyboru metody wysyłki klient wbudowany przy wysłaniu wiadomości mail z dokumentu, zdarzenia, zlecenia uruchomi się automatycznie nieco inne okienko jak w przypadku pozostałych opcji. Po wciśnięciu przycisku Wyślij e-mail na podglądzie dokumentu pojawi się okienko w którym możemy wpisać adres mailowy na jaki chcemy wysłać maila z załączonym dokumentem lub jeżeli są uzupełnione dane dotyczące adresu mailowego na kartotece kontrahenta, system podpowie możliwe adresy mailowe do wyboru i nie ma potrzeby uzupełniania adresu ręcznie analogicznie jak w przypadku wcześniej opisywanym dla wyboru metody wysyłki Simple MAPI. W tej sytuacji użytkownik może wskazać/wybrać konto z jakiego ma zostać wysłany mail (w przypadku jeśli ma przypisany stosownymi uprawnieniami i ustawieniami dostęp do więcej niż jednego adresu mailowego) oraz wybrać szablon maila który wcześniej został zdefiniowany w systemie Vendo. Po wyborze konta i szablonu można kliknąć przycisk Utwórz wszystkie, wówczas pojawi się przycisk Podgląd pod którym będzie możliwy podgląd wiadomości przed wysyłką którą można jeszcze edytować.
+
+Po wybraniu opcji Wyślij mail zostanie wysłany wraz z załącznikiem a w CRM>Mail>na stosowny koncie w wiadomościach wysłanych pojawi się na liście wysłana wiadomość mail.
+Images
+
+
+
+
+
+
+
+

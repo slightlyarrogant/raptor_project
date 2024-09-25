@@ -1,0 +1,68 @@
+#	Konfiguracja
+Aby prawidłowo działały Listy przewozowe należy wykonać stosowna Konfigurację. Konfigurację wykonujemy w `Ustawienia` > `Słowniki`. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D3/d49cb6f591f99b10b9e79cf0a16ef17f-138867-0.png)
+ 
+W słownikach definiujemy rodzaj wysyłki oraz spedytora dla którego określany jest sposób komunikacji poprzez API. Aby poprawnie funkcjonowała komunikacja ze spedytorami wymagane są dwie rzeczy: konfiguracja pluginu oraz wykupiona licencja.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I4/36255349bbf6e289d409a8426a3f8e37-149042-0.png)
+ 
+Definiowanie pluginów leży po stronie firmy wdrożeniowej. Powyżej widoczny jest przykład zainstalowanych pluginów. Pluginy są osobno licencjonowane, więc aby móc korzystać z elektronicznie wymiany danych ze spedytorem należy wykupić licencję oraz ją załadować i włączyć.  
+
+Definiując spedytora należy ustawić kilka dość ważnych parametrów. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U4/2edf409fff36147671ded00079eeebd5-239181-0.png)
+
+Jednym z nich jest **schemat**. Jest to sposób komunikacji z firmą spedycyjną, pomiędzy Vendo a serwerem spedytora.  Sposób komunikacji ze spedytorem zależy od zainstalowanego Pluginu. Można powiedzieć że wybór schematu ( a co za tym idzie wykupiona licencja) jest jednym z najważniejszych elementów konfiguracji Spedycji.  Jeśli dana firma współpracuje z  jakimś spedytorem a niema go na liście to nie ma przeszkód na oprogramowanie takiej komunikacji, jeśli firma spedycyjna oferuje taką możliwość.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L7/0617bc3940a95cb5ef01a3b0716b3dd2-74239-0.png)
+ 
+Lista możliwych schematów ustawiana jest poprzez licencję oraz pluginy zainstalowane w Vendo.
+
+Kolejne parametry definiują charakter wysyłki, tzn: waga, płatność, moment utworzenia listy przewozowego, przynależność do systemów zewnętrznych, progi kosztów, dane kontaktowe odbiorcy i jego adres, typy paczki.
+
+**Wagę** ustalić można jako stała bądź wyliczaną. Wyliczana jest na podstawie wagi kartotek towarowych występujących na dokumencie powiązanym z listem przewozowym. Waga może być wyliczana przy tworzeniu listu przewozowego lub przy jego zamknięciu. Dodatkowo można doliczyć pewien narzut na wagę wysyłki, podając wartość procentową do wagi towaru z dokumentu powiązanego. Narzut taki ułatwia nam oszacowanie wagi wyrobów wraz z opakowaniem. Jednak zawsze istnieje możliwość wprowadzenie ręcznie wagi na Liście Przewozowym.
+
+W obszarze **Płatność** definiujemy wszystkie elementy dotyczących kosztów za wysyłkę: 
+
+-	Forma płatności za usługę:  przelewem czy gotówką, 
+-	Płatnikiem – odbiorca czy nadawca, 
+-	Sposób wyliczana jest kwota do pobrania.
+
+W zależności od firmy spedycyjnej można dodatkowo ustawić automatyczne pobranie ubezpieczenia i sposób pobrania kwoty ubezpieczenia. Można także ustawić stałe kwoty ubezpieczenia, które będą doliczane do kwoty płatności za list przewozowy.
+
+**Automatyczny sposób tworzenia** Listu Przewozowego możliwy jest dla dokumentów FV,WZ lub RW, w zależności który zaznaczymy w ustawieniach. Zawsze list przewozowy może zostać utworzony z dowolnego dokumentu poprzez kliknięcie CTRL+L i wybranie z listy wymaganego dokumentu transportowego.
+
+List przewozowy może mieć **przynależność do systemów zewnętrznych** i generowanych do wymienionych dokumentów. Gdy FV, WZ lub RW powstanie przy pomocy zaznaczonych systemów zewnętrznych wtedy powstanie list przewozowy. Przykładem tutaj może być jeśli zamówienie powstaje po stronie sklepu internetowego, generowana jest z niego Faktura to w momencie zamknięcia Faktury powstanie List przewozowy z wybranym wcześniej spedytorem na zamówieniu.
+
+Automatyzacją kosztów wysyłki są **progi kosztów**. Progi kosztów definiują nam automatyczne dodanie usługi do dokumentu dla którego tworzony jest list  przewozowy wraz z ustaloną wartością. Dana usługa dodawana jest do dokumentu w momencie jak wartość dokumentu przekroczy dolną granicę progu.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/U2/e2c43f21786bb2c12bcc168384865508-65015-0.png)
+
+ Firmy spedycyjne wymagają aby przekazywać **dane kontaktowe odbiorców**. Wymagane dane to Osoba kontaktowa, mail, telefon i sposób komunikacji. Dane pobierane są z Osoby kontaktowej klienta który jest przypisany do dokumentu. Dane mogą być pobierane w momencie tworzenia listu przewozowego lub w momencie wysyłanie danych do spedytora. Adres dostarczenia może być pobierany z poziomu klienta przypisanego do dokumentu lub bezpośrednio z dokumentu ( mogą być modyfikowane na dokumencie do czasu zamknięcia dokumentu. Dane pobierane mogą być przy tworzeniu listy lub wysyłce danych.
+
+Do każdej spedycji można zdefiniować **typy przesyłek** jakie mogą wystąpić dla danej Spedycji. Typy paczki spedycyjnej określają jakiej wielkości może być wielkości. Dla typu określamy wymiary paczki Wysokość, szerokość i długość. Dodatkowe opcją charakteryzującą paczkę jest możliwość piętrowania.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/H7/c68825addb832fc7a9a43b1ae8dc399d-33065-0.png)
+ 
+Zakładka **Dodatkowe** umożliwia skonfigurowanie Jakie i kiedy mają być pobierane dane kontaktowe odnośnie odbiorcy. Pierwsze to kiedy ma się pobierać dane kontaktowe osoby kontaktowej : przy wystawianiu Listu Przewozowego, Zamknięciu, brak – wprowadzane ręcznie podczas tworzenia Listu Przewozowego. Podobnie jest z pobieraniem adresu email oraz numeru telefonu. Dodatkowymi opcjami są jaki rodzaj powiadomienia ma być wysłany do osoby kontatkowej Email i/lub SMS. Dwa pola refencyjne umożliwiają ustawienia makra które jest pobierane i uzupełniane podczas tworzenia listu przewozowego. Dane z tych pól są przesyłane do firmy spedycyjne i umieszczane na etykiecie.
+  
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M6/03075fd3f20e6220ebdce6337b7ba144-77456-0.png)
+
+Po prawej zakładka Dodatkowe dla firmy spedycyjnej GLS, a po lewej Inpost
+
+Jak na powyższych zrzutach ekranów tego okna widać, możliwości konfiguracyjne zakładki „Dodatkowe” różnią się, w zależności jaki schemat komunikacyjny – firma spedycyjna –  zostanie wybrany. Uzależnione jest to od możliwości komunikacyjnych danej firmy spedycyjnej.  
+
+Trzecia zakładka konfiguratora Spedytora są tzw.  możliwości Pluginu np. Raben Plugin, Schanker Plugin, InPost ShipX Plugin, DPD Plugin, GLS Plugin itp. Widać to na poniższych zrzutach ekranu. 
+  
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T7/945bb42bf048bde200a0600091ee8a2a-70299-0.png)
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/S6/ca7980d73d082db7c172f19fb940b2d3-132437-0.png)
+ 
+Zakładka ta umożliwia dokładniejsze sprecyzowanie rodzaju przesyłki i umieszczenie na liście przewozowym dodatkowych danych. Przykładem mogą być dane:
+
+Dostarczenie w sobotę, do godziny 10:00, odbiór własny, Kontakt przed doręczeniem, rodzaj wydruku A4, Dane do logowania u danej firmy spedycyjnej, Dane nadawcy, Jakiego rodzaju pojazd ma być podstawiony, zwrot dokumentów, Pobranie kwoty, oznakowanie towaru niebezpiecznego. 
+
+Dane są te różne dla różnych firm spedycyjnych oraz rodzaju komunikacji, uzależnione to jest od możliwości danej firmy spedycyjnej. Pozwalają na sprecyzowanie rodzaju Spedycji wybieranej na danym dokumencie i liście przewozowym. 
+
+Definiując pojedynczego Spedytora należy pamiętać o tym, że definiowany jest dokładnie jeden wariant wysyłki, np. pobranie, płatność przy odbiorze dostawa do 12:00. Dlatego aby móc obsłużyć wiele różnych wariantów wysyłki należy każdy osobno definiować.

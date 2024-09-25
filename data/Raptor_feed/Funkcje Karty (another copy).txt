@@ -1,0 +1,9 @@
+# Bilanse dnia
+W ramach funkcjonalności karty bilanse dnia użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj wpłatę – generowanie dokumentu wpłaty 
+- dodaj wypłatę – generowanie dokumentu rozchodu
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpf8797cf8-8cf8-4b5e-94ea-2703bf806779](https://www.cfi.pl/vendohelp/content/imgs/Y2/09010508f47a4e8b13392804ddaaffed-30013-0.png)

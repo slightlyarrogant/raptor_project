@@ -1,0 +1,218 @@
+Pluginy 2020 - wytyczne
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/guidelines_plugins
+scraped_at: 2024-09-05T12:18:48.092055
+last_updated: 2024-09-05T12:18:48.092105
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Pluginy 2020 - wytyczne
+meta_tags: ['public', 'typeof', 'string', 'model', 'class', 'name', 'vendoicons', 'epermission', 'static', 'wersji']
+
+Content
+1. Wstęp
+Plik ten zawiera ogólne zasady tworzenia pluginów w wersji 2020, które są wspólne dla wszystkich programistów.
+Demo z przykładami kodu z możliwością podglądu znajduje się w dwóch lokalizacjach:
+
+https://uidemo.tagbites.com/
+M:\#Developers\TagBites.UI.Demo\TagBites.UI.Demo.DevForms.exe
+
+2. Pluginy - założenia
+KAŻDY PLUGIN MUSI BYĆ DODANY DO GŁÓWNEJ SOLUCJI
+Mamy uruchomioną kompilację nocną pluginów. Wszystkie pluginy dodane do głównej solucji (w wersji 2020: D:\Projects\VendoScripts\v20200404\VendoPlugins.sln) kompilują się codziennie w nocy. Biblioteka trafia do katalogu: M:#VendoRelease\plugins. Wdrożeniowcy oraz pracownicy obsługi technicznej mają dostęp do najnowszej wersji plugina.
+3. View model
+Każdy view model, który ma być prezentowany jako dialog musi posiadać atrybut UIWindowAttribute z argumentem UIWindowType.Form. Pozwala to na stworzenie widoku posiadającego ribbon.
+[UIWindow(UIWindowType.Form)]
+public class ViewModel
+{ 
+}
+
+
+Każda funkcja zdefiniowana z atrybutem UICommandAttribute trafi do ribbona.
+Co ważne, każda z nich musi mieć określoną ikonę.
+    [DisplayName("Raporty")]
+    [UIIcon(typeof(VendoIcons), nameof(VendoIcons.Chart2))]
+    [UICommand(Shortcut = UIKey.F8)]
+    public void Report()
+    { 
+    }
+
+    [DisplayName("Dodaj dokument")]
+    [UIIcon(typeof(VendoIcons), nameof(VendoIcons.DocumentAdd))]
+    [UICommand]
+    public void AddDocument()
+    { 
+    }
+
+4. Kontroler
+Każdy kontroller powiązany z głównym view modelem prezentowanym jako dialog powinien dziedziczyć po VendoController<T>
+public class Controller : VendoController<ViewModel>
+{
+    //..
+}
+
+Właściwości znajdujące się w kontrolerze bazowym VendoController<T>, sterujące widocznością standardowych przycisków ("Zapisz", "Zastosuj", "Anuluj"), które można przeładować:
+
+HasOkButton - czy pokazywać przycisk "Zapisz"; domyślnie true
+HasApplyButton - czy pokazywać przycisk "Zastosuj"; domyślnie true
+HasCancelButton - czy pokazywać przycisk "Anuluj"; domyślnie true
+
+5. Uprawnienia
+W celu prowadzenia projektu w sposób uporządkowany należy dodać kod opowiedzialny za definicję uprawnienia w osobnym pliku poprzez dodanie sufiksu "Permission" , przykład nazwy pliku "DocumentPermission.cs".
+// Nazwy uprawnienia
+public enum ePermission
+{
+    [Description("Uprawnienie 1")]
+    UPR1,
+    [Description("Uprawnienie 2")]
+    UPR2,
+}
+
+// Utworzenie Kategorii uprawnień
+[Export("Plugin", typeof(PermissionContextDescriptor))]
+class PermissionsDescriptor : PermissionContextDescriptor
+{
+    public override string GetDisplayName(string name)
+    {
+        foreach (var item in Enum.GetValues(typeof(ePermission)))
+            if (name == item.ToString())
+                return Amag.EnumsHelper.GetEnumDescription(typeof(ePermission), item);
+
+        return null;
+    }
+    public override string GetDescription(string name) => null;
+    public override string GetCategory(string name) => "Name";
+    public override IdentitySet GetDefaultValue(string name) => IdentitySet.None;
+}
+
+// Klasa do pobierania uprawnień
+[Export(typeof(ICustomPermissionsProvider))]
+public class PermissionsProvider : ICustomPermissionsProvider
+{
+    public void Fill(IPermissionsContextModel model)
+    {
+        var context = PermissionContextKey.GetContextKey(GetType().Assembly, "Plugin");
+        var group = model.GetOrAddGroup("Name");
+
+        foreach (var item in Enum.GetValues(typeof(ePermission)))
+        {
+            var key = context.CreateKey(item.ToString());
+            group.AddEntry(key);
+        }
+    }
+
+    public static bool GetPermission(ePermission perm)
+    {
+        var context = PermissionContextKey.GetContextKey(typeof(Plugin).Assembly, "Plugin");
+        return context.CreateKey(perm.ToString()).AsRule().Has();
+    }
+}
+
+// Przykład sprawdzenia uprawnienia
+if(!PermissionsProvider.GetPermission(ePermission.UPR1))
+    VendoUIManager.ShowMessage(null, DataStateType.Information, "Brak uprawnień");
+
+6. Ustawienia
+W celu prowadzenia projektu w sposób uporządkowany należy dodać kod opowiedzialny za definicję ustawień w osobnym pliku poprzez dodanie sufiksu "Configuration" , przykład nazwy pliku "GitConfiguration.cs".
+Odwołując się do ustawienia należy wskazać jego właściela poprzez zastosowanie enuma SettingOwnerType. Przykładowo jeśli użyta zostanie wartość SettingOwnerType.Database, ustawienia będą takie same w całej bazie, z kolei SettingOwnerType.User określa, że jest on zapisywanie pod konkretnego użytkownika.
+public static class GitConfiguration
+{
+    // Osobna definicja poprzez pole dla każdego ustawienia
+    private static readonly SettingLocation RepositoryUserNameSettingLocation = new SettingLocation(typeof(GitConfiguration).Assembly, "RepositoryUserName", SettingOwnerType.User);
+
+    private static readonly SettingLocation PluginSetting = new SettingLocation(typeof(Settings).Assembly, "PluginSetting", Amag.Settings.SettingOwnerType.Database);
+
+    public static string UserName
+    {
+        get => SettingsManager.GetValue<string>(RepositoryUserNameSettingLocation);
+        set => SettingsManager.SetValue(RepositoryUserNameSettingLocation, value, cache: SettingCache.Memory);
+    }
+
+    public static SettingsModel Settings
+    {
+        get
+        {
+            var json = SettingsManager.GetValue<string>(PluginSetting);
+            if (!string.IsNullOrEmpty(json))
+                try
+                {
+                    return VendoJsonSerializer.FromString<SettingsModel>(json);
+                }
+                catch { }
+
+            return new SettingsModel();
+        }
+        set
+        {
+            var json = VendoJsonSerializer.ToString(value);
+            SettingsManager.SetValue(PluginSetting, json);
+        }
+    }
+}
+
+7. Menu Action - przypinanie plugina do funkcji
+
+
+Podpięcie do karty w C++
+[DisplayName("Nowa funkcja na karcie klienta")]
+[Export("CDialogNewKlientD", typeof(MenuAction))]
+public class ClientMenuAction : MenuAction
+{
+    public override void Execute(IMenuContext context)
+    {
+        //...
+    }
+}
+
+
+Podpięcie do karty w C#
+
+
+Uwaga Od wersji 2020 zaczęliśmy przenosić dialogi do .Net. Na obecną chwilę mamy przepisaną kartę klienta. W związku z tym zmienił się mechanizm dodawania funkcji do tych dialogów. Nie korzystamy już z klasy Menu Action
+W celu dodania nowej funkcji do karty należy stworzyć kontroler, który ma atrybut VendoControllerExportAttribute z argumentem wskazującym na typ view modelu, do którego funkcja ma zostać dodana.
+[VendoControllerExport(typeof(ClientViewModel))]
+public class ClientComandController
+{
+    public ClientViewModel Model { get; }
+
+    [DisplayName("Nowa funkcja na karcie klienta")]
+    [UICommand]
+    [UIIcon(typeof(VendoIcons), nameof(VendoIcons.Tools))]
+    public void Execute()
+    {
+        // ...
+    }
+
+
+    public ClientComandController() { }
+    public ClientComandController(ClientViewModel model)
+    {
+        Model = model;
+    }
+}
+
+View modele definiujące karty, do których można wpiąć się pluginem:
+
+ClientViewModel
+
+8. Nowe DT
+Dwie ważne funkcje dotyczące DT, których nie było w poprzednich wersjach:
+
+
+Tworzenie nowego rekordu:
+var dt = DTManager.Default.GetNewDT(eDataType.TB_KLIENT);
+dt.SetField("k_kod", "Kod klienta");
+//...
+dt.Commit();
+
+
+Usuwanie rekordu:
+var klientID=2;
+DTManager.Default.DeleteDT(eDataType.TB_KLIENT, klientID);
+
+
+Szerszy artykuł odnośnie DT zostanie przygotowany przez Artura. Podlinkujemy kiedy będzie gotowy.
+9. Konwencje i wytyczne
+Wytyczne znajdują się pod adresem: Kliknij tutaj.
+10. Logi
+Użycie logów w wersji 2020 zostało opisane w blogu
+Images

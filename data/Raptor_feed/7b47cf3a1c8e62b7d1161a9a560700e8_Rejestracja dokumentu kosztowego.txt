@@ -1,0 +1,102 @@
+Rejestracja dokumentu kosztowego
+Metadata
+
+url: http://192.168.33.19/master/docs/company/procedury-standaryzacyjne/crm/rejestracja-dokumentu-kosztowego
+scraped_at: 2024-09-05T12:17:20.813404
+last_updated: 2024-09-05T12:17:20.813460
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Rejestracja dokumentu kosztowego
+meta_tags: ['procedury', 'zdarzenia', 'będzie', 'wybieramy', 'etapu', 'dokumentu', 'etap', 'pracownika', 'miejscu', 'procedura']
+
+Content
+CRM - WORKLOW - INSTRUKCJA DO STANDARDOWEGO OBIEGU DOKUMENTÓW „REJESTRACJA DOKUMENTU KOSZTOWEGO”
+Cel:
+Aby ułatwić i zoptymalizować prace w przypadkach, gdy czynności wykonywane są cyklicznie, system umożliwia tworzenie procedur. Dzięki temu narzędziu, użytkownik w prosty sposób może określać jak mają wyglądać poszczególne etapy konkretnego działania w firmie. W tej instrukcji został przedstawiony sposób wykorzystania procedur w Vendo, na przykładzie standardowego obiegu rejestracji dokumentów kosztowych.
+Lokalizacja/Uprawnienia
+Aby program udostępniał możliwość tworzenia procedur i wykorzystania przekazywania zdarzeń między pracownikami w firmie w obrębie danej sprawy, w kluczu Klienta musi być wykupiona licencja do modułu Workflow (rozszerzenie modułu CRM).
+Menu główne > CRM >kalendarz/zdarzenia/Procesy/Projekty
+Utworzenie nowej procedury w systemie
+Wprowadzenie nowej procedury w programie zaczynamy od przejścia do [Ustawienia] > [Słowniki] > [Procedury spraw] w sekcji [CRM]. W tym miejscu tworzone są wszystkie procedury, które będą wykorzystywane w firmie.
+
+W otwartym okienku klikamy przycisk Dodaj lub klawisz [Insert] z klawiatury i dodajemy nową kartę procedury. Przy dodaniu należy uzupełnić pola [Kod procedury], [Nazwę procedury] oraz wybrać [Rodzaj sprawy], tak jak pokazano na poniższym zrzucie ekranu.
+
+Po utworzeniu okna nowej procedury przechodzimy do ułożenia całego schematu postępowania, jak dana rejestracja dokumentu kosztowego ma przebiegać. Do tego używamy przycisku [Schemat], który staje się aktywny po pierwszym zapisaniu nowej karty procedury. Po kliknięciu otrzymamy nowe okienko wyglądające jak poniżej.
+
+W prezentowanym oknie tworzymy graficzny schemat, w jaki sposób dana procedura ma przebiegać. W górnej belce dostępnego menu zaczynając od lewej strony mamy następujące opcje do wyboru:
+
+zapis dotychczasowych zmian w procedurze,
+wydruk graficzny na drukarce,
+cofnij,
+powtórz,
+usuń.
+
+Dodatkowo są dostępne poszczególne elementy, jakie wykorzystujemy w procedurze. W naszej procedurze będziemy wykorzystywać następujące elementy:
+
+Start – rozpoczęcie danej procedury,
+Stop – zakończenie danej procedury,
+Etap – blok związany ze zdarzeniem utworzonym podczas przejścia do następnego kroku procedury,
+Element specjalny w postaci dodania Załącznika do zdarzenia,
+Pytanie – możliwość pójścia w dwie różne strony w zależności od postawionego pytania,
+Łącznik – pozwala łączyć różne drogi prowadzonej procedury,
+Połączenie – łączy ze sobą poszczególne elementy wskazując kierunek procedury.
+
+Konfiguracja procedury „Rejestracja dokumentu kosztowego”
+Rozpoczynając tworzenie procedury zawsze zaczynamy od bloku [Start], który znajdzie się u samej góry procedury. Następnie tworzymy pierwszy etap, który będzie nazywał się Rejestracja dokumentu kosztowego. Aby dodać nowy etap, wybieramy klocek etapu a następnie poprzez przycisk [Funkcje] > [Dodaj] (1), dodajemy nowy etap. Z nowo otwartego okna klikamy w ikonkę 3-ech kropek […] (2) w wierszu Szablon zdarzenia, otworzy się nowe okno z dostępnymi szablonami, gdzie możemy dodać nowe szablony zdarzeń (3).
+
+W nowo otwartym oknie konfigurujemy szczegóły dotyczące szablonu zdarzenia, które będzie jednym z naszych etapów sprawy w tworzonej procedurze.  W tymi miejscu należy wypełnić pola opisane poniżej, w sekcji ogólne:
+
+Nazwa – uzupełniamy nazwę szablonu zdarzenia,
+Rodzaj – wybieramy rodzaj zdarzenia jakie będzie tworzone z dostępnych rodzajów zdarzeń w programie,
+Źródło makra – czyli skąd mają być pobierane makra do pól tekstowych, zazwyczaj ustawiamy Nowe zdarzenie,
+Temat – możemy wykorzystać makra z programu dostępne w katalogu z wersją programu w pliku o nazwie macors.xml, w tym miejscu można wpisać makro {Etap.Nazwa}, które wywoła wpisanie do tematu zdarzenia nazwę z szablonu,
+Opis – pole, gdzie chcemy wprowadzić dodatkowe informacje dla pracownika zdarzenia, można użyć również makra jak w poprzednim przypadku.
+
+W sekcji Klient:
+
+Klient - wybieramy skąd ma być ustawiony klient, w tym miejscu możemy wybrać opcję Wybrany co spowoduje wybór klienta przez pracownika na zdarzeniu,
+Osoba – możemy wskazać czy ma się podpinać osoba z pod klienta (jeżeli istnieje). W sekcji Właściciel zdarzenia:
+Właściciel zdarzenia – wskazujemy czy ma to być Dział, Dział pracownika czy Pracownik,
+Pracownik - zazwyczaj w pierwszym etapie wybieramy aby była to osoba zalogowana czyli osoba tworząca procedurę ale w następnych etapach wskazujemy konkretny dział pracowników lub konkretnego pracownika (w opcji po prawej stronie),
+Rola – możemy ograniczyć wybór pracownika do danej roli pracownika,
+Pytaj o wybór jeśli wskazanie nie jest jednoznaczne – gdy zaznaczymy tą opcję i program nie będzie wiedział jakiego pracownika wskazać, wyświetli okno z listą pracowników do wyboru podczas przejścia do następnego etapu w procedurze,
+Wybierz pracownika z ostatniego etapu (jeżeli istnieje) – gdy zaznaczone program ustawi takiego samego pracownika jak w poprzednim etapie. W sekcji Daty zdarzenia:
+Typ planowania – mamy do wyboru dwie możliwości:
+Automatyczne – w przypadku automatycznego planowania program sam ustawi datę rozpoczęcia i zakończenia danego etapu, wskaże możliwość wyboru w jaki sposób czas ma być ograniczony (Aktualny czas, Jak najwcześniej – planowanie od początku procedury, Jak najpóźniej – planowanie od końca procedury), będzie możliwość ustawienia Czasu trwania danego etapu oraz pozwoli ustawić termin i maksymalne opóźnienie etapu. Najczęściej wskazujemy właśnie to planowanie,
+Ręczne – w przypadku ręcznego planowania to my musimy ustawić rozpoczęcie, zakończenie termin oraz odpowiednio do każdego ustawiamy opóźnienie.
+
+
+
+W sekcji Triggery:
+
+Zmiana statusu zlecenia przy zamykaniu zdarzenia – poprzez to ustawienie mamy możliwość wymusić by program zmienił status na skojarzonym zleceniu (jeżeli jest podpięte). Wybieramy status z utworzonych pod danym zleceniem w ustawieniach programu ([Ustawienia] > [Słowniki] > [Statusy dla zleceń]). W naszym przypadku powyższe ustawienia możemy wybrać, tak jak wskazano na wcześniej umieszczonym zrzucie ekranu. Po dodaniu pierwszego etapu nasza procedura powinna prezentować się jak poniżej.
+
+
+W następnym kroku będziemy ustawiali zmianę statusu załącznika, czyli podpiętego dokumentu kosztowego wprowadzonego w Vendo jako dokument KO. W tym przypadku korzystamy z elementu specjalnego i wybieramy opcję Załącznik. W nowo otwartym okienku jako Rodzaj załącznika wybieramy [główny i zwykły], Typ załącznika - [obiekt], Obiekt wybieramy z listy dokument kosztowy, wskazujmy Status jaki ma być ustawiony czyli np. [Dokument Zarejestrowany]. Aby utworzyć potrzebne statusy dla dokumentu KO (w zależności jak wcześniej skonfigurowaliśmy ten parametr, czyli jaki wybieraliśmy dokument), wchodzimy w [Ustawienia] -> [Parametry pracy] -> [Dokumenty] – [pokaż dialog] -> wybieramy z listy odpowiedni dokument -> zakładka [Status]. W tym miejscu tworzymy nowe statusy. Opisane ustawienia powinny prezentować się jak poniżej, pozostałe zmiany statusów jakie pojawią się w tworzonej procedurze ustawiamy identycznie zmieniając tylko status.
+
+Następnym krokiem w procedurze jest dodanie nowego etapu o nazwie [Akceptacja merytoryczna]. W tym miejscu tworzymy nowy etap, tak jak poprzednio opisano wybierając odpowiednie ustawienia.
+
+W dalszej części procedury będzie postawione pytanie, od którego zależeć będzie czy procedura ma przejść do etapu 'Odesłanie dokumentu do dostawcy, prośba o korektę' a następnie zakończy ona procedurę (na końcu blok [STOP]) lub czy trafi do etapu Akceptacji przez kierownika i będzie dalej procedowana. Pytanie będzie następujące: Czy usługa została wykonana?. Jeżeli odpowiedź będzie twierdząca, to w następnym kroku ustawiamy nową zmianę statusu podpiętego dokumentu na Akceptacja merytoryczna. Na ten moment procedura na schemacie będzie wyglądała jak poniżej.
+
+Idąc ścieżką po stronie prawej (czyli odpowiadając na pierwsze pytanie [Tak]) następnym etapem jest kolejne pytanie brzmiące: Czy akceptujesz?. Gdy odpowiedź będzie 'Nie' wtedy procedura wraca do etapu 'Odesłanie dokumentu do dostawcy, prośba o korektę' i zostanie zakończona. W przeciwnym wypadku ustawiamy nadanie nowego statusu dokumentu na Do zapłaty i wprowadzamy nowy etap Weryfikacja księgowa i wpisanie do rejestru. Czyli na tym etapie procedura powinna trafić do osoby zajmującej się księgowością. W następnym kroku ustawiamy ostatni już etap o nazwie Akceptacja do zapłaty, gdzie pracownik realizujący ten etap powinien dokonać wypłaty pieniędzy za procedowany dokument kosztowy. W tym miejscu jest to już ostatni etap, po którym należy ustawić blok [STOP] kończący całą procedurę. Cała procedura finalnie powinna wyglądać tak jak poniżej.
+
+Utworzoną procedurę trzeba jeszcze oczywiście zapisać. Należy pamiętać żeby wszystkie połączenia zostały poprawnie podpięte pod dane elementy (etapy, pytania itp.) oraz by nie wystąpiła sytuacja, że w którymś miejscu procedura nie zostanie połączona. Gdyby nastąpiła taka sytuacja, to przy zapisie procedury, program pokaże komunikat z treścią Istnieją elementy nieosiągalne.
+Uruchomienie procedury
+W celu uruchomienia nowo powstałej procedury przechodzimy do modułu [CRM] i wybieramy miejsce z którego chcemy wywołać procedurę. Tym miejscem są zakładki, gdzie można dodać nowe zdarzenie np. Zdarzenia. Aby dodać nową procedurę zazwyczaj wybieramy funkcję [Dodaj zgodnie z procedurą] a następnie z nowo otwartego okna wskazujemy naszą procedurę.  Po uruchomieniu procedury automatycznie wypełnione zostaną pola [Temat sprawy] oraz [Temat]. Od tego momentu system będzie działał ściśle według zdefiniowanego wcześniej schematu - procedury. Zdarzenia wynikające z Procedury mogą być delegowane pomiędzy pracownikami bądź działami a przekazanie ich odbywa się poprzez kliknięcie niebieskiej strzałki w lewym górnym rogu okna zdarzenia.
+
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

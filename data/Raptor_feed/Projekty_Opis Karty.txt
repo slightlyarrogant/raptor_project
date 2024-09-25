@@ -1,0 +1,109 @@
+# Projekty
+##	Opis
+Karta projektu w systemie VENDO.ERP  to obiekt, który służy do zarządzania informacjami dotyczącymi projektów w firmie. Karta projektu jest narzędziem, które pozwala na centralizację, monitorowanie i zarządzanie wszystkimi aspektami projektów, w tym zasobami, harmonogramami, kosztami i ryzykiem. 
+
+![tmpfc21c4ef-54b8-44b1-bdf4-a3b165dcd52a](https://www.cfi.pl/vendohelp/content/imgs/L3/499df807241b27188acf5ea78066065f-95886-0.png)
+ 
+## 	Numeracja
+
+Każdy projekt posiada indywidualny numer budowany według zasady:
+
+`NUMER_KOLEJNY / SERIA / ROK / PROJ`
+
+Gdzie:
+-	Numer kolejny – nadawany w ramach Serii
+-	Seria - to słownikowy składnik numeracji dokumentów systemowych. Na podstawie serii możliwe jest określenie uprawnień (dostępu do danych zleceń, danej serii)
+-	Rok – rok, w którym wystawiane zlecenie
+-	PROJ - skrót projekt
+
+Przykłady numeracji projektów:
+-	13/S/24/PROJ
+-	14/S/24/PROJ
+-	13/A/24/PROJ
+
+## Zakładki
+
+### Nagłówek 
+![tmp621a0fa7-873c-455a-a60c-f0ae7c5f9e26](https://www.cfi.pl/vendohelp/content/imgs/L3/499df807241b27188acf5ea78066065f-95886-0.png)
+
+
+| Nazwa pola          | Opis                                               | Typ                 |
+|---------------------|----------------------------------------------------|---------------------|
+| Numer Projektu      | Numer projektu                                     | Tekst               |
+| Data wpisu          | Data utworzenia projektu                           | Data i czas         |
+| Data rozpoczęcia    | Zakładany termin rozpoczęcia                       | Data i czas         |
+| Termin zak.         | Zakładany termin zakończenia                       | Data                |
+| Nazwa projektu      | Tytuł projektu                                     | Tekst               |
+| Klient              | Referencja do kartoteki klienta                    | Słownik             |
+| Nazwisko            | Dane człowieka klienta                             | Tekst               |
+| Kontakt             | Dane kontaktowe do człowieka klienta               | Tekst               |
+| Rodzaj projektu     | Słownik rodzaju projektów                          | Słownik             |
+| Kolor proj.         | Kolorystyczne oznaczenie projektu                  | Słownik             |
+| Opis                | Pole dla dodatkowego opisu                         | Tekst               |
+| Opis końcowy        | Pole dla dodatkowego opisu powykonawczego          | Tekst               |
+| Okres z procedur    | Okres wynikający z podpiętych procedur pod projekt | Data i czas         |
+| Okres według zdarzeń| Okres wynikający z podpiętych pod projekt dokumentów zdarzeniowych | Data i czas |
+| Wpisujący           | Referencja do kartoteki pracownika który wpisał projekt | Słownik         |
+| Kierownik projektu  | Referencja do kartoteki pracownika który został wyznaczone jako kierownik projektu | Słownik   |
+| Dział               | Referencja do działu Kierownika projektu           | Słownik             |
+| Ostatni status proc | Informacja o ostatnio ustawionym statusie projektu | Słownik             |
+| Miejscowość         | Dodatkowa informacja dotycząca projektu            | Tekst               |
+| Stan                | Stały słownik. Stan projektu Realizowane / Wykonane / Anulowane / Zawieszone | Pole typu radiobutton |
+
+
+### Pozycje
+
+Lista pozycji projektu związanych z projektem. Najczęściej pozycje projektu stanowi pozycje podlegające kalkulowaniu i następnie ofertowaniu.
+Pozycje określają zarówno kartotekę towaru jak i ilość potrzebną do ofertowania.
+
+
+![tmp122fd7a9-5a19-40db-965b-a4e6c50b189b](https://www.cfi.pl/vendohelp/content/imgs/Q8/5dc3019f4572a75d86fec1eb0b945292-43071-0.png)
+
+### Lista dokumentów
+
+Lista dokumentów – dokumenty zarejestrowane w VENDO.ERP powiązane nagłówkowo z danym projektem, np. oferta
+
+![tmp84889ac6-1180-4762-8ee9-7fae8a55da44](https://www.cfi.pl/vendohelp/content/imgs/E8/9b37a021388c566d148430bfbd157413-68126-0.png)
+
+### 	Struktura zlecenia
+
+Widok umożliwiający prowadzenie projektów w ramach zlecenia (etapy, zadania w ramach etapów, budżety)
+
+![tmpf7c71cf3-2833-451e-bff4-d8d23938088b](https://www.cfi.pl/vendohelp/content/imgs/M0/29c353a9bee250170f0f297c15f620a8-132607-0.png)
+
+
+### Zdarzenia
+
+Zdarzenia – lista zdarzeń (zarejestrowanych w CRM) związanych z danym projektem
+
+![tmp3c3d6ad4-6b30-4dc8-ba14-36a4f918adfb](https://www.cfi.pl/vendohelp/content/imgs/S0/1c016e1618971be728044d4b16b5ebba-135142-0.png)
+
+### Gantt
+
+Wizualizacja graficzna etapów i podetapów projektu
+
+![tmp930d6d57-ab01-4a5f-9de5-9c624a323071](https://www.cfi.pl/vendohelp/content/imgs/L1/48383d510c81cbee155c2eebf372d1bc-66219-0.png)
+
+### Prace
+
+Prace – zarejestrowany czas pracy przez pracowników na dane zlecenie lub czas zarejestrowany pod zdarzenia podpięte pod zlecenie
+
+![tmpa842f9be-8cb7-4c7c-900e-218d86e84e34](https://www.cfi.pl/vendohelp/content/imgs/T3/e517a3f94dd3f25a8ee67b642892a5ec-51000-0.png)
+
+### Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmp2d21146e-d4be-47eb-9ae2-3cbc12826ec9](https://www.cfi.pl/vendohelp/content/imgs/B9/3aacea82c17552a1aaa93f0157cae004-26399-0.png)
+
+### Pliki
+
+Możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmpb75dd1d1-0f3b-4bfe-b1e9-8c3d72f5dd34](https://www.cfi.pl/vendohelp/content/imgs/P3/a321c6f3df389b3f767b09235a9eb9ff-30753-0.png)
+
+### Wspólne pliki
+
+Pliki podpięte bezpośrednio pod projekt oraz pliki podpięte pod zdarzenia, które również są podpięte pod projektem
+
+![tmp899676af-a2b5-45b4-a8c8-d208c9769dad](https://www.cfi.pl/vendohelp/content/imgs/R3/21e7f510c31f1adf86fcc9de074bb04a-31276-0.png)

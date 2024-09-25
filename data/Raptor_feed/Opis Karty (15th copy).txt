@@ -1,0 +1,13 @@
+##	Kontrola zgodności rejestrów z KH
+W systemie VENDO.ERP istnieje specjalny raport pozwalający wychwycić różnice między księgowaniami w KH i rejestrze VAT. Dotyczy on VATu należnego bądź naliczonego oraz pozwala wskazać za jaki okres ma być tworzony.
+
+Aby raport podawał właściwe informacje w sposób prawidłowy należy przed przystąpieniem do pracy odpowiednio skonfigurować konta księgowe, z których będą brane informacje o kwotach VAT w KH. Korzystając z menu Funkcje > Konta VAT-owskie w KH wyświetli się okienko, w którym możemy sprawdzać [Enter], dodawać [Insert] lub usuwać [Delete] konta księgowania VAT w KH.
+
+Należy pamiętać, że konta VAT skonfigurujemy na każdy rok obrachunkowy osobno. Jeżeli dokonaliśmy konfiguracji w roku 2021 to należy pamiętać, iż w roku 2022 będziemy musieli uczynić to ponownie.
+
+Raport za pośrednictwem stosownych kolumn „Księgowość” i „Rejestr VAT” pozwala porównać wartości, które zaksięgowano i przeniesiono do rejestrów VAT z poszczególnych dokumentów. Ponadto pozwala wychwycić te dokumenty które w ogóle nie zostały zaksięgowane bądź uwzględnione w rejestrach.  W kolumnie „Miesiąc KH” widać miesiąc księgowania w Księdze, natomiast w kolumnie „Miesiąc rej. VAT” widać miesiąc deklaracji VAT. System porównuje kwotę podatku VAT księgowaną w Księdze Handlowej i VAT zapisany w rejestrze. W razie niezgodności pozwala łatwo określić, gdzie powstał problem.
+
+
+![tmp6e10e5fa-2b6f-45bd-91fb-6847ece58775](https://www.cfi.pl/vendohelp/content/imgs/C0/97cf65e712da51f704b40236662c9f13-59080-0.png)
+
+*Raport kontroli zgodności rejestrów z Księgą Handlową*

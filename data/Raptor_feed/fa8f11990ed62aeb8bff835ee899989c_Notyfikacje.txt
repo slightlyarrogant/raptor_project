@@ -1,0 +1,55 @@
+Notyfikacje
+Metadata
+
+url: http://192.168.33.19/master/docs/company/procedury-standaryzacyjne/notyfikacje/readme
+scraped_at: 2024-09-05T12:17:54.461638
+last_updated: 2024-09-05T12:17:54.461674
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Notyfikacje
+meta_tags: ['oraz', 'zakładce', 'wymaganiaopis', 'konfiguracji', 'działania', 'mechanizmu', 'pluginiekonfiguracja', 'alerty', 'typu', 'dokumentacjalokalizacji']
+
+Content
+Notyfikacje
+eFaktura przy nadaniu statusu
+Zapoznaj sie z dokumentacja
+
+Lokalizacja/wymagania
+Opis konfiguracji oraz działania funkcjonalności
+Dodanie statusu na dokumencie oraz wprowadzenie mechanizmu w pluginie
+Konfiguracja w zakładce Filtry
+Konfiguracja w zakładce Alerty oraz wybór typu powiadomienia
+
+
+
+Ponaglenie do zapłaty
+Zapoznaj sie z dokumentacja
+
+Lokalizacji/wymagania
+Opis konfiguracji oraz działania funkcjonalności:
+Wprowadzenie mechanizmu w pluginie
+Konfiguracja w zakładce Alerty oraz dodanie typu powiadomienia
+Ustawienie cykliczności oraz BOTa
+
+
+
+Windykacja do niezapłaconych dokumentów
+Zapoznaj sie z dokumentacja
+
+Lokalizacji/wymagania
+Opis konfiguracji oraz działania funkcjonalności
+Wprowadzenie mechanizmu w pluginie
+Konfiguracja w zakładce Alerty oraz dodanie typu powiadomienia
+Ustawienie cykliczności oraz BOTa
+
+
+
+eFaktura przy zamykaniu dokumentu
+Zapoznaj sie z dokumentacja
+
+Lokalizacji/wymagania
+Opis konfiguracji oraz działania funkcjonalności
+Wprowadzenie mechanizmu w pluginie
+Konfiguracja w zakładce Filtry
+Konfiguracja w zakładce Alerty oraz wybór typu powiadomienia
+
+

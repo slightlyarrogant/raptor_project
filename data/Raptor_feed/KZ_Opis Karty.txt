@@ -1,0 +1,13 @@
+## 	Kalendarz zasobów
+
+###  	Tworzenie zasobów firmowy
+Definiowanie zasobów firmy odbywa się poprzez dopisanie ich w słownikach systemowych. W celu dodania pozycji zasobów należy wybrać opcje `Ustawienia` > `Głównie` > `Słowniki` > `Zasoby` > `Zasoby firmy`
+ 
+Po kliknięciu dodaj należy określić parametry zasobu
+ 
+
+### 	Rezerwacje zasobów
+
+Rezerwacja zasobów odbywa się analogicznie jak w przypadku dodania „Zdarzenia” które opisane zostało powyżej. Aby tego dokonać należy w zakładce CRM> Kalendarz Zasobów wyznaczyć okres w jakim dany zasób ma zostać zarezerwowany. Następnie klikając lewym przyciskiem myszy wybrać opcje Nowa rezerwacja. Można tego dokonać również wybierając opcje Nowa rezerwacja zlokalizowanej w lewym górnym rogu (zielony plus) kolejny krok to określenie zdarzenia, którego będzie dotyczyć oraz wybór zasobu. Spowoduje to otwarcie karty zdarzenia, której parametry określić należy zgodnie z opisem powyżej.
+
+![tmpe42e10d1-61c5-4d94-8eaa-dc7d2e60681e](https://www.cfi.pl/vendohelp/content/imgs/U0/93c744b1e45d8c7fe98dfc2f992cbb5a-82991-0.png)

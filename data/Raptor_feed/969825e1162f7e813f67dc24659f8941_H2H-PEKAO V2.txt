@@ -1,0 +1,33 @@
+H2H-PEKAO V2
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/h2h-pekao-v2
+scraped_at: 2024-09-05T12:20:20.541810
+last_updated: 2024-09-05T12:20:20.541847
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/H2H-PEKAO V2
+meta_tags: ['pekao', 'przelewów', 'należy', 'certyfikat', 'wyciągów', 'bankowych', 'poprzez', 'komunikacyjny', 'certyfikatu', 'vendo']
+
+Content
+PEKAO Plugin V2
+Informacje ogóle
+Plugin umożliwia wysyłke przelewów oraz pobierania wyciągów bankowych poprzez integrację z PEKAO Web Service
+Konfiguracja połączenia
+W pierwszym kroku Klient musi podpisac umowę z PEKAO, na udostępnienie PEKAO Web Service. Następnie należy uzyskać certyfikat komunikacyjny PEKAO. Certyfikat należy zainstalować dla użytkowników lokalnych na każdym stanowisku, z którego będzie nawiązywana komunikacja z serwisem bankowym.
+W celu wskazania certyfikatu komunikacyjnego należy przejść do Vendo - > Parametry pracy -> HomeBanking -> Banki -> PEKAO -> PEKAO Autoryzacja -> Autoryzacja i wskazać certyfikat komunikacyjny.
+Dane certyfikatu mogą być zapisane w kontekście bazy lub firmy.
+
+Pobieranie wyciągów
+Pobieranie wyciągów odbywa się poprzez zadanie bot-a IngGetStatment.
+
+[PluginTask]
+ name=PekaoGetStatment
+ cronTxt= 0 * * * *
+
+Ustawienia automatycznych rozliczeń wpłat i wypłat jest analogiczne jak przy pozostałych integracjach bankowych.
+Wysyłka przelewów
+Wysyłka przelewów odbywa się z poziomu Poczekalni przelewów Vendo.ERP.
+
+Poczekalnia przelewów -> Eksport zbiorczy do H2H
+
+Images

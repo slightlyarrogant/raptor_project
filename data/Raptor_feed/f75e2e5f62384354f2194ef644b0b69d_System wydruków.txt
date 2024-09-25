@@ -1,0 +1,153 @@
+System wydruków
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/services/printings
+scraped_at: 2024-09-05T12:18:44.079402
+last_updated: 2024-09-05T12:18:44.079446
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/System wydruków
+meta_tags: ['task', 'printtask', 'source', 'record', 'wydruku', 'printmanager', 'file', 'printsource', 'print', 'szablon']
+
+Content
+System wydruków
+Lista klas do poznania:
+
+Amag.Services.Printing.PrintSource
+Amag.Services.Printing.PrintTask
+Amag.Services.Printing.PrintManager
+Amag.Services.Printing.PrintingUIManager
+
+Tworzenie wydruku na podstawie rekordu
+Przykład tworzenia wydruku:
+var record = new RecordInfo(...);
+var source = PrintSource.CreateRecordSource(record);
+var task = new PrintTask(source);
+
+// Wydruk z domyślnym szablonem na domyślnej drukarce
+PrintManager.Print(task);
+
+Export:
+var task = new PrintTask(...);
+
+PrintManager.Export(task, "D:/my-file.pdf", PrintExportFormat.Pdf);
+
+Ustawianie szablonu
+Na obiekcie klasy PrintTask można ustawić konkretny szablon (jeżeli go nie podamy to zostanie wykorzystany szablon domyślny). Listę szablonów dla danego rekordu zwraca funkcja PrintManager.GetTemplates(record). Można wybrać konkretny szablon, np. na podstawie kodu lub nazwy, tj. PrintManager.GetTemplates(record).FirstOrDefault(x => x.Code == "MY-CODE").
+Przykłady:
+var task = new PrintTask(...);
+
+// Konkretny szablon
+task.Template = PrintManager.GetTemplates(record).FirstOrDefault(x => x.Code == "MY-CODE");
+
+// To samo co wyżej (szablon zostanie wyszukany na podstawie kodu)
+task.TemplateSource = "MY-CODE";
+
+// Ścieżka do pliku z szablonem wydruku w DevExpress
+task.TemplateSource = "D:/my-template.repx";
+
+PrintTask.TemplateSource automatycznie rozpozna czy podana wartość jest ścieżką do pliku, kodem szablonu, czy ID szablonu. Można też wymusić interpretowanie wartości za pomocą właściwości PrintTask.TemplateSourceType.
+Zalecene jest ustawianie szablonu za pomocą właściwoci PrintTask.TemplateSource, ponieważ zapis jest postszy.
+Podgląd wydruku
+// Jeden wydruk
+PrintingUIManager.ShowPrintPreview(new []{ task });
+
+// Kilka wydruków w jednym oknie podglądu
+var tasks = new List<PrintTask>();
+tasks.Add(task1);
+tasks.Add(task2);
+...
+
+PrintingUIManager.ShowPrintPreview(tasks);
+
+Dodawanie załączników
+var source = PrintSource.CreateRecordSource(record);
+var task = new PrintTask(source);
+
+// Dodanie załącznika z gotowego pliku
+var attSource = PrintSource.CreateFilePrintSource("D:/my-file.xdoc");
+var att = new PrintTask(attSource);
+task.Attachments.Add(att);
+
+// Dodanie załącznika na podstawie innego rekordu
+var attSource2 = PrintSource.CreateRecordSource(...);
+var att2 = new PrintTask(attSource2);
+att2.TemplateSource = "MY-TEMPLATE-CODE";
+task.Attachments.Add(att2);
+
+// Podgląd wydruku
+PrintingUIManager.ShowPrintPreview(new []{ task });
+
+Globalne modyfikowanie wydruków
+[Export(typeof(IPrintTaskExecuteListener))]
+internal class MyPrintTaskExecuteListener : IPrintTaskExecuteListener
+{
+    public void OnExecuting(PrintTaskEventArgs e)
+    {
+        foreach (var task in e.Tasks)
+            foreach (var record in task.Source.GetRelatedRecords())
+            {
+                if (record.DataType != (int)eDataType.TG_TRANSAKCJE || task.Attachments.Count > 0)
+                    continue;
+
+                // Dodawanie załącznika do wszystkich drukowanych dokumentów
+                var attSource = PrintSource.CreateFilePrintSource("D:/my-file.xdoc");
+                var att = new PrintTask(attSource);
+                task.Attachments.Add(att);
+            }
+    }
+
+    public void OnExecuted(PrintTaskEventArgs e)
+    {
+        if (e.Mode == PrintTaskExecuteMode.Print)
+        {
+            // Akcja wywoływana po wydruku
+            // Można zapisać kopię drukowanych dokumentów
+        }
+    }
+}
+
+Konwersja do PDF
+W łatwy sposób można przekonwertować jeden z poniższych formatów na PDF:
+
+.pdf
+.txt
+.html
+.rtf
+.doc
+.docx
+.odt
+.xls
+
+.xlsx
+var source = PrintSource.CreateFilePrintSource("D:/my-file.xlsx");
+var task = new PrintTask(attSource);
+PrintManager.Export(task, "D:/my-file.pdf", PrintExportFormat.Pdf);
+
+
+Bezpośredni wydruk na drukarkę
+var source = PrintSource.CreateRecordSource(record);
+
+// Zmiana domyślnej drukarki
+source.Metadata.DefaultPrinterName = "my-print-name";
+// Zmiana domyślnej liczny kopii
+source.Metadata.DefaultCopies = 2;
+
+// Wydruk
+var task = new PrintTask(source);
+PrintManager.Print(task);
+
+Scalanie plików
+var file1 = "D:/my-file-1.pdf";
+var file2 = "D:/my-file-2.pdf";
+var mergedFile = "D:/out-file.pdf";
+
+PrintManager.MergeFiles(new[] { file1, file2 }, mergedFile);
+
+Skrócone wywołania
+Podgląd wydruku rekordu (domyślny szablon):
+PrintingUIManager.ShowPrintPreview(new RecordInfo(...));
+
+Podgląd wydruku rekordu z opcjonalnym automatycznym wydrukiem:
+PrintingUIManager.ShowAutoPrintPreview(new RecordInfo(...), "auto-print-key");
+
+Gdzie auto-print-key jest dowolnym ciągiem pod jakim zostanie zapisane ustawienie czy drukować automatycznie, od razu po wyświetleniu rekordu.

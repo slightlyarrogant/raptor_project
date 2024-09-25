@@ -1,0 +1,6 @@
+
+## 	Sekretariat
+W zakładce Sekretariat rejestrujemy i archiwizujemy faksy, pocztę tradycyjną, wysyłaną i otrzymywaną od klienta pocztę. Posługujemy się tutaj specjalnym rodzajem zdarzenia o nazwie Korespondencja. Pozostałe czynności są identyczne jak dla pozostałych dokumentów zdarzeniowych.
+
+
+![tmpb0b709cd-bdb1-4e2b-8d66-f042b8401804](https://www.cfi.pl/vendohelp/content/imgs/Q0/8375a8865dd80044f6b8a19e368129de-42742-0.png)

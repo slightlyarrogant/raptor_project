@@ -1,0 +1,19 @@
+# Przeglądy
+Rejestracja przeglądu dla obiektu - Przeglądy można dodawać tylko na urządzenia zdefiniowane jako obiekt, na modele już nie. System pozwala ewidencjonować same przeglądy a następnie z ich poziomu tworzyć zlecenia serwisowe.
+
+Schemat postępowania: 
+-	Wchodzimy w module Serwis na kartę obiektu. 
+-	Przechodzimy na zakładkę Przeglądy i naciskamy `[INSERT]`.
+ 
+![tmp686b7a03-afd3-4212-83c8-e5a098239c5c](https://www.cfi.pl/vendohelp/content/imgs/M8/c150409337dc987bccb6a1f938635382-46708-0.png) 
+ 
+
+-	W oknie, które się pojawi wpisujemy dowolny opis dotyczący wykonania przeglądu, określamy pracownika odpowiedzialnego i datę planowania/wykonania. Warto zwrócić uwagę na statuty przeglądu (W realizacji, wykonany, anulowany) można po nich sortować listę. Przeglądów wykonanych nie można już usunąć (można anulować), przeglądy w realizacji można usuwać klawiszem `[DELETE]`.
+
+![tmpc399b636-562a-4724-ad29-30ed6b15dcea](https://www.cfi.pl/vendohelp/content/imgs/N5/94e1db99618ecd19b879312f7c380200-51391-0.png)
+ 
+
+
+
+## Zlecenie serwisowego na bazie przeglądu
+System umożliwia tworzenie zleceń serwisowych na bazie dodanych przeglądów dla obiektu. Wystarczy w module `Serwis` > zakładka` Przeglądy` dodać nowy bądź zaznaczyć właściwy planowany przegląd i wybrać z menu `Funkcje` > `Zlecenia` > `Utworzenie zlecenia serwisowego [CONTROL+P]`. Pozostałe czynności są identyczne jak w przypadku dodawania pustego zlecenia serwisowego z tą różnicą, że system utworzy zlecenie, które na zakładce Przejazdy i prace będzie miało już zewidencjonowany przegląd

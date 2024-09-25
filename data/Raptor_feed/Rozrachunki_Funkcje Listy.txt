@@ -1,0 +1,20 @@
+# Rozrachunki
+
+W ramach dostępu do zakładki rozrachunki użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy rozrachunków. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmpd24ca890-274a-4728-b69f-aa88f3df849b](https://www.cfi.pl/vendohelp/content/imgs/C6/252fc46b6ee92f0fa7421b7dfe9fa3dd-30291-0.png)
+
+- okres
+- klient
+- rejestr – możliwość wyświetlenia bilansu dnia dla poszczególnych rejestrów np. kasa
+- serie – wprowadzane uprzednio przez użytkownika
+- wn/ma
+- tylko nierozliczone
+- uwzgl. rozliczane ZA – należności/zobowiązania zostaną pomniejszone o zaliczki
+- uwzględnij płatność w buforze
+- w walucie dokumentu
+- z kh (księgi handlowej)
+
+Poza możliwością filtrowania rozrachunków użytkownik ma możliwość podejrzenia szczegółów rozrachunków. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp1c62fba8-cd51-4720-bd98-2813c0f3e345](https://www.cfi.pl/vendohelp/content/imgs/H1/395c7a90f3610efa7a3ba8feed00ba0b-35895-0.png)

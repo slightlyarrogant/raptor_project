@@ -1,0 +1,23 @@
+# Ponaglenia
+
+W ramach dostępu do zakładki ponaglenia użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp39bd79cf-2462-41bc-a9c1-2a431486f326](https://www.cfi.pl/vendohelp/content/imgs/P1/337c46a880df099b7faf871f5db68325-7187-0.png)
+
+- do – program wyświetli zobowiązania do ustalonego dnia
+- klient – możliwość wyświetlenia pozycji dla konkretnego kontrahenta
+- serie – wcześniej wprowadzone przez użytkownika
+- rodzaj odsetek – najczęściej ustawowe
+- stan płatności
+    - tylko niezapłacone
+    - tylko zaległości
+    - z korektami
+- typ raportu – zobowiązania
+
+Poza możliwością filtrowania zobowiązań użytkownik ma możliwość wystawienia not odsetkowych, ponagleń jak i również wydruku not odsetkowych (np. w celu wysyłki do klienta). Z pozycji funkcji użytkownik może również podejrzeć listę wystawionych już not odsetkowych, listę zaległości oraz ponagleń. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpd8b5a134-2a66-4d5e-b971-b0a4a7fed963](https://www.cfi.pl/vendohelp/content/imgs/C2/152926969499560e368907fe490af1af-38749-0.png)
+
+![tmpfffdb009-4a3c-4b9a-a102-a26080b03e0c](https://www.cfi.pl/vendohelp/content/imgs/Y0/ba75275435cea537b66f5a2f7854161f-35987-0.png)
+
+![tmp58e63d1b-0ef2-456a-af8d-65df856a5555](https://www.cfi.pl/vendohelp/content/imgs/Q2/13a06a08d9a584a38a0eddb84d07e114-8327-0.png)

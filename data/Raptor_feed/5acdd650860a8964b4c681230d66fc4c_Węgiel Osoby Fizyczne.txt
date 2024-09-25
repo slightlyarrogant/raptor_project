@@ -1,0 +1,74 @@
+Węgiel Osoby Fizyczne
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/clients/wegielplugin
+scraped_at: 2024-09-05T12:19:08.761105
+last_updated: 2024-09-05T12:19:08.761156
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Węgiel Osoby Fizyczne
+meta_tags: ['wartości', 'dowolna', 'jest', 'wartość', 'należy', 'określenie', 'oraz', 'dowolne', 'które', 'plugina']
+
+Content
+WęgielOsobyFizyczne- plugin
+Informacje ogólne.
+Plugin znajdzie zastosowanie w firmach zajmujących się sprzedażą węgla. Pozwala on, na generowanie dokumentów sprzedażowych wraz z załącznikami, które sa niezbędne podczas sprzedaży tego surowca.
+Konfiguracja.
+Aby możliwe było generowanie wydruków oświadczeń oraz certyfikatów wraz z dokumentami sprzedażowymi, konieczna jest odpowiedzenia konfiguracja. Polega ona na zdefiniowaniu odpowiednich ustawień plugina, kartoteki towarowej oraz zdefiniowaniu odpowiednich wartości dowolnych, które widoczne będą na generowanych wydrukach. Poniżej znajdują się poszczególne etapy konfiguracji.
+Wartości dowolne
+W pierwszym etapie konfiguracji, należy przestąpić do dodania stosownych wartości dowolnych. Wartości takie definiowane są dla kartek kontrahentów, towarowych jak i pozycji wspólnych dokumentu. Dodanie nowych wartości dowolny odbywa się z poziomu Słowników systemowych. Aby tego dokonać należy z poziomu Ustawień systemowych wybrać Główne > Słowniki > Kontrahent: Wartości dowolne klienta/Dokument > Wartości dowolne wspólne dokumentu/Magazyn > Wartości dowolne towaru.
+Dla poszczególnych sekcji związanych z klientem, towarem, oraz dokumentem należy założyć stosowne wartości dowolne z określeniem zmiennych , które używane będą na etapie konfiguracji plugina:
+Wartości dowolne wspólne dokumentu
+
+Wartość dowolna dokumentu - wartość dowolna typu tak/nie
+
+Wartości dowolnych klienta:
+
+Pesel - wartość dowolna typu tekst
+Nr dowodu osobistego - wartość dowolna typu tekst
+
+Wartości dowolnych towaru:
+
+Wartość dowolna towaru - wartość dowolna typu tak/nie
+Parametry – wartość dowolna typu tekst
+Przeznaczenie wyrobu węglowego - wartość dowolna typu tekst
+System certyfikacji - wartość dowolna typu tekst
+
+Plugin
+Przed przystąpieniem do pracy konieczna jest podegranie stosownego plugina oraz jego konfiguracja. Plugin podegrać należy wg następującego schematu Ustawienia > Pluginy > Dodaj plugin.
+
+Po wgraniu plugina konieczna jest jego konfiguracja. Konfiguracji takiej dokonać należy wchodząc w Ustawienia plugina > Ikona narzędzi znajdująca się w prawym górnym rogu okna dialogowego > Pokaż ustawienia. Ustawienia plugina podzielone zostały na cztery sekcje w których użytkownik ma możliwość konfiguracji parametrów związanych z określeniem szablonów wydruków jak również dodanie zmiennych odpowiedzialnych za generowani danych na wydruku.
+Opis poszczególnych sekcji:
+Szablony - sekcja odpowiedzialna określenie stosownych szablonów oświadczeń oraz świadectwa jakości, które generowane będą podczas wydruku dokumentów sprzedażowych. Rodzaj wydruku który będzie generowany zależy jest od rodzaju kontrahenta tj czy kontrahent jest oznaczony jako osoba fizyczna czy tez firma. Obecnie szablony ustawione są domyślnie
+
+Oświadczenie firmy – oreślenie szablonu pozwalającego na wygenerowanie oświadczenia w związku ze sprzedażą w przypadku gdy odbiorcą jest kontrahent oznaczony jako firma
+Oświadczenie osoby fizycznej –określenie szablonu pozwalającego na wygenerowanie oświadczenia w związku ze sprzedaż a w przypadku gdy odbiorcą jest kontrahent oznaczony jako osoba fizyczna
+Świadectwo jakości – oznaczenie szablonu dla wydruku świadectwa jakości
+
+Obecnie szablony zaszyte zostały w pluginie. W przypadku gdy zajdzie konieczność zmiany treści które generowane sa na szablonach koneczny jest kontakt z firma CFI
+Sekcja Dokument
+
+Wartość dowolna dokumentu - określenie nazwy zmiennej wartości dowolnej która zdefiniowana została na dokumencie.
+
+Sekcja Klient
+
+Pesel – określenie zmiennej wartości dowolnej zdefiniowanej dla kartoteki kontrahenta.
+Nr dowodu osobistego – określenie zmiennej wartości dowolnej zdefiniowanej dla kartoteki kontrahenta
+
+
+Sekcja Towar
+
+Wartości dowolne towaru - określenie zmiennej wartości dowolnej zdefiniowanej na kartotece towarowej. Zdefiniowanie tej wartości pozwala na oznaczenie towaru jako Towar dla którego drukowane mają być oświadczenia
+Parametry – wartość dowolna definiowana na kartotece towarowej, pozwala na określenie parametrów związanych z sprzedawanym towarem . Informacje te widoczne będą na wydrukach generowanych wraz z dokumentami sprzedażowymi
+Przeznaczenie wyrobu węglowego - Wartość dowolna definiowana na kartotece towarowej. Informacja uzupełniana przez użytkownika która widoczna będzie po wygenerowaniu dokumentów sprzedażowych mówiąca o przeznaczenie sprzedawanego towaru
+System certyfikatu - Wartość dowolna definiowana na kartotece towarowej. Informacja uzupełniana przez użytkownika która widoczna będzie po wygenerowaniu dokumentów sprzedażowych
+
+W celu ułatwienia definiowania wartości dowolnych w poszczególnych obszarach w opisach dodana została informacja o rodzaju tych wartości
+Z poziomu dialogu konfiguracyjnego istnieje również możliwość oznaczenia check boxa "Wysłać powiadomienie mailowe o wystawionym dokumencie". Spowoduje to wyświetlenie dodatkowego pola w którym użytkownik określa adres mailowy na który wysłane zostaną dokumenty sprzedażowe wraz z oświadczeniami i certyfikatami. Osoba zdefiniowana w tej części konfiguracji najczęściej jest przełożonym działu odpowiedzialnego za sprzedaż.
+
+Kartoteka towarowa
+Zdefiniowane uprzednio wartości dowolne klientów widoczne będą po wejściu w kartotekę towarowa utworzonego indeksu, w zakładce wartości dowolne. Z tego poziomu użytkownik określa podstawowe parametry związane z towarem
+Inna niezbędną konfiguracja odpowiedzialną za poprawne generowanie wydruków jest określenie minimalnej wagi opakowania. Ustawień takich dokonać należy po przejściu do zakładki Opakowania, wagi objętości > Waga netto 1kg
+Zasada działania
+Po poprawnym zdefiniowaniu wartości dowolnych oraz poprawnej konfiguracji plugina należy przejść do zdefiniowani kartoteki towarowej z oznaczeniem stosownych parametrów opisanych powyżej. Podczas sprzedaży surowca (Węgla) należy pamiętać, iż w przypadku sprzedaży osobie fizycznej konieczne jest określenie informacji takich jak Pesel oraz Numer dowodu dokonać tego należy z poziomu kartoteki kontrahenta zakładka Pozostałe dane. Podczas dodawania dokumentu, po dodaniu odpowiednio zdefiniowanego kontrahenta jak również towar, użytkownik ma możliwość określenia dodatkowych parametrów związanych z informacjami które znajda się na wydruku. Jeśli wszystkie dane są poprawne należy wydrukować dokument. Faktura zostanie wygenerowana wspólnie z oświadczeniem, certyfikatem oraz informacjami dodatkowymi które zostały uzupełnione na etapie konfiguracyjnym.
+Images
+

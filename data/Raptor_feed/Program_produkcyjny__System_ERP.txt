@@ -1,0 +1,164 @@
+# Program produkcyjny | System ERP
+
+# Program produkcyjny
+
+## Zarządzanie produkcją
+
+
+
+Vendo zarządza całym procesem produkcyjnym – od początku do końca. Zaczyna się od kalkulacji kosztów i wystawienia zlecenia, przechodzi przez techniczne przygotowanie, zapewnienie materiałów, aż po planowanie i organizację produkcji. Vendo umożliwia bieżącą rejestrację postępu prac i na końcu dokonuje rozliczenia oraz tworzy raporty dla zarządu.
+
+Jest to system ERP dla produkcji, który nadaje się zarówno do prostych procesów produkcyjnych, jak i do skomplikowanych technologicznie projektów.
+
+Planowanie produkcji w programie Vendo ERP korzysta z zaawansowanych algorytmów uwzględniających wiele czynników: dostępność maszyn, umiejętności pracowników, dostępność materiałów i narzędzi, a także strukturę produktów i operacji.
+
+Oprogramowanie ERP dla produkcji wspomaga firmę w osiąganiu kluczowych celów, takich jak poprawa terminowości dostaw, skrócenie cyklu produkcyjnego, zredukowanie czasu potrzebnego na zmianę konfiguracji maszyn oraz obniżenie kosztów produkcji.
+
+Umów się na prezentację systemu Vendo.ERP
+
+## Jakie funkcje realizuje Vendo w Zarządzaniu Produkcją?
+
+### Techniczne przygotowanie produkcji
+
+- wielopoziomowa struktury wyrobu (BOM) – wyrób, podzespoły, elementynieograniczona limitami ilość poziomów struktury,jeden element, półprodukt jako składowa wielu wyrobów,
+- nieograniczona limitami ilość poziomów struktury,
+- jeden element, półprodukt jako składowa wielu wyrobów,
+- technologia produktu:operacje (marszrut) produkcyjne – liniowe, drzewiaste, o dowolnym grafie jednokierunkowym,materiały i półprodukty przyporządkowane do operacji lub całej technologiimaszyny i gniazda robocze,czasy technologiczne,kooperacje,zakładane braki produkcyjne,parametry dowolne, np.: charakterystyka, wymiary, itp.,pliki i załączniki (rysunki techniczne, DTR, inne),warianty technologii
+- operacje (marszrut) produkcyjne – liniowe, drzewiaste, o dowolnym grafie jednokierunkowym,
+- materiały i półprodukty przyporządkowane do operacji lub całej technologii
+- maszyny i gniazda robocze,
+- czasy technologiczne,
+- kooperacje,
+- zakładane braki produkcyjne,
+- parametry dowolne, np.: charakterystyka, wymiary, itp.,
+- pliki i załączniki (rysunki techniczne, DTR, inne),
+- warianty technologii
+- automatyzacja tworzenia technologii i BOMu:import struktury produktu z systemów CAD,generowanie technologii na podstawie parametrów,
+- import struktury produktu z systemów CAD,
+- generowanie technologii na podstawie parametrów,
+
+- nieograniczona limitami ilość poziomów struktury,
+- jeden element, półprodukt jako składowa wielu wyrobów,
+
+- operacje (marszrut) produkcyjne – liniowe, drzewiaste, o dowolnym grafie jednokierunkowym,
+- materiały i półprodukty przyporządkowane do operacji lub całej technologii
+- maszyny i gniazda robocze,
+- czasy technologiczne,
+- kooperacje,
+- zakładane braki produkcyjne,
+- parametry dowolne, np.: charakterystyka, wymiary, itp.,
+- pliki i załączniki (rysunki techniczne, DTR, inne),
+- warianty technologii
+
+- import struktury produktu z systemów CAD,
+- generowanie technologii na podstawie parametrów,
+
+### Kalkulacje produkcyjne
+
+- kalkulacja technologiczna zawierająca:koszty operacji technologicznych,materiały,kooperacje i pozostałe usługi,narzuty wydziałowe, narzuty ogólnozakładowe, zakładane marże,
+- koszty operacji technologicznych,
+- materiały,
+- kooperacje i pozostałe usługi,
+- narzuty wydziałowe, narzuty ogólnozakładowe, zakładane marże,
+- ofertowanie na podstawie kalkulacji produkcyjnej,
+- porównywanie kalkulacji do rzeczywistych kosztów,
+
+- koszty operacji technologicznych,
+- materiały,
+- kooperacje i pozostałe usługi,
+- narzuty wydziałowe, narzuty ogólnozakładowe, zakładane marże,
+
+### Zlecenia produkcyjne
+
+- generowanie zleceń na podstawie:zamówień od odbiorców,prognoz sprzedaż,analizy i uzupełniania stanów magazynowych,
+- zamówień od odbiorców,
+- prognoz sprzedaż,
+- analizy i uzupełniania stanów magazynowych,
+- karta zlecenia produkcyjnego – n – wyrobów, struktura drzewiasta,
+- generowanie zleceń na brakujące półprodukty wraz z wyliczaniem ilości uwzględniającej stany magazynowe półproduktów oraz zapotrzebowanie na półprodukt przy innych zleceniach,
+
+- zamówień od odbiorców,
+- prognoz sprzedaż,
+- analizy i uzupełniania stanów magazynowych,
+
+### Przewodniki produkcyjne
+
+- Przewodniki Produkcyjne rejestrujące:liczbę wykonanych operacji,liczbę wykonanych produktów,czas produkcji,pracownika wykonującego daną pracę,maszyny (gniazda roboczego) na którym wykonano produkcję,braki produkcyjne i odpady materiałowe,
+- liczbę wykonanych operacji,
+- liczbę wykonanych produktów,
+- czas produkcji,
+- pracownika wykonującego daną pracę,
+- maszyny (gniazda roboczego) na którym wykonano produkcję,
+- braki produkcyjne i odpady materiałowe,
+- rejestracja realizacji przewodników oparta o kody kreskowe lub plany produkcyjne,
+
+- liczbę wykonanych operacji,
+- liczbę wykonanych produktów,
+- czas produkcji,
+- pracownika wykonującego daną pracę,
+- maszyny (gniazda roboczego) na którym wykonano produkcję,
+- braki produkcyjne i odpady materiałowe,
+
+### Planowanie produkcji
+
+- automatyczne tworzenie harmonogramów produkcji w czasie kilku seknud,
+- efektywne algorytmy uwzględniające: terminy, stany materiałów, dostępność pracowników i maszyn,
+- ręczne tworzenie metodą przeciągnij i upuść
+- prezentacja i tworzenie harmonogramu w formie interaktywnego wykresu Gantta,
+- tworzenie wielu wariantów planów produkcji,
+- przeplanowanie tysięcy operacji w czasie kilku sekund,
+
+### Rejestracja produkcji
+
+- uroszczony panel meldunkowy na hali,
+- pobieranie zadań do realizacji przez pracowników produkcyjnych,
+- rejstracja pracy w czasie rzeczywistym (start-stop),
+- meldowanie awarii i przestojó,
+- rejstracja ilość wykonanych produktów – zgodnych i niezgodnych,
+
+### Gospodarka magazynowa w produkcji
+
+- wydawanie materiałów i półproduktów na produkcje oraz przyjmowanie wyrobów gotowych i półproduktów w ramach zlecenia i przewodnika produkcyjnego,
+- zamówienia do dostawców na podstawie planów zleceń i przewodników i receptur,
+- prognozowanie potrzeb materiałowych w oparciu zaawansowaną obsługę, backorderów (towarów oczekiwanych i zapotrzebowanych)
+- zamienniki w procesie produkcji,
+
+### Treaceability – identyfikowalność partii
+
+- identyfikowalność w partii produkcyjnej
+
+- materiałów i półproduktów,pracowników,kooperantów,maszyn i narzędzi,
+- materiałów i półproduktów,
+- pracowników,
+- kooperantów,
+- maszyn i narzędzi,
+
+- materiałów i półproduktów,
+- pracowników,
+- kooperantów,
+- maszyn i narzędzi,
+
+### Kontrola jakości w produkcji
+
+- raportowanie i zarządzanie brakami produkcyjnymi,
+- definiowanie i tworzenie kart pomiarowych,
+- panel kontrolera,
+- drukowanie etykiet na produkt, opakowanie, paletę zapewniające identyfikację partii produkcyjnej,
+- obsługa atestów własnych i obcych,
+
+### Raporty produkcyjne
+
+- wydajność pracowników,
+- wykorzystanie maszyn (OEE),
+- produkcja w toku,
+- analiza kosztów produkcji wg zleceń, indeksów, klientów i kontraktów,
+- rozliczenie kosztów produkcji: praca, materiały, kooperacje,
+- PRE IN POST – planowane koszty vs rzeczywiste,
+
+### Współpraca z urządzeniami zewnętrznymi
+
+- czytniki kodów kreskowych,
+- systemy wagowe,
+- etykieciarki,
+- sterowniki i czujniki pracy maszyn,
+

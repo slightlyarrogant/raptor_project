@@ -1,0 +1,53 @@
+Wydanie zewnetrzne
+Metadata
+
+url: http://192.168.33.19/master/docs/public/wydanie-zewnetrzne
+scraped_at: 2024-09-05T12:30:53.762336
+last_updated: 2024-09-05T12:30:53.762383
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Wydanie zewnetrzne
+meta_tags: ['towar', 'partii', 'dokument', 'towaru', 'przypadku', 'jeśli', 'można', 'dokumentu', 'dokumentów', 'insert']
+
+Content
+Wydanie towaru
+Dokumenty wydania Należy pamiętać, że dokumenty ściągające towar (WZ, RW) zmieniają stan magazynu nawet jeśli nie sa zatwierdzone (zamknięte) – wystarczy, że zapiszemy je w buforze. Wydanie towaru z reguły realizujemy dwoma typami dokumentów:
+
+RW (rozchód wewnętrzny) – służy do ewidencji rozchodów towarowych na cele własne firmy (np. do produkcja). Nie ma potrzeby określania kontrahenta.
+WZ (wydanie zewnętrzne) – rozchody towarowe związane z realizacja dokumentów handlowych. Należy pamiętać o związku faktury VAT z WZ (FV to dokument handlowy do rozliczenia, a WZ to dokument magazynowy ściągający towar).
+
+Wystawianie RW/WZ 'z reki'
+Ręczne wystawianie RW/WZ przebiega w analogiczny sposób jak w przypadku pozostałych dokumentów:
+
+Wchodzimy do modułu Dokumenty na listę dokumentów RW lubWZ.
+Naciskamy [INSERT] lub przycisk Dodaj – pojawi sie okno z domyślnymi informacjami wstępnymi. Informacje te można modyfikować wedle własnego uznania (magazyn przyjęcia towaru, numer, seria dokumentu itd.).
+Po zatwierdzeniu okna informacji wstępnych powinna pojawić sie karta RW/WZ. Wypełniamy pola o oczywistym znaczeniu. W przypadku RW nie ma potrzeby wypełniania pola Kontrahenta [F2] w przypadku WZ jest ono wymagane. Najlepiej użyć klawiszy funkcyjnych [F2] i [F9], które rozwijają listę kontrahentów, z której można wybrać właściwego. Jeśli jednak okaże sie, że mimo prawidłowego ustawienia filtrów na liście tej nie ma szukanego dostawcy należy go dodać klawiszem [INSERT].
+Jeśli wybraliśmy już odbiorce towaru to następnym krokiem jest dodanie pozycji towarowych (towar wydawany z magazynu) klawiszem [INSERT] lub przyciskiem Dodaj. Po jego naciśnięciu system wyświetli listę zdefiniowanych towarów, które można dodawać na dokument WZ/RW.
+Po wypełnieniu karty rozchodu zgodnie z naszymi intencjami zamykamy dokument (przycisk Zamknij), jeśli dokument ma byc jeszcze edytowany, a chcemy tylko zamknąć jego kartę naciskamy Do bufora. Musimy pamiętać, że każdy dokument WZ prędzej czy później powinien posiadać skojarzenie z faktura VAT, tzn. że albo z poziomu FV generujemy WZ albo z poziomu WZ generujemy FV. Nie ma możliwości "ręcznego" kojarzenia FV i WZ.
+
+Generowanie RW/WZ
+Generować WZ możemy z poniższych grup dokumentów:
+
+FV, PR – do FV powinno sie wystawiać WZ, w przypadku PR (paragon) system pozwoli wystawić WZ tylko jeśli aktywna jest opcja Ustawienia > Parametry pracy > WZ do paragonu fiskalnego. Chcąc wygenerować WZ do FV lub PR wchodzimy na kartę wybranego dokumentu i wybieramy z menu Funkcje > Wydanie zewnętrzne – utwórz, ew. [CONTROL+W].
+ZO, PF – w sytuacji, kiedy nie ma jeszcze FV, do której należałoby by wystawić WZ, możemy skorzystać z ogólnego mechanizmu generowania: wchodzimy na kartę ZO lub PF i korzystamy z menu Funkcje > Generowanie > Wydanie zewnętrzne. Dokument RW generować można jedynie z poziomu:
+ZLP (zlecenie produkcyjne) i KKW (Karta Kontrolna Wyrobu) – dokument ZLP i KKW tworzony jest w module Produkcja (nie w module Dokumenty). Z jego poziomu można generować rozchody/przychody towarowe. Temat produkcji jest omówiony w odrębnym rozdziale.
+INW (dokument inwentaryzacyjny) – w sytuacji kiedy po inwentaryzacji okazuje sie, że mamy mniej towaru niż by to wynikało z wystawionych dokumentów system utworzy RW na braki, w przypadku nadmiaru towaru powstanie PW (szerzej o inwentaryzacji w osobnym punkcie).
+PW (Przyjecie wewnętrzne) - pożyteczna opcja jeśli przyjmuje towar tylko po to, by zaraz wydać go np. do celów produkcyjnych.
+
+Wybór z partii i rozchody wg FIFO
+Rozchody materiałowe w systemie domyślnie sa realizowane w oparciu o zasadę FIFO (pierwsze przyszło, pierwsze wychodzi), istnieje także możliwość dowolnego wskazania partii towaru do rozchodu. Na dokumentach (nie tylko magazynowych) użytkownik sam decyduje czy dodawać na nie towar w sposób domyślny (FIFO) czy wybrać konkretne partie. Jest to o tyle istotne, że ten sam towar może byc przyjmowany na magazyn w różnych cenach, ma to też znaczenie w przypadku towarów o krótkich terminach przydatności. Stosowanie metody FIFO nie wymaga od użytkownika żadnych dodatkowych działań przy wystawieniu dokumentu (system sam pilnuje kolejności). Natomiast chcąc samemu wybrać towar z partii należy postępować wg schematu:
+
+Tworzymy dokument magazynowy/handlowy - wchodzimy do modułu Dokumenty na listę wybranego typu, np. WZ i naciskamy [INSERT].
+Ustalamy wstępne informacje dla dokumentu (magazyn, seria, waluta itd.) i zatwierdzamy.
+Pojawi sie karta dokumentu, z poziomu której klawiszem [INSERT] wywołujemy okno wyboru towaru dodawanego na dokument.
+Zaznaczamy towar, który chcemy dodać i wywołujemy z menu Funkcje > Wybór z partii [ALT+ENTER].
+
+ Wybór towaru z partii
+
+System wyświetli okno zawierające listę dostępnych partii towaru, z którego klawiszem [ENTER] wybieramy te właściwą. Lista partii towaru - wybór
+Następnie system wyświetli standardowe okno CIL (wybór ceny i ilości), po zatwierdzeniu którego towar z wybranej partii będzie dodany. Oczywiście można dodawać towar z kilku partii. Po wypełnieniu dokumentu mo¿na go zamknąć lub pozostawić w buforze. Warto wiedzieć:
+wystawiony dokument rozchodu (np. WZ, RW) zmienia stan magazynu już w momencie pojawienia sie w buforze.
+Istnieje możliwość wydruku na dokumencie rozchodu partii, z jakich pochodzi towar, wystarczy w menu Ustawienia > Parametry pracy > przycisk Dokumenty skorzystać z opcjiWydruki pozycji wg FIFO(zaznaczyćWybóralboZawsze`).
+Jeśli chcemy ¿eby dany towar był zawsze wybierany z partii najlepiej zaznaczyć pole Wybór z partii na Karcie towaru > Informacje ogólne.
+Można dodawać ten sam towar z różnych partii albo na jedna pozycje albo poprzez dodawanie kolejnych pozycji do dokumentu. W pierwszym przypadku należy z poziomu formularza CIL (formularz gdzie wpisywane sa ilości/ceny na dodawana pozycje) skorzystać z Funkcji > Dodaj z partii. W drugim przypadku wystarczy na dokumencie (nie na formularzy CIL) dodawać towar w typowy sposób [INSERT].
+
+Images

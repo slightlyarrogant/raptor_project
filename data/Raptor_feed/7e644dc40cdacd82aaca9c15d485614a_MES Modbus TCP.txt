@@ -1,0 +1,82 @@
+MES Modbus TCP
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/mes/adaptery/mes-modbus-tcp
+scraped_at: 2024-09-05T12:12:05.052077
+last_updated: 2024-09-05T12:12:05.052120
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/MES Modbus TCP
+meta_tags: ['modbus', 'danych', 'adres', 'jest', 'dane', 'czujnika', 'pamięci', 'adresy', 'serwera', 'ustawić']
+
+Content
+MES Modbus TCP
+Komunikację ze sterownikiem możemy uzyskać na wiele sposobów: po LANie lub WI-FI etc. (w zależności ).
+Opis protokołu:
+https://ntronic.pl/modbus-tcp/
+https://ntronic.pl/jak-dziala-modbus/
+Konfiguracja MES
+
+
+Nazwa – dowolna, jednoznacznie identyfikująca sterownik
+Typ MES – MES Modbus TCP
+Adres IP – adres IP sterownika/serwera Modbus wraz z numerem portu (gdy brak to jest komunikacja po domyślnym porcie 502).
+Uwagi - dowolne
+Skanuj dane w MES Kolektorze starsze niż – proponuje ustawić 1 dzień
+MES Kolektor – wybieramy MES Kolektor wcześniej skonfigurowany
+
+
+W tym miejscu podajemy podstawowe dane konfiguracji połączenia z urządzeniem Modbus. Doprecyzowanie numeru stanowiska / numeru stacji roboczerj / SlaveID możliwe jest w momencie konfiguracji czujnika (w kolejnym etapie).
+
+Konfiguracja czujnika
+
+Adres / Numer czujnika - w tym polu należy wprowadzić pełny adres rejestru Modbus. Na w/w przykładzie przypisano adres 40018, który wskazuje na odczyt z rejestru pamiętającego (pierwsza cyfra identyfikuje rejestr 4) o adresie czujnika 18, który zaczyta dane z komórki pamięci 17. Różnica wynika z tego, że adresy numeruje się od 1 a komórki w pamięci indeksowane są od 0.
+Typ danych - informacja jaki typ danych będzie pobierany z podanego adresu.
+Numer stacji - jest to numer stanowiska (lub SlaveID), który należy ustawić zgodnie z konfiguracją po stronie serwera Modbus. Domyślnie wartość jest pusta i żądania do sterownika nie posiadają doprecyzowanego numeru stacji.
+
+Gdy Vendo uzyskuje połączenie z serwerem Modbus, ale nie może pobrać danych z urządzenia, należy ustawić poprawną wartość stacji roboczej zgodnie z konfiguracją serwera. W takim przypadku można spróbować ustawić numer stacji roboczej na 1.
+
+Możliwe obszary pamięci:
+
+Input Coils/Cewki wejściowe – przykładowy adres 00004 (typ danych BOOL),
+Coils/Cewki wyjściowe - przykładowy adres 10050 (typ danych BOOL) ,
+Input Registers/Rejestry wejściowe – przykładowy adres 30001 (domyślny typ danych UINT16),
+Holding Registers/Rejestry pamiętające – przykładowy adres 40017 (domyślnie typ danych UINT16).
+
+Dla rejestrów typu Input Registers oraz Holding Registers możliwe jest zdefiniowanie pobierania typu danych inne niż domyślney format (UINT16). Od producenta urządzenia, z którym następuje komunikacja po protokole Modbus, decyduje w jakim formacie przechowuje informacje. Taki sam typ danych – jaki będzie w dokumentacji urządzenia – musi być ustawiony dla czujnika w polu „Typ danych”.
+Typ danych jest istotny do poprawnego pobierania wartości czujnika w takim formacie jaki przewidział producent. Dla typów danych INT32, FLOAT32 będzie wymagane odczytanie wskazanego rejestru i jego sąsiadującego ponieważ jeden rejestr jest w stanie pomieścić maks. liczbę 16 bitową a w tym przypadku musimy pobrać i zsumować dwa sąsiadujące rejestry aby otrzymać liczbę zmiennoprzecinkową 32 bitową (float32).
+
+Ważne! Zgodnie ze standardem Modbus, adresy po stronie serwera Modbus powinny być zmapowane kolejno po sobie. Nie mogą zostać rozrzucone po różnych komórkach pamięci. Jeśli adresy PLC nie zostały zaprogramowane kolejno, należy przegrowamować maszynę aby adresy były zwracane kolejno po sobie lub skorzystać z funkcji wirtualnego mapowania adresów jeśli jest taka dostępna po stronie serwera Modbus.
+
+Przykład:
+Producent zadeklarował, że pod adresem 30001 (Input Register, komórka 0) znajdują się dane czujnika temperatury zwracane w formacie Float32. W Vendo, w konfiguracji tego czujnika, musimy wskazać właśnie ten adres oraz określić typ zmiennej jako „FLOAT32”. W takim przypadku MES Kolektor będzie wiedział, że musi pobrać dane z dwóch sąsiadujących rejestrów 1 i 2 (komórki 0 i 1).
+
+WAŻNE! Gdy typ danych zostanie nieprawidłowo określony to pobrane dane mogą się różnić >od tych spodziewanych!
+WAŻNE! Jeśli adres 30001 zwraca dane 32 bitowe - zajmujące dwa sąsiadujące rejestry - >to kolejny adres jaki możemy ustawić to będzie 30003.
+
+Pozostałe parametry uzupełniamy tak jak to zostało opisane w rozdziale o konfiguracji czujnika.
+Dodatkowo możemy definiować pobieranie pomiarów z pozostałych czujników.
+
+Poniżej widzimy przykładowe informacje o specyfikacji udostępnianych rejestrów z bramki ECU-1051
+
+Typowe problemy konfiguracyjne
+Problem 1 - pomimo połaczenia z serwerem dane z czujników nie są pobierane
+Opis sytuacji
+Pomimo wprowadzonych poprawnych adresów pamięci dane z czujników nie są pobierane. W logach - MesBota - jest informacja o poprawnym połączeniu z serwerem Modbus ale przy próbie połączenia występuje problem.
+Sugerowane rozwiązanie 1
+Sprawdź czy ustawienie Numer stacji ma ustawioną poprawną wartość. Brak wprowadzenia parametru, w momencie gdy serwer wymaga takiego ustawienia, będzie skutkowało problemem przy pobieraniu danych z pamięci.
+
+Sugerowane rozwiązanie 2
+Podobny problem może wystąpić gdy adresy komórek pamięci nie są wystawione w odpowiedniej kolejności.  W takim przypadku należy:
+
+ustawić adresy po stronie sterownika aby zwracane były kolejno po sobie,
+lub skorzystać z funkcji wirtualnego mapowania adresów z urządzenia aby serwer Modbus udostępniał adresy w odpowiedniej kolejności.
+
+Przykład konfiguracji serwera Modbus TCP na HMI wraz z ustawieniem mapowania wirtualnych adresów gdzie np. S:R5001 to adres z PLC a D:R1000 adres wystawiony później przez serwer.  
+Images
+
+
+
+
+
+
+

@@ -1,0 +1,98 @@
+Magazyn
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/inter-stal/magazyn
+scraped_at: 2024-09-05T11:50:22.970926
+last_updated: 2024-09-05T11:50:22.970973
+parent_id: 0d6214aebe475940ed970e13df39034e
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn
+meta_tags: ['dokumentu', 'pozycji', 'dokumenty', 'należy', 'dokumentów', 'funkcje', 'dokument', 'jest', 'liście', 'zewnętrzne']
+
+Content
+Cel:
+TODO
+Lokalizacja
+Menu główne > Dokumenty > Dokumenty magazynowe
+Ręczne wystawienie dokumentu PZ z uwzględnieniem ZW
+Podstawowym sposobem realizacji dokumentów PZ jest rozpisanie ich z wystawionych wcześniej dokumentów ZW. Ręczne Tworzenie dokumentu PZ wykonujemy z poziomu dokumentów magazynowych. Aby tego dokonać należy:
+
+W module Dokumenty wybrać zakładkę Dokumenty magazynowe
+Na liście dokumentów PZ wcisnąć [Insert] lub kliknąć w zielony [plus] znajdujący się w lewym górnym rogu okna programu
+Ustalamy wstępne informacje dla dokumentu (domyślnie magazyn surowców) i zatwierdzamy.
+Po określeniu zamawiającego system sprawdza czy dla zdefiniowanego klienta są niezrealizowane Zamówienia Własne. Jeśli istnieją, zostanie pokazane okno niezrealizowanych pozycji zamówień danego klienta
+System wyświetli listę pozycji z dokumentów ZW
+
+
+Po wybraniu właściwych pozycji w oknie Ilość cena w pierwszej kolejności należy wypełnić pole N/S jako numer seryjny wytopu kręgu producenta. Następnie klikając Insert dokonujemy rozpisania przyjmowanej pozycji.
+ Rysunek 2. Przyjęcie Zewnętrzne - rozpisanie pozycji
+Rozpisanie przyjętego towaru na partie można również przez Funkcje>dodaj rozpisanie. Operacje wykonujemy analogicznie aż do momentu rozpisania całości przyjmowanego towaru.
+ Rysunek 3. Okno Ilość Cena - rozpisanie pozycji
+Po rozpisaniu a następnie zatwierdzeniu wszystkich pozycji przyjmowanych dokumentem PZ należy wydrukować etykiety dla pozycji dokumentu. Dokonujemy tego klikając Funkcje a następnie wybrać opcje Drukowanie>Drukowanie etykiet pozycji dokumentu
+ Rysunek 4. Przyjęcie zewnętrzne - wydruk etykiety pozycji dokumentu
+Przyjęcie zewnętrzne PZ na podstawie ZW
+Dokumenty Przyjęcia zewnętrznego PZ realizowane są na podstawie Zamówień własnych (do odbiorców) ZW. Aby wygenerować dokument przyjęcia zewnętrznego należy z pozycji ZW użyć opcji Funkcje>Generowanie >Przyjęcie Zewnętrzne(PrtScn poniżej).
+ Rysunek 5. Generowanie PZ Zostanie wyświetlone okno generowania dokumentu. Z tego poziomu mamy możliwość modyfikacji danych dotyczących zakupionego asortymentu. Jeśli wszystkie dane się zgadzają należy kliknąć Generuj. Zostanie utworzony dokument PZ
+ Rysunek 6. Okno Generowania W przypadku gdy do dostawcy zostało wysłane kilka zamówień, podczas generowania dokumentu PZ System będzie nas informował o niezrealizowanych dokumentach. Użytkownik samodzielnie dokonuje wyboru które zamówienie należy przyjąć. Aby wybrać odpowiednią pozycje należy na nią najechać i zaakceptować klawiszem ENTER bądź kliknąć na wybraną pozycje dwa razy lewym klawiszem myszy
+ Rysunek 7. Lista niezrealizowanych pozycji
+Przychody wewnętrzne PW
+Większość przyjęć dokumentem PW realizowana jest automatycznie poprzez zamknięcie operacji w trybie czytnika. Przyjęcie towaru odbywa się na Magazyn Wyrobów
+Realizacja przychodów wewnętrznych odbywa się poprzez wybór pozycji z karty KKW. Dokonujemy tego w następujący sposób
+Tworzenie dokumentu PW wykonujemy z poziomu dokumentów magazynowych. Aby tego dokonać należy:
+
+W module Dokumenty wybrać zakładkę Dokumenty magazynowe
+Na liście dokumentów PW wcisnąć [Insert] lub kliknąć w zielony [plus] znajdujący się w lewym górnym rogu okna programu
+Ustalamy wstępne informacje dla dokumentu (domyślnie magazyn wyrobów) następnie zatwierdzamy.
+Na liście pozycji dokumentu PW klikając Funkcje wybieramy Obsługę KKW > Wyroby gotowe z KKW
+
+
+Przy produkcji nie obsługiwanej przez KKW, przyjmowanie wyrobu odbywa się z poziomu Zleceń Produkcyjnych (analogicznie rozchody). Proces ten wygląda następująco:
+
+Po utworzeniu Zlecenia produkcyjnego należy wejść w zakładkę Lista dokumentów
+Nastanie postępować wg standardowego schematu dodania dokumentu tj. na liście dokumentów kliknąć [Insert]
+Określić wstępnie informacji dotyczące dokumentu,
+Pozycje na liście dokumentu oddawane są poprzez kliknięcie [Insert] lub użycie Funkcje > Dodaj pozycje.
+
+Wydanie zewnętrzne WZ (tryb ręczny)
+Wydanie zewnętrzne – rozchody towarowe związane z realizacją dokumentów handlowych. Utworzenie dokumentu odbywa się z poziomu dokumentów magazynowych i przyjmowane jest na magazyn Wyrobów, aby tego dokonać należy:
+
+Utworzyć dokument magazynowy - wchodzimy do modułu Dokumenty > Dokumenty magazynowe > WZ i naciskamy [Insert].
+Ustalamy wstępne informacje dla dokumentu (domyślnie magazyn Wyrobów) i zatwierdzamy.
+Po określeniu zamawiającego system sprawdza czy dla zdefiniowanego klienta są niezrealizowane ZO i AW. Jeśli istnieją, zostanie pokazane okno niezrealizowanych pozycji zamówień i awiza danego klienta. Takie same okno możemy wywołać przez Funkcje > Zamówienia/Rezerwacje > Przenieś z zamówienia
+Realizacja pozycji AW za pośrednictwem WZ dokonywana jest poprzez świadomy wybór dostawy postępując wg następującego schematu:
+Na liście niezrealizowanych wskazujemy pozycję AW. Klikając prawym przyciskiem myszy i wybieramy Funkcje > Wybór z dostawy
+Następnie wybieramy partię dostawy, która zrealizuje wybraną pozycje ZO
+
+
+Po wyborze właściwej pozycji należy zatwierdzić ilości wydanej partii dostawy towaru.
+
+Wydanie zewnętrzne WZ (tryb kolektorowy)
+Tworzenie dokumentu WZ za pośrednictwem kolektora przeprowadzić można na dwa sposoby. Pierwszym z nich jest wygenerowanie dokumentu WZ podstawie AW. Generując w ten sposób dokument WZ system wiąże nagłówek dokumentu Awiza z pozycjami które dodawane będą za pośrednictwem kolektora. Aby wygenerować Dokument WZ na podstawie AW należy:
+
+wybieramy dokument sprzedażowy AW - wchodzimy do modułu Dokumenty > Dokumenty sprzedażowe > AW (wybieramy właściwy)
+Z pozycji dokumentu wybieramy Funkcje > Generowanie > Wystawienie dokumentu WZ
+Pozycje dokumentu dodawane będą za pośrednictwem kolektora.
+
+
+Kolejnym sposobem jest utworzenie dokumentu WZ z poziomu menu Dokumenty zakładka Dokumenty magazynowe
+Po utworzeniu dokumentu oraz określeniu wstępnych danych dokumentu powiązanie WZ z AW odbywa się poprzez:
+
+Klikniecie Funkcje > Zamówienia/Rezerwacje > Wybierz dokument źródłowy do automatycznej realizacji zamówienia
+Wybór dokumentu AW dla którego realizowane będzie WZ (wyświetlane są tylko dokumenty zdefiniowanego wcześniej klienta)
+
+
+System zasygnalizuje, iż realizowany będzie dokument AW, Informacja ta pojawi się w dolnej części okna sygnalizując który dokument obecnie jest realizowany
+
+Realizacja odbywa się poprzez sklikanie za pośrednictwem kolektora wydawanych pozycji. Pozycje te pojawią się na liście pozycji dokumentu.
+Images
+
+
+
+
+
+
+
+
+
+
+
+

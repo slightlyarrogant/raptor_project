@@ -1,0 +1,29 @@
+# Plany kont
+
+W ramach dostępu do zakładki plany kont użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp9ccac6de-a8ef-41e8-9957-de6ac84e77ba](https://www.cfi.pl/vendohelp/content/imgs/J7/0b09457b7debfce14807be9deae656a5-3557-0.png)
+
+- konto
+
+![tmpd65a12b5-b60c-47ee-b8f0-b61ff69c2e2a](https://www.cfi.pl/vendohelp/content/imgs/P7/dcf7b0a570b8aa70a2ffa6b82113c166-2028-0.png)
+
+- widok – użytkownik może wybrać widok w jakim program wyświetli plan kont (zwykły, drzewo, ostatni poziom, wszystkie)
+- znacznik – znaczniki kont wcześniej ustala użytkownik
+
+
+Poza możliwością filtrowania planu kont użytkownik ma możliwość:
+- dodania konta
+- dodania subkonta
+- wyświetlenia szczegółów konta
+- usunięcia konta
+- otworzenia listy zapisów, kont oraz budżetów na poszczególnych kontach
+- wyświetlenia obrotów na koncie
+- przeniesienia planu kont z poprzedniego roku
+- przeniesienia zapisów na kontach z poprzedniego roku
+- wydruku planu kont
+
+
+Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp6654d1e9-2f5b-4503-a2c0-214c93df2bc8](https://www.cfi.pl/vendohelp/content/imgs/U0/fdc918a78975c12e31123aad904540a2-55251-0.png)

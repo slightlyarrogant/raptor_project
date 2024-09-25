@@ -1,0 +1,128 @@
+Shoper plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/shoper-plugin
+scraped_at: 2024-09-05T12:22:24.201121
+last_updated: 2024-09-05T12:22:24.201184
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Shoper plugin
+meta_tags: ['vendo', 'shopera', 'klienta', 'wartości', 'wskazujemy', 'towarów', 'shoper', 'oraz', 'zakładce', 'synchronizacji']
+
+Content
+Plugin Shoper - Instrukcja konfiguracji integracji z Shoper
+Wstęp
+Przed przystąpieniem do konfiguracji integracji Shopera u klienta, musi mieć on wykupiony dostęp do pluginu Shoper oraz posiadać dane dostępowe w postaci adresu sklepu oraz loginu i hasła (na prawach administratora), które umieszczamy w konfiguracji pluginu. Opcjonalnie, jeżeli klient będzie chciał żeby synchronizacja zamówień, cenników oraz stanów odbywała się automatycznie, musi mieć wykupioną również licencję do trybu automatycznego BOT.
+Konfiguracja pluginu oraz wprowadzenie ustawień
+Zaczynając konfigurację wgrywamy plugin do klienta. Kopiujemy plik z pluginem lokalnie na komputer, z którego będziemy dokonywać podegrania pluginu w programie u klienta. Czyli po kolei krok 1 i 2 z poniższej ilustracji.
+
+Po podegraniu przechodzimy do edycji mechanizmu pluginu, tak jak pokazano na powyższym zrzucie w kroku 3 klikając w ikonkę narzędzi tego pluginu.
+Budowa okna pluginu Shoper
+Po otwarciu okna, w którym dokonujemy konfigurację dla klienta dostępne są dwie zakładki Główne oraz Dodatkowe. W zakładce Główne będą znajdowały się profile utworzone dla klienta odnośnie integracji, natomiast w zakładce Dodatkowe mamy możliwość wskazania miejsca zapisu logów do pliku w razie jakiś problemów podczas synchronizacji.
+Dodanie nowego profilu i konfiguracja zakładki Główne
+Aby skonfigurować nowy profil u klienta należy wybrać zielony plusik, ukaże się wtedy do wypełnienia karta z polami. Pola są podzielone na cztery sekcje: Główne, Kategorie, Produkty, Zamówienia.
+
+W sekcji Główne należy podać nazwę profilu (widoczne tylko w Vendo), adres na którym działa sklep oraz login i hasło uzyskane od klienta. Następnie wybieramy system zewnętrzny z którego korzystamy czyli Shoper. Systemy zewnętrzne definiujemy w Ustawiania > Słowniki > Systemy zewnętrzne.
+
+W następnej sekcji Kategorie wskazujemy w jakim układzie towary będą widoczne w sklepie. W tym miejscu wskazujemy czy ma to być Grupa I, Grupa II czy Grupa WWW towarów lub Katalog towarów.
+
+W przypadku grup program będzie synchronizował całą wskazaną grupę. Odnośnie Katalogu to my decydujemy w jakich katalogach mają być pokazane i synchronizowane towary w sklepie. Żeby to poprawnie skonfigurować, należy najpierw potworzyć wspomniane katalogi. Dodajemy je w Ustawienia > Słowniki > Drzewa kategorii.
+
+
+W tym miejscu tworzymy odpowiednie kategorie towarów, które po synchronizacji ze sklepem będą widoczne właśnie w takim układzie. Następnie należy przyporządkować dane kategorie do towarów w programie. Przechodzimy do modułu Magazyn > Towary, otwieramy dany towar i wchodzimy w Funkcje > Katalog towarów.
+
+Po otwarciu okienka wskazujemy do jakiego katalogu ma przynależeć dany towar.
+
+Jest możliwość przyporządkować towary do danej kategorii hurtowo za pomocą operacji blokowych na liście towarów. W takim przypadku zaznaczamy towary, które nas interesują na liście towarów a następnie Funkcje > Operacje blokowe > Przydział katalogu towarów. Wskazujemy w ten sam sposób jak na pojedynczym towarze i klikamy przycisk [Dodaj]. Zaznaczenie opcji „Bez pustych grup” spowoduje, że towary które nie mają przypisanej grupy nie będą synchronizowane.
+Wracając do edycji konfiguracji profilu, w sekcji Produkty decydujemy jakie towary mają podlegać synchronizacji. Wyróżniamy tu następujące ustawienia:
+
+Stan ogólny ze wszystkich magazynów powoduje, że stany magazynowe w Shoperze będą sumą stanów wszystkich,
+Eksportuj zdjęcia sprawia, że jeżeli kartoteki posiadaj zdjęcia produktów to będą one eksportowane do Shopera,
+Nazwa produktu z pola za pomocą tego ustawienia decydujemy skąd sklep ma pobierać nazwę produktu z Vendo z kartoteki,
+Magazyn stanu towarów wskazujemy z jakiego magazynu ma być pobierany stan, dodatkowo opcja Stan oczekiwany jeśli handlowy = 0 pokaże w sklepie stan oczekiwany z Vendo gdy ogólny będzie 0,
+Grupa cen (podstawowa) ustawiamy grupę cen, która ma być wyeksportowana z karty towaru,
+Grupa cen (hurtowa 1) jeśli po stronie Shopera mamy ustawione ceny produktów na poziomie dwóch cen wskazujemy drugi cennik,
+Grupa cen (hurtowa 2) jeśli po stronie Shopera mamy ustawione ceny produktów na poziomie trzech cen wskazujemy trzeci cennik,
+Waluta ustawiamy walutę, która ma być synchronizowana,
+Eksportuj produkty powiązane/zamienniki ustawiamy czy mają być synchronizowane same produkty lub same zamienniki lub i to i to,
+Eksportuj podindeksy jako warianty produktu
+Eksportuj wartości dowolne jako atrybuty produktu
+
+W sekcji Zamówienia decydujemy jaki rodzaj dokumentu ma być tworzony podczas zamawiania produktów na stronie. Mamy do wyboru ZO lub AW. Gdy zaznaczymy „Tylko potwierdzone” dokumenty będą pobrane, jak zostaną potwierdzone po stronie Shopera. Jest możliwość wskazania na jaką serię będą tworzone zamówienia (warto ustawić osobą serię w Vendo dla tego rodzaju dokumentów). Przy utworzeniu zamówienia w Vendo możemy również wymusić, by program nadał wcześniej zdefiniowany status dostępny w definicji dokumentu w ustawieniach programu. Program może też skopiować adres dostawy lub dane klienta do pola Opis na dokumencie tworzonego zamówienia. Wskazujemy również domyślną walutę dokumentu. W ustawieniu Klient wskazujemy na jakiego klienta mają być wystawiane wszystkie zamówienia – gdy zostawimy to pole puste, wtedy w programie zostanie utworzona kartoteka klienta tymczasowa do zatwierdzenia na bazie wpisanych przez zamawiającego danych (jeżeli wcześniej nie została ona znaleziona w bazie klientów Vendo). Można również utworzyć kartotekę klienta ogólną np. o kodzie Shoper i zamówienia będą przypisywały się do takiego właśnie klienta.
+Konfiguracja zakładki Płatności
+
+W zakładce Płatności program wyświetla dostępne płatności prosto z Shopera do sparowania z płatnościami dostępnymi w Vendo. W tym miejscu mamy tabelkę, gdzie kolumna: - Płatność Shoper jest uzupełniona i wyświetla dostępne formy płatności w sklepie, - Płatność Vendo uzupełniamy o odpowiedniki danej płatności z Shopera i Vendo, - Transport uzupełniamy o rodzaj domyślnej formy transportu dla płatności.
+Konfiguracja zakładki Dostawa
+
+W zakładce Dostawa przyporządkowujemy spedycję z Shopera z jej odpowiednikiem w Vendo. W kolumnie Dostawca Shoper na sztywno wpisane są pobrane spedycje z Shopera natomiast w kolumnie „Dostawca Vendo” musimy wskazać odpowiednik z systemu.
+Konfiguracja zakładki Statusy
+
+W zakładce Statusy podobnie jak w zakładce Dostawa, przyporządkowujemy odpowiednie statusy dokumentu zgodnie ze statusami w Shoperze i w Vendo. Aby utworzyć potrzebne statusy dla dokumentu ZO lub AW (w zależności jak wcześniej skonfigurowaliśmy ten parametr), wchodzimy w Ustawienia > Parametry pracy > Dokumenty – [pokaż dialog] > wybieramy z listy odpowiedni dokument > zakładka Statusy. W tym miejscu tworzymy nowe statusy. Ważne, aby zaznaczyć w opcjach danego statusu parametr [Wymiana WWW].
+Konfiguracja zakładki Grupy Klientów
+
+W zakładce Grupy Klientów parujemy ze sobą grupy cen z Shopera z grupami cen w Vendo. W kolumnie [Grupy cen w Vendo] wskazujemy odpowiednią grupę, jaką chcemy przypisać do grupy cen z Shopera.
+Konfiguracja zakładki Tłumaczenia
+
+W zakładce Tłumaczenia wskazujemy odpowiedniki pól językowych z karty towarowej odpowiednio z pobranymi polami z Shopera. W Vendo te pola definiowane są jako wartości dowolne. Aby utworzyć wartość dowolną na karcie towaru musimy wejść w Ustawienia > Słowniki > Wartości dowolne towaru. Tworzymy wartości dowolne o typie Tekst i musimy wprowadzić również pole Nazwa zmiennej w skryptach. Tę nazwę wprowadzamy później przy odpowiedniej wartości z Shopera w kolumnie Wartość dowolna nazwy produktu. Tak samo można postąpić w przypadku dodatkowego opisu produktu - za pomocą wartości dowolnych w Vendo.
+Konfiguracja zakładki Zestawy wartości dowolnych
+
+W zakładce Zestawy wartości dowolnych możemy udostępnić zestaw wcześniej utworzonych wartości dowolnych towaru. Taki zestaw składa się z kilku wartości dowolnych, które później mogą być wyświetlane w sklepie. Zestawy wartości dowolnych tworzy się w Ustawienia > Słowniki > Wartości dowolne towaru > przycisk [Zestawy].
+
+Przyporządkowanie towarów oraz synchronizacja
+Po wykonanej konfiguracji należy dokonać synchronizacji odpowiednich parametrów, które konfigurowaliśmy. Proces wymiany danych rozpoczyna się od zsynchronizowania kategorii i jednostek magazynowych. Należy wybrać ikonkę narzędzi oraz dokonać odpowiednich synchronizacji z panelu plugina.
+
+Możemy dokonać synchronizacji atrybutów, kategorii oraz zestawów wariantów. W zależności od ilości kategorii w Vendo, może zająć to dłuższą chwilę. Zaletą tej operacji jest to, że kategorię synchronizujemy raz na początku, a później ewentualnie jeśli powstaną nowe.
+Gdy mamy już zsynchronizowane kategorie, możemy przejść do kartotek towarowych. W module Magazyn na zakładce Towary z listy zaznaczamy checkboxem, które towary mają być brane pod uwagę późniejszej wymiany z Shoperem. Należy wskazać odpowiednią przynależność do systemu zewnętrznego – Shopera. Aby to zrobić, korzystamy z Funkcje > Operacje blokowe > Współpraca z systemami zewnętrznymi > wybieramy z listy opcję [Shoper].
+
+Następnie możemy przejść już do samej synchronizacji. Synchronizacji z Shoperem dokonujemy z tego samego miejsca (lista towarów) zaznaczając odpowiednie kartoteki z listy i klikając Funkcje -> Shoper -> Synchronizuj zaznaczone produkty.
+
+Ważne aby pamiętać, że Shoper nie przyjmuje cen zerowych (można to zmienić w ustawieniach ale synchronizacja tego nie uwzględnia). Jeśli będziemy chcieli zsynchronizować towar, który w wybranej grupie ma cenę równą 0 to w logu zapiszę się odpowiednia informacja i towar się nie zsynchronizuje. Pola jakie są synchronizowane:
+
+Kod towaru
+Nazwa towaru
+Jednostka
+Producent
+Aktywność
+Kategoria
+Tłumaczenia (jeśli ustawione)
+Ceny
+Stan magazynowy
+EAN
+Zdjęcia (jeśli ustawione)
+
+Pobieranie zamówień z Shopera
+Kiedy mamy już zsynchronizowane towary i kategorie możemy przejść do pobierania zamówień. Na dowolnej liście dokumentów klikamy prawym klawiszem myszy Shoper > Pobierz zamówienia. Plugin pobierze zamówienia z Shopera i utworzy dokumenty [ZO].
+
+Jeśli Vendo nie znajdzie jakiegoś towaru (będzie on utworzony w Shoperze a w Vendo takiego towaru nie będzie) utworzy się kartoteka tymczasowa. Pracownik będzie mógł taki towar zmodyfikować i zatwierdzić. W kolejnym zamówieniu dla tego towaru na ZO pojawi się prawidłowa kartoteka.
+Automatyczne pobieranie zamówień z Shopera - BOT
+Jest możliwość aby wspomniane pobieranie zamówień odbywało się w sposób automatyczny w Vendo. Do tego będziemy potrzebowali ustawienia synchronizacji w trybie automatycznym czyli na bocie. Żeby klient mógł skorzystać z takiego rozwiązania musi mieć wykupioną licencję na bota. Oprócz pobierania zamówień jest możliwość również synchronizacji cen i stanów magazynowych. W pliku konfiguracyjnym bota należy ustawić odpowiednie zadania oraz co jaki czas mają się synchronizować dane. Plik konfiguracyjny bota musi mieć rozszerzenie cfg np. bot.cfg. Poniżej zapisy zadań do ustawienia w bocie:
+[PluginTask]
+name=ShoperSynchOrders
+cronTxt= */5 * * * *
+
+[PluginTask]
+name=ShoperSynchStocks
+cronTxt= */6 * * * *
+
+[PluginTask]
+name=ShoperSynchPrices
+cronTxt= */2 * * * *
+
+Images
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

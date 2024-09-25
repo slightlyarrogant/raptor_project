@@ -1,0 +1,248 @@
+# ERP - słowniczek | Definicje pojęć
+
+# ERP Słowniczek
+
+## Co Znajdziesz w Słowniczku ERP?
+
+Słowniczek ERP to zbiór najważniejszych terminów związanych z systemami ERP, które są często używane w codziennej pracy, ułożonych w porządku alfabetycznym. To pewnego rodzaju mini-encyklopedia i indeks pojęć dotyczących wyzwań związanych z ERP. Systemy ERP to rozbudowane oprogramowanie, które integruje różnorodne procesy biznesowe, a znajomość kluczowych pojęć może być przydatna w efektywnym korzystaniu z tych narzędzi. W niniejszym słowniczku znajdziesz wyjaśnienia wielu terminów, które pojawiają się w kontekście wdrożeń i zarządzania systemami ERP. Dzięki temu indeksowi łatwiej będzie poruszać się po szerokim świecie ERP i zrozumieć, jak działają poszczególne moduły oraz funkcje.
+
+## Definicje i treminy używane w ERP
+
+ABC (Activity-Based Costing) – metoda rachunkowości zarządczej, która przypisuje koszty do produktów lub usług na podstawie rzeczywistych działań związanych z ich wytwarzaniem. W ERP pomaga dokładnie alokować koszty do konkretnych procesów, co umożliwia lepsze zarządzanie kosztami przedsiębiorstwa.
+
+AI (Artificial Intelligence) – sztuczna inteligencja wykorzystywana w systemach ERP do automatyzacji procesów, analizy danych i podejmowania decyzji. AI w ERP wspiera inteligentne prognozowanie, planowanie oraz personalizację procesów biznesowych.
+
+Analiza przedwdrożeniowa ERP – to pierwszy etap umożliwiający efektywne wdrożenie systemu ERP. Jest to proces oceny potrzeb firmy przed wdrożeniem systemu ERP. Obejmuje identyfikację kluczowych procesów biznesowych, określenie wymagań funkcjonalnych, analizę obecnych systemów i przygotowanie planu wdrożenia. Celem analizy jest dopasowanie systemu ERP do specyficznych potrzeb organizacji, aby zapewnić skuteczne wdrożenie i maksymalne korzyści z jego użytkowania.
+
+Aplikacja mobilna ERP – to mobilna wersja systemu planowania zasobów przedsiębiorstwa (ERP), która umożliwia użytkownikom dostęp do kluczowych funkcji i danych systemu z dowolnego miejsca za pomocą urządzeń mobilnych, takich jak smartfony czy tablety. Aplikacja mobilna ERP wspiera pracowników w zarządzaniu operacjami biznesowymi w czasie rzeczywistym, umożliwiając np. przeglądanie stanów magazynowych, zarządzanie zamówieniami, zatwierdzanie dokumentów czy monitorowanie postępów produkcji, niezależnie od ich fizycznej lokalizacji. Dzięki temu zapewnia większą elastyczność i efektywność w codziennych operacjach firmy.
+
+APS (Advanced Planning and Scheduling) – to zaawansowany system planowania i harmonogramowania, który wspiera optymalizację procesów produkcyjnych w przedsiębiorstwach. APS analizuje dostępność zasobów, takich jak surowce, maszyny i pracownicy, oraz terminy realizacji zamówień, aby precyzyjnie planować produkcję. System uwzględnia ograniczenia zasobów, harmonogramy produkcji oraz zapotrzebowanie rynkowe, pozwalając firmom efektywnie zarządzać przepływem produkcji, minimalizować przestoje oraz maksymalizować wydajność produkcyjną. APS działa zwykle jako integralna część systemu ERP lub w ścisłej współpracy z nim.
+
+Architektura systemu – struktura technologiczna systemu ERP, która określa, jak komponenty oprogramowania, serwery, bazy danych i interfejsy współpracują ze sobą, aby zapewnić wydajność i skalowalność systemu ERP.
+
+ATP (Available-to-Promise) – zaawansowana funkcja planowania zapasów, która oblicza dostępność produktów do sprzedaży w czasie rzeczywistym, biorąc pod uwagę aktualne stany magazynowe, zamówienia oraz planowaną produkcję.
+
+Automatyczna aktualizacja – funkcja w systemach ERP, która automatycznie instaluje najnowsze poprawki, ulepszenia i aktualizacje oprogramowania bez konieczności ręcznej interwencji użytkowników. Pomaga to utrzymać system ERP w optymalnym stanie działania i zgodności z najnowszymi standardami.
+
+Automatyzacja – wykorzystanie technologii do wykonania powtarzalnych zadań bez interwencji człowieka, co zwiększa efektywność i redukuje błędy. Automatyzacja w ERP obejmuje takie procesy jak generowanie raportów, przetwarzanie zamówień czy zarządzanie zapasami.
+
+Automatyzacja procesów biznesowych – zastosowanie technologii ERP do automatyzacji powtarzalnych, manualnych procesów biznesowych, takich jak zamówienia, fakturowanie czy zarządzanie zapasami. Automatyzacja zwiększa efektywność i minimalizuje ryzyko błędów ludzkich.
+
+Autoryzacja użytkownika – proces zarządzania dostępem do systemu ERP, który określa, jakie działania mogą wykonywać poszczególni użytkownicy. Autoryzacja jest kluczowa dla bezpieczeństwa systemu i ochrony danych wrażliwych.
+
+API (Application Programming Interface) – interfejs programowania aplikacji, który umożliwia różnym systemom i aplikacjom współpracę i wymianę danych z systemem ERP. API pozwala na integrację ERP z innymi narzędziami i platformami.
+
+Awizacja – w systemie ERP to proces zapowiedzi dostawy lub odbioru towarów, który pozwala na wcześniejsze zgłoszenie planowanego przyjazdu transportu do magazynu lub innej lokalizacji. Umożliwia lepsze zarządzanie zasobami, harmonogramami i przestrzenią magazynową, co przyczynia się do sprawniejszego przepływu towarów i efektywniejszej obsługi logistycznej.
+
+Batch Production – metoda produkcji, w której wyroby są wytwarzane w partiach, a każda partia przechodzi przez wszystkie etapy produkcji zanim zostanie rozpoczęta następna. System ERP wspiera zarządzanie produkcją seryjną poprzez planowanie, śledzenie i raportowanie stanu partii.
+
+Baza danych – centralne repozytorium, w którym przechowywane są wszystkie dane systemu ERP, umożliwiające ich wspólne wykorzystanie przez różne moduły. Zazwyczaj wykorzystuje relacyjne bazy danych, aby zapewnić spójność i integralność danych.
+
+Bezpieczeństwo danych – zestaw środków i praktyk mających na celu ochronę danych w systemie ERP przed nieautoryzowanym dostępem i zagrożeniami. Obejmuje takie aspekty jak szyfrowanie, kontrola dostępu, audytowanie oraz tworzenie kopii zapasowych.
+
+BI (Business Intelligence) – narzędzia i technologie do analizy danych biznesowych, umożliwiające podejmowanie lepszych decyzji. BI integruje dane z różnych źródeł, przekształca je w informacje i prezentuje w formie raportów, wykresów oraz dashboardów.
+
+BOM (Bill of Materials) – to lista materiałowa zawierająca surowce, podzespoły i części potrzebne do wyprodukowania produktu. Zawiera ilości, specyfikacje i kolejność montażu. Jest kluczowy w produkcji, zarządzaniu zasobami i planowaniu materiałowym, zapewniając dostępność wszystkich niezbędnych komponentów.
+
+BPM (Business Process Management) – proces zarządzania i optymalizacji procesów biznesowych w organizacji, wspierany przez narzędzia ERP. BPM umożliwia modelowanie, monitorowanie i analizę procesów w celu ich usprawnienia, automatyzacji i lepszego zarządzania zmianami.
+
+Capacity Planning (Planowanie Zasobów Produkcyjnych) – proces oceny i planowania zdolności produkcyjnych w celu zapewnienia, że firma może sprostać zapotrzebowaniu na swoje produkty. W systemie ERP planowanie zasobów produkcyjnych uwzględnia dostępność maszyn, personelu oraz materiałów.
+
+CBOM (Configurable Bill of Materials) – konfigurowalny zestaw materiałowy, umożliwiający tworzenie różnych wariantów produktów na podstawie jednego głównego BOM. W ERP CBOM wspiera produkcję na zamówienie, umożliwiając firmom dostosowanie produktów do specyficznych potrzeb klientów.
+
+Centralizacja danych – polega na przechowywaniu wszystkich danych firmy w jednej zintegrowanej bazie danych, co umożliwia dostęp do informacji w czasie rzeczywistym dla wszystkich działów i procesów biznesowych.
+
+Cloud ERP – system ERP w chmurze to o system planowania zasobów przedsiębiorstwa (ERP) hostowany i zarządzany w zewnętrznej infrastrukturze chmurowej, zamiast na lokalnych serwerach firmy. Użytkownicy uzyskują dostęp do funkcji ERP przez internet, co pozwala na elastyczność w zarządzaniu danymi oraz integrację procesów biznesowych z dowolnego miejsca i na różnych urządzeniach. ERP w chmurze oferuje skalowalność, aktualizacje w czasie rzeczywistym oraz redukcję kosztów związanych z infrastrukturą IT, dzięki czemu staje się popularnym wyborem dla firm każdej wielkości.
+
+CMMS (Computerized Maintenance Management System) – to komputerowy system zarządzania utrzymaniem ruchu, który pomaga firmom monitorować, planować i zarządzać konserwacją sprzętu, maszyn i infrastruktury. CMMS umożliwia śledzenie harmonogramów przeglądów technicznych, zarządzanie zapasami części zamiennych, rejestrowanie historii napraw oraz monitorowanie wydajności maszyn. Integracja CMMS z ERP pozwala na efektywne zarządzanie konserwacją, minimalizację przestojów i optymalizację kosztów utrzymania maszyn.
+
+Controlling finansowy – w systemie ERP to proces wspomagający zarządzanie finansami przedsiębiorstwa poprzez monitorowanie, analizowanie i raportowanie wyników finansowych. Controlling finansowy umożliwia kontrolę budżetów, analizę kosztów, planowanie finansowe oraz prognozowanie przyszłych wyników finansowych. W ERP controlling finansowy integruje dane z różnych działów, umożliwiając lepszą kontrolę nad wydatkami, rentownością i efektywnością operacyjną. Jego celem jest wspieranie strategicznych decyzji zarządu, optymalizacja kosztów i poprawa rentowności firmy.
+
+CRM (Customer Relationship Management) – to system zarządzania relacjami z klientami, który wspiera firmy w organizacji, automatyzacji i synchronizacji wszystkich interakcji z klientami oraz potencjalnymi klientami. CRM pomaga w gromadzeniu danych na temat klientów, zarządzaniu kontaktami, analizowaniu ich preferencji i historii zakupów oraz optymalizowaniu procesów sprzedaży, marketingu i obsługi klienta. Celem systemu CRM jest budowanie długoterminowych, pozytywnych relacji z klientami, poprawa ich satysfakcji i zwiększenie lojalności.
+
+Cross-Docking – logistyczna strategia, w której produkty są przeładowywane bezpośrednio z przychodzących na wychodzące środki transportu, minimalizując czas magazynowania. ERP pomaga w koordynacji tych operacji poprzez monitorowanie przepływu towarów.
+
+CRP (Capacity Requirements Planning) – to proces planowania zapotrzebowania na zdolności produkcyjne, który ma na celu określenie, czy zasoby produkcyjne (maszyny, pracownicy) są wystarczające do realizacji zaplanowanych zadań produkcyjnych. CRP analizuje dostępność zdolności produkcyjnych w odniesieniu do wymagań wynikających z harmonogramów produkcji (MPS) i planów zapotrzebowania materiałowego (MRP), umożliwiając firmom dostosowanie zasobów lub harmonogramów w celu zminimalizowania opóźnień i maksymalizacji wydajności.
+
+Cykl życia produktu (PLM): to proces zarządzania wszystkimi etapami istnienia produktu – od pomysłu i projektowania, przez produkcję, dystrybucję, użytkowanie, aż po jego wycofanie z rynku i utylizację. PLM integruje dane, procesy, zasoby oraz ludzi zaangażowanych w cykl życia produktu, umożliwiając firmom bardziej efektywne planowanie, rozwój, produkcję i sprzedaż produktów. Celem PLM jest optymalizacja kosztów, skrócenie czasu wprowadzenia produktów na rynek oraz zapewnienie wysokiej jakości i innowacyjności w każdym etapie cyklu życia
+
+Dashboards – wizualne narzędzia w systemie ERP, które prezentują kluczowe wskaźniki wydajności (KPI) i inne dane biznesowe w przystępny sposób. Umożliwiają szybki przegląd stanu przedsiębiorstwa i identyfikację obszarów wymagających uwagi.
+
+Drop Shipping – model logistyczny, w którym zamówienia klientów są bezpośrednio wysyłane od dostawcy do klienta, z pominięciem magazynu firmy. ERP zarządza tym procesem, koordynując zamówienia między dostawcami a klientami.
+
+Dynamiczne ustalanie cen – funkcja systemu ERP umożliwiająca automatyczne dostosowywanie cen produktów lub usług w zależności od warunków rynkowych, popytu czy dostępności.
+
+Dziennik podawczy – to rejestr dokumentów wpływających i wychodzących w organizacji, służący do ewidencji korespondencji i zapewnienia śledzenia obiegu dokumentów. W systemach ERP dziennik podawczy umożliwia rejestrowanie i monitorowanie przychodzących oraz wychodzących dokumentów w sposób elektroniczny, co poprawia kontrolę nad przepływem informacji.
+
+EDI (Electronic Data Interchange) – to elektroniczna wymiana danych między systemami komputerowymi różnych firm w standardowym formacie. EDI umożliwia automatyczne przesyłanie dokumentów handlowych, takich jak zamówienia, faktury czy awiza wysyłki, bez potrzeby ręcznej interwencji. W systemach ERP EDI przyspiesza procesy biznesowe, redukuje błędy i zwiększa efektywność wymiany informacji w łańcuchu dostaw.
+
+ERP (Enterprise Resource Planning) – to zintegrowany system zarządzania zasobami przedsiębiorstwa, który wspiera automatyzację i optymalizację procesów biznesowych w różnych obszarach działalności firmy, takich jak finanse, produkcja, logistyka, sprzedaż, zasoby ludzkie i zarządzanie łańcuchem dostaw. ERP centralizuje dane, umożliwiając ich przepływ pomiędzy działami, co ułatwia podejmowanie decyzji, poprawia efektywność operacyjną i redukuje koszty. Systemy ERP są kluczowe w koordynowaniu operacji w średnich i dużych przedsiębiorstwach, pozwalając na spójne zarządzanie zasobami i procesami w całej organizacji.
+
+FI/CO (Financial Accounting / Controlling) – to dwa kluczowe moduły w systemach ERP, szczególnie w SAP, odpowiedzialne za zarządzanie finansami oraz kontrolingiem przedsiębiorstwa. Moduł FI (Financial Accounting) zajmuje się księgowością finansową, rejestrując wszystkie operacje finansowe, takie jak faktury, płatności, zobowiązania i należności, oraz zapewniając zgodność z wymogami prawnymi i podatkowymi. Moduł CO (Controlling) jest natomiast odpowiedzialny za kontrolę kosztów i analizę rentowności. Umożliwia planowanie i monitorowanie budżetów, analizę rentowności produktów i klientów oraz kontrolę odchyleń w rzeczywistych wynikach finansowych w porównaniu do planowanych.
+
+Fakturowanie – proces generowania i wysyłania faktur do klientów za dostarczone produkty lub usługi. W systemie ERP fakturowanie jest często zautomatyzowane i powiązane z modułami sprzedaży i księgowości.
+
+FIFO (First In, First Out) – metoda zarządzania zapasami, w której produkty, które weszły do magazynu jako pierwsze, są również pierwszymi wydawanymi do produkcji lub sprzedaży. FIFO jest często zarządzane przez systemy ERP, aby zapewnić efektywne obracanie zapasów.
+
+Funkcje ERP – to zestaw zintegrowanych narzędzi i modułów, które wspierają zarządzanie kluczowymi procesami biznesowymi w przedsiębiorstwie. System ERP oferuje funkcje obejmujące różnorodne obszary działalności, takie jak finanse, zasoby ludzkie, produkcja, logistyka, sprzedaż, zarządzanie zapasami, zakupami i łańcuchem dostaw. Funkcje te umożliwiają automatyzację procesów, centralizację danych, śledzenie zasobów w czasie rzeczywistym oraz poprawę komunikacji między działami. Dzięki funkcjom ERP przedsiębiorstwa mogą efektywnie planować, monitorować i optymalizować swoje operacje, co prowadzi do zwiększenia wydajności i lepszej kontroli nad całym przedsiębiorstwem.
+
+Gniazdo produkcyjne – to grupa maszyn, urządzeń lub stanowisk roboczych, które są zorganizowane w celu realizacji określonych etapów procesu produkcyjnego. Gniazda produkcyjne są zaprojektowane tak, aby umożliwić sekwencyjne lub równoległe przetwarzanie produktów, co poprawia efektywność i organizację produkcji. W systemach ERP zarządzanie gniazdami produkcyjnymi pozwala na optymalizację przepływu pracy i lepsze wykorzystanie zasobów.
+
+Gospodarka magazynowa – to zarządzanie procesami związanymi z przyjmowaniem, składowaniem i wydawaniem towarów w magazynie. Obejmuje kontrolę zapasów, optymalizację przestrzeni magazynowej, planowanie dostaw i dbanie o efektywny przepływ towarów, co ma na celu zapewnienie ciągłości produkcji i sprzedaży oraz minimalizację kosztów magazynowania.
+
+Harmonogramowanie produkcji – w kontekście ERP to proces tworzenia szczegółowego planu produkcji, który określa, kiedy i w jakiej kolejności mają być realizowane poszczególne zadania produkcyjne. System ERP automatyzuje ten proces, uwzględniając dostępność zasobów, terminy dostaw, oraz priorytety produkcyjne, aby zoptymalizować wydajność i terminowość realizacji zamówień.
+
+Integracja systemów: proces łączenia różnych systemów i aplikacji w celu zapewnienia spójnego przepływu danych między nimi. Integracja umożliwia wymianę informacji między systemem ERP a innymi aplikacjami biznesowymi, takimi jak systemy CRM, WMS czy BI.
+
+Interaktywny wykres Gantta – to narzędzie wizualne używane do planowania i śledzenia zadań w czasie, które umożliwia użytkownikom dynamiczne zarządzanie harmonogramami projektów. W interaktywnym wykresie Gantta można modyfikować zadania, daty oraz zależności między nimi bezpośrednio na wykresie, co ułatwia elastyczne zarządzanie projektem i lepszą kontrolę nad jego postępem.
+
+Interfejs API (Application Programming Interface): zestaw reguł i protokołów umożliwiających integrację systemu ERP z innymi aplikacjami i systemami. API pozwala na bezpieczną i efektywną wymianę danych oraz automatyzację procesów między różnymi systemami.
+
+Inwentaryzacja: proces liczenia i zarządzania zapasami w magazynie w celu utrzymania odpowiednich poziomów zapasów i minimalizacji strat. System ERP automatyzuje procesy inwentaryzacyjne, zapewniając dokładność i aktualność danych magazynowych.
+
+Jednostka biznesowa: część przedsiębiorstwa, która działa jako odrębna jednostka, często zarządzana jako osobny podmiot w systemie ERP. Jednostki biznesowe mogą obejmować różne oddziały, linie produktów lub segmenty rynku.
+
+JIT (Just-In-Time): strategia zarządzania zapasami, która polega na dostarczaniu materiałów i produktów dokładnie wtedy, gdy są potrzebne, aby minimalizować zapasy. System ERP wspiera JIT, umożliwiając precyzyjne planowanie i harmonogramowanie dostaw.
+
+Kalkulacje produkcyjne – w kontekście ERP to moduł, który automatycznie oblicza koszty wytworzenia produktów na podstawie danych dotyczących surowców, pracy, maszyn i innych zasobów. Umożliwia śledzenie kosztów w czasie rzeczywistym, co pomaga w optymalizacji procesów produkcyjnych i kontroli budżetu.
+
+Kody kreskowe: system identyfikacji produktów i zapasów za pomocą kodów kreskowych, które mogą być skanowane w celu śledzenia ruchów towarów w magazynie. System ERP wykorzystuje kody kreskowe do automatyzacji procesów magazynowych i poprawy dokładności danych.
+
+Kolektor danych – to przenośne urządzenie służące do zbierania, przetwarzania i przesyłania informacji, najczęściej stosowane w magazynach do skanowania kodów kreskowych, RFID i wprowadzania danych dotyczących towarów. Kolektor danych ułatwia zarządzanie zapasami, rejestrację operacji magazynowych oraz synchronizację z systemem ERP w czasie rzeczywistym.
+
+Kontrola produkcji – w kontekście ERP to proces monitorowania i zarządzania wszystkimi aspektami produkcji, aby zapewnić zgodność z planem, jakością i efektywnością. System ERP umożliwia śledzenie postępu produkcji, zużycia surowców, wydajności maszyn i pracowników, oraz identyfikowanie problemów w czasie rzeczywistym, co pozwala na bieżące korekty i optymalizację procesów produkcyjnych.
+
+KPI (Key Performance Indicators) – kluczowe wskaźniki wydajności używane do oceny efektywności i sukcesu różnych procesów biznesowych. KPI są monitorowane w systemie ERP i prezentowane na dashboardach, aby wspierać zarządzanie i podejmowanie decyzji.
+
+Księgowość ERP: moduł ERP odpowiedzialny za zarządzanie finansami, rachunkowością, budżetowaniem i raportowaniem finansowym. Automatyzuje procesy księgowe, zapewniając dokładność i zgodność z przepisami.
+
+Kustomizacja: zmiana kodu źródłowego systemu ERP w celu dopasowania go do specyficznych potrzeb przedsiębiorstwa. Kustomizacja może obejmować dodawanie nowych funkcji, modyfikowanie istniejących oraz integrację z innymi systemami.
+
+LIFO (Last In, First Out) – metoda zarządzania zapasami, w której ostatnie przyjęte towary są pierwszymi wydawanymi. LIFO może być wspierane przez systemy ERP.
+
+Logistyka ERP – zarządzanie transportem, magazynowaniem i dostawami surowców i produktów w celu optymalizacji łańcucha dostaw. Moduł logistyki w systemie ERP wspiera zarządzanie zamówieniami, planowanie transportu i kontrolę stanów magazynowych.
+
+Logistyka magazynowa – to zarządzanie procesami związanymi z przyjmowaniem, przechowywaniem, przemieszczaniem oraz wydawaniem towarów w magazynie. Obejmuje optymalizację operacji magazynowych, takich jak kontrola zapasów, organizacja przestrzeni magazynowej, oraz koordynacja dostaw i wysyłek, aby zapewnić efektywny przepływ towarów i minimalizację kosztów.
+
+Marszruta produkcyjna: szczegółowy plan określający kolejność operacji niezbędnych do wytworzenia produktu. Zawiera informacje o etapach produkcji, czasach trwania poszczególnych operacji, zasobach potrzebnych do ich realizacji (np. maszyny, narzędzia, pracownicy) oraz lokalizacjach, w których będą się odbywać. W systemach ERP marszruta produkcyjna jest kluczowym elementem planowania produkcji, ponieważ pomaga koordynować procesy, optymalizować przepływ materiałów i monitorować postęp pracy, zapewniając efektywność i zgodność z harmonogramem produkcji.
+
+MES (Manufacturing Execution System): program do zarządzania produkcją na poziomie operacyjnym, często zintegrowany z ERP. MES monitoruje i kontroluje operacje produkcyjne w czasie rzeczywistym, zapewniając dokładność i efektywność.
+
+Migracja danych to proces przenoszenia danych z jednego systemu do drugiego, często stosowany przy wdrażaniu nowego systemu ERP. Migracja obejmuje przekształcanie i przenoszenie danych historycznych i bieżących do nowego systemu.
+
+Mobilny system ERP – to rozwiązanie ERP dostępne na urządzeniach mobilnych, takich jak smartfony czy tablety, które umożliwia użytkownikom zarządzanie procesami biznesowymi z dowolnego miejsca. Pozwala na dostęp do danych, raportów i funkcji systemu ERP w czasie rzeczywistym, co zwiększa elastyczność i efektywność operacyjną firmy.
+
+Moduł ERP – oddzielna część systemu ERP, specjalizująca się w zarządzaniu określoną funkcją biznesową, np. moduł finansowy, produkcyjny, czy HR. Moduły mogą być wdrażane oddzielnie lub jako część zintegrowanego systemu.
+
+MPS (Master Production Schedule) – czyli Główny Harmonogram Produkcji, to plan określający, co, ile i kiedy ma być wyprodukowane w danym okresie czasu. MPS uwzględnia zapotrzebowanie na produkty, dostępność zasobów oraz terminy dostaw, a jego celem jest zapewnienie, że produkcja jest zgodna z planem i spełnia wymagania rynku. Systemy ERP wykorzystują MPS do optymalizacji procesów produkcyjnych i zarządzania zapasami.
+
+MRP (Material Requirements Planning) – proces zarządzania surowcami i zapasami w celu optymalizacji produkcji i minimalizacji kosztów. MRP w systemie ERP planuje zapotrzebowanie na materiały, harmonogramuje produkcję i kontroluje zapasy.
+
+Nesting – to technika optymalizacji rozmieszczenia elementów na materiale (np. blachy, drewna) w procesie produkcyjnym, która minimalizuje ilość odpadów. W systemach ERP Nesting pomaga w efektywnym wykorzystaniu surowców, zapewniając maksymalną wydajność cięcia i redukcję strat materiałowych.
+
+OEE (Overall Equipment Effectiveness) – to wskaźnik ogólnej efektywności sprzętu, który mierzy wydajność maszyn w produkcji. OEE uwzględnia trzy główne czynniki: dostępność, wydajność i jakość. Jest stosowany w celu oceny efektywności operacyjnej linii produkcyjnych, pozwalając zidentyfikować obszary do poprawy, takie jak przestoje, spadki wydajności czy wady produkcyjne.
+
+On-premises ERP – system ERP zainstalowany i zarządzany na własnych serwerach przedsiębiorstwa. Zapewnia pełną kontrolę nad danymi i systemem, ale wymaga inwestycji w infrastrukturę i zasoby IT.
+
+Operacyjne planowanie produkcji – to krótkoterminowy proces zarządzania i organizacji zasobów oraz działań produkcyjnych, który ma na celu zapewnienie, że codzienne operacje produkcyjne są realizowane zgodnie z harmonogramem. Obejmuje planowanie szczegółów, takich jak alokacja maszyn, przydzielanie pracowników, zarządzanie zapasami oraz monitorowanie postępów produkcji, aby zminimalizować przestoje i maksymalizować efektywność. W systemach ERP operacyjne planowanie produkcji pomaga w bieżącym zarządzaniu procesami, zapewniając ich płynność i zgodność z ogólnymi celami firmy.
+
+Optymalizacja produkcji – proces doskonalenia operacji produkcyjnych w celu zwiększenia wydajności i redukcji kosztów. System ERP wspiera optymalizację produkcji poprzez automatyzację procesów, monitorowanie wydajności i zarządzanie zasobami.
+
+Pętla MRP – to cykliczny proces w systemie Material Requirements Planning (MRP), który obejmuje planowanie zapotrzebowania na materiały, generowanie zamówień i harmonogramów produkcji, a następnie aktualizację planów w oparciu o bieżące informacje o zasobach, zapasach i produkcji. Pętla MRP działa iteracyjnie, stale analizując zmieniające się dane dotyczące popytu, dostępności materiałów i stanu zapasów, co pozwala na dynamiczne dostosowywanie planów produkcji w celu optymalizacji procesów i minimalizacji braków materiałowych.
+
+Pick and Pack – proces kompletacji i pakowania towarów w magazynie przed wysyłką do klienta. System ERP zarządza zleceniami kompletacji, prowadzi pracowników magazynu przez proces, a także optymalizuje kolejność i sposób kompletacji.
+
+Planowanie produkcji – w kontekście ERP jest to proces optymalizacji zasobów, surowców i harmonogramów produkcyjnych w celu zapewnienia efektywnego wytwarzania produktów. System ERP zawierający moduł APS wspiera ten proces, pomagając w koordynacji działań, minimalizacji kosztów i maksymalizacji wydajności poprzez zarządzanie zapotrzebowaniem materiałowym, dostępnością maszyn oraz siłą roboczą.
+
+Planowanie zasobów produkcyjnych (PRP) – proces zarządzania zasobami produkcyjnymi w celu optymalizacji harmonogramowania i wykorzystania zasobów. PRP w systemie ERP pomaga w alokacji zasobów, planowaniu zadań i monitorowaniu postępów produkcji.
+
+Planowanie zapotrzebowania – proces określania ilości surowców i produktów potrzebnych do zaspokojenia przyszłego zapotrzebowania. System ERP wspiera planowanie zapotrzebowania poprzez analizy prognoz, historycznych danych sprzedaży i bieżących zamówień.
+
+PLM (Product Lifecycle Management) – moduł lub funkcjonalność systemu ERP, który umożliwia zarządzanie cyklem życia produktu, od fazy koncepcji, przez projektowanie, produkcję, dystrybucję, aż po wycofanie z rynku. Integruje dane inżynieryjne, produkcyjne i marketingowe.
+
+Prognozowanie w zarządzaniu firmą – proces przewidywania przyszłych potrzeb i trendów na podstawie analizy historycznych i aktualnych danych. Prognozowanie w systemie ERP pomaga w planowaniu zapasów, produkcji i zarządzaniu zasobami.
+
+Przewodnik produkcyjny – to dokument lub instrukcja, która szczegółowo opisuje kroki i procedury potrzebne do wyprodukowania określonego produktu. Zawiera informacje o materiałach, operacjach, czasach produkcji, maszynach oraz sekwencjach działań, które należy wykonać na poszczególnych etapach produkcji. W systemach ERP przewodnik produkcyjny pomaga zautomatyzować procesy produkcyjne, zapewniając zgodność z planem i optymalizację zasobów.
+
+Punkt zamówienia – określony poziom zapasów, przy którym generowane jest automatyczne zamówienie na uzupełnienie. System ERP śledzi stany magazynowe i automatycznie generuje zamówienia, gdy zapasy spadną poniżej tego poziomu.
+
+Raportowanie – funkcja systemu ERP umożliwiająca generowanie raportów na podstawie danych przechowywanych w systemie, wspierająca analizę i podejmowanie decyzji. Raportowanie obejmuje tworzenie standardowych i niestandardowych raportów finansowych, operacyjnych i zarządczych.
+
+Rejestracja czasu pracy – to proces monitorowania i zapisywania godzin pracy pracowników, który może obejmować czas rozpoczęcia, zakończenia pracy oraz przerw. W systemach ERP rejestracja czasu pracy automatyzuje ten proces, umożliwiając dokładne śledzenie obecności, nadgodzin oraz wydajności pracowników, co ułatwia zarządzanie zasobami ludzkimi, wynagrodzeniami i zgodnością z przepisami prawa pracy.
+
+Rejestracja pracy maszyn – to proces monitorowania i zapisywania danych dotyczących działania maszyn, takich jak czas pracy, przestoje, wydajność czy zużycie energii. W systemach ERP (zintegrowanych z odpowiednimi czujnikami) rejestracja pracy maszyn umożliwia zbieranie informacji w czasie rzeczywistym, co pomaga w optymalizacji produkcji, utrzymaniu ruchu oraz poprawie efektywności operacyjnej zakładu.
+
+Rejestracja produkcji – w kontekście ERP to proces monitorowania i zapisywania danych dotyczących postępu produkcji w czasie rzeczywistym. Obejmuje rejestrowanie informacji o zużyciu materiałów, pracy maszyn, wydajności pracowników oraz zakończeniu poszczególnych etapów produkcji. System ERP automatycznie gromadzi te dane, co umożliwia lepsze zarządzanie produkcją, kontrolę jakości i optymalizację procesów.
+
+RFID (Radio-Frequency Identification) – technologia służąca do automatycznego identyfikowania i śledzenia obiektów za pomocą fal radiowych. RFID w systemie ERP umożliwia monitorowanie ruchu towarów, zarządzanie zapasami i poprawę dokładności danych.
+
+Routing – proces definiowania kolejności operacji i zasobów (maszyn, narzędzi, pracy) potrzebnych do wyprodukowania danego produktu. Routing w systemie ERP pomaga w optymalizacji przepływu produkcji i planowaniu zasobów.
+
+SaaS (Software as a Service) – model dostarczania oprogramowania, w którym aplikacje są hostowane przez dostawcę usług i dostępne przez Internet. SaaS ERP oferuje korzyści takie jak niższe koszty początkowe, łatwość aktualizacji i skalowalność.
+
+SCADA (Supervisory Control and Data Acquisition) – to system nadzorujący i zbierający dane, który umożliwia monitorowanie oraz kontrolowanie procesów przemysłowych w czasie rzeczywistym. SCADA jest wykorzystywana w różnych branżach, takich jak produkcja, energetyka czy automatyka, do zarządzania sprzętem, zbierania danych operacyjnych i zdalnego sterowania urządzeniami.
+
+SCM (Supply Chain Management) – moduł ERP obejmujący planowanie, zarządzanie i optymalizację przepływu surowców, informacji i produktów od dostawców do klientów. SCM pomaga w zarządzaniu łańcuchem dostaw, poprawie efektywności i redukcji kosztów.
+
+Shop Floor Control – system zarządzania operacjami produkcyjnymi na hali produkcyjnej, obejmujący monitorowanie postępu produkcji, alokację zasobów oraz śledzenie wydajności maszyn i pracowników. Shop Floor Control w ERP zapewnia bieżącą kontrolę nad realizacją planów produkcyjnych.
+
+Skalowalny system ERP – to system, który można łatwo dostosować do rosnących potrzeb firmy, zarówno pod względem liczby użytkowników, jak i funkcjonalności. Pozwala na płynne rozszerzanie możliwości, takie jak dodawanie nowych modułów czy obsługa większej ilości danych, bez utraty wydajności, co sprawia, że nadaje się zarówno dla małych, jak i dużych przedsiębiorstw.
+
+Slotting – proces rozmieszczenia towarów w magazynie w celu zwiększenia efektywności operacji kompletacji i magazynowania. ERP wykorzystuje dane historyczne i prognozy popytu, aby optymalnie rozmieszczać produkty w magazynie.
+
+SOA (Service-Oriented Architecture) – architektura systemu ERP umożliwiająca integrację różnych aplikacji i usług poprzez standaryzowane interfejsy (API). SOA wspiera elastyczność i skalowalność systemu, umożliwiając łatwe dodawanie nowych funkcji i integrację z zewnętrznymi systemami.
+
+SRM (Supplier Relationship Management) – funkcja ERP, która umożliwia zarządzanie relacjami z dostawcami, w tym ocenę wydajności dostawców, negocjacje kontraktów, zarządzanie umowami oraz optymalizację procesów zakupowych i logistyki.
+
+Standard logistyczny GS1 – to międzynarodowy system standardów używany do identyfikacji, komunikacji i zarządzania danymi w łańcuchu dostaw. GS1 obejmuje standardy dotyczące kodów kreskowych, numerów identyfikacyjnych (np. GTIN, SSCC) oraz wymiany informacji, które umożliwiają efektywne śledzenie produktów i przepływ towarów między partnerami biznesowymi na całym świecie.
+
+System – zbiór zintegrowanych narzędzi i modułów, które wspólnie umożliwiają zarządzanie różnymi aspektami działalności przedsiębiorstwa. System ERP integruje procesy biznesowe, zapewniając spójność danych i efektywność operacyjną.
+
+3PL (Third-Party Logistics) – zewnętrzny dostawca usług logistycznych, który zajmuje się zarządzaniem magazynem, transportem i dystrybucją dla firmy. ERP integruje operacje 3PL, umożliwiając śledzenie zewnętrznych procesów logistycznych i zapasów w czasie rzeczywistym.
+
+TCO (Total Cost of Ownership) – całkowity koszt posiadania systemu ERP, obejmujący nie tylko koszty zakupu i wdrożenia, ale także koszty utrzymania, aktualizacji, szkoleń użytkowników, wsparcia technicznego i innych kosztów operacyjnych w czasie użytkowania systemu.
+
+TOC (Theory of Constraints) – metoda zarządzania ograniczeniami w produkcji, integrowana z ERP, która identyfikuje wąskie gardła w procesach produkcyjnych i pomaga optymalizować przepływ pracy oraz zasobów.
+
+Traceability (identyfikowalność partii) – to zdolność do śledzenia i monitorowania historii, lokalizacji oraz zastosowania partii surowców, komponentów lub gotowych produktów na każdym etapie produkcji, dystrybucji i sprzedaży. W kontekście ERP traceability pozwala na precyzyjne zarządzanie partiami, co ułatwia kontrolę jakości, identyfikację wadliwych produktów oraz spełnianie wymogów regulacyjnych.
+
+User Interface (UI) – interfejs użytkownika, czyli sposób, w jaki użytkownicy wchodzą w interakcję z systemem ERP. Dobry UI jest intuicyjny, łatwy w obsłudze i zapewnia szybki dostęp do potrzebnych informacji i funkcji.
+
+Utrzymanie ruchu – to działania mające na celu zapewnienie ciągłości i sprawności działania maszyn, urządzeń oraz systemów w zakładzie produkcyjnym. Obejmuje regularne przeglądy, naprawy oraz konserwację sprzętu, aby minimalizować przestoje i awarie, co z kolei zwiększa efektywność operacyjną i zmniejsza koszty związane z nieplanowanymi zatrzymaniami produkcji.
+
+Użytkownik końcowy – osoba korzystająca z systemu ERP w codziennej pracy, wykonująca zadania i wprowadzająca dane do systemu. Użytkownicy końcowi mogą obejmować pracowników działów finansów, produkcji, HR, sprzedaży i logistyki.
+
+Wielomagazynowość – to funkcjonalność systemów ERP pozwalająca na zarządzanie zapasami i operacjami logistycznymi w wielu lokalizacjach magazynowych jednocześnie. Umożliwia kontrolowanie stanów magazynowych, przepływów towarów i procesów logistycznych w różnych magazynach w ramach jednej zintegrowanej platformy.
+
+WMS (Warehouse Management System) – moduł ERP odpowiedzialny za planowanie i harmonogramowanie produkcji, zarządzanie zapasami, ruchem towarów i inwentaryzacją. WMS optymalizuje procesy magazynowe zwiększając efektywność i redukując koszty.
+
+Wolumen produkcji – to całkowita liczba jednostek produktów wytworzonych przez firmę w określonym czasie. Jest to kluczowy wskaźnik w zarządzaniu produkcją, który pomaga mierzyć wydajność linii produkcyjnych, planować zasoby oraz oceniać efektywność procesów produkcyjnych.
+
+Workflow – automatyzacja procesów biznesowych poprzez sekwencje kroków, które są wykonywane przez różne moduły systemu ERP. Workflow zapewnia spójność i efektywność operacyjną, minimalizując ryzyko błędów.
+
+Zaopatrzenie (Procurement) – moduł ERP odpowiedzialny za zarządzanie zakupami surowców i materiałów potrzebnych do produkcji. Proces zaopatrzenia obejmuje tworzenie zamówień, wybór dostawców, negocjacje i monitorowanie dostaw.
+
+Zarządzanie danymi – proces gromadzenia, przechowywania, ochrony i udostępniania danych w sposób zapewniający ich spójność i dostępność. Zarządzanie danymi w ERP obejmuje tworzenie kopii zapasowych, archiwizację i polityki dostępu do danych.
+
+Zarządzanie dokumentami – proces zarządzania elektronicznymi i papierowymi dokumentami w celu zapewnienia ich dostępności i zgodności z przepisami. Moduł zarządzania dokumentami w ERP umożliwia przechowywanie, wyszukiwanie i udostępnianie dokumentów.
+
+Zarządzanie finansami (FM) – moduł ERP zajmujący się księgowością, rachunkowością, zarządzaniem budżetem, raportowaniem finansowym i analizą kosztów. Automatyzuje procesy finansowe, zapewniając dokładność i zgodność z przepisami.
+
+Zarządzanie jakością – proces monitorowania i kontrolowania jakości produktów i usług w celu spełnienia określonych standardów i wymagań. System ERP wspiera zarządzanie jakością poprzez monitorowanie procesów produkcyjnych i kontrolę zgodności z normami.
+
+Zarządzanie magazynem (WM): moduł ERP odpowiedzialny za zarządzanie zapasami, lokalizacjami magazynowymi, ruchem towarów i inwentaryzacją. WM optymalizuje operacje magazynowe, minimalizując straty i poprawiając efektywność.
+
+Zarządzanie produkcją (PM): moduł ERP wspierający planowanie, harmonogramowanie, monitorowanie i kontrolę procesów produkcyjnych. Pomaga w zarządzaniu zasobami, optymalizacji procesów i zwiększaniu wydajności produkcji.
+
+Zarządzanie projektami (PM) – moduł ERP wspierający planowanie, monitorowanie i realizację projektów. Obejmuje zarządzanie zasobami, harmonogramowanie zadań, budżetowanie oraz raportowanie postępów projektów.
+
+Zasoby ludzkie (HR) – moduł ERP odpowiedzialny za zarządzanie pracownikami, rekrutacją, szkoleniami, wynagrodzeniami i oceną wydajności. Automatyzuje procesy HR, wspierając efektywne zarządzanie kapitałem ludzkim.
+
+Zintegrowane rachunki – to funkcjonalność w systemach ERP, która umożliwia połączenie i synchronizację danych finansowych z różnych obszarów działalności firmy (takich jak sprzedaż, zakupy, produkcja) w jednym systemie. Ułatwia to zarządzanie finansami, księgowością oraz sprawozdawczością, zapewniając spójność i dokładność informacji finansowych w całej organizacji.
+
+Zintegrowane zarządzanie w systemie ERP – to podejście, które łączy różne procesy biznesowe, takie jak finanse, produkcja, sprzedaż i logistyka, w jednym, spójnym systemie. Dzięki temu firmy mogą zarządzać wszystkimi obszarami działalności z jednego miejsca, co zwiększa efektywność, poprawia przepływ informacji i ułatwia podejmowanie decyzji.
+
+Zintegrowany system ERP – system ERP, który łączy wszystkie moduły i funkcje w jednolitą platformę, umożliwiając spójny przepływ danych i optymalizację procesów biznesowych. Zintegrowany system ERP zapewnia lepszą widoczność i kontrolę nad całością operacji przedsiębiorstwa.
+
+Zlecenie produkcyjne – dokument lub elektroniczny zapis w ERP, który zawiera szczegóły dotyczące produkcji określonego produktu, w tym wymagane surowce, harmonogram, operacje oraz zasoby potrzebne do jego wykonania.
+

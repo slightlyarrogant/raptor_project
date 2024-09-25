@@ -1,0 +1,18 @@
+GIT - Podpowiedzi
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/tools/git
+scraped_at: 2024-09-05T12:18:44.369026
+last_updated: 2024-09-05T12:18:44.369047
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/GIT - Podpowiedzi
+meta_tags: ['commit', 'e870e41', 'przywracanie', 'terminalu', 'reflog', 'wyświetlić', 'listę', 'ostatnich', 'commitów', 'pojawią']
+
+Content
+Przywracanie commit'a
+W terminalu:
+git reflog
+aby wyświetlić listę ostatnich commitów (pojawią się też utracone).
+Przywrócenie:
+git reset --hard e870e41
+gdzie e870e41 to przykładowy commit.

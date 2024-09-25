@@ -1,0 +1,14 @@
+# Rozliczenia wg. kontrahentów
+
+W ramach funkcjonalności karty rozliczenia wg. kontrahentów użytkownik ma możliwość korzystania z następujących funkcji:
+- wprowadź zapłatę za zaznaczone – generowanie przychodu/rozchodu bankowego
+- kompensata zaznaczonych (nasza) – generowanie kompensaty
+- kompensata zaznaczonych (otrzymana) – wprowadzenie kompensaty otrzymanej od kontrahenta
+- wydruk ponagleń zapłaty – możliwość wydruku ponagleń i not odsetkowych
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp2877108e-d0b7-44cc-8632-5dba676c5190](https://www.cfi.pl/vendohelp/content/imgs/D3/43812c5ac812b6fce278b42adc3ec729-109204-0.png)
+
+![tmp65cf36ef-edfd-4eb9-82f5-94f1262a8b87](https://www.cfi.pl/vendohelp/content/imgs/Z3/d63834d298a28c9c964286a0a6b3f5cd-4177-0.png)

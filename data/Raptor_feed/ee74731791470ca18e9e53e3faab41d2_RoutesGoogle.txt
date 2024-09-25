@@ -1,0 +1,53 @@
+RoutesGoogle
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/routesgoogle
+scraped_at: 2024-09-05T12:21:58.993389
+last_updated: 2024-09-05T12:21:58.993429
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/RoutesGoogle
+meta_tags: ['trasy', 'jest', 'będzie', 'klienta', 'przez', 'klient', 'wyznaczenia', 'należy', 'system', 'firmy']
+
+Content
+RoutesGoogle
+Informacje ogólne
+Implementacja rozwiązania ma na celu zoptymalizowanie procesu dostarczenia przesyłek przez kontrahenta. Funkcjonalność pozwalająca na wyznaczenie optymalnej trasy dla dostawcy towaru z możliwością uwzględnia wszystkich kontrahentów znajdujących się w pobliżu zaplanowanej trasy.
+Konfiguracja
+Ustawienia systemowe
+Podstawową kwestią związaną z prawidłowym działaniem systemu jest podpięcie klucza odpowiedzialnego za połączenia API. Klucz generowany jest po założeniu konta google, gdzie postępować należy zgodnie z standardami rejestracji narzuconymi przez google.
+Konfiguracja oraz uzupełnienie informacji o kluczu odbywa się z poziomu Ustawień głównych > Parametry pracy > Wymiana danych > Google Maps. Na tym poziomie użytkownik definiuje parametry takie jak:
+Kolor – Informacja dotycząca oznaczenia klienta kolorem. Oznaczenie kolorystyczne widoczne będzie w późniejszym czasie na legendzie wygenerowanej trasie dojazdu. Określenie klienta wybranym kolorem dostępne jest z poziomu katy klienta. Wartość mówiąca w jaki sposób klient ma być klasyfikowany, Informacje te mogą być pobierane zarówno z karty klienta jak również, jeśli taki jest wyznaczony opiekuna klienta
+Kod – Wartość którą należy uzupełnić jest "Marem" które będzie wyświetlane w legendzie wyznaczonych tras. Określa jakie informacje definiujące klienta maja być prezentowane.
+Nazwa – Wartość widoczna będzie w legendzie wygenerowanej mapy dojazdu. Pole mapowane poprzez podanie "Macra" które wyświetlać będzie jako informacje o danych kontrahenta.
+Klucz API – informacja o kluczu wygenerowanym przez google. Po wygenerowaniu klucza w google jest on uzupełniany w systemie Vendo.
+
+Ustawienia Plugin'owe
+Przed przystąpieniem do pracy należy wgrać stosownego plugina. Operacja wgrania plugina wykonywana jest w standardowy sposób i dokonać tego należy z poziomu Ustawień głównych > Pluginy > Dodaj plugin Po poprawnym jego zainstalowaniu, należy przejść do konfiguracji. Konfiguracja możliwa jest po kliknięciu w Ustawienia plugina (ikonkę narzędzi zlokalizowana w prawym górnym rogu okna dialogowego) > Pokaż ustawienia.
+Po wyświetleniu dialogu Użytkownik ma możliwość dokonania konfiguracji takich jak:
+Rodzaj mapy - określenie sposobu wyznaczenia trasy
+
+Okrąg – Sposób wyznaczenia tras przez system. Po wyborze tej opcji program zaplanuje trasę gdzie punktem startu będzie siedziba firmy a następnie przebiegać będzie ona wg schematu: Klient A > Klient B> Klient C> … Klient N. Zaplanowany schemat przebiegu wyznaczonej trasy odbywa sie wg okręgu gdzie punktem centralnym jest siedziba firmy. Maksymalna ilość odbiorców wyznaczonych w czasie generowania to 10
+Gwiazda – Sposób wyznaczenia tras przez system. Po wyborze tej opcji program zaplanuje trasę gdzie punktem startu będzie siedziba firmy, następnie przebiegać będzie ona wg schematu: Klient A > powrót do siedziby firmy, Klient B > powrót do siedziby firmy . Tak węć po każdej wizytce u klienta, system zaplanuje powrót do firmy.
+
+Pobieraj adres - Informacja dotycząca lokalizacji z której pobierane mają byc dane adresowe kontrahenta. Użytkownik ma możliwość takich opcji jak:
+Dokument – dane odbiorcy pobierane są z informacji zawartych na dokumencie. Są one tożsame z danymi adresowymi zapisanymi na karcie kontrahenta.
+Koordynaty klienta - Informacja odnośnie danych adresowych pobierane są na podstawie współrzędnych klienta, któe zlokalizowane sa na Karcie kontrahenta po przejściu do zakładki Pozostałe dane sekcja CRM > Współrzędne.
+Pokaż na mapie grupy klientów – Oznaczenie tego check boxa będzie skutkowało wyświetleniem na mapie z wyznaczoną trasą informacji o wszystkich klientach którzy znajdują się w najbliższej okolicy
+Grupuj kolory tras wg - Parametr pozwalając na sklasyfikowanie kontrahentów. Po uprzednim oznaczeniu ich odpowiednim właściwym kolorem, informacje takie będą widoczne na wygenerowanej trasie dojazdu
+
+Wybór dokumentów – Parametr określający, na podstawie których dokumentów ma zostać wyznaczona trasa. Z tego poziomu użytkownik ma możliwość określenia czy przebieg trasy ma obywać się wg: Wszystkich z okresu – do wyznaczenia trasy brane są wszystkie dokumenty na podstawie okresu wyznaczonego przez użytkownika
+Zaznaczone – do wyznaczenia trasy brane są pod uwagę tylko dokumenty wybrane przez użytkownika Sekcja Grupy – pozwala na określenie które grupy towarów mają być brane pod uwagę podczas wyznaczenia trasy przez system.
+
+
+Zasada działania.
+Prawidłowe działanie funkcjonalności, możliwe jest po poprawnej konfiguracji wyżej opisanych ustawień. Aby system wyznaczył optymalną trasę dla odbiorców należy w menu głównym przejść do modułu Dokumenty > Dokumenty Sprzedażowe > Zamówienia Obce ZO. Wywołanie funkcjonalności odbywa się z poziomu listy Dokumentów ZO > PPM > Wyznacz trasę do odbiorców.
+
+W zależności od ustawień, po wywołaniu funkcjonalności system zapyta o okres z którego mają uwzględniane dokumenty dla wyznaczenia trasy bądź jeśli ustawienie będzie dotyczyło zaznaczonych dokumentów, zostanie wygenerowana mapa z optymalną trasą dojazdu
+
+Po odpowiednim wyborze warunków dla których maja zostać wyznaczone trasy, za pośrednictwem domyślnej przeglądarki systemowej zostanie wygenerowana mapa z wyznaczeniem tras do potencjalnych odbiorców. Dzięki odpowiedniemu dostosowaniu ustawień plugina możliwe bęzie również wyświetlanie wszystkich odbiorców znajdujących się w pobliżu wyznaczonej trasy.
+
+Images
+
+
+
+

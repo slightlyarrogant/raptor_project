@@ -1,0 +1,102 @@
+## Kartoteka środka trwałego
+
+Karta środka trwałego w VENDO.ERP pełni kilka istotnych funkcji, które mają na celu usprawnianie zarządzania i kontrolę nad środkami trwałymi w firmie. Dzięki kartotece zapewnione jest jednoznaczna identyfikacja środków trwałych, niskocennych środków trwałych, wartości niematerialnych i prawnych oraz wyposażenia. Każda kartoteka zawiera unikalne numery inwentarzowe. Dzięki temu pracownicy mogą szybko i łatwo odnaleźć interesujące ich pozycje na liście środków trwałych. Karty środków trwałych gromadzą i przechowują istotne dane, o każdym środku trwałym, takie jak: numer inwentarzowy, nazwa, opis, klasyfikacja ŚT, rodzaj, grupa, itd. Te informacje są niezbędne do prawidłowego zarządzania środkami trwałymi (np. przy pomocy zdarzeń) i ich amortyzacją. Kartoteka środka trwałego zawiera również informacje o amortyzacji danego środka trwałego. Z poziomu karty możemy kontrolować status wykonania planu amortyzacji, aktualizować go lub wygenerować go od początku dla nowych środków trwałych. Kartoteka środka trwałego stanowi również najniższy poziom analityki dostępnej w analizach i raportach dotyczących amortyzacji i środków trwałych. Raz utworzony obiekt (kartoteka środka trwałego) nie może być usunięta - można taki środek trwały zlikwidować (będzie widoczny jako nieaktywny) lub edytować.
+
+### Karta
+
+![tmp389a532f-827a-4c18-9cc2-9cad224ee322](https://www.cfi.pl/vendohelp/content/imgs/E2/9218a49f853d6dc82ef04772f3930a1e-114782-0.png)
+
+
+
+Nazwa pola | Opis | Typ
+-------- | -------- | --------
+Numer inwentarzowy |	Unikalny w systemie, jednoznacznie identyfikujący kartotekę. Możliwe wpisanie liter i liczb. |	Tekst
+Klasyfikacja ŚT |	Klasyfikacja Środków Trwałych (KŚT) to systematyczne grupowanie obiektów majątku trwałego. Służy ona celom ewidencyjnym, ustalaniu stawek odpisów amortyzacyjnych oraz badaniom statystycznym. |	Tekst
+Nazwa |	Nazwa kartoteki środka trwałego. |	Tekst
+Grupa |	Grupa środków trwałych, do której należy dany składnik majątku firmy. Umożliwia to łatwiejszą pracę na grupach  środków trwałych np. przy wyszukiwaniu, analizach i raportowaniu. Grupy te definiowane są w tabeli słownikowej. |	Słownik
+Opis |	Opis środka trwałego. |	Tekst
+Oddział |	Określenie do którego oddziału firmy przynależy środek trwały. |	Słownik
+Obiekt |	Możliwość przypisania środka trwałego do istniejącego już obiektu w firmie. |	Słownik
+Dokument nabycia |	Wskazanie dokumentu, który wskazuje nabycie środka trwałego przez firmę. |	Tekst
+Data nabycia |	Data nabycia środka trwałego. |	Data
+Data przyjęcia |	Data przyjęcia środka trwałego. |	Data
+Wart. pocz. bilansowa |	Cena nabycia lub koszt wytworzenia, według którego środek trwały został po raz pierwszy ujęty w księgach rachunkowych. |	Liczba
+Wart. pocz. podatkowa |	Cena nabycia lub koszt wytworzenia, według którego środek trwały został po raz pierwszy ujęty w księgach rachunkowych - uzupełnia się gdy wskazano, że stawka amortyzacji podatkowej będzie różna od bilansowej (do oznaczenia obok miejsca na wpisanie kwoty). |	Liczba
+Wart. podzdarzen. bil. |	Wartość podzdarzeń środka trwałego to wartość początkowa tego środka, która uwzględnia koszty związane z zakupem lub wytworzeniem oraz ewentualne różnice kursowe. |	Liczba
+Wart. podzdarzen. podat. |	Wartość podzdarzeń środka trwałego to wartość początkowa tego środka, która uwzględnia koszty związane z zakupem lub wytworzeniem oraz ewentualne różnice kursowe - uzupełnia się gdy wskazano, że stawka amortyzacji podatkowej będzie różna od bilansowej. |	Liczba
+Rodzaj amortyzacji |	Wskazanie rodzaju amortyzacji dla środka trwałego (liniowa/ jednorazowa/degresywna). |	Słownik
+Stawka am. bilansowej |	Stawka amortyzacji bilansowej to roczny odsetek, który służy do obliczenia odpisów amortyzacyjnych dla środka trwałego. |	Liczba
+Stawka am. podatkowej |	Stawka amortyzacji podatkowej określona w ustawie o podatku dochodowym - uzupełnia się gdy wskazano, że stawka amortyzacji podatkowej będzie różna od bilansowej. |	Liczba
+Status |	Wskazanie czy dany środek trwały jest aktywny lub nieaktywny. |	Słownik
+Umorzenie |	Wartość okresowego zmniejszenia wartości początkowej środka trwałego na skutek wykorzystywania go w trakcie prowadzenia działalności gospodarczej. |	Liczba
+Umorzenie podatkowe |	Wartość okresowego zmniejszenia wartości początkowej środka trwałego na skutek wykorzystywania go w trakcie prowadzenia działalności gospodarczej - uzupełnia się gdy wskazano, że stawka amortyzacji podatkowej będzie różna od bilansowej. |	Liczba
+Użytkownik |	Wskazanie użytkownika, który odpowiada za środek trwały. |	Słownik
+Wartość bieżąca |	Jest to kwota wartości początkowej środka trwałego pomniejszona o jego umorzenie. |	Liczba
+Bieżąca podatkowa |	Jest to kwota wartości początkowej środka trwałego pomniejszona o jego umorzenie - uzupełnia się gdy wskazano, że stawka amortyzacji podatkowej będzie różna od bilansowej. |	Liczba
+Lokalizacja |	Wskazanie lokalizacji w której aktualnie znajduje się środek trwały. |	Słownik
+OPK |	Wskazanie ośrodka powstawania kosztów dla tego środka trwałego. |	Słownik
+
+### Amortyzacja
+
+Z poziomu zakładki amortyzacje możemy generować, usuwać wygenerowane wcześniej amortyzacje (jeśli były zaksięgowane należy najpierw usunąć zapis księgowy) lub ją edytować. Poniżej widok okna edycji zapisu amortyzacyjnego:
+
+![tmp0bf67ceb-07d2-422f-bf90-da7a4890b760](https://www.cfi.pl/vendohelp/content/imgs/Y2/d660f8c98de10dd74cf9c49111038445-9579-0.png)
+
+
+![tmpb0683b31-ee26-4a97-9831-5ebc43b580b3](https://www.cfi.pl/vendohelp/content/imgs/W0/e8c64974f35bcbc68055af1beaa7465b-41737-0.png)
+
+### Zdarzenia
+
+
+Z poziomu zakładki zdarzenia możemy dodać, usunąć lub edytować następujące zdarzenia na środku trwałym:
+
+*Odbiór środka trwałego*
+
+![tmp878c2447-f4de-4d78-afc8-4825dec121de](https://www.cfi.pl/vendohelp/content/imgs/F5/672206b724d2f3d1fc8e000156f31264-25592-0.png)
+
+*Przeszacowania*
+
+![tmpb558ed13-34b3-4c32-9989-1f3ca843a0d2](https://www.cfi.pl/vendohelp/content/imgs/H7/9382f3bf4f81d2177cf1ad9e43ce82bd-15131-0.png)
+
+
+*Zmiana opiekuna*
+
+![tmp40d77fad-8db1-41fd-8d8e-032d4b3a56f3](https://www.cfi.pl/vendohelp/content/imgs/F1/bdeb079c3107e4825740eda3a45eafee-12003-0.png)
+
+*Zmiana lokalizacji*
+
+![tmp7200eda8-ed21-45fa-9ef6-bc1a32a81ddd](https://www.cfi.pl/vendohelp/content/imgs/U6/09cac7682914fcb481808d43df71dfba-11947-0.png)
+
+*Zmiana metody amortyzacji*
+
+![tmpa9c30e4b-bd42-4b96-b86e-fb1ca2ab93af](https://www.cfi.pl/vendohelp/content/imgs/D1/0cfa0a7afad07652ac1948998c32ab6b-17560-0.png)
+
+*Zmiana OPK*
+
+![tmp85f5ae82-8afd-47f7-863c-f9da34093d89](https://www.cfi.pl/vendohelp/content/imgs/E6/dacd900f44289164d2f1ca6e4608418f-11592-0.png)
+
+*Element*
+
+![tmp09ae3801-f6c6-474f-8969-3175ae8c545f](https://www.cfi.pl/vendohelp/content/imgs/J5/1573c1902576696c0e759d680ff4d3e9-15974-0.png)
+
+*Likwidacja*
+
+![tmpd288757c-28f3-4a1a-9d58-ef98ae6d9df7](https://www.cfi.pl/vendohelp/content/imgs/T1/0bfc2a2e65265c6fde3e93cb6922e9f9-14998-0.png)
+
+### Plan
+
+Z poziomu zakładki plan użytkownik ma możliwość dodania planu amortyzacji, usunięcia planu amortyzacji, wykonania planu amortyzacji, przeliczenia planu amortyzacji, kasowania niewykonanego planu amortyzacji, generowania brakującego planu amortyzacji, uaktualnienia wartości poamortyzacyjnej planu amortyzacji.
+
+![tmp67f0f528-8ee7-4ca8-adab-949ca417e591](https://www.cfi.pl/vendohelp/content/imgs/J5/1f0c3ddf877fee349a7933852637afde-135782-0.png)
+
+### Wartości dowolne
+
+Zakładka wartości dowolnych umożliwia zawarcie na karcie środka trwałego dodatkowych informacji (działu, czy środek podlega dotacji, uwag własnych, itd.).
+
+![tmp0314bf78-cc07-49ba-80bc-51532ae153cd](https://www.cfi.pl/vendohelp/content/imgs/A8/e972694f59f3dfc0acd7878b7fb4be31-36851-0.png)
+
+### Pliki
+
+Kartoteka posiada możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp5acba43a-18f0-4597-9341-0cbf77ef2665](https://www.cfi.pl/vendohelp/content/imgs/D1/3e737f447c7cde4b445b96360222916e-32720-0.png)

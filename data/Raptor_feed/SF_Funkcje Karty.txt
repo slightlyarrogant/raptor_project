@@ -1,0 +1,13 @@
+# Sprawozdania finansowe
+
+W ramach funkcjonalności karty sprawozdania finansowego użytkownik ma możliwość korzystania z następujących funkcji:
+- anuluj,
+- usuń,
+- kopiuj.
+
+Funkje te zlokalizowane sa w lewym dolnym rogu lub pod prawym przyciskiem myszy.
+
+
+![tmp5683d8ce-17a6-4291-89b5-fd18e379d50c](https://www.cfi.pl/vendohelp/content/imgs/P9/4a2df8de6496ba7b2fe1598a36c3544e-39268-0.png)
+
+![tmp8fdc1e2e-eb39-42eb-a02b-378c818863aa](https://www.cfi.pl/vendohelp/content/imgs/W8/3c8f674edc568e316f463da97720796d-829-0.png)

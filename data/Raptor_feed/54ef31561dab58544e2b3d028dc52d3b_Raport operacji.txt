@@ -1,0 +1,57 @@
+Raport operacji
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/raport-operacji-plugin
+scraped_at: 2024-09-05T12:21:54.511847
+last_updated: 2024-09-05T12:21:54.511886
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Raport operacji
+meta_tags: ['operacji', 'jest', 'raportu', 'operacje', 'zlecenia', 'ilość', 'danej', 'użytkownik', 'zakończenia', 'pozycji']
+
+Content
+Cel:
+Ideą powstania raportu operacji technologicznych było stworzenie zestawienia w którym użytkownik ma możliwość wglądu we wszystkie operacje technologiczne wykonywane w ramach zlecenia produkcyjnego. Każdy rekord raportu prezentuje poszczególne elementy operacji technologicznej. Z Poziomu raportu użytkownik ma wgląd miedzy innymi w informacje takie jak: numeru zlecenia produkcyjnego , numeru karty kontroli wyrobu KKW, terminu rozpoczęci i zakończenia, stanowiska na którym wykonywana jest operacja technologiczna pracownika jak również nazwy operacji
+Lokalizacja uprawnienia:
+Ustawienia > Słowniki > Produkcja > Operacje technologiczne
+Lokalizacja Vendo
+Programy > Raporty
+Opis plugina:
+Raport Operacji technologicznych generowany jest z poziomu okna głównego programu zakładka główna Programy > Raporty. Prezentowane w nim rekordy wyświetlane są na podstawie wszystkich operacji zlokalizowanych w obrębie bazy danych które bezpośrednio związane sa ze zleceniami oraz przewodnikami produkcyjnymi
+
+Charakterystyczną cechą raportu jest to, iż został on podzielony na dwie części statyczną i dynamiczną. W części statycznej dane zaczytywane podczas generowania raportu będą wyświetlały się każdorazowo natomiast w cześć dynamicznej generowane są kolumny których ilość zależna jest od liczby typów operacji technologicznych zdefiniowanych w VENDO. Generowane są one na podstawie karty kontroli wyrobu KKW i prezentują podsumowanie ilości wykonanych i planowanych operacji z podziałem na ich typy. Tak więc każdy z rekordów jest oddzielną operacją karty kontroli wyrobu.
+Kolejnymi aspektami wpływającymi na elastyczność i funkcjonalność raportu są:
+
+Hiper linki - pozwalają użytkownikowi przejście w wybrane obszary systemu, tak wiec jeśli użytkownik klikanie przykładowo numer zlecenia zostanie on przeniesiony na odpowiednie zlecenie. Analogicznie jest w pozostałych hiper linkach zastosowanych w raporcie.
+Możliwości sortowania raportu po wybranej kolumnie - sortowanie odbywa się na zasadzie przeciągnięcia wybranej kolumny do nagłówka raportu prze co zostanie zmieniony sposób jego wyświetlania.
+Określenie zakresu daty Okres od… Okres do – pozwala na precyzyjne określenie zakresu czasowego dla którego będzie generowany raport.
+Zastosowanie wyszukiwarki wielofrazowej – użytkownik ma możliwość wyświetlenia wybranych fraz poprze skorzystanie z wyszukiwarki dostępnej w nagłówku raportu. Po wpisaniu wybranej frazy zostaną zwrócone rekordy w których znajduje się wyszukiwany tekst. Po wygenerowaniu raportu użytkownik ma wgląd w informacje takie jak:
+Zlecenie – Numer zlecenia produkcyjnego
+Numer KKW – Numer KKW które posiada zdefiniowane operacje technologiczne
+Klient – Kod Klienta zdefiniowany na zleceniu produkcyjnym
+Stanowisko – Stanowisko robocze na którym wykonywana jest operacja
+Nazwa produktu – Nazwa produktu wykonywanego w ramach zlecenia
+Termin – Terami zakończenia danej operacji
+Data zakończenia - realna data zakończenia operacji technologicznej
+Opóźnienie – ilość dni przekroczenia terminu realizacji. W przypadku gdy termin realizacji zostanie przekroczony w kolumnie prezentowana będzie ilość dni po terminie, jak również komórki takie będą wyświetlane w kolorze czerwonym
+Możliwa rejestracja - parametr mówiący iż ilość wykonanych na poprzedniku jest większa od "0".
+TPZ+T – planowany czas realizacji operacji uwzględniający czas przygotowawczo zakończeniowy oraz czas wykonania danej operacji
+T - Faktyczny czas wykonania danej operacji - suma zarejestrowanych wykonań
+Pracownik – osoba fizyczna odpowiedzialna za wykonanie danej operacji
+Nazwa operacji – nazwa operacji która została wykonana. Nazwa operacji pobierana jest z słowników systemowych
+Ilość do realizacji – planowana ilość wykonania operacji
+Ilość zrealizowana – faktycznie ilość wykonanych operacji Kolejna cześć raportu generowana jest dynamicznie i zależy od ilości operacji zdefiniowanych w słownikach systemowych. Ustawienia główne > Słowniki > Produkcja > Operacje technologiczne
+
+
+Kolumny odpowiedzialne za wyświetlenie operacji zostały zaprezentowane w formie numerycznej od 1 do n. z znacznikami P,W,N w kolumnach tych prezentowane są wszystkie operacje ramach danego KKW zgodnie z ciągiem technologicznym (w zależności od ilości na danym KKW mogą być wyświetlane wszystkie operacje technologiczne zdefiniowane w słownikach systemowych)
+
+Kolumna P – informacja o sumie planowanej ilości wykonanej operacji
+Kolumna W - informacja o sumie faktycznie wykonanych operacji.
+Kolumna Z – informacja o zrealizowanych operacjach
+
+Należy również pamiętać iż operacje wykonane prezentowane są w kolorze zielony
+Natomiast jeśli operacja technologiczna nie jest wykonana i opóźnienie liczone jest jako różnica pomiędzy terminem wykonania z pozycji zlecenia a datą dzisiejsza i jest ona większa od zera wówczas wartości w kolumnach termin, data zakończenia , opóźnienie podświetlone zostaną na czerwono. W przypadku KKW zbiorczego mam do czynienia z sytuacja gdzie do jednej pozycji przewodnika może odnosić się kilka pozycji zleceń. Jeśli do danej operacji technologicznej KKW zbiorczego przypisane są pozycje zleceń kolumna Nazwa produktu podświetlana jest na szaro a wartość w powyższej kolumnie informuje o licznie operacji powiązanych pozycji zleceń.
+Po rozwinięciu prezentowany jest uproszczony raport z informacjami o przychodach dla danej pozycji zlecenia
+
+Images
+
+

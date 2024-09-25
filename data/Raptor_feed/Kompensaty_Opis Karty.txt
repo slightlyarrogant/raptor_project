@@ -1,0 +1,20 @@
+# Kompensaty
+W systemie VENDO.ERP mamy możliwość tworzenia kompensat dla należności i zobowiązań danego kontrahenta bezpośrednio w panelu Płatności > zakładka Rozliczenia według kontrahentów. Tworzenie kompensat jest też dostępne w raporcie Salda na dzień, poprzez funkcję Kompensata zaznaczonych (w widoku wg dokumentów w kontekście danego klienta). Ze względu na fakt, że dla każdego kontrahenta mamy tylko jedną kartotekę w systemie, wszystkie dokumenty podpięte są pod tą samą kartotekę. Możemy zatem swobodnie kompensować (parować) odpowiednie należności (np. faktury sprzedaży) ze zobowiązaniami (faktury zakupu) w ramach danej kartoteki kontrahenta. Możemy kompensować dokumenty n do n (czyli wiele dokumentów należności z wieloma dokumentami zobowiązań), pod warunkiem, że są wystawione w tej samej walucie. Dla kompensaty dokonanej przez nasze przedsiębiorstwo (Nasza kompensata) po skompensowaniu dokumentów tworzony jest dokument, który możemy wydrukować i wysłać do klienta (panel Płatności > zakładka Kompensaty). Możliwe jest również wprowadzenie do systemu kompensaty otrzymanej od klienta (Kompensata od klienta).
+
+Na takich dokumentach możemy zmienić datę wystawienia lub numer (za pośrednictwem Funkcji specjalnych) oraz oczywiście zaksięgować dostępnym schematem do księgowania płatności (KASA/BANK). Księgowane są wyłącznie kompensaty niezerowe.
+
+![tmp4f72bd6e-6dd2-4332-8aef-da3d0a52cfb4](https://www.cfi.pl/vendohelp/content/imgs/C0/30219c96ced7204cd36fc85dcb9433a5-52159-0.png)
+
+*Kompensata Nasza PLN*
+
+Program VENDO.ERP umożliwi również przeprowadzanie kompensat w walutach innych niż waluta polska. Zasługują one na szczególną uwagę ze względu na fakt występowania różnic kursowych od takich transakcji. Różnice kursowe w tym przypadku wyliczane są kursem ujednoliconym branym z dokumentów wchodzących do danej kompensaty. Jest także możliwość wprowadzenia ręcznie własnego kursu, po którym będzie rozliczana kompensata (dla wersji VENDO.ERP 2022+).
+
+Użytkownik ma możliwość przeprowadzenia kompensaty indywidualnej – jeden dokument do jednego lub kompensaty zbiorczej. W drugim przypadku średni kurs dla kompensaty wyliczany jest oddzielnie dla należności i oddzielnie dla zobowiązań wchodzących do kompensaty. Do kompensaty i do naliczenia różnic kursowych brany jest pod uwagę mniejszy z nich.
+
+W związku z tym, że różnice kursowe powstają do dokumentu a nie do kompensaty, aby dokonać naliczeń różnic kursowych wszystkie dokumenty muszą być zaksięgowane (faktury, kompensaty). 
+
+![tmpa526d07e-e0bb-49a7-8794-c5d11db472c6](https://www.cfi.pl/vendohelp/content/imgs/G4/b9efc8bab7d7c338f849383b7850e24f-83865-0.png)
+
+*Kompensata walutowa*
+
+Jeżeli kompensowane dokumenty pochodzą z przełomu roku: część z miesiąca grudnia, część ze stycznia, to zaleca się oddzielne kompensowanie dokumentów ze starego roku i oddzielne z nowego. Nie przestrzeganie tej zasady może spowodować niedoszacowanie kompensat w ramach jednego roku obrotowego – sprawa dotyczy sytuacji kompensat z dużymi wartościami (bez względu na zastosowany kurs dla kompensaty – automatyczny czy ręczny).

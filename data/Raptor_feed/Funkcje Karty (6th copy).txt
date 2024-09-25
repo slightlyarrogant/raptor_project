@@ -1,0 +1,19 @@
+# Sprzedaż
+
+W ramach funkcjonalności karty sprzedaż użytkownik ma możliwość korzystania z następujących funkcji:
+- dokument źródłowy
+- funkcje
+
+![tmp34993ba8-4f4d-4da4-a5aa-0fa8d6901cde](https://www.cfi.pl/vendohelp/content/imgs/S6/b40e0531da2bb995181daaf7ce32c828-2617-0.png)
+
+- edytuj dokument
+- utwórz storno zapisu
+- usunięcie zapisu
+- pokaż deklarację KH
+- funkcje specjalne – zmień rok deklaracji
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpcfca0f9e-3697-488a-a108-2f759efc6061](https://www.cfi.pl/vendohelp/content/imgs/U6/21ef8bb6d1b4635026a0a1545578937a-85869-0.png)
+
+![tmp91181e09-1c2a-4a9c-ab13-9380faeaa906](https://www.cfi.pl/vendohelp/content/imgs/C2/84358c796449921a62825e204dc7fa6d-4354-0.png)

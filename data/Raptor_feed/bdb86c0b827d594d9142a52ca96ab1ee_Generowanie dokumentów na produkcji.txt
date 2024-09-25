@@ -1,0 +1,110 @@
+Generowanie dokumentów na produkcji
+Metadata
+
+url: http://192.168.33.19/master/docs/company/procedury-standaryzacyjne/produkcja/dokumenty-na-produkcji
+scraped_at: 2024-09-05T12:18:18.775021
+last_updated: 2024-09-05T12:18:18.775068
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Generowanie dokumentów na produkcji
+meta_tags: ['dokumentów', 'operacji', 'generowanie', 'generowania', 'kooperacji', 'przy', 'wyrobu', 'momencie', 'ustawień', 'ilości']
+
+Content
+Generowanie dokumentów na produkcji
+Informacje ogólne
+Poniższa dokumentacja ma na celu zebranie informacji dotyczących konfiguracji ustawień systemu niezbędnych użytkownikom do poprawnej pracy w trakcie generowania dokumentów na produkcji. Informacje zawarte w dokumencie opisują konfiguracje zarówno z poziomu ustawień głównych znajdujących się w parametrach pracy jak równie z ustawień dotyczących wybranych operacji zdefiniowanych w słownikach systemowych. Operacja – Wybór zdefiniowanych w systemie grup operacji technologicznych (Ustawienia > Główne > Słowniki > Produkcja: Operacje technologiczne MRP, dodawanie nowych operacji przez [INSERT]). Moduł operacji technologicznych podzielony został na kilka sekcji, które pozwalają na określenie jak dana operacja będzie wyglądała w procesie technologicznym. W sekcji domyślnej zawarte zostały ustawienia związane z podstawowymi parametrami związanymi z procesem wytworzenia asortymentu na danym stanowisku oraz późniejsza gospodarką magazynową
+Automaty przy wykonaniu operacji KKW)
+Podstawowa parametryzacja ustawień znajduje się w słownikach systemowych Słowniki > Operacje technologiczne MRP > Operacja > Ustawienia dodatkowe > Automaty przy wyk. operacji KKW) Pozwala ona na konfiguracje ustawień dotyczących generowanie dokumentów w momencie wykonania danej operacji (ręcznie lub przez dopełnienie wykonań przy zamykaniu KKW) KKW z podziałem na rodzaj wyrobu (grupa III towarów)
+
+Generowanie dokumentów w zależności od rodzaju rejestracji operacji:
+Rejestracja wykonań w systemie Vendo odbywać się może na zarówno na zasadzie Start-Stop tj. rozpoczęcie rejestracji czasu pracy odbywa się w chwili gdy użytkownik zarejestruje start pracy natomiast kończy w momencie zakończenia wykonywanej operacji. Na tej podstawie rozliczany jest czas pracy oraz ilość wykonanych operacji. Innym sposobem odnotowania zarejestrowanej pracy jest rejestracja powykonawcza tj. odnotowanie wykonanych prac w momencie ich zakończenia. I tak dla powyższych sytuacji dokumenty realizowane sa w następujący sposób
+
+Powykonawczo: Dokumenty są generowane tylko w momencie dodawania wykonania
+Start-Stop: Dokumenty generowane są przy pierwszym zakończeniu operacji
+
+
+W trakcie wykonywania operacji użytkownik ma możliwość kontroli wykonywanych operacji. Ustawieni to spowoduje, iż dokumenty generować się będą w następujący sposób: Generowania dokumentów w przypadku kontroli jakości:
+
+Rozchody: Generowane niezależnie od kontroli
+Przychody: Generowane niezależnie od sposobu rejestracji wykonania w momencie dokonania kontroli
+
+Generowania dokumentów dla KKW Dyspozycji (KKW bez wyrobu):
+
+Rozchody: Generowane jak w KKW z wyrobem
+Przychody: Generowane jak w KKW z wyrobem (dla przychodów nie związanych z numerami seryjnymi)
+
+Włączenie automatycznego generowania dokumentów:
+
+przychodu (bez wyrobu) (zakładka przychody na nagłówku KKW lub na operacji KKW) wg dyspozycji (już utworzonych) /ilości wykonanej (skontrolowanej) wykonania
+rozchodu (zakładka rozchody na nagłówku KKW lub na operacji KKW) wg ilości zarejestrowanej wykonania
+przyjęcia wyrobu (braku naprawialnego/nienaprawialnego) - zadziała, jeśli operacja jest operacja przyjęcia wyrobu
+
+
+
+Dodatkowo:
+
+'Przyjmij wyrób, jeśli wszystko rozchodowano': przyjęcie wyrobu można uzależnić od ilości rozchodowanych rozchodów operacji KKW (wszystkie rozchody KKW, które mają plan>0 posiadają przynajmniej jeden dokument rozchodowy na ilość>0)
+'Magazyny': generowanie dokumentów można uzależnić od magazynu/magazynów - po wskazaniu do generowania będą brane tylko rozchody/przychody zdefiniowane na dane magazyny
+'Pomiń rozchodowane': celem uniknięcia wygenerowania zbyt dużych ilości istnieje możliwość zablokowania generowania przychodów/rozchodów, które posiadają już dokumenty
+'Pomiń pozycje bez stanów magazynowych': tylko dla rozchodów - zapobiega to wystąpieniu błędów generowania w przypadku zbyt małych stanów na magazynie (generowanie nie jest przerywane)
+
+
+Automaty przy wykonaniu kooperacji KKW
+Ustawienia generowania dokumentów w momencie wykonania danej kooperacji konfigurowane są z poziomu ustawień słownikowych > Operacje technologiczne MRP > operacja > Ustawienia dodatkowe > Automaty przy wyk. kooperacji KKW. Konfiguracji dokonać nożna ręcznie lub przez formularz kooperacji wykonań przy zamykaniu KKW - KKW z podziałem na rodzaj wyrobu (grupa III towarów)
+Generowania dokumentów w przypadku kontroli jakości:
+
+Wydania: Generowane niezależnie od kontroli
+Przyjęcia: Generowane w momencie dokonania kontroli
+
+Włączenie automatycznego generowania dokumentów:
+
+wydania (zakładka rozchody na nagłówku KKW lub na kooperacji KKW) wg ilości wydanej kooperacji
+przyjęcia (bez wyrobu) (zakładka przychody na nagłówku KKW lub na kooperacji KKW) ilości przyjętej (skontrolowanej) wykonania
+przyjęcia wyrobu (braku naprawialnego/nienaprawialnego) - zadziała, jeśli kooperacja jest kooperacja przyjęcia wyrobu
+
+Dodatkowo:
+
+'Magazyny': generowanie dokumentów można uzależnić od magazynu/magazynów - po wskazaniu do generowania będą brane tylko rozchody/przychody zdefiniowane na dane magazyny
+
+
+Automaty przy wykonaniu operacji i kooperacji
+Ustawienia generowania dokumentów w momencie wykonania operacji i kooperacji konfigurowane są z poziomu ustawień słownikowych > Operacje technologiczne MRP > Operacja > Ustawienia dodatkowe > Automaty przy wykonaniu operacji i kooperacji.
+W tym miejscu ustawiane jet zachowanie dokumentów wygenerowanych z ustawień z powyższych punktów:
+
+'Po wygenerowaniu zamkniecie dokumentów rozchodowych': zamyka dokumenty rozchodu/wydania
+'Po wygenerowaniu zamkniecie dokumentów przychodowych': zamyka dokumenty przychodu/przyjęcia
+'Gospodarka magazynowa kooperacji typu MM': wydania realizowane są przez RW na magazyn kooperanta, przyjęcia zac na prze MM- (z magazynu kooperanta) i MM+ (na magazyn docelowy)
+'Wydania kooperacji': rodzaj dokumentu jaki jest generowany w momencie wydania do kooperanta
+'Przyjęcia kooperacji': rodzaj dokumentu jaki jest generowany w momencie przyjęcia od kooperanta
+
+
+Automaty przy zamykaniu KKW
+Ustawienia automatów przy zamykaniu KKW generowania konfigurowane są z poziomu ustawień głównych programu Parametry pracy > Produkcja MRP > KKW > Automaty przy zamykaniu KKW W tym miejscu ustawiane jest generowanie dokumentów w momencie zamykania KKW z wyrobem z podziałem na rodzaj wyrobu (grupa III towarów)
+
+'Gen. przychodu wg wyk': Generowanie przychodów/przyjęć kooperacji wg ilości wykonanej(skontrolowanej)/przyjętej, pozostałej do przyjęcia
+'Gen. rozchodu wg wyk': Generowanie rozchodów/wydań kooperacji wg ilości wykonanej(skontrolowanej)/wydanej, pozostałej do rozchodowania/wydania
+'Przyjmij wyrób na magazyn': Generowanie dokumentu PW/PK dla wyrobu
+'Magazyn': generowanie dokumentów można uzależnić od magazynu/magazynów - po wskazaniu do generowania będą brane tylko rozchody/przychody zdefiniowane na dane magazyny
+
+
+Automaty przy zamykaniu KKW Dyspozycji (KKW bez wyrobu)
+Ustawienia automatów przy zamykaniu KKW Dyspozycji (KKW bez wyrobu) konfigurowane są z poziomu ustawień głównych programu Parametry pracy > Produkcja MRP > KKW > Zbiorcze KKW W tym miejscu ustawiane jest generowanie dokumentów w momencie zamykania KKW bez wyrobu
+
+'Gen. przychodu wg wyk': Generowanie przychodów/przyjęć kooperacji (dla przychodów nie związanych z numerami seryjnymi) wg ilości wykonanej(skontrolowanej)/przyjętej, pozostałej do przyjęcia
+'Gen. rozchodu wg wyk': Generowanie rozchodów/wydań kooperacji wg ilości wykonanej(skontrolowanej)/wydanej, pozostałej do rozchodowania/wydania
+'Magazyn': generowanie dokumentów można uzależnić od magazynu/magazynów - po wskazaniu do generowania będą brane tylko rozchody/przychody zdefiniowane na dane magazyny
+
+
+Zamykanie KKW (z wyrobem lub bez) (KKW->Zamknij/Zamknij zaznaczone KKW)
+
+'W przypadku braku stanu dla rozchodu': określenie zachowania programu w przypadku próby generowania rozchodu z niewystarczającym stanem
+'Zamknij wszystkie wygenerowane dokumenty': ustawienie dot. zamykania dokumentów utworzonych w trakcie zamykania KKW (również tych powstałych na skutek dopełnienia wykonań)
+
+
+Images
+
+
+
+
+
+
+

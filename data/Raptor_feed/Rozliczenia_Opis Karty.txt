@@ -1,0 +1,5 @@
+## Rozliczenia
+
+Na zakładce Rozliczenia dokonujemy rozliczenia kont rozrachunkowych. System Vendo posiada unikalną w stosunku do innych programów cechę, że faktury sprzedaży i zakupu, które był rozliczone przed zaksięgowaniem, trafiają na konto rozrachunkowe jako rozliczone. Odejmuje to dużą część pracy działowi księgowości, który nie musi powtórnie rozliczać konta kontrahenta w programie księgowym. Jednak faktury, które zostały rozliczone po zaksięgowaniu być rozliczone zarówno w programie magazynowym jak i w księgowości. W księdze handlowej rozliczeń tych dokonujemy na zakładce Rozliczenia. Wchodząc na rozliczenia wybieramy konto, które chcemy rozliczyć i odświeżamy listę. Pojawiają się nam nierozliczone zapisy na tym koncie. Rozliczamy zawsze po dwa zapisy. Aby tego dokonać należy kliknąć przycisk Funkcje a następnie wybrać właściwą opcje.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/I2/02ac80d94811bb919126a3080400a734-95392-0.png)

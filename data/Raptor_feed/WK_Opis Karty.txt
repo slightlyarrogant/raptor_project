@@ -1,0 +1,34 @@
+# Wzorce księgowań
+
+Wzorce księgowań służą do automatyzacji pracy w Księdze Handlowej. Ich prawidłowe używanie może w ogromnym stopniu przyczynić się do zmniejszenia ilości pracy w księgowości. Wzorce księgowań są fundamentem integracji pomiędzy księgą handlową, a modułem magazynowo – finansowym. Wzorce służą do automatycznego przeksięgowania operacji gospodarczych rejestrowanych w module magazynowo - rozliczeniowym do księgi handlowej, tworząc w niej zapisy. Można powiedzieć, że wzorce to szablon lub dekret księgowania operacji gospodarczej. Wzorzec wskazuje, jaka wartość ma zostać zaksięgowana, na jakie konto i na jaką jego stronę. Dodatkowo wzorzec posiada filtry według, których może rozpoznawać i rozdzielać operacje, np. księgując dokumenty sprzedaży możemy wskazać inne konto dla przychodów ze sprzedaży wyrobów z produkcji, a inne dla przychodów ze sprzedaży towarów handlowych. Jeśli na jednej fakturze będą wyroby i towary, wzorzec odpowiednio je rozdzieli na wskazane konta. Oczywiście nic nie stoi na przeszkodzie, żeby "ręcznie" wprowadzać zapisy księgowe jednak ze względu na pracochłonności nie jest to zalecana metoda. Ustalając wzorce księgowania należy wpierw przeanalizować wszystkie operacje księgowe, jakie zachodzą w firmie. 
+
+Przykładowo, planując wzorzec dla sprzedaży należy odpowiedzieć sobie na kilka pytań:
+
+- Czy wystawiamy faktury zaliczkowe i ewentualnie faktury całkowicie realizujące zamówienie?
+- Czy faktury mają księgować wartość sprzedanych towarów czy dla tej operacji będziemy księgować dokumenty WZ?
+- Czy faktury płatne gotówką, tak jak paragony będą księgowane na jednym koncie, którego saldo na koniec dnia po zaksięgowaniu faktur i płatności powinno być 0, itd. Wszystkie te operacje księgowe musimy zawrzeć we wzorcu.
+
+### Tworzenie nagłówka i pozycji wzorca
+
+Na zakładce wzorce księgowe w KH naciskamy **INSERT** lub przycisk **"+"**, aby dodać nowy wzorzec. Pojawia się nam następujące okienko:
+
+![tmp77867f74-ab5f-40f7-a105-6cd13d7cddc6](https://www.cfi.pl/vendohelp/content/imgs/E4/69ae6d22be369ecdabc721946e2d25de-9363-0.png)
+
+Wpisujemy nazwę wzorca, np. 'Sprzedaż' i wybieramy typ związany z dokumentem i zatwierdzamy. Nagłówek wzorca został dodany do listy. Wchodzimy na ten nagłówek klawiszem **ENTER** pokazuje nam się puste okienko (pozycje wzorca księgowego).
+
+![tmp6583b97a-dd4c-43e1-bc73-d0bb8e622372](https://www.cfi.pl/vendohelp/content/imgs/E8/5891569fedde03d6c131671bd765b97c-103041-0.png)
+
+W powyższym przykładzie zdefiniowaliśmy element wzorca księgowania sprzedaży, który będzie księgował na konto 710 (strona MA) wszelkie koszty/usługi kwotę netto z dokumentu sprzedaży, a w opis powstałego zapisu księgowego znajdzie się numer własny dokumentu księgowanego. Powyższy przykład jest stosunkowo prosty, żeby bardziej uszczegółowić pozycję wzorca możemy skorzystać z przycisku `Filtr rozszerzony` pozwala on dodawać dodatkowe warunki, które muszą być spełnione by dany element wzorca zaksięgował dokumenty/pozycje dokumentów.
+
+>Uwaga! Każda pozycja wzorca jest zespołem warunków - przepisem jak i gdzie zapisywać wartości, jeśli warunki te zostały spełnione. Dany dokument/pozycje z dokumentu zostaną zaksięgowane według wszystkich pozycji wzorca, których warunki spełniają. Księgowanie błędnymi wzorcami może na przykład skutkować podwójnymi zapisami księgowymi dla pojedynczej wartości. 
+>
+* Nazwa - wpisujemy nazwę pozycji wzorca. Na przykład "sprzedaż towarów". Nazwa ta powinna określać dane księgowanie, np. VAT naliczony. Służy ona wyłącznie informacyjnie dla nas przy odczytywaniu wzorca. 
+* Konta Wn i Ma - wpisujemy konta, na jakie ma być zaksięgowana pozycja. Jeśli dla tej pozycji konto jest stałe, np. dla VAT’u naliczonego 23% to 221-22, to możemy je wpisać "z ręki" lub posłużyć się planem kont klikając na przycisk `Plan kont`. Dla kont zależnych od klienta, towaru/usługi/kosztu lub magazynu, posługujemy się makrami. 
+* Plan kont - przycisk otwiera nasz plan kont. Klawiszem **ENTER** możemy wybrać konto. 
+* Przycisk Makra - przycisk Makra stosujemy, jeśli konto to, na które zostanie zaksięgowany dokument zależy od takich parametrów, jak: klient, magazyn, zlecenie. 
+* Towar - jeśli chcemy, aby konkretna kartoteka towaru, usług lub kosztu była księgowana na wskazane konto, to możemy wybrać tutaj tą kartotekę. Na przykład koszt "Telefon" może być księgowany na konto 402-06.
+* Usługi obce – telekomunikacja. Jednak w takich ogólnych przypadkach jak w.w. korzystniejsze jest używanie makr, gdyż nie powoduje to rozpisywania wzorca na wszystkie koszty. 
+* VAT - Filtr VAT – używamy, jeśli chcemy, aby tylko ta część kwoty dokumentu, która dotyczy wskazanej stawki była księgowana na określone przez nas konto. Dzięki temu możemy na przykład tworzyć osobne konta rozliczeniowe dla VAT na 5, 8 i 23%. 
+* Rodzaj: towar, usługi, wszystkie - jeśli chcemy na osobne konta księgować sprzedaż towarów, a na oddzielne sprzedaż usług, to powinniśmy używać tego filtru. Dzięki niemu zaksięgowaniu na konto ulega tylko ta część, która jest związana z wybraną przez nas opcją: towar lub usługa. Jeśli nie chcemy używać tego filtru wybieramy wszystkie. 
+* Filtry rozszerzone - jeśli chcemy księgować dokumenty na różne konta w zależności od serii dokumentów, kategorii kosztów, towaru, grupą I lub II towarów, statusem "wyrób", formą płatności, rodzajem dokumentów, walutą, magazynem, kontrahentem (zarówno nabywcą, jak i odbiorcą), ośrodkiem powstawania kosztu, Ex/Importowością, magazynem źródłowym MM. Pomiędzy filtrami z różnych grup obowiązuje operator logiczny "i" a pomiędzy filtrami z tej samej grupy operator "lub".
+

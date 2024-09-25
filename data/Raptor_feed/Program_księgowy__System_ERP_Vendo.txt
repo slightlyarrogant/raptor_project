@@ -1,0 +1,120 @@
+# Program księgowy | System ERP Vendo
+
+# Program księgowy
+
+## Finanse i Księgowość
+
+Vendo Finanse i Księgowość – Rozwijaj Biznes z Pełną Kontrolą Finansową
+
+Vendo,  jako  system ERP oferuje rozwiązanie, które integruje procesy księgowe, finanse i rozrachunki oraz zarządzanie środkami trwałymi, zapewniając kontrolę i optymalizację zasobów finansowych przedsiębiorstwa.
+
+Moduł Finanse i Księgowość zostało zaprojektowane z myślą o zapewnieniu efektywności oraz zgodności z aktualnymi przepisami podatkowymi. System umożliwia automatyzację wielu procesów księgowych, takich jak prowadzenie ksiąg rachunkowych, rozrachunki, rozliczenia podatków, czy generowanie raportów finansowych, plików JPK, eDeklaracji oraz eSprawozdań. Daje pełny obraz finansów firmy w czasie rzeczywistym. Umożliwia monitorowanie przepływów pieniężnych, zarządzanie budżetami i analizę rentowności. Integracja z innymi modułami systemu, takimi jak sprzedaż czy produkcja, zapewnia kompleksowe spojrzenie na finanse firmy i pomaga w podejmowaniu trafnych decyzji biznesowych.
+
+Zarządzanie Środkami Trwałymi i Wyposażeniem
+
+Środki trwałe i wyposażenie są istotnym składnikiem majątku każdej firmy. VENDO.ERP umożliwia szczegółowe zarządzanie tymi zasobami, od ich zakupu, przez amortyzację, aż po likwidację. System pozwala na precyzyjne śledzenie historii i wartości środków trwałych, co jest niezbędne do prawidłowego planowania inwestycji i zarządzania budżetem.
+
+## Jakie funkcje realizuje Vendo w księgowości
+
+### Należności i zobowiązania
+
+- lista należności i zobowiązań,
+- wspólne rozrachunki w module handlowym i księgowym,
+
+### Rozliczenie rozrachunków
+
+- rozliczanie płatności faktury sprzedaży i zakupu oraz pozostałe kosztów,
+- rozliczanie zaliczek,
+- kompensaty,
+
+### Limity kredytowe i terminy płatności
+
+- limity kredytowe dla kontrahentów,
+- maksymalna kwota przeterminowanych należności,
+- terminy płatności,
+
+### Windykacja
+
+- wezwania do zapłaty,
+- noty odsetkowe,
+- automatyzacja wysyłki wezwań do kontrahentów,
+- kontakty windykacyjne,
+- rozrachunki sporne,
+
+### Rejestry kasowe i bankowe
+
+- rejestry kasowe,
+- rejestry bankowe,
+- kasy i konta bankowe walutowe,
+
+### Integracja z bankowością elektroniczną
+
+- integracja z systemami bankowości elektronicznej,
+- integracja oparta o pliki oraz API,
+
+### Waluty i kursy walut
+
+- pobieranie kursu ze strony NBP,
+- prowadzenie kont i kas walutowych,
+- automatyczne rozliczanie różnic kursowych,
+- magazyn walut,
+
+### Analizy płatności
+
+- narzędzia do prognozowania przepływów finansowych,
+- wiekowanie należności i zobowiązań,
+
+### Plan kont i dzienniki księgowań
+
+- wielopoziomowa struktura kont – konta syntetyczne i analityczne,
+- konta walutowe, rozrachunkowe, pozabilansowe,
+- konta powiązane z kartami kontrahentów, magazynów, banków,
+- księga główna podzielona na dzienniki,
+
+### Dekrety księgowe
+
+- dekrety księgowe w złotych,
+- dekrety walutowe,
+- automatyzacja tworzenia dekretów w oparciu o wzorce (szablony) księgowań,
+
+### Budżety kont
+
+- budżety kont księgowych,
+- raporty rozliczenia budżetu,
+
+### Automatyzacja księgowania
+
+- wzorce księgowań,
+- automatyzacja księgowania – księgowanie nocne,
+- wzorce księgowań okresowych,
+
+### Elektroniczny obieg dokumentów księgowych
+
+- procedura obiegu dokumentów,
+
+### Zintegrowane rozrachunki
+
+- wspólne rozrachunki z kontrahentami dla modułu handlowego i księgowego,
+
+### E-deklaracje, JPK, VAT
+
+- rejestry VAT,
+- eDeklaracje VAT-7, VAT-UE, CIT-8,
+- pliki JPK,
+- eSprawozdania,
+
+### Raporty księgowe
+
+- bilans,
+- rachunek wyników,
+- zestawienie obrotów i sald,
+- kreator raportów użytkownika,
+
+### Środki trwałe
+
+- karta środka trwałego,
+- plany amortyzacji,
+- amortyzacja,
+- zmniejszenie i zwiększenie wartości środków trwałych,
+- lokalizacja i inwentaryzacja,
+

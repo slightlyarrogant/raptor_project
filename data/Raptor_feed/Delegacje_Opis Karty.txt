@@ -1,0 +1,116 @@
+
+# Delegacje 
+
+
+## Informacje ogólne
+
+**Delegacja** – Podróż służbowa pracownika, realizowana na polecenie pracodawcy poza miejscowością, w której znajduje się siedziba firmy. Jeśli w trakcie podróży podwładny poniósł koszty (np., dojazdu, noclegu, wyżywienia, paliwa), to należy mu się rekompensata ( zwrot kosztów). Pojęcie delegacja i podróż służbowa stosuje się wymiennie. W systemie Vendo jest to część modułu CRM, umożliwiający zaplanowanie wyjazdu służbowego oraz ułatwiający jego rozliczenie, poprzez wprowadzenie faktur kosztowych, czasu delegacji, rozliczenia zaliczek oraz zasobów np. pojazdu. *Delegacje* są rodzajem zdarzenia z możliwością podpięcia specyficznych dokumentów: faktur kosztowych KO, Faktur zakupowych FZ, wpłat KP i wypłat KW kasowych .
+
+
+## Zasadza działania
+## Utworzenie delegacji w Vendo
+
+*Delegacje* znajdziemy w module CRM. Pojawi się lista gdzie widoczne będą wszystkie delegacje w zależności od ustawionego filtrowania po Lewej stronie.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M8/6f0b64f2f2889b87555fca0eff476469-60770-0.png)
+
+ Chcąc dodać nową delegację wciskamy klawisz `[Insert]` na klawiaturze lub wybieramy Przycisk Dodaj `[+]` w górnym Menu. Pojawi się okno gdzie wybieramy Rodzaj Delegacji : Kraj, Eu, Świat oraz możemy ustawić serię dokumentu. Numer delegacji uzupełnia się automatycznie.
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M2/92b8d908db3946c2a0936562936c4d4f-16332-0.png)
+ 
+ 
+
+## Karta delegacji - nagłówek
+
+
+Po wciśnięciu przycisku `[OK]` pojawi się nowe okno z głównym konspektem Delegacji. W danych podstawowych mamy pola określające cel, do kogo i jak.
+
+I tak pola oznaczają:
+
+
+-	*Numer* – nadawany automatycznie zgodnie z konfiguracją na poprzednim oknie
+-   *Cel wyjazdu* – pole tekstowe z możliwością wprowadzenia krótkiej informacji dotyczącej wyjazdu służbowego.
+-	*Wyjazd od: do:* - zakres dat i godzin który dotyczy delegacja
+-	*Delegat* – pracownik firmy którego dotyczy wyjazd służbowy
+-	*Kontrahent* – Klient którego wybieramy z listy klientów, Cel wyjazdu.
+-	*Dokąd* – miejscowość pobierana z danych klienta, możliwość wprowadzenia dodatkowej informacji
+-	*Rodzaj deleg:*  – rodzaj delegacji możliwy do zdefiniowania w słownikach 
+-	*Status* – Status delegacji, gdzie możliwe jest ustawienie poszczególnych statusów Delegacji. Statusy mogą być ustawiane ręcznie poprzez `Funkcje` > `Statusy` > `Statusy Delegacji`. Istnieje możliwość ustawienia skryptów na statusach Delegacji które będą zmieniały Status w zależności od akcji jaka na delegacji się wykonała. Wcześniej Statusy muszą zostać zdefiniowane w Słownikach.
+-	*Środek Lokomocji* – środek transportu jakim delegat będzie uczestniczył w delegacji. Zdefiniowane są trzy : służbowy, prywatny, inny. W zależności od wybranej opcji mamy możliwość wybrania odpowiednio: zasobu firmy zdefiniowanego w Vendo lub pole tekstowe w którym możem wprowadzić dowolny środek transportu.
+-	*Zlecający* – Pracownik zdefiniowany w Vendo który zleca wyjazd służbowy.
+-	*Nr obcy* – pole tekstowe na dowolny tekst, zwyczajowo numer posługujący się wewnątrz firmy
+-	*Stan licznika pocz. Końcowy* – Wprowadzamy stan licznika pojazdu na początku i na końcu delegacji jeśli taka istniej konieczność. 
+-	*Uwagi* – Duże pole tekstowe umożliwiające wprowadzenie charakteru delegacji wraz z opisem. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K6/ee02132e35e98e165972f74a8f650cf9-97235-0.png)
+ 
+W dolnym obszarze okna znajdują się pola służące podsumowaniu rozliczenia delegacji. Wyliczają się one automatycznie w zależności od podpiętych dokumentów kasowych ( zaliczki na poczet delegacji) jak i faktur kosztowych. Ma to na celu ogólny podgląd na koszty Delegacji. 
+
+## Karta delegacji - Rozliczania
+Kolejną zakładką są *Rozliczenia*  gdzie wprowadzamy Dokumenty rozliczeniowe delegację. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T1/1bc4ab7398d1634d8c99d61d77101fc1-57842-0.png)
+
+Wciskając przycisk Dodaj pojawi się nowe okno z możliwością wyboru kartoteki typu Dieta,  przejazd ,nocleg. Typy kartotek można definiować w Słownikach. 
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y6/80169ab39bc4b53c00fff20346d0b3ee-14695-0.png)
+ 
+Wprowadzając te dane można skrócić czas utworzenia Dokumentów kosztowych KO.  Dokument Rozliczenia w zależności konfiguracji typu kartoteki wymaga uzupełnienia danych szczegółowych kosztu, natomiast część danych np. cena, ilość może być z góry ustalona przy wcześniejszym konfigurowaniu typu kartoteki
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D1/419f29e65071bdeeb5e80e797cedab0b-54459-0.png)
+
+•	Kontrahent – wybierany z pośród Klientów Vendo.
+•	Numer Obcy – numer dokumentu zakupu usługi lub towaru wg którego jest kosztem Delegacji
+•	Okres od do – Zakres dat występowania danego kosztu – np. noclegu
+•	Kartoteka – zdefiniowana w typach kartotek Delegacji zdefiniowanych w Słownikach
+•	Typ – typ kosztu: dieta, przejazd, nocleg
+•	Kurs – wg którego liczony jest koszt, ułatwia rozliczanie delegacji zagranicznych 
+•	Cena – cena i waluta kosztu
+•	Ilość – ilość jednostek danego kosztu, np. dni delegacji jeśli dotyczy to rozliczenia diety
+•	Kwota – wartość kosztu w Walucie
+•	Kwota (PLN) – wartość kosztu w PLN liczona po podanym kursie
+•	Opis – pole opisowe kosztu, można wprowadzić dowolnych tekst.
+
+
+## Karta delegacji - Wartości dowolne i pliki
+Zakładka *Wartości dowolne i pliki* umożliwia dołączenie plików i prezentowanie wartości dowolnych. Pliki mogą być dowolne: zdjęcia, skany dokumentów, dowolne pliki tekstowe lub office. Wartości Dowolne są definiowane pola w Słownikach, mogą być dowolnego typu w zależności od konfiguracji tych pól. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y8/01cbc3d75fdd53a09f95539f3667779b-51031-0.png)
+
+## Karta delegacji - Dokumenty
+
+Zakładka *Dokumenty* pokazuje skojarzone dokumenty z Delegacją. Z delegacją można skojarzyć dowolny dokument, nie mają one wpływu na rozliczenie delegacji.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D7/26fb7cd1d60c6ead22b8b71db47757f9-47849-0.png)
+ 
+Dokumenty można dodać jako nowe lub wybrać z listy już istniejące. Wystarczy wcisnąć przycisk Funkcje i wybrać odpowiednią opcję: dodanie nowego dokumentu do delegacji (wybieramy udostępnione dokumenty dla filtrowane po zakresie dat, magazynu lub ograniczyć listę uwzględniając klienta z Delegacji.
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A6/0b229cea0011506c2304dab6be4d4351-23029-0.png)
+
+## Karta delegacji - Zdarzenia
+
+Zakładka *Zdarzenia* pokazuje powiązane zdarzenia z kalendarza. Możliwe jest powiązanie lub utworzenie dowolnego typu zdarzenia.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A8/7dc3ae97312bece77d970b211142dc22-33143-0.png)
+
+Klikając w przycisk Funkcje pojawi nam się lista możliwych operacji związanych ze Zdarzeniami. Możemy dodać  powiązanie do istniejącego Zdarzenia wyszukując po zakresie dat i rodzaju zdarzenia. Możliwe jest bezpośrednio z tego miejsca utworzenie nowego dowolne rodzaju zdarzenia. Można z tego poziomu wykonać kilka funkcjonalności związanych ze zdarzeniami : Przesunięcie realizacji, Oznaczenie jako wykonane, Zmianę właściciela, zmiana wartości dowolnych – można to wykonać z poziomu Funkcje -> Operacji blokowych.
+  
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/L1/f1ec67fd5def9b6bfd29eb4b80902961-189192-0.png) 
+
+## Karta delegacji - Raport Finansowy
+Kolejną zakładką jest *Raport Finansowy*. Z tego poziomu zajmujemy się rozliczeniem Delegacji od strony Finansowej. Zakładka ta umożliwia nam wystawienie dokumentów kasowych : wypłat zaliczek KW i przyjęcie zwrotu zaliczki KP lub reszty pomniejszonej o koszty.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/T7/b020475d10a5bdd0e1eed52999d3a4be-58585-0.png)
+
+W Funkcjach mamy możliwość Wydrukowania dowodów kasowych – można pojedynczo lub zaznaczając poszczególne Dowody kasowe. Dodać wpłatę lub wypłatę, uwtorzyć przelew lub zaksięgować dowody kasowe. Dodatkowo na każdym Dowodzie kasowym możliwe są operację księgowe jako wymagane są do rozliczeń księgowych.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E6/6870191c6b2112b18774523370fcb7a5-110069-0.png)
+
+## Karta delegacji - Zasoby
+
+Kolejną a zarazem ostatnią zakładką są *Zasoby*. Jeśli będziemy korzystać z zasobów – majątku firmy – na czas delegacji możemy przypisać te zasoby. Zasobem takim jest samochód służbowy – który wcześniej zdefiniowany jest w Środkach Trwałych firmy jednak nie musi być. Innym zasobem może być projektor, laptop służbowy, materiały prezentacyjne, próbki itp. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/X9/5bb643c7e2efa4476787dc9b2f50585c-34005-0.png)
+
+
+

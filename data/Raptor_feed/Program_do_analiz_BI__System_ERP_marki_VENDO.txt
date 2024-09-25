@@ -1,0 +1,34 @@
+# Program do analiz BI | System ERP marki VENDO
+
+# Program do analiz BI
+
+## Analiza i Rapotowanie
+
+Vendo BI to rozwiązanie umożliwiające przekształcenie danych dotyczących różnych obszarów działania przedsiębiorstwa i gromadzonych w systemie, i zaprezentowanie ich w postaci czytelnych i łatwych do analizy raportów, stanowiących źródło wiedzy będącej podstawą podejmowanych decyzji.
+
+## Jakie programy realizuje Vendo w Analityce i Raportowaniu
+
+### Kreator raportów
+
+- kreator raportów:definiowanie obszaru danych,określanie filtrów danych,tworzenie wykresów i tabel przestawnych,
+- definiowanie obszaru danych,
+- określanie filtrów danych,
+- tworzenie wykresów i tabel przestawnych,
+
+- definiowanie obszaru danych,
+- określanie filtrów danych,
+- tworzenie wykresów i tabel przestawnych,
+
+### Prezentacja danych
+
+- 30 rodzajów wykresów,
+- tabele przestawne,
+- lista – dostosowanie kolumn, podsumowanie, grupowanie wg kolumny,
+- filtrowanie danych,
+
+### Dystrybucja raportów
+
+- automatyczna dystrybucja raportów mailem,
+- eksport do Excela i pdf,
+- wydruk,
+

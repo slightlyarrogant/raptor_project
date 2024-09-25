@@ -1,0 +1,14 @@
+# Zobowiązania
+
+W ramach funkcjonalności karty zobowiązania użytkownik ma możliwość korzystania z następujących funkcji:
+- dodaj płatność – generowanie rozchodu bankowego
+- rozliczenie z dokumentem – otwarcie listy nierozliczonych dokumentów z kontrahentem, z której poziomu można rozliczyć wskazane dokumenty
+- usuń rozliczenie – usuwanie istniejącego już rozliczenia
+
+
+Do tego celu należy posłużyć się funkcjami które są zlokalizowane w prawym – dolnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpb3d44189-95a8-4ddc-aa30-b760db7f3ad9](https://www.cfi.pl/vendohelp/content/imgs/U8/deb2d1f6e635885be62af4f6ffdc7066-24106-0.png)
+
+
+![tmp8e276113-3010-4827-87f1-ac176bb6a60b](https://www.cfi.pl/vendohelp/content/imgs/P9/6a8b25e1352b867a26bc271da2792ee0-2535-0.png)

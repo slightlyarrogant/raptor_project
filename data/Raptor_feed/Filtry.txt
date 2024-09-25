@@ -1,0 +1,45 @@
+## 
+Generator zamówień posiada szereg rozbudowanych fuiltrów pozwalających na wyswietlenie listy zapotrzebowania na towary zgodnie z potrzebami uzytkownika.  
+Po wybraniu otwarciu okna generatora zamówień pojawi się okno przedstawiające rozbudowany konfigurator wraz z filtrami dotyczący kartotek towarowych oraz puste okno z danymi. Jest to podstawowe okno służące do generowania zamówień. W pierwszym kroku należy odpowiednio ustawić konfigurator, aby zaprezentował na wymagane kartoteki towarowe dla których chcemy utworzyć zamówienia i wstępną konfigurację zamówienia. 
+ 
+Aby móc poprawnie wyszukać wymagane kartoteki należy odpowiednio zdefiniować konfigurator po lewej stronie okna. Konfiguracje oraz filtry te pogrupowane są po parametrach zdefiniowanych na kartotekach towarowych. 
+-	**Dostawca** – grupa ta odpowiedzialna jest za kryteria wyboru dostawcy dla generowanych zamówień 
+    -	*Wybór* – możliwość wybrania konkretnego dostawcę przypisanego do kartotek towarowych (zostaną wyszukane te kartoteki, które maja przypisanego dostawcę) 
+    -	*Wg (I)* - Karty - domyślny dostawca dla karty kowarowej lub alternatywny
+    -	*Wg (II)* – Alternatywny – typ dostawcy alternatywnego
+-	**Kartoteka**
+    -	*Grupa I*
+    -	*Grupa II*
+    -	*Typ jed. *– Typ jednostki, wg której zamawiany ma być towar (podstawowa, Opakowanie1, Opakowanie2)
+    -	*Magazyn* – filtrowanie kartotek dla których charakterystyka magazynowa jest ustawiona dla danego magazynu
+    -	*Zlecenie* – wybranie zlecenia, dla którego chcemy wygenerować zamówienia
+    -	*Typ* – typ kartotek/materiałów pod plan zlecenia lub struktury produktów
+-	**Dodatkowe**
+    -	*Możliwość wyboru uwzględnienia zamienników do zamówień*
+    -	*Sortuj wg* – sortowanie listy towarów 
+-	**Filtry**
+    -	*Nazwa filtru*
+    -	*Tylko z zapotrzebowaniem* – pokazanie kartotek, które posiadają zapotrzebowanie
+    -	*Z towarami, które jeszcze nie były w wybranym magazynie* – Wyfiltrowanie kartotek, które nie zostały przyjęte na danym magazynie 
+    -	*Tylko towary zlecenia* – występowanie zapotrzebowania z danego zlecenia 
+    -	*Kanban* – wybranie kanbana zdefiniowanego dla towarów (Wszystkie, Brak, Zleceniowy, Ogólny)
+-	**Chodliwość towaru:**
+    -	*Wybór typu chodliwości towaru skonfigurowanego na towarze*
+- **Stany**
+    - *Stan* – wyfiltrowanie towarów, których stan spełnia jeden z kilku warunków
+        - Wszystkie
+        - Stan < stan min – wszystkie stany towarów które są mniejsze od zdefiniowanego na towarze stanu minimalnego
+        - Stan < stan max – wszystkie stany towarów które są mniejsze od zdefiniowanych stanów maksymalnych na kartotece towarowej
+        - Stan + oczek – zapot < 0 suma stanu aktualnego plus oczekiwania minus zapotrzebowanie daje wartość ujemną
+        - Stan + oczek – zapot < stan min suma stanu aktualnego plus oczekiwania minus zapotrzebowanie jest mniejszy od stanu minimalnego
+        - Stan + oczek – zapot < stan max  suma stanu aktualnego plus oczekiwania minus zapotrzebowanie jest mniejszy od stanu maksymalnego
+    -	*Stan handlowy* – stany dotyczą tylko stanów handlowych
+    -	*MIN, MAX tylko lokalnie*
+    -	*Charakterystyka tylko z wybranego magazynu *
+-	**Podindeksy**
+    -	Stany z kartoteki głównej -stan nie jest liczony dla podindeksów tylko całościowy dla kartoteki głównej
+    -	Normatyw z karty głównej – charakterystyka magazynowa dla towaru pobierana jest tylko z kartoteki głównej pomijając definicje na podindeksach
+
+Po skonfigurowaniu i zdefiniowaniu odpowiednim filtrów wybieramy przycisk Odśwież. Nastąpi wyświetlenie towarów spełniających definiowane parametry i filtry
+
+

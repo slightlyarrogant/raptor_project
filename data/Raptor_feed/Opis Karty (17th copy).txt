@@ -1,0 +1,123 @@
+#	Raport złych długów VAT
+Raport złych długów VAT jest raportem, który ułatwia użytkownikowi prace za pomocą wprowadzonego mechanizmu obliczania ulgi na złe długi, działa on tylko w oparciu o dokumenty przeniesione do rejestrów VAT.
+
+## Konfiguracja ustawień
+
+Konfiguracji ustawień dokupujemy w ustawieniach głównych programu wchodząc w: Ustawienia > Główne > Parametry pracy > Rejestry VAT należy uzupełnić pole „Ulga na złe długi – termin (dni)” -ilość dni wg., której ma być wyliczana liczba dni od daty z dokumentu Termin płatności.
+
+![tmpe78fd116-fbe5-417e-a1d7-ca059fa4dc44](https://www.cfi.pl/vendohelp/content/imgs/E0/971b76bf22a8ded03e54caf6dc6fb28f-80048-0.png)
+
+*Konfiguracja parametrów*
+
+Korzystając z raportu Raport złych długów VAT należy pamiętać, aby raport uzgadniać za dany miesiąc a nie za okres. Wskazując miesiąc po lewej stronie raportu filtry Od – Do, należy podać miesiąc, który będzie weryfikował Karty VAT według daty.
+
+##	Raport złych długów VAT – zakup
+
+W programie został wprowadzony przykładowy dokument zobowiązania (moduł Dokumenty):
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/D9/ab4181a587332ae1a9fc60ca92858011-94767-0.png)
+
+Dokument kosztowy
+
+Dokument Zobowiązania 1/A/01/19/KO z miesiąca 01-2019 został uwzględniony w Rejestrach VAT Zakup w miesiącu styczeń 2019. Zarówno w deklaracji VAT-7 jak i w JPK dokument został uwzględniony w polu 45 (kwota netto Nabycie towarów i usług pozostałych) w polu 46 (wartość VAT) kwota podatku naliczonego Nabycie towarów i usług pozostałych. 
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K6/5742881270c205e9e57b07cf289726ea-88122-0.png)
+
+Karta rejestru VAT dokumentu kosztowego
+
+
+Termin 90 dni ulga na złe długi VAT liczony jest od daty z pola termin płatności, wg. powyższego przykładu termin płatności na dokumencie KO to 14-01-2019. 90 dni mija 14-04-2019, zatem dokument zobowiązania zostanie wycofany z VAT w miesiącu kwiecień 2019 z przypisaną domyślną transakcją przez system „Korekta podatku naliczonego art. 89.B.1”. W Raporcie Raport złych długów VAT system wskaże w kolumnie „Miesiąc wycofania” 04-2019. Za pomocą Funkcji  `Wycofaj z Rejestru VAT na podstawie zaznaczonych rozrachunków [(F7)]` można wycofać dany dokument do miesiąca wskazanego w ww. kolumnie.
+ 
+Po wybraniu tej funkcji, system utworzy we wskazanym miesiącu kartę Rejestru VAT zakup z domyślnie przypisanym polem „Wycofanie”. 
+ 
+Dokument ze znacznikiem „WYCOFANIE”
+W deklaracji VAT-7 oraz JPK dokument zostanie uwzględniony we właściwych polach wg przypisanej transakcji, tj. pole 49 – Korekta podatku naliczonego, o której mowa w art.89.B. ust.1 (podatek naliczony). Pojawi się tam wartość kwoty VAT z karty rejestru zakupu oznaczonej jako WYCOFANIE. W przypadku częściowego rozliczenia Zobowiązania, system uwzględni wyliczoną kwotę w Raporcie złych długów VAT w zakładce Powroty (filtr w lewej części okienka, pole Typ) przypisując miesiąc z daty płatności w kolumnie „Miesiąc powroty”. W tym przypadku jest to maj 2019.
+ 
+Dokument częściowo rozliczony
+W celu utworzenia automatycznej Karty Rejestru VAT, za pomocą Funkcji w okienku raportu po wybraniu w filtrach Typu „Powroty”, należy użyć funkcji Powróć z rejestru VAT na podstawie zaznaczonych rozrachunków / (F7).
+ 
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/Y8/6af94c9f5fc549f0faae0c895a758b43-37018-0.png)
+
+
+
+W kolumnie „Powrócono brutto” system wskaże wartość rozliczonego zobowiązania. Odwołując się do miesiąca wskazanego w raporcie system pokaże tą informację również w kolumnie „Powrócono brutto w miesiącu”.
+Po użyciu funkcji [F7] system utworzył automatycznie Kartę Rejestru VAT z domyślnie przypisaną transakcją Korekta podatku naliczonego art. 89 B.4. z polem informującym użytkownika, że jest to karta typu: Powrót w miesiącu maj 2019r.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R3/47cd6b3382fef713a690dbc0654a99d8-98866-0.png)
+ 
+ Karta VAT typu Powrót
+
+o wygenerowaniu deklaracji VAT-7 / JPK za miesiąc 05-2019, program wykaże wartość VAT we właściwych polach, tj. pole 50 Korekta podatku naliczonego, o której mowa w art. 89B. ust.4 kwota 123 PLN.  
+Jeżeli dokument zobowiązania zostanie rozliczony końcowo w miesiącu czerwcu 2019 (data pobrana z płatności), program wskaże dokument zobowiązania w Raporcie złych długów VAT w miesiącu czerwiec 2019.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/W0/1439d6d02da389f5c61567dddadcaaf2-97381-0.png)
+ 
+ Całkowite rozliczenie zobowiązania
+
+Program ponownie, poinformuje użytkownika na raporcie w zakładce Powroty o miesiącu powrotu do modułu Rejestru VAT oraz kwocie, którą należy wykazać w module Rejestrów VAT (w tym przypadku  do powrotu brutto 246 PLN). Po wybraniu – Funkcji `Powróć z rejestru VAT na podstawie zaznaczonych rozrachunków / (F7)`, program utworzy automatycznie kartę Rejestru VAT z typem Powrót – w tym przypadku miesiąc czerwiec 2019, z domyślnie przypisaną przez system transakcją Korekta podatku naliczonego art. 89B. 4.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G2/aead1a1a02bc712a0d1febbfb8b040c9-35382-0.png)
+
+
+
+W raporcie w kolumnie „Powrócono brutto” użytkownik uzyska informacje o całości uregulowanego zobowiązania a w kolumnie „Powrócono brutto w miesiącu” – kwotę, która została wykazana na Karcie Rejestrów VAT zakup miesiąc 06-2019:
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B5/d8d2e052c4b5a25f060321b39bcfb3a7-30932-0.png)
+ 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/R7/57b04aeee4120a49861a91e91473e12a-91030-0.png)
+ 
+Korekta podatku naliczonego art. 89B. 4.
+
+Po wygenerowaniu deklaracji VAT-7 / JPK za miesiąc 06-2019, program wykaże wartość VAT we właściwych polach, tj. pole 50 Korekta podatku naliczonego, o której mowa w art. 89B. ust.4 kwota 246 PLN.
+
+##	Raport złych długów VAT – sprzedaż
+
+Działanie Raportu `Raport złych długów VAT Sprzedaż`, działa analogicznie jak dla Zakupu. W celu zaprezentowania przykładu do programu została wprowadzona FV w miesiącu styczeń 2019.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/A6/a3de3fddbb0bc2b6558502f08b727ea0-88048-0.png)
+ 
+ Faktura sprzedaży
+
+FV sprzedaży została wykazana w Rejestrach VAT Sprzedaży w miesiącu styczeń 2019.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/E2/188554b3411c17ec3a4b07eb4694862e-90304-0.png)
+
+ Karta dokumentu VAT sprzedaż  
+
+Raport w miesiącu kwiecień 2019 wykazał dokument FV w Raporcie złe długi VAT - termin 90 dni od dnia 21-01-2019 minął w miesiącu 04-2019.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J3/8ece0b14ffc2ec60c2f6c5893fd90853-35942-0.png)
+
+
+
+Za pomocą funkcji `[F7]` `Wycofaj z rejestru VAT na podstawie zaznaczonych rozrachunków` program utworzył kartę Rejestru VAT sprzedaży w miesiącu kwietniu 2019 z wpisem Wycofanie.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/F5/2d77a9fc4f7200eed09fab4aad694957-26549-0.png))
+
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/K2/aa6df285b12712810f376d29291f9503-106240-0.png)
+
+ Karta rejestru VAT – Wycofanie
+
+Następnie dokument FV został uregulowany w miesiącu 05-2019, tym sposobem program wykazał FV w Raporcie na zakładce Powrotów inf. o dokumencie.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/P9/91feaf88590dca6c63d2886a1f2d5e24-73959-0.png)
+
+ Zapłata za FV
+
+W raporcie na zakładce Typ: „Powroty” należy przenieść transakcję do VAT za pomocą funkcji [F7].
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/V5/ce3b35cebf11e1f2458e09bafb7d476d-32499-0.png)
+ 
+
+System w kolumnie „Powrócono brutto w miesiącu” odwoła się do miesiąca wskazanego w raporcie w polu okres i poda informację o kwocie, która została wykazana w Rejestrach VAT.
+ 
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B9/b719f548ab1681df22b5833653e776b1-30780-0.png)
+
+ Powrót do rejestru VAT
+
+System utworzył z automatu kartę Rejestru VAT – Powrót w miesiącu 05-2019.
+

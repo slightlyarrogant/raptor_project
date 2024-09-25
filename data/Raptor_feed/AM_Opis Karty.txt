@@ -1,0 +1,45 @@
+
+# Akcje marketingowe
+## Definicja
+
+Jako akcje marketingową rozumiemy spięcie wszystkich informacji i dokumentów w jedną teczkę. W ramach teczki akcji marketingowej można ewidencjonować wszelkie działania, dokumenty, i pozostałe informacje.
+Pewne czynności, wystawione dokumenty, płatności itd. mogą być ze sobą ściśle związane – tak się dzieje, gdy wiążą się bezpośrednio z wykonaniem nadrzędnego zadania. W przypadku handlowej części działalności firmy szczególnie chodzi o coś, co nazywamy akcją marketingową, można wiązać całe przedsięwzięcie z konkretnym klientem bądź grupa klientów (określamy ich w zakładce „Uczestnicy”). Zarówno akcja marketingowa jak i proces sprzedaży maja identyczny mechanizm działania i obsługi właściwy wszystkim tzw. teczkom (zlecenie produkcyjne, serwisowe, proces sprzedaży, akcja marketingowa, impreza turystyczna).
+Nową teczkę Akcji marketingowej można założyć z poziomu modułu CRM, na zakładce Akcje marketingowe naciskając [INSERT]. W przypadku Akcji marketingowej naturalnym jest to, iż jest ona adresowana do pewnej grupy klientów a nie do pojedynczej firmy czy osoby.
+
+## Okno Akcje marketingowe
+
+ 
+**Nagłówek** -  w zakładce tej prezentowane są daty wraz z czasem rozpoczęcia i zakończenia Akcji. Można również określić termin który przeznaczony będzie na wykonanie danej czynności. Opis w którym  w precyzyjny sposób można zdefiniować wszystkie parametry zdarzenia.
+
+**Limity towarów** – Limity towarowe wykorzystywane podczas akcji marketingowej
+
+**Ceny ind.** - Lista cen indywidualnych wraz z możliwością ich dodawania, usuwania oraz modyfikacji.
+
+**Analiza sprzedaży** - Pozwala na szczegółowe raportowanie sprzedaży dla klienta.
+
+**Lista dokumentów** - Dodawanie, modyfikacja, usuwanie dokumentów, wynikających z realizacji zlecenia. Lista dokumentów zawężona tylko do tych, gdzie jako kontrahent figuruje wybrany klient. Można dodawać tu nowe dokumenty, które w ten sposób będą kojarzone automatycznie ze zleceniem.
+
+**Prace** - zakładka informująca o czasie przeznaczonym na wykonanie danego zdarzenia. Funkcja ta pozwala na precyzyjne rozliczenie czasu jak również kosztów związanych z wykorzystaniem danego zdarzenia.  
+
+## Definiowanie ceny indywidualnej dla Akcji marketingowej
+
+W przypadku gdy planujemy zorganizować akcje promocyjna na wybrany asortyment dla jakiegoś kontrahenta bądź grupy klientów w systemie istnieje możliwość definiowania cen indywidualnych dla organizowanych akcji promocyjnych. Sposób definiowania cen indywidualnych został opisany powyżej
+ 
+
+
+## Generowanie dokumentów dla Akcji marketingowej - lista dokumentów
+
+Podczas realizacji akcji marketingowej konieczne jest wystawienie różnego rodzaju dokumentów z nią związanych. System przewiduje możliwości dołączania dokumentów do konkretnego zlecenia. Dokumenty te będą potem brane pod uwagę przy rozliczaniu i analizach zlecenia. Do zlecenia można dodawać dowolne typy dokumentów (najczęściej RW, FZ, FV, KO).
+Przykładowo dodamy ofertę OF do zlecenia: 
+-	Wchodzimy do moduły CRM na kartę wybranego zlecenia - akcja marketingowa. 
+-	W otwartej w ten sposób karcie zlecenia wybrać zakładkę Lista dokumentów. Następnie na górnym pasku okna należy określić właściwy typ dokumentu, który ma być dodany i skojarzony ze zleceniem (w tym przypadku OF). 
+ 
+
+-	Dodanie  nowego dokumentu odbywa się poprzez kliknięcie „Dodaj” (zielony plus znajdujący w lewym dolnym rogu) lub wciskamy insert. Pojawi się okno z domyślnymi informacjami wstępnymi. Informacje te można modyfikować wedle własnego uznania (magazyn, Oddział, Numer, seria dokumentu, Waluta, Kraj itd.).  
+-	Po zatwierdzeniu okna informacji wstępnych pojawi się karta dokumentu. Wypełniamy pola (przede wszystkim pola kontrahenta – klawisze [F2] i [F9] rozwijają listę kontrahentów). Jeśli okaże się, że na liście kontrahentów nie ma tego właściwego należy go dodać klawiszem [INSERT]. 
+-	Po wyborze kontrahenta, następnym krokiem jest dodanie pozycji towarowych, dokonujemy tego klawiszem [INSERT] lub przyciskiem Dodaj. Po jego naciśnięciu system wyświetli listę towarów kartoteki towarowej.
+-	Dodawanie pozycji na OF - okno „Ilość i cena” - Na karcie Ilość cena należy podać ilość asortymentu, system automatycznie naliczy rabat do wybranej grupy cenowej (PrtScn poniżej)
+-	Przyciskiem Zamknij zatwierdzamy dokument. Dodawane dokumenty są widoczne zarówno w module Dokumenty >Dokumenty Sprzedażowe> Oferty OF jak i w CRM spięte z właściwym zleceniem (akcja, proces).
+Chcąc usunąć błędnie dodany dokument: najpierw trzeba go otworzyć (na karcie dokumentu menu Funkcje > Funkcje specjalne > Otwarcie dokumentu) i wybrać z menu Funkcje > Usuń dokument. Dodawanie dokumentów można przeprowadzić także z menu Dokumenty, a na dokumencie z Funkcji wybrać Zlecenia > Dopięcie/Przepięcie zlecenia i w ten sposób podpiąć dokument do odpowiedniego procesu sprzedaży lub akcji marketingowej.
+
+![tmpc027d04f-fd0d-4ee7-933f-146a08d25d98](https://www.cfi.pl/vendohelp/content/imgs/I2/5cf9d459af9ae48dda120043ced509bf-46887-0.png)

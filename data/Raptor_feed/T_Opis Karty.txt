@@ -1,0 +1,329 @@
+#  Karta towarowa
+
+Kartoteka towaru w VENDO.ERP pełni kilka istotnych funkcji, które mają na celu usprawnienie zarządzania i kontrolę nad danymi dotyczącymi towarów w firmie. Dzięki kartotece zapewniona jest jednoznaczna identyfikacja wyrobów, półproduktów, surowców i materiałów. Kartoteka towaru zawiera unikalne identyfikatory dla poszczególnych produktów, co umożliwia precyzyjne rozróżnienie między różnymi pozycjami w magazynie. Dzięki temu pracownicy mogą szybko i łatwo odnaleźć potrzebne produkty. Jest ona miejsce gromadzenia i przechowywania istotnych danych o każdym produkcie, takie jak kod, nazwa, opis, kod kreskowy, jednostka podstawowa magazynowa, cenniki, itp. Te informacje są niezbędne do prawidłowego zarządzania zapasami, obsługi zamówień i sporządzania dokumentów handlowych. Kartoteka towaru zawiera również informacje o ilości dostępnych produktów w magazynie, a to umożliwia monitorowanie stanu produkcji, zapasów, czy też np. automatycznie generować zamówienia do dostawców na podstawie określonych stanów buforowych w postaci minimalnego i maksymalnego zapasu i pomagać w unikaniu niedoborów lub nadmiaru towarów. Kartoteka towaru stanowi również najniższy poziom analityki dostępnej w analizach i raportach dotyczących sprzedaży i obrotu magazynowego. Raz utworzony obiekt (kartotekę towary) nie może być usunięty - można zaznaczyć jego pole Aktywność lub edytować. 
+
+
+>Warto wiedzieć: 
+>- Raz utworzony obiekt nie może być usunięty - można zaznaczyć jego status jako 'nieaktywny' lub edytować. 
+
+## Zakładki
+
+
+![tmp38fb7bdb-6899-449d-b343-01b510c1b92d](https://www.cfi.pl/vendohelp/content/imgs/I2/47481a5331958ebf05c27da1027c3915-129633-0.png)
+
+Nazwa pola | Opis |Typ|
+|| 
+|Kod |	Unikalny w systemie, jednoznacznie identyfikujący kartotekę. Możliwe wpisanie liter i liczb.|	Tekst
+|Rodzaj	|Stały słownik wyboru:     •	  Towar – fizyczne dobra mogące posiadać stany magazynowe (prowadzenie obrotu magazynowego) – będą to wszystkie towary handlowe, materiały, narzędzia itp. •	Usługa – nie posiadające stanów magazynowych. Będą to np. usługi serwisowe, transport itp. Usługi mogą być zarówno kupowane jak i sprzedawane. •	Koszt – kategoria usług kupowanych, służąca do ewidencji kosztów nie materiałowych - np. rachunki za energie itp. •	Komplet – system posiada możliwość obsługi kompletów (zestawów), czyli inaczej mówiąc budowę kartoteki towaru składającego się z innych kartotek towarów.  Opcja pożyteczna zwłaszcza przy sprzedaży, gdzie tworzona na dokumencie jest relacja typu rodzic – dziecko (rodzicem jest kartoteka kompletu. Dzieckiem kartoteka towaru o rodzaju Towar, która posiada stany magazynowe) •	Towar kaucjonowany – ten rodzaj wybieramy, jeśli produkt jest sprzedawany z elementem podlegającym zwrotowi (na przykład piwo razem z butelka)Główną różnicą pomiędzy powyższymi rodzajami jest ich zachowanie w stosunku do dokumentów i magazynu. Natomiast pod względem wyglądu kartoteki, sposobu pracy, są to kategorie dość zbliżone do siebie. Po zapisaniu kartoteki zmiana rodzaju nie jest możliwa	 | Słownik
+|EAN	|Kod EAN |	Tekst
+|Jednostka	|Jest to podstawowa jednostka miary, która jest używana do określania fizycznej ilości danego towaru lub produktu. Wyboru odpowiedniej jednostki miary należy dokonać w chwili dodawania nowej kartoteki do systemie. Ma ona kluczowe znaczenie, ponieważ wpływa na dokładność i spójność danych w systemie, zarówno podczas składania zamówień, jak i prowadzenia magazynu, produkcji. Kartoteka towaru może mieć wybraną wyłącznie jedną podstawową jednostkę miary. Wpisanie ilości w systemie ograniczone jest maksymalnie do 4 miejsc po przecinku.|	Słownik
+|Nazwa	|Nazwa kartoteki towaru	|Tekst
+|Strona WWW |	Adres strony WWW	|Tekst
+|Kolor |	Kolorystyczne oznaczenie kartoteki	|Słownik
+|Grupa I |	Grupa towarowa, do której należy towar. Umożliwia to łatwiejszą pracę na grupach towarowych np. przy wyszukiwaniu, analizach i raportowaniu. Grupy te definiowane są również w tabeli słownikowej. Standardową funkcjonalnością systemu jest możliwość definiowania cen indywidualnych dla tej grupy |Słownik
+|Grupa II|	Grupa towarowa, do której należy towar – podział drugi, może być całkowicie niezależny od pierwszego. Grupy te definiowane są również w tabeli słownikowej.|	Słownik
+|Grupa III – przynal.|	Grupa towarowa o stałych oznaczenia (Wyrób, Półprodukt, Handlowy, Surowiec). Określa sposób traktowania kartoteki towaru. Może być wykorzystywana przy okazji tworzenia wzorców księgowania, sporządzania analiz i przy filtrowaniu list. Przynależność jest cechą umowną i nic nie stoi na przeszkodzie by np. sprzedawać materiały a nie tylko towary handlowe	| Pole typu radiobutton
+|Grupa WWW |	Grupa towarowa, do której należy towar – podział trzeci (WWW), może być całkowicie niezależny od pierwszego i drugiego. Grupy te definiowane są również w tabeli słownikowej.|	Słownik
+|Chodliwość |	Cecha (A, B, C, D) ma charakteryzować dynamikę obrotu towarem.	| Słownik
+|Chodliwość II |	Cecha (X, Y, Z) ma charakteryzować dynamikę obrotu towarem. |	Słownik
+|Schemat |	Schemat konfiguracyjny kartoteki	|Słownik
+|VAT Sprzedaż |	Stawka procentowa VAT przy sprzedaży |	Słownik
+|VAT Zakup	| Stawka procentowa VAT przy zakupie	 | Słownik
+|PKWIU	 | Kod Polskiej Klasyfikacji Wyrobów i Usług |	Tekst
+|PCN	|Polska Scalona Nomenklatura Towarowa Handlu Zagranicznego (PCN) - Kody wykorzystywane podczas tworzenia deklaracji Intrastat|	Słownik
+|Cło	| Procentowa wartość cło	|Liczba
+|Akcyza |	Procentowa wartość akcyzy |	Liczba
+|VAT Odwrotne obciążenie |	Automatyczne zastosowanie odwrotnego obciążenia po wyborze kartoteki na dokumenty	| Tak / Nie
+|VAT n/p przy eksporcie|	Automatyczne zastosowanie niepodlegania VAT-u po wyborze kartoteki na dokumenty |	Tak / Nie
+|Mechanizm PP ||		Tak / Nie
+|Status |	Możliwość definiowania i nadawania statusów dla kartoteki |	Słownik
+|Stan |	Ilość we wszystkich magazynach |	Liczba
+|Cena śr. Nabycia |	Cena średnia nabycia obliczona na podstawie aktualnych stanów magazynowych	| Liczba
+|Os. cena zakupu |	Ostatnia cena zakupu na podstawie wybranego w ustawieniach rodzaju dokumentu (FZ / PZ)|Liczba
+|Os. cena nabycia |	Ostatnia cena nabycia na podstawie wybranego w ustawieniach rodzaju dokumentu (FZ / PZ)	|Liczba
+|Aktywność	| Stały słownik (Aktywny, Do uruchomienia, Nieaktywny). Określa stan kartoteki towaru. Domyślnie jedynie aktywne towaru są przeznaczone do wykorzystania na dokumentach systemowych |	Słownik
+|Cena indywidualna	| Tylko dla rodzaju Usługa. Jeśli zaznaczone to system przed dodaniem tej usługi na dokument (np. FV) zgłosi okno dialogowe z zapytaniem o jej cenę proponując cenę domyślna.|	Tak / Nie
+|Czynność |	Tylko dla rodzaju Usługa. Po zaznaczeniu tej opcji dana usługę będzie można wykorzystywać jako czynność technologiczną	|Tak / Nie
+|Wybór z partii |	Mając zaznaczoną tę opcję, po wybraniu towaru na jakiś dokument (np. WZ), program zgłosi okno dialogowe wyboru partii towaru. Domyślnie program działa wg zasady rozchodowania towaru ustawionej na zakładce Zarządzanie partiami (np. FIFO) |	Tak / Nie
+|Generuj ‘Urządzenie’ z pozycji dok. |	Jeśli to pole jest zaznaczone to przy sprzedaży będzie można utworzyć 'Urządzenie' (jednoznacznie identyfikowalny obiekt). Obiekt taki jest przypisany do konkretnego klienta i może być serwisowany	|Tak / Nie
+|Dokładność cen – sprz.|	Możliwość określenia miejsc po przecinku dla cen jednostkowych od 0 do 4	|Liczba
+|Dokładność cen – zak. |	Możliwość określenia miejsc po przecinku dla cen jednostkowych od 0 do 4	|Liczba
+|Gwarancja	| Określenie domyślnego czasu gwarancji |	Liczba
+|Ważność |	Określenie domyślnej ważności |	Liczba
+|Premia|	Określenie procentowej premii dla obliczenia wynagrodzenia handlowca	|Liczba
+
+## 	Składniki
+Występuję wyłącznie dla rodzaju kartoteki Komplet. Możliwość tworzenia powiązania z kartotekami towarowymi o rodzaju Towar, Usługa. Tak powiązane kartoteki towaru stanowią składniki kompletu (zestawu)
+
+![tmpef3150be-99d9-4ef2-9a36-ad31faada1d6](https://www.cfi.pl/vendohelp/content/imgs/P3/58c108afad7f2d77a85c9340702b9069-54804-0.png)
+
+## 	Wartości dowolne
+
+Możliwość dostępu i edycji wartości dowolnych. Zgodnie z opisem podpunktu Wartości dowolne.
+
+![tmp2e6e8bb5-834a-4c61-a747-17dc22064e72](https://www.cfi.pl/vendohelp/content/imgs/E6/1ccb9ed8fb5d2c07d03be4d4323c3b9a-55441-0.png)
+
+## Ceny
+W ustawieniach systemu VENDO.ERP domyślnie istnieje określona liczba grup cenowych. W prezentowanej zakładce definiowana jest cena dla wybranej grupy cen dla kartoteki.
+
+Na zakładce Ceny ustalamy ceny, po których chcemy sprzedawać dany towar. Cennik wykorzystywany jest rónież przy okazji kalkulacji kosztów produkcji. Domyślnie istnieje pięć grup cenowych (detal, bazowa, grupa I-III). Każda z cen może być określona w innej walucie. Wystawiając następnie FV lub ZO, program automatycznie przeliczy cenę na walutę wybraną przy tworzeniu dokumentu
+
+
+Zarówno marża jak i narzut jest naliczany od ceny zakupu danego towaru. Cena bazowa może być również używana jako cena minimalna, poniżej której wybrani pracownicy nie będą mogli sprzedawać towaru. Chcą zablokować sprzedaż poniżej ceny bazowej należy na karcie wybranego pracownika zaznaczyć opcję Blokada sprzedaży poniżej ceny bazowej. Siłą rzeczy pracownik, który ma włączoną taką blokadę, nie może też edytować ceny bazowej na karcie towaru. Jeśli dodatkowo odbierzemy pracownikowi uprawnienie dostępu do cen zakupu i marż to również kolumny narzut i marża będą dla niego niedostępne. Czerwony wykrzyknik oznacza domyślną grupę cen, którą można zmieniać zaznaczając wybraną grupę i naciskając Ustaw jako domyślna.
+
+![tmpf877c9d9-28bf-42b0-809d-f9d185bdb559](https://www.cfi.pl/vendohelp/content/imgs/Y6/672d0effccf7d2fa19c5ffee68407a8b-70836-0.png)
+
+## Pliki
+
+Kartoteka posiada możliwość dodania różnego rodzaju plików w dowolnym formacie: np. .docx, xlsx, .pdf, .jpg, itd.
+
+![tmp74864a2a-0931-4d86-9c6c-fdee1b917e1f](https://www.cfi.pl/vendohelp/content/imgs/M8/3a671e41089d352f5ea931c8db27e84f-74225-0.png)
+
+## Opakowanie, wagi i objętości
+
+
+![tmp4473f6fa-d819-4691-a43b-749fa1035c4e](https://www.cfi.pl/vendohelp/content/imgs/F9/1f05711aabeae7a8801cf81835d0f3f9-113807-0.png)
+
+| Nazwa pola                                    | Opis                                                                                               | Typ       |
+|-----------------------------------------------|----------------------------------------------------------------------------------------------------|-----------|
+| Długość                                       | Miara jednostki podstawowej kartoteki towaru w milimetrach                                         | Liczba    |
+| Szerokość                                     | Miara jednostki podstawowej kartoteki towaru w milimetrach                                         | Liczba    |
+| Wysokość                                      | Miara jednostki podstawowej kartoteki towaru w milimetrach                                         | Liczba    |
+| Waga netto 1 szt.                             | Miara jednostki podstawowej kartoteki towaru w kilogramach                                         | Liczba    |
+| Waga opakowania – tara                        | Miara jednostki opakowania w kilogramach                                                           | Liczba    |
+| Opakowanie 1                                  | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu. Wartość przenoszona automatycznie do pozycji dokumentu | Słownik   |
+| Opakowanie 2                                  | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu                     | Słownik   |
+| Przeliczniki Długość                          | Miara jednostki podstawowej kartoteki towaru w metrach bieżących                                    | Liczba    |
+| Przeliczniki Powierzchnia                     | Miara jednostki podstawowej kartoteki towaru w metrach kwadratowych                                 | Liczba    |
+| Przeliczniki Objętość                         | Miara jednostki podstawowej kartoteki towaru w metrach sześciennych                                 | Liczba    |
+| Rozmiarówka - Sposób pakowania                | Referencja do sposobu pakowania dla dedykowanego rodzaju kartoteki towaru (domyślnie nieużywane)    | Słownik   |
+| Domyślnie używane jednostki - Zakupu          | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów zakupowych | Słownik   |
+| Domyślnie używane jednostki – Sprzedaży       | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów sprzedażowych | Słownik   |
+| Domyślnie używane jednostki - Inwentaryzacji  | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentu inwentaryzacji | Słownik   |
+| Domyślnie używane jednostki - Produkcji       | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów produkcyjnych | Słownik   |
+| Towary kaucjonowane – Jednostka podst.        | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę podstawową             | Słownik   |
+| Towary kaucjonowane – Opakowanie 1            | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 1           | Tekst     |
+| Towary kaucjonowane – Opakowanie 2            | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 2           | Słownik   |
+| Typ przeliczenia                              | Stosowany typ przeliczenia na strukturze i technologii                                             | Liczba    |
+| Receptura wg. wymiarów                        | Możliwość wpisywania wymiarów według Typ przeliczenia na technologii                                | Tak / Nie |
+
+## 	Charakterystyka
+
+Na zakładce Charakterystyka możemy dodatkowo opisać dany towar. Mamy do dyspozycji pole Opis oraz sześć Cechy. W ustawieniach ogólnych programu istnieje możliwość zdefiniowania nazw cech towaru, na przykład kolor, wymiary itp. (Ustawiania > Parametry pracy > Karta towaru lub usługi > sekcja Wygląd karty). Domyślnie na karcie towarowej nazwy cech zostały określone jako Cecha 1-6. Oczywiście nic nie stoi na przeszkodzie, żeby nazwa tę zmienić w zależności od potrzeb firmy, zamiast Cecha 1 można umieścić dowolny opis przystosowany do działalności firmy. Zarówno Opis jak i Cechy towaru mogą być drukowane na dokumentach.
+
+![tmp5acca584-6ce7-42d2-ae9a-23e97b15472e](https://www.cfi.pl/vendohelp/content/imgs/H9/d91a8504a1a1161bd206dd08cda47d6e-70921-0.png)
+
+| Nazwa pola                                   | Opis                                                                                                             | Typ       |
+|----------------------------------------------|------------------------------------------------------------------------------------------------------------------|-----------|
+| Opis                                         | Możliwość dodatkowego opisania kartoteki. Opis może przenosić się do Cechy pozycji dokumentu                     | Tekst     |
+| Pokaż opis przy dodawaniu pozycji do dokumentu | Możliwość zaprezentowania dodatkowego dialogu przy dodawaniu pozycji do dokumentu                                | Tak / Nie |
+| Pokaż zdjęcia przy dodawaniu pozycji do dokumentu | Możliwość zaprezentowania dodatkowego dialogu przy dodawaniu pozycji do dokumentu                                | Tak / Nie |
+| Cecha 1                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 1 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Cecha 2                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 2 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Cecha 3                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 3 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Cecha 4                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 4 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Cecha 5                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 5 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Cecha 6                                      | Możliwość dodatkowego opisania kartoteki. Nazwa Cechy 6 jest modyfikacji w ustawieniach systemu                  | Tekst     |
+| Szablon kalkulacji                           | Możliwość ustawienia domyślnego szablon kalkulacji w celu wygenerowania na jego podstawie Kalkulacji             | Słownik   |
+
+
+
+
+
+## 	Gospodarka magazynowa
+
+
+![tmp04ed8910-aeba-4b01-b0ed-dc2fe77869a0](https://www.cfi.pl/vendohelp/content/imgs/D1/07980bdff898c368dce4dfb5d75b06f5-106812-0.png)
+
+| Nazwa pola                                  | Opis                                                                                                                         |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| Stan min                                    | Stan minimalny dla kartoteki towaru                                                                                          |
+| Stan max                                    | Stan maksymalny dla kartoteki towaru                                                                                          |
+| Krotność zamówienia                         | Jest to oczekiwana krotność ilości dla jednostki podstawowej kartoteki towaru                                                 |
+| Min. wielkość zamówienia                    | Jest to minimalna wielkość zamówienia                                                                                        |
+| Dostawa                                     | Ilość dni potrzebna na dostawę                                                                                               |
+| ‘jest’ powyżej                              | Parametr wykorzystywany do prezentowania przez systemy zewnętrzne informacji o dostępności towaru bez podawania dokładnych posiadanych ilości na magazynie |
+| Rozmiar                                     | Określenie gabarytów kartoteki towaru. Stały słownik: Zwykły, Półpaletowy, Paletowy, Gabarytowy                              |
+| MWO                                         | Miesięczny wskaźnik obrotów                                                                                                  |
+| Możliwość wystąpień potrąceń                | Możliwość wprowadzenia różnic ilości na FV w referencji do WZ                                                                 |
+| Możliwość wpisania potrąceń na WZ/ WK       | Możliwość wprowadzenia różnić ilości na WZ / WK                                                                              |
+| Nazwa u dostawcy                            | Nazwa używana przez dostawcę                                                                                                 |
+| Kod u dostawcy                              | Kod używany przez dostawcę                                                                                                   |
+| Nie zamawiaj                                | Możliwość wyłączenia prezentowania kartoteki w Generatorze zamówień                                                          |
+| Dostawca                                    | Domyślny dostawca kartoteki towaru                                                                                           |
+| Producent                                   | Domyślny producent kartoteki towaru                                                                                          |
+| Kraj pochodzenia                            | Słownik kraju pochodzenia dla kartoteki towaru                                                                               |
+| Sposób wprowadzania pozycji                 | Domyślne ustawienie dla dokumentów zakupowych. Umożliwia wprowadzanie ceny jednostkowej za ilość lub wartość dla całej ilości pozycji dokumentu |
+| Przenoszenie pozycji z FV na WZ             | Domyślny sposób dodawania pozycji do dokumentu podczas generowania dokumentu WZ z FV / PR                                     |
+| Domyślny typ drzewa                         | Domyślny sposób tworzenia zagnieżdżonych pozycji zlecenia produkcyjnego                                                      |
+| Czy generować numer seryjny przy zamówieniu | Możliwość utworzenia dodatkowego numeru seryjnego dla pozycji zamówienia                                                     |
+| Wymaga przygotowania dokumentu              | Wymaganie dodatkowego udostępnienia dokumentu gdy występuje kartoteka towarowa z podanym parametrem                           |
+| Narzędzie produkcyjne                       | Umożliwia prowadzenia liczników narzędziowych                                                                                |
+| Kanban produkcyjny                          | Sposób generowania pozycji zlecenia dla półproduktów                                                                         |
+| Charakterystyka na magazynach               | Możliwość wprowadzenia charakterystyki dla wybranych magazynów która uszczegóławia ogólną charakterystykę kartoteki towaru takich jak: Stan min, Stan max, Krotność zamówienia, Minimalna wielkość zamówienia, ‘jest’ powyżej, Magazyn, Strefa pakowania, Miejsce magazynowe, Kanban |
+
+
+# Zarządzanie partiami
+![tmp437cfe20-d719-40f5-bffc-91fde4d35164](https://www.cfi.pl/vendohelp/content/imgs/Z9/eecd75230efe9b2afa882bf4f6843456-129197-0.png)
+
+Kartoteka towaru posiada dedykowana zakładkę dotyczącą zarządzania partiami dla niej. To tutaj ustawiane są zasady określające:
+-	Definicję partii - czyli zasady jej tworzenia lub aktualizacji
+-	Zasady pilnowania rozchodów - to w jaki sposób będzie odbywało się jej rozchodowanie z magazynu)
+
+
+| Nazwa pola                                      | Opis                                                                                                                                     | Typ       |
+|-------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Definicja partii Użyj dostawcy                  | Przyjęcie do magazynu: Klient 1 z dokumentu KKW: Klient 1 ze zlecenia produkcyjnego dla KKW                                               | Tak / Nie |
+| Definicja partii Użyj zlecenia                  | Przyjęcie do magazynu: Skojarzone zlecenie z dokumentem przed dodawaniem pozycji do dokumentu KKW: Zlecenie produkcyjne dla KKW            | Tak / Nie |
+| Definicja partii Użyj numeru seryjnego          | Przyjęcie do magazynu: Numer seryjny wprowadzony na pozycji dokumentu KKW: Numer seryjny wynikający z ustawień dla KKW                    | Tak / Nie |
+| Definicja partii Użyj daty ważności             | Przyjęcie do magazynu: Data ważności wprowadzona na pozycji dokumentu KKW: Data ważności ustawiona jako aktualna data z dodaną liczbą dni wynikającą z kartoteki towaru Ważności [dni] | Tak / Nie |
+| Definicja partii Użyj rozróżnika źródła         | Przyjęcie do magazynu: Każda pozycja dokumentu KKW: Każda rejestracja ilości na operacji KKW                                              | Tak / Nie |
+| Definicja partii Z Kontrolą Jakości             | Domyślne ustawienie partii jako Oczekiwana                                                                                               | Tak / Nie |
+| Definicja partii Użyj KKW                       | Przyjęcie do magazynu: Brak KKW: KKW                                                                                                      | Tak / Nie |
+| Definicja partii Użyj sposobu pakowania         | Przyjęcie do magazynu: Słownik sposób pakowania KKW: Słownik sposób pakowania                                                             | Tak / Nie |
+| Definicja partii Kod różnicujący                | Rozwiązania indywidualne                                                                                                                  | Słownik   |
+| Definicja partii Przyjmowanie                   | Możliwość wprowadzenia dla jednej pozycji dokumentu przyjęcia dodatkowych podpozycji przez: Podbijanie, Rozpisywanie                      | Słownik   |
+| Propozycja ilości przy czytniku                 | Ustawienia odpowiadające za prezentowanie na czytniku produkcyjnym / kolektorze odpowiednich propozycji ilości                            | Słownik   |
+| Zasady pilnowania rozchodów Metoda              | Domyślny propozycja prowadzenia rozchodów dla kartoteki towaru: FEFO, FIFO, LEFO, LIFO, Najbliższej wskazanej ilości + FIFO, Ścieżka magazyniera + FIFO, Ścieżka magazyniera + LIFO | Słownik   |
+| Zasady pilnowania rozchodów Wg zasady MWS       |                                                                                                                                          | Tak / Nie |
+| Zasady pilnowania rozchodów Użyj nabywcy        | Wymaganie zgodności nabywcy z ustawionym klientem na partii                                                                              | Tak / Nie |
+| Zasady pilnowania rozchodów Użyj odbiorcy       | Wymaganie zgodności odbiorcy z ustawionym klientem na partii                                                                             | Tak / Nie |
+| Zasady pilnowania rozchodów Użyj zlecenia       | Wymaganie zgodności zlecenia z ustawionym zleceniem na partii                                                                            | Tak / Nie |
+| Zasady pilnowania rozchodów Użyj numeru seryjnego | Wymaganie zgodności numeru seryjnego z ustawionym numerem seryjnym na partii                                                             | Tak / Nie |
+| Zasady pilnowania rozchodów Daty ważności       | Wymaganie zgodności daty ważności z ustawioną datą ważności na partii                                                                    | Tak / Nie |
+| Zasady pilnowania rozchodów Kod różnicujący     | Rozwiązania indywidualne                                                                                                                  | Słownik   |
+| Zasady pilnowania rozchodów Wydawanie           | Możliwość wprowadzenia dla jednej pozycji dokumentu wydania dodatkowych podpozycji przez: Podbijanie, Rozpisywanie                        | Słownik   |
+| Zasady pilnowania rozchodów Użyj sposobu pakowania | Wymaganie zgodności sposobu pakowania z ustawionym sposobem pakowania na partii                                                          | Tak / Nie |
+| Zasady pilnowania rozchodów Rozchód pełnych partii | Możliwość wydawania wyłącznie całej ilości partii                                                                                        | Tak / Nie |
+| Wybór partii na KKW                             | Możliwość określenia domyślnego sposobu pracy dla rozchodów Technologii / KKW: Nieznany, Poprzez parametry, Ręczny                       | Słownik   |
+| Łącz różne partie na listach na czytniku .Net   | Możliwość wprowadzenia uproszczonego widoku                                                                                              | Tak / Nie |
+## 	Rozszerzony opis
+
+Możliwość wprowadzenia rozszerzonego opisu przy pomocy edytora.
+
+![tmpd058d4bf-f618-450d-952d-fdacb2f5fc8c](https://www.cfi.pl/vendohelp/content/imgs/L9/53d4c61bd188696f3fec5b2fededda6f-77842-0.png)
+
+Na kartotece towaru dostępne są także zasady blokowania. Będą obowiązywać na danym dokumencie od momentu uruchomienia, czyli jeśli dana blokada jest zaznaczona na kartotece towaru, to nie będzie możliwości jej użycia na danym dokumencie (na ofercie, zamówieniu od klienta, itd.).
+
+## Zasady blokowania
+
+![tmpdbc8756d-cd47-49ce-90ba-30202ddbba51](https://www.cfi.pl/vendohelp/content/imgs/D9/6ca55c0ac1edd431949f9e94f9c9c07b-95750-0.png)
+
+Na kartotece towaru dostępne są także zasady blokowania. Będą obowiązywać na danym dokumencie od momentu uruchomienia, czyli jeśli dana blokada jest zaznaczona na kartotece towaru, to nie będzie możliwości jej użycia na danym dokumencie (na ofercie, zamówieniu od klienta, itd.).
+
+
+| Nazwa pola                                  | Opis                                                                                                                         | Typ       |
+|---------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-----------|
+| Towar certyfikowany                         | Blokada wyboru kartoteki przy dodawaniu pozycji dokumentu wyłącznie gdy kartoteka towaru i kartoteka klienta są oznaczone jako Certyfikowany | Tak / Nie |
+| Blokada OF                                  | Blokada wyboru kartoteki przy dodawaniu pozycji dokumentu                                                                     | Tak / Nie |
+| Blokada ZO                                  | Blokada wyboru kartoteki przy tworzeniu pozycji dokumentu                                                                     | Tak / Nie |
+| Blokada FV PR WZ                            | Blokada wyboru kartoteki przy tworzeniu pozycji dokumentów                                                                    | Tak / Nie |
+| Blokada ZW                                  | Blokada wyboru kartoteki przy tworzeniu pozycji dokumentu                                                                     | Tak / Nie |
+| Blokada FZ PZ KO PW                         | Blokada wyboru kartoteki przy tworzeniu pozycji dokumentów                                                                    | Tak / Nie |
+| Blokada ZLP                                 | Blokada wyboru kartoteki przy tworzeniu pozycji zlecenia produkcyjnego                                                        | Tak / Nie |
+| Wyłączna firma                              | Ograniczenie widoczności kartoteki towaru do jednej firmy                                                                     | Słownik   |
+| Wyłączny magazyn                            | Możliwość wykonywania operacji związanych z kartoteką tylko w ramach jednego magazynu                                         | Słownik   |
+| Magazyn pod produkcję                       | Domyślny magazyn produkcyjny. Możliwość ustawiana domyślności podczas tworzenia Technologii / KKW                             | Słownik   |
+| Wyłączny klient                             | Ograniczenie widoczności kartoteki towaru do jednego klienta ustawionego na dokumencie                                        | Słownik   |
+| Wyłączna grupa klienta                      | Ograniczenie widoczności kartoteki towaru do grupy klienta ustawionego na dokumencie                                          | Słownik   |
+| Nie uwzględniaj w kalkulacjach POST w module MRP | Pominięcie w kalkulacjach POST oznaczonej kartoteki                                                                           | Tak / Nie |
+| Wyjątek OSS – Artykuł 7 pkt 3               | Wyjątek dla procedury rozliczania VAT                                                                                         | Tak / Nie |
+
+## 	Dane księgowe i JPK
+
+![tmp6d27dae7-319b-48b1-bdd6-d8d76629554e](https://www.cfi.pl/vendohelp/content/imgs/N1/7157066ce6668bf795b98b886a612160-127443-0.png)
+
+
+
+Nazwa pola |	Opis |	Typ
+-|-|-
+|KH 1	|Konto 1|	Tekst
+|KH 2	|Konto 2|	Tekst
+|Ośrodek PK |	Domyślny ośrodek powstawania kosztów |	Słownik
+|JPK_VAT |	Parametry związane z właściwą ewidencją związanej z jednolitym plikiem kontrolnym	| Tak / Nie
+
+## 	Jednostki alternatywne
+
+Często pojawia się sytuacja, iż chcemy przyjmować towar (np. dokument PZ) w pewnych jednostkach (np. tony) a sprzedawać/wydawać go w innych (np. w kilogramach). W takiej sytuacji powinniśmy zastosować jednostki alternatywne. Oczywiście jednostki alternatywne są uniwersalne i można ich używać na różnych dokumentach. Ciekawą możliwością jest też personalizacja jednostek alternatywnych (wiązanie ich z konkretnym klientem/dostawcą, ponieważ kontrahent życzy sobie dostawać faktury na towar w określonej jednostce). Chcąc skorzystać z możliwości, jakie dają jednostki alternatywne należy najpierw je zdefiniować dla towaru, który będzie w niej mierzony. 
+> Jednostka podstawowa towaru to ta, która jest określana na karcie towarowej - w tej jednostce podawane są stany magazynowe dla towaru.
+
+
+![tmpc4f9081b-9268-41a9-83fa-24c7269c6b1c](https://www.cfi.pl/vendohelp/content/imgs/V7/7faddb92c7685114adec7a9896d51e60-87877-0.png)
+
+
+
+Podczas zakładania indeksów towarowych istnieje możliwość zdefiniowania dodatkowych jednostek alternatywnych, dzięki czemu możliwe jest zamawianie w jednej jednostce, natomiast przyjęcie bądź sprzedaż w zupełnie innej. Na karcie towaru wykorzystywana może być funkcja, dzięki której nastąpi dodanie jednostki alternatywnej i przelicznika w stosunku do jednostki standardowej.
+
+![tmp14317381-1412-460c-a6fa-57c9c3490ece](https://www.cfi.pl/vendohelp/content/imgs/L3/a75e0502d3bcf9287950484f8bd70855-7517-0.png)
+
+
+
+
+## Systemy zewnętrzne
+
+Możliwość przydzielania dostępu i widoczności kartoteki towaru dla systemów zewnętrznych dla kartoteki towaru.
+
+![tmp26e1e1cf-672b-417f-a230-2c0903429471](https://www.cfi.pl/vendohelp/content/imgs/N1/615b93b8235cfc87f97a719dc0eb40d2-57037-0.png)
+
+
+## Media Główne
+
+Możliwość definiowania zdjęć i ich nazw w językach obcych dla kartoteki towaru
+
+![tmpc02d5bed-563d-4b9b-8468-26c7d9d94c1c](https://www.cfi.pl/vendohelp/content/imgs/N7/b91f05d83d0923b34e2ded6ee2fb7cb3-82427-0.png)
+
+
+
+## 	Media Grupa I
+Możliwość definiowania zdjęć i ich nazw w językach obcych dla grupy I kartoteki towaru
+## 	Media Grupa II
+Możliwość definiowania zdjęć i ich nazw w językach obcych dla grupy II kartoteki towaru
+## 	Media Grupa WWW
+Możliwość definiowania zdjęć i ich nazw w językach obcych dla grupy WWW kartoteki towaru
+## 	Nazwy dodatkowe
+![tmp14b203f6-0520-4f0a-9892-0cf55b18f016](https://www.cfi.pl/vendohelp/content/imgs/W0/94d9a375998c0d276ffe76cd8c10d68a-80275-0.png)
+
+Możliwość wprowadzenia danych dla kartoteki w innych językach.  To jakie języki są dostępne zależy od ustawień słownikowych systemu.
+
+## 	Kartoteki dla klienta
+Możliwość definiowania dedykowanych dla kartoteki klienta danych kartoteki (Kod u klienta, Nazwa u klienta, EAN, jednostka).
+
+![tmpe09c9f44-014b-4e97-8010-c9b8fe9e93d7](https://www.cfi.pl/vendohelp/content/imgs/N7/1a158b7382c4e49d8de822c4488161b4-70786-0.png)
+
+## 	Towary powiązane
+
+Możliwość tworzenia powiązań kartoteki do innych kartotek. Dane z zakładki Towary powiązane mogą być wykorzystane przy wybieraniu kartotek towaru do wybranych dokumentów sprzedażowych, np. Zamówienie od klienta. To czy są one dodane lub zaproponowane zależy od ustawionego typu powiązania: Opcjonalny, Zalecany, Automatyczny.
+
+![tmp2d8ad027-7d56-4004-baba-d957ae424971](https://www.cfi.pl/vendohelp/content/imgs/U0/670e8a35a19baaf818938f6cea9c10d4-65874-0.png)
+
+## Części zamienne
+
+![tmpb1aff620-1fad-4355-a31f-814173962628](https://www.cfi.pl/vendohelp/content/imgs/Z1/37ec7bffb0a033deff09e6cd3af07b95-64691-0.png)
+
+## Katalog towaru
+
+Idea katalogu jest organizacja towarów w logiczne grupy / podgrupy, dzięki którym będzie
+można w łatwiejszy sposób przeszukiwać zasoby magazynowe - zwłaszcza podczas
+sprzedaży.
+
+Katalog składa się z dwóch list:  
+-	lista opisowa - opis pozycji, który pozwala dotrzeć do listy towarów
+-	lista asortymentowa - lista kategorii towarów
+Obydwie listy budowane są na zasadzie drzewa powiazań. 
+Dla przykładu listę opisową (np. samochody) można jeszcze podzielić wg modeli (dla Mazdy może to być: 121, 323, 626 itd.), następnie wg wersji nadwozia (hatchback, liftback, sedan, itd.), rocznika itd. Listę asortymentową w podanym przykładzie można byłoby podzielić według kategorii Części silnikowe, Części eksploatacyjne, a te następnie podzielić na Elektryka, Filtry, Paski klinowe, Sprzęgła). 
+Taki katalog następnie jest uzupełniany przez przypisanie towaru. Możliwe jest przypisanie towaru do wielu grup. Wyszukiwanie kartotek towaru może wtedy odbywać się przy wykorzystaniu wprowadzony list.
+
+![tmpba4a9a11-3697-49e5-987f-9f8f30d42b5f](https://www.cfi.pl/vendohelp/content/imgs/W0/1d9afb1206eacc3d4014e7015a2bb2d7-60131-0.png)
+
+##  Dodanie edycja karty towaru
+
+Chcąc utworzyć kartę towaru należy w menu głównym odnaleźć modułu Magazyn> zakładka Towary. Następnie nacisnąć Insert, kolejnym krokiem jest uzupełnienie formularza, który się pojawi. Żeby przyśpieszyć pracę, program pozwala na tworzenia nowych kart towarowych również podczas dodawanie kolejnej pozycji na dokumencie - z okna modalnego wyboru towarów korzystamy z Funkcji lub naciskamy buton Insert. Żeby karta towarowa mogła być zapisana należy podać co najmniej Kod i Nazwę towaru oraz określić rodzaj. Rodzaj po zapisaniu nie podlega edycji tzn. karty towary nie zamienimy na kartę kosztu bądź usługi. Tworząc karty towarów dobrze jest obrać pewien system nadawanych im kodów i nazw, gdyż są to podstawowe parametry, po jakich wyszukujemy towar z okna modalnego do dokumentu
+
+Chcąc edytować kartę towaru wchodzimy na nią (naciskamy Enter na wybranej pozycji magazynowej lub klikając na nazwę/kod towaru), dokonujemy zmian i zapisujemy zmiany poprzez użycie skrótu klawiszowego Shift+Enter lub naciskamy przycisk Zapisz. Jedynym polem, którego nie da się edytować na karcie towaru jest Rodzaj (usługa, towar, koszt itd.).
+Raz założonej karty magazynowej nie można usunąć. Można natomiast uczynić ją nieaktywną, przez co nie będzie pojawiać się na listach, aby tego dokonać należy w polu Aktywność wybrać opcje "Nieaktywny".
+
+
+
+
+
+

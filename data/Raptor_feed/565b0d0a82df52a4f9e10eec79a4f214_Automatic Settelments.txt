@@ -1,0 +1,104 @@
+Automatic Settelments
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/h2h-automatic-settelments-plugin
+scraped_at: 2024-09-05T12:19:59.402441
+last_updated: 2024-09-05T12:19:59.402487
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Automatic Settelments
+meta_tags: ['płatności', 'rozliczenie', 'klienta', 'ustawienia', 'rejestru', 'wpłaty', 'będą', 'dokumentów', 'transakcji', 'sekcja']
+
+Content
+Automatic Settelments
+Uniwersalny moduł wspomagający pracę z zewnętrznymi systemami bankowymi.
+Instalacja
+Moduł AutomaticSettelmentsPlugin odpowiada za dodawanie i rozliczanie płatności importowanych z systemów bankowych za pomocą usług WebService. W celu instalacji modułu należy:
+
+Wgrać plik AutomaticSettlements.zip jako plugin.
+Uruchomić instalację modułu na bazie : Pluginy -> AutomaticSettelmentsPlugin -> Instalacja na bazie. W trakcie instalacji baza przejdzie w tryb serwisowy.
+
+Ogólne
+Konfiguracja modułu jest dostępna z poziomu: Vendo -> Parametry pracy -> HomeBanking.
+
+Dostępne opcje:
+
+Zapisuj ustawienia per firma – ustawienia rozliczeń będą zapisywane w kontekście centrali. Domyślnie zapis odbywa się na poziomie bazy danych.
+Kontrola kont klientów – mechanizm do weryfikacji duplikatów numerów rachunków. Szczegóły dostępne w raporcie Menu -> Płatności -> Kontrola kont.
+Rejestry – ustawienia rozliczeń rejestrów . Szczegóły opisano w rozdziale Ustawienia Rejestrów.
+Ustawienia dla poleceń zapłaty.
+
+Ustawienia Rejestrów
+Ogólne
+Do listy dostępnych rejestrów będą automatycznie dodawane rejestry owiązane z usługami bankowymi. W celu powiązania na rejestrze bankowym należy wybrać powiązaną usługę: Słownik Banki/Kasy -> karta rejestru -> Sekcja Home Banking.
+
+Każdy z rejestrów może posiadać indywidualne ustawienia importu i exportu. Jeżeli takie nie są zdefiniowane zostaną użyte ustawienia domyślne.
+Import
+Ustawienia importu definiują zasady wyszukiwania dokumentów, klientów oraz rozliczania na podstawie im importowanych transakcji.
+
+Dokumenty - Sekcja „Wyszukiwanie”:
+
+Typy dokumentów – typy dokumentów Vendo.ERP które będą wyszukiwane na podstawie treści tytułu transakcji.
+Wzorce wyszukiwania (opcjonalne) – możliwość definiowania wyrażeń regularnych (regex) dla słów kluczowych używanych do wyszukiwania dokumentów. Istnieje możliwość czy dane słowo kluczowe ma być szukane jako numer obcy czy numer pełny.
+
+Dokumenty – Sekcja „Rozliczenia”:
+
+
+Rozliczaj KFV:
+
+
+Dla dzisiejszych zatwierdzonych wpłat , które nie posiadają rozliczeń wyszukiwane są dokumenty FV na podstawie opisu. (dotyczy tylko rejestrów Home Bankingowych)
+
+Dla znalezionych dokumentów wyszukiwane są nierozliczone KFV gdzie kwota Do Zapłaty z FV + kwota Do Zapłaty z KFV = wartości wpłaty.
+
+W przypadku znalezienia KFV , dokument FV jest rozliczany z płatnością a FV i KFV wzajemnie między sobą.
+
+
+Rozliczaj wiele AW - Funkcja ta wykorzystywana jest w przypadku gdy płatność następuje na podstawie wystawionego dokumentu AW a w opisie przelewu występuje kilka takich numerów. Jeżeli w opisie klient pokaże nam kilka dokumentów AW to program przy mechanizmie rozliczenia płatności:
+
+
+doda wypłatę z rejestru "Rozliczenie AW" i sparuje ją z daną wpłatą na rachunek bankowy. Rozliczenie wpłaty będzie 100%.
+
+doda tyle wpłat na rejestr "Rozliczenie AW" ile było podanych dokumentów AW. Wysokość tych wpłat będzie policzona według proporcji wartość wpłaty*wartość AW/suma podanych AW
+podepnie nowe wpłaty do każdego AW Plugin wyszukując dokumenty AW w programie (wskazane w opisie pola wpłaty), dodaje wypłaty na Rejestrze Technicznym "Rozliczenie AW" - IR (inny rozchód) i rozlicza je z płatnością WP - która weszła na Rachunek bankowy.
+
+Przykład: Jeśli klient wpłaci 700 PLN - system rozliczy WP bankową od klienta - rozliczając z dokumentami - wartościowo od najniżej kwoty z AW Tworząc płatność techniczną na kwotę 200 PLN oraz płatność techniczną na 500 PLN tym samym te dwie płatności techniczne będą rozliczone z WP bankową od kontrahenta System stworzy również automatycznie dwie płatności na rejestrze technicznym na kwotę 200 oraz 500 PLN, które będą powiązane z dokumentami AW. Tworząc skojarzenia z dokumentami AW - system może automatycznie zamykać dokumenty AW (jeśli warunek zamykania AW będzie zaznaczony na TAK w konfiguracji ustawień plugina).
+
+Przy wystawieniu FV związanej z realizacją AW rozliczamy FV z płatnością z rejestru "Rozliczenia AW" Użytkownik przed zamknięciem dokumentu FV - powinien rozliczyć dokument z płatnościami technicznymi (IP - inny przychód) z rejestru technicznego "Rozliczenie AW", po dokonaniu rozliczenia - zamyka FV.
+Dodano na każdej z tych wpłat z rejestru "Rozliczanie AW" informacji ze pochodzą z rozliczenia wewnętrznego wpłaty od klienta wraz z linkiem do tej wpłaty. Na płatności technicznej z rejestru technicznego "Rozliczenie AW" została zrobiona funkcja "Home banking mBank" --> płatności powiązane
+Ustalamy nowe konto w księgowości gdzie będą księgowane wpłaty z rejestru pomocniczego "Rozliczenie AW" na Rejestrze technicznym "Rozliczenie AW" należy wpisać konto księgowe w polu Rejestr KH ustawienia > słowniki > banki / kasy > Rejestr "Rozliczenie AW" > należy uzupełnić pole Rejestr KH
+wprowadzając odpowiednie konto księgowe z planu kont.
+Na koniec dnia saldo rejestru "Rozliczenie AW" ma zawsze wynosić zero. Tak wprowadzony mechanizm rozliczana z rejestrem technicznym, spowoduje powstawianie pod koniec dani salda zerowego na Rejestrze "Rozliczenie AW".
+
+Klienci: Na zakładce „Klienci” istnieje możliwość definiowania indywidualnych wzorców wyszukiwania, sposobu dodawania płatności oraz rozliczeń dla konkretnego klienta.
+
+Sekcja „Wyszukiwanie”:
+
+Indywidualne wzorce wyszukiwania – aktywuje mechanizm wyszukiwania dla danego klienta.
+Wzorzec – wyrażenie regularne (regex) do przeszukiwania Tytułu płatności lub Nazwy klienta.
+Wyrażenia dynamiczne – istnieje możliwość definiowania wyrażeń dynamicznych. Jako dane wejściowe służą zaimportowane dane transakcji o ustandaryzowanej strukturze.
+
+PaymentInfoModel: RegisterId – id rejestru w Vendo.ERP, RegistryAccountNumber – numer rachunku w banku, CustomerAccountNumber – zewnętrzny numer rachunku (klienta), CustomerName – nazwa klienta Amount – kwota, CurrencyCode – waluta, Description – opis, Type - Wpłata/Wypłata (1/-1), Date – data transakcji, TransactionCode – kod transakcji, TransactionId - id transakcji w systemie bankowym, EndToEndId – id transakcji w systemie zewnętrznym, ApplicationCode – kod aplikacji komunikacyjnej (Pluginu)
+Przykłady wyrażeń dynamicznych dla typowych przypadków:
+
+Opłaty jednostronne: PaymentInfo.Amount <= 50 &&String.IsNullOrEmpty(PaymentInfo.CustomerAccountNumber) (Kwota do 50 i pusty numer rachunku klienta)
+Płace: PaymentInfo.Description.ToUpper().StartsWith("PŁACE") && GetPaymentTypeInt() == -1 (Opis zaczynający się na „PŁACE” , tylko wypłaty)
+
+Sekcja „Płatności”:
+
+Nierozliczana – w przypadku identyfikacji klienta płatność zostanie dodana jako nierozliczana.
+
+Sekcja „Rozliczenia”:
+
+Wykluczony z rozliczeń – w przypadku identyfikacji klienta płatności nie będą automatycznie rozliczane .
+
+Eksport
+Ustawienia importu definiują zasady wysyłania płatności z poczekalni przelewów do zewnętrznych serwisów.
+
+
+Data przelewu z płatności – w trakcie wysyłania przelewów będzie brana pod uwagę data z płatności w Vendo.ERP a nie data bieżąca.
+
+Images
+
+
+
+

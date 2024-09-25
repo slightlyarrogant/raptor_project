@@ -1,0 +1,59 @@
+# Towar Kaucjonowany
+## Informacje ogólne
+Dokument Towar Kaucjonowany  jest dokumentem magazynowym rejestrującym obrót towarami kaucjonowanymi, przyjmującym i z zdejmującym ze stan magazynowego towar. Dokument pozwala na rejestrowanie obrotu towarów kaucjonowanych takich jak, butelki, palety, pudła transportowe
+
+
+
+## Cechy dokumentu
+
+| Cechy | Status Cechy
+|
+|Skrót dokumentu |TK
+|Wpływ na stan magazynowy |Nie
+|Rodzaj dokumentu | Magazynowy 
+|Czy wchodzi do płatności| Nie
+|Czy możliwe korekty| Nie
+|Nazwa dla dat|Data1:DataPrzesuniecia;
+|Nazwa dla klienta |Klient1:"Kontrahent 1" Klient2:"Kontrahent 2";
+|Czy dokument przenosimy do rej. Vat | Nie
+|Pozwolenie na ceny zerowe | Tak
+|Sposoby liczenie netto/brutto | Tak
+|Wielowalutowy, |Nie
+|Czy dokument może być eksportowy |Nie
+|Czy dokument może mieć ceny zerowe | Tak
+|Czy dokument może posiadać pozycje zerowe |Nie
+|TypRejestruVAT Zakup
+|Musi być klient, | Tak
+|Księgowany |Tak
+|Jakie cenniki | kartoteki cennikowe
+|Czy są płatności - rozrachunki| Nie
+|Czy są płatności - skojarzenie z WP/WY|Nie
+|Czy może posiada ceny ujemne | Nie
+|Czy dokument księgujemy | Nie
+|Pozwolenie na ceny ujemne | Nie 
+
+
+
+## Opis dokumentu
+Główne pola znajdujące sie na dialogu dokumentu TK to: 
+
+|Nazwa Pola | Definicja |
+|
+|Numer | numer dokumentu generowany zgodnie z konfiguracją
+|Magazyn |	Magazyn w którym następuje obrót towarów kaucjonowanych
+|Data Przyjecia / Wydania|
+|Data Wystawienia|
+|Nabywca i odbiorca | kontrahent 
+|Wartość obrotu towarów |
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/C2/4c4278712ba173895761f178dfd1236a-15896-0.png)
+ 
+Każdy dokument posiada pozycje. Pozycje dla TK zawierają:
+-	Nazwę – nazwę towaru, usługi, kartoteki towarowej
+-	Wydano ilość – ilość towarów przekazanych klientów
+-	Przyjęto ilość – ilość towarów odebranych od klientów.
+-	Za jm – cena za jednostkę towarów kaucjonowych.
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/J5/e47942b78cef138b1494b7e14e14b06a-6521-0.png)
+
+Wystawiając TK  mamy dwa możliwe stany dokumentu – w buforze oraz zamknięty. Stan dokumentu w Buforze umożliwia dodawanie pozycji dokumentu oraz wykonanie różnych zmian. 

@@ -1,0 +1,141 @@
+# Komunikacje z bankami - pluginy 
+Komunikacja pomiędzy poszczególnymi Bankami oparta jest o odrębne pluginy. Każdy z pluginów jest odrębna integracją dla wybranego banku natomiast ich wspólną cecha jest mechanizm rozliczeń. Tj. Pomimo, iż wspólne protokoły komunikacyjne dla każdego z tych banków sa zupełnie inne to rozliczenie pobranych wpłat i wypłat odbywa się przy użyciu tego samego mechanizmu. Możliwa jest dwustronna komunikacja mianowicie z jednej strony wysyłka przelewów z Vendo z drugiej zaś pobieranie historii bądź też wyciągów bankowych z banku do Vendo i automatyczne rozliczenie płatności które się tam znajdują.
+
+Konfiguracja ustawień dotyczących plugin’ów odpowiedzialnego za komunikacje w wybranym bankiem w większości wygląda analogicznie dla wszystkich banków i możliwa jest po poprawnej instalacji plugina odpowiedzialnego za integracje z wybranym Bankiem. Instalacja odbywa się wg standardowych mechanizmów dostępnych w Vendo Dokonać tego należy wg następującego schematu
+-	z poziomu `Ustawień głównych` wybrać > `Pluginy` > `Dodaj plugin` > Wybór lokalizacji w której uprzednio zostały zapisane pliki. 
+-	Po poprawnym podegraniu należy przejść do  konfiguracji plugina . Dokonać należy kliknąć w ikonę Ustawień znajdującą się w prawym górnym rogu okna programu
+
+Dla przykładu omówiony zostanie proces konfiguracyjny dla integracji pomiędzy Vendo a mBankiem
+
+*Uwaga!!!
+W celu uruchomienia funkcjonalności pluginu należy powołać sesję długotrwałą usługi mBank CompanyNet. Do utworzenia sesji długotrwałej będzie konieczny certyfikat kwalifikowany, który został wcześniej zaimportowany w systemie bankowości elektronicznej mBank CompanyNet. Dodatkowo niezbędny będzie DIK oraz id klienta.*
+
+Plugin mBank pozwala na ustawienie połączenia za pomocą usługi WebServices z bankowością elektroniczną mBank CompanyNet. Dzięki tej usłudze plugin może realizować bezpośrednio z poziomu systemu Vendo funkcjonalności takie jak.
+-	Sprawdzanie salda
+-	Status zlecenia (przelewu)
+-	Zlecenia
+    - Krajowy,
+    - Zagraniczny
+    - SEPA
+    - Split payment
+-	Automatyczne rozliczanie dokumentów na podstawie pobranych transakcji
+
+Przed przystąpieniem do pracy, spełnione muszą być wymagania po stronie banku jak również konieczna jest stosowna konfiguracja zarówno po stronie Vendo jaki po stronie implementowanego rozwiązania w postaci plugina.
+
+
+# Ustawienia HomeBakingPlugin - AutomatyczneRozliczenia
+
+Konfiguracja plugina pozwala na parametryzacje ustawień związanych z komunikacja pomiędzy systemem Vendo a Bankiem jak również określa warunki rozliczenia importowanych wpłat z dokumentami w systemie.
+Po otwarciu panelu zarządzania, Administrator posiada możliwość ustawienia najważniejszych parametrów dotyczących sposobu działania pluginu. Sprowadzają się one do określenia zasad na podstawie których system wykona sparowania importowanych wpłat z uwzględnieniem kont zdefiniowanych w kartotece kontrahenta  Ustawienia podzielone zostały na trzy odrębne moduły:
+•	Główne
+•	Dodatkowe
+•	Domyślne ustawienia rozliczeń
+•	Rejestry bankowe
+Poniżej znajduje się opis poszczególnych sekcji zlokalizowanych w każdej z zakładek.
+
+
+
+**Dodatkowe:**
+
+*Sekcja Ogólne*
+
+*Ścieżka do pliku logów* – określenie lokalizacji zapisu błędów podczas pracy bota. Logi zapisywane będą tylko i wyłącznie jeśli określone zostanie ustawienie „Zapisywać logi bota”. Parametr ten ustawiany jest automatycznie a jego lokalizacja dostosowana jest do stanowiska pracy. Ich nazwa zależna będzie od plagina odpowiedzialnego za współprace z Bankiem.
+
+*Dodatkowy separator* – separatory które możliwe są podczas interpretacji numerów dokumentów. Uzupełnienie tego pola wybranymi seperatorami spowoduje, iż określone znaki będą pomijane przez co płatności zostaną poprawnie zaimportowane do systemu Vendo
+
+*Przerwa w pobieraniu raportów[minuty]* – Funkcja wykorzystywana miedzy innymi w sytuacji gdy wykonywane są przelewy nocne ma na celu zastopowanie przelewów na przełomie dnia w przypadku gdy wartość jest równa 0 wówczas funkcja ta jest nieaktywna natomiast określenia innej wartości spowoduje opóźnienie pobieranie przelewów o podana ilość minut.  
+
+*Kod Aplikacji* – informacja pozwalająca na wyszukania zaleznosci poda baza danych
+
+**Sekcja Wartości dowolne**
+
+*Wartość dowolna SEPA* – Zmienna wartości dowolna płatności [Tak/Nie]. Zdefiniowana na karcie płatności. Określenie czy płatność ma zostać wysłana jak SEPA czy też jako zwykły przelew. SEPA – przelew zagraniczny tylko i wyłącznie dla EURO
+ 
+*Sepa jest to rodzaj przelewów wewnątrz wspólnoty uni europejskiej który umożliwia generowanie przelewów w EURO po dużo niższych opłatach niż jest w przypadku klasycznych przelewów zagranicznych. Mogą to być przelewy pomiędzy dwoma podmiotami znajdującymi się w uni europejskiej. Przed wysłaniem takiego przelewu musi on zostać oznaczony.  W Vendo informacja taka znajduje się w skryptach wartości dowolnych wartości dowolne dla płatności typu tak/ nie  
+Jeśli dany przelew zostanie oznaczony na tak zostanie on wyeksportowany z oznaczeniem Sepa czyli wewnątrz wspólnotowy oznacza to ze będzie liczony po innych stawkach*
+
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/B5/1faf6f156e4b5a7f09e59df61030423a-46905-0.png)
+
+**Domyślne ustawienia rozliczeń** – zakładka poświęcona głównym ustawieniom rozliczeń. Ustawienia te odnoszą się do wszystkich rejestrów bakowych zdefiniowanych w HomeBankingu. Jeśli konieczne jest spersonalizowanie ustawień dotyczących ustawień  indywidualnych, użytkownik ma taką możliwość z poziomu zakładki Rejestry bankowe (dokładny opis zasady działania personalizowania ustawień indywidualnych opisany jest w dalszej części dokumentacji)
+
+
+Każdy rejestr Bankowy  homebankingowy pozwala na sprecyzowanie w jaki sposób  rozliczane będą dane przychodzące z Banku. Karata ta została podzielona na odpowiednie sekcje takie jak:
+
+**Sekcja  Automatyczne zamkniecie płatności** – Ustawienia zawarte w tej sekcji pozwalają na określenie w jakich przypadkach ma dojść do parowania płatności. Oznaczenie ich daje możliwość dalszej konfiguracji ustawień, w przypadku gdy żadna z opcji nie jest wybrana pozostałe ustawienia są nieaktywne.
+
+- W przypadku rozpoznania klienta - jeżeli na podstawie danych które przyszły uda się rozpoznać kontrahenta i sparować go z kontrahentami znajdującym się w systemie Vendo wówczas zostanie ona zamknięta
+- Po nr dokumentu z opisu płatności – w przypadku gdy na podstawie danych przesłanych do systemu Vendo system rozpozna dokument znajdujący się w Vendo zostanie on sparowany na podstawie dokumentu rozpoznany zostanie kontrahent a płatność zostanie zamknięta. 
+
+**Sekcja Automatyczne rozliczanie płatności** (rozpoznawanie transakcji po tytule przelewu) – odpowiedzialna jest za weryfikacje tytułu przelewu. Na podstawie danych które zapisane są w tytule przelewu system dokona rozliczenia wg wskazanych parametrów
+  - Nie rozliczaj płatności dla rejestru – zaznaczenie tej opcji spowoduje, iż do rejestru każdorazowo wpadać będą płatności jako nierozliczone, niezależnie od tego jakie będą pozostałe ustawienia dla rejestru. 
+  - Rozliczenia FV po nr FV – oznaczenie tej opcji spowoduje, iż jeśli w opisie płatności znajduje się numer FV i zostanie on sparowany z fakturą w Vendo zostanie ona automatycznie rozliczona. 
+  - Rozliczenia FV po nr ZO/AW - oznaczenie tej opcji spowoduje iż system weryfikując opis napotka informacje o numerze ZO bądź AW sprawdzi skojarzone z tym dokumentem faktur a następnie dokona automatycznego rozliczenia. 
+  - Rozliczenie FV po nr PF - oznaczenie tej opcji spowoduje iż system weryfikując opis przelewu znajdzie informacje o numerze PF sprawdzi skojarzone z tym dokumentem faktury a następnie dokona automatycznego rozliczenia
+  - Wskazanie na płatności AW/ZO – opcja używana w przypadku jednorazowego rozlicznie 
+  - Rozliczenie wielu AW – Funkcja ta wykorzystywana jest w przypadku gdy płatność następuje na podstawie wystawionego dokumentu AW a w opisie przelewu występuje kilka takich numerów.
+
+    Jeżeli w opisie klient pokaże nam kilka dokumentów AW to program przy mechanizmie rozliczenia płatności:   
+    a) doda wypłatę z rejestru "Rozliczenie AW" i sparuje ją z daną wpłatą na rachunek bankowy. Rozliczenie wpłaty będzie 100%.   
+    b) doda tyle wpłat na rejestr "Rozliczenie AW" ile było podanych dokumentów AW. Wysokość tych wpłat będzie policzona według proporcji wartość wpłaty*wartość AW/suma podanych AW   
+    c) podepnie nowe wpłaty do każdego AW 
+     Plugin wyszukując dokumenty AW w programie (wskazane w opisie pola wpłaty), dodaje wypłaty na Rejestrze Technicznym "Rozliczenie AW" - IR (inny rozchód) i rozlicza je z płatnością WP - która weszła na Rachunek bankowy.  
+
+    Przykład:
+
+    Jeśli klient wpłaci 700 PLN - system rozliczy WP bankową od klienta - rozliczając z dokumentami - wartościowo od najniżej kwoty z AW
+    Tworząc płatność techniczną na kwotę 200 pln oraz płatność techniczną na 500 PLN
+    tym samym te dwie płatności techniczne będą rozliczone z WP bankową od kontahenta
+    System stworzy również automatycznie dwie płatności na rejestrze technicznym na kwotę 200 oraz 500 PLN, które będą powiązane z dokumentami AW.
+    Tworząc skojarzenia z dokumentami AW - system może automatycznie zamykać dokumenty AW  (jeśli warunek zamykania AW będzie zaznaczony na TAK w konfiguracji ustawień plugina).
+- Przy wystawieniu FV związanej z realizacją AW rozliczamy FV z płatnością z rejestru "Rozliczenia AW" 
+    Użytkownik przed zamknięciem dokumentu FV - powinien rozliczyć dokument z płatnościami technicznymi (IP - inny przychód) z rejestru technicznego "Rozliczenie AW",
+    po dokonaniu rozliczenia - zamyka FV.
+ - Dodano na każdej z tych wpłat z rejestru "Rozliczanie AW" informacji ze pochodzą z rozliczenia wewnętrznego wpłaty od klienta wraz z linkiem do tej wpłaty. 
+    Na płatności technicznej z rejestru technicznego "Rozliczenie AW" została zrobiona funkcja "Home banking mBank" --> płatności powiązane
+- Ustalamy nowe konto w księgowości gdzie będą księgowane wpłaty z rejestru pomocniczego "Rozliczenie AW" na Rejestrze technicznym "Rozliczenie AW" należy wpisać konto księgowe w polu Rejestr KH ustawienia > słowniki > banki / kasy > Rejestr "Rozliczenie AW" > należy uzupełnić pole Rejestr KH
+- wprowadzając odpowiednie konto księgowe z planu kont. 
+- Na koniec dnia saldo rejestru "Rozliczenie AW" ma zawsze wynosić zero. 
+    Tak wprowadzony mechanizm rozliczana z rejestrem technicznym, spowoduje powstawianie pod koniec dani salda zerowego na Rejestrze "Rozliczenie AW".
+
+
+- Rozliczenie korekty FV:
+  a) Dla dzisiejszych zatwierdzonych wpłat , które nie posiadają rozliczeń wyszukiwane są dokumenty FV na podstawie opisu. (dotyczy tylko rejestrów Home Bankingowych)
+  b) Dla znalezionych dokumentów wyszukiwane są nierozliczone KFV gdzie kwota Do Zapłaty z FV + kwota Do Zapłaty z KFV = wartości wpłaty.
+  c) W przypadku znalezienia KFV , dokument FV jest rozliczany z płatnością a FV i KFV wzajemnie między sobą.
+
+
+- Kontrola kont – mechanizm ten dokonuje weryfikacji numerów kont znajdujących się na kartotekach klienta, w przypadku próby dodania konta które znajduje się już na innym kontrahencie zablokuje taka możliwość dodania takiego konta. Dodatkowo w Menu > Płatności pojawi się dodatkowy raport „Kontrola kont” w który wyświetlone zostaną nieścisłości związane z płatnościami a numerami kont w karcie klienta. 
+- Wyszukanie dokumentów [liczba miesięcy wstecz] – ustawienie odpowiedzialne za weryfikacje dokumentów które należy sparować płatnościami w obrębie ustalonego okresu czasu. Tak więc jeśli wpłynie płatność za fakturę wystawiona poza zadanym okresem wówczas nie zostanie ona automatycznie rozliczona. W przypadku gdy opcja ta nie jest zazdnaczona weryfikacja odbywa się w zakresie kwartału plus jeden miesiąc
+
+**Sekcja Identyfikacja Klienta**
+
+- Szukanie dokumentów po kwocie oraz kliencie ustalonego na podstawie nr konta – możliwość wyszukania klienta po koncie przypisanym do danego klienta oraz kwocie wystawionego dokumentu w przypadku gdy te parametry są spełnione następuje rozliczenie płatności
+
+- Klient do opłat bankowych – Funkcja używana miedzy innymi w przypadku płatności dla banku. Dla takiej płatności nie ma ustalonego konta na które wychodzi płatność. Tak więc ustawienie to pozwala na przydzielenie utworzonego uprzednio klienta do opłat bankowych a następnie oznaczenie dodatkowych paramentów maksymalna kwota prowizji oraz oznaczenia czy kwota ma być nierozliczana a płatność zamknięta.
+
+Klient do płac – wypłaty dal których w opisie zawsze występuje ta sama fraza np. Płaca należy ustawić klienta dla którego realizowane będą tego typu operacje. Jeśli znaleziona będzie wyalta z konta w której znajdzie się powyższa fraza wówczas przypisana ona zostanie do tego kontrahenta
+
+**Sekcja wykluczeni klienci** – sekcja pozwalająca na określenie którzy klienci zostaną wykluczeni z rozliczenia. Przez co nie zostaną oni przypisani do żadnej płatności.  
+
+
+## Rejestry Bankowe
+Z poziomu zakładki Rejestry bankowe, użytkownik posiada wgląd w informacje dotyczące wszystkich rejestrów powiązanych webserwisem, znajdujących się u Klienta.   
+
+Użytkownik określa schemat komunikacji z Bankiem. Informacje dostępne z poziomu zakładki: Podstawowe: 
+
+Unikalny Numer – Identyfikator systemowy generowany automatycznie (Obecnie pole to nie jest obsługiwane) 
+
+Nazwa – nazwa rejestru bankowego 
+
+Rejestr: Schemat – pole słownikowe z możliwością wyboru odpowiedniego schematu komunikacji z bankiem. Schematy te dostępna sa po uprzednim zdefiniowaniu ich w słownikach systemowych 
+
+Indywidualne ustawienia automatycznych rozliczeń – oznaczenie tej funkcji spowoduje dodanie nowej zakładki z poziomu której możliwa będzie konfiguracja indywidualnych ustawień związanych z rozliczeniami wybranego rejestru. Ustawienia te są analogiczne jak w przypadku ustawień głównych. Ich funkcje opisane zostały powyżej. W przypadku gdy ustawienie nie zostanie oznaczone informacje o sposobie rozliczania pobierane będą z ustawień globalnych.
+
+ ![Image%201](https://www.cfi.pl/vendohelp/content/imgs/M2/e4705f3b5e0cbc13442ad2068cb766b7-34598-0.png)
+
+Oznaczeni ustawienia Indywidualne ustawienia automatycznych rozliczeń spowoduje dodanie nowej zakładki gdzie możliwa będzie ścisła konfiguracja ustawień parametrów związanych z rozliczeniem importowanych wpłat 
+
+
+![Image%201](https://www.cfi.pl/vendohelp/content/imgs/G4/f95dbf825c2f7027377b6993ed05f3f0-92260-0.png)
+ 

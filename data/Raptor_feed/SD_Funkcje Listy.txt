@@ -1,0 +1,22 @@
+# Salda na dzień
+
+W ramach dostępu do zakładki salda na dzień użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp1cb8964c-eccc-4305-91ea-0feaacea3b42](https://www.cfi.pl/vendohelp/content/imgs/Y4/54ad67608862c9cd201c740862e65591-26762-0.png)
+
+- na dzień – funkcja pozwala ustawić dzień, na który program ma wyświetlić saldo
+- klient – możliwość wyświetlenia salda dla konkretnego kontrahenta
+- wg waluty dokumentu
+- wg klienta
+- filtr
+
+![tmp4f729614-1788-4c23-8296-b33c77c73fdb](https://www.cfi.pl/vendohelp/content/imgs/A0/dbfcacd66da9a4ac9da0006c082ecdf2-2692-0.png)
+
+- uwzględniaj płatności w buforze
+- uwzgl. rozliczanie ZA – program przy wyświetlaniu salda uwzględni zaliczki
+- z KH (księga handlowa)
+- tabela kursów
+
+Poza możliwością filtrowania użytkownik ma możliwość wydruku odcinków do potwierdzenia sald (A i B), stworzenia kompensat (własnych i wprowadzenia obcych). Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp0b1de9af-bf06-488b-99f2-3e52932cee08](https://www.cfi.pl/vendohelp/content/imgs/X7/293888c06b5475ced56dc15a529b1c63-61840-0.png)

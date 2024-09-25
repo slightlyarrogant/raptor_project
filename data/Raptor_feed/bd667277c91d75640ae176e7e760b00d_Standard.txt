@@ -1,0 +1,195 @@
+Standard
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/readme
+scraped_at: 2024-09-05T12:19:09.048560
+last_updated: 2024-09-05T12:19:09.048593
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Standard
+meta_tags: ['pluginzapoznaj', 'zakładki', 'okna', 'dokumentacjaustawienia', 'lokalizacjaopis', 'dokumentacjainformacje', 'pluginu', 'oraz', 'zamówień', 'danych']
+
+Content
+Spis danych zawartych w katalogu Plagin-Standard
+Home-banking
+Zapoznaj sie z dokumentacja
+
+Eksport płatności
+Podział widoku okna Eksportu płatności
+Ustawienia konfiguracyjne
+Filtry w oknie poczekalni przelewów
+
+
+Import płatności
+Ustawienia konfiguracyjne dot. Importu płatności
+Widok okna importu – dla użytkownika
+
+
+
+Import-technologii
+Zapoznaj sie z dokumentacja
+
+Ustawienia/Lokalizacja
+Opis funkcjonalności
+Plugin
+System Vendo
+
+mBank-plugin
+Zapoznaj sie z dokumentacja
+
+Lokalizacja/Uprawnienia
+Opis funkcjonalności
+Konfiguracja po stronie Vendo
+Konfiguracja plugina
+Opis działania
+
+Notify
+Zapoznaj sie z dokumentacja
+
+Informacje ogólne
+Budowa edytora powiadomień
+Rodzaje dostępnych powiadomień w pluginie Notify (stan na lipiec 2019)
+Typy powiadomień
+Chat
+Mail
+Powiadamiacz
+SMS
+
+
+
+Import technologii
+Zapoznaj sie z dokumentacja
+Ustawienia/Lokalizacja Opis funkcjonalności Plugin Przygotowanie szablonu importu System Vendo
+Import struktur Plugin
+Zapoznaj sie z dokumentacja
+
+Ustawienia lokalizacja
+Opis działania
+Plugin
+Szablon Importu
+Import struktur
+
+Import pomiarów Plugin
+Zapoznaj sie z dokumentacja
+
+Ustawienia lokalizacja
+Opis działania
+Plugin
+Szablon Importu
+Import Pomiarów
+
+Raport operacji Plugin
+Zapoznaj sie z dokumentacja
+
+Cel/Opis
+Lokalizacja uprawnienia
+Opis plugina
+
+Autofakturowanie WZ
+Zapoznaj sie z dokumentacja
+
+Cel/Opis
+Ustawienia lokalizacja
+Opis Plugin’a
+Opis działania
+
+RMK Plugin
+Zapoznaj sie z dokumentacja
+
+Cel/Opis
+Ustawienia / parametryzacja
+Obsługa kart i naliczeń RMK / RMP
+Księgowanie RMK / RMP
+Generowanie karty RMK spod dokumentów kosztowych KO
+
+Intrastat plugin
+Zapoznaj sie z dokumentacja
+
+Konfiguracja ustawień zakładki Intrastat
+Ustawienia słownikowe kodów PCN
+Generowania Intrastat Przywóz
+Generowanie Intrastat Wywóz
+Generowanie pliku z wartości dowolnych
+Generowanie pliku z uwzględnieniem kompletów
+
+Import dokumentów
+Zapoznaj sie z dokumentacja
+
+Cel
+Lokalizacja/uprawnienia
+Opis plugina/konfiguracja
+Dokumenty
+Konfigurator kolumn
+Pozostałe
+
+
+Zasada działania
+
+Wymiana danych Vendo Optima
+Zapoznaj sie z dokumentacja
+
+Wstęp
+Konfiguracja zakładki Plugina – Eksport do OPTIMA
+Konfiguracja programu OPTIMA 6
+Instrukcja użycia Eksportu danych w programie VENDO
+
+PDM SolidWorks
+Zapoznaj sie z dokumentacja
+
+Informacje ogólne
+Ustawienia lokalizacja
+Konfiguracja Plugina
+Zasada działania
+
+Shoper plugin
+Zapoznaj sie z dokumentacja
+
+Wstęp
+Konfiguracja pluginu oraz wprowadzenie ustawień
+Budowa okna pluginu Shoper
+Dodanie nowego profilu i konfiguracja zakładki Główne
+Konfiguracja zakładki Płatności
+Konfiguracja zakładki Dostawa
+Konfiguracja zakładki Statusy
+Konfiguracja zakładki Grupy Klientów
+Konfiguracja zakładki Tłumaczenia
+Konfiguracja zakładki Zestawy wartości dowolnych
+
+
+Przyporządkowanie towarów oraz synchronizacja
+Pobieranie zamówień z Shopera
+Automatyczne pobieranie zamówień z Shopera - BOT
+
+Baselinker plugin
+Zapoznaj sie z dokumentacja
+
+Wstęp
+Konfiguracja pluginu oraz wprowadzenie ustawień
+Budowa okna pluginu BaseLinker
+Dodanie nowego profilu i konfiguracja zakładki Główne
+Konfiguracja zakładki Płatności
+
+
+Przyporządkowanie towarów oraz synchronizacja
+Pobieranie zamówień z BaseLinkera
+Automatyczne pobieranie zamówień z BaseLinkera - BOT
+
+TNT plugin
+Zapoznaj sie z dokumentacja
+
+Informacje ogóle
+Konfiguracja
+Zasada działania
+Dane dla spedytora
+Wartości dowolne i pliki
+
+
+
+PromoSMS – plugin
+Zapoznaj sie z dokumentacja
+
+Informacje ogólne
+Parametryzacja
+Zasada działania – zastosowanie.
+
+Automat Zmiany Chodliwości - plugin
+Zapoznaj sie z dokumentacja

@@ -1,0 +1,41 @@
+Zamówienia obce ZO
+Metadata
+
+url: http://192.168.33.19/master/docs/public/zamowienie-obce
+scraped_at: 2024-09-05T12:11:16.637077
+last_updated: 2024-09-05T12:11:16.637113
+parent_id: 8a86a2929af1455b2af1dbac5e03d923
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Pofile/Zamówienia obce ZO
+meta_tags: ['zamówienia', 'cena', 'pozycji', 'obce', 'funkcje', 'należy', 'karcie', 'dokumenty', 'klienta', 'ilość']
+
+Content
+Cel
+Zasada funkcjonowania zamówień obcych, sposób ich generowania, tworzenia, dodawania pozycji, lokalizacja w systemie VENDO
+Lokalizazja
+Menu głownie > Dokumentyu > Dokumenty sprzedażowe > ZO
+Opis funkcjonalniości
+Zamówienia Obce ZO
+Karta dokumentu Zamówienia Obce ZO
+Zamówienia klienta, czyli inaczej Zamówienia Obce (ZO) pełnią w systemie bardzo ważną funkcję. To ZO inicjuje produkcję i sprzedaż, można generować całą listę różnych dokumentów handlowych i magazynowych (AW, WZ,FV, PR). Na podstawie ZO tworzymy Faktury zaliczkowe (ZA) – nie ma możliwości dodawania Faktury zaliczkowej "z ręki".
+Ręczne wystawienie zamówienia, dodanie pozycji
+Zamówienia Obce wystawiamy w systemie Vendo analogicznie jak inne dokumenty:
+
+Z poziomu menu Głównego wchodzimy do modułu Dokumenty > Dokumenty sprzedażowe na listę ZO.
+Dodajemy nową dokument przez naciśnięcie [Insert] lub [Dodaj] (zielony plus w lewym górnym rogu okna). Pojawi się standardowe okno, gdzie podajemy informacje wstępne (Numer obcy, magazyn, oddział walutę, rodzaj dokumentu).
+Po zatwierdzeniu otworzy się okno dokumentu ZO gotowe do wypełnienia. Zamówienie może też być wygenerowane na podstawie oferty OF z poziomu jej okna Funkcje > Generowanie > Zamówienie Obce.
+W pierwszej kolejności wybieramy zamawiającego. Dokonujemy tego z listy kontrahentów. wybieramy właściwego lub jeśli nie istnieje w naszej bazie, klawiszem [INSERT] dodajemy nową kartę klienta.
+Pod Zamawiającym określamy Odbiorcę. Może to być konkretne miejsce dostawy zdefiniowane pod kontrahentem.
+Po wybraniu klienta należy uzupełnić pozostałe dane na karcie Zamówienia (nr zamówienia u klienta, sposób i warunki dostawy, uwagi, etc.)
+Następnie dodajemy pozycje zamówienia. Dokonujemy tego wciskając [INSERT] lub przycisk [Dodaj] na otwartej karcie ZO. Po otwarciu listy kartotek towarowych dokonujemy wyboru interesujących nas pozycji. Wyboru dokonać możemy zarówno z kartoteki towarowej bądź z konkretnej partii klikając wcześniej buton funkcje > wybór parametru z wzorcowej partii
+
+Dodawanie pozycji na ZO - okno „Ilość i cena” 
+Na karcie Ilość Cena należy podać ilość asortymentu a także określić jego cenę w przypadku gdy różni się ona od zdefiniowanej w cenniku. możemy ustalać wielkość rabatu na daną pozycję, cenę itd. Przyznając rabat należy zwrócić uwagę na pole Cena 0 – analogicznie jak w przypadku OF, FV, PR jest to cena, od której liczone są rabaty. Cena ta pobierana jest z cennika towaru, na jego karcie w zakładce Ceny wg grupy cennika przyznanej klientowi bądź wybranej na dokumencie. Cenę 0 możemy zmienić korzystając z menu Funkcje > Funkcje specjalne > Zmiana ceny 0 bądź klikając [F6]. Zmiana ta obywa się na karcie pozycji cena i ilość. Po wciśnięciu przycisku OK pozycja towarowa zostanie dodana. Istnieje możliwość podglądu/zmiany jednostki podstawowej na alternatywną zdefiniowanych na kartotece towarowej.
+
+Po wprowadzeniu pozycji całe zamówienie należy zamknąć. W momencie zamykania program będzie weryfikował limity kredytowe ustalone na danym odbiorcy i w przypadku gdy będą one przekroczone nie pozwoli zamknąć zamówienia.
+Po zamknięciu ZO finalnym etapem jest wygenerowanie przez dział handlowy Zlecenia produkcyjnego z planem. Operacja ta wykonywana jest z poziomu karty ZO przy użyciu Funkcje > Generowanie > Zlecenie produkcyjne z Planem/Plan do zlecenia.
+
+Po weryfikacji czy wszystkie parametry generowanego zlecenia są poprawne należy kliknąć Generuj. 
+Images
+
+
+

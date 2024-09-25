@@ -1,0 +1,1 @@
+Zakładki Akcji marketingowej można definiować w ustawieniach głównych >Parametry pracy>Akcje marketingowe: Używane zakładki na karcie marketingowej

@@ -1,0 +1,315 @@
+# Instalacja Postgresa 15.x – wersja step by step
+
+## Wstęp 
+Dokument zawiera opis instalacji Postgresql w systemie operacyjnym Debian 12.x. 
+Instalacja w systemach innych niż przedstawiony wykonywana jest podobnie ale nazwy poszczególnych wymaganych pakietów (paczek) mogę posiadać inne nazwy nie adekwatne do nazewnictwa stosowanego w systemie operacyjnym Debian.
+
+## Wymagania 
+Przed przystąpieniem do instalacji system operacyjnym musi mieć możliwość synchronizacji aktualnych repozytoriów pakietów z Internetu.
+
+Następujące pakiet muszą być zainstalowane z repozytoriów Debiana w systemie operacyjnym:
+-	gcc 
+-	zlib1g-dev 
+-	libreadline-dev 
+-	libcurl4-openssl-dev 
+-	libssl-dev libgmp-dev make 
+-	unzip 
+-	python3 
+-	fio 
+-	liblz4-dev 
+-	pkg-config 
+-	clang 
+-	llvm 
+-	dos2unix 
+-	git 
+-	patch
+ 
+Instalację wykonujemy z poziomu konta root’a.
+
+## Start instalacji
+### Dla nowego systemu (Debian), na którym nie było wcześniej instalowanych postgresów
+
+Edytujemy powyższy plik.
+**nano /etc/apt/sources.list**
+W nim są zapisane adresy serwerów zawierające repozytoria z pakietami. Edytując ten plik
+sprawdzamy czy są właściwe repozytoria dla naszej wersji Debiana lub Ubuntu odwołujące się
+do serwerów znajdujących się w Internecie. Jeżeli plik nie zawiera wpisów lub są poprzedzone
+znakiem # to komenda **apt-get** nie zadziała poprawnie.
+Przed instalacją pakietów zawsze należy odświeżyć informacje o repozytoriach wywołując
+komendę:  
+**apt-get update**  
+co spowoduje pobranie informacji o dostępności i wersji pakietów.
+Jeżeli operacja przebiegła poprawnie przystępujemy do instalacji wymaganych pakietów.  
+**apt-get --yes install gcc zlib1g-dev libreadline-dev libcurl4-openssl-dev libssl-dev libgmp-dev 
+make unzip python3 fio liblz4-dev pkg-config clang llvm dos2unix git patch**
+
+>
+>Uwaga:  
+Od tego momentu instalujemy postgresa z plików źródłowych. Wszystkie poniższe
+komendy muszą zakończyć się sukcesem, w razie błędu nie przechodzić do następnej
+komendy!      
+Przed przystąpieniem do kompilacji należy zweryfikować czy poprawnie działa kompilator LLVM. Serwer powinien się zawierać plik llvm-config wywołując następujące polecenie:
+/usr/bin/llvm-config –version  
+Powinien zwrócić numer wersji np.:  
+14.0.6  
+Wersja minimum w wersji 7.x, zalecana 11.x lub wyższa. Więcej informacji o kompilatorze LLVM   
+https://llvm.org/  
+Wymagane jest zainstalowane środowisko python3. Wersję można zweryfikować komendą
+/usr/bin/python3 –version
+Powinien zwrócić numer wersji np.:
+Python 3.11.2 
+
+Kompilacja Postgresql
+Pobieramy paczkę źródłową postgresql  
+**wget** http://ftp.postgresql.org/pub/source/v15.6/postgresql-15.6.tar.gz  
+Rozpakowujemy plik  
+**tar -xzvf  postgresql-15.6.tar.gz**
+
+Przechodzimy do powstałego do katalogu:
+**cd postgresql-15.6**  
+**nano src/include/utils/selfuncs.h**
+Zmieniamy parametr w następujące linii:
+**#define DEFAULT_NUM_DISTINCT 200**
+na
+**#define DEFAULT_NUM_DISTINCT 2**
+Zapisujemy plik
+
+Pobieramy wymagane moduły rozszerzeń  
+**wget http://reposbeta.cfi.pl/aqocontrib.tar.gz -P contrib**  
+**wget http://reposbeta.cfi.pl/pgmpcontrib.tar.gz  -P contrib**  
+**wget http://reposbeta.cfi.pl/vendocontrib.tar.gz  -P contrib**
+
+Rozpakowujemy  
+
+**tar -xvf contrib/aqocontrib.tar.gz -C contrib**   
+**tar -xvf contrib/pgmpcontrib.tar.gz -C contrib**   
+**tar -xvf contrib/vendocontrib.tar.gz -C contrb**
+
+
+Wykonujemy wymagane modyfikacje skryptów pythona następującymi komendami
+
+**sed -i "s/env python/env python3/g" contrib/pgpgmpcontrib/tools/unmix.py**  
+**sed -i "s/env python/env python3/g" contrib/pgpgmpcontrib/tools/sql2extension.py**   
+**dos2unix contrib/pgpgmpcontrib/tools/unmix.py**  
+**dos2unix contrib/pgpgmpcontrib/tools/sql2extension.py**  
+**patch -p1 < contrib/pgaqocontrib/cfi_aqopatch15.diff**  
+
+Wykonujemy kompilacje Postgresql
+
+**./configure --with-openssl --with-readline --with-zlib --with-lz4 --with-llvm --prefix=/usr/local/pg15.6**  
+**make**  
+**make install**
+
+
+Wykonujemy kompilacje modułów rozszerzeń
+
+**cd contrib/pgvendocontrib**   
+**make PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+**make install PG_CONFIG=/usr/local/pg15.6/bin/pg_config** 
+
+
+**cd ../pgpgmpcontrib**  
+**make PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+**make install PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+
+**cd ../pgpgmpcontrib**  
+**make PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+**make install PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+
+**cd ../pgaqocontrib**  
+**make PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+**make install PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+
+
+Pobieramy rozszerzenie planera
+
+**cd..**   
+**git clone https://github.com/ossc-db/pg_hint_plan.git**  
+**cd pg_hint_plan**  
+**git checkout PG15**    
+**make PG_CONFIG=/usr/local/pg15.6/bin/pg_config**  
+**make install PG_CONFIG=/usr/local/pg15.6/bin/pg_config**
+
+
+Kompilujemy standardowe rozszerzenia Postgresql
+
+**cd..**  
+**cd pg_trgm/**  
+**make && make install**  
+
+
+**cd ../hstore/**  
+**make && make install**  
+
+**cd ../auto_explain/**  
+**make && make install**  
+
+Ustawiamy ścieżkę do katalogu, w którym ma być stworzona baza danych
+
+**mkdir /database/pg15.6/data -p**  
+**chown postgres:postgres /database/pg15.6/data**  
+
+Sprawdzamy czy mamy zainstalowany odpowiedni język.  
+**locale -a**  
+Jeśli nie mamy wpisów pl_PL.ISO-8859-2 i pl_PL.UTF-8 to przechodzimy do edycji pliku i
+usuwamy komentarz ‘#’, który jest przed nazwą języka
+**nano /etc/locale.gen**
+
+Przykład:
+
+**#pl_PL.ISO-8859-2**  
+**#pl_PL.UTF-8** 
+
+Następnie przeładowujemy konfigurację poleceniem:  
+**locale-gen**  
+Inicjalizacja klastra bazy danych  
+**su -l postgres -s /bin/sh -c "/usr/local/pg15.6/bin/initdb --encoding=UTF8 --locale=pl_PL.UTF8 -D
+/database/pg15.6/data"**  
+
+Przygotowujemy konfiguracje Postgresql  
+Modyfikacja pliku pg_hba.conf  
+**nano /database/pg15.6/data/pg_hba.conf**
+
+Dodajemy dwa wpisy:  
+
+
+
+ |  | 
+-------- | -------- | -------- ||
+**host**     | **all**     | **all**  | **127.0.0.1/32** |**trust**
+**host**     | **all**     | **all**  | **127.0.0.1/0** | **scram-sha-256**
+
+
+
+
+Modyfikacja pliku postgresql.conf    
+Ustawiamy następujące parametry    
+**listen_addresses = '*'**  
+**port = 5432**  
+**max_connections = 500    #Uwaga parametr zależny od ilości użytkowników**  
+**ssl = on**  
+**ssl_key_file = 'server.key'**  
+
+**shared_buffers = 2GB 	#Przypisać około 1/3 dostępnej pamięci RAM**   
+**work_mem = 16MB**  
+**maintenance_work_mem = 512MB**  
+
+
+**effective_io_concurrency = 4**	  
+**max_worker_processes = 8	#Ilość rdzeni CPU**  
+**max_parallel_workers_per_gather = 8	#Ilość rdzeni CPU**  
+**max_parallel_maintenance_workers = 8	#Ilość rdzeni CPU**  
+**max_parallel_workers = 8	#Ilość rdzeni CPU**  
+
+**effective_cache_size = 2GB	#50% dostępnej pamięci RAM**  
+
+**default_statistics_target = 1000**
+
+**log_destination = 'stderr'**   
+**log_directory = 'pg_log'**  
+**log_filename = 'postgresql-%Y-%m-%d.log'**  
+**log_rotation_age = 1d**  
+**log_truncate_on_rotation = on**  
+**log_connections = on**  
+**log_disconnections = on**  
+**log_duration = on**  
+**log_line_prefix = '[%h %d %p %m %x %a] '**  
+**log_lock_waits = on**  
+**log_statement = 'all'**  
+
+**default_toast_compression = 'lz4'**  
+
+**shared_preload_libraries = 'auto_explain,pg_hint_plan'** 
+
+**escape_string_warning = off**  
+**transform_null_equals = on**  
+
+W sekcji na końcu pliku postgresql.conf dodajemy:  
+#------------------------------------------------------------------------------  
+**# CUSTOMIZED OPTIONS**  
+#------------------------------------------------------------------------------
+
+**# Add settings for extensions here**
+**aqo.mode = 'learn'**  
+**aqo.show_details = on**  
+**aqo.show_hash = on**  
+**aqo.join_threshold = 1**  
+**auto_explain.log_analyze = on**  
+**auto_explain.log_min_duration = 200**  
+**auto_explain.log_nested_statements = on**  
+**auto_explain.log_timing = on**  
+**auto_explain.log_triggers = on**  
+
+
+Konfiguracja certyfikatów do SSL  
+Pobieramy plik certyfikatów   
+**wget http://reposbeta.cfi.pl/certyfikaty.zip**  
+Po jego rozpakowaniu   
+**unzip certyfikaty.zip**
+Kopiujemy certyfikaty do: **/database/pg15.6/data/**  
+**cp server.* /database/pg15.6/data/**  
+Nadanie plikom uprawnienia będąc w katalogu **/database/pg15/data/
+chown postgres:postgres /database/pg15/data/ -R**  
+**chmod 700 /database/pg15/data/ -R**   
+**chmod 600 /database/pg15/data/server.***  
+
+Ustawienie skryptu startowego (z wykorzystaniem usługi systemd):  
+**nano /etc/systemd/system/multi-user.target.wants/postgresql.service**  
+Wrzucamy następujące wpisy:  
+**[Unit]**  
+**Description=PostgreSQL15.6 server daemon**  
+**After=network.target syslog.target**  
+
+**[Service]**
+**# see man systemd.service**  
+**Type=oneshot**   
+**ExecStart=/bin/su - postgres -m -c "/usr/local/pg15.6/bin/pg_ctl -s -D /database/pg15.6/data**  
+**start"**   
+**RemainAfterExit=true**    
+**ExecStop=/bin/su - postgres -m -c "/usr/local/pg15.6/bin/pg_ctl -s -D /database/pg15.6/data**   
+**stop"**   
+**ExecReload=/bin/su - postgres -m -c "/usr/local/pg15.6/bin/pg_ctl -s -D /database/pg15.6/data**    
+**reload"**   
+**StandardOutput=journal**  
+
+**[Install]**
+**WantedBy=multi-user.target**
+
+Uruchamiamy postgresa  
+**systemctl daemon-reload**  
+**systemctl enable postgresql.service**  
+**systemctl start postgresql.service**  
+lub z linii poleceń:  
+**su postgres  **
+**/usr/local/pg15.6/bin/pg_ctl -D /database/pg15.6/data start**  
+Logujemy się do konsoli postgresa  
+**/usr/local/pg15.6/bin/psql -U postgres -h 127.0.0.1**  
+Łączymy się do bazy template1 i tworzymy extensions  
+**c template1**  
+**CREATE SCHEMA vendo;**  
+**CREATE EXTENSION vendo;**  
+**CREATE EXTENSION pgmp;**  
+**CREATE EXTENSION hstore;**  
+**CREATE EXTENSION pg_trgm;**  
+Po utworzeniu lista powinna wyglądać następująco:    
+**template1=# select * from pg_extension;**  
+
+
+
+
+oid  |extname |extowner|extnamespace|extrelocatable|extversion|extconfig|extcondition
+-|
+ 12767 | plpgsql |       10 |           11 | f              | 1.0        |           |
+ 16398 | vendo   |       10 |         2200 | t              | 1.0        |           |
+ 16436 | pgmp    |       10 |         2200 | t              | 1.1        |           |
+ 16702 | hstore  |       10 |         2200 | t              | 1.8        |           |
+ 16830 | pg_trgm |       10 |         2200 | t              | 1.6        |           |
+
+(5 rows)
+
+Tworzymy użytkowników bazy danych  
+**create role user with login createdb superuser;**  
+**password user**
+
+
+Koniec instalacji postgresql.

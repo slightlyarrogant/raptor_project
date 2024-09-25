@@ -1,0 +1,138 @@
+# System ERP - program ERP do planowania produkcji
+
+# System APS  – program do planowania   produkcji
+
+## System APS – Co to jest i jakie ma zadania?
+
+System APS – Zaawansowane Harmonogramowanie (ang. Advanced Planning and Scheduling) – jest to program do zarządzania produkcją, odpowiadający za złożone operacje planowania produkcji wraz z optymalizacją.
+
+
+
+Głównym zadaniem APS jest szybkie tworzenie optymalnych harmonogramów produkcji. Harmonogramy określają terminy rozpoczęcia i zakończenia operacji produkcyjnych wchodzących w skład zleceń, a w rezultacie terminy zakończenia zleceń.
+
+Program Vendo APS wylicza plany w sposób optymalny i realistyczny, ponieważ uwzględnia następujące kryteria:
+
+- Zlecenia: priorytety, terminy,
+- Struktura hierarchiczna produktu i operacji technologicznych, czyli marszruta, jednostkowy czas produkcji, czasy przezbrojeń, matryca przezbrojeń, okresy oczekiwania, czas transportu w operacjach pośrednich,
+- Maszyny – kalendarz pracy, zajętość, planowane przeglądy, awarie,
+- Pracownicy – kalendarz obecności, matryca kompetencji,
+- Materiały – dostępność, parametry czasowe (np. czas dostawy), dostawy w drodze,
+- Narzędzia,
+- Stan realizacji,
+
+
+
+
+
+## Optymalizacja planów produkcji w systemie APS
+
+Optymalizacja planu produkcji w programie Vendo APS polega na tworzeniu takich wariantów harmonogramu, które poprawią efektywność operacyjną i zminimalizują koszty. Dlatego optymalizacja planów produkcji jest realizowana w oparciu o jedno lub kilka kryteriów, które są istotne dla danej firmy. Przykładowo jest to:
+
+- poprawa terminowość realizowanych zleceń,
+- minimalizacja czasu przezbrojeń,
+- skrócenie cyklu produkcyjnego (rozciągłości produkcji),
+- minimalizacja przestojów maszyn,
+
+Rola sztucznej inteligencji w APS
+
+Planowanie i optymalizacja planów produkcji jest problemem bardzo złożonym obliczeniowo. Tysiące operacji produkcyjnych daje ogromną, praktycznie niemożliwą do obliczenia liczbę wariantów harmonogramu. Dlatego zaimplementowane do Alice algorytmy sztucznej inteligencji mają tutaj zastosowanie do znajdywania optymalnych rozwiązań w skomplikowanych procesach obliczeniowych.
+
+
+
+## Sztuczne inteligencja w planowaniu produkcji
+
+Sztuczna inteligencja (AI) zaimplementowana do programu APS Vendo udoskonaliła algorytmy optymalizacji planów produkcji. Przyniosła ona nieporównywalne korzyści w zakresie efektywności, elastyczności i zdolności adaptacyjnych. Wykorzystanie AI w harmonogramowaniu pozwala na analizę ogromnych ilości wariantów w czasie rzeczywistym oraz dynamiczne dostosowywanie się do zmieniających się warunków takich jak opóźnienia w dostawach, awarie maszyn czy zmiany w zamówieniach klientów, minimalizując tym samym wpływ zakłóceń na proces produkcyjny.
+
+Korzyści z wykorzystania AI w optymalizacji planów produkcji przez oprogramowanie Vendo APS:
+
+- Zwiększenie efektywności produkcji – AI pozwala na maksymalne wykorzystanie zasobów, minimalizację czasów przestoju, przezbrojeń a  przez to redukuje kosztów operacyjne  zwiększając efektywność.
+- Poprawa elastyczności i szybkości reakcji – W wyniku zdolności do szybkiego dostosowywania się do zmian, przedsiębiorstwa mogą lepiej reagować na dynamiczne warunki rynkowe i zmieniające się wymagania klientów.
+- Zwiększenie dokładności planowania – AI umożliwia tworzenie bardziej dokładnych i realistycznych harmonogramów produkcji, w rezultacie lepsze zarządzanie zapasami, terminowość
+
+
+
+
+
+## Jak wygląda praca na systemie APS?
+
+Alice jako system APS jest narzędziem dla planisty. Ułatwia mu codzienną pracę związaną z planowaniem i przeplanowanie produkcji. Planista ma swój panel, na którym realizuje zadania. Panel składa się z listy zleceń i operacji produkcyjnych oraz interaktywnego wykresu Gantta, na którym są planowane operacje.
+
+Wczytanie danych
+
+Planista jednym kliknięciem pobiera najnowsze dane o zleceniach, terminach, technologiach, stanach materiałów i półproduktów. Uzupełniane są one o aktualny stan realizacji.
+
+Planowanie
+
+Następnie planuje zadanie produkcyjne. Planowanie może być:
+
+- Automatyczne, czyli rozplanowanie wszystkich zleceń powierzamy algorytmowi.
+- Ręczne – planista ręcznie (na zasadzie drag&drop) rozkłada zlecenia i operacje. APS wspomaga go informując o ewentualnych problemach jak brak materiałów czy pracowników i proponując kolejny najbliższy termin.
+- Hybrydowe, czyli część zleceń planista rozkłada ręcznie, a pozostałe są doplanowane automatycznie.
+
+W każdym momencie planista może przesunąć w programie APS wybraną operację na inne stanowisko lub na inny okres. W wyniku tego następuje przeplanowanie zależnych operacji.
+
+Tworzenie i analizowanie wariantów harmonogramu produkcji
+
+Program APS umożliwia tworzenie wielu wariantów harmonogramu produkcji. Ocena i porównanie tych wariantów może się odbywać z uwzględnieniem różnych kryteriów. Przykładowo mogą być to:
+
+- terminowość zleceń,
+- czas przezbrojeń,
+- koszty produkcji,
+- wykorzystanie maszyn.
+
+Planista wybiera najlepszy wariant według założonych kryteriów.
+
+Zamrażanie planu
+
+Dobrą praktyką jest zamrażanie planów produkcji na pewien okres do przodu. W ten sposób usprawniamy logistykę na styku produkcja – magazyn. System ERP Vendo zleca przygotowanie materiałów i dostarczenie ich pod stanowisko na określony czas przed rozpoczęciem kolejnej operacji. W rezultacie skracamy okres w którym maszyna nie pracuje.
+
+Zapis planu do systemu ERP / MES
+
+Po rozplanowaniu i przeanalizowaniu harmonogramu oprogramowanie APS zapisuje go do Vendo.ERP lub innego systemu.
+
+
+
+## Jak APS reaguje na nieoczekiwane zdarzenia i opóźnienia?
+
+„Żaden plan produkcji nie przetrwa kontaktu z rzeczywistością”
+
+## 
+
+Kolejnym zadaniem oprogramowania APS jest szybkie reagowanie i zmiana harmonogramu na podstawie nieprzewidzianych zdarzeń. Gdy na hali produkcyjnej dochodzi do niespodziewanych zdarzeń, takich jak awarie maszyn, brak surowców lub opóźnienia w dostawach, system APS Alice analizuje sytuację. Dzięki integracji z aplikacją Vendo MES, Alice ma dostęp do aktualnych danych o stanie maszyn, dostępności surowców oraz postępie produkcji. Na podstawie tych informacji Alice może szybko zidentyfikować alternatywne ścieżki produkcyjne, przesunąć zadania na inne maszyny lub zmienić priorytety zleceń, aby zminimalizować opóźnienia.
+
+Na przykład jeśli jedna z kluczowych maszyn ulegnie awarii,  APS może automatycznie przeplanować zadania na inne dostępne maszyny, które są w stanie wykonać te same operacje. Jeśli brakuje surowców, system może dostosować harmonogram, aby najpierw realizować zlecenia, które nie wymagają brakujących materiałów, jednocześnie monitorując dostawy i aktualizując plan produkcji w momencie otrzymania brakujących surowców.
+
+Dzięki tym możliwościom system APS znacząco zwiększa elastyczność i efektywność operacyjną zakładu produkcyjnego. Umożliwia szybkie reagowanie na zmiany i minimalizowanie negatywnego wpływu nieprzewidzianych zdarzeń, co prowadzi do lepszego wykorzystania zasobów i utrzymania ciągłości produkcji.
+
+## Jaka jest wydajność algorytmu programu APS?
+
+Wydajność algorytmu wpływa na zdolność do szybkiego reagowania na nieoczekiwane wydarzenia na produkcji, a przez to na efektywność operacyjną i elastyczność procesów produkcyjnych. Algorytm Alice umożliwia precyzyjne i szybkie rozplanowanie lub przeplanowania nawet 20 000 operacji w czasie poniżej 10 sekund. W rezultacie, przedsiębiorstwa mogą dużo szybciej reagować na takie zdarzenia jak: awaria maszyny, absencja pracowników, opóźnienia w dostawie materiałów. Mogą również lepiej zarządzać zapasami, skracać czas realizacji zamówień i zwiększać zadowolenie klientów, co przekłada się na wzrost konkurencyjności i rentowności firmy.
+
+## APS zrobił swoje i co dalej?
+
+Po zatwierdzeniu planu produkcji, następuje jego zapis i przekazaniu go do systemu ERP dla produkcji. Harmonogram produkcji jest następnie wykorzystywany:
+
+- Na hali produkcyjnej, ponieważ ustawia kolejkę zadań na danej maszynie,
+- W magazynie, ponieważ na podstawie planu produkcji są tworzone zadania dla magazynierów. Mają oni dostarczyć materiały pod stanowisko o określonej godzinie.
+
+## Co jest potrzebne aby uruchomić APS w firmie?
+
+Program APS działa w oparciu o dane dostarczone z systemów ERP i MES.
+
+- Po pierwsze system ERP, a konkretnie jego moduł odpowiadający za zarządzanie produkcją, przekazuje do APS takie dane jak: zlecenia produkcyjne, BOM i technologie, stany materiałów.
+- Po drugie, system MES dostarcza informacje o przebiegu realizacji produkcji i ewentualnych problemach. W wyniku tego, może nastąpić przeplanowanie produkcji.
+
+Podsumowując, bez prawidłowo działającego systemu ERP i bieżącej rejestracji przebiegu produkcji (MES) uruchomienie działającego w czasie rzeczywistym oprogramowania planistycznego nie jest możliwe.
+
+## Jakie są korzyści z wdrożenia?
+
+Wdrożenie systemu APS Alice pozwala na:
+
+- skrócenie cyklu produkcji, innymi słowy obniżenie poziomu produkcji w toku,
+- poprawę terminowości, w wyniku tego poprawę satysfakcji klienta.
+- zmniejszenie czasu i liczby przezbrojeń, czyli mniej przerw w produkcji,
+- poprawę efektywności pracy,
+- lepsze wskaźniki OEE, a więc poprawa wykorzystania maszyn.
+
+Spis treści:
+

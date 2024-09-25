@@ -1,0 +1,71 @@
+SQL - Podpowiedzi
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/tools/sql
+scraped_at: 2024-09-05T12:18:44.701603
+last_updated: 2024-09-05T12:18:44.701631
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/SQL - Podpowiedzi
+meta_tags: ['client_port', 'newrr', 'select', 'from', 'where', 'client_addr', 'usename', 'pg_stat_activity', 'datname', 'bazie']
+
+Content
+
+
+Wszystkie połączenia niekonsolowe na bazie newrr:
+SELECT pid, usename, client_addr, client_port
+
+FROM pg_catalog.pg_stat_activity 
+WHERE datname='newrr' AND client_port<>-1
+ORDER BY client_addr;
+
+
+Ubija wszystkie połączenia niekonsolowe na bazie newrr:
+SELECT pid, usename, client_addr, client_port, pg_terminate_backend(pid)
+
+FROM pg_catalog.pg_stat_activity 
+WHERE datname='newrr' AND client_port<>-1
+ORDER BY client_port;
+
+
+Ubija wszystkie połączenia niekonsolowe na bazie newrr należące do użytkownika axuser:
+SELECT pid, usename, client_addr, client_port, pg_terminate_backend(pid)
+
+FROM pg_catalog.pg_stat_activity 
+WHERE datname='newrr' AND usename='axuser' AND client_port<>-1
+ORDER BY client_port;
+
+
+Lista blokujących transakcji na bazie newrr:
+SELECT datid AS q, datname AS w, pid AS e, usesysid AS r, 
+   usename AS t, application_name AS y, 
+   client_addr AS u, client_port AS i,
+   backend_start AS o, xact_start AS a,
+   query_start AS s, query AS f
+
+FROM pg_stat_activity 
+WHERE datname='newrr';
+
+
+Kto blokuje wykonanie zapytania na tabeli np. tb_zdarzenia:
+SELECT lc.pid AS Pid, p.p_imie || ' ' || p.p_nazwisko AS Pracownik,
+   a.client_addr AS IP, vin.creation_date AS Data
+
+FROM pg_locks AS lc
+JOIN vendo.tv_vusers AS vin ON (vin.backend_pid = lc.pid)
+JOIN pg_stat_activity AS a ON (a.pid = vin.backend_pid)
+JOIN tb_pracownicy AS p ON (p.p_idpracownika = vin.p_idpracownika)
+WHERE relation=(SELECT oid FROM pg_class where relname='tb_zdarzenia');
+
+
+Tabele zajmujące najwięcej miejsca:
+SELECT nspname || '.' || relname AS "relation",
+
+pg_size_pretty(pg_total_relation_size(C.oid)) AS "total_size"
+FROM pg_class C
+LEFT JOIN pg_namespace N ON (N.oid = C.relnamespace)
+WHERE nspname NOT IN ('pg_catalog', 'information_schema')
+AND C.relkind <> 'i'
+AND nspname !~ '^pg_toast'
+ORDER BY pg_total_relation_size(C.oid) DESC
+LIMIT 20;
+

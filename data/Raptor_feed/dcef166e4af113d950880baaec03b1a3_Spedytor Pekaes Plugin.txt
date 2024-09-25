@@ -1,0 +1,16 @@
+Spedytor Pekaes Plugin
+Metadata
+
+url: http://192.168.33.19/master/docs/plugins/standard/spedytor-pekaes-plugin
+scraped_at: 2024-09-05T12:22:24.501630
+last_updated: 2024-09-05T12:22:24.501658
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Spedytor Pekaes Plugin
+meta_tags: ['dane', 'przypadku', 'pekaes', 'vendo', 'nadawcy', 'spedytor', 'plugininformacje', 'ogóleimplementacja', 'rozwiązania', 'systemie']
+
+Content
+Spedytor Pekaes Plugin
+Informacje ogóle
+Implementacja rozwiązania w systemie Vendo ma na celu stworzenie uniwersalnego plugina dającego możliwość łączenia się jak również wymianę danych pomiędzy spedytorem Peakes a VENDO. Zasadza działania wygląda analogicznie jak w przypadku pozostałych spedytorów
+Zlecenie odbioru
+W przypadku wybrania na karcie listu przewozowego (zakładka Adresy) typu adresu: "Wybrany klient", jako dane nadawcy i adres odbioru zostaną wysłane dane z sekcji "Nadawca". W innym przypadku dane te nie są wysyłane i dane nadawcy są automatycznie uzupełniane po stronie serwisu Pekaes.

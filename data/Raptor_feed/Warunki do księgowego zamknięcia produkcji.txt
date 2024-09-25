@@ -1,0 +1,39 @@
+# Warunki do księgowego zamknięcia produkcji
+
+Aby dokonać księgowego rozliczenia produkcji należy się upewnić, że:
+- wszystkie dokumenty PZ i PW zostały wycenione, zamknięte i poprawnie zaksięgowane; 
+- wszystkie dokumenty RW zostały przeliczone i zaksięgowane (wyjątkiem będą dokumenty z inwentaryzacji / BO). Jeżeli na liście dokumentów RW znajdą się takie, które będą miały zerowe wartości, wówczas należy sprawdzić, czy wszystkie dokumenty PZ / PW zostały wycenione (sprawdzenia należy dokonać narastająco, a nie jedynie za zamykany okres);
+- (jeżeli występuje księgowanie równoległe na konta zespołu „5xx”) wszystkie pozostałe dokumenty (np. KO lub FZ), których zapisy księgowe obejmują księgowania na konta wydziałowe zespołu 5xx (dotyczy to zwłaszcza kont kosztów produkcji, jak np. 501, 502… które podlegają późniejszemu przeksięgowaniu), zostały zaksięgowane. Dotyczy to również ręcznych zapisów PK  w Księdze, jak wynagrodzenia czy RMK;
+- została naliczona i automatycznie zaksięgowana amortyzacja za zamykany miesiąc w module Środki Trwałe. Aby naliczyć amortyzację, należy na liście środków trwałych wybrać przycisk „Funkcje” i opcję „Generuj miesięczną amortyzację dla zaznaczonych środków trwałych” (uprzednio z listy ŚT należy zaznaczyć wszystkie te, które podlegają amortyzacji w tym miesiącu; nie dotyczy to ŚT amortyzowanych jednorazowo lub liniowo dopiero od miesiąca następnego po bieżącym, zamykanym okresie). Następnie w zakładce „Miesięczna amortyzacja” należy wybrać opcję „Księguj wszystkie miesięczne amortyzacje” i wygenerować PK w Księdze;
+- wszystkie dekrety księgowe są sporządzone prawidłowo i są zbilansowane. Sprawdzenia dokonujemy na liście zapisów księgowych w Księdze, wybierając stosowny miesiąc księgowy i zaznaczając opcję „Tylko niezgodne”. Raport pozwala nam sprawdzić, które ewentualnie dekrety się nie bilansują i o ile. W prawidłowo zbilansowanych dekretach wartość kolumny „Per saldo” zawsze wynosi zero. Oznacza to, że strona WN jest równa stronie MA w danym zapisie księgowym. 
+
+![tmp6cff1c2c-0a55-4b63-9c01-7006e2b0e702](https://www.cfi.pl/vendohelp/content/imgs/M4/cf290b3752818cd31335bccddb8c9e9c-43120-0.png)
+
+*Raport niezgodnych dekretów w Księdze Handlowej*
+
+- raport „Obroty i Salda” w księdze handlowej wykazuje zbilansowane saldo WN i MA na koniec zamykanego okresu;
+- (jeżeli występuje księgowanie równoległe na konta zespołu „5xx”) saldo kont zespołu 4xx jest zgodne z saldem konta 490. Sprawdzenia można dokonać wykorzystując raport „Obrotów i Sald” i porównując obroty na kontach zespołu 4xx oraz obroty na koncie 490. Saldo sumy kont 4xx po WN powinno byś tożsame z saldem konta 490 po stronie MA. Na poniższym rysunku widzimy, że salda różnią się o 113,96zł (więcej jest po stronie MA na koncie 490). Należy sprawdzić, czy rozbieżność pojawiła się w zamykanym okresie, czy też już wcześniej. Dlatego też porównujemy salda WN i MA z kolumn „Obroty okr.” i „Obroty łącznie”. Na poniższym rysunku widać, że rozbieżność powstała już wcześniej (w okresie sprzed miesiąca maja) i w bieżącym miesiącu się powiększyła (saldo oznaczone cyfrą „1” na rysunku to -44,94zł, a cyfrą „2” to -113,96zł zatem nominalnie saldo „1” (okres bieżący) < „2” (narastająco)).
+
+![tmp501b0cb4-e856-48f5-9947-b65dfefe6327](https://www.cfi.pl/vendohelp/content/imgs/X1/d31af5314afce34ab8eeba2317bf12ca-68973-0.png)
+
+*Raport „Obrotów i Sald” prezentujący konta zespołu 4xx*
+
+Różnicę możemy zidentyfikować za pomocą raportu „Kontrola kręgu kosztów” znajdującego się w Raportach Księgi Handlowej (w KH > zakładka Zapisy Księgowe > na górze listy przycisk „Funkcje” > Raporty > Kontrola kręgu kosztów). W raporcie tym najlepiej przyjąć kwalifikację według rodzaju dokumentu (tak jak na rys. poniżej). W raporcie należy pominąć:
+- PK dotyczące przeksięgowania rozliczenia produkcji,
+- dokumenty RW dotyczące rozchodów półproduktów na produkcję, księgowanych z pominięciem kont zespołu 4xx. Takie dokumenty przeważnie księguje się wzorcem:
+- WN konto rozliczenia produkcji (przeważnie 580) / MA konto magazynu (przeważnie półproduktów lub produkcji w toku 6xx) – wg. wartości magazynowej i dotyczą one rozchodów półproduktów (wcześniej wytworzonych na produkcji) w kolejnych etapach procesu produkcyjnego. Takich RW półproduktów może być w ramach jednego procesu produkcyjnego kilka (tzw. półprodukty zagnieżdżone – z jednego powstaje kolejny itd.…);
+- dokumenty PW przyjmujące wyroby z produkcji na magazyn i księgowane z pominięciem kont zespołu 4xx, np.
+- WN magazyn wyrobów gotowych (zwykle 600) / MA konto rozliczenia produkcji (przeważnie 580) – wg. wartości wyceny WG;
+- w szczególnych przypadkach ewentualne rozliczenia dokumentów RMK pomijające księgowanie w ramach kont zespołu 5xx;
+
+![tmp7a5a6784-1ba0-48ac-ab3c-f55b32adad30](https://www.cfi.pl/vendohelp/content/imgs/A2/f4d5a678d1f239860d55d5c810bb94c9-115256-0.png)
+
+* Raport „Kontrola kręgu kosztów” pokazujący różnice pomiędzy wartościami zaksięgowanymi na kontach zespołu „4xx”, a kontem rozliczeniowym 490 i kontami zespołu „5xx” według rodzajów dokumentu*
+
+- (jeżeli występuje księgowanie równoległe na konta zespołu „5xx”) saldo kont zespołu 4xx i 490 jest zgodne z saldem kont zespołu 5xx. Sprawdzenia można dokonać wykorzystując raport „Obroty i salda” w KH. Należy porównać sumę sald kont 4xx z sumą sald kont 5xx. Sumy powinny wskazywać tożsame wartości, z wyjątkiem sytuacji opisanych w punkcie powyższym, tj. księgowań RW dotyczących rozchodów półproduktów na produkcję i przyjęć PW WG na magazyn (księgowania z pominięciem kont zespołu 4xx);
+
+Po wykonaniu powyższych weryfikacji należy dokonać przeksięgowań na kontach produkcyjnych zespołu „5xx” (jeżeli przewidziano ich użycie). Czynności te można wykonać ręcznie za pomocą Poleceń Księgowania w Księdze, jednakże do tego celu mogą zostać przygotowane specjalne wzorce księgowe /jeżeli przewidziano/, tzw. automaty przeksięgowujące.  Należy zwrócić szczególną uwagę, że przeksięgowań i rozliczenia produkcji dokonujemy wyłącznie wówczas, kiedy mamy pewność, że wszystkie dokumenty, w tym kosztowe i produkcyjne zostały zamknięte i prawidłowo zaksięgowane, a żadne nowe koszty nie zostaną już doksięgowane. Co do zasady wzorców przeksięgowujących jest kilka i należy je wykonywać w ustalonej kolejności (zgodnie z opisem nazw wzorców), czyli według ustalonej chronologii. Ponadto wzorce mogą korzystać z dodatkowo skonfigurowanych kont pozabilansowych, dla celów przeksięgowań. Po prawidłowym dokonaniu przeksięgowań konta produkcyjne zespołu „5xx” (np. 501, 502…) oraz konto rozliczenia produkcji (np. 580) powinny wykazywać zerowe salda na koniec zamykanego okresu.
+
+
+Następnie należy odpowiednio aktywować część wartości odchyleń w koszty za pomocą ręcznego Polecenia Księgowania.
+

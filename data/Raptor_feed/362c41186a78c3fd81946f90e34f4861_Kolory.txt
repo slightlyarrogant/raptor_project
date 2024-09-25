@@ -1,0 +1,89 @@
+Kolory
+Metadata
+
+url: http://192.168.33.19/master/docs/developers/ui/colors
+scraped_at: 2024-09-05T12:18:46.002560
+last_updated: 2024-09-05T12:18:46.002594
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/Kolory
+meta_tags: ['public', 'string', 'vendocolors', 'some', 'text', 'vendocolor', 'property', 'koloru', 'vendocolorname', 'colorproperty']
+
+Content
+Kolory w Vendo
+Klasa Amag.UI.VendoColors zawiera listę kolorów, która odpowiada tej z Bootstrap.
+Podstawowe kolory:
+
+Blue
+Indigo
+Purple
+Pink
+Red
+Orange
+Yellow
+Green
+Teal
+Cyan
+Gray
+GrayDark
+White
+Black
+
+Kolory "funkcyjne":
+
+Primary
+Secondary
+Success - np. poprawnie zakończona operacja
+Danger - np. błąd lub poważny problem
+Warning - ostrzeżenie
+Info - informacja
+Light
+Dark
+
+Określenie koloru etykiety na dialogu
+Na stałe (enum Amag.UI.VendoColorName zawiera listę kolorów "funkcyjnych"):
+[UILabel(Color = VendoColorName.Danger)]
+public string Property { get; set; }
+
+Bindowany:
+[UILabel(ColorProperty = nameof(PropertyLabelColor))]
+public string Property { get; set; }
+public VendoColor PropertyLabelColor => VendoColors.Purple;
+
+Określenie koloru pola edycyjnego
+Ukreślenie koloru przez suffix:
+public string Property { get; set; }
+public VendoColor PropertyColor => VendoColors.Warning;
+
+Ukreślenie koloru jawnie przez atrybut:
+[UIStyle(ColorProperty = nameof(PropertyColor))]
+public string Property { get; set; }
+public VendoColor PropertyColor => VendoColors.Success;
+
+Ukreślenie koloru na stałe przez atrybut:
+[UIStyle(Color = VendoColorName.Danger)]
+public string Property { get; set; }
+
+Kompletny przykład
+VendoUIManager.ShowViewDialog(new MyModel());
+
+class MyModel
+{
+    [UILabel(ColorProperty = nameof(PropertyLabelColor))]
+    public string Property { get; set; }
+    public VendoColor PropertyLabelColor => VendoColors.Purple;
+
+    [UIStyle(ColorProperty = nameof(Property2Color))]
+    public string Property2 { get; set; } = "Some text, some text.";
+    public VendoColor Property2Color => VendoColors.Success;
+
+    [UIStyle(Color = VendoColorName.Danger)]
+    public string Property3 { get; set; } = "Some text, some text.";
+
+    public string Property4 { get; set; } = "Some text, some text.";
+    public VendoColor Property4Color => VendoColors.Warning;
+
+    public string Property5 { get; set; } = "Some text, some text.";
+    public VendoColor Property5Color => VendoColors.Info;
+}
+
+Podgląd palety kolorów

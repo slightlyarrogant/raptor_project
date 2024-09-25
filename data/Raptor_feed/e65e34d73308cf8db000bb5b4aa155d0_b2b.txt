@@ -1,0 +1,82 @@
+b2b
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/standarodwe/b2b
+scraped_at: 2024-09-05T12:13:11.708790
+last_updated: 2024-09-05T12:13:11.708852
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/b2b
+meta_tags: ['należy', 'portalu', 'platformy', 'towarów', 'informacje', 'również', 'oraz', 'będą', 'dokonać', 'sposób']
+
+Content
+Cel:
+Poniższa dokumentacja przedstawia zasady funkcjonowania portalu b2b jak również sposób konfiguracji tegoż portalu za pośrednictwem systemu Vendo. Omówione w niej tematy pozwalają na pełne przygotowanie oraz wdrożenie użytkownika do pracy na platformie oraz sposób konfiguracji po stronie Vendo, to właśnie z poziomu systemu użytkownik wprowadza i modyfikuje najważniejsze dane dotyczące portalu.
+Opis funkcjonalności:
+Konfiguracja w systemie Vendo
+W celu poprawnego funkcjonowania portalu B2B konieczne są ustawienia konfiguracyjne polegające na przydzieleniu kontrahentom dostępów do platformy jak również pozwalające na udostępnienie magazynów jak i towarów do których kontrahenci będą mieli wgląd po zalogowaniu na platformie. Aby nadać uprawnienia kontrahentowi do korzystania z platformy B2B należy:
+
+W kartotece kontrahentów wyszukać klienta któremu należy nadać uprawnienia
+Po wejściu w kartotekę właściwego klienta wybrać Funkcje>przynależność do systemów zewnętrznych
+
+
+Po wyborze opcji przynależność do systemów zewnętrznych wyświetli się okno w którym należy zaznaczyć opcje eVendo B2B (PrtScn poniżej)
+
+Konieczne jest również ustalenie hasła za pomocą którego kontrahent będzie logował się do platformy. Aby tego dokonać wchodzimy w [Funkcje] a następnie [Zmiana hasła], Należy uzupełnić poprawne wartości niezbędne do logowania.
+
+Kolejnym ustawieniem konfiguracyjnym którego należy dokonać w systemie jest udostępnienie magazynu/magazynów gdzie znajdują się towary, które w późniejszym czasie będą dostępne po zalogowaniu się do platformy. Udostępnienia takiego dokonujemy:
+
+Wchodzimy w Ustawienia > Główne > Słowniki > Magazyn: [Magazyn firmy]
+Należy wybrać magazyn który będzie udostępniany za pośrednictwem platformy B2B
+Po wyborze magazynu klikając w [Funkcje] > [Przynależność do systemów zewnętrznych]. W analogiczny jak wyżej opisany sposób określamy które magazyny maja być udostępniane
+
+
+Po wyborze opcji przynależność do systemów zewnętrznych wyświetli się okno w którym należy zaznaczyć opcje eVendo B2B (PrtScn poniżej)
+
+Ostatnim elementem konfiguracji w systemie Vendo jest określenie jakie towary mają być dostępne po zalogowaniu się na platformie. Ustawień takich dokonujemy w kartotece towarowej. Aby tego dokonać należy:
+
+W module Magazyn wybieramy zakładkę Towary
+Spośród dostępnych w kartotece towarów wybieramy te które maja zostać udostępnione za pośrednictwem platformy B2B
+Po wejściu w kartotekę towarową należy wybrać [Funkcje] > [Pozostałe Funkcje] > [Przynależność do systemów zewnętrznych]
+
+
+Po określeniu wyżej opisanych parametrów informacje o magazynach i towarach będą widoczne po zalogowaniu wybranych kontrahentów na platformie B2B
+Logowanie do portalu B2B
+Aby zalogować się do portalu B2B należy w przeglądacie internetowej wpisać adres pod którym dostępna jest platforma. Logowania dokonać można za pomocą loginu i hasła bądź adresu e-mail w zależności od konfiguracji ustawień dostępnych w panelu administracyjnym
+
+Platforma B2B została zaprojektowana w taki sposób aby zalogowani kontrahenci mogli w łatwy i intuicyjny sposób dokonać zamówienia wybranych towarów jak również mieli wgląd w złożone zamówienia oraz dokumenty związane z zamówieniem.
+Po zalogowaniu do platformy B2B dostępne będą zakładki takie jak:
+
+Home - Panel obsługiwany przez administratora. Sekcja poświęcona prezentacji firmy z możliwością dodania informacji o firmie oraz plików graficznych
+Koszyk - Informacje o zamówionych towarach
+Cennik - Lista dostępnych towarów z możliwością dodania do koszyka (zakupu)
+Oferty - Lista ofert klienta zalogowanego obecnie do B2B
+Zamówienia - Lista zamówień klienta zalogowanego do platformy
+Wydania - w sekcji tej znajdują się informacje o wszystkich dokumentach wydania zakupionych towarów.
+Faktury - informacje o wystawionych fakturach z możliwości pobrania dokumentu
+Należności - w sekcji tej uzyskamy informacje o wszystkich należnościach z tytułu zakupionych towarów z podziałem na przeterminowane jak i te które należ opłacić w przyszłości. Zawarte są tam również informacje odnośnie Numeru dokumentu, Dacie wystawienia, Wartości dokumentu oraz kwocie należności do zapłaty wraz z ich posumowaniem.
+
+
+Obsługa portalu
+Aby dokonać zakupu na platformie B2B należy w nagłówku Głowy wybrać sekcje Cennik. Znajduje się tam lista towarów z podziałem na kategorie. Następnym krokiem jest wybór właściwego towaru. W tym celu należy w sekcji Kategorie Wybrać właściwą grupę towarową a następnie interesującą nas pozycje. Można również skorzystać w dostępnej wyszukiwarki. Zakupu dokonujemy klikając w ikonę koszyka która znajduje się w prawej części okna w kolumnie zamów bądź po kliknięciu w wybrany asortyment opcja Dodaj do koszyka
+
+Po wyborze właściwego asortymentu należy określić właściwe dla niego parametry a następnie kliknąć Zatwierdź. Informacje o zamówionym asortymencie dostępne będą w zakładce Koszyk
+
+Parametry określające dane asortyment są to wartości dowolne wspólne pozycji dokumentu możliwe do zdefiniowania w systemie Vendo wchodząc w Ustawienia > Słowniki > Dokument: wartości dowolne wspólne pozycji dokumentu. Wartości wyświetlane w portalu B2B są polami typu data, liczba, tekst, słownik, towar, plik
+
+Zatwierdzone zamówienia widoczne będą w zakładce zamówienia oraz w systemie VENDO
+
+
+Po poprawnym złożeniu zamówienia można przystąpić do jego realizacji.
+Images
+
+
+
+
+
+
+
+
+
+
+
+

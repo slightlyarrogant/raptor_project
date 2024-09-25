@@ -1,0 +1,39 @@
+# Należności
+
+W ramach dostępu do zakładki należności użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy należności. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+![tmp2cfe3071-48b4-4a15-98c3-33f95a655143](https://www.cfi.pl/vendohelp/content/imgs/O8/dfa66ae2b1f0570cf01b302bbba81ee2-36574-0.png)
+
+- data płatności – do konkretnego dnia lub wszystkie
+- seria dokumentu – serie są nadawane przez użytkownika
+- kontrahent – można wyświetlić należności dla konkretnego kontrahenta
+- oddział – miejsce powstanie należności
+- grupa I – przykładowe grupy poniżej:
+
+![tmpdb62a783-b3d9-4c01-aa6c-84bf0ccb8ffe](https://www.cfi.pl/vendohelp/content/imgs/V5/4da9657038006e8114324184b610bdfb-26612-0.png)
+
+- tylko zaległości
+- tylko rozliczone
+- tylko zamknięte płatności
+- wg. kontrahenta 2 – gdy kontrahentem 1 jest np. pracownik dokonujący transakcji na rzecz przedsiębiorstwa
+- tylko sporne/sądowe
+- tabela kursów
+
+Poza możliwością filtrowania należności użytkownik ma możliwość przeprowadzania na nich operacji czy wprowadzania zmian. Do tego celu należy posłużyć się funkcjami które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmp4ebf5a69-1f25-4b66-a4da-0cfd9fc4822d](https://www.cfi.pl/vendohelp/content/imgs/C8/3c51be7be3b8803bb17f4536050663db-8797-0.png)
+
+
+![tmpea107232-51e4-41cd-9175-8d3edda2c073](https://www.cfi.pl/vendohelp/content/imgs/A2/07d42d14dc33b5bb700c5368d8ea3def-27988-0.png)
+
+- wprowadź zapłatę za zaznaczone – dodawanie przychodu bankowego z tytułu płatności za wskazaną należność
+- przygotowanie zbiorczych płatności – możliwość wskazania mnogiej liczby pozycji w celu dokonania płatności
+- dodawania należności ‘z ręki’ – w tym miejscu użytkownik może sam dodać dowolną należność
+- lista należności i zobowiązań ‘z ręki’ – podgląd do listy samodzielnie wprowadzonych należności i zobowiązań
+- przenieś rozrachunki ze/do spornych/sądowych – funkcja pozwala przenosić należności do grupy należności spornych/sądowych lub je z tej grupy wycofywać
+- funkcje specjalne – zmiana daty lub formy płatności
+- windykacje – podgląd listy zdarzeń windykacyjnych i możliwość dodania nowego zdarzenia windykacyjnego
+- statusy:
+
+![tmp9ec6c7d4-0a36-47b3-b393-b2d95d6270da](https://www.cfi.pl/vendohelp/content/imgs/Y2/27818b41db0a00c8d339b2cd06ce068b-41441-0.png)
+

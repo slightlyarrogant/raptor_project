@@ -1,0 +1,73 @@
+eFaktura przy zamykaniu dokumentu
+Metadata
+
+url: http://192.168.33.19/master/docs/company/procedury-standaryzacyjne/notyfikacje/notify-zamykanie-dokumentu
+scraped_at: 2024-09-05T12:18:11.726243
+last_updated: 2024-09-05T12:18:11.726296
+parent_id: 21c021b76586e248072c806c95187f09
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy/Okucia/Montan stal/eFaktura przy zamykaniu dokumentu
+meta_tags: ['należy', 'klienta', 'ustawienia', 'poniżej', 'jest', 'oraz', 'powiadomienia', 'przypadku', 'dokumentu', 'zakładce']
+
+Content
+CEL:
+Lokalizacji/wymagania:
+Ustawienia > Pluginy
+Opis konfiguracji oraz działania funkcjonalności:
+Wprowadzenie mechanizmu w pluginie
+W celu wprowadzenia mechanizmu notyfikacji dotyczącej powiadomień o wysyłce faktury mailem należy postępować wg następującego schematu.
+
+W pierwszej kolejności wejść w ustawienia systemu klikając ikonę znajdującą się w lewym górnym rogu okna programu następnie wybrać: [Ustawienia] > [Pluginy].
+Po wyświetleniu okna dialogowego należy wejść w [Pokaż ustawienia] klikając w ikonę znajdująca się w prawym górnym rogu (PrtScn poniżej)
+
+
+
+Aby ustawić powiadomienie dotyczące wysyłki wydruku FV mailem do klienta, należy kliknąć zielony plus następnie mechanizm [Dokumenty].
+
+
+
+W kolejnym kroku dodajemy nazwę powiadomienia oraz wybieramy na jaką akcję ma być wysyłany mail.
+
+W tym przypadku ustawiamy akcję [Zamknięcie dokumentu](rozwijana lista w wierszu operacja). Powiadomienie zostanie wysłane w momencie zamknięcia dokumentu przez pracownika, tutaj należy pamiętać, że dotyczy to każdorazowego zamknięcia danej FV (zatwierdzenie buforu). Poniżej zaprezentowano jak powinno to wyglądać, dla pierwszej zakładki o nazwie [Główne].
+
+Konfiguracja w zakładce Filtry
+Aby dokonać konfiguracji uprzednio dodanego trigera należy w zakładce Filtry ustawić dla jakiego rodzaju dokumentu ma on zadziałać, w naszym przypadku ustawiamy rodzaj FV – Faktura Vat. Jeżeli potrzebujemy, żeby zadziałało to również dla korekty Faktury Vat (KFV), musimy dodać drugi taki sam mechanizm, zmieniając tylko rodzaj dokumentu. W tym miejscu można ustawić dodatkowe warunki jakie muszą zostać spełnione, żeby powiadomienie zostało wysłane, np.
+
+powyżej jakiej kwoty na FV zostanie wysłane powiadomienie,
+z jaką konkretną pozycją na dokumencie,
+z jakiej grupy towarowej muszą być pozycje,
+z jakiego magazynu. Wszystkie ustawienia o których mowa dostępne a poprzez użycie słowników zdefiniowanych w każdym wierszu okna konfiguracyjnego. W niestandardowych przypadkach można również dodać warunek w postaci zapytania SQL. W naszym przypadku, standardowo wybieramy tylko rodzaj dokumentu (PrtScn poniżej).
+
+
+W przypadku gdy na karcie klienta zdefiniowano dodatkową wartość dowolną odpowiedzialną za uzupełnienie adresu mailowego (wartość typu tekst) i chcemy aby system wysyłał wiadomości tylko do klientów dla których ta wartość jest uzupełniona, należy w zakładce Alerty w polu SQL umieścić poniższe zapytanie. Po dodaniu zapytania, wiadomości email generowane będą jedynie do klientów dla których pole maill jest uzupełnione.
+
+Konfiguracja w zakładce Alerty oraz wybór typu powiadomienia
+Za ustawienia dotyczące Alertów odpowiedzialna jest kolejna zakładka. Konfiguracja Alertów odbywa się po kliknięciu w zielony plus. Ustawiamy rodzaj powiadomienia, w omawianym przypadku wybieramy opcję Mail.
+
+W kolejnych etapach należy uzupełnić niezbędne pola odpowiedzialne za prawidłowe funkcjonowanie. Poniżej opis jak optymalnie skonfigurować zakładkę Alerty. W pierwszej kolejności uzupełniamy pole Temat wraz z ewentualnym daniem macro, następnie wybieramy z jakiego adresu mailowego ma być wysyłane powiadomienie adresy mailowe [Ustawiane] > [Słowniki] > [Konta email] oraz uzupełniamy treść powiadomienia jakie ma być widoczne w wiadomości. W treści można wykorzystać makra z programu dostępne dla dokumentów (z pliku [macros.xml] w katalogu z wersją programu. Treść maila musi zawierać tagi HTML, tak aby była poprawnie wyświetlana. Ważną opcją w tej zakładce jest zaznaczenie pola [Załącznik], dzięki niemu do maila zostanie załączony plik w postaci wydruku dokumentu w formacie PDF. W wierszu poniżej możemy podać kod szablonu jaki chcemy wysłać lub zostawić to okienko puste, wtedy program wyśle szablon wydruku domyślny dla klienta. Poniżej propozycja treści powiadomienia dla eFaktury sformatowana w języku HTML (wymagany w edytorze treści):
+<p><strong>Drogi Kliencie,</strong></p>
+
+<p><br />W załączniku znajduje się Państwa faktura w postaci elektronicznej.</p>
+
+<p><br />Wiadomość ta oraz wszelkie załączone do niej załączniki są poufne.<br />Jeśli nie jest Pan/i zamierzonym adresatem niniejszej wiadomości, informujemy, że jej rozpowszechnianie, kopiowanie, rozprowadzanie lub inne działanie o podobnym charakterze jest zabronione i może być nielegalne. Prosimy o poinformowanie nadawcy oraz usunięcie wiadomości bez otwierania załączników.<br /> <br />
+
+Wiadomość została wysłana automatycznie - prosimy na nią nie odpowiadać.</p>
+
+Na poniższym PrtScn zostało pokazane, jak powinna wyglądać wypełniona zakładka „Alerty” dla powstałej wiadomości mailowej.
+
+Ostatnią polem jaką należy uzupełnić, to zakładka [Odbiorcy]. W tym miejscu ustawiamy do kogo mają być wysłane powiadomienia, w przypadku powiadomienia eFaktura możemy wykorzystać dwa pola: główny mail z karty klienta wybrany na dokumencie lub wartość dowolna na karcie klienta. W obydwu przypadkach należy wykorzystać zapytania SQL. Odnośnie pola mail z karty klienta wpisujemy:
+select ph_phone from tb_telefony where ph_type = 2 and ph_datatype = 1 and ph_id = {KLIENT1.ID}
+
+Odnośnie wartości dowolnej z karty klienta wpisujemy (należy ją dodać w Ustawienia -> Słowniki):
+select regexp_split_to_table(k_value132, ';') from mvv.tb_klient_mv where k_idklienta = {KLIENT1.ID}
+
+gdzie zmienna [k_value132] to nazwa wartości dowolnej pod bazą danych i jest widoczna w słownikach dla [Wartości dowolne klienta] na definicji danej wartości dowolnej. Dzięki użyciu w zapytaniu funkcji [regexp_split_to_table] można wpisać w tym polu na karcie klienta, kilka adresów mailowych oddzielonych ;(średnikiem) bez odstępów.
+Najczęściej eFakture ustawia się za pomocą wartości dowolnej na kartotece klienta. Dana firma musi uzupełnić sobie to pole na kartotekach swoich klientów o adresy mailowe ale dzięki temu ma pewność, że wiadomość trafi do odpowiedniej osoby zajmującej się płatnościami/fakturami. Poniżej pokazano jak należy umieść wspomniane wyżej zapytanie w zakładce [Odbiorcy].
+
+Images
+
+
+
+
+
+
+

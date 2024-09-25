@@ -1,0 +1,11 @@
+# Raporty
+
+W ramach dostępu do zakładki raporty użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
+
+- uwzględnij – wybór między pozycjami z bufor + zatwierdzone lub z księgi
+
+![tmpb95f2fdc-a9d6-479e-9066-c1df3599b192](https://www.cfi.pl/vendohelp/content/imgs/V3/7593f231c562e660082fa7800e624a0a-2062-0.png)
+
+Poza możliwością filtrowania użytkownik ma możliwość dodawania i usuwania raportów, importu i eksportu raportów, wykonania raportu, edycji nazwy istniejącego już raportu oraz kopiowania raportu. Do tego celu należy posłużyć się funkcjami, które są zlokalizowane w lewym – górnym rogu lub pod prawym przyciskiem myszy.
+
+![tmpe855a0cc-6fcf-4a97-ac48-790f1151ac05](https://www.cfi.pl/vendohelp/content/imgs/P7/e64e9cd5e71b98bdceef4dcf5ab56b7c-19626-0.png)

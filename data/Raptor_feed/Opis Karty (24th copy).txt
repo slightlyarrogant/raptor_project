@@ -1,0 +1,71 @@
+# Obiekty
+
+## 	Opis
+Zasoby firmy w systemie VENDO.ERP obejmują wszelkie zasoby, które są wykorzystywane do prowadzenia działalności firmy. Te zasoby mogą być zarządzane w ramach różnych modułów systemu ERP i obejmować zarówno zasoby materialne, jak i niematerialne. Przykładowe zasoby:
+-	obiekty serwisowe – partie wyrób podlegające serwisowaniu
+-	maszyny i stanowiska pracy – ewidencja parku maszyn, budynków
+-	urządzenia – takie jak salki konferencyjne, samochody służbowe
+
+![tmpf603f873-dee1-4857-b8f9-57c92b78e70b](https://www.cfi.pl/vendohelp/content/imgs/C4/e09265c9778c2981e97beb89f9d4757d-69725-0.png)
+
+## Zakładki
+
+### Ogólne
+
+
+![tmpd1e2b605-9cd7-4cb8-b82f-bb87b0ca59f9](https://www.cfi.pl/vendohelp/content/imgs/C4/e09265c9778c2981e97beb89f9d4757d-69725-0.png)+
+
+| Nazwa pola                             | Opis                                                                                                      | Typ       |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------|
+| Długość                                | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Szerokość                              | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Wysokość                               | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Waga netto 1 szt.                      | Miara jednostki podstawowej kartoteki towaru w kilogramach                                                | Liczba    |
+| Waga opakowania – tara                 | Miara jednostki opakowania w kilogramach                                                                  | Liczba    |
+| Opakowanie 1                           | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu. Wartość przenoszona automatycznie do pozycji dokumentu | Słownik   |
+| Opakowanie 2                           | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu | Słownik   |
+| Przeliczniki Długość                   | Miara jednostki podstawowej kartoteki towaru w metrach bieżących                                           | Liczba    |
+| Przeliczniki Powierzchnia              | Miara jednostki podstawowej kartoteki towaru w metrach kwadratowych                                        | Liczba    |
+| Przeliczniki Objętość                  | Miara jednostki podstawowej kartoteki towaru w metrach sześciennych                                        | Liczba    |
+| Rozmiarówka - Sposób pakowania         | Referencja do sposobu pakowania dla dedykowanego rodzaju kartoteki towaru (domyślnie nieużywane)           | Słownik   |
+| Domyślnie używane jednostki - Zakupu   | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów zakupowych | Słownik   |
+| Domyślnie używane jednostki – Sprzedaży| Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów sprzedażowych | Słownik   |
+| Domyślnie używane jednostki - Inwentaryzacji | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentu inwentaryzacji | Słownik   |
+| Domyślnie używane jednostki - Produkcji | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów produkcyjnych | Słownik   |
+| Towary kaucjonowane – Jednostka podst. | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę podstawową                    | Słownik   |
+| Towary kaucjonowane – Opakowanie 1     | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 1                  | Tekst     |
+| Towary kaucjonowane – Opakowanie 2     | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 2                  | Słownik   |
+| Typ przeliczenia                       | Stosowany typ przeliczenia na strukturze i technologii                                                    | Liczba    |
+| Receptura wg. wymiarów                 | Możliwość wpisywania wymiarów według Typ przeliczenia na technologii                                       | Tak / Nie |
+
+
+### 	Szczegóły
+
+
+![tmp0ab33657-9dfc-4a96-9b3d-4e9f14c76d36](https://www.cfi.pl/vendohelp/content/imgs/I8/57daa78f19634243ff62bc3ea20b9a73-67470-0.png)
+
+| Nazwa pola                             | Opis                                                                                                      | Typ       |
+|----------------------------------------|-----------------------------------------------------------------------------------------------------------|-----------|
+| Długość                                | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Szerokość                              | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Wysokość                               | Miara jednostki podstawowej kartoteki towaru w milimetrach                                                | Liczba    |
+| Waga netto 1 szt.                      | Miara jednostki podstawowej kartoteki towaru w kilogramach                                                | Liczba    |
+| Waga opakowania – tara                 | Miara jednostki opakowania w kilogramach                                                                  | Liczba    |
+| Opakowanie 1                           | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu. Wartość przenoszona automatycznie do pozycji dokumentu | Słownik   |
+| Opakowanie 2                           | Referencja do jednostki alternatywnej kartoteki towaru. Jest to ilość podstawowych jednostek kartoteki towaru w opakowaniu | Słownik   |
+| Przeliczniki Długość                   | Miara jednostki podstawowej kartoteki towaru w metrach bieżących                                           | Liczba    |
+| Przeliczniki Powierzchnia              | Miara jednostki podstawowej kartoteki towaru w metrach kwadratowych                                        | Liczba    |
+| Przeliczniki Objętość                  | Miara jednostki podstawowej kartoteki towaru w metrach sześciennych                                        | Liczba    |
+| Rozmiarówka - Sposób pakowania         | Referencja do sposobu pakowania dla dedykowanego rodzaju kartoteki towaru (domyślnie nieużywane)           | Słownik   |
+| Domyślnie używane jednostki - Zakupu   | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów zakupowych | Słownik   |
+| Domyślnie używane jednostki – Sprzedaży| Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów sprzedażowych | Słownik   |
+| Domyślnie używane jednostki - Inwentaryzacji | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentu inwentaryzacji | Słownik   |
+| Domyślnie używane jednostki - Produkcji | Referencja do jednostki alternatywnej kartoteki towaru. Wartość przenoszona automatycznie do pozycji dokumentów produkcyjnych | Słownik   |
+| Towary kaucjonowane – Jednostka podst. | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę podstawową                    | Słownik   |
+| Towary kaucjonowane – Opakowanie 1     | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 1                  | Tekst     |
+| Towary kaucjonowane – Opakowanie 2     | Referencja do kartoteki towaru o rodzaju Kaucja. Jest to kaucja za jednostkę opakowania 2                  | Słownik   |
+| Typ przeliczenia                       | Stosowany typ przeliczenia na strukturze i technologii                                                    | Liczba    |
+| Receptura wg. wymiarów                 | Możliwość wpisywania wymiarów według Typ przeliczenia na technologii                                       | Tak / Nie |
+
+
+### Pliki

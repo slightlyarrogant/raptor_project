@@ -1,0 +1,72 @@
+# Program WMS - program magazynowy VENDO
+
+# Program WMS
+
+## Zarządzanie magazynem w oparciu o WMS
+
+Vendo WMS zarządza procesami magazynowymi, wykorzystując kody kreskowe i kolektory danych. System optymalizuje pracę magazynu, zapewniając efektywne zarządzanie logistyką i kontrolę nad stanami magazynowymi. Podnosi wydajność i skraca czynności związane z logistyką magazynową: począwszy od przyjęcia towaru, a na wydaniu i inwentaryzacji skończywszy. Wydajne algorytmy i elastyczne scenariusze pracy magazyniera zapewniają sprawne  użytkowanie systemu.
+
+## Jakie funkcje zarządzania magazynem realizuje Vendo WMS?
+
+### Praca oparta o kolektory danych i kody kreskowe
+
+- wydawanie, przyjmowanie, przeprowadzania inwentaryzacji, obsługa innych scenariuszy realizowana w oparciu o kolektor danych i kody kreskowe,
+- definiowalne scenariusze pracy związane z wydawaniem towarów np. Single Order Picking, Multi Order Picking picking, Batch Picking
+- kompatybilność z Androidem lub Windows Mobile,
+- wydruk i wysyłka kompletu dokumentów,
+
+### Miejsca magazynowe
+
+- podział magazynu na miejsca magazynowe lokacje: pomieszczenie, rząd, regał, półka,
+- podział magazynu na strefy pakowania i kompletacji,
+- charakterystyki miejsc magazynowych np.: rozmiar, ładowność, miejsce paletowe,
+- przyjmowanie i wydawanie towarów na wskazane miejsca magazynowe,
+
+### Jednostki logistyczne
+
+- jednostki logistyczne (LU):tworzenie LU,przyjęcie od dostawcy,wkładanie i wyjmowanie towarów z jednostki logistycznej,kompletacja LUwydanie jednostki logistycznej,
+- tworzenie LU,
+- przyjęcie od dostawcy,
+- wkładanie i wyjmowanie towarów z jednostki logistycznej,
+- kompletacja LU
+- wydanie jednostki logistycznej,
+- obsługa numeracji SSCC (Serial Shipping Container Code)
+- packinglista – informacja o zawartości jednostki logistycznej,
+
+- tworzenie LU,
+- przyjęcie od dostawcy,
+- wkładanie i wyjmowanie towarów z jednostki logistycznej,
+- kompletacja LU
+- wydanie jednostki logistycznej,
+
+### Algorytmy obsługi magazynu WMS
+
+- automatyczny przydział zadań magazynierowi,
+- konfigurowalne scenariusze pracy magazyniera m.in.:przyjęcie dostawy na podstawie zamówienia,wydanie na produkcję,wydawanie zamówień,inwentaryzacja,kontrola wysyłki,
+- przyjęcie dostawy na podstawie zamówienia,
+- wydanie na produkcję,
+- wydawanie zamówień,
+- inwentaryzacja,
+- kontrola wysyłki,
+- mulipicking,
+- optymalna ścieżka przejścia magazyniera,
+- algorytmy rozmieszczenia towarów,
+
+- przyjęcie dostawy na podstawie zamówienia,
+- wydanie na produkcję,
+- wydawanie zamówień,
+- inwentaryzacja,
+- kontrola wysyłki,
+
+### Standard logistyczny GS1
+
+- pula numerów jednostek logistycznych i kodów EAN,
+- numeracja jednostek logistycznych,
+- generowanie wydruków etykiet wg standardu GS1,
+
+### Analizy magazynowe
+
+- rozliczenie pracy magazynierów: ilości pobranych i rozłożonych towarów, statystyki pracy,
+- stany na wskazany dzień, towary zalegające, obroty magazynowe, itp.,
+- definiowanie własnych raportów,
+

@@ -1,0 +1,103 @@
+
+
+
+# 	Kartoteka Pracownicza
+Moduł pracownicy przeznaczony jest do zarządzania danymi oraz uprawnieniami Pracowników. W systemie na starcie zdefiniowane jest tylko jedno konto (konto administratora - użytkownik: admin, hasło: baza). Logując się na to konto mamy całkowitą kontrolę nad systemem. Z tego też powodu hasło na konto administratora powinno być zmienione zaraz po pierwszym logowaniu (menu główne > Konto > Zmiana hasła – opcja służy do zmieniania hasła dla aktualnie zalogowanego pracownika). Oczywiście zanim którykolwiek z pracowników zacznie prace z systemem trzeba z poziomu administratora utworzyć jego konto (dodanie nowego pracownika) i odpowiednio zdefiniować jego uprawnienia. Oczywiście możliwa jest praca wielu użytkowników na jednym koncie, ale znacznie utrudni to kontrolę pracownika.
+
+Jeśli nie mamy utworzonych kont pracowników dodajemy je odnajdując w menu głównym sekcje Pracownicy a następnie wybieramy zakładkę pracownicy. Dopisanie nowego pracownika odbywa się dwojako. Pierwszym sposobem jest kliknięcie na liście pracowników w zielony plus znajdujący się w lewym górnym rogu okna programu, kolejnym użycie klawisza INSERT a następnie zdefiniowanie podstawowych informacji o pracowniku.
+
+-	**Informacje ewidencyjne** – podstawowe informacje ewidencyjne oraz dane adresowe pracownika
+-	**Dane systemowe** – parametry związane z logowaniem do systemu tj. login i hasło. 
+    - 	***Nie podlega polityce zmiany hasła*** – wyłączenie pracownika z polityki bezpieczeństwa Parametr definiowany w ustawieniach ogólnych systemu >Parametry pracy > Ogólne polityka bezpieczeństwa
+    - ***Prawo do logowania*** – możliwość logowania do systemu Vendo
+- **Licencje**
+    - Vendo.Lite
+    - Vendo.Work Magazyn
+    - Vendo.Work Produkcja
+    - Vendo.Work Serwis
+
+![kartotekaPracownika](https://www.cfi.pl/vendohelp/content/imgs/O6/489f61a7b0d26302f33101ffcbe56d3a-32011-0.png)
+
+
+ 
+## 	Zarządzanie grupami
+kolejnym parametrem który należy uzupełnić są dane związanie z określeniem działu oraz roli pracownika. Dokonujemy tego z poziomu karty pracowniczej klikając buton „Zarządzaj grupami”.  Z poziomu zarządzania grupami administrator systemu ma możliwość definiowania działu oraz roli pracownika w firmie. Definiowanie działu bądź grupy pracownika dokonujemy klikając „Dodaj grupę”  następnie wybór właściwego typu i określenie kodu i nazwy dodawanej pozycji.  Natomiast operacji przydzielenia działu bądź roli pracownika dokonujemy poprzez zaznaczenie właściwego działu/roli a następnie oznaczenie pracownika który ma zostać do niego przypisany. W momencie gdy zdefiniowane były już wcześniej uprawniania dla danego działu po przydzieleniu pracownika do właściwego działu zostaną mu one nadane. 
+
+ 
+
+ Po przydzieleniu pracownika do właściwego działu oraz ewentualnie określeniu roli należy przystąpić do definiowania uprawnień. Do momentu aż uznamy, że uprawnienie danego pracownika są odpowiednio ustawione warto zaznaczyć opcję Bez prawa logowania by pracownik nie miał możliwości korzystania z systemu. Po zatwierdzeniu nowe konto pracownika pojawi się na liście. W poniższych rozdziałach omówiono szczegółowo uprawnienia i sposób nimi zarządzania.
+ 
+![kartotekaPracownikaGrupy](https://www.cfi.pl/vendohelp/content/imgs/N9/5ac4bd1ea478c4ac24e4c0540fd63739-62824-0.png)
+## 	Dane firmowe
+Zakładka dane firmowe pozwala na określenie danych informacji dotyczących pracownika. Podstawowe pola zakładki to:
+
+**Sekcja Charakterystyka pracy** 
+
+
+- ***Dział*** - pole to pozwala na przydzielenie pracownika do zdefiniowanego uprzednio działu w firmie
+- **Stanowisko** - pole to pozwala na przypisanie pracownika do dodanie pracownika 
+- **Kalendarz pracy** – system Vendo pozwala na utworzenie kalendarze pracy w trybie uproszczony bądź też na podstawie zdefiniowanych grafików. Pole to pozwala na określnie z jakiego rodzaju kalendarza pracy korzysta pracownik. Informacje dotyczące zasady dziania kalendarzy pracowniczych znajdują si e w zakładce kalendarze pracownicze.
+- **Zmiana** – przypisanie pracownikowi trybu pracy oraz zmiany 
+- **Przekaż uprawnienia** – pole to pozwala na tymczasowe przekazanie obecnie posiadanych uprawnień innemu pracownikowi. Funkcja ta najczęściej wykorzystywana jest w sytuacji, gdy podczas nieobecności pracownika konieczna jest kontynuacja wykonywania jego zadań z uprawnieniami do niego przypisanymi  
+
+
+ 
+**Sekcja Koszyt/Wynagrodzenia**
+
+-	**Domyślna grupa towarowa** – przypisanie pracownikowi dostępu do wybranej grupy towarowej z możliwością wglądu w zdefiniowaną grupę
+-	**Procent premii** – premia naliczana pracownikowi liczona od dochodu konfiguracja poprzez skrypty
+-	***Koszt rbh netto*** – godzinowy koszt pracy pracownika netto
+-	***Współczynnik*** – procentowe określenie przelicznika wydajności pracownika
+-	***Koszt rbh brutto*** – godzinowy koszt pracy pracownika brutto
+-	***Wynagrodzenie*** - stawka wynagrodzenia
+
+
+
+![Pracownik%20dane%20firmowe](https://www.cfi.pl/vendohelp/content/imgs/U4/93205151d2fbec7462e0a4d79203a2e8-32764-0.png)
+ 
+ ##  **RODO**
+>	
+W związku wejściem w życie ustawy o ochronie danych osobowych system Vendo został rozbudowany o funkcje pozwalające w łatwy i intuicyjny sposób wprowadzić informacji o zgodach wynikających z ustawy.
+W module Pracownicy na zakładce „Dane podstawowe”  została dodana dodatkowa sekcja odpowiedzialna za wprowadzenie informacji o  pozyskanych zgodach.   
+W sekcji tej prezentowane są informacje związane z pozyskanymi zgodami.
+Aby zarejestrować informacje o zgodzie w systemie Vendo należy postępować w następujący sposób:
+-	W sekcji odpowiedzialnej za wprowadzenie zgody kliknąć buton RODO
+-	Po wejściu w okno w którym zawarte są informacje o zgodach dodajemy nową pozycję wciskając klawisz INSERT
+-	Należy określić parametry takie jak: data ważności - informacja do kiedy obowiązuje zgoda oraz źródło zgody  (wyboru dokonujemy ze wcześniej zdefiniowanego słownika)
+-	Istnieje również możliwość dołączenie do formularza zgody informacji o zdarzeniach związanych z wprowadzaną zgodą jak również, różnego rodzaju plików i obiektów  z tym związanych oraz komentarza.
+-	Po weryfikacji a następnie zaakceptowaniu wprowadzonych zmian w systemie zostanie wyświetlona informacja o uzyskanej zgodzie.
+
+W celu szybkiego wyboru osób/firm dla których zostały wprowadzone informacje o zgodach, system został rozbudowany o stosowne filtry. Zostały one dodane w standardowej sekcji odpowiedzialnej za filtrowanie danych. Aby dokonać wyboru pozycji z danymi osób które posiadają stosowne zgody należy w sekcji poświęconej filtrom określić parametry definiujące dane osoby poprzez wypełnienie właściwych pól 
+
+![kartotekaPracownikaRODO](https://www.cfi.pl/vendohelp/content/imgs/X3/9378d3547586abfe0dd3d6f3a51f89d2-38011-0.png)
+
+## 	Pozostałe
+Zakładka ta służy do konfiguracji oraz dostępu do kont FTP, Vendo Phone czasozliczarki itp:
+sekcje znajdujące się w zakładce pozostałe to:
+Konta FTP
+
+- **Polaczenia FTP** – konfiguracja połączeń FTP  
+- **Vendo Phone**
+- **Czasozliczarka**
+    - ***Automatyczna rejestracja pracy*** – automatyczne uruchomienie zliczania czasu pracy w momencie otwarcia zdarzenia
+    - ***przypomnij o rejestracji pracy - Częstotliwość*** – funkcja przypominająca o niezrealizowanych zdarzeniach z określeniem częstotliwości czasu wyświetlania dialogu
+-	**Uprawnienia ostępu do klienta**
+    - ***Tylko klienci przyporządkowani do agenta*** – parametr określający możliwości dostępu pracownika do wybranej grupy kontrahentów przyporządkowanych do agenta
+
+- **Rabat**
+    - ***Brak ograniczeń w udzielaniu rabatu*** – uprawnieni pozwalające na udzielanie przez pracownika rabatów bez limitu procentowego
+    - ***Max rabat [%]*** – określenie procentu nadawanego rabatu
+
+    
+![tmpce695b6c-616b-4f1d-b2fa-45ded65e0c21](https://www.cfi.pl/vendohelp/content/imgs/Z9/63f7b1eaa9c6d5f873a37b9fe567de9d-118842-0.png)
+
+## Systemy zewnętrzne
+z poziomu zakładki systemy zwenetrzne pozwala na przydzilenie pracownika do współpracy z systemami zewnętrznymi np. B2B
+## Wartości dowolne
+Wartości, które użytkownik sam może definiować w programie nazywamy Wartościami dowolnymi. Pożyteczną cechą wartości dowolnych jest możliwości ich wydruku na dokumentach, można też wykorzystywać je w skryptach kalkulacyjnych wystarczy wcześniej w oknie definiowania wartości dowolnej (poniżej), w polu Nazwa zmiennej określić jej nazwę
+Wartości dowolne dla kartotek pracowniczych definiowane są w słownikach systemowych. Aby tego dokonać należy:
+-	Wejść w ustawienia>Główne>Słowniki>Pracownik: Wartości dowolne pracowników
+-	Wciskając ENTER wchodzimy na pozycję 
+-	Uzupełnić niezbędne Pola definiowanej wartości dowolnej i zatwierdzamy
+Chcąc sprawdzić jak wygląda działanie pola wartości dowolnych wchodzimy na kartę pracownika > zakładka Wartości dowolne. Następnie klikając prawy przycisk myszy > Dodaj wartość dowolna wybieramy właściwa pozycje.
+

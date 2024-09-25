@@ -1,0 +1,45 @@
+Analizy
+Metadata
+
+url: http://192.168.33.19/master/docs/company/instrukcje-stanowiskowe/pod-klientow/laguna/analizy
+scraped_at: 2024-09-05T11:50:51.626085
+last_updated: 2024-09-05T11:50:51.626129
+parent_id: 13e594bd6bfbe6e2114b14fd9b049f42
+path: aPaczka Plugin/Dobre praktyki/Szkolenia - B2B/Zestawienie webinaria/Zestawienie eSzkolenia/Inter stal/Handel/Magazyn/Praca z czytnikiem/Rozliczenie produkcji/Ustawienia Przyjmowanie Towaru na pakowaniu/Laguna/Analizy
+meta_tags: ['dane', 'użytkownik', 'związane', 'należy', 'analizy', 'analiz', 'dostarcza', 'raport', 'system', 'według']
+
+Content
+Instrukcja stanowiskowa
+Cel:
+Analizy
+Opis funkcjonalnosci
+System Vendo dostarcza rozbudowany moduł analiz, aby moduł analiz był widoczny dla użytkownika, należy go dodać do widoku głównego, w tym celu należy uruchomić funkcję Dodaj menu lub widget dostępną w lewem rogu głównej wstążki następnie zaznaczyć Menu – Analizy i zatwierdzić wybór przyciskiem
+
+Po dodaniu menu analiz widok zostanie wzbogacony o okno, w którym poszczególne analizy z danych obszarów zostały pogrupowane, analogicznie jak w menu głównym, tj. Dokumenty, Klienci, Magazyn itd. 
+Aby uruchomić daną analizę, należy rozwinąć obszar i ją wybrać z listy. Każda z analiz w wymiarze funkcjonalnym, dostarcza użytkownikowi możliwość grupowania i sumowania otrzymanych wyników, natomiast w poszczególnych analizach, zostały zdefiniowane indywidualne filtry, przy pomocy których system dostarcza informacji, według kryteriów, które określa użytkownik. Jednym z podstawowych raportów pod kątem sprzedażowym jest Analiza sprzedaży. Raport ten dostarcza informacji, według wyboru ze zdefiniowanej listy Analiza wg, w której użytkownik, określa według jakiego kryterium, dane mają być grupowane, np. Kraj nabywcy, wówczas głównym agregatorem danych będzie kraj sprzedaży. System dostarcza w tym raporcie dane odnośnie, sprzedaży, marży i kosztami.
+
+Po każdym wyborze według jakiego kryterium, raport ma prezentować dane, jak również jakiejkolwiek innej zmianie w filtrach, należy odświeżyć dane, za pomocą przycisku [Odśwież] Każdy raport, ze struktury płaskiej, użytkownik, może przekształcić, w raport grupujący i sumujący wybrane dane, czyli zaprezentować dane analogicznie jak w MS Excel tworząc tabele przestawne. Aby to wykonać należy, metodą drag and drop (przeciągnij i upuść) przenieść w sekcję grupująca daną kolumnę, ponadto, za pomocą klawisza [F10] użytkownik dodaje podsumowanie całego raportu. Dla przykładu raport sprzedaży, ze struktury płaskiej poprzez przeciągniecie kolumn Nazwa i % marży do sekcji grupującej, system przekształcił w raport graficzny, wraz z podsumowaniem w dolnej sekcji [F10]
+
+Kolejną funkcjonalnością systemową dostępną w Analizie sprzedaży, oraz w innych raportach, w których zdefiniowano pole typu checkbox, jest możliwość, wybrania kilku, otrzymanych rekordów, poprzez ich zaznaczenie i dalszego analizowania wybierając klawisz [Enter], tylko pod kątem wcześniej zaznaczonych rekordów (jeżeli nie możliwości zaznaczenia kilku, można analizować dalej dane dla jednego wybranego rekordu). Przykładowo wybierając poniżej 4 regiony, w dalszym oknie, dane będą ograniczone tylko do tych wybranych regionów, użytkownik ponownie może w nim wybrać kolejne kryterium według którego system wygeneruje dane (zawsze należy odświeżyć okno).
+
+
+Powyższe funkcjonalności: filtrujące, grupujące i ograniczające działają analogicznie w pozostałych raportach, w których zostały zaimplementowane.
+
+Kolejne raporty Analiza kosztów i Analiza zakupów reprezentują dane w ujęciu kosztowym oraz zakupowym, podobnie jak w każdym okienku w systemie, użytkownik również w analizach, ma możliwość rozbudować widok raportu, poprzez dodanie ukrytych pól, aby to zrobić, należy kliknąć PPM(prawy przycisk myszy) na belce kolumn, następnie wybrać funkcję Dostosowanie listy kolumn, w kolejnym oknie wybrać pole które chcemy dodać do widoku i metodą drag and drop umieścić na belce kolumn.
+
+System Vendo dostarcza wielu analiz związanych z dokumentami, niniejsza instrukcja opisuje analizy pod katem funkcjonalności analizowania danych, użytkownik powinien sam je przetestować w zależności od potrzebnych danych. Kolejna grupą raportów, są raporty magazynowe, użytkownik w tych raportach znajdzie dane związane z gospodarką magazynową: stany magazynowe, obroty materiałów, oraz inne dane związane z magazynami i kartoteką materiałową.
+
+Następną grupa raportów są raporty związane z płatnościami, użytkownik znajdzie w nich analizy związane z należnościami oraz zobowiązaniami np. analizę należności i zobowiązań wg okresów i kontrahentów, układ raportu różni się od prezentowanych wcześniej, filtry znajdują się w górnej i dolnej sekcji, ale korzystanie z nich jak i z innych funkcji działają tak samo.
+
+Kolejna grupa raportów, to raporty związane z obszarem produkcyjnym, jest to bardzo rozbudowany moduł analiz, znajduje się w nim m.in. wykres Gantta realizacji planów produkcyjnych, analiza produkcji która prezentuje ilości zaplanowane i ilości wykonane, analizy związane z operacjami, ze stanowiskami produkcyjnymi, analizy rozliczające np. KKW, co istotne z poziomu analiz, możemy przejść do wyświetlanych rekordów i je analizować z poziomu systemowego.
+
+Pozostałe grupy raportów dostępne w systemie związane są z finansami, reklamacjami, analizy związane z zasobami ludzkimi, oraz analizy związane z relacjami z klientem, w zależności od działu w jakim pracuje dany użytkownik, należy uruchomić i sprawdzić prezentujące w nich dane, w celu wyselekcjonowaniu odpowiednich w zależności od indywidualnych potrzeb.
+Images
+
+
+
+
+
+
+
+

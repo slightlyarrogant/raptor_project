@@ -1,0 +1,69 @@
+# Ogólna budowa systemu
+## Moduły
+
+System VENDO.ERP składa się z różnych modułów, które wspierają zarządzanie kluczowymi obszarami działalności firmy. Dostępność modułów uzależniona jest od posiadanych licencji oraz uprawnień przyznanych użytkownikowi. Na poniższym rysunku przykładowa lista modułów dostępna jest po prawej stronie (Moje zakładki, Dokumenty, Klienci, itd.).
+
+![tmp371b768c-99b4-4b3a-b9d5-4bf67eeedde7](https://www.cfi.pl/vendohelp/content/imgs/J5/e1d83247baa9eb3738bfef7d19c28ad2-69207-0.png)
+
+Moduły są w logiczny sposób podzielone w ramach operacji jakie można w nich wykonywać. 
+
+## Zakładki
+
+### Opis
+
+W celu uporządkowania widoku każdy moduł podzielone został na zakładki. W poniższym przykładzie zaprezentowany jest podział na zakładki modułu Magazyn, gdzie zakładkami są Towary, Stany partii, Ceny indywidualne, itd.
+
+![tmpdf7bcd2e-fbf5-4154-a6a5-9205862b46d1](https://www.cfi.pl/vendohelp/content/imgs/M4/645110f165e6cf0ccc4d6aabb0d9b1bb-70893-0.png)
+
+Dostępność poszczególnych zakładek również uzależniona jest od posiadanych uprawnień przyznanych użytkownikowi.
+W ramach każdej zakładki system VENDO.ERP zbudowany jest z:
+-	List - np. lista dokumentów (FV, WZ itd.), klientów, towarów itd. - na listach tych widać już wprowadzone dane
+-	Formularzy - np. karta dokumentu (FV, WZ itd.), kartoteka klienta, kartoteka towaru itd. - na formularzach definiujemy konkretne pozycje, które potem widzimy na listach
+Listy przedstawiają zgromadzone dane, a formularze służą do dodawania i edycji danych. 
+
+
+Typowa zakładka może składać się z kilku części:
+-	Filtry zewnętrzne - filtry pozwalające na selektywne wyświetlanie zawartości list (np. data, seria)
+-	Nagłówki listy - górny wiersz tabeli, gdzie wpisane są nazwy kolumn
+-	Wiersze listy – dane w postaci pozycji odpowiadające ustawionym filtrom na liście
+-	Pasek zadań z ikonkami Funkcji - zwykle prawy-dolny róg okna, przycisk daje dostęp do wszelkich operacji, które można przeprowadzać z danego miejsca w programie 
+
+
+Przykładowy wygląd zakładki  zaprezentowano na poniższym rysunku.
+
+![tmp8769dbe3-2631-41af-ac59-2ecec9f2ce1a](https://www.cfi.pl/vendohelp/content/imgs/D5/ee3ce96a4ed30fe5af656837a5667a93-64947-0.png)
+
+### Ustawienia List
+
+-	Ustawienie kolumn nagłówka - każda kolumna posiada swój nagłówek. Nagłówki pełnia przed wszystkim role informacyjna, ale nie tylko – można dzięki nim sortować listy, dodawać nowe kolumny i zmieniając ich kolejność
+-	Widoczność kolumn na danej liście w VENDO.ERP dostosowywana jest przez użytkownika dzięki dedykowanej funkcji. Dostępne do wyboru kolumny są logicznie i referencyjnie powiązane w systemie. Istnieje możliwość ich zagnieżdżonego wyciągania i pokazywania na liście. Przykładowy widok możliwości dostosowania kolumn zaprezentowano na poniższym rysunku 
+
+![tmpf2221c09-9f9d-4ef4-b3ef-327e962774b2](https://www.cfi.pl/vendohelp/content/imgs/D5/551ee699271ffa9d20fb382bc9213240-93292-0.png)
+
+-	Kolory na listach – poszczególne czcionki w wierszach listy mogą występować w różnych kolorach (domyślnie):
+    -	Czarny – Podstawowy kolor listy, np. zamknięte dokumenty
+    -	Niebieski – Są to rekordy znajdujące się w buforze. To znaczy takie, które nie są zamknięte i można je jeszcze edytować (na przykład dokumenty FV, RW)
+    -	Czerwony – Oznacza zwykle 'przeterminowanie' pozycje, np. w kolorze czerwonym mogą się pojawić należności i zobowiązania, których termin płatności minął. Na liście towarów kolor czerwony oznacza pozycje, których stan magazynowy jest poniżej stanu minimalnego
+    -	Szare – Oznacza anulowane/stornowane pozycje
+    -	Zielony - Występuje głównie na zamówieniach i oznacza zamówienie zrealizowane. W przypadku płatności oznacza on pozycje importowane. Dla dokumentów zleceniowych oznacza, że zostało ono wykonane
+-	Operacje na listach - Spora część operacji można wykonać na listach i nie chodzi tylko o typowe dodawanie nowych pozycji do listy, drukowanie listy itd. Program daje też możliwość wykonywania operacji z poziomu listy na konkretnych pozycjach – np. można drukować dokumenty, generować z nich dokumenty pochodne itd. Inaczej mówiąc nie zawsze trzeba wchodzić na kartę dokumentu (obiektu) ażeby przeprowadzić na nim operacje. Również w formie operacji blokowych, czyli zbiorczo dla wybranych rekordów danych
+-	Podgląd podsumowania listy – Możliwość zaprezentowania dodatkowego okienka kumulującego ilości i wartości z odpowiednimi dla danej listy pozycjami. Program pozwala również wyświetlać podsumowania dla zaznaczonych wierszy
+-	Wydruk/eksporty listy – VENDO.ERP umożliwia wydruki w trybie graficznym i tekstowym
+
+### Filtry
+
+W systemie występuje kilka grup filtrów:
+-	Zewnętrzne
+-	Wewnętrzne
+-	Filtry na kolumnę
+
+
+Bez względu na ich rodzaj służą one do selektywnego wyświetlania zawartości list oraz
+szybkiego i łatwego odnalezienia danych (np. towar, kontrahent, dokument). Ich
+umiejętne użycie ułatwia prace na programie i skraca czas wykonywania wielu czynności.
+
+### Formularze
+
+Formularze służą do wpisywanie nowych informacji do systemu. Przykładem formularzy
+mogą być kartoteka klienta czy kartoteka towaru.
+

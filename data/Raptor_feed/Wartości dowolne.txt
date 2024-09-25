@@ -1,0 +1,215 @@
+# Wartości dowolne
+## Opis
+System VENDO.ERP umożliwia definiowanie i pracę z własnymi dodatkowymi polami tzw. Wartościami dowolnymi. Możliwość ta występuje na większości podstawowych obiektów w systemie (np. na dokumentach, kartotekach towaru, kartotekach klienta, zdarzeniach itp.). 
+
+## Typy danych
+-	Typy proste:
+    - Tekst
+    - Liczba
+    - Data
+    - Słownik
+    - Tak / Nie
+    - Pole tekstowe
+    - Data i godzina
+    - Kolor
+-	Referencje:
+    -	Klient
+    -	Towar
+    -	Kraj
+    -	Tabela kursów walut
+    -	Pracownik
+    -	Magazyn
+    -	Zlecenie
+    -	Zdarzenie
+    -	Dział
+    -	Obiekt
+    -	Zasób
+    -	Dokument
+    -	Miejsce magazynowe
+    -	Numer seryjny KKW
+    -	Technologia
+    -	Grupa I towaru
+    -	Grupa I klienta
+    -	Spedytor
+    -	Grupa II towaru
+    -	Grupa WWW towaru
+    -	Element rozmiarówki
+    -	Ludzie klienta
+    -	Pozycje dokumentu
+    -	KKW
+    -	Spinacz operacji
+    -	Waluta
+    -	Jednostka
+    -	Partia
+    -	Operacja technologiczna MRP
+    -	Abonament
+    -	Pozycja abonamentu
+    -	Plan zlecenia
+    -	Ośrodek powstawania kosztów
+-	Pliki
+    -	Pliki
+    -	Skrót do pliku
+    -	Skrót do katalogu
+-	JSON
+    -	JSON
+    -	Dialog JSON
+-	Nazwy w językach
+    -	Tekst w języku
+    -	Pole tekstowe w języku
+
+Poniżej w tabeli wymienione zostały obiekty dla którym można tworzyć własne pola.
+
+| Nazwa pola                                        | Opis                                                                                 |
+|---------------------------------------------------|--------------------------------------------------------------------------------------|
+| Drzewo                                            | Nazwa zwyczajowa                                                                     |
+| 1                                                 | Ustawienia ogólne                                                                    |
+| 1.1                                               | Wartości dowolne banków/kas                                                          |
+| 1.2                                               | Wartości dowolne dla oddziałów firmy                                                 |
+| 1.3                                               | Wartości dowolne dla rodzaju dokumentu                                               |
+| 1.4                                               | Słowniki wartości dowolnych                                                          |
+| 1.5                                               | Wartości dowolne elementów słowników                                                 |
+| 1.6                                               | Wartości dowolne dla Ośrodków Powstawania Kosztów (OPK)                              |
+| 1.7                                               | Zakładki wartości dowolnych                                                          |
+| 2                                                 | Kontrahent                                                                           |
+| 2.1                                               | Wartości dowolne państw                                                              |
+| 2.2                                               | Wartości dowolne klienta                                                             |
+| 2.3                                               | Wartości dowolne ludzi klienta                                                       |
+| 3                                                 | Pracownik                                                                            |
+| 3.1                                               | Wartości dowolne pracowników                                                         |
+| 3.2                                               | Wartości dowolne pracowników zlecenia                                                |
+| 3.3                                               | Wartości dowolne prac                                                                |
+| 4                                                 | Kalendarz pracownika                                                                 |
+| 4.1                                               | Wartości dowolne kalendarzy pracowników                                              |
+| 4.2                                               | Wartości dowolne elementów kalendarzy pracowników                                    |
+| 5                                                 | Dokument                                                                             |
+| 5.1                                               | Wartości dowolne wspólne dokumentu                                                   |
+| 5.2                                               | Wartości dowolne wspólne pozycji dokumentu                                           |
+| 5.3                                               | Wartości dowolne wspólne rozszerzonej pozycji dokumentu                              |
+| 5.4                                               | Wartości dowolne partii                                                              |
+| 5.5                                               | Wartości dowolne pomocnicze partii                                                   |
+| 6                                                 | Magazyn                                                                              |
+| 6.1                                               | Wartości dowolne dla grupy I                                                         |
+| 6.2                                               | Wartości dowolne dla grupy II                                                        |
+| 6.3                                               | Wartości dowolne dla grupy WWW                                                       |
+| 6.4                                               | Wartości dowolne jednostek                                                           |
+| 6.5                                               | Wartości dowolne kartotek dla klienta                                                |
+| 6.6                                               | Wartości dowolne jednostek logistycznych                                             |
+| 6.7                                               | Wartości dowolne towarów powiązanych                                                 |
+| 6.8                                               | Wartości dowolne magazynów                                                           |
+| 6.9                                               | Wartości dowolne miejsc magazynowych                                                 |
+| 6.10                                              | Wartości dowolne dla charakterystyki towaru per magazyn                              |
+| 6.11                                              | Wartości dowolne towaru                                                              |
+| 6.12                                              | Wartości dowolne dla grup cen                                                        |
+| 7                                                 | Zasoby                                                                               |
+| 7.1                                               | Wartości dowolne wspólne zasobów                                                     |
+| 8                                                 | Płatności                                                                            |
+| 8.1                                               | Wartości dowolne dla form płatności                                                  |
+| 8.2                                               | Wartości dowolne dla płatności                                                       |
+| 9                                                 | CRM                                                                                  |
+| 9.1                                               | Wartości dowolne wspólne zdarzeń                                                     |
+| 9.2                                               | Wartości dowolne zasobów                                                             |
+| 9.3                                               | Wartości dowolne klienta/osoby zdarzenia                                             |
+| 10                                                | RODO                                                                                 |
+| 10.1                                              | Wartości dowolne zgód RODO                                                           |
+| 11                                                | Produkcja                                                                            |
+| 11.1                                              | Wartości dowolne wspólne zlecenia                                                    |
+| 11.2                                              | Wartości dowolne wspólne planu zlecenia                                              |
+| 12                                                | Serwis                                                                               |
+| 12.1                                              | Wartości dowolne dla zlecenia                                                        |
+| 12.2                                              | Wartości dowolne dla pozycji zlecenia                                                |
+| 12.3                                              | Wartości dowolne Urządzenie                                                          |
+| 13                                                | Produkcja/Serwis                                                                     |
+| 13.1                                              | Wartości dowolne grup roboczych                                                      |
+| 13.2                                              | Wartości dowolne stanowisk pracy                                                     |
+| 14                                                | Produkcja/Serwis/CRM                                                                 |
+| 14.1                                              | Wartości dowolne wspólne planów zleceń                                               |
+| 14.2                                              | Wartości dowolne wspólne technologii                                                 |
+| 14.3                                              | Wartości dowolne czasów wolnych                                                      |
+| 14.4                                              | Wartości dowolne przestojów                                                          |
+| 14.5                                              | Wartości dowolne rezerwacji zasobów                                                  |
+| 14.6                                              | Wartości dowolne harmonogramów (wspólne)                                             |
+| 14.7                                              | Wartości dowolne definicji czynności                                                 |
+| 14.8                                              | Wartości dowolne planów czynności                                                    |
+| 14.9                                              | Wartości dowolne wykonań czynności                                                   |
+| 15                                                | Produkcja                                                                            |
+| 15.1                                              | Wartości dowolne dla zlecenia                                                        |
+| 15.2                                              | Wartości dowolne dla pozycji zlecenia                                                |
+| 15.3                                              | Wartości dowolne dla zamówień otwartych                                              |
+| 15.4                                              | Wartości dowolne dla pozycji zamówień otwartych                                      |
+| 15.5                                              | Wartości dowolne definicji pomiaru MRP                                               |
+| 15.6                                              | Wartości dowolne pomiaru MRP                                                         |
+| 15.7                                              | Wartości dowolne KKW                                                                 |
+| 15.8                                              | Wartości dowolne operacji KKW                                                        |
+| 15.9                                              | Wartości dowolne wykonania operacji KKW                                              |
+| 15.10                                             | Wartości dowolne ruchów wykonania operacji KKW                                       |
+| 15.11                                             | Wartości dowolne rozchodu/przychodu elementu KKW                                     |
+| 15.12                                             | Wartości dowolne technologii/kalkulacji                                              |
+| 15.13                                             | Wartości dowolne elementu technologii                                                |
+| 15.14                                             | Wartości dowolne operacji technologicznych                                           |
+| 15.15                                             | Wartości dowolne rozchodu/przychodu elem. technologii                                |
+| 15.16                                             | Wartości dowolne struktur produktów                                                  |
+| 15.17                                             | Wartości dowolne relacji struktur produktów                                          |
+| 15.18                                             | Wartości dowolne stanowisk technologii                                               |
+| 15.19                                             | Wartości dowolne stanowisk KKW                                                       |
+| 15.20                                             | Wartości dowolne dyspozycji magazynowych                                             |
+| 15.21                                             | Wartości dowolne grupy technologii MRP                                               |
+| 15.22                                             | Wartości dowolne ciągu technologicznego                                              |
+| 15.23                                             | Wartości dowolne słowników wykonania                                                 |
+| 15.24                                             | Wartości dowolne dla MES SCADA                                                       |
+| 16                                                | Kontrola dostawy                                                                     |
+| 16.1                                              | Wartości dowolne dla zlecenia                                                        |
+| 16.2                                              | Wartości dowolne dla pozycji zlecenia                                                |
+| 16.3                                              | Wartości dowolne definicji pomiaru kontroli                                          |
+| 16.4                                              | Wartości dowolne pomiaru kontroli                                                    |
+| 16.5                                              | Wartości dowolne KKD                                                                 |
+| 16.6                                              | Wartości dowolne operacji KKD                                                        |
+| 16.7                                              | Wartości dowolne wykonania operacji KKD                                              |
+| 16.8                                              | Wartości dowolne rozchodu/przychodu elementu KKD                                     |
+| 16.9                                              | Wartości dowolne technologii kontroli                                                |
+| 16.10                                             | Wartości dowolne elementu technologii kontroli                                       |
+| 16.11                                             | Wartości dowolne operacji technologicznych kontroli                                  |
+| 16.12                                             | Wartości dowolne rozchodu/przychodu elem. technologii kontroli                       |
+| 16.13                                             | Wartości dowolne grupy technologii kontroli                                          |
+| 16.14                                             | Wartości dowolne ciągu technologicznego kontroli                                     |
+| 16.15                                             | Wartości dowolne słowników wykonania kontroli                                        |
+| 17                                                | Proces sprzedaży                                                                     |
+| 17.1                                              | Wartości dowolne dla procesów                                                        |
+| 17.2                                              | Wartości dowolne pozycji procesu                                                     |
+| 18                                                | Reklamacje obce                                                                      |
+| 18.1                                              | Wartości dowolne dla reklamacji obcych                                               |
+| 18.2                                              | Wartości dowolne dla pozycji reklamacji obcych                                       |
+| 19                                                | Reklamacje własne                                                                    |
+| 19.1                                              | Wartości dowolne dla reklamacji własnych                                             |
+| 19.2                                              | Wartości dowolne dla pozycji reklamacji własnych                                     |
+| 20                                                | Dokumenty niezgodności                                                               |
+| 20.1                                              | Wartości dowolne dla dokumentów niezgodności                                         |
+| 20.2                                              | Wartości dowolne dla pozycji dokumentów niezgodności                                 |
+| 21                                                | Projekt                                                                              |
+| 21.1                                              | Wartości dowolne dla projektów                                                       |
+| 21.2                                              | Wartości dowolne pozycji projektu                                                    |
+| 22                                                | Akcje marketingowe                                                                   |
+| 22.1                                              | Wartości dowolne dla akcji                                                           |
+| 22.2                                              | Wartości dowolne uczestnika akcji                                                    |
+| 22.3                                              | Wartości dowolne dla akcji                                                           |
+| 22.4                                              | Wartości dowolne uczestnika akcji                                                    |
+| 23                                                | Księga handlowa                                                                      |
+| 23.1                                              | Wartości dowolne dla zapisów księgowych                                              |
+| 23.2                                              | Wartości dowolne dla pozycji zapisów księgowych                                      |
+| 24                                                | Środki trwałe                                                                        |
+| 24.1                                              | Wartości dowolne środków trwałych                                                    |
+| 25                                                | Logistyka                                                                            |
+| 25.1                                              | Wartości dowolne zleceń transportowych - własne                                      |
+| 25.2                                              | Wartości dowolne listów przewozowych                                                 |
+| 25.3                                              | Wartości dowolne zleceń transportowych - obce                                        |
+| 25.4                                              | Wartości dowolne wspólne logistyki                                                   |
+| 25.5                                              | Wartości dowolne paczek                                                              |
+| 25.6                                              | Wartości dowolne dla spedycji                                                        |
+| 26                                                | Delegacje                                                                           |
+| 26.1                                              | Wartości dowolne delegacji                                                           |
+| 27                                                | KPO                                                                                  |
+| 27.1                                              | Wartości dowolne - KPO przyjęcia                                                     |
+| 27.2                                              | Wartości dowolne - KPO wydania                                                       |
+
+Poniżej zaprezentowano przykładowe wartości dowolne zdefiniowane dla kartoteki towaru
+
+![tmp854a7190-74ee-405e-883b-80c60ea9ae7a](https://www.cfi.pl/vendohelp/content/imgs/A4/a910dafcaac724427e86bab64ebffb2b-48448-0.png)

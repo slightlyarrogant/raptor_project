@@ -1,0 +1,93 @@
+# Menu Nawigacyjne
+![tmp86647236-dcb6-4c59-9850-fd042f7862f8](https://www.cfi.pl/vendohelp/content/imgs/Z7/0d7906dcbbe150fdc20b7c27e09b6be1-24312-0.png)
+
+Menu nawigacyjne zlokalizowane jest nagłówku okna programu. Funkcje oraz narzędzia tam zlokalizowane pozwalają miedzy innymi na sparametryzowanie ustawień, dostosowanie widoków wyświetlanych list, uruchomiania dodatkowych wykresów jak również skorzystania z dedykowanych raportów.
+
+Funkcje dostępne w menu nawigacyjnym podzielone zostały na stosowne sekcje:
+- Podstawowe
+- Planowanie automatyczne
+- Planowani ręczne
+- Widok Ganta 
+Poniżej znajdują się opisy poszczególnych sekcji wraz z funkcjami tam zlokalizowanymi 
+
+### Sekcja Podstawowe
+
+![tmp505623bf-c5e0-4b39-b083-81cbee2baf08](https://www.cfi.pl/vendohelp/content/imgs/K4/407cfca6c890a6bb3432fe0e9097c38c-10056-0.png)
+
+*Zapis planu* – funkcja odpowiedzialna za zapis wyników planowania do systemu ERP  
+*Ustawienia* – konfiguracja algorytmu planowania  
+*Przywróć z Backupu* – wywołanie funkcji możliwe jest po uprzednim określeniu lokalizacji zapisu kopii zapasowej harmonogramu oraz oznaczeniu stosownego ustawienia. Przywracanie z backupu polega wyborze pliku z zapisanym backupem.  
+*Błędy danych* – raport prezentujący błędy wynikłe w takcie wczytywania struktur z bazy danych. Przekładami mogą być między innymi powiazania z operacjami które nie istnieją bądź bladnie spięte operacje. Raport generowany jest informacyjnie  
+*Błędy planu* – raport  odpowiadający za błędy powstałe w prezentowanym planie produkcyjnym
+*Cofnij* – cofnięcie ostatnio wykonanej czynności która została wykonana na planie produkcyjnym  
+*Powtórz* – powtórzenie ostatnio cofniętej czynności która została wykonana na planie produkcyjnym
+
+### Sekcja planowanie automatyczne 
+
+![tmp877599ad-ae88-41f1-bfb1-224516f5a439](https://www.cfi.pl/vendohelp/content/imgs/B7/5f6c326dc65ffa073b948884025c1380-5277-0.png)
+
+Przeplanowanie – Jest to sekwencja czynności wykonywanych w procesie przeplanowania. Funkcja ta wymaga skonfigurowania, jakie akcje mają być wykonane po jej uruchomieniu. Operacja możliwa do wywołania podczas przeplanowania to:
+-	Przeładuj dane – wywołanie tej funkcji spowoduje wczytanie wszystkich struktur danych oraz aktualnego stanu harmonogramu z bazy danych
+
+-	Czyszczenie - Jest to operacja polegająca na wyczyszczeniu nieaktualnego planu. Zasada działania operacji czyszczenia  określona jest poprzez stosowne ustawienia.  Należy pamiętać, iż operacje które są już rozpoczęte nie powinny być usuwane
+
+-	Aktualizacja - weryfikacja planu produkcyjnego i dostosowanie go bieżącego czasu. Funkcja wykorzystywana w przypadku gdy aktualny plan jest już wykonywany natomiast z pewnych przyczyn należy go zaktualizować np. w przypadku przestojów bądź awarii. Aktualizacja planu pozwala dostosować go do stanu i czasu faktycznego
+
+-	Wykonaj inteligentne planowanie – Uruchomienie algorytmu inteligentnego kolejkowania tj. mechanizmu który używa sztucznej inteligencji w celu wyszukania optymalnego rozwiązania (optymalnego planu)
+
+-	Rozłożenie pozostałych – funkcja używana najczęściej w  przypadku, gdy część operacji została rozłożona przy użyciu algorytmu inteligentnego planowania, natomiast pozostała cześć ma zostać rozłożona automatycznie uwzględniając priorytety przewodników produkcyjnych.
+
+### Sekcja Planowanie ręczne
+
+![tmp88643b05-6830-4ffe-9aa5-ce3a12227b9c](https://www.cfi.pl/vendohelp/content/imgs/X7/154d7cce279cf2e31c8d357a4cc8e862-3686-0.png)
+
+*Rozłóż zaznaczone* – rozłożenie zaznaczonego zbioru operacje zgodnie z ustawieniami i zachowaniem standardowej kolejki  
+*Zaplanuj zaznaczone inteligentnie* – operacja polega na oznaczeniu zbioru operacji które mają zostać rozplanowane przy użyciu algorytmu inteligentnego planowania. Efektem będzie ułożenie odpowiedniej kolejki operacji z uwzględnieniem określonych współczynników   
+*Wyczyść zaznaczone* – użycie tej funkcji spowoduje usunięcie planów produkcyjnych dla zleceń i operacji zaznaczonych w sekcji: lista zleceń/operacji.  
+*Wyczyść wszystko* – funkcja spowoduje usunięcie z planu wszystkich zaplanowanych operacji
+
+### Sekcja widok Ganta listy  
+
+Ustawienia zlokalizowane w tej sekcji pozwalają na ustawienia widoku dla prezentowanych wyników na wykresie Gantta jak również wywołania dodatkowych wykresów wspomagających prace użytkownika 
+
+![tmp5a9e68d7-101f-4a56-8f22-39fac346ce01](https://www.cfi.pl/vendohelp/content/imgs/X7/443ec99468d0f35d64af0c4f7a95443b-5033-0.png)
+
+**Funkcje nawigacyjne odpowiedzialne za dopasowanie widoków przedziałów czasowych prezentowanej listy**
+
+*Przejdź do dziś* – przesuniecie widoku Gantta zaplanowanych operacji na dzień dzisiejszy  
+*Wyśrodkuj* – dostosowuje i wyśrodkowuje widok Gantta dla zaznaczonych zleceń/operacji   
+*Wyśrodkuj do najbliższej zmiany* – przesunięcie widoku zaplanowanych operacji do najbliższej zdefiniowanej zmiany. Wyświetlone zostaną wyniki zaplanowanych operacji w obrębie najbliższej zmiany
+
+
+**Funkcje odpowiedzialne za  wygląd wykresów oraz wykresów pomocniczych**
+
+
+**Gantt()** - Funkcja odpowiedzialna za zmianę sposobu prezentowanych wyników harmonogramu na wykresie Gantta. Pozwala na uruchomienie dodatkowych wykresów takich jak:
+
+*Gantt Stanowisk* – Zmiana sposobu wyświetlania wyników na wykresie Gantta. Jest to domyślnie prezentowany wynik zaplanowanych operacji. Pokazuje operacje (instrukcje) rozplanowane  na poszczególnych stanowiskach.
+    
+*Gantt Pracowników* – Zmiana sposobu wyświetlania wyników na wykresie Gantta. Pokazuje operacje rozplanowane dla poszczególnych pracowników
+
+*Gantt Pozycji zleceń* - Zmiana sposobu wyświetlania wyników na wykresie Gantta. Wybór takiej opcji spowoduje zaprezentowanie przedziału czasowego rozpoczęcia i zakończenia wykonania danego zlecenia. Z poziomu prezentowanych wyników użytkownik ma również możliwość na weryfikacje zapełnienia instrukcji tj. czasu praco oraz czasu wolnego w zakresie danego zlecenia
+
+*Gant wyrobów* - Zmiana sposobu wyświetlania wyników na wykresie Gantta. Prezentowany wynik pokazuje okres czasowy przeznaczony na wykonanie danego produktu. Wykres analogiczny jak w przypadku Gantta pracowników tyle, że odnoszący się do produktu
+
+**Wywołanie dodatkowych wykresów**
+
+![tmp428558a2-9c70-48c4-a446-2214c05f2989](https://www.cfi.pl/vendohelp/content/imgs/M4/d9f89c86b47f9f7c0920c23e7a02313a-157743-0.png)
+
+
+## Matryca przezbrojeń
+### Opis
+Matryca przezbrojeń w systemie VENDO.ERP to narzędzie, które umożliwia efektywne zarządzanie procesami produkcyjnymi, w kontekście przezbrojeń maszyn i urządzeń. Przezbrojenie odnosi się do czasu i zasobów potrzebnych na zmianę ustawień maszyn produkcyjnych, aby mogły one produkować inny produkt. Matryca przezbrojeń pomaga zoptymalizować te procesy, minimalizując czas przestojów i koszty związane z przezbrojeniem.
+W trakcie ustawiania operacji na harmonogramie, system VENDO.ERP ma możliwość wykorzystania matrycy przezbrojeń do wyliczenia czasu TPZ zgodnie z zaimplementowanym algorytmem. 
+Gdyby system nie korzystał z matrycy przezbrojeń, TPZ byłby czasem stałym, podawanym bezpośrednio na operacji technologicznej, podawanym niezależnie od zmian wynikających choćby ze zmiany gatunku surowca używanego na kolejnej operacji na danym stanowisku. 
+Korzystając z matrycy, algorytm wyliczy TPZ porównując dwie sąsiadujące ze sobą operacje na jednym stanowisku (maszynie). Implementacja określonych wartości podlegających porównaniu zależna jest od ustaleń projektowych. Przykładowa matryca została zaprezentowana na poniższym widoku. Jest ona zdefiniowana dla dwóch stanowisk z jednym i trzema wartościami cząstkowymi.
+
+![tmp48f387e8-66c9-4be6-8108-a42f713848e0](https://www.cfi.pl/vendohelp/content/imgs/P9/b3e98a3bcdec97c2f918414cc81a722c-44216-0.png)
+
+
+Ogólna zasada jest taka, że system porówna wszystkie cząstkowe wartości, porównując je ze sobą, następnie sumując przyporządkowane czasy. W rezultacie obliczony zostanie nowy, odpowiedni czas TPZ na harmonogramie. Matryca przezbrojeń w systemie VENDO.ERP jest dynamiczna. Oznacza to, że w zależności od tego jak zostaną ułożone kolejno występujące po sobie operacje, każdorazowo w tle może zostać wyliczony inny czas potrzebny do przezbrojenia.
+Na matrycy przezbrojeń możliwa jest edycja wartości czasów (przez użytkownika), natomiast zmiana samego algorytmu będzie możliwa przez CFI.
+ 
+
