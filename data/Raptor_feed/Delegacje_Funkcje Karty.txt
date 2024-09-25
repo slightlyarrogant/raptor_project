@@ -1,9 +1,0 @@
-podstawowymi funkcjami dostepnymi z poziomu kalendarza produkcyjnego są:
-Nowe zdarzenie
-Nowe zdarzenie wg. procedury
-
-Nowe zdarzenie
-Funkcja ta odpowiada za dodanie nowego wpisu w kaledarzu dotyczacego konkretnej czynnosci która ma odbyc sie w zaplanowanym swiadomie przez użytkwoika okresie czasu
-
-Nowe zdarzenie wg. procedury
-Uzycie tej funkcji skutkuje wywołaniem cyklu zdarzeń zdefioniowanych w ramach procedury. uruchomienie procedury wiąze sie z wykoaniem uprzednio zaplanowanych etapów poszczególnych etepów 

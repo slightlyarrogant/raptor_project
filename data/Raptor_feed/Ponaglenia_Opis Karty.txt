@@ -1,9 +1,0 @@
-# Ponaglenia
-
-System VENDO.ERP umożliwia automatyczną weryfikację dokumentów, dla których terminy płatności są przeterminowane. Konsekwencją takiego rozwiązania jest automatyczne wysłanie do klientów informacji z przypomnieniem o dokonaniu płatności. Badanie przeterminowania należności realizowane jest według zdefiniowanego wcześniej wzoru cyklicznych zdarzeń. Na życzenie Klienta zostaną utworzone wzory tekstów powiadomień oraz cykliczność ich badania i wysyłania. Maile będą generowane po uwzględnieniu warunków do filtrowania przeterminowanych należności. Kryterium wyboru konkretnego wzoru powiadomienia może stanowić okres przeterminowania danego rozrachunku. 
-
-Za pomocą powyższych mechanizmów program będzie sam weryfikował należności i automatycznie nadawał im odpowiednie statusy. Wzory do nadawania statusów należy wcześniej odpowiednio zdefiniować. Opierając się na znacznikach wprowadzonych na należnościach system może w sposób automatyczny wysyłać informację do kontrahentów. Mogą to być np. maile bądź smsy – ponaglenia, przypomnienia o przekroczonym terminie płatności.
-
-![tmp5976e163-ffe7-461c-be47-761b08cfd8c5](https://www.cfi.pl/vendohelp/content/imgs/R9/7aa538b69a2b7c2c017682688ca38d9e-124861-0.png)
-
-*Lista ponagleń*

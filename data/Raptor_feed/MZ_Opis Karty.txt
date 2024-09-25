@@ -1,5 +1,0 @@
-## 	Moje zadania
-
-Moje zadania jest to lista niezrealizowanych zdarzeń przypisana do danego loginu. Na liście mogą być widoczne zadania do wykonania tylko na dany dzień bądź też – po uzupełnieniu pola do kiedy – zadania które należy wykonać w przyszłości 
-
-![tmp3bdc746d-f1bb-403c-ab6c-6b20fbd00cbc](https://www.cfi.pl/vendohelp/content/imgs/R7/b57e12ffcaa21a80f008c33ae8451f54-197445-0.png)

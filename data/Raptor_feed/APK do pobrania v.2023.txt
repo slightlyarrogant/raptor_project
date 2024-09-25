@@ -1,6 +1,0 @@
-## Linki do pobrania
-- [com.cfi.vendolite2023 Honeywell 1.0.1.apk](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20KOLEKTORY/Vendo.lite/Android/v.2023/com.cfi.vendolite2023%20Honeywell%201.0.1.apk)
-- [com.cfi.vendolite2023 Newland 1.0.1.apk](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20KOLEKTORY/Vendo.lite/Android/v.2023/com.cfi.vendolite2023%20Newland%201.0.1.apk)
-- [com.cfi.vendolite2023 Sunmi 1.0.4.apk](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20KOLEKTORY/Vendo.lite/Android/v.2023/com.cfi.vendolite2023%20Sunmi%201.0.4.apk)
-- [com.cfi.vendolite2023 Unitech 1.0.1.apk](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20KOLEKTORY/Vendo.lite/Android/v.2023/com.cfi.vendolite2023%20Unitech%201.0.1.apk)
-- [com.cfi.vendolite2023 Zebra 1.0.6.apk](https://info.cfi.pl/Instrukcje/files/VENDO.ERP%20SPRAWY%20TECHNICZNE/VENDO.ERP%20KOLEKTORY/Vendo.lite/Android/v.2023/com.cfi.vendolite2023%20Zebra%201.0.6.apk)

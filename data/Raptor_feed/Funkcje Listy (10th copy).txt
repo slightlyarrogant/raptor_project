@@ -1,9 +1,0 @@
-# Roczna tabela amortyzacji
-
-W ramach dostępu do zakładki roczna tabela amortyzacji użytkownik ma możliwość wyfiltrować interesujące go pozycje z listy. Służy do tego lista filtrów umieszczona po lewej stronie. Z jej pomocą można odszukać konkretne pozycje przy użyciu następujących filtrów:
-
-![tmp335a0271-bbe2-48e0-a79f-00d357e9a705](https://www.cfi.pl/vendohelp/content/imgs/F9/1d044c6d4f3035f8b3e942d4a87ebbcb-3539-0.png)
-
-- rok obrachunkowy – wybór roku, za który program wygeneruje listę rocznej amortyzacji
-- możliwość wyboru wyświetlania tylko bilansowych  ŚT
-- grupa środków trwałych – możliwość wyświetlania tylko poszczególnych grup środków trwałych np. samochody osobowe

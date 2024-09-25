@@ -1,5 +1,0 @@
-Zamówienia Obce
-Raport Zamówienia Obce został wyodrębniona z sekcji dokumentów zakupowych celem szybkiej weryfikacji dokumentów zamówień od kontrahentów znajdujących się w systemie. Lista zamówień została obwarowana szeregiem filtrów co pozwala na szybsze i bardziej precyzyjne wyświetlenie oraz dostęp do zamówień. Z poziomu listy użytkownik ma również dostęp do szeregu informacji które nie są widoczne w sekcji dokumentów sprzedażowych 
-
-
-![tmpdbf76a5c-63d1-4498-855f-00d854f40c97](https://www.cfi.pl/vendohelp/content/imgs/N3/f565394061902eaa4b32fcceea8650b3-120716-0.png)

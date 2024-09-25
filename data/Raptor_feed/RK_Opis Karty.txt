@@ -1,9 +1,0 @@
-# Rozliczenia wg kontrahentów
-
-Na zakładce Rozliczenia wg kontrahentów znajdują się rozliczenia z kontrahentami z tytułu sprzedaży i zakupów łącznie. Jeśli w kolumnie Pozostało kwota jest ujemna oznacza to, że my jesteśmy winni kontrahentowi, jeśli dodatnia znaczy to, że kontrahent jest winien nam. W tym module programu możliwe jest całościowe rozliczanie rozrachunków z kontrahentem, jednym zapisem można rozliczyć FV, FZ, PZ itd., można też tworzyć kompensaty.
-
-![tmpc914308d-649b-4864-9e92-5f6dc3cbe925](https://www.cfi.pl/vendohelp/content/imgs/U2/2cf868d93f5f8bdf05178bc0ddb6fe2f-69921-0.png)
-
-*Rozliczenia wg. kontrahentów. Należnosci kontrahenta*
-
-Naciskając [ENTER] na wybranym kontrahencie wchodzimy w szczegóły rozrachunków. Pojawiają się nam wszystkie faktury, dokumenty zakupu, dokumenty kosztowe i ich korekty.
