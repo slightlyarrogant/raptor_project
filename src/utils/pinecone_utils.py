@@ -1,8 +1,9 @@
 import time
 from pinecone import Pinecone, ServerlessSpec
+import numpy as np
 from src.utils.config import (
     PINECONE_API_KEY, PINECONE_INDEX_NAME, PINECONE_DIMENSION,
-    PINECONE_METRIC, PINECONE_CLOUD, PINECONE_REGION, VERBOSE
+    PINECONE_METRIC, PINECONE_CLOUD, PINECONE_REGION, PINECONE_NAMESPACE, VERBOSE
 )
 
 def initialize_pinecone():
@@ -23,7 +24,10 @@ def initialize_pinecone():
             else:
                 if VERBOSE:
                     print(f"Using existing Pinecone index: {PINECONE_INDEX_NAME}")
-                return pc.Index(PINECONE_INDEX_NAME)
+                index = pc.Index(PINECONE_INDEX_NAME)
+                stats = index.describe_index_stats()
+                print(f"Index stats: {stats}")
+                return index
 
         if VERBOSE:
             print(f"Creating new index: {PINECONE_INDEX_NAME}")
@@ -48,16 +52,56 @@ def upsert_to_pinecone(index, texts, embeddings, metadata=None):
     vectors = []
     for i, (text, embedding) in enumerate(zip(texts, embeddings)):
         vector = {
-            'id': f'vec_{i}',
-            'values': embedding.tolist(),
+            'id': f'vec_{int(time.time())}_{i}',  # Ensure unique IDs
+            'values': embedding.tolist() if isinstance(embedding, np.ndarray) else embedding,
             'metadata': {'text': text}
         }
         if metadata and i < len(metadata):
             vector['metadata'].update(metadata[i])
         vectors.append(vector)
     
-    index.upsert(vectors=vectors)
+    if VERBOSE:
+        print(f"Preparing to upsert {len(vectors)} vectors to Pinecone")
+        if vectors:
+            print(f"Sample vector - ID: {vectors[0]['id']}, Metadata: {vectors[0]['metadata']}, Vector length: {len(vectors[0]['values'])}")
+        else:
+            print("No vectors to upsert")
+    
+    if vectors:
+        batch_size = 100  # Pinecone recommends batches of 100 vectors
+        for i in range(0, len(vectors), batch_size):
+            batch = vectors[i:i+batch_size]
+            try:
+                index.upsert(vectors=batch, namespace=PINECONE_NAMESPACE)
+                if VERBOSE:
+                    print(f"Upserted batch of {len(batch)} vectors to Pinecone namespace: {PINECONE_NAMESPACE}")
+            except Exception as e:
+                print(f"Error upserting batch to Pinecone: {e}")
+                print(f"Number of vectors in problematic batch: {len(batch)}")
+        
+        if VERBOSE:
+            print(f"Completed upserting all {len(vectors)} vectors to Pinecone")
+    else:
+        print("Warning: No vectors to upsert")
 
 def query_pinecone(index, query_embedding, top_k=5):
-    results = index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
+    # Convert numpy array to list if necessary
+    if isinstance(query_embedding, np.ndarray):
+        query_embedding = query_embedding.tolist()
+    
+    if VERBOSE:
+        print(f"Querying Pinecone index: {PINECONE_INDEX_NAME}")
+    
+    results = index.query(
+        vector=query_embedding,
+        top_k=top_k,
+        include_metadata=True,
+        namespace=PINECONE_NAMESPACE
+    )
+    
+    if VERBOSE:
+        print(f"Pinecone query returned {len(results['matches'])} matches")
+        for i, match in enumerate(results['matches']):
+            print(f"Match {i+1}: score = {match['score']}, metadata = {match['metadata']}")
+    
     return results

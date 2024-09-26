@@ -35,6 +35,7 @@ def main():
             print("Running in preparation mode")
         docs = load_and_preprocess_documents("./data/Raptor_feed")
         raptor_tree.add_new_files(docs)
+        print("Preparation completed. Documents have been processed and added to the vector store.")
 
     elif args.mode == "update":
         if VERBOSE:
@@ -43,8 +44,15 @@ def main():
         raptor_tree.add_new_files(new_docs)
         move_processed_files("./data/New_documents", "./data/Raptor_feed")
         clean_new_documents_folder("./data/New_documents")
+        print("Update completed. New documents have been processed and added to the vector store.")
 
     elif args.mode == "query":
+        # Check if the vector store is empty
+        stats = vectorstore.describe_index_stats()
+        if stats['total_vector_count'] == 0:
+            print("The vector store is empty. Please run in 'prepare' mode first to add documents.")
+            return
+
         if args.query is None:
             print("Error: Query string is required in query mode")
             return
