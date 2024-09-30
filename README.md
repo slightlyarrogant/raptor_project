@@ -13,6 +13,7 @@ RAPTOR is an advanced document processing and retrieval system designed to creat
 - Storage of both original documents and summaries in Pinecone vector store
 - Retrieval-Augmented Generation (RAG) for question answering
 - Customizable prompts for summarization and querying
+- Incremental updates to the knowledge base
 
 ## Prerequisites
 
@@ -75,6 +76,30 @@ RAPTOR is an advanced document processing and retrieval system designed to creat
    python main.py prepare
    ```
 
+### Adding New Documents
+
+There are two ways to add new documents to the system:
+
+#### 1. Full Update
+
+This method processes new documents and adds them to the knowledge base as a separate batch.
+
+1. Place the new documents in the `data/New_documents` directory.
+2. Run the following command:
+   ```
+   python main.py update
+   ```
+
+#### 2. Incremental Update
+
+This method integrates new documents into the existing knowledge structure, updating it incrementally.
+
+1. Place the new documents in the `data/New_documents` directory.
+2. Run the following command:
+   ```
+   python main.py incremental
+   ```
+
 ### Querying the System
 
 To query the RAPTOR system:
@@ -83,17 +108,13 @@ To query the RAPTOR system:
 python main.py query --query "Your question here"
 ```
 
-### Adding New Documents
-
-1. Place the new documents in the `data/New_documents` directory.
-2. Run the following command:
-   ```
-   python main.py update
-   ```
-
 ## Customizing for Different Use Cases
 
 You can customize RAPTOR for different use cases by modifying the prompts in the `.env` file or by setting environment variables before running the script.
+
+# RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval
+
+[... previous sections remain the same ...]
 
 ## Project Structure
 
@@ -124,6 +145,7 @@ raptor_project/
 │   └── main.py               # Main script to run the entire process
 │
 ├── tests/
+│   ├── test_raptor_tree.py   # Unit tests for RaptorTree class
 │   ├── test_prepare.py
 │   ├── test_inference.py
 │   └── test_update.py
@@ -132,6 +154,31 @@ raptor_project/
 └── README.md
 ```
 
+## Running Tests
+
+To run the tests for the RaptorTree class:
+
+1. Ensure you're in the root directory of the project.
+2. Activate your virtual environment if you haven't already:
+   ```
+   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   ```
+3. Run the following command:
+   ```
+   python -m unittest tests/test_raptor_tree.py
+   ```
+
+This will execute all the unit tests defined in `test_raptor_tree.py`. The test output will show you which tests passed or failed, along with any error messages for failed tests.
+
+To run all tests in the `tests` directory:
+
+```
+python -m unittest discover tests
+```
+
+This command will run all test files in the `tests` directory that follow the pattern `test*.py`.
+
+[... rest of the README remains the same ...]
 ## Contributing
 
 Contributions to RAPTOR are welcome! Please feel free to submit a Pull Request.
