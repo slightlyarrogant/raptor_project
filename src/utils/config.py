@@ -10,7 +10,7 @@ CHUNK_SIZE_TOKENS = 2000
 CLUSTERING_DIM = int(os.getenv("CLUSTERING_DIM", "10"))  # Default to 10 if not set
 CLUSTERING_THRESHOLD = float(os.getenv("CLUSTERING_THRESHOLD", "0.1"))  # Default to 0.1 if not set
 MAX_RECURSION_LEVELS = 3
-VERBOSE = True
+VERBOSE = False
 
 # API Keys and Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
