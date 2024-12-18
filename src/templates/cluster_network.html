@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Document Cluster Network</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        #viz {
+            width: 100vw;
+            height: 100vh;
+            background: white;
+        }
+        .node {
+            cursor: pointer;
+        }
+        .node:hover {
+            opacity: 0.8;
+        }
+        .node text {
+            font-size: 12px;
+            fill: #333;
+        }
+        .link {
+            stroke: #999;
+            stroke-opacity: 0.6;
+        }
+        .tooltip {
+            position: absolute;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 5px;
+            font-size: 12px;
+            pointer-events: none;
+            max-width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="viz"></div>
+    <script>
+        // Load the data
+        Promise.all([
+            d3.json('network_data.json'),
+            d3.json('cluster_distribution_stats.json')
+        ]).then(([networkData, statsData]) => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            
+            // Create SVG
+            const svg = d3.select('#viz')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+                
+            // Add zoom behavior
+            const g = svg.append('g');
+            svg.call(d3.zoom()
+                .extent([[0, 0], [width, height]])
+                .scaleExtent([0.1, 4])
+                .on('zoom', (event) => {
+                    g.attr('transform', event.transform);
+                }));
+                
+            // Create tooltip
+            const tooltip = d3.select('body')
+                .append('div')
+                .attr('class', 'tooltip')
+                .style('opacity', 0);
+                
+            // Create force simulation
+            const simulation = d3.forceSimulation(networkData.nodes)
+                .force('link', d3.forceLink(networkData.edges)
+                    .id(d => d.id)
+                    .distance(200))
+                .force('charge', d3.forceManyBody().strength(-1000))
+                .force('center', d3.forceCenter(width / 2, height / 2))
+                .force('collision', d3.forceCollide().radius(d => Math.sqrt(d.size) * 5 + 20));
+                
+            // Draw links
+            const link = g.append('g')
+                .selectAll('line')
+                .data(networkData.edges)
+                .join('line')
+                .attr('class', 'link')
+                .style('stroke-width', d => Math.sqrt(d.weight));
+                
+            // Create node groups
+            const node = g.append('g')
+                .selectAll('g')
+                .data(networkData.nodes)
+                .join('g')
+                .attr('class', 'node')
+                .call(d3.drag()
+                    .on('start', dragstarted)
+                    .on('drag', dragged)
+                    .on('end', dragended));
+                
+            // Add circles to nodes
+            node.append('circle')
+                .attr('r', d => Math.sqrt(d.size) * 5)
+                .style('fill', (d, i) => d3.schemeCategory10[i % 10])
+                .style('stroke', '#fff')
+                .style('stroke-width', 2);
+                
+            // Add text labels
+            node.append('text')
+                .text(d => d.id)
+                .attr('dy', d => -Math.sqrt(d.size) * 5 - 5)
+                .attr('text-anchor', 'middle');
+                
+            // Add hover interactions
+            node.on('mouseover', function(event, d) {
+                tooltip.transition()
+                    .duration(200)
+                    .style('opacity', .9);
+                tooltip.html(`
+                    <strong>${d.title}</strong><br/>
+                    Size: ${d.size} chunks<br/>
+                    Files: ${d.files.join(', ')}
+                `)
+                    .style('left', (event.pageX + 10) + 'px')
+                    .style('top', (event.pageY - 10) + 'px');
+            })
+            .on('mouseout', function() {
+                tooltip.transition()
+                    .duration(500)
+                    .style('opacity', 0);
+            });
+                
+            // Update positions on each tick
+            simulation.on('tick', () => {
+                link
+                    .attr('x1', d => d.source.x)
+                    .attr('y1', d => d.source.y)
+                    .attr('x2', d => d.target.x)
+                    .attr('y2', d => d.target.y);
+                    
+                node
+                    .attr('transform', d => `translate(${d.x},${d.y})`);
+            });
+            
+            // Drag functions
+            function dragstarted(event) {
+                if (!event.active) simulation.alphaTarget(0.3).restart();
+                event.subject.fx = event.subject.x;
+                event.subject.fy = event.subject.y;
+            }
+            
+            function dragged(event) {
+                event.subject.fx = event.x;
+                event.subject.fy = event.y;
+            }
+            
+            function dragended(event) {
+                if (!event.active) simulation.alphaTarget(0);
+                event.subject.fx = null;
+                event.subject.fy = null;
+            }
+        });
+    </script>
+</body>
+</html>

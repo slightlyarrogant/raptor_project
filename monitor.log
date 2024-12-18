@@ -1,0 +1,94 @@
+2024-11-20 18:21:07,236 - __main__ - INFO - Starting RAPTOR System Monitor...
+2024-11-20 18:21:07,236 - __main__ - INFO - Base directory: /home/bogdan/Desktop/CFI_Tools/raptor_project
+2024-11-20 18:21:07,236 - __main__ - INFO - Refresh interval: 30 seconds
+2024-11-20 18:21:07,236 - __main__ - INFO - Log file: /home/bogdan/Desktop/CFI_Tools/raptor_project/monitor.log
+2024-11-20 18:21:07,238 - __main__ - INFO - === Updating Monitoring Dashboard ===
+2024-11-20 18:21:07,238 - __main__ - INFO - Updating system metrics...
+2024-11-20 18:21:07,246 - __main__ - INFO - Generating dashboard...
+2024-11-20 18:21:07,246 - src.monitoring.system_monitor - INFO - Generating dashboard...
+2024-11-20 18:21:07,287 - src.monitoring.system_monitor - INFO - Adding document processing trace...
+2024-11-20 18:21:07,289 - src.monitoring.system_monitor - INFO - Adding vector operations trace...
+2024-11-20 18:21:07,290 - src.monitoring.system_monitor - ERROR - Failed to generate dashboard: Trace type 'indicator' is not compatible with subplot type 'xy'
+at grid position (1, 2)
+
+See the docstring for the specs argument to plotly.subplots.make_subplots
+for more information on subplot types
+2024-11-20 18:21:07,294 - src.monitoring.system_monitor - ERROR - Traceback (most recent call last):
+  File "/home/bogdan/Desktop/CFI_Tools/raptor_project/src/monitoring/system_monitor.py", line 233, in generate_dashboard
+    fig.add_trace(
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/graph_objs/_figure.py", line 917, in add_trace
+    return super(Figure, self).add_trace(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2106, in add_trace
+    return self.add_traces(
+           ^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/graph_objs/_figure.py", line 997, in add_traces
+    return super(Figure, self).add_traces(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2236, in add_traces
+    self._set_trace_grid_position(trace, row, col, secondary_y)
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2328, in _set_trace_grid_position
+    return _set_trace_grid_reference(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/_subplots.py", line 1415, in _set_trace_grid_reference
+    raise ValueError(
+ValueError: Trace type 'indicator' is not compatible with subplot type 'xy'
+at grid position (1, 2)
+
+See the docstring for the specs argument to plotly.subplots.make_subplots
+for more information on subplot types
+
+2024-11-20 18:21:07,294 - __main__ - INFO - === System Health Status ===
+2024-11-20 18:21:07,294 - __main__ - INFO - Status: warning
+2024-11-20 18:21:07,294 - __main__ - INFO - Processing Rate: 0.00%
+2024-11-20 18:21:07,294 - __main__ - INFO - Cache Efficiency: 0.00%
+2024-11-20 18:21:07,294 - __main__ - INFO - System Load:
+2024-11-20 18:21:07,294 - __main__ - INFO -   cpu: 50.00%
+2024-11-20 18:21:07,294 - __main__ - INFO -   memory: 56.10%
+2024-11-20 18:21:07,294 - __main__ - INFO -   disk: 86.90%
+2024-11-20 18:21:07,294 - __main__ - INFO - Waiting 30 seconds until next update...
+2024-11-20 18:21:37,295 - __main__ - INFO - === Updating Monitoring Dashboard ===
+2024-11-20 18:21:37,295 - __main__ - INFO - Updating system metrics...
+2024-11-20 18:21:37,296 - __main__ - INFO - Generating dashboard...
+2024-11-20 18:21:37,296 - src.monitoring.system_monitor - INFO - Generating dashboard...
+2024-11-20 18:21:37,309 - src.monitoring.system_monitor - INFO - Adding document processing trace...
+2024-11-20 18:21:37,309 - src.monitoring.system_monitor - INFO - Adding vector operations trace...
+2024-11-20 18:21:37,309 - src.monitoring.system_monitor - ERROR - Failed to generate dashboard: Trace type 'indicator' is not compatible with subplot type 'xy'
+at grid position (1, 2)
+
+See the docstring for the specs argument to plotly.subplots.make_subplots
+for more information on subplot types
+2024-11-20 18:21:37,310 - src.monitoring.system_monitor - ERROR - Traceback (most recent call last):
+  File "/home/bogdan/Desktop/CFI_Tools/raptor_project/src/monitoring/system_monitor.py", line 233, in generate_dashboard
+    fig.add_trace(
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/graph_objs/_figure.py", line 917, in add_trace
+    return super(Figure, self).add_trace(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2106, in add_trace
+    return self.add_traces(
+           ^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/graph_objs/_figure.py", line 997, in add_traces
+    return super(Figure, self).add_traces(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2236, in add_traces
+    self._set_trace_grid_position(trace, row, col, secondary_y)
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/basedatatypes.py", line 2328, in _set_trace_grid_position
+    return _set_trace_grid_reference(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bogdan/anaconda3/envs/raptor/lib/python3.11/site-packages/plotly/_subplots.py", line 1415, in _set_trace_grid_reference
+    raise ValueError(
+ValueError: Trace type 'indicator' is not compatible with subplot type 'xy'
+at grid position (1, 2)
+
+See the docstring for the specs argument to plotly.subplots.make_subplots
+for more information on subplot types
+
+2024-11-20 18:21:37,310 - __main__ - INFO - === System Health Status ===
+2024-11-20 18:21:37,310 - __main__ - INFO - Status: warning
+2024-11-20 18:21:37,310 - __main__ - INFO - Processing Rate: 0.00%
+2024-11-20 18:21:37,310 - __main__ - INFO - Cache Efficiency: 0.00%
+2024-11-20 18:21:37,310 - __main__ - INFO - System Load:
+2024-11-20 18:21:37,310 - __main__ - INFO -   cpu: 25.80%
+2024-11-20 18:21:37,310 - __main__ - INFO -   memory: 55.40%
+2024-11-20 18:21:37,310 - __main__ - INFO -   disk: 86.90%
+2024-11-20 18:21:37,310 - __main__ - INFO - Waiting 30 seconds until next update...

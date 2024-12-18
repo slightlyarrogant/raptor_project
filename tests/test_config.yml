@@ -1,0 +1,19 @@
+test_settings:
+  pinecone:
+    wait_time: 40  # Seconds to wait for index
+    retries: 3     # Number of retries for operations
+    
+  visualization:
+    output_dir: "test_outputs/visualizations"
+    formats:
+      - html
+      - png
+    
+  tree:
+    min_cluster_size: 5
+    max_cluster_size: 100
+    max_depth: 5
+    
+  logging:
+    level: INFO
+    file: "test_logs/raptor_tests.log" 
